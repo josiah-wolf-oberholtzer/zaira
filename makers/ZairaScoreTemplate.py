@@ -41,6 +41,12 @@ class ZairaScoreTemplate(makers.ConsortObject):
                     }
                 >>
             >>
+            \context StaffGroup = "Percussion Staff Group" <<
+            >>
+            \context ElectronicsStaff = "Electronics Staff" {
+                \context ElectronicsVoice = "Electronics Voice" {
+                }
+            }
             \context PianoStaff = "Piano Staff Group" <<
                 \context Staff = "Piano Upper Staff" {
                     \context Voice = "Piano Upper Voice" {
@@ -55,12 +61,6 @@ class ZairaScoreTemplate(makers.ConsortObject):
                 \context Dynamics = "Piano Pedals" {
                 }
             >>
-            \context StaffGroup = "Percussion Staff Group" <<
-            >>
-            \context ElectronicsStaff = "Electronics Staff" {
-                \context ElectronicsVoice = "Electronics Voice" {
-                }
-            }
             \context StaffGroup = "Strings Staff Group" <<
                 \context StringPerformerStaffGroup = "Violin Staff Group" <<
                     \context BowingStaff = "Violin Bowing Staff" {
@@ -180,9 +180,9 @@ class ZairaScoreTemplate(makers.ConsortObject):
             [
                 time_signature_context,
                 winds_staff_group,
-                piano_staff_group,
                 percussion_staff_group,
                 electronics_staff,
+                piano_staff_group,
                 strings_staff_group,
                 ],
             name='Zaira Score',
