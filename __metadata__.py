@@ -6,5 +6,5 @@ metadata = collections.OrderedDict([
     ('forces_tagline', 'for Ensemble Mosaik'),
     ('paper_dimensions', '11x17'),
     ('title', 'Invisible Cities: Zaira'),
-    ('year_of_completion', 2014),
+    ('year', 2014),
     ])
