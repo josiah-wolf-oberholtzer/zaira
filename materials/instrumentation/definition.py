@@ -33,37 +33,6 @@ instrumentation = instrumenttools.PerformerInventory(
                 ),
             ),
         instrumenttools.Performer(
-            name='clarinetist',
-            instruments=instrumenttools.InstrumentInventory(
-                [
-                    instrumenttools.BassClarinet(
-                        instrument_name='bass clarinet',
-                        short_instrument_name='bass cl.',
-                        instrument_name_markup=markuptools.Markup(
-                            contents=('Bass clarinet',),
-                            ),
-                        short_instrument_name_markup=markuptools.Markup(
-                            contents=('Bass cl.',),
-                            ),
-                        allowable_clefs=indicatortools.ClefInventory(
-                            [
-                                indicatortools.Clef(
-                                    name='treble',
-                                    ),
-                                indicatortools.Clef(
-                                    name='bass',
-                                    ),
-                                ]
-                            ),
-                        pitch_range=pitchtools.PitchRange(
-                            range_string='[Bb1, G5]',
-                            ),
-                        sounding_pitch_of_written_middle_c=pitchtools.NamedPitch('bf,'),
-                        ),
-                    ]
-                ),
-            ),
-        instrumenttools.Performer(
             name='pianist',
             instruments=instrumenttools.InstrumentInventory(
                 [
