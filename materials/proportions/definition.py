@@ -1,6 +1,9 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
-output_module_import_statements = []
+from abjad.tools import mathtools
+from consort import makers
+output_module_import_statements = [
+    'import consort',
+    ]
 
 
 proportions = [3, 1, 4, 7, 2]
@@ -13,3 +16,5 @@ proportions = [
 proportions.insert(0, [2])
 proportions.insert(2, [7])
 proportions = proportions + [[5], [1, 15]]
+
+proportions = makers.Proportions(proportions)
