@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
-from consort import makers
+import consort
 
 
-class ZairaSegmentMaker(makers.ConsortSegmentMaker):
+class ZairaSegmentMaker(consort.makers.ConsortSegmentMaker):
 
     ### CLASS VARIABLES ###
 
@@ -11,7 +11,7 @@ class ZairaSegmentMaker(makers.ConsortSegmentMaker):
     ### INITIALIZER ###
 
     def __init__(self):
-        pass
+        consort.makers.ConsortSegmentMaker.__init__(self)
 
     ### PUBLIC PROPERTIES ###
 

@@ -4,7 +4,7 @@ import zaira
 
 
 segment_index = 1
-segment_maker = consort.makers.ConsortSegmentMaker()
+segment_maker = zaira.makers.ZairaSegmentMaker()
 
 segment_maker.set_duration_in_seconds(
     zaira.materials.proportions.get_segment_duration_in_seconds(
