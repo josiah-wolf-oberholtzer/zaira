@@ -4,7 +4,7 @@ import consort
 
 
 proportions = consort.makers.Proportions(
-    (
+    [
         [2],
         [1, 6, 3],
         [7],
@@ -14,5 +14,5 @@ proportions = consort.makers.Proportions(
         [1, 4, 2],
         [5],
         [1, 15],
-        )
+        ]
     )
