@@ -2,4 +2,4 @@
 from abjad import *
 
 
-glass_harmonic_field = None
+harmonic_field_of_birchwood = None

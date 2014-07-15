@@ -2,4 +2,4 @@
 from abjad import *
 
 
-wooden_harmonic_field = None
+harmonic_field_of_sandstone = None

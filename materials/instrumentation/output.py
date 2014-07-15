@@ -217,5 +217,10 @@ instrumentation = instrumenttools.PerformerInventory(
                     ]
                 ),
             ),
+        instrumenttools.Performer(
+            instruments=instrumenttools.InstrumentInventory(
+                []
+                ),
+            ),
         ]
     )
