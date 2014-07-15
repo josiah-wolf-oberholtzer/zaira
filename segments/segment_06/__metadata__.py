@@ -2,4 +2,6 @@
 import collections
 
 
-metadata = collections.OrderedDict([])
+metadata = collections.OrderedDict([
+    ('name', 'F [1, 14, 7]'),
+    ])
