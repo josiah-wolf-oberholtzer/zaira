@@ -12,7 +12,19 @@
 			{
 				\time 4/4
 				\tempo 8=72
-				\mark \markup { \override #'(box-padding . 0.5) \box "A" " " \fontsize #-3 "" }
+				\mark \markup { \override #'(box-padding . 0.5) \box "C" " " \fontsize #-3 "" }
+				s1 * 1
+			}
+			{
+				s1 * 1
+			}
+			{
+				s1 * 1
+			}
+			{
+				s1 * 1
+			}
+			{
 				s1 * 1
 			}
 			{
@@ -39,6 +51,18 @@
 								R1 * 1
 							}
 							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
 								R1 * 1/2
 							}
 							{
@@ -62,6 +86,18 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
 								R1 * 1
 							}
 							{
@@ -94,6 +130,18 @@
 								R1 * 1
 							}
 							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
 								R1 * 1/2
 							}
 							{
@@ -117,6 +165,18 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
 								R1 * 1
 							}
 							{
@@ -147,6 +207,18 @@
 							R1 * 1
 						}
 						{
+							R1 * 1
+						}
+						{
+							R1 * 1
+						}
+						{
+							R1 * 1
+						}
+						{
+							R1 * 1
+						}
+						{
 							R1 * 1/2
 						}
 						{
@@ -166,6 +238,18 @@
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
+							R1 * 1
+						}
+						{
+							R1 * 1
+						}
+						{
+							R1 * 1
+						}
+						{
+							R1 * 1
+						}
+						{
 							R1 * 1
 						}
 						{
@@ -198,6 +282,18 @@
 								R1 * 1
 							}
 							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
 								R1 * 1/2
 							}
 							{
@@ -215,6 +311,18 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
 								R1 * 1
 							}
 							{
@@ -244,6 +352,18 @@
 								R1 * 1
 							}
 							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
 								R1 * 1/2
 							}
 							{
@@ -261,6 +381,18 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
 								R1 * 1
 							}
 							{
@@ -290,6 +422,18 @@
 								R1 * 1
 							}
 							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
 								R1 * 1/2
 							}
 							{
@@ -307,6 +451,18 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
 								R1 * 1
 							}
 							{

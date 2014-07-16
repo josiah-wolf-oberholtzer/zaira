@@ -12,15 +12,21 @@
 			{
 				\time 4/4
 				\tempo 8=72
-				\mark \markup { \override #'(box-padding . 0.5) \box "A" " " \fontsize #-3 "" }
+				\mark \markup { \override #'(box-padding . 0.5) \box "H" " " \fontsize #-3 "" }
 				s1 * 1
 			}
 			{
-				\time 2/4
-				s1 * 1/2
+				s1 * 1
 			}
 			{
-				s1 * 1/2
+				s1 * 1
+			}
+			{
+				s1 * 1
+			}
+			{
+				\time 5/16
+				s1 * 5/16
 			}
 		}
 		\context MultiplePerformerGroup = "Winds Performer Group" <<
@@ -39,10 +45,16 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -65,10 +77,16 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -94,10 +112,16 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -120,10 +144,16 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -147,10 +177,16 @@
 							R1 * 1
 						}
 						{
-							R1 * 1/2
+							R1 * 1
 						}
 						{
-							R1 * 1/2
+							R1 * 1
+						}
+						{
+							R1 * 1
+						}
+						{
+							R1 * 5/16
 							\stopStaff
 							\startStaff
 						}
@@ -169,10 +205,16 @@
 							R1 * 1
 						}
 						{
-							R1 * 1/2
+							R1 * 1
 						}
 						{
-							R1 * 1/2
+							R1 * 1
+						}
+						{
+							R1 * 1
+						}
+						{
+							R1 * 5/16
 							\stopStaff
 							\startStaff
 						}
@@ -198,10 +240,16 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -218,10 +266,16 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -244,10 +298,16 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -264,10 +324,16 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -290,10 +356,16 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -310,10 +382,16 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\bar "||"
 								\stopStaff
 								\startStaff
