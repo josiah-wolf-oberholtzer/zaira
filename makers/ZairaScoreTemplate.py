@@ -153,7 +153,10 @@ class ZairaScoreTemplate(makers.ConsortObject):
             label=label,
             )
         drums, label = manager.make_single_basic_performer(
-            instrumenttools.UntunedPercussion(),
+            instrumenttools.UntunedPercussion(
+                instrument_name='Drums',
+                short_instrument_name='Drums',
+                ),
             label=label,
             )
         percussion = scoretools.StaffGroup(
