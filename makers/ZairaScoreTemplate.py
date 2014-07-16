@@ -138,7 +138,7 @@ class ZairaScoreTemplate(makers.ConsortObject):
             )
         labels.append(label)
 
-        winds = scoretools.Context(
+        winds = scoretools.StaffGroup(
             [
                 oboe,
                 clarinet,
@@ -156,7 +156,7 @@ class ZairaScoreTemplate(makers.ConsortObject):
             instrumenttools.UntunedPercussion(),
             label=label,
             )
-        percussion = scoretools.Context(
+        percussion = scoretools.StaffGroup(
             [
                 marimba,
                 drums,
@@ -186,7 +186,7 @@ class ZairaScoreTemplate(makers.ConsortObject):
             )
         labels.append(label)
 
-        strings = scoretools.Context(
+        strings = scoretools.StaffGroup(
             [
                 violin,
                 viola,
