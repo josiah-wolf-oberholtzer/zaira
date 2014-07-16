@@ -7,8 +7,8 @@
 \include "../../../Abjad/consort/stylesheets/consort-layout-strings.ily"
 \include "../../../Abjad/consort/stylesheets/consort-layout-winds.ily"
 
-#(set-default-paper-size "11x17" 'portrait)
-#(set-global-staff-size 14)
+#(set-default-paper-size "11x17" 'landscape)
+#(set-global-staff-size 12)
 
 \header {
     composer = \markup {
@@ -44,9 +44,10 @@
 }
 
 \layout {
-
+    proportionalNotationDuration = #(ly:make-moment 1 32)
 }
 
 \paper {
-
+    max-systems-per-page = 2
+    system-separator-markup = \slashSeparator
 }
