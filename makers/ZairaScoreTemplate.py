@@ -17,9 +17,9 @@ class ZairaScoreTemplate(makers.ConsortObject):
             \keepWithTag #"score.oboe.clarinet-in-e-flat.piano.violin.viola.cello"
             \context TimeSignatureContext = "TimeSignatureContext" {
             }
-            \context MultiplePerformerGroup = "Winds Performer Group" {
+            \context EnsembleGroup = "Winds Performer Group" {
                 \keepWithTag #"score.oboe"
-                \context SinglePerformerGroup = "Oboe Performer Group" <<
+                \context PerformerGroup = "Oboe Performer Group" <<
                     \set Staff.instrumentName = \markup { Oboe }
                     \set Staff.shortInstrumentName = \markup { Ob. }
                     \context Staff = "Oboe  Staff" {
@@ -28,7 +28,7 @@ class ZairaScoreTemplate(makers.ConsortObject):
                     }
                 >>
                 \keepWithTag #"score.clarinet-in-e-flat"
-                \context SinglePerformerGroup = "Clarinet In E-Flat Performer Group" <<
+                \context PerformerGroup = "Clarinet In E-Flat Performer Group" <<
                     \set Staff.instrumentName = \markup { Clarinet in E-flat }
                     \set Staff.shortInstrumentName = \markup { Cl. E-flat }
                     \context Staff = "Clarinet In E-Flat  Staff" {
@@ -38,9 +38,9 @@ class ZairaScoreTemplate(makers.ConsortObject):
                 >>
             }
             \keepWithTag #"score.percussion"
-            \context MultiplePerformerGroup = "Percussion Performer Group" {
+            \context EnsembleGroup = "Percussion Performer Group" {
                 \keepWithTag #"score.percussion"
-                \context SinglePerformerGroup = "Marimba Performer Group" <<
+                \context PerformerGroup = "Marimba Performer Group" <<
                     \set Staff.instrumentName = \markup { Marimba }
                     \set Staff.shortInstrumentName = \markup { Mb. }
                     \context Staff = "Marimba Staff" {
@@ -49,7 +49,7 @@ class ZairaScoreTemplate(makers.ConsortObject):
                     }
                 >>
                 \keepWithTag #"score.percussion"
-                \context SinglePerformerGroup = "Untuned Percussion Performer Group" <<
+                \context PerformerGroup = "Untuned Percussion Performer Group" <<
                     \set Staff.instrumentName = \markup { Untuned percussion }
                     \set Staff.shortInstrumentName = \markup { Perc. }
                     \context Staff = "Untuned Percussion Staff" {
@@ -59,7 +59,7 @@ class ZairaScoreTemplate(makers.ConsortObject):
                 >>
             }
             \keepWithTag #"score.piano"
-            \context SinglePerformerGroup = "Piano Performer Group" <<
+            \context PerformerGroup = "Piano Performer Group" <<
                 \set PianoStaff.instrumentName = \markup { Piano }
                 \set PianoStaff.shortInstrumentName = \markup { Pf. }
                 \context Staff = "Piano Upper Staff" {
@@ -75,9 +75,9 @@ class ZairaScoreTemplate(makers.ConsortObject):
                 \context Dynamics = "Piano Pedals" {
                 }
             >>
-            \context MultiplePerformerGroup = "Strings Performer Group" {
+            \context EnsembleGroup = "Strings Performer Group" {
                 \keepWithTag #"score.violin"
-                \context SinglePerformerGroup = "Violin Performer Group" <<
+                \context PerformerGroup = "Violin Performer Group" <<
                     \set Staff.instrumentName = \markup { Violin }
                     \set Staff.shortInstrumentName = \markup { Vn. }
                     \context BowingStaff = "Violin Bowing Staff" {
@@ -90,7 +90,7 @@ class ZairaScoreTemplate(makers.ConsortObject):
                     }
                 >>
                 \keepWithTag #"score.viola"
-                \context SinglePerformerGroup = "Viola Performer Group" <<
+                \context PerformerGroup = "Viola Performer Group" <<
                     \set Staff.instrumentName = \markup { Viola }
                     \set Staff.shortInstrumentName = \markup { Va. }
                     \context BowingStaff = "Viola Bowing Staff" {
@@ -103,7 +103,7 @@ class ZairaScoreTemplate(makers.ConsortObject):
                     }
                 >>
                 \keepWithTag #"score.cello"
-                \context SinglePerformerGroup = "Cello Performer Group" <<
+                \context PerformerGroup = "Cello Performer Group" <<
                     \set Staff.instrumentName = \markup { Cello }
                     \set Staff.shortInstrumentName = \markup { Vc. }
                     \context BowingStaff = "Cello Bowing Staff" {
@@ -144,7 +144,7 @@ class ZairaScoreTemplate(makers.ConsortObject):
                 clarinet,
                 ],
             name='Winds Performer Group',
-            context_name='MultiplePerformerGroup',
+            context_name='EnsembleGroup',
             )
 
         label = 'percussion'
@@ -165,7 +165,7 @@ class ZairaScoreTemplate(makers.ConsortObject):
                 drums,
                 ],
             name='Percussion Performer Group',
-            context_name='MultiplePerformerGroup',
+            context_name='EnsembleGroup',
             )
         manager.attach_tag('score.percussion', percussion)
 
@@ -196,7 +196,7 @@ class ZairaScoreTemplate(makers.ConsortObject):
                 cello,
                 ],
             name='Strings Performer Group',
-            context_name='MultiplePerformerGroup',
+            context_name='EnsembleGroup',
             )
 
         time_signature_context = manager.make_time_signature_context(labels)

@@ -3,5 +3,5 @@ import collections
 
 
 metadata = collections.OrderedDict([
-    ('name', 'H [5]'),
+    ('name', 'H'),
     ])
