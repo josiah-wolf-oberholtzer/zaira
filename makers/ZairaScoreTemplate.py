@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
+from abjad.tools import instrumenttools
+from abjad.tools import scoretools
 from consort import makers
 
 
@@ -106,211 +107,90 @@ class ZairaScoreTemplate(makers.ConsortObject):
     ### SPECIAL METHODS ###
 
     def __call__(self):
+        from consort import makers
 
-        flute_staff_group = self._make_wind_performer_staff_group(
-            name='Flute',
+        manager = makers.ScoreTemplateManager
+        labels = []
+
+        oboe, label = manager.make_single_wind_performer(
+            instrumenttools.Oboe(),
             )
+        labels.append(label)
 
-        oboe_staff_group = self._make_wind_performer_staff_group(
-            name='Oboe',
+        clarinet, label = manager.make_single_wind_performer(
+            instrumenttools.ClarinetInEFlat(),
             )
+        labels.append(label)
 
-        clarinet_staff_group = self._make_wind_performer_staff_group(
-            name='Clarinet',
-            )
-
-        saxophone_staff_group = self._make_wind_performer_staff_group(
-            name='Saxophone',
-            )
-
-        winds_staff_group = scoretools.StaffGroup(
+        winds = scoretools.Context(
             [
-                flute_staff_group,
-                oboe_staff_group,
-                clarinet_staff_group,
-                saxophone_staff_group,
+                oboe,
+                clarinet,
                 ],
-            name='Winds Staff Group',
+            name='Winds Performer Group',
+            context_name='MultiplePerformerGroup',
             )
 
-        piano_staff_group = self._make_piano_staff_group()
-
-        percussion_staff_group = self._make_percussion_staff_group()
-
-        electronics_voice = scoretools.Voice(
-            context_name='ElectronicsVoice',
-            name='Electronics Voice',
+        label = 'percussion'
+        marimba, label = manager.make_single_basic_performer(
+            instrumenttools.Marimba(),
+            label=label,
             )
-
-        electronics_staff = scoretools.Staff(
+        drums, label = manager.make_single_basic_performer(
+            instrumenttools.UntunedPercussion(),
+            label=label,
+            )
+        percussion = scoretools.Context(
             [
-                electronics_voice,
+                marimba,
+                drums,
                 ],
-            context_name='ElectronicsStaff',
-            name='Electronics Staff',
+            name='Percussion Performer Group',
+            context_name='MultiplePerformerGroup',
             )
+        manager.attach_tag('score.percussion', percussion)
 
-        violin_staff_group = self._make_string_performer_staff_group(
-            name='Violin',
+        piano, label = manager.make_single_piano_performer(
+            instrumenttools.Piano(),
             )
+        labels.append(label)
 
-        viola_staff_group = self._make_string_performer_staff_group(
-            name='Viola',
+        violin, label = manager.make_single_string_performer(
+            instrumenttools.Violin(),
             )
+        labels.append(label)
 
-        cello_staff_group = self._make_string_performer_staff_group(
-            name='Cello',
+        viola, label = manager.make_single_string_performer(
+            instrumenttools.Viola(),
             )
+        labels.append(label)
 
-        strings_staff_group = scoretools.StaffGroup(
+        cello, label = manager.make_single_string_performer(
+            instrumenttools.Cello(),
+            )
+        labels.append(label)
+
+        strings = scoretools.Context(
             [
-                violin_staff_group,
-                viola_staff_group,
-                cello_staff_group,
+                violin,
+                viola,
+                cello,
                 ],
-            name='Strings Staff Group',
+            name='Strings Performer Group',
+            context_name='MultiplePerformerGroup',
             )
 
-        time_signature_context = scoretools.Context(
-            name='TimeSignatureContext',
-            context_name='TimeSignatureContext',
-            )
+        time_signature_context = manager.make_time_signature_context(labels)
 
         score = scoretools.Score(
             [
                 time_signature_context,
-                winds_staff_group,
-                percussion_staff_group,
-                electronics_staff,
-                piano_staff_group,
-                strings_staff_group,
+                winds,
+                percussion,
+                piano,
+                strings,
                 ],
             name='Zaira Score',
             )
 
         return score
-
-    ### PRIVATE METHODS ###
-
-    def _make_percussion_staff_group(self):
-
-        staff_group = scoretools.StaffGroup(
-            name='Percussion Staff Group',
-            )
-
-        return staff_group
-
-    def _make_piano_staff_group(self):
-
-        upper_voice = scoretools.Voice(
-            name='Piano Upper Voice',
-            )
-
-        upper_staff = scoretools.Staff(
-            [
-                upper_voice,
-                ],
-            name='Piano Upper Staff',
-            )
-
-        dynamics = scoretools.Voice(
-            context_name='Dynamics',
-            name='Piano Dynamics',
-            )
-
-        lower_voice = scoretools.Voice(
-            name='Piano Lower Voice',
-            )
-
-        lower_staff = scoretools.Staff(
-            [
-                lower_voice,
-                ],
-            name='Piano Lower Staff',
-            )
-
-        pedals = scoretools.Voice(
-            context_name='Dynamics',
-            name='Piano Pedals',
-            )
-
-        staff_group = scoretools.StaffGroup(
-            [
-                upper_staff,
-                dynamics,
-                lower_staff,
-                pedals,
-                ],
-            context_name='PianoStaff',
-            name='Piano Staff Group',
-            )
-
-        return staff_group
-
-    def _make_string_performer_staff_group(self, name=None):
-
-        bowing_voice = scoretools.Voice(
-            context_name='BowingVoice',
-            name='{} Bowing Voice'.format(name),
-            )
-
-        bowing_staff = scoretools.Staff(
-            [
-                bowing_voice,
-                ],
-            context_name='BowingStaff',
-            name='{} Bowing Staff'.format(name),
-            )
-
-        dynamics = scoretools.Voice(
-            context_name='Dynamics',
-            name='{} Dynamics'.format(name),
-            )
-
-        fingering_voice = scoretools.Voice(
-            context_name='FingeringVoice',
-            name='{} Fingering Voice'.format(name),
-            )
-
-        fingering_staff = scoretools.Staff(
-            [
-                fingering_voice,
-                ],
-            context_name='FingeringStaff',
-            name='{} Fingering Staff'.format(name),
-            )
-
-        staff_group = scoretools.StaffGroup(
-            [
-                bowing_staff,
-                dynamics,
-                fingering_staff,
-                ],
-            context_name='StringPerformerStaffGroup',
-            name='{} Staff Group'.format(name),
-            )
-
-        return staff_group
-
-    def _make_wind_performer_staff_group(self, name=None):
-
-        voice = scoretools.Voice(
-            name='{} Voice'.format(name),
-            )
-
-        staff = scoretools.Staff(
-            [
-                voice,
-                ],
-            name='{} Staff'.format(name),
-            )
-
-        staff_group = scoretools.StaffGroup(
-            [
-                staff,
-                ],
-            context_name='WindPerformerStaffGroup',
-            name='{} Staff Group'.format(name),
-            )
-
-        return staff_group
