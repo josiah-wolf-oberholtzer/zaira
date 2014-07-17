@@ -23,9 +23,9 @@
 				s1 * 1/2
 			}
 		}
-		\context MultiplePerformerGroup = "Winds Performer Group" <<
+		\context EnsembleGroup = "Winds Performer Group" <<
 			\keepWithTag #'score.oboe
-			\context SinglePerformerGroup = "Oboe Performer Group" \with {
+			\context PerformerGroup = "Oboe Performer Group" \with {
 				instrumentName = \markup { Oboe }
 				shortInstrumentName = \markup { Ob. }
 			} <<
@@ -51,7 +51,7 @@
 				}
 			>>
 			\keepWithTag #'score.clarinet-in-e-flat
-			\context SinglePerformerGroup = "Clarinet In E-Flat Performer Group" \with {
+			\context PerformerGroup = "Clarinet In E-Flat Performer Group" \with {
 				instrumentName = \markup { Clarinet in E-flat }
 				shortInstrumentName = \markup { Cl. E-flat }
 			} <<
@@ -78,9 +78,9 @@
 			>>
 		>>
 		\keepWithTag #'score.percussion
-		\context MultiplePerformerGroup = "Percussion Performer Group" <<
+		\context EnsembleGroup = "Percussion Performer Group" <<
 			\keepWithTag #'score.percussion
-			\context SinglePerformerGroup = "Marimba Performer Group" \with {
+			\context PerformerGroup = "Marimba Performer Group" \with {
 				instrumentName = \markup { Marimba }
 				shortInstrumentName = \markup { Mb. }
 			} <<
@@ -106,7 +106,7 @@
 				}
 			>>
 			\keepWithTag #'score.score.percussion
-			\context SinglePerformerGroup = "Drums Performer Group" \with {
+			\context PerformerGroup = "Drums Performer Group" \with {
 				instrumentName = \markup { Drums }
 				shortInstrumentName = \markup { Drums }
 			} <<
@@ -133,7 +133,7 @@
 			>>
 		>>
 		\keepWithTag #'score.piano
-		\context SinglePerformerGroup = "Piano Performer Group" \with {
+		\context PianoPerformerGroup = "Piano Performer Group" \with {
 			instrumentName = \markup { Piano }
 			shortInstrumentName = \markup { Pf. }
 		} <<
@@ -182,9 +182,9 @@
 			\context Dynamics = "Piano Pedals" {
 			}
 		>>
-		\context MultiplePerformerGroup = "Strings Performer Group" <<
+		\context EnsembleGroup = "Strings Performer Group" <<
 			\keepWithTag #'score.violin
-			\context SinglePerformerGroup = "Violin Performer Group" \with {
+			\context StringPerformerGroup = "Violin Performer Group" \with {
 				instrumentName = \markup { Violin }
 				shortInstrumentName = \markup { Vn. }
 			} <<
@@ -230,7 +230,7 @@
 				}
 			>>
 			\keepWithTag #'score.viola
-			\context SinglePerformerGroup = "Viola Performer Group" \with {
+			\context StringPerformerGroup = "Viola Performer Group" \with {
 				instrumentName = \markup { Viola }
 				shortInstrumentName = \markup { Va. }
 			} <<
@@ -276,7 +276,7 @@
 				}
 			>>
 			\keepWithTag #'score.cello
-			\context SinglePerformerGroup = "Cello Performer Group" \with {
+			\context StringPerformerGroup = "Cello Performer Group" \with {
 				instrumentName = \markup { Cello }
 				shortInstrumentName = \markup { Vc. }
 			} <<

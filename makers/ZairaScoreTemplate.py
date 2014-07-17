@@ -129,12 +129,12 @@ class ZairaScoreTemplate(makers.ConsortObject):
         labels = []
 
         oboe, label = manager.make_single_wind_performer(
-            instrumenttools.Oboe(),
+            instrument=instrumenttools.Oboe(),
             )
         labels.append(label)
 
         clarinet, label = manager.make_single_wind_performer(
-            instrumenttools.ClarinetInEFlat(),
+            instrument=instrumenttools.ClarinetInEFlat(),
             )
         labels.append(label)
 
@@ -149,11 +149,11 @@ class ZairaScoreTemplate(makers.ConsortObject):
 
         label = 'percussion'
         marimba, label = manager.make_single_basic_performer(
-            instrumenttools.Marimba(),
+            instrument=instrumenttools.Marimba(),
             label=label,
             )
         drums, label = manager.make_single_basic_performer(
-            instrumenttools.UntunedPercussion(
+            instrument=instrumenttools.UntunedPercussion(
                 instrument_name='Drums',
                 short_instrument_name='Drums',
                 ),
@@ -170,22 +170,22 @@ class ZairaScoreTemplate(makers.ConsortObject):
         manager.attach_tag('score.percussion', percussion)
 
         piano, label = manager.make_single_piano_performer(
-            instrumenttools.Piano(),
+            instrument=instrumenttools.Piano(),
             )
         labels.append(label)
 
         violin, label = manager.make_single_string_performer(
-            instrumenttools.Violin(),
+            instrument=instrumenttools.Violin(),
             )
         labels.append(label)
 
         viola, label = manager.make_single_string_performer(
-            instrumenttools.Viola(),
+            instrument=instrumenttools.Viola(),
             )
         labels.append(label)
 
         cello, label = manager.make_single_string_performer(
-            instrumenttools.Cello(),
+            instrument=instrumenttools.Cello(),
             )
         labels.append(label)
 
