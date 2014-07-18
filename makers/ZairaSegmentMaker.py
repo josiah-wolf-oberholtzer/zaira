@@ -2,7 +2,7 @@
 import consort
 
 
-class ZairaSegmentMaker(consort.makers.ConsortSegmentMaker):
+class ZairaSegmentMaker(consort.makers.SegmentMaker):
 
     ### CLASS VARIABLES ###
 
@@ -11,7 +11,7 @@ class ZairaSegmentMaker(consort.makers.ConsortSegmentMaker):
     ### INITIALIZER ###
 
     def __init__(self):
-        consort.makers.ConsortSegmentMaker.__init__(self)
+        consort.makers.SegmentMaker.__init__(self)
 
     ### PUBLIC PROPERTIES ###
 

@@ -14,5 +14,6 @@ proportions = consort.makers.Proportions(
         [1, 4, 2],
         [5],
         [1, 15],
+        [3],
         ]
     )

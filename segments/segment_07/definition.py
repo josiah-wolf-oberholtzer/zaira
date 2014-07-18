@@ -15,4 +15,4 @@ segment_maker.set_duration_in_seconds(
 segment_maker.set_rehearsal_mark('G')
 segment_maker.set_score_template(zaira.makers.ZairaScoreTemplate())
 segment_maker.set_tempo(zaira.materials.tempi[0])
-segment_maker.set_time_signatures(zaira.materials.time_signatures)
+segment_maker.set_permitted_time_signatures(zaira.materials.time_signatures)
