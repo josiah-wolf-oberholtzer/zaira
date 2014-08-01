@@ -1,10 +1,11 @@
 # -*- encoding: utf-8 -*-
+from abjad.tools import abctools
 from abjad.tools import instrumenttools
 from abjad.tools import scoretools
 from consort import makers
 
 
-class ZairaScoreTemplate(makers.ConsortObject):
+class ZairaScoreTemplate(abctools.AbjadValueObject):
     r'''Zaira score template.
 
     ::
@@ -141,7 +142,6 @@ class ZairaScoreTemplate(makers.ConsortObject):
     ### SPECIAL METHODS ###
 
     def __call__(self):
-        from consort import makers
 
         manager = makers.ScoreTemplateManager
         labels = []
