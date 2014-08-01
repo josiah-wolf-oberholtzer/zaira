@@ -2,9 +2,9 @@
 import zaira
 
 
-segment_index = 5
+segment_index = 10
 segment_maker = zaira.makers.ZairaSegmentMaker(
-    rehearsal_mark='F',
+    rehearsal_mark='K',
     tempo=zaira.materials.tempi[0],
     )
 
