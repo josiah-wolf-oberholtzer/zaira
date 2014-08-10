@@ -1,170 +1,141 @@
-Materials
-=========
+MATERIALS
 
-1. Frozen chords
-----------------
+    (1) Frozen chords
+    Fl: 
+    Ob: 
+    Cl: 
+    Pn: 
+    --
+    Vn: 
+    Va: 
+    Vc: 
 
-Flute
-Oboe
-Clarinet
-Piano
-...
-Violin
-Viola
-Cello
+    (2) Undergrowth
+    Fl: key click trills
+    Ob: sfz low register blurts
+    --
+    Pn: ppp low clusters
+    Pc: granular texture of wood and skin
+    Vn: staccato scratches
+    Va: staccato scratches
+    Vc: staccato scratches
 
-2. Dark rustling
-----------------
+    (3) Aggressive reiteration
+    --
+    --
+    --
+    Pn: fff cluster reiteration, constant
+    Pc: fff kick drum and cow bell / break drum reiteration, constant
+    --
+    --
+    --
 
-Flute: key click trills
-Oboe: sfz low register blurts
-...
-Piano: ppp low clusters
-Percussion: granular texture of wood and skin
-Violin: staccato scratches
-Viola: staccato scratches
-Cello: staccato scratches
+    (4) Guiro
+    --
+    --
+    --
+    Pn: guiro
+    Pc: guiro
+    Vn: battuto
+    Va: battuto
+    Vc: battuto
 
-3. Percussive reiterations 
---------------------------
+    (5) Bamboo night
+    Fl: brazil nut shaker tremolo
+    --
+    Cl: brazil nut shaker tremolo
+    --
+    Pc: bamboo wind chimes
+    Vn: brazil nut shaker tremolo
+    Va: brazil nut shaker tremolo
+    --
 
-...
-...
-...
-Piano: fff cluster reiteration, constant
-Percussion: fff kick drum and cow bell / break drum reiteration, constant
-...
-...
-...
+    (6) Mizmars
+    --
+    Ob: f, highly ornamented, rearticulated line on near constant pitch
+    Cl: shadow oboe melody, higher register, sans ornamentation
+    --
+    --
+    --
+    --
+    --
 
-4. Guiro
---------
+    (7) Shimmering
+    Fl
+    --
+    --
+    Pn: 
+    --
+    Vn
+    Va
+    Vc
 
-...
-...
-...
-Piano: guiro on tuning pegs
-Percussion: guiro
-Violin: battuto
-Viola: battuto
-Cello: battuto
+    (8) Strident cello
+    --
+    --
+    --
+    --
+    --
+    --
+    --
+    Vc: forceful low melody
 
-5. Bamboo night
----------------
+    (9) Distant drone
+    --
+    Cl:  
+    --
+    Pn: ebow
+    Pc: gently beat tam / bass drum
+    Vn: high harmonics
+    Va: high harmonics
+    Vc: open c string
 
-Flute: brazil nut shaker tremolo
-...
-Clarinet: brazil nut shaker tremolo
-...
-...
-Violin: brazil nut shaker tremolo
-Viola: brazil nut shaker tremolo
-...
+    (10) Tutti strings
+    --
+    --
+    --
+    --
+    --
+    Vn:
+    Va:
+    Vc:
 
-6. Mizmars
-----------
+    (11) Brief figuration
+    Fl:
+    Ob:
+    Cl:
+    --
+    --
+    Vn:
+    Va:
+    Vc:
 
-...
-Oboe: f, highly ornamented, rearticulated line on near constant pitch
-Clarinet: shadow oboe melody, higher register, sans ornamentation
-...
-...
-...
-...
-...
+    (12) Brittle grains
+    --
+    --
+    --
+    Pn:
+    Pc:
+    Vn:
+    Va:
+    Vc:
 
-7. Shimmering
--------------
+    (13) Flute solo
+    Fl: 
+    --
+    --
+    --
+    --
+    --
+    --
+    --
 
-Flute
-...
-...
-Piano: 
-...
-Violin
-Viola
-Cello
-
-8. Strident cello
------------------
-
-...
-...
-...
-...
-...
-...
-...
-Cello: forceful low melody
-
-9. Distant drone
-----------------
-
-...
-Clarinet: bass clarinet subtone?
-...
-Piano: ebow
-Percussion: gently beat tam / bass drum
-Violin: high harmonics
-Viola: high harmonics
-Cello: open c string
-
-10. Tutti strings
------------------
-
-...
-...
-...
-...
-...
-Violin
-Viola
-Cello
-
-11. Brief figuration
---------------------
-
-Flute
-Oboe
-Clarinet
-...
-...
-Violin
-Viola
-Cello
-
-12. Brittle grains
-------------------
-
-...
-...
-...
-Piano
-Percussion
-Violin
-Viola
-Cello
-
-13. Flute solo
---------------
-
-Flute
-...
-...
-...
-...
-...
-...
-...
-
-14. Piano inharmonics
----------------------
-
-...
-...
-...
-Piano
-Percussion
-...
-...
-...
+    (14) Piano inharmonics
+    --
+    --
+    --
+    Pn: 
+    Pc: 
+    --
+    --
+    --

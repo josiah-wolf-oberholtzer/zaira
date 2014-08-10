@@ -1,68 +1,16 @@
-Segment Overview
-================
+MATERIALS BY SEGMENT
 
-A [2]
------
-
--   A.1 [2]:
-
-B [1, 6, 3]
------------
-
--   B.1 [1]:
--   B.2 [6]:
--   B.3 [3]:
-
-C [7]
------
-
--   C.1 [7]:
-
-D [1, 2, 1]
------------
-
--   D.1 [1]:
--   D.2 [2]:
--   D.3 [1]:
-
-E [1, 8, 4]
------------
-
--   E.1 [1]:
--   E.2 [8]:
--   E.3 [4]:
-
-F [1, 14, 7]
-------------
-
--   F.1 [1]:
--   F.2 [14]:
--   F.3 [7]:
-
-G [1, 4, 2]
------------
-
--   G.1 [1]:
--   G.2 [4]:
--   G.3 [2]:
-
-H [5]
------
-
--   H.1 [5]:
-
-I [1, 15]
----------
-
--   I.1 [1]: 
--   I.2 [15]: 
-
-J [2]
------
-
--   J.1 [2]:
-
-K [3]
------
-
--   K.1 [3]:
+    (1) "frozen chords"             []
+    (2) "undergrowth"               []
+    (3) "aggressive reiteration"    []
+    (4) "guiro"                     []
+    (5) "bamboo night"              [C], [H], [J],
+    (6) "mizmars"                   []
+    (7) "shimmering"                [B], [E], [J],
+    (8) "strident cello"            []
+    (9) "distant drone"             [D], [F], [I],
+    (10) "tutti strings"            []
+    (11) "brief figuration"         []
+    (12) "brittle grains"           []
+    (13) "flute solo"               []
+    (14) "piano inharmonics"        []
