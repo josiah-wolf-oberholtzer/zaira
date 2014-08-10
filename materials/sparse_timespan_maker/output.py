@@ -9,6 +9,8 @@ sparse_timespan_maker = consort.makers.TimespanMaker(
         durationtools.Duration(0, 1),
         durationtools.Duration(1, 4),
         durationtools.Duration(1, 8),
+        durationtools.Duration(3, 8),
+        durationtools.Duration(3, 16),
         ),
     minimum_duration=durationtools.Duration(1, 8),
     playing_durations=(
@@ -20,7 +22,7 @@ sparse_timespan_maker = consort.makers.TimespanMaker(
         durationtools.Duration(3, 8),
         durationtools.Duration(1, 4),
         ),
-    playing_groupings=(1, 1, 2, 1),
+    playing_groupings=(1, 1, 2, 1, 2, 1, 1, 1),
     repeat=True,
     silence_durations=(
         durationtools.Duration(5, 4),
