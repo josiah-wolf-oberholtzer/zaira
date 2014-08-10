@@ -1,36 +1,34 @@
 # -*- encoding: utf-8 -*-
 from abjad import *
-from consort import makers
+import consort
 
 
-sparse_timespan_maker = makers.TimespanMaker(
+sparse_timespan_maker = consort.makers.TimespanMaker(
     can_split=True,
     initial_silence_durations=(
-        Duration(0),
-        Duration(1, 4),
-        Duration(1, 8),
+        durationtools.Duration(0, 1),
+        durationtools.Duration(1, 4),
+        durationtools.Duration(1, 8),
         ),
-    minimum_duration=Duration(1, 8),
+    minimum_duration=durationtools.Duration(1, 8),
     playing_durations=(
-        Duration(1, 4),
-        Duration(3, 8),
-        Duration(1, 2),
-        Duration(3, 8),
-        Duration(3, 8),
+        durationtools.Duration(1, 4),
+        durationtools.Duration(3, 8),
+        durationtools.Duration(1, 2),
+        durationtools.Duration(5, 16),
+        durationtools.Duration(3, 8),
+        durationtools.Duration(3, 8),
+        durationtools.Duration(1, 4),
         ),
-    playing_groupings=(
-        1,
-        1,
-        2,
-        1,
-        ),
+    playing_groupings=(1, 1, 2, 1),
     repeat=True,
     silence_durations=(
-        Duration(5, 4),
-        Duration(3, 4),
-        Duration(13, 8),
-        Duration(5, 8),
-        Duration(7, 8),
+        durationtools.Duration(5, 4),
+        durationtools.Duration(3, 4),
+        durationtools.Duration(13, 8),
+        durationtools.Duration(5, 8),
+        durationtools.Duration(7, 8),
+        durationtools.Duration(7, 16),
         ),
     step_anchor=Right,
     synchronize_groupings=False,
