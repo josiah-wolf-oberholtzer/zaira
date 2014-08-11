@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+import collections
 from abjad.tools import abctools
 from abjad.tools import instrumenttools
 from abjad.tools import scoretools
@@ -6,6 +7,17 @@ from consort import makers
 
 
 class ZairaScoreTemplate(abctools.AbjadValueObject):
+
+    ### CLASS VARIABLES ###
+
+    __slots__ = (
+        '_voice_name_abbreviations',
+        )
+
+    ### INITIALIZER ###
+
+    def __init__(self):
+        self._voice_name_abbreviations = collections.OrderedDict()
 
     ### SPECIAL METHODS ###
 
@@ -20,16 +32,19 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
             instrument=instrumenttools.Flute(),
             )
         labels.append(label)
+        self._voice_name_abbreviations['flute'] = flute[0][0].name
 
         oboe, label = manager.make_single_wind_performer(
             instrument=instrumenttools.Oboe(),
             )
         labels.append(label)
+        self._voice_name_abbreviations['oboe'] = oboe[0][0].name
 
         clarinet, label = manager.make_single_wind_performer(
             instrument=instrumenttools.ClarinetInEFlat(),
             )
         labels.append(label)
+        self._voice_name_abbreviations['clarinet'] = clarinet[0][0].name
 
         winds = scoretools.StaffGroup(
             [
@@ -50,6 +65,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                 ),
             label='percussion',
             )
+        self._voice_name_abbreviations['metals'] = metals[0][0].name
 
         woods, label = manager.make_single_basic_performer(
             instrument=instrumenttools.UntunedPercussion(
@@ -58,6 +74,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                 ),
             label='percussion',
             )
+        self._voice_name_abbreviations['woods'] = woods[0][0].name
 
         percussion = scoretools.StaffGroup(
             [
@@ -78,6 +95,10 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
             instrument=instrumenttools.Piano(),
             )
         labels.append(label)
+        self._voice_name_abbreviations['piano_rh'] = piano[0][0].name
+        self._voice_name_abbreviations['piano_dynamics'] = piano[1].name
+        self._voice_name_abbreviations['piano_lh'] = piano[2][0].name
+        self._voice_name_abbreviations['piano_pedals'] = piano[3].name
 
         ### STRINGS ###
 
@@ -86,18 +107,21 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
             split=False,
             )
         labels.append(label)
+        self._voice_name_abbreviations['violin'] = violin[0][0].name
 
         viola, label = manager.make_single_string_performer(
             instrument=instrumenttools.Viola(),
             split=False,
             )
         labels.append(label)
+        self._voice_name_abbreviations['viola'] = viola[0][0].name
 
         cello, label = manager.make_single_string_performer(
             instrument=instrumenttools.Cello(),
             split=False,
             )
         labels.append(label)
+        self._voice_name_abbreviations['cello'] = cello[0][0].name
 
         strings = scoretools.StaffGroup(
             [
@@ -125,3 +149,9 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
             )
 
         return score
+
+    ### PUBLIC PROPERTIES ###
+
+    @property
+    def voice_name_abbreviations(self):
+        return self._voice_name_abbreviations
