@@ -5,15 +5,20 @@ import consort
 
 sustained_timespan_maker = consort.makers.TimespanMaker(
     can_split=True,
-    initial_silence_durations=(),
-    minimum_duration=durationtools.Duration(1, 8),
-    playing_durations=(
-        durationtools.Duration(1, 4),
+    initial_silence_talea=rhythmmakertools.Talea(
+        counts=(0, 2, 1),
+        denominator=8,
         ),
-    playing_groupings=(1,),
+    minimum_duration=durationtools.Duration(1, 8),
+    playing_talea=rhythmmakertools.Talea(
+        counts=(4, 5, 4, 3, 7, 6),
+        denominator=8,
+        ),
+    playing_groupings=(3, 4, 2, 2, 3),
     repeat=True,
-    silence_durations=(
-        durationtools.Duration(1, 4),
+    silence_talea=rhythmmakertools.Talea(
+        counts=(2, 1, 2, 1, 3, 7, 1, 2),
+        denominator=8,
         ),
     step_anchor=Right,
     synchronize_groupings=False,
