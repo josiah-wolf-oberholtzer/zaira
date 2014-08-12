@@ -1,4 +1,4 @@
-% 2014-08-12 14:32
+% 2014-08-12 16:43
 
 \version "2.19.11"
 \language "english"
@@ -80,6 +80,26 @@
 				\time 4/16
 				s1 * 1/4
 			}
+			{
+				\time 5/8
+				s1 * 5/8
+			}
+			{
+				\time 2/4
+				s1 * 1/2
+			}
+			{
+				\time 5/16
+				s1 * 5/16
+			}
+			{
+				\time 2/8
+				s1 * 1/4
+			}
+			{
+				\time 7/8
+				s1 * 7/8
+			}
 		}
 		\new RhythmicStaff {
 			{
@@ -116,6 +136,61 @@
 				{
 					r8
 					c'8
+				}
+			}
+			{
+				\time 5/8
+				\tweak #'text #tuplet-number::calc-fraction-text
+				\times 10/11 {
+					c'16
+					r8.
+					c'16
+					r8
+					c'16
+					r8
+					c'16 ~
+				}
+			}
+			{
+				\time 2/4
+				\times 8/9 {
+					c'16
+					c'16
+					r8.
+					c'16
+					r8
+					c'16
+				}
+			}
+			{
+				\time 5/16
+				{
+					r8
+					c'8
+					c'16
+				}
+			}
+			{
+				\time 2/8
+				{
+					r8.
+					c'16
+				}
+			}
+			{
+				\time 7/8
+				\tweak #'text #tuplet-number::calc-fraction-text
+				\times 7/8 {
+					r8
+					c'16
+					r8
+					c'8
+					c'16
+					r8.
+					c'16
+					r8
+					c'16
+					r16
 				}
 			}
 		}
