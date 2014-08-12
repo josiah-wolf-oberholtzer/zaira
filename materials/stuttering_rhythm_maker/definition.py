@@ -18,4 +18,9 @@ stuttering_rhythm_maker = rhythmmakertools.IncisedRhythmMaker(
         beam_each_division=False,
         beam_divisions_together=False,
         ),
+    tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
+        avoid_dots=True,
+        is_diminution=True,
+        simplify_tuplets=True,
+        ),
     )

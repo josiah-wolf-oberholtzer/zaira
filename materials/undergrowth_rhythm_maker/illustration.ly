@@ -1,4 +1,4 @@
-% 2014-08-12 17:28
+% 2014-08-12 17:53
 
 \version "2.19.11"
 \language "english"
@@ -123,9 +123,8 @@
 			}
 			{
 				\time 3/16
-				\tweak #'text #tuplet-number::calc-fraction-text
-				\times 3/4 {
-					c'4
+				{
+					c'8.
 				}
 			}
 			{

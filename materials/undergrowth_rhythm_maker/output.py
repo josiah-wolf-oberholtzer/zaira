@@ -14,7 +14,7 @@ undergrowth_rhythm_maker = rhythmmakertools.TaleaRhythmMaker(
         ),
     tie_split_notes=True,
     tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
-        avoid_dots=False,
+        avoid_dots=True,
         is_diminution=True,
         simplify_tuplets=True,
         ),

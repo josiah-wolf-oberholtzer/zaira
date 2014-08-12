@@ -1,4 +1,4 @@
-% 2014-08-12 16:38
+% 2014-08-12 17:57
 
 \version "2.19.11"
 \language "english"
@@ -148,7 +148,9 @@
 			}
 			{
 				\time 5/8
-				{
+				\tweak #'text #tuplet-number::calc-fraction-text
+				\times 10/11 {
+					c'16
 					c'16
 					c'16
 					c'16
@@ -163,9 +165,7 @@
 			}
 			{
 				\time 2/4
-				\times 8/10 {
-					c'16
-					c'16
+				{
 					c'16
 					c'16
 					c'16
@@ -188,7 +188,9 @@
 			}
 			{
 				\time 2/8
-				{
+				\times 4/6 {
+					c'16
+					c'16
 					c'16
 					c'16
 					c'16
@@ -197,10 +199,7 @@
 			}
 			{
 				\time 7/8
-				\tweak #'text #tuplet-number::calc-fraction-text
-				\times 14/16 {
-					c'16
-					c'16
+				{
 					c'16
 					c'16
 					c'16
