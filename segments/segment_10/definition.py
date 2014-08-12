@@ -7,6 +7,10 @@ import consort
 
 segment_index = 9
 segment_maker = zaira.makers.ZairaSegmentMaker(
+    annotation_specifier=consort.makers.AnnotationSpecifier(
+        show_annotated_result=True,
+        show_unannotated_result=False,
+        ),
     rehearsal_mark='J',
     tempo=zaira.materials.tempi[1],
     )
@@ -18,10 +22,41 @@ segment_maker.set_duration_in_seconds(
         ),
     )
 
-segment_maker.add_construct(
-    music_specifier=consort.makers.MusicSpecifier(),
-    timespan_maker=zaira.materials.sparse_timespan_maker,
-    voice_identifier=(
-        '.+ Voice',
-        )
+music_specifier = consort.makers.MusicSpecifier(
+    attachment_maker=consort.makers.AttachmentMaker(
+        accents=consort.makers.AttachmentExpression(
+            attachments=(
+                indicatortools.Articulation('>'),
+                ),
+            selector=selectortools.Selector().by_leaves().by_run(Note)[0],
+            ),
+        staccati=consort.makers.AttachmentExpression(
+            attachments=(
+                indicatortools.Articulation('.'),
+                ),
+            selector=selectortools.Selector().by_leaves().by_run(Note)[1:],
+            ),
+        ),
+    rhythm_maker=zaira.materials.undergrowth_rhythm_maker,
+#    rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
+#        denominators=(8, 16),
+#        extra_counts_per_division=(0, 1, 2),
+#        ),
     )
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.sparse_timespan_maker,
+    flute=music_specifier,
+    oboe=music_specifier,
+    clarinet=music_specifier,
+    piano_lh=music_specifier,
+    piano_rh=music_specifier,
+    violin=music_specifier,
+    viola=music_specifier,
+    cello=music_specifier,
+    )
+
+
+if __name__ == '__main__':
+    lilypond_file = segment_maker()
+    show(lilypond_file)
