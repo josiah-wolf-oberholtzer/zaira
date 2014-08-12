@@ -4,7 +4,7 @@ from abjad import *
 
 undergrowth_rhythm_maker = rhythmmakertools.TaleaRhythmMaker(
     talea=rhythmmakertools.Talea(
-        counts=(1, -3, 1, -2, 1, -2, 2),
+        counts=(1, -3, 1, -2, 1, -2, 2, -4, 4),
         denominator=16,
         ),
     extra_counts_per_division=(0, 2, 1, 0, 1, 1, 0),
