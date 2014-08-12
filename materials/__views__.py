@@ -11,5 +11,11 @@ view_inventory=idetools.ViewInventory(
                 ["'rhythm maker' in :ds:"]
                 ),
             ),
+        (
+            'timespan makers',
+            idetools.View(
+                ["'timespan maker' in :ds:"]
+                ),
+            ),
         ]
     )

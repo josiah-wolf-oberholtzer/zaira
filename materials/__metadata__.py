@@ -3,5 +3,5 @@ import collections
 
 
 metadata = collections.OrderedDict([
-    ('view_name', 'rhythm makers'),
+    ('view_name', 'timespan makers'),
     ])
