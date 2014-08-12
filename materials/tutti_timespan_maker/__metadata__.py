@@ -3,5 +3,5 @@ import collections
 
 
 metadata = collections.OrderedDict([
-    ('output_material_class_name', 'TimespanMaker'),
+    ('output_material_class_name', 'TaleaTimespanMaker'),
     ])
