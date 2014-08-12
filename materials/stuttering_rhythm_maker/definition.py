@@ -14,4 +14,8 @@ stuttering_rhythm_maker = rhythmmakertools.IncisedRhythmMaker(
         fill_with_notes=False,
         ),
     extra_counts_per_division=(0, 0, 0, 1, 0, 1),
+    beam_specifier=rhythmmakertools.BeamSpecifier(
+        beam_each_division=False,
+        beam_divisions_together=False,
+        ),
     )

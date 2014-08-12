@@ -8,6 +8,10 @@ undergrowth_rhythm_maker = rhythmmakertools.TaleaRhythmMaker(
         denominator=16,
         ),
     extra_counts_per_division=(0, 2, 1, 0, 1, 1, 0),
+    beam_specifier=rhythmmakertools.BeamSpecifier(
+        beam_each_division=False,
+        beam_divisions_together=False,
+        ),
     tie_split_notes=True,
     tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
         avoid_dots=False,
