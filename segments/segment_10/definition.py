@@ -28,20 +28,16 @@ music_specifier = consort.makers.MusicSpecifier(
             attachments=(
                 indicatortools.Articulation('>'),
                 ),
-            selector=selectortools.Selector().by_leaves().by_run(Note)[0],
+            selector=selectortools.selects_first_logical_tie_in_pitched_runs()[0],
             ),
         staccati=consort.makers.AttachmentExpression(
             attachments=(
                 indicatortools.Articulation('.'),
                 ),
-            selector=selectortools.Selector().by_leaves().by_run(Note)[1:],
+            selector=selectortools.selects_all_but_first_logical_tie_in_pitched_runs()[0],
             ),
         ),
     rhythm_maker=zaira.materials.undergrowth_rhythm_maker,
-#    rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
-#        denominators=(8, 16),
-#        extra_counts_per_division=(0, 1, 2),
-#        ),
     )
 
 segment_maker.add_setting(
