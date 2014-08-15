@@ -7,29 +7,19 @@ wide_trill_attachment_expression = consort.makers.AttachmentExpression(
     attachments=datastructuretools.TypedList(
         [
             spannertools.ComplexTrillSpanner(
-                interval=pitchtools.NamedInterval(
-                    '+P4'
-                    ),
+                interval=pitchtools.NamedInterval('+P4'),
                 ),
             spannertools.ComplexTrillSpanner(
-                interval=pitchtools.NamedInterval(
-                    '+P4'
-                    ),
+                interval=pitchtools.NamedInterval('+P4'),
                 ),
             spannertools.ComplexTrillSpanner(
-                interval=pitchtools.NamedInterval(
-                    '+m3'
-                    ),
+                interval=pitchtools.NamedInterval('+m3'),
                 ),
             spannertools.ComplexTrillSpanner(
-                interval=pitchtools.NamedInterval(
-                    '+P4'
-                    ),
+                interval=pitchtools.NamedInterval('+P4'),
                 ),
             spannertools.ComplexTrillSpanner(
-                interval=pitchtools.NamedInterval(
-                    '+m3'
-                    ),
+                interval=pitchtools.NamedInterval('+m3'),
                 ),
             ]
         ),
