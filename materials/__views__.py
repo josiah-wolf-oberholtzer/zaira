@@ -6,6 +6,12 @@ from scoremanager import idetools
 view_inventory=idetools.ViewInventory(
     [
         (
+            'attachment expressions',
+            idetools.View(
+                ["'attachment expression' in :ds:"]
+                ),
+            ),
+        (
             'rhythm makers',
             idetools.View(
                 ["'rhythm maker' in :ds:"]
