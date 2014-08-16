@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+from abjad import new
 from abjad import show
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
@@ -70,11 +71,23 @@ segment_maker.add_setting(
     flute=music_specifier,
     oboe=music_specifier,
     clarinet=music_specifier,
+    metals=new(music_specifier,
+        rhythm_maker=zaira.materials.reiterating_rhythm_maker,
+        ),
+    woods=new(music_specifier,
+        rhythm_maker=zaira.materials.reiterating_rhythm_maker,
+        ),
     piano_lh=music_specifier,
     piano_rh=music_specifier,
-    violin=music_specifier,
-    viola=music_specifier,
-    cello=music_specifier,
+    violin=new(music_specifier,
+        rhythm_maker=zaira.materials.legato_rhythm_maker,
+        ),
+    viola=new(music_specifier,
+        rhythm_maker=zaira.materials.legato_rhythm_maker,
+        ),
+    cello=new(music_specifier,
+        rhythm_maker=zaira.materials.legato_rhythm_maker,
+        ),
     )
 
 
