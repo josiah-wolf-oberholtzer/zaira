@@ -1,4 +1,4 @@
-\version "2.19.9"
+\version "2.19.11"
 \language "english"
 
 #(ly:set-option 'relative-includes #t)
@@ -7,23 +7,64 @@
 
 \score {
 	\context Score = "Zaira Score" <<
-		\keepWithTag #'score.score.oboe.score.clarinet-in-e-flat.score.piano.score.violin.score.viola.score.cello
+		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
 				\time 4/4
-				\tempo 8=72
-				\mark \markup { \override #'(box-padding . 0.5) \box "A" " " \fontsize #-3 "" }
+				\tempo 4=72
+				\mark \markup {
+					\override
+						#'(box-padding . 0.5)
+						\box
+							A
+					" "
+					\fontsize
+						#-3
+						" "
+					}
+				s1 * 1
+			}
+			{
+				s1 * 1
+			}
+			{
 				s1 * 1
 			}
 			{
 				\time 2/4
 				s1 * 1/2
 			}
-			{
-				s1 * 1/2
-			}
 		}
-		\context EnsembleGroup = "Winds Performer Group" <<
+		\context EnsembleGroup = "Wind Section Staff Group" <<
+			\keepWithTag #'score.flute
+			\context PerformerGroup = "Flute Performer Group" \with {
+				instrumentName = \markup { Flute }
+				shortInstrumentName = \markup { Fl. }
+			} <<
+				\context Staff = "Flute  Staff" {
+					\context Voice = "Flute Voice" {
+						{
+							{
+								\stopStaff
+								\once \override Staff.StaffSymbol.line-count = 1
+								\startStaff
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1/2
+								\stopStaff
+								\startStaff
+							}
+						}
+					}
+				}
+			>>
 			\keepWithTag #'score.oboe
 			\context PerformerGroup = "Oboe Performer Group" \with {
 				instrumentName = \markup { Oboe }
@@ -39,7 +80,10 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
+							}
+							{
+								R1 * 1
 							}
 							{
 								R1 * 1/2
@@ -65,7 +109,10 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
+							}
+							{
+								R1 * 1
 							}
 							{
 								R1 * 1/2
@@ -78,14 +125,14 @@
 			>>
 		>>
 		\keepWithTag #'score.percussion
-		\context EnsembleGroup = "Percussion Performer Group" <<
+		\context EnsembleGroup = "Percussion Section Staff Group" <<
 			\keepWithTag #'score.percussion
-			\context PerformerGroup = "Marimba Performer Group" \with {
-				instrumentName = \markup { Marimba }
-				shortInstrumentName = \markup { Mb. }
+			\context PerformerGroup = "Metals Performer Group" \with {
+				instrumentName = \markup { Metals }
+				shortInstrumentName = \markup { Metals }
 			} <<
-				\context Staff = "Marimba Staff" {
-					\context Voice = "Marimba Voice" {
+				\context Staff = "Metals Staff" {
+					\context Voice = "Metals Voice" {
 						{
 							{
 								\stopStaff
@@ -94,7 +141,10 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
+							}
+							{
+								R1 * 1
 							}
 							{
 								R1 * 1/2
@@ -105,13 +155,13 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.score.percussion
-			\context PerformerGroup = "Drums Performer Group" \with {
-				instrumentName = \markup { Drums }
-				shortInstrumentName = \markup { Drums }
+			\keepWithTag #'score.percussion
+			\context PerformerGroup = "Woods Performer Group" \with {
+				instrumentName = \markup { Woods }
+				shortInstrumentName = \markup { Woods }
 			} <<
-				\context Staff = "Drums Staff" {
-					\context Voice = "Drums Voice" {
+				\context Staff = "Woods Staff" {
+					\context Voice = "Woods Voice" {
 						{
 							{
 								\stopStaff
@@ -120,7 +170,10 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
+							}
+							{
+								R1 * 1
 							}
 							{
 								R1 * 1/2
@@ -147,7 +200,10 @@
 							R1 * 1
 						}
 						{
-							R1 * 1/2
+							R1 * 1
+						}
+						{
+							R1 * 1
 						}
 						{
 							R1 * 1/2
@@ -169,7 +225,10 @@
 							R1 * 1
 						}
 						{
-							R1 * 1/2
+							R1 * 1
+						}
+						{
+							R1 * 1
 						}
 						{
 							R1 * 1/2
@@ -182,14 +241,14 @@
 			\context Dynamics = "Piano Pedals" {
 			}
 		>>
-		\context EnsembleGroup = "Strings Performer Group" <<
+		\context EnsembleGroup = "String Section Staff Group" <<
 			\keepWithTag #'score.violin
 			\context StringPerformerGroup = "Violin Performer Group" \with {
 				instrumentName = \markup { Violin }
 				shortInstrumentName = \markup { Vn. }
 			} <<
-				\context BowingStaff = "Violin Bowing Staff" {
-					\context Voice = "Violin Bowing Voice" {
+				\context StringStaff = "Violin Staff" {
+					\context Voice = "Violin Voice" {
 						{
 							{
 								\stopStaff
@@ -198,27 +257,10 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
-							}
-							{
-								R1 * 1/2
-								\stopStaff
-								\startStaff
-							}
-						}
-					}
-				}
-				\context FingeringStaff = "Violin Fingering Staff" {
-					\context Voice = "Violin Fingering Voice" {
-						{
-							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
 							}
 							{
 								R1 * 1/2
@@ -234,8 +276,8 @@
 				instrumentName = \markup { Viola }
 				shortInstrumentName = \markup { Va. }
 			} <<
-				\context BowingStaff = "Viola Bowing Staff" {
-					\context Voice = "Viola Bowing Voice" {
+				\context StringStaff = "Viola Staff" {
+					\context Voice = "Viola Voice" {
 						{
 							{
 								\stopStaff
@@ -244,27 +286,10 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
-							}
-							{
-								R1 * 1/2
-								\stopStaff
-								\startStaff
-							}
-						}
-					}
-				}
-				\context FingeringStaff = "Viola Fingering Staff" {
-					\context Voice = "Viola Fingering Voice" {
-						{
-							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
 							}
 							{
 								R1 * 1/2
@@ -280,8 +305,8 @@
 				instrumentName = \markup { Cello }
 				shortInstrumentName = \markup { Vc. }
 			} <<
-				\context BowingStaff = "Cello Bowing Staff" {
-					\context Voice = "Cello Bowing Voice" {
+				\context StringStaff = "Cello Staff" {
+					\context Voice = "Cello Voice" {
 						{
 							{
 								\stopStaff
@@ -290,27 +315,10 @@
 								R1 * 1
 							}
 							{
-								R1 * 1/2
-							}
-							{
-								R1 * 1/2
-								\stopStaff
-								\startStaff
-							}
-						}
-					}
-				}
-				\context FingeringStaff = "Cello Fingering Staff" {
-					\context Voice = "Cello Fingering Voice" {
-						{
-							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
 								R1 * 1
 							}
 							{
-								R1 * 1/2
+								R1 * 1
 							}
 							{
 								R1 * 1/2
