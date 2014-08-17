@@ -7,7 +7,7 @@ legato_rhythm_maker = rhythmmakertools.TaleaRhythmMaker(
         counts=(3, 2, 1, 1, 1, 4, 3, 1, 1, 1, 1, 5, 2, 4),
         denominator=8,
         ),
-    split_divisions_by_counts=(4, 3, 6, 5),
+    #split_divisions_by_counts=(4, 3, 6, 5),
     extra_counts_per_division=(0, 0, 1, 2, 0, 1),
     beam_specifier=rhythmmakertools.BeamSpecifier(
         beam_each_division=False,
@@ -19,7 +19,7 @@ legato_rhythm_maker = rhythmmakertools.TaleaRhythmMaker(
         lefts=(-1,),
         left_lengths=(1, 0),
         ),
-    tie_split_notes=True,
+    tie_split_notes=False,
     tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
         avoid_dots=True,
         is_diminution=True,
