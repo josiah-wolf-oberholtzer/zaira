@@ -12,6 +12,12 @@ view_inventory=idetools.ViewInventory(
                 ),
             ),
         (
+            'music specifiers',
+            idetools.View(
+                ["'music specifier' in :ds:"]
+                ),
+            ),
+        (
             'rhythm makers',
             idetools.View(
                 ["'rhythm maker' in :ds:"]
