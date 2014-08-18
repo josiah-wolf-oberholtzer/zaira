@@ -4,7 +4,146 @@ import consort
 
 
 brazil_nut_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(),
+    attachment_maker=consort.makers.AttachmentMaker(
+        attachment_expressions=(
+            consort.makers.AttachmentExpression(
+                attachments=datastructuretools.TypedList(
+                    [
+                        consort.makers.DynamicExpression(
+                            hairpin_start_token='ppp',
+                            minimum_duration=durationtools.Duration(1, 4),
+                            ),
+                        consort.makers.DynamicExpression(
+                            hairpin_start_token='p',
+                            minimum_duration=durationtools.Duration(1, 4),
+                            ),
+                        consort.makers.DynamicExpression(
+                            hairpin_start_token='pp',
+                            minimum_duration=durationtools.Duration(1, 4),
+                            ),
+                        ]
+                    ),
+                selector=selectortools.Selector(
+                    callbacks=(
+                        selectortools.PrototypeSelectorCallback(
+                            prototype=scoretools.Leaf,
+                            ),
+                        selectortools.RunSelectorCallback(
+                            prototype=(
+                                scoretools.Note,
+                                scoretools.Chord,
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            consort.makers.AttachmentExpression(
+                attachments=datastructuretools.TypedList(
+                    [
+                        (
+                            consort.makers.ClefSpanner(
+                                clef=indicatortools.Clef(
+                                    name='percussion',
+                                    ),
+                                ),
+                            spannertools.StaffLinesSpanner(
+                                lines=1,
+                                overrides={
+                                    'note_head__style': 'cross',
+                                    },
+                                ),
+                            ),
+                        ]
+                    ),
+                selector=selectortools.Selector(),
+                ),
+            consort.makers.AttachmentExpression(
+                attachments=datastructuretools.TypedList(
+                    [
+                        spannertools.TextSpanner(
+                            overrides={
+                                'text_spanner__bound_details__left__text': markuptools.Markup(
+                                    contents=(
+                                        markuptools.MarkupCommand(
+                                            'box',
+                                            markuptools.MarkupCommand(
+                                                'pad-around',
+                                                0.5,
+                                                ['shaker']
+                                                )
+                                            ),
+                                        ),
+                                    ),
+                                'text_spanner__bound_details__right__text': markuptools.Markup(
+                                    contents=(
+                                        markuptools.MarkupCommand(
+                                            'draw-line',
+                                            schemetools.SchemePair(
+                                                0,
+                                                -1
+                                                )
+                                            ),
+                                        ),
+                                    ),
+                                'text_spanner__bound_details__right_broken__text': False,
+                                'text_spanner__dash_fraction': 1,
+                                'text_spanner__direction': Up,
+                                },
+                            ),
+                        ]
+                    ),
+                selector=selectortools.Selector(),
+                ),
+            consort.makers.AttachmentExpression(
+                attachments=datastructuretools.TypedList(
+                    [
+                        spannertools.StemTremoloSpanner(),
+                        ]
+                    ),
+                selector=selectortools.Selector(
+                    callbacks=(
+                        selectortools.LogicalTieSelectorCallback(
+                            flatten=True,
+                            pitched=True,
+                            trivial=True,
+                            only_with_head=False,
+                            only_with_tail=False,
+                            ),
+                        selectortools.DurationSelectorCallback(
+                            duration=durationtools.Duration(1, 16),
+                            parts=More,
+                            ),
+                        ),
+                    ),
+                ),
+            consort.makers.AttachmentExpression(
+                attachments=datastructuretools.TypedList(
+                    [
+                        indicatortools.Articulation('.'),
+                        ]
+                    ),
+                selector=selectortools.Selector(
+                    callbacks=(
+                        selectortools.LogicalTieSelectorCallback(
+                            flatten=True,
+                            pitched=True,
+                            trivial=True,
+                            only_with_head=False,
+                            only_with_tail=False,
+                            ),
+                        selectortools.DurationSelectorCallback(
+                            duration=durationtools.Duration(1, 8),
+                            parts=Less,
+                            ),
+                        selectortools.LengthSelectorCallback(
+                            length=1,
+                            parts=Exact,
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+        ),
     rhythm_maker=rhythmmakertools.TaleaRhythmMaker(
         talea=rhythmmakertools.Talea(
             counts=(1, -3, 1, -2, 1, -2, 2, -4, 4),

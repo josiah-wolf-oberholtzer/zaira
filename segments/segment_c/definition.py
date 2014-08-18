@@ -34,6 +34,10 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.dense_timespan_maker,
+    clarinet=zaira.materials.brazil_nut_music_specifier,
+    oboe=zaira.materials.brazil_nut_music_specifier,
+    viola=zaira.materials.brazil_nut_music_specifier,
+    violin=zaira.materials.brazil_nut_music_specifier,
     )
 
 

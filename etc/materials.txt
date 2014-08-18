@@ -41,8 +41,8 @@ MATERIALS
     Vc: battuto
 
     (5) Bamboo night
-    Fl: brazil nut shaker tremolo
     --
+    Ob: brazil nut shaker tremolo
     Cl: brazil nut shaker tremolo
     --
     Pc: bamboo wind chimes
