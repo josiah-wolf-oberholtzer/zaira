@@ -45,6 +45,7 @@
 }
 
 \layout {
+    \override StemTremolo.style = #'default
     proportionalNotationDuration = #(ly:make-moment 1 32)
 }
 
