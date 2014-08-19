@@ -13,7 +13,7 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
             consort.materials.percussion_staff_attachment_expression,
             consort.makers.AttachmentExpression(
                 consort.makers.ComplexTextSpanner(
-                    r'\box \pad-around #0.5 { shaker }',
+                    markup=r'\box \pad-around #0.5 { shaker }',
                     ),
                 selector=selectortools.Selector(),
                 ),
