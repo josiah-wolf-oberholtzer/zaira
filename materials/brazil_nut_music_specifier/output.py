@@ -60,35 +60,19 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
             consort.makers.AttachmentExpression(
                 attachments=datastructuretools.TypedList(
                     [
-                        spannertools.TextSpanner(
-                            overrides={
-                                'text_spanner__bound_details__left__text': markuptools.Markup(
-                                    contents=(
+                        consort.makers.ComplexTextSpanner(
+                            markup=markuptools.Markup(
+                                contents=(
+                                    markuptools.MarkupCommand(
+                                        'box',
                                         markuptools.MarkupCommand(
-                                            'box',
-                                            markuptools.MarkupCommand(
-                                                'pad-around',
-                                                0.5,
-                                                ['shaker']
-                                                )
-                                            ),
+                                            'pad-around',
+                                            0.5,
+                                            ['shaker']
+                                            )
                                         ),
                                     ),
-                                'text_spanner__bound_details__right__text': markuptools.Markup(
-                                    contents=(
-                                        markuptools.MarkupCommand(
-                                            'draw-line',
-                                            schemetools.SchemePair(
-                                                0,
-                                                -1
-                                                )
-                                            ),
-                                        ),
-                                    ),
-                                'text_spanner__bound_details__right_broken__text': False,
-                                'text_spanner__dash_fraction': 1,
-                                'text_spanner__direction': Up,
-                                },
+                                ),
                             ),
                         ]
                     ),

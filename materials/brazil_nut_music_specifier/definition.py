@@ -12,8 +12,9 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
             consort.materials.background_dynamic_attachment_expression,
             consort.materials.percussion_staff_attachment_expression,
             consort.makers.AttachmentExpression(
-                attachments=spannertools.make_solid_text_spanner_with_nib(
-                    r'\box \pad-around #0.5 { shaker }', Up),
+                consort.makers.ComplexTextSpanner(
+                    r'\box \pad-around #0.5 { shaker }',
+                    ),
                 selector=selectortools.Selector(),
                 ),
             consort.makers.AttachmentExpression(
