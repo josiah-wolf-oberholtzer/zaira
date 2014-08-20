@@ -9,24 +9,13 @@ piano_clusters_music_specifier = consort.makers.MusicSpecifier(
             consort.makers.AttachmentExpression(
                 attachments=datastructuretools.TypedList(
                     [
-                        (
-                            indicatortools.LaissezVibrer(),
-                            markuptools.Markup(
-                                contents=(
-                                    markuptools.MarkupCommand(
-                                        'box',
-                                        markuptools.MarkupCommand(
-                                            'pad-around',
-                                            0.5,
-                                            markuptools.MarkupCommand(
-                                                'caps',
-                                                'L.V.'
-                                                )
-                                            )
-                                        ),
-                                    ),
-                                direction=Up,
-                                ),
+                        consort.makers.DynamicExpression(
+                            hairpin_start_token='mf',
+                            minimum_duration=durationtools.Duration(1, 4),
+                            ),
+                        consort.makers.DynamicExpression(
+                            hairpin_start_token='mp',
+                            minimum_duration=durationtools.Duration(1, 4),
                             ),
                         ]
                     ),
@@ -41,8 +30,29 @@ piano_clusters_music_specifier = consort.makers.MusicSpecifier(
                                 scoretools.Chord,
                                 ),
                             ),
-                        selectortools.SliceSelectorCallback(
-                            argument=-1,
+                        ),
+                    ),
+                ),
+            consort.makers.AttachmentExpression(
+                attachments=datastructuretools.TypedList(
+                    [
+                        (
+                            indicatortools.Articulation('.'),
+                            indicatortools.Articulation('>'),
+                            ),
+                        ]
+                    ),
+                selector=selectortools.Selector(
+                    callbacks=(
+                        selectortools.LogicalTieSelectorCallback(
+                            flatten=True,
+                            pitched=True,
+                            trivial=True,
+                            only_with_head=False,
+                            only_with_tail=False,
+                            ),
+                        selectortools.ItemSelectorCallback(
+                            item=0,
                             apply_to_each=True,
                             ),
                         ),
@@ -59,10 +69,25 @@ piano_clusters_music_specifier = consort.makers.MusicSpecifier(
                     include_white_keys=True,
                     staff_space_width=7,
                     ),
+                consort.makers.KeyClusterExpression(
+                    include_black_keys=True,
+                    include_white_keys=True,
+                    staff_space_width=9,
+                    ),
+                consort.makers.KeyClusterExpression(
+                    include_black_keys=False,
+                    include_white_keys=True,
+                    staff_space_width=7,
+                    ),
                 ]
             ),
         pitch_classes=datastructuretools.CyclicTuple(
-            []
+            [
+                pitchtools.NamedPitch('c'),
+                pitchtools.NamedPitch('g'),
+                pitchtools.NamedPitch('e'),
+                pitchtools.NamedPitch('a'),
+                ]
             ),
         ),
     rhythm_maker=rhythmmakertools.IncisedRhythmMaker(

@@ -2,6 +2,7 @@
 from abjad import show
 from abjad.tools import durationtools
 from abjad.tools import mathtools
+import consort
 import zaira
 
 
@@ -26,6 +27,9 @@ segment_maker.set_duration_in_seconds(
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.sustained_timespan_maker,
+    metals=consort.makers.MusicSpecifier(
+        rhythm_maker=zaira.materials.reiterating_rhythm_maker,
+        ),
     )
 
 

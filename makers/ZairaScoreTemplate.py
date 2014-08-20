@@ -5,6 +5,7 @@ from abjad.tools import indicatortools
 from abjad.tools import instrumenttools
 from abjad.tools import scoretools
 from abjad.tools.topleveltools import attach
+from abjad.tools.topleveltools import override
 from consort import makers
 
 
@@ -73,7 +74,9 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                 ),
             label='percussion',
             )
+        override(metals[0]).staff_symbol.line_count = 3
         self._voice_name_abbreviations['metals'] = metals[0][0].name
+        attach(indicatortools.Clef('percussion'), metals[0][0])
 
         woods, label = manager.make_single_basic_performer(
             instrument=instrumenttools.UntunedPercussion(
@@ -82,12 +85,26 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                 ),
             label='percussion',
             )
+        override(woods[0]).staff_symbol.line_count = 3
         self._voice_name_abbreviations['woods'] = woods[0][0].name
+        attach(indicatortools.Clef('percussion'), woods[0][0])
+
+        drums, label = manager.make_single_basic_performer(
+            instrument=instrumenttools.UntunedPercussion(
+                instrument_name='Drums',
+                short_instrument_name='Drums',
+                ),
+            label='percussion',
+            )
+        override(drums[0]).staff_symbol.line_count = 3
+        self._voice_name_abbreviations['drums'] = drums[0][0].name
+        attach(indicatortools.Clef('percussion'), drums[0][0])
 
         percussion = scoretools.StaffGroup(
             [
                 metals,
                 woods,
+                drums,
                 ],
             name='Percussion Section Staff Group',
             context_name='EnsembleGroup',
