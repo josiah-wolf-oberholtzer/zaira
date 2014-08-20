@@ -10,6 +10,153 @@ from consort import makers
 
 
 class ZairaScoreTemplate(abctools.AbjadValueObject):
+    r'''Zaira score template.
+
+    ::
+
+        >>> import zaira
+        >>> template = zaira.makers.ZairaScoreTemplate()
+        >>> score = template()
+        >>> print(format(score))
+        \context Score = "Zaira Score" <<
+            \keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
+            \context TimeSignatureContext = "TimeSignatureContext" {
+            }
+            \context EnsembleGroup = "Wind Section Staff Group" <<
+                \keepWithTag #'score.flute
+                \context PerformerGroup = "Flute Performer Group" \with {
+                    instrumentName = \markup { Flute }
+                    shortInstrumentName = \markup { Fl. }
+                } <<
+                    \context FluteStaff = "Flute Staff" {
+                        \context Voice = "Flute Voice" {
+                            \clef "treble"
+                        }
+                    }
+                >>
+                \keepWithTag #'score.oboe
+                \context PerformerGroup = "Oboe Performer Group" \with {
+                    instrumentName = \markup { Oboe }
+                    shortInstrumentName = \markup { Ob. }
+                } <<
+                    \context OboeStaff = "Oboe Staff" {
+                        \context Voice = "Oboe Voice" {
+                            \clef "treble"
+                        }
+                    }
+                >>
+                \keepWithTag #'score.clarinet-in-e-flat
+                \context PerformerGroup = "Clarinet In E-Flat Performer Group" \with {
+                    instrumentName = \markup { Clarinet in E-flat }
+                    shortInstrumentName = \markup { Cl. E-flat }
+                } <<
+                    \context ClarinetInEFlatStaff = "Clarinet In E-Flat Staff" {
+                        \context Voice = "Clarinet In E-Flat Voice" {
+                            \clef "treble"
+                        }
+                    }
+                >>
+            >>
+            \keepWithTag #'score.percussion
+            \context EnsembleGroup = "Percussion Section Staff Group" <<
+                \keepWithTag #'score.percussion
+                \context PerformerGroup = "Metals Performer Group" \with {
+                    instrumentName = \markup { Metals }
+                    shortInstrumentName = \markup { Metals }
+                } <<
+                    \context MetalsStaff = "Metals Staff" \with {
+                        \override StaffSymbol #'line-count = #3
+                    } {
+                        \context Voice = "Metals Voice" {
+                            \clef "percussion"
+                        }
+                    }
+                >>
+                \keepWithTag #'score.percussion
+                \context PerformerGroup = "Woods Performer Group" \with {
+                    instrumentName = \markup { Woods }
+                    shortInstrumentName = \markup { Woods }
+                } <<
+                    \context WoodsStaff = "Woods Staff" \with {
+                        \override StaffSymbol #'line-count = #3
+                    } {
+                        \context Voice = "Woods Voice" {
+                            \clef "percussion"
+                        }
+                    }
+                >>
+                \keepWithTag #'score.percussion
+                \context PerformerGroup = "Drums Performer Group" \with {
+                    instrumentName = \markup { Drums }
+                    shortInstrumentName = \markup { Drums }
+                } <<
+                    \context DrumsStaff = "Drums Staff" \with {
+                        \override StaffSymbol #'line-count = #3
+                    } {
+                        \context Voice = "Drums Voice" {
+                            \clef "percussion"
+                        }
+                    }
+                >>
+            >>
+            \keepWithTag #'score.piano
+            \context PianoPerformerGroup = "Piano Performer Group" \with {
+                instrumentName = \markup { Piano }
+                shortInstrumentName = \markup { Pf. }
+            } <<
+                \context PianoUpperStaff = "Piano Upper Staff" {
+                    \context Voice = "Piano Upper Voice" {
+                        \clef "treble"
+                    }
+                }
+                \context Dynamics = "Piano Dynamics" {
+                }
+                \context PianoLowerStaff = "Piano Lower Staff" {
+                    \context Voice = "Piano Lower Voice" {
+                        \clef "bass"
+                    }
+                }
+                \context Dynamics = "Piano Pedals" {
+                }
+            >>
+            \context EnsembleGroup = "String Section Staff Group" <<
+                \keepWithTag #'score.violin
+                \context StringPerformerGroup = "Violin Performer Group" \with {
+                    instrumentName = \markup { Violin }
+                    shortInstrumentName = \markup { Vn. }
+                } <<
+                    \context StringStaff = "Violin Staff" {
+                        \context Voice = "Violin Voice" {
+                            \clef "treble"
+                        }
+                    }
+                >>
+                \keepWithTag #'score.viola
+                \context StringPerformerGroup = "Viola Performer Group" \with {
+                    instrumentName = \markup { Viola }
+                    shortInstrumentName = \markup { Va. }
+                } <<
+                    \context StringStaff = "Viola Staff" {
+                        \context Voice = "Viola Voice" {
+                            \clef "alto"
+                        }
+                    }
+                >>
+                \keepWithTag #'score.cello
+                \context StringPerformerGroup = "Cello Performer Group" \with {
+                    instrumentName = \markup { Cello }
+                    shortInstrumentName = \markup { Vc. }
+                } <<
+                    \context StringStaff = "Cello Staff" {
+                        \context Voice = "Cello Voice" {
+                            \clef "bass"
+                        }
+                    }
+                >>
+            >>
+        >>
+
+    '''
 
     ### CLASS VARIABLES ###
 
