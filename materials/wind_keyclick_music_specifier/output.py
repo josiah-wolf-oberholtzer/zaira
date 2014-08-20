@@ -47,8 +47,9 @@ wind_keyclick_music_specifier = consort.makers.MusicSpecifier(
                                     ),
                                 ),
                             spannertools.StaffLinesSpanner(
-                                lines=1,
+                                lines=(4, -4),
                                 overrides={
+                                    'note_head__no_ledgers': True,
                                     'note_head__style': 'cross',
                                     },
                                 ),
