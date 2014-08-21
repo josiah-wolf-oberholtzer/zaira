@@ -9,8 +9,8 @@ import zaira
 brazil_nut_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
         attachment_expressions=(
-            consort.materials.background_dynamic_attachment_expression,
-            consort.materials.percussion_staff_attachment_expression,
+            zaira.materials.background_dynamic_attachment_expression,
+            zaira.materials.percussion_staff_attachment_expression,
             consort.makers.AttachmentExpression(
                 consort.makers.ComplexTextSpanner(
                     markup=r'\box \pad-around #0.5 { shaker }',

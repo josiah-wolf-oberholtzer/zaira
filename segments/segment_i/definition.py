@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 from abjad import show
 from abjad.tools import durationtools
+from abjad.tools import indicatortools
 from abjad.tools import mathtools
 import consort
 import zaira
@@ -11,7 +12,7 @@ import zaira
 
 segment_maker = zaira.makers.ZairaSegmentMaker(
     rehearsal_mark='I',
-    tempo=zaira.materials.tempi[0],
+    tempo=indicatortools.Tempo((1, 4), 48),
     )
 
 ratio = mathtools.NonreducedRatio(1, 15)
@@ -30,7 +31,7 @@ segment_maker.add_setting(
     piano_rh=consort.makers.MusicSpecifier(
         attachment_maker=consort.makers.AttachmentMaker(
             attachment_expressions=(
-                consort.materials.tremolo_attachment_expression,
+                zaira.materials.tremolo_attachment_expression,
                 ),
             ),
         ),

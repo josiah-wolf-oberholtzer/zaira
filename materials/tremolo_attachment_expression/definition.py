@@ -4,6 +4,6 @@ import consort
 
 
 tremolo_attachment_expression = consort.makers.AttachmentExpression(
-    attachments=spannertools.StemTremoloSpanner(minimum_duration=0),
+    attachments=spannertools.StemTremoloSpanner(),
     selector=selectortools.selects_pitched_runs(),
     )

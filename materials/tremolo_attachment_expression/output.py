@@ -6,9 +6,7 @@ import consort
 tremolo_attachment_expression = consort.makers.AttachmentExpression(
     attachments=datastructuretools.TypedList(
         [
-            spannertools.StemTremoloSpanner(
-                minimum_duration=durationtools.Duration(0, 1),
-                ),
+            spannertools.StemTremoloSpanner(),
             ]
         ),
     selector=selectortools.Selector(

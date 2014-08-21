@@ -1,16 +1,76 @@
-MATERIALS BY SEGMENT
+MATERIALS
 
-    (1) "frozen chords"             []
-    (2) "undergrowth"               []
-    (3) "aggressive reiteration"    []
-    (4) "guiro"                     []
-    (5) "bamboo night"              [C], [H], [J],
-    (6) "mizmars"                   []
-    (7) "shimmering"                [B], [E], [J],
-    (8) "strident cello"            []
-    (9) "distant drone"             [D], [F], [I],
-    (10) "tutti strings"            []
-    (11) "brief figuration"         []
-    (12) "brittle grains"           []
-    (13) "flute solo"               []
-    (14) "piano inharmonics"        []
+    brazil nuts
+    drone
+    fanfare
+    mizmar
+    reiteration
+    shimmering
+    taqsim
+
+SEGMENTS
+
+    [A] 
+    
+        fanfare
+        reiteration
+        mizmar
+
+    [B] 
+    
+        shimmering
+        undergrowth
+        mizmar
+        taqsim
+
+    [C] 
+    
+        fanfare
+        brazil nuts
+        guero
+
+    [D] 
+    
+        high drone
+        shimmering
+
+    [E] 
+    
+        undergrowth
+        guero
+        shimmering
+
+    [F] 
+    
+        low drone
+        shimmering
+
+    [G] 
+    
+        fanfare
+        reiterations
+        mizmar 
+
+    [H] 
+    
+        bamboo
+        guero
+        mizmar
+        taqsim
+
+    [I]
+    
+        mid rising drone
+        mizmar fragments
+        taqsim fragments
+
+    [J] 
+    
+        shimmering
+        brazil nuts
+        strident cello
+
+    [K] 
+    
+        fanfare
+        reiteration

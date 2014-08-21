@@ -91,8 +91,8 @@ segment_maker.add_setting(
     cello=consort.makers.MusicSpecifier(
         attachment_maker=consort.makers.AttachmentMaker(
             attachment_expressions=(
-                consort.materials.decrescendi_dynamic_attachment_expression,
-                consort.materials.tailpiece_attachment_expression,
+                zaira.materials.decrescendi_dynamic_attachment_expression,
+                zaira.materials.tailpiece_attachment_expression,
                 ),
             ),
         ),

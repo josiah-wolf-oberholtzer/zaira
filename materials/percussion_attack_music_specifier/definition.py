@@ -6,7 +6,7 @@ import consort
 percussion_attack_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
         attachment_expressions=(
-            consort.materials.laissez_vibrer_attachment_expression,
+            zaira.materials.laissez_vibrer_attachment_expression,
             ),
         ),
     rhythm_maker=rhythmmakertools.IncisedRhythmMaker(

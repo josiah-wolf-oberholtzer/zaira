@@ -4,6 +4,11 @@ import consort
 
 
 airtone_attachment_expression = consort.makers.AttachmentExpression(
+    attachments=datastructuretools.TypedList(
+        [
+            spannertools.StemTremoloSpanner(),
+            ]
+        ),
     selector=selectortools.Selector(
         callbacks=(
             selectortools.PrototypeSelectorCallback(

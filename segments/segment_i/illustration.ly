@@ -11,7 +11,7 @@
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
 				\time 2/4
-				\tempo 4=72
+				\tempo 4=48
 				\mark \markup {
 					\override
 						#'(box-padding . 0.5)
@@ -133,44 +133,6 @@
 				\time 5/8
 				s1 * 5/8
 			}
-			{
-				\time 6/8
-				s1 * 3/4
-			}
-			{
-				\time 5/8
-				s1 * 5/8
-			}
-			{
-				\time 4/4
-				s1 * 1
-			}
-			{
-				s1 * 1
-			}
-			{
-				\time 5/8
-				s1 * 5/8
-			}
-			{
-				\time 6/8
-				s1 * 3/4
-			}
-			{
-				\time 5/8
-				s1 * 5/8
-			}
-			{
-				\time 4/4
-				s1 * 1
-			}
-			{
-				s1 * 1
-			}
-			{
-				\time 5/8
-				s1 * 5/8
-			}
 		}
 		\context EnsembleGroup = "Wind Section Staff Group" <<
 			\keepWithTag #'score.flute
@@ -178,7 +140,7 @@
 				instrumentName = \markup { Flute }
 				shortInstrumentName = \markup { Fl. }
 			} <<
-				\context Staff = "Flute  Staff" {
+				\context FluteStaff = "Flute Staff" {
 					\context Voice = "Flute Voice" {
 						\clef "treble"
 						{
@@ -271,36 +233,6 @@
 							}
 							{
 								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
 								\stopStaff
 								\startStaff
 							}
@@ -313,7 +245,7 @@
 				instrumentName = \markup { Oboe }
 				shortInstrumentName = \markup { Ob. }
 			} <<
-				\context Staff = "Oboe  Staff" {
+				\context OboeStaff = "Oboe Staff" {
 					\context Voice = "Oboe Voice" {
 						\clef "treble"
 						{
@@ -406,36 +338,6 @@
 							}
 							{
 								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
 								\stopStaff
 								\startStaff
 							}
@@ -448,7 +350,7 @@
 				instrumentName = \markup { Clarinet in E-flat }
 				shortInstrumentName = \markup { Cl. E-flat }
 			} <<
-				\context Staff = "Clarinet In E-Flat  Staff" {
+				\context ClarinetInEFlatStaff = "Clarinet In E-Flat Staff" {
 					\context Voice = "Clarinet In E-Flat Voice" {
 						\clef "treble"
 						{
@@ -541,36 +443,6 @@
 							}
 							{
 								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
 								\stopStaff
 								\startStaff
 							}
@@ -586,7 +458,7 @@
 				instrumentName = \markup { Metals }
 				shortInstrumentName = \markup { Metals }
 			} <<
-				\context Staff = "Metals Staff" \with {
+				\context MetalsStaff = "Metals Staff" \with {
 					\override StaffSymbol #'line-count = #3
 				} {
 					\context Voice = "Metals Voice" {
@@ -681,36 +553,6 @@
 							}
 							{
 								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
 								\stopStaff
 								\startStaff
 							}
@@ -723,7 +565,7 @@
 				instrumentName = \markup { Woods }
 				shortInstrumentName = \markup { Woods }
 			} <<
-				\context Staff = "Woods Staff" \with {
+				\context WoodsStaff = "Woods Staff" \with {
 					\override StaffSymbol #'line-count = #3
 				} {
 					\context Voice = "Woods Voice" {
@@ -818,36 +660,6 @@
 							}
 							{
 								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
 								\stopStaff
 								\startStaff
 							}
@@ -860,7 +672,7 @@
 				instrumentName = \markup { Drums }
 				shortInstrumentName = \markup { Drums }
 			} <<
-				\context Staff = "Drums Staff" \with {
+				\context DrumsStaff = "Drums Staff" \with {
 					\override StaffSymbol #'line-count = #3
 				} {
 					\context Voice = "Drums Voice" {
@@ -955,36 +767,6 @@
 							}
 							{
 								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
 								\stopStaff
 								\startStaff
 							}
@@ -998,7 +780,7 @@
 			instrumentName = \markup { Piano }
 			shortInstrumentName = \markup { Pf. }
 		} <<
-			\context Staff = "Piano Upper Staff" {
+			\context PianoUpperStaff = "Piano Upper Staff" {
 				\context Voice = "Piano Upper Voice" {
 					\clef "treble"
 					{
@@ -1250,130 +1032,6 @@
 							r16
 						}
 					}
-					{
-						{
-							c'4.. :32
-						}
-					}
-					{
-						{
-							r4
-							r16
-						}
-					}
-					{
-						{
-							c'2 :32 ~
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							c'16 :128
-						}
-					}
-					{
-						{
-							r16
-						}
-					}
-					{
-						{
-							c'4.. :32 ~
-						}
-						{
-							c'4. :32
-						}
-					}
-					{
-						{
-							r8.
-						}
-					}
-					{
-						{
-							c'2. :32 ~
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							c'16 :128 ~
-						}
-						{
-							\set stemRightBeamCount = 1
-							c'8. :64 ~
-						}
-						{
-							c'2 :32 ~
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							c'16 :128
-						}
-					}
-					{
-						{
-							r16
-						}
-					}
-					{
-						{
-							c'4.. :32
-						}
-					}
-					{
-						{
-							r4
-							r16
-						}
-					}
-					{
-						{
-							c'2 :32 ~
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							c'16 :128
-						}
-					}
-					{
-						{
-							r16
-						}
-					}
-					{
-						{
-							c'4.. :32 ~
-						}
-						{
-							c'4. :32 ~
-						}
-						{
-							\set stemRightBeamCount = 1
-							c'8. :64 ~
-						}
-						{
-							c'2 :32 ~
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
-							c'8. :64
-						}
-					}
-					{
-						{
-							r8
-						}
-					}
-					{
-						{
-							\set stemRightBeamCount = 1
-							c'8. :64 ~
-						}
-						{
-							c'2 :32 ~
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							c'16 :128
-						}
-					}
-					{
-						{
-							r16
-						}
-					}
 				}
 			}
 			\context Dynamics = "Piano Dynamics" {
@@ -1389,39 +1047,37 @@
 						r2
 					}
 					{
-						r4.
-						r4
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4..
-						r8.
-					}
-					{
-						r2.
-					}
-					{
-						r16
 						r2
+						r8
+					}
+					{
+						r4
 						r16
 					}
 					{
-						r4..
-						r8.
+						r2
+						r8
 					}
 					{
 						r2.
 					}
 					{
-						r16
-						r4
+						r2
+						r8
+					}
+					{
+						r2
+						r8
 					}
 					{
 						r2.
+					}
+					{
 						r4
+						r16
+					}
+					{
+						r1
 					}
 					{
 						r2.
@@ -1447,29 +1103,22 @@
 						r16
 					}
 					{
-						r4
-						r16
-						r4
-						r16
+						r2
+						r8
 					}
 					{
-						r2
-						r8.
-						r4
-						r16
+						r1
 					}
 					{
 						r2
 						r8
 					}
 					{
-						r16
-						r4..
+						r2
 					}
 					{
 						r2
-						r16
-						r16
+						r8
 					}
 					{
 						r2
@@ -1484,64 +1133,7 @@
 						r16
 					}
 					{
-						r2
-						r8.
-						r4
-						r16
-					}
-					{
-						r2
-						r8
-					}
-					{
-						r16
-						r2
-						r8.
-					}
-					{
-						r4
-						r16
-						r4
-						r16
-					}
-					{
-						r2
-						r8.
-						r4
-						r16
-					}
-					{
-						r2
-						r8.
-						r4
-						r16
-					}
-					{
-						r2
-						r8
-					}
-					{
-						r16
-						r2
-						r8.
-					}
-					{
-						r4
-						r16
-						r4
-						r16
-					}
-					{
-						r2
-						r8.
-						r4
-						r16
-					}
-					{
-						r2
-						r8.
-						r4
-						r16
+						r1
 					}
 					{
 						r2
@@ -1549,7 +1141,7 @@
 					}
 				}
 			}
-			\context Staff = "Piano Lower Staff" {
+			\context PianoLowerStaff = "Piano Lower Staff" {
 				\context Voice = "Piano Lower Voice" {
 					\clef "bass"
 					{
@@ -1642,36 +1234,6 @@
 						}
 						{
 							R1 * 5/8
-						}
-						{
-							R1 * 3/4
-						}
-						{
-							R1 * 5/8
-						}
-						{
-							R1 * 1
-						}
-						{
-							R1 * 1
-						}
-						{
-							R1 * 5/8
-						}
-						{
-							R1 * 3/4
-						}
-						{
-							R1 * 5/8
-						}
-						{
-							R1 * 1
-						}
-						{
-							R1 * 1
-						}
-						{
-							R1 * 5/8
 							\stopStaff
 							\startStaff
 						}
@@ -1691,39 +1253,37 @@
 						r2
 					}
 					{
-						r4.
-						r4
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4..
-						r8.
-					}
-					{
-						r2.
-					}
-					{
-						r16
 						r2
+						r8
+					}
+					{
+						r4
 						r16
 					}
 					{
-						r4..
-						r8.
+						r2
+						r8
 					}
 					{
 						r2.
 					}
 					{
-						r16
-						r4
+						r2
+						r8
+					}
+					{
+						r2
+						r8
 					}
 					{
 						r2.
+					}
+					{
 						r4
+						r16
+					}
+					{
+						r1
 					}
 					{
 						r2.
@@ -1749,29 +1309,22 @@
 						r16
 					}
 					{
-						r4
-						r16
-						r4
-						r16
+						r2
+						r8
 					}
 					{
-						r2
-						r8.
-						r4
-						r16
+						r1
 					}
 					{
 						r2
 						r8
 					}
 					{
-						r16
-						r4..
+						r2
 					}
 					{
 						r2
-						r16
-						r16
+						r8
 					}
 					{
 						r2
@@ -1786,64 +1339,7 @@
 						r16
 					}
 					{
-						r2
-						r8.
-						r4
-						r16
-					}
-					{
-						r2
-						r8
-					}
-					{
-						r16
-						r2
-						r8.
-					}
-					{
-						r4
-						r16
-						r4
-						r16
-					}
-					{
-						r2
-						r8.
-						r4
-						r16
-					}
-					{
-						r2
-						r8.
-						r4
-						r16
-					}
-					{
-						r2
-						r8
-					}
-					{
-						r16
-						r2
-						r8.
-					}
-					{
-						r4
-						r16
-						r4
-						r16
-					}
-					{
-						r2
-						r8.
-						r4
-						r16
-					}
-					{
-						r2
-						r8.
-						r4
-						r16
+						r1
 					}
 					{
 						r2
@@ -1945,36 +1441,6 @@
 							}
 							{
 								R1 * 5/16
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
 							}
 							{
 								R1 * 1
@@ -2086,36 +1552,6 @@
 							}
 							{
 								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
 								\stopStaff
 								\startStaff
 							}
@@ -2215,36 +1651,6 @@
 							}
 							{
 								R1 * 5/16
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 1
 							}
 							{
 								R1 * 1

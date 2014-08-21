@@ -4,5 +4,8 @@ import consort
 
 
 overpressure_attachment_expression = consort.makers.AttachmentExpression(
-    selector=selectortools.selects_pitched_runs(),
+    attachments=consort.makers.ComplexTextSpanner(
+        markup=r"\filled-box #'(-1 . 1) #'(-1 . 1) #1",
+        ),
+    selector=selectortools.Selector(),
     )

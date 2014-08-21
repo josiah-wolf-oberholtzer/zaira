@@ -4,17 +4,21 @@ import consort
 
 
 overpressure_attachment_expression = consort.makers.AttachmentExpression(
-    selector=selectortools.Selector(
-        callbacks=(
-            selectortools.PrototypeSelectorCallback(
-                prototype=scoretools.Leaf,
-                ),
-            selectortools.RunSelectorCallback(
-                prototype=(
-                    scoretools.Note,
-                    scoretools.Chord,
+    attachments=datastructuretools.TypedList(
+        [
+            consort.makers.ComplexTextSpanner(
+                markup=markuptools.Markup(
+                    contents=(
+                        markuptools.MarkupCommand(
+                            'filled-box',
+                            schemetools.SchemePair(-1, 1),
+                            schemetools.SchemePair(-1, 1),
+                            1
+                            ),
+                        ),
                     ),
                 ),
-            ),
+            ]
         ),
+    selector=selectortools.Selector(),
     )
