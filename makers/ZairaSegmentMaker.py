@@ -13,6 +13,7 @@ class ZairaSegmentMaker(consort.makers.SegmentMaker):
     def __init__(
         self,
         annotation_specifier=None,
+        discard_final_silence=None,
         duration_in_seconds=None,
         is_final_segment=None,
         name=None,
@@ -29,6 +30,7 @@ class ZairaSegmentMaker(consort.makers.SegmentMaker):
         consort.makers.SegmentMaker.__init__(
             self,
             annotation_specifier=annotation_specifier,
+            discard_final_silence=discard_final_silence,
             duration_in_seconds=duration_in_seconds,
             is_final_segment=is_final_segment,
             name=name,
