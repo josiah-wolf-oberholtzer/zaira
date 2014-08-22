@@ -21,7 +21,7 @@ segment_maker.set_duration_in_seconds(
     )
 
 
-### SUSTAINED MUSIC SETTING ###################################################
+### MUSIC SETTINGS ############################################################
 
 
 segment_maker.add_setting(
@@ -29,39 +29,7 @@ segment_maker.add_setting(
     )
 
 
-### DENSE MUSIC SETTING #######################################################
-
-
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.dense_timespan_maker,
-    )
-
-
-### SPARSE MUSIC SETTING ######################################################
-
-
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.sparse_timespan_maker,
-    )
-
-
-### LEGATO MUSIC SETTING ######################################################
-
-
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.legato_timespan_maker,
-    )
-
-
-### TUTTI MUSIC SETTING ######################################################
-
-
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.tutti_timespan_maker,
-    )
-
-
-### PEDALS MUSIC SETTING ######################################################
+### DEPENDENT MUSIC SETTINGS ##################################################
 
 
 segment_maker.add_setting(

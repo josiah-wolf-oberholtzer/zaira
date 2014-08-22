@@ -1,4 +1,4 @@
-\version "2.19.9"
+\version "2.19.12"
 \language "english"
 
 #(ly:set-option 'relative-includes #t)
@@ -7,66 +7,80 @@
 
 \score {
 	\context Score = "Zaira Score" <<
-		\keepWithTag #'score.score.oboe.score.clarinet-in-e-flat.score.piano.score.violin.score.viola.score.cello
+		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
-				\time 4/4
-				\tempo 8=72
-				\mark \markup { \override #'(box-padding . 0.5) \box "G" " " \fontsize #-3 "" }
-				s1 * 1
-			}
-			{
-				s1 * 1
-			}
-			{
-				s1 * 1
-			}
-			{
-				s1 * 1
-			}
-			{
-				s1 * 1
+				\time 5/16
+				\tempo 4=72
+				\mark \markup {
+					\override
+						#'(box-padding . 0.5)
+						\box
+							G
+					" "
+					\fontsize
+						#-3
+						" "
+					}
+				s1 * 5/16
 			}
 			{
 				\time 2/4
 				s1 * 1/2
 			}
 			{
-				s1 * 1/2
+				\time 5/16
+				s1 * 5/16
 			}
 		}
-		\context MultiplePerformerGroup = "Winds Performer Group" <<
-			\keepWithTag #'score.oboe
-			\context SinglePerformerGroup = "Oboe Performer Group" \with {
-				instrumentName = \markup { Oboe }
-				shortInstrumentName = \markup { Ob. }
+		\context EnsembleGroup = "Wind Section Staff Group" <<
+			\keepWithTag #'score.flute
+			\context PerformerGroup = "Flute Performer Group" \with {
+				instrumentName = \markup { Flute }
+				shortInstrumentName = \markup { Fl. }
 			} <<
-				\context Staff = "Oboe  Staff" {
-					\context Voice = "Oboe Voice" {
+				\context FluteStaff = "Flute Staff" {
+					\context Voice = "Flute Voice" {
+						\clef "treble"
 						{
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
+								R1 * 5/16
 							}
 							{
 								R1 * 1/2
 							}
 							{
+								R1 * 5/16
+								\stopStaff
+								\startStaff
+							}
+						}
+					}
+				}
+			>>
+			\keepWithTag #'score.oboe
+			\context PerformerGroup = "Oboe Performer Group" \with {
+				instrumentName = \markup { Oboe }
+				shortInstrumentName = \markup { Ob. }
+			} <<
+				\context OboeStaff = "Oboe Staff" {
+					\context Voice = "Oboe Voice" {
+						\clef "treble"
+						{
+							{
+								\stopStaff
+								\once \override Staff.StaffSymbol.line-count = 1
+								\startStaff
+								R1 * 5/16
+							}
+							{
 								R1 * 1/2
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -75,36 +89,25 @@
 				}
 			>>
 			\keepWithTag #'score.clarinet-in-e-flat
-			\context SinglePerformerGroup = "Clarinet In E-Flat Performer Group" \with {
+			\context PerformerGroup = "Clarinet In E-Flat Performer Group" \with {
 				instrumentName = \markup { Clarinet in E-flat }
 				shortInstrumentName = \markup { Cl. E-flat }
 			} <<
-				\context Staff = "Clarinet In E-Flat  Staff" {
+				\context ClarinetInEFlatStaff = "Clarinet In E-Flat Staff" {
 					\context Voice = "Clarinet In E-Flat Voice" {
+						\clef "treble"
 						{
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
+								R1 * 5/16
 							}
 							{
 								R1 * 1/2
 							}
 							{
-								R1 * 1/2
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -114,38 +117,68 @@
 			>>
 		>>
 		\keepWithTag #'score.percussion
-		\context MultiplePerformerGroup = "Percussion Performer Group" <<
+		\context EnsembleGroup = "Percussion Section Staff Group" <<
 			\keepWithTag #'score.percussion
-			\context SinglePerformerGroup = "Marimba Performer Group" \with {
-				instrumentName = \markup { Marimba }
-				shortInstrumentName = \markup { Mb. }
+			\context PerformerGroup = "Metals Performer Group" \with {
+				instrumentName = \markup { Metals }
+				shortInstrumentName = \markup { Metals }
 			} <<
-				\context Staff = "Marimba Staff" {
-					\context Voice = "Marimba Voice" {
+				\context MetalsStaff = "Metals Staff" \with {
+					\override StaffSymbol #'line-count = #3
+				} {
+					\context Voice = "Metals Voice" {
+						\clef "percussion"
+						{
+							{
+								\set stemLeftBeamCount = 0
+								\set stemRightBeamCount = 2
+								c'16 [
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 0
+								c'16 ]
+							}
+							{
+								\set stemLeftBeamCount = 0
+								\set stemRightBeamCount = 2
+								c'16 [
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 0
+								c'16 ]
+							}
+						}
 						{
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1/2
-							}
-							{
-								R1 * 1/2
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -153,37 +186,96 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.score.percussion
-			\context SinglePerformerGroup = "Drums Performer Group" \with {
-				instrumentName = \markup { Drums }
-				shortInstrumentName = \markup { Drums }
+			\keepWithTag #'score.percussion
+			\context PerformerGroup = "Woods Performer Group" \with {
+				instrumentName = \markup { Woods }
+				shortInstrumentName = \markup { Woods }
 			} <<
-				\context Staff = "Drums Staff" {
-					\context Voice = "Drums Voice" {
+				\context WoodsStaff = "Woods Staff" \with {
+					\override StaffSymbol #'line-count = #3
+				} {
+					\context Voice = "Woods Voice" {
+						\clef "percussion"
 						{
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
+								R1 * 5/16
 							}
 							{
 								R1 * 1/2
 							}
 							{
-								R1 * 1/2
+								R1 * 5/16
+								\stopStaff
+								\startStaff
+							}
+						}
+					}
+				}
+			>>
+			\keepWithTag #'score.percussion
+			\context PerformerGroup = "Drums Performer Group" \with {
+				instrumentName = \markup { Drums }
+				shortInstrumentName = \markup { Drums }
+			} <<
+				\context DrumsStaff = "Drums Staff" \with {
+					\override StaffSymbol #'line-count = #3
+				} {
+					\context Voice = "Drums Voice" {
+						\clef "percussion"
+						{
+							{
+								\set stemLeftBeamCount = 0
+								\set stemRightBeamCount = 2
+								c'16 [
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 0
+								c'16 ]
+							}
+							{
+								\set stemLeftBeamCount = 0
+								\set stemRightBeamCount = 2
+								c'16 [
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 0
+								c'16 ]
+							}
+						}
+						{
+							{
+								\stopStaff
+								\once \override Staff.StaffSymbol.line-count = 1
+								\startStaff
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -193,36 +285,259 @@
 			>>
 		>>
 		\keepWithTag #'score.piano
-		\context SinglePerformerGroup = "Piano Performer Group" \with {
+		\context PianoPerformerGroup = "Piano Performer Group" \with {
 			instrumentName = \markup { Piano }
 			shortInstrumentName = \markup { Pf. }
 		} <<
-			\context Staff = "Piano Upper Staff" {
+			\context PianoUpperStaff = "Piano Upper Staff" {
 				\context Voice = "Piano Upper Voice" {
+					\clef "treble"
+					{
+						{
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent \fff [
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 0
+							<g b d' f'>16 -\accent ]
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+						}
+						{
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent [
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 0
+							<g b d' f'>16 -\accent ]
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+						}
+					}
 					{
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 1
-						}
-						{
-							R1 * 1
-						}
-						{
-							R1 * 1
-						}
-						{
-							R1 * 1
-						}
-						{
-							R1 * 1
-						}
-						{
-							R1 * 1/2
-						}
-						{
-							R1 * 1/2
+							R1 * 5/16
 							\stopStaff
 							\startStaff
 						}
@@ -230,33 +545,269 @@
 				}
 			}
 			\context Dynamics = "Piano Dynamics" {
+				{
+					{
+						r4
+						r16
+					}
+					{
+						r2
+					}
+					{
+						r4
+						r16
+					}
+				}
 			}
-			\context Staff = "Piano Lower Staff" {
+			\context PianoLowerStaff = "Piano Lower Staff" {
 				\context Voice = "Piano Lower Voice" {
+					\clef "bass"
+					{
+						{
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent \fff [
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 0
+							<g b d' f'>16 -\accent ]
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+						}
+						{
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent [
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<g b d' f'>16 -\accent
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 0
+							<g b d' f'>16 -\accent ]
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+						}
+					}
 					{
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 1
-						}
-						{
-							R1 * 1
-						}
-						{
-							R1 * 1
-						}
-						{
-							R1 * 1
-						}
-						{
-							R1 * 1
-						}
-						{
-							R1 * 1/2
-						}
-						{
-							R1 * 1/2
+							R1 * 5/16
 							\stopStaff
 							\startStaff
 						}
@@ -264,72 +815,42 @@
 				}
 			}
 			\context Dynamics = "Piano Pedals" {
+				{
+					{
+						r4
+						r16
+					}
+					{
+						r2
+					}
+					{
+						r4
+						r16
+					}
+				}
 			}
 		>>
-		\context MultiplePerformerGroup = "Strings Performer Group" <<
+		\context EnsembleGroup = "String Section Staff Group" <<
 			\keepWithTag #'score.violin
-			\context SinglePerformerGroup = "Violin Performer Group" \with {
+			\context StringPerformerGroup = "Violin Performer Group" \with {
 				instrumentName = \markup { Violin }
 				shortInstrumentName = \markup { Vn. }
 			} <<
-				\context BowingStaff = "Violin Bowing Staff" {
-					\context Voice = "Violin Bowing Voice" {
+				\context StringStaff = "Violin Staff" {
+					\context Voice = "Violin Voice" {
+						\clef "treble"
 						{
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
+								R1 * 5/16
 							}
 							{
 								R1 * 1/2
 							}
 							{
-								R1 * 1/2
-								\stopStaff
-								\startStaff
-							}
-						}
-					}
-				}
-				\context FingeringStaff = "Violin Fingering Staff" {
-					\context Voice = "Violin Fingering Voice" {
-						{
-							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1/2
-							}
-							{
-								R1 * 1/2
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -338,68 +859,25 @@
 				}
 			>>
 			\keepWithTag #'score.viola
-			\context SinglePerformerGroup = "Viola Performer Group" \with {
+			\context StringPerformerGroup = "Viola Performer Group" \with {
 				instrumentName = \markup { Viola }
 				shortInstrumentName = \markup { Va. }
 			} <<
-				\context BowingStaff = "Viola Bowing Staff" {
-					\context Voice = "Viola Bowing Voice" {
+				\context StringStaff = "Viola Staff" {
+					\context Voice = "Viola Voice" {
+						\clef "alto"
 						{
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
+								R1 * 5/16
 							}
 							{
 								R1 * 1/2
 							}
 							{
-								R1 * 1/2
-								\stopStaff
-								\startStaff
-							}
-						}
-					}
-				}
-				\context FingeringStaff = "Viola Fingering Staff" {
-					\context Voice = "Viola Fingering Voice" {
-						{
-							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1/2
-							}
-							{
-								R1 * 1/2
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -408,68 +886,25 @@
 				}
 			>>
 			\keepWithTag #'score.cello
-			\context SinglePerformerGroup = "Cello Performer Group" \with {
+			\context StringPerformerGroup = "Cello Performer Group" \with {
 				instrumentName = \markup { Cello }
 				shortInstrumentName = \markup { Vc. }
 			} <<
-				\context BowingStaff = "Cello Bowing Staff" {
-					\context Voice = "Cello Bowing Voice" {
+				\context StringStaff = "Cello Staff" {
+					\context Voice = "Cello Voice" {
+						\clef "bass"
 						{
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
+								R1 * 5/16
 							}
 							{
 								R1 * 1/2
 							}
 							{
-								R1 * 1/2
-								\stopStaff
-								\startStaff
-							}
-						}
-					}
-				}
-				\context FingeringStaff = "Cello Fingering Staff" {
-					\context Voice = "Cello Fingering Voice" {
-						{
-							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1/2
-							}
-							{
-								R1 * 1/2
+								R1 * 5/16
 								\bar "||"
 								\stopStaff
 								\startStaff

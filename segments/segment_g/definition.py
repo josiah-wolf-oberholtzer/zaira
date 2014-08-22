@@ -1,7 +1,10 @@
 # -*- encoding: utf-8 -*-
+from abjad import new
 from abjad import show
 from abjad.tools import durationtools
 from abjad.tools import mathtools
+from abjad.tools import timespantools
+import consort
 import zaira
 
 
@@ -21,47 +24,27 @@ segment_maker.set_duration_in_seconds(
     )
 
 
-### SUSTAINED MUSIC SETTING ###################################################
+### MUSIC SETTINGS ############################################################
 
 
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.sustained_timespan_maker,
+    timespan_maker=consort.makers.FloodedTimespanMaker(),
+    timespan_identifier=timespantools.Timespan(
+        start_offset=0,
+        stop_offset=(13, 16),
+        ),
+    piano_rh=new(zaira.materials.piano_fanfare_music_specifier,
+        ),
+    piano_lh=new(zaira.materials.piano_fanfare_music_specifier,
+        ),
+    drums=new(zaira.materials.percussion_fanfare_music_specifier,
+        ),
+    metals=new(zaira.materials.percussion_fanfare_music_specifier,
+        ),
     )
 
 
-### DENSE MUSIC SETTING #######################################################
-
-
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.dense_timespan_maker,
-    )
-
-
-### SPARSE MUSIC SETTING ######################################################
-
-
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.sparse_timespan_maker,
-    )
-
-
-### LEGATO MUSIC SETTING ######################################################
-
-
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.legato_timespan_maker,
-    )
-
-
-### TUTTI MUSIC SETTING ######################################################
-
-
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.tutti_timespan_maker,
-    )
-
-
-### PEDALS MUSIC SETTING ######################################################
+### DEPENDENT MUSIC SETTINGS ##################################################
 
 
 segment_maker.add_setting(
