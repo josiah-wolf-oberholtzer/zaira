@@ -13,7 +13,6 @@ legato_rhythm_maker = rhythmmakertools.TaleaRhythmMaker(
         beam_divisions_together=False,
         ),
     burnish_specifier=rhythmmakertools.BurnishSpecifier(
-        burnish_each_division=False,
         burnish_output=True,
         lefts=(-1,),
         left_lengths=(1, 0),

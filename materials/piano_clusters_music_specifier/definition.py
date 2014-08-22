@@ -7,7 +7,7 @@ import zaira
 piano_clusters_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
         attachment_expressions=(
-            zaira.materials.midground_dynamic_attachment_expression,
+            zaira.materials.background_dynamic_attachment_expression,
             consort.makers.AttachmentExpression(
                 attachments=(
                     (

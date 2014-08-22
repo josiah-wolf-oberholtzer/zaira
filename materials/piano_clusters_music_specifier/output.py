@@ -10,11 +10,15 @@ piano_clusters_music_specifier = consort.makers.MusicSpecifier(
                 attachments=datastructuretools.TypedList(
                     [
                         consort.makers.DynamicExpression(
-                            hairpin_start_token='mf',
+                            hairpin_start_token='ppp',
                             minimum_duration=durationtools.Duration(1, 4),
                             ),
                         consort.makers.DynamicExpression(
-                            hairpin_start_token='mp',
+                            hairpin_start_token='p',
+                            minimum_duration=durationtools.Duration(1, 4),
+                            ),
+                        consort.makers.DynamicExpression(
+                            hairpin_start_token='pp',
                             minimum_duration=durationtools.Duration(1, 4),
                             ),
                         ]

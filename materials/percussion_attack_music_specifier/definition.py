@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 from abjad import *
 import consort
+import zaira
 
 
 percussion_attack_music_specifier = consort.makers.MusicSpecifier(
