@@ -53,7 +53,7 @@ SEGMENTS
 
     [H] 
     
-        bamboo
+        brazil nut
         guero
         mizmar
         taqsim
