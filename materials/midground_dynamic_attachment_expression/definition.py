@@ -8,5 +8,5 @@ midground_dynamic_attachment_expression = consort.makers.AttachmentExpression(
         consort.makers.DynamicExpression('mf'),
         consort.makers.DynamicExpression('mp'),
         ),
-    selector=selectortools.selects_pitched_runs(),
+    selector=selectortools.selects_pitched_runs()[0],
     )

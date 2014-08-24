@@ -319,7 +319,8 @@ afterGraceFraction = #(cons 127 128)
         \override StemTremolo.slope = 0.5
         \override StemTremolo.style = #'default
 
-        \override SustainPedal.self-alignment-X = #LEFT
+        \override SustainPedal.self-alignment-X = #CENTER
+        \override SustainPedalLineSpanner.to-barline = ##t
         \override TextScript.add-stem-support = ##t
         \override TextScript.outside-staff-padding = 1
         \override TextScript.padding = 1

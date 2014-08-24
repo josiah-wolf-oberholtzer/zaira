@@ -29,7 +29,7 @@ SEGMENTS
         brazil nuts
         guero
 
-    [D] 
+    [D]*** 
     
         high drone
         shimmering
@@ -40,7 +40,7 @@ SEGMENTS
         guero
         shimmering
 
-    [F] 
+    [F]***
     
         low drone
         shimmering
@@ -58,9 +58,9 @@ SEGMENTS
         mizmar
         taqsim
 
-    [I]
+    [I]***
     
-        mid rising drone
+        mid drone
         mizmar fragments
         taqsim fragments
 

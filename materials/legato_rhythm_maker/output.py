@@ -12,11 +12,6 @@ legato_rhythm_maker = rhythmmakertools.TaleaRhythmMaker(
         beam_each_division=False,
         beam_divisions_together=False,
         ),
-    burnish_specifier=rhythmmakertools.BurnishSpecifier(
-        burnish_output=True,
-        lefts=(-1,),
-        left_lengths=(1, 0),
-        ),
     tie_split_notes=False,
     tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
         avoid_dots=True,

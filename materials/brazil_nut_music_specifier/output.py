@@ -34,6 +34,10 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
                                 scoretools.Chord,
                                 ),
                             ),
+                        selectortools.ItemSelectorCallback(
+                            item=0,
+                            apply_to_each=True,
+                            ),
                         ),
                     ),
                 ),
@@ -139,7 +143,7 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
             beam_each_division=False,
             beam_divisions_together=False,
             ),
-        tie_split_notes=True,
+        tie_split_notes=False,
         tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
             avoid_dots=True,
             is_diminution=True,

@@ -35,6 +35,10 @@ foreground_dynamic_attachment_expression = consort.makers.AttachmentExpression(
                     scoretools.Chord,
                     ),
                 ),
+            selectortools.ItemSelectorCallback(
+                item=0,
+                apply_to_each=True,
+                ),
             ),
         ),
     )

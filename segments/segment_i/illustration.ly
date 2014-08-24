@@ -10,7 +10,7 @@
 		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
-				\time 2/4
+				\time 4/4
 				\tempo 4=48
 				\mark \markup {
 					\override
@@ -22,14 +22,21 @@
 						#-3
 						" "
 					}
-				s1 * 1/2
+				s1 * 1
 			}
 			{
-				\time 5/8
-				s1 * 5/8
+				\time 5/16
+				s1 * 5/16
+			}
+			{
+				\time 3/8
+				s1 * 3/8
 			}
 			{
 				\time 2/4
+				s1 * 1/2
+			}
+			{
 				s1 * 1/2
 			}
 			{
@@ -126,12 +133,12 @@
 				s1 * 5/16
 			}
 			{
-				\time 4/4
-				s1 * 1
+				\time 2/4
+				s1 * 1/2
 			}
 			{
-				\time 5/8
-				s1 * 5/8
+				\time 5/16
+				s1 * 5/16
 			}
 		}
 		\context EnsembleGroup = "Wind Section Staff Group" <<
@@ -148,10 +155,16 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 1/2
 							}
 							{
 								R1 * 1/2
@@ -229,10 +242,10 @@
 								R1 * 5/16
 							}
 							{
-								R1 * 1
+								R1 * 1/2
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -253,10 +266,16 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 1/2
 							}
 							{
 								R1 * 1/2
@@ -334,10 +353,10 @@
 								R1 * 5/16
 							}
 							{
-								R1 * 1
+								R1 * 1/2
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -358,10 +377,16 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 1/2
 							}
 							{
 								R1 * 1/2
@@ -439,10 +464,10 @@
 								R1 * 5/16
 							}
 							{
-								R1 * 1
+								R1 * 1/2
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -468,10 +493,16 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 1/2
 							}
 							{
 								R1 * 1/2
@@ -549,10 +580,10 @@
 								R1 * 5/16
 							}
 							{
-								R1 * 1
+								R1 * 1/2
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -575,10 +606,16 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 1/2
 							}
 							{
 								R1 * 1/2
@@ -656,10 +693,10 @@
 								R1 * 5/16
 							}
 							{
-								R1 * 1
+								R1 * 1/2
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -682,10 +719,16 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 1/2
 							}
 							{
 								R1 * 1/2
@@ -763,10 +806,10 @@
 								R1 * 5/16
 							}
 							{
-								R1 * 1
+								R1 * 1/2
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -785,16 +828,33 @@
 					\clef "treble"
 					{
 						{
-							c'2 :32 ~
+							\stopStaff
+							\once \override Staff.StaffSymbol.line-count = 1
+							\startStaff
+							R1 * 1
+							\stopStaff
+							\startStaff
 						}
 						{
-							c'2 :32 ~
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
-							c'8 :64 ~
+							r16
+						}
+					}
+					{
+						{
+							<cs'' f'' cs''' d''' af'''>4 :32 \ppp ~
 						}
 						{
-							c'2 :32
+							<cs'' f'' cs''' d''' af'''>4 :32 ~
+						}
+						{
+							\set stemRightBeamCount = 1
+							<cs'' f'' cs''' d''' af'''>8 :64 ~
+						}
+						{
+							<cs'' f'' cs''' d''' af'''>2 :32 ~
+						}
+						{
+							<cs'' f'' cs''' d''' af'''>2 :32
 						}
 					}
 					{
@@ -804,19 +864,19 @@
 					}
 					{
 						{
-							c'4. :32 ~
+							<cs'' f'' a'' cs''' af'''>4. :32 \ppp ~
 						}
 						{
-							c'4 :32 ~
+							<cs'' f'' a'' cs''' af'''>4 :32 ~
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 0
-							c'16 :128 ~
+							<cs'' f'' a'' cs''' af'''>16 :128 ~
 						}
 						{
-							c'2 :32 ~
+							<cs'' f'' a'' cs''' af'''>2 :32 ~
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 0
-							c'16 :128
+							<cs'' f'' a'' cs''' af'''>16 :128
 						}
 					}
 					{
@@ -826,10 +886,10 @@
 					}
 					{
 						{
-							c'2 :32 ~
+							<cs'' f'' cs''' d''' af'''>2 :32 \ppp ~
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 0
-							c'8. :64
+							<cs'' f'' cs''' d''' af'''>8. :64
 						}
 					}
 					{
@@ -839,7 +899,7 @@
 					}
 					{
 						{
-							c'4.. :32
+							<cs'' f'' a'' cs''' af'''>4.. :32 \ppp
 						}
 					}
 					{
@@ -849,10 +909,10 @@
 					}
 					{
 						{
-							c'2 :32 ~
+							<cs'' f'' cs''' d''' af'''>2 :32 \ppp ~
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 0
-							c'16 :128
+							<cs'' f'' cs''' d''' af'''>16 :128
 						}
 					}
 					{
@@ -862,7 +922,7 @@
 					}
 					{
 						{
-							c'4.. :32
+							<cs'' f'' a'' cs''' af'''>4.. :32 \ppp
 						}
 					}
 					{
@@ -873,13 +933,13 @@
 					}
 					{
 						{
-							c'4 :32 ~
+							<cs'' f'' cs''' d''' af'''>4 :32 \ppp ~
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 0
-							c'16 :128 ~
+							<cs'' f'' cs''' d''' af'''>16 :128 ~
 						}
 						{
-							c'2.. :32
+							<cs'' f'' cs''' d''' af'''>2.. :32
 						}
 					}
 					{
@@ -889,16 +949,16 @@
 					}
 					{
 						{
-							c'2. :32 ~
+							<cs'' f'' a'' cs''' af'''>2. :32 \ppp ~
 						}
 						{
-							c'2 :32 ~
+							<cs'' f'' a'' cs''' af'''>2 :32 ~
 						}
 						{
-							c'2 :32 ~
+							<cs'' f'' a'' cs''' af'''>2 :32 ~
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 0
-							c'8 :64
+							<cs'' f'' a'' cs''' af'''>8 :64
 						}
 					}
 					{
@@ -913,22 +973,22 @@
 					}
 					{
 						{
-							c'2 :32 ~
+							<cs'' f'' cs''' d''' af'''>2 :32 \ppp ~
 						}
 						{
-							c'4. :32 ~
+							<cs'' f'' cs''' d''' af'''>4. :32 ~
 						}
 						{
-							c'4 :32 ~
+							<cs'' f'' cs''' d''' af'''>4 :32 ~
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 0
-							c'16 :128 ~
+							<cs'' f'' cs''' d''' af'''>16 :128 ~
 						}
 						{
-							c'2 :32 ~
+							<cs'' f'' cs''' d''' af'''>2 :32 ~
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 0
-							c'16 :128
+							<cs'' f'' cs''' d''' af'''>16 :128
 						}
 					}
 					{
@@ -943,13 +1003,13 @@
 					{
 						{
 							\set stemRightBeamCount = 1
-							c'8. :64 ~
+							<cs'' f'' a'' cs''' af'''>8. :64 \ppp ~
 						}
 						{
-							c'2 :32 ~
+							<cs'' f'' a'' cs''' af'''>2 :32 ~
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 0
-							c'16 :128
+							<cs'' f'' a'' cs''' af'''>16 :128
 						}
 					}
 					{
@@ -959,7 +1019,7 @@
 					}
 					{
 						{
-							c'4.. :32
+							<cs'' f'' cs''' d''' af'''>4.. :32 \ppp
 						}
 					}
 					{
@@ -969,10 +1029,10 @@
 					}
 					{
 						{
-							c'2 :32 ~
+							<cs'' f'' a'' cs''' af'''>2 :32 \ppp ~
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 0
-							c'16 :128
+							<cs'' f'' a'' cs''' af'''>16 :128
 						}
 					}
 					{
@@ -982,7 +1042,7 @@
 					}
 					{
 						{
-							c'4.. :32
+							<cs'' f'' cs''' d''' af'''>4.. :32 \ppp
 						}
 					}
 					{
@@ -992,44 +1052,26 @@
 					}
 					{
 						{
-							c'4 :32 ~
+							<cs'' f'' a'' cs''' af'''>4 :32 \ppp ~
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 0
-							c'16 :128 ~
-						}
-						{
-							c'4 :32 ~
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							c'16 :128 ~
-						}
-						{
-							c'2 :32 ~
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							c'16 :128
+							<cs'' f'' a'' cs''' af'''>16 :128
 						}
 					}
 					{
 						{
-							r4
-						}
-					}
-					{
-						{
-							\set stemRightBeamCount = 1
-							c'8. :64 ~
+							\stopStaff
+							\once \override Staff.StaffSymbol.line-count = 1
+							\startStaff
+							R1 * 5/16
 						}
 						{
-							c'2 :32 ~
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							c'16 :128
+							R1 * 1/2
 						}
-					}
-					{
 						{
-							r16
+							R1 * 5/16
+							\stopStaff
+							\startStaff
 						}
 					}
 				}
@@ -1037,11 +1079,17 @@
 			\context Dynamics = "Piano Dynamics" {
 				{
 					{
-						r2
+						r1
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4.
 					}
 					{
 						r2
-						r8
 					}
 					{
 						r2
@@ -1133,11 +1181,11 @@
 						r16
 					}
 					{
-						r1
+						r2
 					}
 					{
-						r2
-						r8
+						r4
+						r16
 					}
 				}
 			}
@@ -1149,10 +1197,16 @@
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 1/2
+							R1 * 1
 						}
 						{
-							R1 * 5/8
+							R1 * 5/16
+						}
+						{
+							R1 * 3/8
+						}
+						{
+							R1 * 1/2
 						}
 						{
 							R1 * 1/2
@@ -1230,10 +1284,10 @@
 							R1 * 5/16
 						}
 						{
-							R1 * 1
+							R1 * 1/2
 						}
 						{
-							R1 * 5/8
+							R1 * 5/16
 							\stopStaff
 							\startStaff
 						}
@@ -1243,107 +1297,216 @@
 			\context Dynamics = "Piano Pedals" {
 				{
 					{
-						r2
-					}
-					{
-						r2
-						r8
-					}
-					{
-						r2
-					}
-					{
-						r2
-						r8
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r2
-						r8
-					}
-					{
-						r2.
-					}
-					{
-						r2
-						r8
-					}
-					{
-						r2
-						r8
-					}
-					{
-						r2.
-					}
-					{
-						r4
-						r16
-					}
-					{
 						r1
 					}
 					{
-						r2.
+						r16
+					}
+				}
+				{
+					{
+						s1 * 1/4 \sustainOn
 					}
 					{
-						r2
+						s1 * 1/4
 					}
 					{
-						r2
+						s1 * 1/8
+					}
+					{
+						s1 * 1/2
+					}
+					{
+						s1 * 1/2
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r4
+					}
+				}
+				{
+					{
+						s1 * 3/8 \sustainOn
+					}
+					{
+						s1 * 5/16
+					}
+					{
+						s1 * 9/16
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r16
+					}
+				}
+				{
+					{
+						s1 * 11/16 \sustainOn
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r16
+					}
+				}
+				{
+					{
+						s1 * 7/16 \sustainOn
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r8.
+					}
+				}
+				{
+					{
+						s1 * 9/16 \sustainOn
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r16
+					}
+				}
+				{
+					{
+						s1 * 7/16 \sustainOn
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r4
+						r16
+					}
+				}
+				{
+					{
+						s1 * 5/16 \sustainOn
+					}
+					{
+						s1 * 7/8
+						<> \sustainOff
+					}
+				}
+				{
+					{
 						r8
 					}
+				}
+				{
+					{
+						s1 * 3/4 \sustainOn
+					}
+					{
+						s1 * 1/2
+					}
+					{
+						s1 * 5/8
+						<> \sustainOff
+					}
+				}
+				{
 					{
 						r4.
 					}
+				}
+				{
 					{
-						r2
+						s1 * 1/2 \sustainOn
 					}
 					{
-						r4.
+						s1 * 3/8
 					}
+					{
+						s1 * 5/16
+					}
+					{
+						s1 * 9/16
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r16
+					}
+					{
+						r2.
+						r16
+					}
+				}
+				{
+					{
+						s1 * 3/16 \sustainOn
+					}
+					{
+						s1 * 9/16
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r16
+					}
+				}
+				{
+					{
+						s1 * 7/16 \sustainOn
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r16
+					}
+				}
+				{
+					{
+						s1 * 9/16 \sustainOn
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r16
+					}
+				}
+				{
+					{
+						s1 * 7/16 \sustainOn
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r8.
+					}
+				}
+				{
+					{
+						s1 * 5/16 \sustainOn
+						<> \sustainOff
+					}
+				}
+				{
 					{
 						r4
 						r16
 					}
 					{
 						r2
-						r8
-					}
-					{
-						r1
-					}
-					{
-						r2
-						r8
-					}
-					{
-						r2
-					}
-					{
-						r2
-						r8
-					}
-					{
-						r2
-						r8
 					}
 					{
 						r4
 						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r1
-					}
-					{
-						r2
-						r8
 					}
 				}
 			}
@@ -1362,10 +1525,16 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 1/2
 							}
 							{
 								R1 * 1/2
@@ -1443,10 +1612,10 @@
 								R1 * 5/16
 							}
 							{
-								R1 * 1
+								R1 * 1/2
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -1467,10 +1636,16 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 1/2
 							}
 							{
 								R1 * 1/2
@@ -1548,10 +1723,10 @@
 								R1 * 5/16
 							}
 							{
-								R1 * 1
+								R1 * 1/2
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -1572,10 +1747,16 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1/2
+								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 1/2
 							}
 							{
 								R1 * 1/2
@@ -1653,10 +1834,10 @@
 								R1 * 5/16
 							}
 							{
-								R1 * 1
+								R1 * 1/2
 							}
 							{
-								R1 * 5/8
+								R1 * 5/16
 								\bar "||"
 								\stopStaff
 								\startStaff

@@ -12,6 +12,12 @@ view_inventory=idetools.ViewInventory(
                 ),
             ),
         (
+            'harmonic fields',
+            idetools.View(
+                ["'harmonic field' in :ds:"]
+                ),
+            ),
+        (
             'music specifiers',
             idetools.View(
                 ["'music specifier' in :ds:"]

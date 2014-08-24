@@ -1,10 +1,9 @@
 # -*- encoding: utf-8 -*-
-from abjad import new
 from abjad import show
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import mathtools
-from abjad.tools import selectortools
+from abjad.tools import timespantools
 import consort
 import zaira
 
@@ -13,12 +12,8 @@ import zaira
 
 
 segment_maker = zaira.makers.ZairaSegmentMaker(
-    annotation_specifier=consort.makers.AnnotationSpecifier(
-        show_annotated_result=True,
-        show_unannotated_result=False,
-        ),
     rehearsal_mark='J',
-    tempo=zaira.materials.tempi[1],
+    tempo=indicatortools.Tempo((1, 4), 48),
     )
 
 ratio = mathtools.NonreducedRatio(2)
@@ -29,89 +24,27 @@ segment_maker.set_duration_in_seconds(
     )
 
 
-### SUSTAINED MUSIC SETTING ###################################################
+### MUSIC SETTINGS ############################################################
 
 
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.sustained_timespan_maker,
+    timespan_maker=consort.makers.FloodedTimespanMaker(),
+    timespan_identifier=timespantools.Timespan(
+        stop_offset=durationtools.Duration(1, 8),
+        ),
+    piano_rh=zaira.materials.piano_fanfare_music_specifier,
+    piano_lh=zaira.materials.piano_fanfare_music_specifier,
+    drums=zaira.materials.percussion_fanfare_music_specifier,
+    metals=zaira.materials.percussion_fanfare_music_specifier,
     )
 
 
-### DENSE MUSIC SETTING #######################################################
-
-
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.dense_timespan_maker,
-    )
-
-
-### SPARSE MUSIC SETTING ######################################################
-
-
-music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
-        accents=consort.makers.AttachmentExpression(
-            attachments=(
-                indicatortools.Articulation('>'),
-                ),
-            selector=selectortools.selects_first_logical_tie_in_pitched_runs()[0],
-            ),
-        staccati=consort.makers.AttachmentExpression(
-            attachments=(
-                indicatortools.Articulation('.'),
-                ),
-            selector=selectortools.selects_all_but_first_logical_tie_in_pitched_runs()[0],
-            ),
-        ),
-    rhythm_maker=zaira.materials.undergrowth_rhythm_maker,
-    )
-
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.sparse_timespan_maker,
-    flute=music_specifier,
-    oboe=music_specifier,
-    clarinet=music_specifier,
-    metals=new(music_specifier,
-        rhythm_maker=zaira.materials.reiterating_rhythm_maker,
-        ),
-    woods=new(music_specifier,
-        rhythm_maker=zaira.materials.reiterating_rhythm_maker,
-        ),
-    piano_lh=music_specifier,
-    piano_rh=music_specifier,
-    violin=new(music_specifier,
-        rhythm_maker=zaira.materials.legato_rhythm_maker,
-        ),
-    viola=new(music_specifier,
-        rhythm_maker=zaira.materials.legato_rhythm_maker,
-        ),
-    cello=new(music_specifier,
-        rhythm_maker=zaira.materials.legato_rhythm_maker,
-        ),
-    )
-
-
-### LEGATO MUSIC SETTING ######################################################
-
-
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.legato_timespan_maker,
-    )
-
-
-### TUTTI MUSIC SETTING ######################################################
-
-
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.tutti_timespan_maker,
-    )
-
-
-### PEDALS MUSIC SETTING ######################################################
+### DEPENDENT MUSIC SETTINGS ##################################################
 
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.pedals_timespan_maker,
+    piano_pedals=zaira.materials.pedals_music_specifier,
     )
 
 

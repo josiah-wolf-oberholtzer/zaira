@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
-from abjad import new
 from abjad import show
 from abjad.tools import durationtools
+from abjad.tools import indicatortools
 from abjad.tools import mathtools
 import consort
 import zaira
@@ -13,7 +13,7 @@ import zaira
 segment_maker = zaira.makers.ZairaSegmentMaker(
     discard_final_silence=True,
     rehearsal_mark='A',
-    tempo=zaira.materials.tempi[0],
+    tempo=indicatortools.Tempo((1, 4), 72),
     )
 
 ratio = mathtools.NonreducedRatio(2)
@@ -29,14 +29,10 @@ segment_maker.set_duration_in_seconds(
 
 segment_maker.add_setting(
     timespan_maker=consort.makers.FloodedTimespanMaker(),
-    piano_rh=new(zaira.materials.piano_fanfare_music_specifier,
-        ),
-    piano_lh=new(zaira.materials.piano_fanfare_music_specifier,
-        ),
-    drums=new(zaira.materials.percussion_fanfare_music_specifier,
-        ),
-    metals=new(zaira.materials.percussion_fanfare_music_specifier,
-        ),
+    piano_rh=zaira.materials.piano_fanfare_music_specifier,
+    piano_lh=zaira.materials.piano_fanfare_music_specifier,
+    drums=zaira.materials.percussion_fanfare_music_specifier,
+    metals=zaira.materials.percussion_fanfare_music_specifier,
     )
 
 

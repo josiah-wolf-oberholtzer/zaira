@@ -12,7 +12,7 @@ undergrowth_rhythm_maker = rhythmmakertools.TaleaRhythmMaker(
         beam_each_division=False,
         beam_divisions_together=False,
         ),
-    tie_split_notes=True,
+    tie_split_notes=False,
     tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
         avoid_dots=True,
         is_diminution=True,

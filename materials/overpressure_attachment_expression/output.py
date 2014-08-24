@@ -11,9 +11,9 @@ overpressure_attachment_expression = consort.makers.AttachmentExpression(
                     contents=(
                         markuptools.MarkupCommand(
                             'filled-box',
+                            schemetools.SchemePair(-0.5, 1.5),
                             schemetools.SchemePair(-1, 1),
-                            schemetools.SchemePair(-1, 1),
-                            1
+                            0.25
                             ),
                         ),
                     ),
