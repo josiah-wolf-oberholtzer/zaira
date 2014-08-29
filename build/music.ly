@@ -1,8 +1,21 @@
-% Invisible Cities: Zaira (2014) for Ensemble Mosaik 
+% Invisible Cities (i): Zaira (2014) for Ensemble Mosaik 
 
-\version "2.19.3"
+\version "2.19.12"
 \language "english"
-% STYLESHEET_INCLUDE_STATEMENT
 
-\context Score = "Invisible Cities: Zaira" {
+#(ly:set-option 'relative-includes #t)
+\include "../stylesheets/stylesheet.ily"
+
+\context Score = "Invisible Cities (i): Zaira" {
+   \include "segment-a.ly"
+   \include "segment-b.ly"
+   \include "segment-c.ly"
+   \include "segment-d.ly"
+   \include "segment-e.ly"
+   \include "segment-f.ly"
+   \include "segment-g.ly"
+   \include "segment-h.ly"
+   \include "segment-i.ly"
+   \include "segment-j.ly"
+   \include "segment-k.ly"
 }

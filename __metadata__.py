@@ -7,7 +7,6 @@ metadata = collections.OrderedDict([
     ('composer', 'Oberholtzer'),
     ('forces_tagline', 'for Ensemble Mosaik'),
     ('locale', 'Jamaica Plain'),
-    ('paper_dimensions', '11x17'),
     ('price', '\\euro 66 / \\$84'),
     ('time_period', ('June 2014', 'September 2014')),
     ('title', 'Invisible Cities (i): Zaira'),

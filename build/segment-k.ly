@@ -1,11 +1,3 @@
-\version "2.19.12"
-\language "english"
-
-#(ly:set-option 'relative-includes #t)
-
-\include "/Users/josiah/Documents/Scores/zaira/stylesheets/stylesheet.ily"
-
-\score {
 	\context Score = "Zaira Score" <<
 		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
@@ -1616,4 +1608,3 @@
 			>>
 		>>
 	>>
-}

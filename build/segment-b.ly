@@ -1,106 +1,110 @@
-\version "2.19.12"
-\language "english"
-
-#(ly:set-option 'relative-includes #t)
-
-\include "/Users/josiah/Documents/Scores/zaira/stylesheets/stylesheet.ily"
-
-\score {
 	\context Score = "Zaira Score" <<
 		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
-				\time 3/8
-				\tempo 4=72
+				\time 5/16
+				\tempo 4=48
 				\mark \markup {
 					\override
 						#'(box-padding . 0.5)
 						\box
-							C
+							B
 					" "
 					\fontsize
 						#-3
 						" "
 					}
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
 			}
 			{
-				s1 * 3/8
+				s1 * 5/16
+			}
+			{
+				s1 * 5/16
+			}
+			{
+				s1 * 5/16
+			}
+			{
+				s1 * 5/16
+			}
+			{
+				s1 * 5/16
 			}
 			{
 				\time 4/4
@@ -121,85 +125,97 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
 							}
 							{
 								R1 * 1
@@ -223,85 +239,97 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
 							}
 							{
 								R1 * 1
@@ -325,85 +353,97 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
 							}
 							{
 								R1 * 1
@@ -427,104 +467,106 @@
 						\clef "percussion"
 						{
 							{
-								\set stemLeftBeamCount = 0
 								\set stemRightBeamCount = 2
-								f'16 -\accent \fff [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 0
-								f'16 -\accent ]
+								f'16 -\accent \fff
 							}
 						}
 						{
 							{
-								r8
+								r4
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
 							}
 							{
 								R1 * 1
@@ -548,85 +590,97 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
 							}
 							{
 								R1 * 1
@@ -647,104 +701,106 @@
 						\clef "percussion"
 						{
 							{
-								\set stemLeftBeamCount = 0
 								\set stemRightBeamCount = 2
-								b16 -\accent \fff [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								b16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								b16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 0
-								b16 -\accent ]
+								b16 -\accent \fff
 							}
 						}
 						{
 							{
-								r8
+								r4
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
 							}
 							{
 								R1 * 1
@@ -773,59 +829,8 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
-							<g'' b'' d''' f'''>16 -\accent \fff [
-								^ \markup {
-									\center-align
-										\natural
-									}
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 2
-							<d' f' a' c'' e''>16 -\accent
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 2
-							<c'' e'' g'' b''>16 -\accent
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							<a' c'' e'' g''>16 -\accent ]
+							<g'' b'' d''' f'''>16 -\accent \fff
 								^ \markup {
 									\center-align
 										\natural
@@ -834,88 +839,100 @@
 					}
 					{
 						{
-							r8
+							r4
 						}
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
+						}
+						{
+							R1 * 5/16
+						}
+						{
+							R1 * 5/16
+						}
+						{
+							R1 * 5/16
+						}
+						{
+							R1 * 5/16
 						}
 						{
 							R1 * 1
@@ -928,85 +945,128 @@
 			\context Dynamics = "Piano Dynamics" {
 				{
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
 					}
 					{
 						r1
@@ -1025,59 +1085,8 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
-							<d, f, a, c>16 -\accent \fff [
-								^ \markup {
-									\center-align
-										\natural
-									}
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 2
-							<f,, a,, c, e, g,>16 -\accent
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 2
-							<e,, g,, b,, d,>16 -\accent
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							<c, e, g, b,>16 -\accent ]
+							<d, f, a, c>16 -\accent \fff
 								^ \markup {
 									\center-align
 										\natural
@@ -1086,88 +1095,100 @@
 					}
 					{
 						{
-							r8
+							r4
 						}
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
+						}
+						{
+							R1 * 5/16
+						}
+						{
+							R1 * 5/16
+						}
+						{
+							R1 * 5/16
+						}
+						{
+							R1 * 5/16
 						}
 						{
 							R1 * 1
@@ -1180,91 +1201,133 @@
 			\context Dynamics = "Piano Pedals" {
 				{
 					{
-						s1 * 1/4 \sustainOn
+						s1 * 1/16 \sustainOn
 						<> \sustainOff
 					}
 				}
 				{
 					{
-						r8
+						r4
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
-						r4.
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
 					}
 					{
 						r1
@@ -1286,85 +1349,97 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
 							}
 							{
 								R1 * 1
@@ -1388,85 +1463,97 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
 							}
 							{
 								R1 * 1
@@ -1490,85 +1577,97 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
 							}
 							{
 								R1 * 1
@@ -1582,4 +1681,3 @@
 			>>
 		>>
 	>>
-}
