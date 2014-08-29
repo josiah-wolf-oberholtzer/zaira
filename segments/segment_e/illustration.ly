@@ -1232,6 +1232,7 @@
 							\set stemRightBeamCount = 2
 							c''''16 -\staccato \ppp ^ \markup { (prepared) }
 							\revert NoteHead #'style
+							\clef "treble"
 						}
 					}
 					{
@@ -1244,8 +1245,9 @@
 							\clef "treble^8"
 							\override NoteHead #'style = #'cross
 							\pitchedTrill
-							b''''4 \p \startTrillSpan c''''' ^ \markup { (prepared) }
+							b''''4 \p ^ \markup { (prepared) } \startTrillSpan c'''''
 							\revert NoteHead #'style
+							\clef "treble"
 							<> \stopTrillSpan
 						}
 					}
@@ -1853,8 +1855,9 @@
 							\override NoteHead #'style = #'cross
 							\set stemRightBeamCount = 1
 							\pitchedTrill
-							e''''8 \p \startTrillSpan f'''' ^ \markup { (prepared) }
+							e''''8 \p ^ \markup { (prepared) } \startTrillSpan f''''
 							\revert NoteHead #'style
+							\clef "treble"
 							<> \stopTrillSpan
 						}
 					}
@@ -2392,6 +2395,7 @@
 							\set stemRightBeamCount = 2
 							as''''16 -\staccato \pp ^ \markup { (prepared) }
 							\revert NoteHead #'style
+							\clef "treble"
 						}
 					}
 					{
@@ -2494,8 +2498,9 @@
 							\override NoteHead #'style = #'cross
 							\set stemRightBeamCount = 1
 							\pitchedTrill
-							a''''8 \p \startTrillSpan bf'''' ^ \markup { (prepared) }
+							a''''8 \p ^ \markup { (prepared) } \startTrillSpan bf''''
 							\revert NoteHead #'style
+							\clef "treble"
 							<> \stopTrillSpan
 						}
 					}
@@ -4287,6 +4292,7 @@
 							\set stemRightBeamCount = 2
 							ds,,16 -\staccato \ppp ^ \markup { (prepared) }
 							\revert NoteHead #'style
+							\clef "bass"
 						}
 					}
 					{

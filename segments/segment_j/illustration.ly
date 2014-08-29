@@ -28,11 +28,16 @@
 				s1 * 3/8
 			}
 			{
-				s1 * 3/8
+				\time 5/16
+				s1 * 5/16
 			}
 			{
 				\time 4/4
 				s1 * 1
+			}
+			{
+				\time 5/16
+				s1 * 5/16
 			}
 		}
 		\context EnsembleGroup = "Wind Section Staff Group" <<
@@ -55,10 +60,13 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -85,10 +93,13 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -115,10 +126,13 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -158,10 +172,13 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -188,10 +205,13 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -228,10 +248,13 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -286,7 +309,19 @@
 					}
 					{
 						{
-							r4
+							\clef "treble^8"
+							\override NoteHead #'style = #'cross
+							\set stemRightBeamCount = 1
+							\pitchedTrill
+							c''''8 \ppp ^ \markup { (prepared) } \startTrillSpan df''''
+							\revert NoteHead #'style
+							\clef "treble"
+							<> \stopTrillSpan
+						}
+					}
+					{
+						{
+							r8
 						}
 						{
 							\stopStaff
@@ -295,10 +330,34 @@
 							R1 * 3/8
 						}
 						{
-							R1 * 3/8
+							R1 * 5/16
+							\stopStaff
+							\startStaff
 						}
 						{
-							R1 * 1
+							r4..
+						}
+					}
+					{
+						{
+							\clef "treble^8"
+							\override NoteHead #'style = #'cross
+							\pitchedTrill
+							b''''4. \p ^ \markup { (prepared) } \startTrillSpan c'''''
+							\revert NoteHead #'style
+							\clef "treble"
+							<> \stopTrillSpan
+						}
+					}
+					{
+						{
+							r8.
+						}
+						{
+							\stopStaff
+							\once \override Staff.StaffSymbol.line-count = 1
+							\startStaff
+							R1 * 5/16
 							\stopStaff
 							\startStaff
 						}
@@ -314,10 +373,15 @@
 						r4.
 					}
 					{
-						r4.
+						r4
+						r16
 					}
 					{
 						r1
+					}
+					{
+						r4
+						r16
 					}
 				}
 			}
@@ -362,19 +426,48 @@
 					}
 					{
 						{
-							r4
+							r8
 						}
+					}
+					{
+						{
+							\clef "bass_8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
+							\override NoteHead #'style = #'cross
+							\set stemRightBeamCount = 1
+							\pitchedTrill
+							a,,,8 \ppp ~ \startTextSpan \startTrillSpan bf,,,
+						}
+						{
+							a,,,4. ~
+						}
+						{
+							a,,,4 ~
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 0
+							a,,,16
+							\revert NoteHead #'style
+							<> \stopTextSpan
+							\clef "bass"
+							<> \stopTrillSpan
+						}
+					}
+					{
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 3/8
-						}
-						{
-							R1 * 3/8
-						}
-						{
 							R1 * 1
+						}
+						{
+							R1 * 5/16
 							\stopStaff
 							\startStaff
 						}
@@ -385,21 +478,39 @@
 				{
 					{
 						s1 * 1/8 \sustainOn
+					}
+					{
+						s1 * 1/8
+					}
+					{
+						s1 * 1/8
+					}
+					{
+						s1 * 3/8
+					}
+					{
+						s1 * 5/16
 						<> \sustainOff
 					}
 				}
 				{
 					{
+						r4..
+					}
+				}
+				{
+					{
+						s1 * 3/8 \sustainOn
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r8.
+					}
+					{
 						r4
-					}
-					{
-						r4.
-					}
-					{
-						r4.
-					}
-					{
-						r1
+						r16
 					}
 				}
 			}
@@ -424,10 +535,13 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -454,10 +568,13 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -484,10 +601,13 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
+								R1 * 5/16
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 5/16
 								\bar "||"
 								\stopStaff
 								\startStaff

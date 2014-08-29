@@ -2,7 +2,7 @@
 		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
-				\time 5/16
+				\time 2/4
 				\tempo 4=48
 				\mark \markup {
 					\override
@@ -14,87 +14,14 @@
 						#-3
 						" "
 					}
-				s1 * 5/16
+				s1 * 1/2
 			}
 			{
-				s1 * 5/16
+				\time 3/8
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
+				\time 5/16
 				s1 * 5/16
 			}
 			{
@@ -109,6 +36,71 @@
 			{
 				\time 4/4
 				s1 * 1
+			}
+			{
+				\time 2/4
+				s1 * 1/2
+			}
+			{
+				\time 3/8
+				s1 * 3/8
+			}
+			{
+				\time 5/16
+				s1 * 5/16
+			}
+			{
+				s1 * 5/16
+			}
+			{
+				s1 * 5/16
+			}
+			{
+				s1 * 5/16
+			}
+			{
+				s1 * 5/16
+			}
+			{
+				\time 6/8
+				s1 * 3/4
+			}
+			{
+				\time 2/4
+				s1 * 1/2
+			}
+			{
+				\time 3/8
+				s1 * 3/8
+			}
+			{
+				\time 5/16
+				s1 * 5/16
+			}
+			{
+				s1 * 5/16
+			}
+			{
+				s1 * 5/16
+			}
+			{
+				s1 * 5/16
+			}
+			{
+				\time 4/4
+				s1 * 1
+			}
+			{
+				\time 2/4
+				s1 * 1/2
+			}
+			{
+				\time 3/8
+				s1 * 3/8
+			}
+			{
+				\time 5/16
+				s1 * 5/16
 			}
 		}
 		\context EnsembleGroup = "Wind Section Staff Group" <<
@@ -125,85 +117,10 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 1/2
 							}
 							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
 								R1 * 5/16
@@ -219,6 +136,60 @@
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -239,85 +210,10 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 1/2
 							}
 							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
 								R1 * 5/16
@@ -333,6 +229,60 @@
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -353,85 +303,10 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 1/2
 							}
 							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
 								R1 * 5/16
@@ -447,6 +322,60 @@
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -473,88 +402,13 @@
 						}
 						{
 							{
-								r4
+								r4..
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
 								R1 * 5/16
@@ -570,6 +424,60 @@
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -590,85 +498,10 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 1/2
 							}
 							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
 								R1 * 5/16
@@ -684,6 +517,60 @@
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -707,88 +594,13 @@
 						}
 						{
 							{
-								r4
+								r4..
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
 								R1 * 5/16
@@ -804,6 +616,60 @@
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -839,8 +705,124 @@
 					}
 					{
 						{
-							r4
+							\clef "treble^8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
+							\override NoteHead #'style = #'cross
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 2
+							c''''16 -\staccato \ppp \startTextSpan [
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							r8.
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 0
+							b''''16 -\staccato \p ]
 						}
+						{
+							\set stemRightBeamCount = 1
+							r8
+						}
+						\tweak #'text #tuplet-number::calc-fraction-text
+						\times 6/7 {
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 2
+							d''''16 \pp [
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							r8
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							\pitchedTrill
+							cs''''8 \ppp \startTrillSpan d''''
+							<> \stopTrillSpan
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 0
+							r8 ]
+							\revert NoteHead #'style
+							<> \stopTextSpan
+							\clef "treble"
+						}
+					}
+					{
+						{
+							\stopStaff
+							\once \override Staff.StaffSymbol.line-count = 1
+							\startStaff
+							R1 * 5/16
+						}
+						{
+							R1 * 5/16
+						}
+						{
+							R1 * 5/16
+						}
+						{
+							R1 * 5/16
+						}
+						{
+							R1 * 1
+							\stopStaff
+							\startStaff
+						}
+					}
+					{
+						{
+							\clef "treble^8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
+							\override NoteHead #'style = #'cross
+							\pitchedTrill
+							b''''4 \p \startTextSpan \startTrillSpan c'''''
+							<> \stopTrillSpan
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 2
+							d''''16 -\staccato [
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 0
+							r16 ]
+						}
+						{
+							\set stemRightBeamCount = 1
+							r8
+						}
+						\tweak #'text #tuplet-number::calc-fraction-text
+						\times 3/4 {
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 2
+							cs''''16 \pp [
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							r8
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 2
+							e''''16 \ppp
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							r8
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 0
+							\pitchedTrill
+							ds''''8 \p ] \startTrillSpan e''''
+							\revert NoteHead #'style
+							<> \stopTextSpan
+							\clef "treble"
+							<> \stopTrillSpan
+						}
+					}
+					{
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
@@ -860,69 +842,58 @@
 							R1 * 5/16
 						}
 						{
-							R1 * 5/16
+							R1 * 3/4
+							\stopStaff
+							\startStaff
+						}
+					}
+					{
+						\tweak #'text #tuplet-number::calc-fraction-text
+						\times 6/7 {
+							\clef "treble^8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
+							\override NoteHead #'style = #'cross
+							r4 \startTextSpan
+							\set stemRightBeamCount = 1
+							\pitchedTrill
+							d''''8. \pp \startTrillSpan ef''''
+							<> \stopTrillSpan
 						}
 						{
-							R1 * 5/16
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 2
+							cs''''16 -\staccato [
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 0
+							e''''16 -\staccato ]
 						}
 						{
-							R1 * 5/16
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 1
+							r8. [
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 0
+							ds''''16 -\staccato \ppp ]
+							\revert NoteHead #'style
+							<> \stopTextSpan
+							\clef "treble"
+						}
+					}
+					{
+						{
+							r8
 						}
 						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
+							\stopStaff
+							\once \override Staff.StaffSymbol.line-count = 1
+							\startStaff
 							R1 * 5/16
 						}
 						{
@@ -940,117 +911,70 @@
 							\startStaff
 						}
 					}
+					{
+						\tweak #'text #tuplet-number::calc-fraction-text
+						\times 6/7 {
+							\clef "treble^8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
+							\override NoteHead #'style = #'cross
+							\set stemRightBeamCount = 1
+							\pitchedTrill
+							cs''''8 \ppp \startTextSpan \startTrillSpan d''''
+							<> \stopTrillSpan
+							r4
+							\set stemRightBeamCount = 2
+							e''''16 \p
+						}
+						{
+							\set stemRightBeamCount = 1
+							\pitchedTrill
+							ds''''8 \startTrillSpan e''''
+							<> \stopTrillSpan
+						}
+						{
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 2
+							f''''16 -\staccato [
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							r8.
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 0
+							g''''16 -\staccato \pp ]
+							\revert NoteHead #'style
+							<> \stopTextSpan
+							\clef "treble"
+						}
+					}
+					{
+						{
+							r16
+						}
+						{
+							\stopStaff
+							\once \override Staff.StaffSymbol.line-count = 1
+							\startStaff
+							R1 * 5/16
+							\stopStaff
+							\startStaff
+						}
+					}
 				}
 			}
 			\context Dynamics = "Piano Dynamics" {
 				{
 					{
-						r4
-						r16
+						r2
 					}
 					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
+						r4.
 					}
 					{
 						r4
@@ -1070,6 +994,70 @@
 					}
 					{
 						r1
+					}
+					{
+						r2
+					}
+					{
+						r4.
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r2.
+					}
+					{
+						r2
+					}
+					{
+						r4.
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r1
+					}
+					{
+						r2
+					}
+					{
+						r4.
+					}
+					{
+						r4
+						r16
 					}
 				}
 			}
@@ -1095,7 +1083,114 @@
 					}
 					{
 						{
-							r4
+							r8
+						}
+					}
+					{
+						{
+							\clef "bass_8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
+							\override NoteHead #'style = #'cross
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 2
+							a,,,16 -\staccato \ppp \startTextSpan [
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							r8.
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 0
+							c,,16 -\staccato \p ]
+						}
+						\tweak #'text #tuplet-number::calc-fraction-text
+						\times 3/4 {
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 1
+							r8 [
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 2
+							b,,,16 \pp
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							r8
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							\pitchedTrill
+							d,,8 \ppp \startTrillSpan ef,,
+							<> \stopTrillSpan
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 0
+							r16 ]
+							\revert NoteHead #'style
+							<> \stopTextSpan
+							\clef "bass"
+						}
+					}
+					{
+						{
+							\stopStaff
+							\once \override Staff.StaffSymbol.line-count = 1
+							\startStaff
+							R1 * 5/16
+						}
+						{
+							R1 * 5/16
+						}
+						{
+							R1 * 5/16
+						}
+						{
+							R1 * 5/16
+						}
+						{
+							R1 * 1
+							\stopStaff
+							\startStaff
+						}
+						{
+							r8.
+						}
+					}
+					{
+						{
+							\clef "bass_8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
+							\override NoteHead #'style = #'cross
+							\pitchedTrill
+							c,,4 \p \startTextSpan \startTrillSpan df,,
+							<> \stopTrillSpan
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 0
+							b,,,16 -\staccato
+						}
+						{
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 1
+							r8. [
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 0
+							d,,16 -\staccato \pp ]
+							\revert NoteHead #'style
+							<> \stopTextSpan
+							\clef "bass"
+						}
+					}
+					{
+						{
+							r8
 						}
 						{
 							\stopStaff
@@ -1116,69 +1211,58 @@
 							R1 * 5/16
 						}
 						{
-							R1 * 5/16
+							R1 * 3/4
+							\stopStaff
+							\startStaff
 						}
 						{
-							R1 * 5/16
+							r8.
+						}
+					}
+					{
+						\tweak #'text #tuplet-number::calc-fraction-text
+						\times 5/6 {
+							\clef "bass_8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
+							\override NoteHead #'style = #'cross
+							r4 \startTextSpan
+							\set stemRightBeamCount = 1
+							\pitchedTrill
+							b,,,8 \pp \startTrillSpan c,,
+							<> \stopTrillSpan
 						}
 						{
-							R1 * 5/16
+							\once \override TrillSpanner.bound-details.left.text = \markup {
+								\null
+								}
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 1
+							\pitchedTrill
+							d,,8 [ \startTrillSpan ef,,
+							<> \stopTrillSpan
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 0
+							cs,,16 -\staccato ]
+							\revert NoteHead #'style
+							<> \stopTextSpan
+							\clef "bass"
+						}
+					}
+					{
+						{
+							r8.
 						}
 						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
+							\stopStaff
+							\once \override Staff.StaffSymbol.line-count = 1
+							\startStaff
 							R1 * 5/16
 						}
 						{
@@ -1195,6 +1279,54 @@
 							\stopStaff
 							\startStaff
 						}
+						{
+							r8.
+						}
+					}
+					{
+						\tweak #'text #tuplet-number::calc-fraction-text
+						\times 5/6 {
+							\clef "bass_8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
+							\override NoteHead #'style = #'cross
+							\set stemRightBeamCount = 1
+							\pitchedTrill
+							d,,8 \ppp \startTextSpan \startTrillSpan ef,,
+							<> \stopTrillSpan
+							r4
+						}
+						\tweak #'text #tuplet-number::calc-fraction-text
+						\times 6/7 {
+							\pitchedTrill
+							cs,,4 \p \startTrillSpan d,,
+							<> \stopTrillSpan
+							\set stemLeftBeamCount = 0
+							\set stemRightBeamCount = 2
+							e,,16 [
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 0
+							r8 ]
+							\revert NoteHead #'style
+							<> \stopTextSpan
+							\clef "bass"
+						}
+					}
+					{
+						{
+							\stopStaff
+							\once \override Staff.StaffSymbol.line-count = 1
+							\startStaff
+							R1 * 5/16
+							\stopStaff
+							\startStaff
+						}
 					}
 				}
 			}
@@ -1202,117 +1334,22 @@
 				{
 					{
 						s1 * 1/16 \sustainOn
+					}
+					{
+						s1 * 1/8
+					}
+					{
+						s1 * 3/16
+					}
+					{
+						s1 * 1/8
+					}
+					{
+						s1 * 3/8
 						<> \sustainOff
 					}
 				}
 				{
-					{
-						r4
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
 					{
 						r4
 						r16
@@ -1333,6 +1370,103 @@
 						r1
 					}
 				}
+				{
+					{
+						s1 * 3/16 \sustainOn
+					}
+					{
+						s1 * 3/16
+					}
+					{
+						s1 * 1/8
+					}
+					{
+						s1 * 3/8
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r2.
+					}
+				}
+				{
+					{
+						s1 * 3/16 \sustainOn
+					}
+					{
+						s1 * 3/16
+					}
+					{
+						s1 * 1/8
+					}
+					{
+						s1 * 3/8
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r1
+					}
+				}
+				{
+					{
+						s1 * 3/16 \sustainOn
+					}
+					{
+						s1 * 3/16
+					}
+					{
+						s1 * 1/8
+					}
+					{
+						s1 * 3/8
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r4
+						r16
+					}
+				}
 			}
 		>>
 		\context EnsembleGroup = "String Section Staff Group" <<
@@ -1349,85 +1483,10 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 1/2
 							}
 							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
 								R1 * 5/16
@@ -1443,6 +1502,60 @@
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -1463,85 +1576,10 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 1/2
 							}
 							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
 								R1 * 5/16
@@ -1557,6 +1595,60 @@
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -1577,85 +1669,10 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 1/2
 							}
 							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
 								R1 * 5/16
@@ -1671,6 +1688,60 @@
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
 								\bar "||"
 								\stopStaff
 								\startStaff

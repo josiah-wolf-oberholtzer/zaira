@@ -29,6 +29,19 @@ segment_maker.set_duration_in_seconds(
 
 
 segment_maker.add_setting(
+    timespan_maker=zaira.materials.sparse_timespan_maker,
+    piano_rh=new(
+        zaira.materials.piano_prepared_treble_music_specifier,
+        rhythm_maker=zaira.materials.sustained_rhythm_maker,
+        ),
+    piano_lh=new(
+        zaira.materials.piano_prepared_bass_music_specifier,
+        rhythm_maker=zaira.materials.sustained_rhythm_maker,
+        ),
+    )
+
+
+segment_maker.add_setting(
     timespan_maker=zaira.materials.tutti_timespan_maker,
     piano_rh=new(
         zaira.materials.piano_clusters_music_specifier,
@@ -37,7 +50,7 @@ segment_maker.add_setting(
                 zaira.materials.erratic_dynamic_attachment_expression,
                 ),
             ),
-        pitch_maker__register_specifier__center_pitch="c'''",
+        pitch_maker__register_specifier__center_pitch="g''",
         ),
     piano_lh=new(
         zaira.materials.piano_clusters_music_specifier,

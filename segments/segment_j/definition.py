@@ -29,6 +29,19 @@ segment_maker.set_duration_in_seconds(
 
 
 segment_maker.add_setting(
+    timespan_maker=zaira.materials.sparse_timespan_maker,
+    piano_rh=new(
+        zaira.materials.piano_prepared_treble_music_specifier,
+        rhythm_maker=zaira.materials.sustained_rhythm_maker,
+        ),
+    piano_lh=new(
+        zaira.materials.piano_prepared_bass_music_specifier,
+        rhythm_maker=zaira.materials.sustained_rhythm_maker,
+        ),
+    )
+
+
+segment_maker.add_setting(
     timespan_maker=consort.makers.FloodedTimespanMaker(),
     timespan_identifier=timespantools.Timespan(
         stop_offset=durationtools.Duration(1, 8),

@@ -423,6 +423,7 @@
 							\set stemRightBeamCount = 2
 							c''''16 -\staccato \ppp ^ \markup { (prepared) }
 							\revert NoteHead #'style
+							\clef "treble"
 						}
 					}
 					{
@@ -901,6 +902,7 @@
 							\set stemRightBeamCount = 2
 							a,,,16 -\staccato \ppp ^ \markup { (prepared) }
 							\revert NoteHead #'style
+							\clef "bass"
 						}
 					}
 					{
@@ -1008,8 +1010,9 @@
 							\override NoteHead #'style = #'cross
 							\set stemRightBeamCount = 1
 							\pitchedTrill
-							c,,8 \p \startTrillSpan df,, ^ \markup { (prepared) }
+							c,,8 \p ^ \markup { (prepared) } \startTrillSpan df,,
 							\revert NoteHead #'style
+							\clef "bass"
 							<> \stopTrillSpan
 						}
 					}
