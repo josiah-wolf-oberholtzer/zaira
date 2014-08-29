@@ -29,6 +29,30 @@ segment_maker.set_duration_in_seconds(
 
 
 segment_maker.add_setting(
+    timespan_maker=zaira.materials.tutti_timespan_maker,
+    piano_rh=new(
+        zaira.materials.piano_clusters_music_specifier,
+        attachment_maker=consort.makers.AttachmentMaker(
+            attachment_expressions=(
+                zaira.materials.erratic_dynamic_attachment_expression,
+                ),
+            ),
+        pitch_maker__register_specifier__center_pitch="c'''",
+        ),
+    piano_lh=new(
+        zaira.materials.piano_clusters_music_specifier,
+        attachment_maker=consort.makers.AttachmentMaker(
+            attachment_expressions=(
+                zaira.materials.erratic_dynamic_attachment_expression,
+                ),
+            ),
+        pitch_maker__register_specifier__center_pitch="c",
+        seed=1,
+        ),
+    )
+
+
+segment_maker.add_setting(
     timespan_maker=consort.makers.FloodedTimespanMaker(),
     timespan_identifier=timespantools.Timespan(
         stop_offset=durationtools.Duration(1, 8),
