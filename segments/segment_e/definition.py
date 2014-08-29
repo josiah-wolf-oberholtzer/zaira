@@ -27,6 +27,16 @@ segment_maker.set_duration_in_seconds(
 
 ### MUSIC SETTINGS ############################################################
 
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.dense_timespan_maker,
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(0, 2, 4, 6),
+        ratio=(1, 2, 1, 2, 1, 2, 1),
+        ),
+    piano_rh=zaira.materials.piano_prepared_treble_music_specifier,
+    piano_lh=zaira.materials.piano_prepared_bass_music_specifier,
+    )
+
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.sparse_timespan_maker,
