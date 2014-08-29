@@ -59,6 +59,9 @@ percussion_reiteration_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
+    pitch_maker=consort.makers.AbsolutePitchMaker(
+        allow_repetition=False,
+        ),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
         denominators=(16,),
         beam_specifier=rhythmmakertools.BeamSpecifier(

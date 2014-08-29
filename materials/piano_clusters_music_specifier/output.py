@@ -34,10 +34,6 @@ piano_clusters_music_specifier = consort.makers.MusicSpecifier(
                                 scoretools.Chord,
                                 ),
                             ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
                         ),
                     ),
                 ),
@@ -80,12 +76,32 @@ piano_clusters_music_specifier = consort.makers.MusicSpecifier(
                 consort.makers.KeyClusterExpression(
                     include_black_keys=True,
                     include_white_keys=True,
+                    staff_space_width=7,
+                    ),
+                consort.makers.KeyClusterExpression(
+                    include_black_keys=True,
+                    include_white_keys=True,
                     staff_space_width=9,
                     ),
                 consort.makers.KeyClusterExpression(
                     include_black_keys=False,
                     include_white_keys=True,
                     staff_space_width=7,
+                    ),
+                consort.makers.KeyClusterExpression(
+                    include_black_keys=True,
+                    include_white_keys=True,
+                    staff_space_width=7,
+                    ),
+                consort.makers.KeyClusterExpression(
+                    include_black_keys=True,
+                    include_white_keys=False,
+                    staff_space_width=9,
+                    ),
+                consort.makers.KeyClusterExpression(
+                    include_black_keys=True,
+                    include_white_keys=True,
+                    staff_space_width=9,
                     ),
                 ]
             ),
@@ -97,15 +113,92 @@ piano_clusters_music_specifier = consort.makers.MusicSpecifier(
                 pitchtools.NamedPitch('a'),
                 ]
             ),
+        register_specifier=consort.makers.RegisterSpecifier(
+            division_inflections=consort.makers.RegisterInflectionInventory(
+                [
+                    consort.makers.RegisterInflection(
+                        inflections=pitchtools.IntervalSegment(
+                            (
+                                pitchtools.NumberedInterval(-3),
+                                pitchtools.NumberedInterval(3),
+                                ),
+                            item_class=pitchtools.NumberedInterval,
+                            ),
+                        ratio=mathtools.Ratio(1),
+                        ),
+                    consort.makers.RegisterInflection(
+                        inflections=pitchtools.IntervalSegment(
+                            (
+                                pitchtools.NumberedInterval(3),
+                                pitchtools.NumberedInterval(6),
+                                pitchtools.NumberedInterval(-3),
+                                ),
+                            item_class=pitchtools.NumberedInterval,
+                            ),
+                        ratio=mathtools.Ratio(2, 1),
+                        ),
+                    consort.makers.RegisterInflection(
+                        inflections=pitchtools.IntervalSegment(
+                            (
+                                pitchtools.NumberedInterval(-6),
+                                pitchtools.NumberedInterval(0),
+                                pitchtools.NumberedInterval(6),
+                                ),
+                            item_class=pitchtools.NumberedInterval,
+                            ),
+                        ratio=mathtools.Ratio(1, 2),
+                        ),
+                    ]
+                ),
+            phrase_inflections=consort.makers.RegisterInflectionInventory(
+                [
+                    consort.makers.RegisterInflection(
+                        inflections=pitchtools.IntervalSegment(
+                            (
+                                pitchtools.NumberedInterval(6),
+                                pitchtools.NumberedInterval(0),
+                                pitchtools.NumberedInterval(-6),
+                                ),
+                            item_class=pitchtools.NumberedInterval,
+                            ),
+                        ratio=mathtools.Ratio(2, 1),
+                        ),
+                    consort.makers.RegisterInflection(
+                        inflections=pitchtools.IntervalSegment(
+                            (
+                                pitchtools.NumberedInterval(3),
+                                pitchtools.NumberedInterval(0),
+                                pitchtools.NumberedInterval(-3),
+                                ),
+                            item_class=pitchtools.NumberedInterval,
+                            ),
+                        ratio=mathtools.Ratio(1, 2),
+                        ),
+                    ]
+                ),
+            segment_inflections=consort.makers.RegisterInflectionInventory(
+                [
+                    consort.makers.RegisterInflection(
+                        inflections=pitchtools.IntervalSegment(
+                            (
+                                pitchtools.NumberedInterval(-12),
+                                pitchtools.NumberedInterval(0),
+                                pitchtools.NumberedInterval(12),
+                                ),
+                            item_class=pitchtools.NumberedInterval,
+                            ),
+                        ratio=mathtools.Ratio(2, 1),
+                        ),
+                    ]
+                ),
+            ),
         ),
     rhythm_maker=rhythmmakertools.IncisedRhythmMaker(
         incise_specifier=rhythmmakertools.InciseSpecifier(
-            incise_divisions=True,
-            incise_output=False,
             prefix_talea=(1, 1, 1, 2, 1, 2),
-            prefix_lengths=(2, 2, 1, 2, 3, 2, 2, 2, 1),
+            prefix_counts=(2, 2, 1, 2, 3, 2, 2, 2, 1),
             suffix_talea=(1,),
-            suffix_lengths=(0,),
+            suffix_counts=(0,),
             talea_denominator=16,
             fill_with_notes=False,
             ),

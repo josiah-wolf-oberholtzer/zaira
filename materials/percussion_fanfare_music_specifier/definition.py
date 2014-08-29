@@ -21,5 +21,6 @@ percussion_fanfare_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
+    pitch_maker=consort.makers.AbsolutePitchMaker(),
     rhythm_maker=zaira.materials.reiterating_rhythm_maker,
     )

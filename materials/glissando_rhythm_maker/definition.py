@@ -4,12 +4,11 @@ from abjad import *
 
 glissando_rhythm_maker = rhythmmakertools.IncisedRhythmMaker(
     incise_specifier=rhythmmakertools.InciseSpecifier(
-        incise_divisions=False,
-        incise_output=True,
+        outer_divisions_only=True,
         prefix_talea=(1,),
-        prefix_lengths=(0,),
+        prefix_counts=(0,),
         suffix_talea=(1,),
-        suffix_lengths=(1,),
+        suffix_counts=(1,),
         talea_denominator=16,
         body_ratio=mathtools.Ratio(1),
         fill_with_notes=True,

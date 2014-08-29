@@ -71,8 +71,5 @@ piano_drone_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ]
             ),
-        pitches=datastructuretools.CyclicTuple(
-            []
-            ),
         ),
     )

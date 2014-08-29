@@ -34,10 +34,6 @@ string_shimmering_music_specifier = consort.makers.MusicSpecifier(
                                 scoretools.Chord,
                                 ),
                             ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
                         ),
                     ),
                 ),

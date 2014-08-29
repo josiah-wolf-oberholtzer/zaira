@@ -50,14 +50,15 @@ percussion_attack_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
+    pitch_maker=consort.makers.AbsolutePitchMaker(
+        allow_repetition=False,
+        ),
     rhythm_maker=rhythmmakertools.IncisedRhythmMaker(
         incise_specifier=rhythmmakertools.InciseSpecifier(
-            incise_divisions=True,
-            incise_output=False,
             prefix_talea=(1,),
-            prefix_lengths=(1,),
+            prefix_counts=(1,),
             suffix_talea=(1,),
-            suffix_lengths=(0,),
+            suffix_counts=(0,),
             talea_denominator=16,
             fill_with_notes=False,
             ),

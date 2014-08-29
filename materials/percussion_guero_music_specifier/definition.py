@@ -3,4 +3,6 @@ from abjad import *
 import consort
 
 
-percussion_guero_music_specifier = consort.makers.MusicSpecifier()
+percussion_guero_music_specifier = consort.makers.MusicSpecifier(
+    pitch_maker=consort.makers.AbsolutePitchMaker(),
+    )

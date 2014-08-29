@@ -59,20 +59,73 @@ piano_fanfare_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_maker=consort.makers.PitchClassPitchMaker(
         allow_repetition=False,
         chord_expressions=datastructuretools.CyclicTuple(
             [
+                consort.makers.KeyClusterExpression(
+                    include_black_keys=False,
+                    include_white_keys=True,
+                    staff_space_width=7,
+                    ),
+                consort.makers.KeyClusterExpression(
+                    include_black_keys=True,
+                    include_white_keys=True,
+                    staff_space_width=9,
+                    ),
                 consort.makers.KeyClusterExpression(
                     include_black_keys=True,
                     include_white_keys=True,
                     staff_space_width=7,
                     ),
+                consort.makers.KeyClusterExpression(
+                    include_black_keys=False,
+                    include_white_keys=True,
+                    staff_space_width=7,
+                    ),
+                consort.makers.KeyClusterExpression(
+                    include_black_keys=False,
+                    include_white_keys=True,
+                    staff_space_width=9,
+                    ),
+                consort.makers.KeyClusterExpression(
+                    include_black_keys=True,
+                    include_white_keys=True,
+                    staff_space_width=7,
+                    ),
+                consort.makers.KeyClusterExpression(
+                    include_black_keys=True,
+                    include_white_keys=False,
+                    staff_space_width=9,
+                    ),
+                consort.makers.KeyClusterExpression(
+                    include_black_keys=False,
+                    include_white_keys=True,
+                    staff_space_width=7,
+                    ),
+                consort.makers.KeyClusterExpression(
+                    include_black_keys=True,
+                    include_white_keys=True,
+                    staff_space_width=7,
+                    ),
+                consort.makers.KeyClusterExpression(
+                    include_black_keys=True,
+                    include_white_keys=False,
+                    staff_space_width=9,
+                    ),
                 ]
             ),
-        pitches=datastructuretools.CyclicTuple(
-            []
+        pitch_classes=datastructuretools.CyclicTuple(
+            [
+                pitchtools.NamedPitch('c'),
+                pitchtools.NamedPitch('a'),
+                pitchtools.NamedPitch('f'),
+                pitchtools.NamedPitch('d'),
+                pitchtools.NamedPitch('e'),
+                pitchtools.NamedPitch('b'),
+                ]
             ),
+        register_specifier=consort.makers.RegisterSpecifier(),
         ),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
         denominators=(16,),

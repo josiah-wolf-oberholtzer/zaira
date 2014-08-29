@@ -21,12 +21,47 @@ piano_fanfare_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_maker=consort.makers.PitchClassPitchMaker(
         chord_expressions=(
+            consort.makers.KeyClusterExpression(
+                include_black_keys=False,
+                staff_space_width=7,
+                ),
+            consort.makers.KeyClusterExpression(
+                staff_space_width=9,
+                ),
             consort.makers.KeyClusterExpression(
                 staff_space_width=7,
                 ),
+            consort.makers.KeyClusterExpression(
+                include_black_keys=False,
+                staff_space_width=7,
+                ),
+            consort.makers.KeyClusterExpression(
+                include_black_keys=False,
+                staff_space_width=9,
+                ),
+            consort.makers.KeyClusterExpression(
+                staff_space_width=7,
+                ),
+            consort.makers.KeyClusterExpression(
+                include_white_keys=False,
+                staff_space_width=9,
+                ),
+            consort.makers.KeyClusterExpression(
+                include_black_keys=False,
+                staff_space_width=7,
+                ),
+            consort.makers.KeyClusterExpression(
+                staff_space_width=7,
+                ),
+            consort.makers.KeyClusterExpression(
+                include_white_keys=False,
+                staff_space_width=9,
+                ),
             ),
+            pitch_classes="c a f d e b",
+            register_specifier=consort.makers.RegisterSpecifier(),
         ),
     rhythm_maker=zaira.materials.reiterating_rhythm_maker,
     )
