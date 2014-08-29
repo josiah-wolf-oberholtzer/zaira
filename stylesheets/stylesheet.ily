@@ -132,6 +132,7 @@ afterGraceFraction = #(cons 127 128)
         \type Engraver_group
         \alias Staff
         \override BarLine.bar-extent = #'(-1 . 1)
+        \override StaffSymbol.line-count = 3
     }
 
     \context {
@@ -140,6 +141,7 @@ afterGraceFraction = #(cons 127 128)
         \type Engraver_group
         \alias Staff
         \override BarLine.bar-extent = #'(-1 . 1)
+        \override StaffSymbol.line-count = 3
     }
 
     \context {
@@ -148,6 +150,7 @@ afterGraceFraction = #(cons 127 128)
         \type Engraver_group
         \alias Staff
         \override BarLine.bar-extent = #'(-1 . 1)
+        \override StaffSymbol.line-count = 3
     }
 
     %%% PIANO %%%
