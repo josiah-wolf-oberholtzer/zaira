@@ -37,31 +37,6 @@ piano_clusters_music_specifier = consort.makers.MusicSpecifier(
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        (
-                            indicatortools.Articulation('.'),
-                            indicatortools.Articulation('>'),
-                            ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.LogicalTieSelectorCallback(
-                            flatten=True,
-                            pitched=True,
-                            trivial=True,
-                            only_with_head=False,
-                            only_with_tail=False,
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
-                        ),
-                    ),
-                ),
             ),
         ),
     pitch_maker=consort.makers.PitchClassPitchMaker(

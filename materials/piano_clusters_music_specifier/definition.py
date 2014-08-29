@@ -8,16 +8,6 @@ piano_clusters_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
         attachment_expressions=(
             zaira.materials.background_dynamic_attachment_expression,
-            consort.makers.AttachmentExpression(
-                attachments=(
-                    (
-                        indicatortools.Articulation('.'),
-                        indicatortools.Articulation('>'),
-                        ),
-                    ),
-                selector=selectortools.Selector().by_logical_tie(
-                    pitched=True)[0],
-                ),
             ),
         ),
     pitch_maker=consort.makers.PitchClassPitchMaker(
