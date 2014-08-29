@@ -42,11 +42,12 @@ piano_prepared_bass_music_specifier = consort.makers.MusicSpecifier(
                     [
                         consort.makers.ClefSpanner(
                             clef=indicatortools.Clef(
-                                name='bass_15',
+                                name='bass_8',
                                 ),
                             ),
                         ]
                     ),
+                selector=selectortools.Selector(),
                 ),
             consort.makers.AttachmentExpression(
                 attachments=datastructuretools.TypedList(
@@ -61,19 +62,7 @@ piano_prepared_bass_music_specifier = consort.makers.MusicSpecifier(
                             ),
                         ]
                     ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
-                                ),
-                            ),
-                        ),
-                    ),
+                selector=selectortools.Selector(),
                 ),
             consort.makers.AttachmentExpression(
                 attachments=datastructuretools.TypedList(
