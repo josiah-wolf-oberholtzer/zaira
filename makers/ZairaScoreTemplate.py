@@ -221,7 +221,6 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                 ),
             label='percussion',
             )
-        override(metals[0]).staff_symbol.line_count = 3
         self._voice_name_abbreviations['metals'] = metals[0][0].name
         attach(indicatortools.Clef('percussion'), metals[0][0])
 
@@ -232,7 +231,6 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                 ),
             label='percussion',
             )
-        override(woods[0]).staff_symbol.line_count = 3
         self._voice_name_abbreviations['woods'] = woods[0][0].name
         attach(indicatortools.Clef('percussion'), woods[0][0])
 
@@ -243,7 +241,6 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                 ),
             label='percussion',
             )
-        override(drums[0]).staff_symbol.line_count = 3
         self._voice_name_abbreviations['drums'] = drums[0][0].name
         attach(indicatortools.Clef('percussion'), drums[0][0])
 
