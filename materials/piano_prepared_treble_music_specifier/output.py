@@ -3,7 +3,7 @@ from abjad import *
 import consort
 
 
-wind_keyclick_music_specifier = consort.makers.MusicSpecifier(
+piano_prepared_treble_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
         attachment_expressions=(
             consort.makers.AttachmentExpression(
@@ -40,53 +40,82 @@ wind_keyclick_music_specifier = consort.makers.MusicSpecifier(
             consort.makers.AttachmentExpression(
                 attachments=datastructuretools.TypedList(
                     [
-                        (
-                            consort.makers.ClefSpanner(
-                                clef=indicatortools.Clef(
-                                    name='percussion',
-                                    ),
-                                ),
-                            spannertools.StaffLinesSpanner(
-                                lines=(4, -4),
-                                overrides={
-                                    'note_head__no_ledgers': True,
-                                    'note_head__style': 'cross',
-                                    },
+                        consort.makers.ClefSpanner(
+                            clef=indicatortools.Clef(
+                                name='treble^15',
                                 ),
                             ),
                         ]
                     ),
-                selector=selectortools.Selector(),
                 ),
             consort.makers.AttachmentExpression(
                 attachments=datastructuretools.TypedList(
                     [
                         consort.makers.ComplexTextSpanner(
                             markup=markuptools.Markup(
-                                contents=(
-                                    markuptools.MarkupCommand(
-                                        'box',
-                                        markuptools.MarkupCommand(
-                                            'pad-around',
-                                            0.5,
-                                            'keyclick'
-                                            )
-                                        ),
-                                    ),
+                                contents=('(prepared)',),
                                 ),
+                            overrides={
+                                'note_head__style': 'cross',
+                                },
                             ),
-                        ]
-                    ),
-                selector=selectortools.Selector(),
-                ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        spannertools.StemTremoloSpanner(),
                         ]
                     ),
                 selector=selectortools.Selector(
                     callbacks=(
+                        selectortools.PrototypeSelectorCallback(
+                            prototype=scoretools.Leaf,
+                            ),
+                        selectortools.RunSelectorCallback(
+                            prototype=(
+                                scoretools.Note,
+                                scoretools.Chord,
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            consort.makers.AttachmentExpression(
+                attachments=datastructuretools.TypedList(
+                    [
+                        indicatortools.Articulation('.'),
+                        ]
+                    ),
+                selector=selectortools.Selector(
+                    callbacks=(
+                        selectortools.PrototypeSelectorCallback(
+                            prototype=scoretools.Leaf,
+                            ),
+                        selectortools.LogicalTieSelectorCallback(
+                            flatten=True,
+                            pitched=True,
+                            trivial=True,
+                            only_with_head=False,
+                            only_with_tail=False,
+                            ),
+                        selectortools.DurationSelectorCallback(
+                            duration=durationtools.Duration(1, 16),
+                            parts=(
+                                Less,
+                                Exact,
+                                ),
+                            ),
+                        ),
+                    ),
+                ),
+            consort.makers.AttachmentExpression(
+                attachments=datastructuretools.TypedList(
+                    [
+                        spannertools.ComplexTrillSpanner(
+                            interval=pitchtools.NamedInterval('+m2'),
+                            ),
+                        ]
+                    ),
+                selector=selectortools.Selector(
+                    callbacks=(
+                        selectortools.PrototypeSelectorCallback(
+                            prototype=scoretools.Leaf,
+                            ),
                         selectortools.LogicalTieSelectorCallback(
                             flatten=True,
                             pitched=True,
@@ -103,34 +132,24 @@ wind_keyclick_music_specifier = consort.makers.MusicSpecifier(
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        indicatortools.Articulation('.'),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.LogicalTieSelectorCallback(
-                            flatten=True,
-                            pitched=True,
-                            trivial=True,
-                            only_with_head=False,
-                            only_with_tail=False,
-                            ),
-                        selectortools.DurationSelectorCallback(
-                            duration=durationtools.Duration(1, 8),
-                            parts=(
-                                Less,
-                                ),
-                            ),
-                        selectortools.LengthSelectorCallback(
-                            length=1,
-                            parts=Exact,
-                            ),
-                        ),
-                    ),
-                ),
+            ),
+        ),
+    pitch_maker=consort.makers.AbsolutePitchMaker(
+        allow_repetition=False,
+        pitches=datastructuretools.CyclicTuple(
+            [
+                pitchtools.NamedPitch("c''''"),
+                pitchtools.NamedPitch("b''''"),
+                pitchtools.NamedPitch("d''''"),
+                pitchtools.NamedPitch("cs''''"),
+                pitchtools.NamedPitch("e''''"),
+                pitchtools.NamedPitch("ds''''"),
+                pitchtools.NamedPitch("f''''"),
+                pitchtools.NamedPitch("g''''"),
+                pitchtools.NamedPitch("as''''"),
+                pitchtools.NamedPitch("fs''''"),
+                pitchtools.NamedPitch("a''''"),
+                ]
             ),
         ),
     rhythm_maker=rhythmmakertools.TaleaRhythmMaker(

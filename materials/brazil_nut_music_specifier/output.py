@@ -96,7 +96,9 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
                             ),
                         selectortools.DurationSelectorCallback(
                             duration=durationtools.Duration(1, 16),
-                            parts=More,
+                            parts=(
+                                More,
+                                ),
                             ),
                         ),
                     ),
@@ -118,7 +120,9 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
                             ),
                         selectortools.DurationSelectorCallback(
                             duration=durationtools.Duration(1, 8),
-                            parts=Less,
+                            parts=(
+                                Less,
+                                ),
                             ),
                         selectortools.LengthSelectorCallback(
                             length=1,
