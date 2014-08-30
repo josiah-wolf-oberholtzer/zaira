@@ -29,6 +29,15 @@ segment_maker.set_duration_in_seconds(
 
 
 segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.dense_timespan_maker,
+        fuse_groups=True,
+        ),
+    piano_rh=zaira.materials.piano_drone_music_specifier,
+    )
+
+
+segment_maker.add_setting(
     timespan_maker=zaira.materials.dense_timespan_maker,
     timespan_identifier=consort.makers.RatioPartsExpression(
         parts=(0, 2, 4),

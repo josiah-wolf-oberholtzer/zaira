@@ -13,11 +13,11 @@ import zaira
 
 
 segment_maker = zaira.makers.ZairaSegmentMaker(
-    rehearsal_mark='F',
+    rehearsal_mark='F1',
     tempo=indicatortools.Tempo((1, 4), 48),
     )
 
-ratio = mathtools.NonreducedRatio(1, 14, 7)
+ratio = mathtools.NonreducedRatio(1, 14)
 
 segment_maker.set_duration_in_seconds(
     durationtools.Multiplier(sum(ratio), 91) *
@@ -26,6 +26,15 @@ segment_maker.set_duration_in_seconds(
 
 
 ### MUSIC SETTINGS ############################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.dense_timespan_maker,
+        fuse_groups=True,
+        ),
+    piano_rh=zaira.materials.piano_drone_music_specifier,
+    )
 
 
 segment_maker.add_setting(
