@@ -18,7 +18,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
         >>> template = zaira.makers.ZairaScoreTemplate()
         >>> score = template()
         >>> print(format(score))
-        \context Score = "Zaira Score" <<
+        \new Score <<
             \keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
             \context TimeSignatureContext = "TimeSignatureContext" {
             }
@@ -64,9 +64,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                     instrumentName = \markup { Metals }
                     shortInstrumentName = \markup { Metals }
                 } <<
-                    \context MetalsStaff = "Metals Staff" \with {
-                        \override StaffSymbol #'line-count = #3
-                    } {
+                    \context MetalsStaff = "Metals Staff" {
                         \context Voice = "Metals Voice" {
                             \clef "percussion"
                         }
@@ -77,9 +75,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                     instrumentName = \markup { Woods }
                     shortInstrumentName = \markup { Woods }
                 } <<
-                    \context WoodsStaff = "Woods Staff" \with {
-                        \override StaffSymbol #'line-count = #3
-                    } {
+                    \context WoodsStaff = "Woods Staff" {
                         \context Voice = "Woods Voice" {
                             \clef "percussion"
                         }
@@ -90,9 +86,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                     instrumentName = \markup { Drums }
                     shortInstrumentName = \markup { Drums }
                 } <<
-                    \context DrumsStaff = "Drums Staff" \with {
-                        \override StaffSymbol #'line-count = #3
-                    } {
+                    \context DrumsStaff = "Drums Staff" {
                         \context Voice = "Drums Voice" {
                             \clef "percussion"
                         }
@@ -324,7 +318,6 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                 piano,
                 strings,
                 ],
-            name='Zaira Score',
             )
 
         return score
