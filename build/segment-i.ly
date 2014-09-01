@@ -1,4 +1,4 @@
-	\context Score = "Zaira Score" <<
+	\new Score <<
 		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
@@ -458,7 +458,6 @@
 						\clef "percussion"
 						{
 							{
-								\set stemRightBeamCount = 2
 								f'16 -\accent \fff
 							}
 						}
@@ -680,7 +679,6 @@
 						\clef "percussion"
 						{
 							{
-								\set stemRightBeamCount = 2
 								b16 -\accent \fff
 							}
 						}
@@ -802,7 +800,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemRightBeamCount = 2
 							<g'' b'' d''' f'''>16 -\accent \fff
 								^ \markup {
 									\center-align
@@ -815,13 +812,15 @@
 							<f a f' fs' c''>4 :32 \ppp ~
 						}
 						{
-							<f a f' fs' c''>4.. :32
+							<f a f' fs' c''>4. :32 ~
+							\set stemLeftBeamCount = 2
+							<f a f' fs' c''>16 :128
 						}
 					}
 					{
 						{
-							r4
 							r16
+							r4
 						}
 					}
 					{
@@ -829,35 +828,40 @@
 							<f a f' fs' c''>2. :32 \p ~
 						}
 						{
-							<f a f' fs' c''>4.. :32
+							<f a f' fs' c''>4. :32 ~
+							\set stemLeftBeamCount = 2
+							<f a f' fs' c''>16 :128
 						}
 					}
 					{
 						{
-							r8.
+							r16
+							r8
 						}
 					}
 					{
 						{
 							<f a cs' f' c''>2 :32 \pp ~
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
+							\set stemRightBeamCount = 1
 							<f a cs' f' c''>8 :64 ~
 						}
 						{
 							<f a cs' f' c''>2 :32 ~
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
+							\set stemRightBeamCount = 1
 							<f a cs' f' c''>8 :64 ~
 						}
 						{
 							<f a cs' f' c''>2 :32 ~
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
+							\set stemRightBeamCount = 1
 							<f a cs' f' c''>8 :64 ~
 						}
 						{
-							<f a cs' f' c''>4.. :32
+							<f a cs' f' c''>4 :32 ~
+							\set stemLeftBeamCount = 1
+							<f a cs' f' c''>8. :64
 						}
 					}
 					{
@@ -880,7 +884,6 @@
 						{
 							<f a f' fs' c''>2 :32 ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<f a f' fs' c''>16 :128
 						}
 					}
@@ -901,23 +904,25 @@
 						{
 							<f a cs' f' c''>4 :32 \p ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
+							\set stemRightBeamCount = 1
 							<f a cs' f' c''>16 :128 ~
 						}
 						{
 							<f a cs' f' c''>4 :32 ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
+							\set stemRightBeamCount = 1
 							<f a cs' f' c''>16 :128 ~
 						}
 						{
 							<f a cs' f' c''>4 :32 ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
+							\set stemRightBeamCount = 1
 							<f a cs' f' c''>16 :128 ~
 						}
 						{
-							<f a cs' f' c''>2... :32
+							<f a cs' f' c''>2. :32 ~
+							\set stemLeftBeamCount = 1
+							<f a cs' f' c''>8. :64
 						}
 					}
 					{
@@ -984,13 +989,13 @@
 						{
 							<f a cs' f' c''>4 :32 \pp ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
+							\set stemRightBeamCount = 1
 							<f a cs' f' c''>16 :128 ~
 						}
 						{
 							<f a cs' f' c''>4 :32 ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
+							\set stemRightBeamCount = 1
 							<f a cs' f' c''>16 :128 ~
 						}
 						{
@@ -1129,7 +1134,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemRightBeamCount = 2
 							<d, f, a, c>16 -\accent \fff
 								^ \markup {
 									\center-align

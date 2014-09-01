@@ -1,4 +1,4 @@
-	\context Score = "Zaira Score" <<
+	\new Score <<
 		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
@@ -145,11 +145,9 @@
 						\clef "percussion"
 						{
 							{
-								\set stemLeftBeamCount = 0
 								\set stemRightBeamCount = 2
 								f'16 -\accent \fff [
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 0
 								f'16 -\accent ]
 							}
 						}
@@ -221,11 +219,9 @@
 						\clef "percussion"
 						{
 							{
-								\set stemLeftBeamCount = 0
 								\set stemRightBeamCount = 2
 								b16 -\accent \fff [
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 0
 								b16 -\accent ]
 							}
 						}
@@ -272,7 +268,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<g'' b'' d''' f'''>16 -\accent \fff [
 								^ \markup {
@@ -287,7 +282,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<d' f' a' c'' e''>16 -\accent ]
 								^ \markup {
 									\center-align
@@ -303,7 +297,6 @@
 						{
 							\clef "treble^8"
 							\override NoteHead #'style = #'cross
-							\set stemRightBeamCount = 1
 							\pitchedTrill
 							c''''8 \ppp ^ \markup { (prepared) } \startTrillSpan df''''
 							\revert NoteHead #'style
@@ -327,16 +320,30 @@
 							\startStaff
 						}
 						{
-							r4..
+							r4
+							r8.
 						}
 					}
 					{
 						{
 							\clef "treble^8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
+							\set stemRightBeamCount = 2
 							\pitchedTrill
-							b''''4. \p ^ \markup { (prepared) } \startTrillSpan c'''''
+							b''''16 \p ~ \startTextSpan \startTrillSpan c'''''
+							b''''4 ~
+							\set stemLeftBeamCount = 2
+							b''''16
 							\revert NoteHead #'style
+							<> \stopTextSpan
 							\clef "treble"
 							<> \stopTrillSpan
 						}
@@ -389,7 +396,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<d, f, a, c>16 -\accent \fff [
 								^ \markup {
@@ -404,7 +410,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<f,, a,, c, e, g,>16 -\accent ]
 								^ \markup {
 									\center-align
@@ -443,7 +448,6 @@
 						{
 							a,,,4 ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							a,,,16
 							\revert NoteHead #'style
 							<> \stopTextSpan

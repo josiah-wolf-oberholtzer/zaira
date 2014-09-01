@@ -6,7 +6,7 @@
 \include "/Users/josiah/Documents/Scores/zaira/stylesheets/stylesheet.ily"
 
 \score {
-	\context Score = "Zaira Score" <<
+	\new Score <<
 		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
@@ -437,7 +437,6 @@
 						\clef "percussion"
 						{
 							{
-								\set stemRightBeamCount = 2
 								f'16 -\accent \fff
 							}
 						}
@@ -641,7 +640,6 @@
 						\clef "percussion"
 						{
 							{
-								\set stemRightBeamCount = 2
 								b16 -\accent \fff
 							}
 						}
@@ -754,7 +752,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemRightBeamCount = 2
 							<g'' b'' d''' f'''>16 -\accent \fff
 								^ \markup {
 									\center-align
@@ -769,18 +766,21 @@
 						{
 							<f a f' fs' c''>2 :32 ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<f a f' fs' c''>16 :128
 						}
 					}
 					{
 						{
-							r8
+							r16
+							r16
 						}
 					}
 					{
 						{
-							<f a f' fs' c''>4 :32 \p
+							\set stemRightBeamCount = 2
+							<f a f' fs' c''>16 :128 \p ~ [
+							\set stemLeftBeamCount = 1
+							<f a f' fs' c''>8. :64 ]
 						}
 					}
 					{
@@ -799,18 +799,20 @@
 						{
 							<f a cs' f' c''>2 :32 ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<f a cs' f' c''>16 :128
 						}
 					}
 					{
 						{
-							r4..
+							r8.
+							r4
 						}
 					}
 					{
 						{
-							<f a f' fs' c''>2... :32 \ppp
+							<f a f' fs' c''>2. :32 \ppp ~
+							\set stemLeftBeamCount = 1
+							<f a f' fs' c''>8. :64
 						}
 					}
 					{
@@ -850,11 +852,13 @@
 						{
 							<f a cs' f' c''>4 :32 \ppp ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
+							\set stemRightBeamCount = 1
 							<f a cs' f' c''>16 :128 ~
 						}
 						{
-							<f a cs' f' c''>4. :32
+							<f a cs' f' c''>4 :32 ~
+							\set stemLeftBeamCount = 1
+							<f a cs' f' c''>8 :64
 						}
 					}
 					{
@@ -866,7 +870,6 @@
 						{
 							<f a f' fs' c''>2 :32 \p ~
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							<f a f' fs' c''>8 :64
 						}
 					}
@@ -908,7 +911,6 @@
 						{
 							<f a cs' f' c''>2 :32 \p ~
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							<f a cs' f' c''>8 :64
 						}
 					}
@@ -923,7 +925,9 @@
 							<f a f' fs' c''>8 :64 \pp ~
 						}
 						{
-							<f a f' fs' c''>2.. :32
+							<f a f' fs' c''>2. :32 ~
+							\set stemLeftBeamCount = 1
+							<f a f' fs' c''>8 :64
 						}
 					}
 					{
@@ -967,21 +971,20 @@
 						{
 							<f a cs' f' c''>2 :32 ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<f a cs' f' c''>16 :128
 						}
 					}
 					{
 						{
-							r4..
+							r8.
+							r4
 						}
 					}
 					{
 						{
-							<f a f' fs' c''>2 :32 \ppp ~
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							<f a f' fs' c''>16 :128
+							<f a f' fs' c''>4. :32 \ppp ~
+							\set stemLeftBeamCount = 1
+							<f a f' fs' c''>8. :64
 						}
 					}
 					{
@@ -993,24 +996,23 @@
 						{
 							<f a cs' f' c''>4 :32 \p ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
+							\set stemRightBeamCount = 1
 							<f a cs' f' c''>16 :128 ~
 						}
 						{
 							<f a cs' f' c''>2 :32 ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<f a cs' f' c''>16 :128
 						}
 					}
 					{
 						{
-							r4
+							r8.
+							r16
 						}
 					}
 					{
 						{
-							\set stemRightBeamCount = 1
 							<f a f' fs' c''>8. :64 \pp
 						}
 					}
@@ -1132,7 +1134,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemRightBeamCount = 2
 							<d, f, a, c>16 -\accent \fff
 								^ \markup {
 									\center-align

@@ -335,13 +335,13 @@
 						\clef "percussion"
 						{
 							{
-								\set stemRightBeamCount = 2
 								f'16 -\accent \fff
 							}
 						}
 						{
 							{
-								r4..
+								r8.
+								r4
 							}
 							{
 								\stopStaff
@@ -491,13 +491,13 @@
 						\clef "percussion"
 						{
 							{
-								\set stemRightBeamCount = 2
 								b16 -\accent \fff
 							}
 						}
 						{
 							{
-								r4..
+								r8.
+								r4
 							}
 							{
 								\stopStaff
@@ -580,7 +580,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemRightBeamCount = 2
 							<g'' b'' d''' f'''>16 -\accent \fff
 								^ \markup {
 									\center-align
@@ -600,12 +599,14 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							c''''16 -\staccato \ppp \startTextSpan [
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
-							r8.
+							r8
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 2
+							r16
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 1
 							b''''16 -\staccato \p
@@ -629,7 +630,6 @@
 							cs''''8 \ppp \startTrillSpan d''''
 							<> \stopTrillSpan
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							r8 ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -638,12 +638,12 @@
 					}
 					{
 						{
-							r8..
+							r8
+							r16.
 						}
 					}
 					{
 						{
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 3
 							d'''32 [ \< \p (
 							\set stemLeftBeamCount = 3
@@ -661,13 +661,10 @@
 							\set stemRightBeamCount = 3
 							g''32
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 1
-							cs''16 ~
-						}
-						{
+							\set stemRightBeamCount = 2
+							cs''16
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 0
-							cs''32 ] \f )
+							bf'32 ] \f )
 						}
 					}
 					{
@@ -680,12 +677,12 @@
 							\startStaff
 						}
 						{
-							r2..
+							r2.
+							r8
 						}
 					}
 					{
 						\times 4/5 {
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							f''16 \f [ (
 							\set stemLeftBeamCount = 2
@@ -695,19 +692,19 @@
 							\set stemRightBeamCount = 3
 							g''32
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 2
+							\set stemRightBeamCount = 1
 							cs'''32 ~
 						}
 						{
-							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 0
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 3
 							cs'''32 ] )
 						}
 					}
 					{
 						{
-							r4
 							r16.
+							r4
 						}
 					}
 					{
@@ -725,7 +722,7 @@
 							\pitchedTrill
 							b''''4 \p \startTextSpan \startTrillSpan c'''''
 							<> \stopTrillSpan
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
 							d''''16 -\staccato [
 							\set stemLeftBeamCount = 2
@@ -739,11 +736,13 @@
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
 							cs''''16 -\staccato \pp
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 1
-							r8
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
+							\set stemRightBeamCount = 2
+							r16
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							r16
+							\set stemLeftBeamCount = 2
 							e''''16 -\staccato \ppp ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -760,7 +759,6 @@
 					}
 					{
 						\times 2/3 {
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 3
 							r32 [
 							\set stemLeftBeamCount = 2
@@ -773,12 +771,12 @@
 							\set stemRightBeamCount = 3
 							cs'''32
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 2
+							\set stemRightBeamCount = 1
 							bf'''32 ~
 						}
 						\tweak #'text #tuplet-number::calc-fraction-text
-						\times 5/6 {
-							\set stemLeftBeamCount = 2
+						\times 6/7 {
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 3
 							bf'''32
 							\set stemLeftBeamCount = 2
@@ -788,13 +786,10 @@
 							\set stemRightBeamCount = 3
 							f''32
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 1
-							e''16 ~
-						}
-						{
+							\set stemRightBeamCount = 2
+							e''16
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 0
-							e''32 ] \f )
+							g''32 ] \f )
 						}
 					}
 					{
@@ -807,28 +802,28 @@
 							\startStaff
 						}
 						{
-							r2...
+							r2.
+							r8.
 						}
 					}
 					{
 						{
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 3
 							g''32 \f [ (
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 2
+							\set stemRightBeamCount = 1
 							cs'''32 ~
 						}
 						{
-							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 0
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 3
 							cs'''32 ] )
 						}
 					}
 					{
 						{
-							r2
 							r16.
+							r2
 						}
 					}
 					{
@@ -843,7 +838,6 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							\pitchedTrill
 							d''''8. \pp \startTextSpan [ \startTrillSpan ef''''
@@ -872,7 +866,6 @@
 							\set stemRightBeamCount = 2
 							f''''16 \p
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							r16 ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -886,7 +879,6 @@
 					}
 					{
 						\times 4/5 {
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 3
 							cs''''32 [ \< \p (
 							\set stemLeftBeamCount = 2
@@ -896,11 +888,11 @@
 							\set stemRightBeamCount = 3
 							d'''32
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 2
+							\set stemRightBeamCount = 1
 							f''32 ~
 						}
 						{
-							\set stemLeftBeamCount = 2
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 3
 							f''32
 							\set stemLeftBeamCount = 3
@@ -911,15 +903,12 @@
 							g'''32
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
-							cs''32
+							cs'''32
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 2
-							bf'32 ~
-						}
-						{
+							\set stemRightBeamCount = 3
+							bf''32
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 0
-							bf'32 ] \f )
+							d'''32 ] \f )
 						}
 					}
 					{
@@ -932,29 +921,31 @@
 							\startStaff
 						}
 						{
-							r2..
+							r2.
+							r8
 							r32
 						}
 					}
 					{
 						{
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 3
 							bf''32 \f [ (
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 1
 							d'''16 ~
 						}
-						{
-							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 0
-							d'''32 ] )
+						\times 2/3 {
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 3
+							d'''32 )
+							\set stemLeftBeamCount = 2
+							r16 ]
 						}
 					}
 					{
 						{
+							r16
 							r4
-							r16.
 						}
 					}
 					{
@@ -970,13 +961,11 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemRightBeamCount = 1
 							\pitchedTrill
 							cs''''8 \ppp \startTextSpan \startTrillSpan d''''
 							<> \stopTrillSpan
 							r4
-							\set stemLeftBeamCount = 0
-							\set stemRightBeamCount = 2
+							\set stemRightBeamCount = 1
 							e''''16 \p [
 						}
 						\times 8/9 {
@@ -995,7 +984,6 @@
 							\set stemRightBeamCount = 2
 							g''''16 \pp
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							r16 ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -1090,7 +1078,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemRightBeamCount = 2
 							<d, f, a, c>16 -\accent \fff
 								^ \markup {
 									\center-align
@@ -1100,7 +1087,8 @@
 					}
 					{
 						{
-							r8
+							r16
+							r16
 						}
 					}
 					{
@@ -1115,7 +1103,6 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							a,,,16 -\staccato \ppp \startTextSpan [
 							\set stemLeftBeamCount = 1
@@ -1142,7 +1129,6 @@
 							d,,8 \ppp \startTrillSpan ef,,
 							<> \stopTrillSpan
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							r16 ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -1151,17 +1137,18 @@
 					}
 					{
 						{
-							r4...
+							r4
+							r8
+							r16.
 						}
 					}
 					{
 						{
-							\set stemLeftBeamCount = 0
-							\set stemRightBeamCount = 3
+							\set stemRightBeamCount = 1
 							d32 \p ~ [ (
 						}
 						{
-							\set stemLeftBeamCount = 2
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 3
 							d32
 							\set stemLeftBeamCount = 3
@@ -1169,8 +1156,8 @@
 							f,32 ~
 						}
 						{
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 2
 							f,16 ] )
 						}
 					}
@@ -1187,8 +1174,8 @@
 							\startStaff
 						}
 						{
-							r2
-							r16
+							r4.
+							r8.
 						}
 					}
 					{
@@ -1203,7 +1190,6 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							\pitchedTrill
 							c,,8. \p \startTextSpan [ \startTrillSpan df,,
@@ -1232,7 +1218,6 @@
 							\set stemRightBeamCount = 2
 							e,,16 \ppp
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							r16 ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -1241,34 +1226,33 @@
 					}
 					{
 						{
-							r4..
+							r4
+							r8.
 						}
 					}
 					{
 						\times 2/3 {
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							f,16 \f [ (
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 2
+							\set stemRightBeamCount = 1
 							e,32 ~
 						}
 						{
-							\set stemLeftBeamCount = 2
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 3
 							e,32
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
 							g,32
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 0
 							cs32 ] )
 						}
 					}
 					{
 						{
-							r4
 							r32
+							r4
 						}
 						{
 							\stopStaff
@@ -1296,7 +1280,6 @@
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
 							r4 \startTextSpan
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							\pitchedTrill
 							b,,,8 \pp [ \startTrillSpan c,,
@@ -1312,7 +1295,6 @@
 							d,,8 \startTrillSpan ef,,
 							<> \stopTrillSpan
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							cs,,16 -\staccato ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -1321,35 +1303,36 @@
 					}
 					{
 						{
-							r8.
+							r16
+							r8
 						}
 						{
-							r4...
+							r4
+							r8
+							r16.
 						}
 					}
 					{
 						{
-							\set stemLeftBeamCount = 0
-							\set stemRightBeamCount = 3
+							\set stemRightBeamCount = 1
 							e32 \p ~ [ (
 						}
 						\times 2/3 {
-							\set stemLeftBeamCount = 2
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 3
 							e32
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
 							g,32
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 2
+							\set stemRightBeamCount = 1
 							cs32 ~
 						}
 						{
-							\set stemLeftBeamCount = 2
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 3
 							cs32
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 0
 							bf,32 ] )
 						}
 					}
@@ -1366,8 +1349,8 @@
 							\startStaff
 						}
 						{
-							r2
-							r16
+							r4.
+							r8.
 						}
 					}
 					{
@@ -1383,7 +1366,6 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							\pitchedTrill
 							d,,8 \ppp \startTextSpan [ \startTrillSpan ef,,
@@ -1404,10 +1386,12 @@
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
 							\pitchedTrill
-							e,,8. \startTrillSpan f,,
+							e,,8 ~ \startTrillSpan f,,
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 2
+							e,,16
 							<> \stopTrillSpan
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							ds,,16 -\staccato ]
 							\revert NoteHead #'style
 							<> \stopTextSpan

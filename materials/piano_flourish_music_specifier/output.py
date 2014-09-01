@@ -151,7 +151,7 @@ piano_flourish_music_specifier = consort.makers.MusicSpecifier(
             counts=(1, 1, 1, 1, 2, 1, 2),
             denominator=32,
             ),
-        split_divisions_by_counts=(4, 5),
+        split_divisions_by_counts=(4, 6),
         extra_counts_per_division=(0, 0, 0, 1, 0, 2, 1),
         beam_specifier=rhythmmakertools.BeamSpecifier(
             beam_each_division=False,

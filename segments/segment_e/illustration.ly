@@ -6,7 +6,7 @@
 \include "/Users/josiah/Documents/Scores/zaira/stylesheets/stylesheet.ily"
 
 \score {
-	\context Score = "Zaira Score" <<
+	\new Score <<
 		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
@@ -567,7 +567,6 @@
 						\clef "percussion"
 						{
 							{
-								\set stemLeftBeamCount = 0
 								\set stemRightBeamCount = 2
 								f'16 -\accent \fff [
 								\set stemLeftBeamCount = 2
@@ -601,7 +600,6 @@
 								\set stemRightBeamCount = 2
 								f'16 -\accent
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 0
 								f'16 -\accent ]
 							}
 						}
@@ -865,7 +863,6 @@
 						\clef "percussion"
 						{
 							{
-								\set stemLeftBeamCount = 0
 								\set stemRightBeamCount = 2
 								b16 -\accent \fff [
 								\set stemLeftBeamCount = 2
@@ -899,7 +896,6 @@
 								\set stemRightBeamCount = 2
 								b16 -\accent
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 0
 								b16 -\accent ]
 							}
 						}
@@ -1042,7 +1038,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<g'' b'' d''' f'''>16 -\accent \fff [
 								^ \markup {
@@ -1213,7 +1208,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<e' g' b' d'' f''>16 -\accent ]
 								^ \markup {
 									\center-align
@@ -1229,7 +1223,6 @@
 						{
 							\clef "treble^8"
 							\override NoteHead #'style = #'cross
-							\set stemRightBeamCount = 2
 							c''''16 -\staccato \ppp ^ \markup { (prepared) }
 							\revert NoteHead #'style
 							\clef "treble"
@@ -1268,7 +1261,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<g'' b'' d''' f'''>16 \ppp [
 								^ \markup {
@@ -1287,7 +1279,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<d'' f'' a'' c'''>16 ]
 								^ \markup {
 									\center-align
@@ -1301,7 +1292,8 @@
 					}
 					{
 						{
-							r8.
+							r16
+							r8
 						}
 						{
 							\stopStaff
@@ -1312,7 +1304,8 @@
 							\startStaff
 						}
 						{
-							r2..
+							r2.
+							r8
 						}
 					}
 					{
@@ -1324,7 +1317,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							<d'' f'' a'' c'''>8 \p [
 								^ \markup {
@@ -1336,8 +1328,8 @@
 											}
 									}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							r16 ]
+							\set stemRightBeamCount = 1
+							r16
 						}
 						{
 							\once \override Accidental.stencil = ##f
@@ -1347,9 +1339,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<a' c'' e'' g'' b''>16 \pp [
+							<a' c'' e'' g'' b''>16 \pp
 								^ \markup {
 									\center-align
 										\concat
@@ -1366,7 +1358,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<e' g' b' d''>16 ]
 								^ \markup {
 									\center-align
@@ -1392,7 +1383,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<a' c'' e'' g'' b''>16 \pp [
 								^ \markup {
@@ -1418,8 +1408,8 @@
 										\natural
 									}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
-							r8. ]
+							\set stemRightBeamCount = 1
+							r8.
 						}
 						\times 2/3 {
 							\once \override Accidental.stencil = ##f
@@ -1429,9 +1419,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<g' b' d'' f''>16 \ppp [
+							<g' b' d'' f''>16 \ppp
 								^ \markup {
 									\center-align
 										\concat
@@ -1441,8 +1431,8 @@
 											}
 									}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
-							r8 ]
+							\set stemRightBeamCount = 1
+							r8
 						}
 						{
 							\once \override Accidental.stencil = ##f
@@ -1452,9 +1442,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<c'' e'' g'' b'' d'''>16 \p [
+							<c'' e'' g'' b'' d'''>16 \p
 								^ \markup {
 									\center-align
 										\flat
@@ -1467,7 +1457,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<a'' c''' e''' g''' b'''>16 ]
 								^ \markup {
 									\center-align
@@ -1513,7 +1502,6 @@
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
 							r4 \startTextSpan
-							\set stemRightBeamCount = 1
 							\pitchedTrill
 							d''''8. \pp \startTrillSpan ef''''
 							\revert NoteHead #'style
@@ -1537,7 +1525,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							<e'' g'' b'' d'''>8 \ppp [
 								^ \markup {
@@ -1551,8 +1538,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<g'' b'' d''' f'''>16 ]
 								^ \markup {
 									\center-align
@@ -1585,13 +1570,11 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							\pitchedTrill
 							cs''''8 \ppp \startTextSpan [ \startTrillSpan d''''
 							<> \stopTrillSpan
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							r8. ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -1612,7 +1595,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<g''' b''' d'''' f''''>16 \p [
 								^ \markup {
@@ -1638,8 +1620,11 @@
 										\flat
 									}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
-							r8. ]
+							\set stemRightBeamCount = 2
+							r16
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							r8
 						}
 						\times 4/5 {
 							\once \override Accidental.stencil = ##f
@@ -1649,9 +1634,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<a'' c''' e''' g''' b'''>16 \pp [
+							<a'' c''' e''' g''' b'''>16 \pp
 								^ \markup {
 									\center-align
 										\concat
@@ -1679,7 +1664,6 @@
 											}
 									}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							r8 ]
 						}
 					}
@@ -1708,7 +1692,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<c'' e'' g'' b'' d'''>16 \pp [
 								^ \markup {
@@ -1741,7 +1724,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							<e'' g'' b'' d'''>8 ]
 								^ \markup {
 									\center-align
@@ -1772,7 +1754,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<a'' c''' e''' g''' b'''>16 \ppp [
 								^ \markup {
@@ -1791,7 +1772,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<e'' g'' b'' d'''>16 ]
 								^ \markup {
 									\center-align
@@ -1831,7 +1811,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemRightBeamCount = 1
 							<e''' g''' b''' d''''>8 \p
 								^ \markup {
 									\center-align
@@ -1846,14 +1825,14 @@
 					}
 					{
 						{
-							r2
+							r4.
+							r8
 						}
 					}
 					{
 						{
 							\clef "treble^8"
 							\override NoteHead #'style = #'cross
-							\set stemRightBeamCount = 1
 							\pitchedTrill
 							e''''8 \p ^ \markup { (prepared) } \startTrillSpan f''''
 							\revert NoteHead #'style
@@ -1875,7 +1854,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<g'' b'' d''' f'''>16 \pp [
 								^ \markup {
@@ -1894,7 +1872,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							<c'''' e'''' g'''' b'''' d'''''>8 ]
 								^ \markup {
 									\center-align
@@ -1908,7 +1885,8 @@
 					}
 					{
 						{
-							r8
+							r16
+							r16
 						}
 					}
 					{
@@ -1924,14 +1902,12 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							ds''''16 \pp \startTextSpan [
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
 							r8
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							f''''16 \ppp ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -1955,7 +1931,6 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							r8 \startTextSpan [
 							\set stemLeftBeamCount = 1
@@ -1965,7 +1940,6 @@
 							\set stemRightBeamCount = 1
 							r8
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							g''''16 \p ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -1992,14 +1966,15 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							g''''16 -\staccato \p \startTextSpan [
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 1
-							r8
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
+							\set stemRightBeamCount = 2
+							r16
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							r16
+							\set stemLeftBeamCount = 2
 							as''''16 -\staccato \pp ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -2023,7 +1998,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<g' b' d'' f''>16 \p [
 								^ \markup {
@@ -2042,8 +2016,8 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							<d' f' a' c''>16 ]
+							\set stemRightBeamCount = 2
+							<d' f' a' c''>16
 								^ \markup {
 									\center-align
 										\concat
@@ -2052,7 +2026,15 @@
 												\flat
 											}
 									}
-							r4
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 1
+							r16
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							r8
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 1
+							r16
 						}
 						{
 							\once \override Accidental.stencil = ##f
@@ -2062,9 +2044,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<a c' e' g' b'>16 [ \> \f
+							<a c' e' g' b'>16 \> \f
 								^ \markup {
 									\center-align
 										\concat
@@ -2081,8 +2063,8 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
-							<e' g' b' d''>8 ]
+							\set stemRightBeamCount = 1
+							<e' g' b' d''>8
 								^ \markup {
 									\center-align
 										\natural
@@ -2096,8 +2078,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<g b d' f'>16 \p
+							<g b d' f'>16 ] \p
 								^ \markup {
 									\center-align
 										\concat
@@ -2110,7 +2093,8 @@
 					}
 					{
 						{
-							r4..
+							r8.
+							r4
 						}
 					}
 					{
@@ -2123,7 +2107,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							<d' f' a' c''>8 \f [
 								^ \markup {
@@ -2135,13 +2118,13 @@
 											}
 									}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							r8 ]
 						}
 					}
 					{
 						{
-							r4
+							r8.
+							r16
 						}
 					}
 					{
@@ -2153,7 +2136,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<a c' e' g' b'>16 \p [
 								^ \markup {
@@ -2179,8 +2161,8 @@
 										\natural
 									}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
-							r8 ]
+							\set stemRightBeamCount = 1
+							r8
 						}
 						\tweak #'text #tuplet-number::calc-fraction-text
 						\times 6/7 {
@@ -2191,8 +2173,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<g b d' f'>16 \f
+							<g b d' f'>16 \f ]
 								^ \markup {
 									\center-align
 										\concat
@@ -2219,7 +2202,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							<e' g' b' d''>8 \f [
 								^ \markup {
@@ -2233,8 +2215,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<g' b' d'' f''>16 ]
 								^ \markup {
 									\center-align
@@ -2254,8 +2234,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
-							\set stemRightBeamCount = 1
 							<c' e' g' b' d''>8 \p [
 								^ \markup {
 									\center-align
@@ -2280,8 +2258,8 @@
 											}
 									}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							r16 ]
+							\set stemRightBeamCount = 1
+							r16
 						}
 						\times 4/5 {
 							\once \override Accidental.stencil = ##f
@@ -2291,8 +2269,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<e g b d'>16 \f
+							<e g b d'>16 \f ]
 								^ \markup {
 									\center-align
 										\concat
@@ -2311,8 +2290,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
-							\set stemRightBeamCount = 2
 							<g b d' f'>16 \p [
 								^ \markup {
 									\center-align
@@ -2330,7 +2307,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<c'' e'' g'' b'' d'''>16 ]
 								^ \markup {
 									\center-align
@@ -2356,7 +2332,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<g'' b'' d''' f'''>16 \p [
 								^ \markup {
@@ -2375,7 +2350,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							<c'' e'' g'' b'' d'''>8 ]
 								^ \markup {
 									\center-align
@@ -2385,14 +2359,15 @@
 					}
 					{
 						{
-							r4..
+							r16
+							r4
+							r8
 						}
 					}
 					{
 						{
 							\clef "treble^8"
 							\override NoteHead #'style = #'cross
-							\set stemRightBeamCount = 2
 							as''''16 -\staccato \pp ^ \markup { (prepared) }
 							\revert NoteHead #'style
 							\clef "treble"
@@ -2407,7 +2382,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<c' e' g' b' d''>16 [ \> \f
 								^ \markup {
@@ -2440,7 +2414,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							<e' g' b' d''>8 ] \p
 								^ \markup {
 									\center-align
@@ -2470,7 +2443,6 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							fs''''16 \ppp \startTextSpan [
 							\set stemLeftBeamCount = 1
@@ -2480,7 +2452,6 @@
 							\set stemRightBeamCount = 2
 							a''''16 \p
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							r16 ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -2489,14 +2460,14 @@
 					}
 					{
 						{
-							r8
+							r16
+							r16
 						}
 					}
 					{
 						{
 							\clef "treble^8"
 							\override NoteHead #'style = #'cross
-							\set stemRightBeamCount = 1
 							\pitchedTrill
 							a''''8 \p ^ \markup { (prepared) } \startTrillSpan bf''''
 							\revert NoteHead #'style
@@ -2513,7 +2484,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<a' c'' e'' g'' b''>16 \p [
 								^ \markup {
@@ -2543,8 +2513,8 @@
 											}
 									}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							r16 ]
+							\set stemRightBeamCount = 1
+							r16
 						}
 						{
 							\once \override Accidental.stencil = ##f
@@ -2554,9 +2524,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<g' b' d'' f''>16 [ \> \f
+							<g' b' d'' f''>16 \> \f
 								^ \markup {
 									\center-align
 										\concat
@@ -2573,8 +2543,8 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							<c'' e'' g'' b'' d'''>16 ]
+							\set stemRightBeamCount = 1
+							<c'' e'' g'' b'' d'''>16
 								^ \markup {
 									\center-align
 										\concat
@@ -2592,9 +2562,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
-							<b d' f' a'>8 [
+							<b d' f' a'>8
 								^ \markup {
 									\center-align
 										\natural
@@ -2607,8 +2577,8 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							<e' g' b' d''>16 ]
+							\set stemRightBeamCount = 1
+							<e' g' b' d''>16
 								^ \markup {
 									\center-align
 										\concat
@@ -2627,9 +2597,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<f' a' c'' e'' g''>16 [
+							<f' a' c'' e'' g''>16
 								^ \markup {
 									\center-align
 										\flat
@@ -2653,13 +2623,13 @@
 											}
 									}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							r8 ]
 						}
 					}
 					{
 						{
-							r8.
+							r16
+							r8
 						}
 						{
 							\stopStaff
@@ -2809,7 +2779,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<d, f, a, c>16 -\accent \fff [
 								^ \markup {
@@ -2984,7 +2953,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<e,, g,, b,, d,>16 -\accent ]
 								^ \markup {
 									\center-align
@@ -3013,18 +2981,17 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							a,,,16 -\staccato \ppp \startTextSpan [
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
-							r8 ]
+							\set stemRightBeamCount = 1
+							r8
 						}
 						\tweak #'text #tuplet-number::calc-fraction-text
 						\times 3/5 {
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							r16 [
+							r16
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 1
 							c,,16 \p
@@ -3032,7 +2999,6 @@
 							\set stemRightBeamCount = 1
 							r8
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							b,,,16 \pp ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -3041,7 +3007,8 @@
 					}
 					{
 						{
-							r8.
+							r16
+							r8
 						}
 					}
 					{
@@ -3058,20 +3025,19 @@
 							\override NoteHead #'style = #'cross
 							\set stemRightBeamCount = 1
 							\pitchedTrill
-							c,,8 \p \startTextSpan \startTrillSpan df,,
+							c,,8 \p \startTextSpan [ \startTrillSpan df,,
 							<> \stopTrillSpan
 						}
 						{
 							\once \override TrillSpanner.bound-details.left.text = \markup {
 								\null
 								}
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
 							\pitchedTrill
-							b,,,8 [ \startTrillSpan c,,
+							b,,,8 \startTrillSpan c,,
 							<> \stopTrillSpan
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							d,,16 -\staccato ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -3080,7 +3046,8 @@
 					}
 					{
 						{
-							r8.
+							r16
+							r8
 						}
 					}
 					{
@@ -3092,7 +3059,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<g,, b,, d, f,>16 \ppp [
 								^ \markup {
@@ -3111,7 +3077,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<d,, f,, a,, c,>16 ]
 								^ \markup {
 									\center-align
@@ -3142,7 +3107,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemRightBeamCount = 1
 							<d, f, a, c>8 \p
 								^ \markup {
 									\center-align
@@ -3153,8 +3117,8 @@
 											}
 									}
 							r4
-							\set stemRightBeamCount = 2
-							r16
+							\set stemRightBeamCount = 1
+							r16 [
 						}
 						{
 							\once \override Accidental.stencil = ##f
@@ -3164,9 +3128,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<a,, c, e, g, b,>16 \pp [
+							<a,, c, e, g, b,>16 \pp
 								^ \markup {
 									\center-align
 										\concat
@@ -3183,7 +3147,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<e,, g,, b,, d,>16 ]
 								^ \markup {
 									\center-align
@@ -3208,7 +3171,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<a,,, c,, e,, g,, b,,>16 \pp [
 								^ \markup {
@@ -3227,7 +3189,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							<e, g, b, d>8 ]
 								^ \markup {
 									\center-align
@@ -3258,7 +3219,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							<e,, g,, b,, d,>8 \ppp [
 								^ \markup {
@@ -3284,8 +3244,8 @@
 											}
 									}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
-							r8. ]
+							\set stemRightBeamCount = 1
+							r8.
 						}
 						{
 							\once \override Accidental.stencil = ##f
@@ -3295,9 +3255,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
-							<c,, e,, g,, b,, d,>8 \p [
+							<c,, e,, g,, b,, d,>8 \p
 								^ \markup {
 									\center-align
 										\flat
@@ -3310,7 +3270,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<a,, c, e, g, b,>16 ]
 								^ \markup {
 									\center-align
@@ -3324,8 +3283,8 @@
 					}
 					{
 						{
-							r4
 							r16
+							r4
 						}
 						{
 							r2
@@ -3344,32 +3303,32 @@
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
 							r4 \startTextSpan
-							\set stemRightBeamCount = 2
-							b,,,16 \pp
+							\set stemRightBeamCount = 1
+							b,,,16 \pp [
 						}
 						{
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
 							\pitchedTrill
 							d,,8 \startTrillSpan ef,,
 							<> \stopTrillSpan
 						}
 						{
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							cs,,16 -\staccato [
+							cs,,16 -\staccato
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 1
 							e,,16 -\staccato
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
-							r8 ]
+							\set stemRightBeamCount = 1
+							r8
 						}
 						{
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							r16 [
+							r16
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							ds,,16 -\staccato \ppp ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -3385,7 +3344,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<g, b, d f>16 \p [
 								^ \markup {
@@ -3404,7 +3362,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							<c, e, g, b, d>8 ]
 								^ \markup {
 									\center-align
@@ -3414,8 +3371,8 @@
 					}
 					{
 						{
-							r4
 							r16
+							r4
 						}
 					}
 					{
@@ -3431,12 +3388,10 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemRightBeamCount = 1
 							\pitchedTrill
 							d,,8 \ppp \startTextSpan \startTrillSpan ef,,
 							<> \stopTrillSpan
 							r4
-							\set stemRightBeamCount = 1
 							\pitchedTrill
 							cs,,8 \p \startTrillSpan d,,
 							\revert NoteHead #'style
@@ -3447,7 +3402,8 @@
 					}
 					{
 						{
-							r8.
+							r16
+							r8
 						}
 					}
 					{
@@ -3459,7 +3415,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<c, e, g, b, d>16 \pp [
 								^ \markup {
@@ -3492,7 +3447,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							<e, g, b, d>8 ]
 								^ \markup {
 									\center-align
@@ -3535,7 +3489,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<a, c e g b>16 \ppp [
 								^ \markup {
@@ -3554,7 +3507,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<e, g, b, d>16 ]
 								^ \markup {
 									\center-align
@@ -3588,7 +3540,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							<e, g, b, d>8 \p [
 								^ \markup {
@@ -3600,7 +3551,6 @@
 											}
 									}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							r8. ]
 						}
 					}
@@ -3621,7 +3571,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<g,, b,, d, f,>16 \pp [
 								^ \markup {
@@ -3640,7 +3589,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							<c e g b d'>8 ]
 								^ \markup {
 									\center-align
@@ -3670,21 +3618,19 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							\pitchedTrill
 							cs,,8 \p \startTextSpan [ \startTrillSpan d,,
 							<> \stopTrillSpan
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
-							r8 ]
+							\set stemRightBeamCount = 1
+							r8
 						}
 						\times 2/3 {
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
-							r8 [
+							r8
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							e,,16 \pp ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -3701,7 +3647,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							<c, e, g, b, d>8 \ppp [
 								^ \markup {
@@ -3719,8 +3664,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<b,, d, f, a,>16 ]
 								^ \markup {
 									\center-align
@@ -3736,8 +3679,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
-							\set stemRightBeamCount = 1
 							<e,, g,, b,, d,>8 \p [
 								^ \markup {
 									\center-align
@@ -3762,8 +3703,8 @@
 										\flat
 									}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
-							r8 ]
+							\set stemRightBeamCount = 1
+							r8
 						}
 						\tweak #'text #tuplet-number::calc-fraction-text
 						\times 3/4 {
@@ -3774,9 +3715,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<c, e, g, b, d>16 \pp [
+							<c, e, g, b, d>16 \pp
 								^ \markup {
 									\center-align
 										\concat
@@ -3786,7 +3727,6 @@
 											}
 									}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							r8. ]
 						}
 					}
@@ -3803,7 +3743,6 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							e,,16 \pp \startTextSpan [
 							\set stemLeftBeamCount = 1
@@ -3815,7 +3754,6 @@
 							ds,,8 \ppp \startTrillSpan e,,
 							<> \stopTrillSpan
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							r16 ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
@@ -3836,7 +3774,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<g,, b,, d, f,>16 \f [
 								^ \markup {
@@ -3854,8 +3791,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<d,, f,, a,, c,>16 ]
 								^ \markup {
 									\center-align
@@ -3875,8 +3810,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
-							\set stemRightBeamCount = 2
 							<a,,, c,, e,, g,, b,,>16 \p [
 								^ \markup {
 									\center-align
@@ -3894,7 +3827,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							<e,, g,, b,, d,>8 ]
 								^ \markup {
 									\center-align
@@ -3904,8 +3836,8 @@
 					}
 					{
 						{
-							r4
 							r16
+							r4
 						}
 						{
 							r4.
@@ -3920,7 +3852,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							<d, f, a, c>8 \p [
 								^ \markup {
@@ -3932,7 +3863,6 @@
 											}
 									}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							r8. ]
 						}
 					}
@@ -3953,7 +3883,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<a,,, c,, e,, g,, b,,>16 \f [
 								^ \markup {
@@ -3979,8 +3908,8 @@
 										\natural
 									}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
-							r8 ]
+							\set stemRightBeamCount = 1
+							r8
 						}
 						\tweak #'text #tuplet-number::calc-fraction-text
 						\times 6/7 {
@@ -3991,8 +3920,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<g,, b,, d, f,>16 \p
+							<g,, b,, d, f,>16 \p ]
 								^ \markup {
 									\center-align
 										\concat
@@ -4018,7 +3948,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 1
 							<e,, g,, b,, d,>8 [ \< \p
 								^ \markup {
@@ -4033,8 +3962,8 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							<g, b, d f>16 ]
+							\set stemRightBeamCount = 1
+							<g, b, d f>16
 								^ \markup {
 									\center-align
 										\concat
@@ -4052,9 +3981,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
-							<c, e, g, b, d>8 [
+							<c, e, g, b, d>8
 								^ \markup {
 									\center-align
 										\flat
@@ -4078,8 +4007,8 @@
 											}
 									}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
-							r16 ]
+							\set stemRightBeamCount = 1
+							r16
 						}
 						\times 4/5 {
 							\once \override Accidental.stencil = ##f
@@ -4089,8 +4018,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<e,, g,, b,, d,>16 \f
+							<e,, g,, b,, d,>16 \f ]
 								^ \markup {
 									\center-align
 										\concat
@@ -4109,8 +4039,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
-							\set stemRightBeamCount = 2
 							<g,, b,, d, f,>16 \p [
 								^ \markup {
 									\center-align
@@ -4128,7 +4056,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							<c, e, g, b, d>8 ]
 								^ \markup {
 									\center-align
@@ -4142,7 +4069,8 @@
 					}
 					{
 						{
-							r8.
+							r16
+							r8
 						}
 						{
 							r2
@@ -4158,7 +4086,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<g, b, d f>16 \f [
 								^ \markup {
@@ -4184,8 +4111,8 @@
 										\flat
 									}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
-							r8. ]
+							\set stemRightBeamCount = 1
+							r8.
 						}
 						\times 2/3 {
 							\once \override Accidental.stencil = ##f
@@ -4195,9 +4122,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<a,, c, e, g, b,>16 \p [
+							<a,, c, e, g, b,>16 \p
 								^ \markup {
 									\center-align
 										\concat
@@ -4214,7 +4141,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							<e,, g,, b,, d,>8 ]
 								^ \markup {
 									\center-align
@@ -4240,7 +4166,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<c, e, g, b, d>16 [ \< \p
 								^ \markup {
@@ -4273,7 +4198,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
 							<e, g, b, d>8 ] \f
 								^ \markup {
 									\center-align
@@ -4289,7 +4213,6 @@
 						{
 							\clef "bass_8"
 							\override NoteHead #'style = #'cross
-							\set stemRightBeamCount = 2
 							ds,,16 -\staccato \ppp ^ \markup { (prepared) }
 							\revert NoteHead #'style
 							\clef "bass"
@@ -4309,7 +4232,6 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
 							\set stemRightBeamCount = 2
 							<a, c e g b>16 \f [
 								^ \markup {
@@ -4339,8 +4261,8 @@
 											}
 									}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 0
-							r8. ]
+							\set stemRightBeamCount = 1
+							r8.
 						}
 						{
 							\once \override Accidental.stencil = ##f
@@ -4350,9 +4272,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 0
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							<g,, b,, d, f,>16 [ \< \p
+							<g,, b,, d, f,>16 \< \p
 								^ \markup {
 									\center-align
 										\concat
@@ -4387,7 +4309,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<b,, d, f, a,>16 ] \f
 								^ \markup {
 									\center-align

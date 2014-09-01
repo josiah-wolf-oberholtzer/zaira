@@ -6,7 +6,7 @@
 \include "/Users/josiah/Documents/Scores/zaira/stylesheets/stylesheet.ily"
 
 \score {
-	\context Score = "Zaira Score" <<
+	\new Score <<
 		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
@@ -384,13 +384,12 @@
 						{
 							<f a cs' f' c''>4 :32 \p ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
+							\set stemRightBeamCount = 1
 							<f a cs' f' c''>16 :128 ~
 						}
 						{
 							<f a cs' f' c''>2. :32 ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<f a cs' f' c''>16 :128
 						}
 					}
@@ -407,13 +406,15 @@
 							<f a f' fs' c''>1 :32 ~
 						}
 						{
-							<f a f' fs' c''>4.. :32
+							<f a f' fs' c''>4. :32 ~
+							\set stemLeftBeamCount = 2
+							<f a f' fs' c''>16 :128
 						}
 					}
 					{
 						{
-							r4
 							r16
+							r4
 						}
 					}
 					{
@@ -423,7 +424,6 @@
 						{
 							<f a cs' f' c''>2. :32 ~
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 0
 							<f a cs' f' c''>16 :128
 						}
 					}
