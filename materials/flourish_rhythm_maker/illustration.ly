@@ -1,4 +1,4 @@
-% 2014-09-01 14:28
+% 2014-09-01 14:32
 
 \version "2.19.12"
 \language "english"
@@ -105,131 +105,222 @@
 			{
 				\time 3/8
 				{
-					r16
+					r32
+					c'32
+					c'32
+					c'32 ~
+				}
+				{
 					c'16
-					c'16
+					c'32
 					c'16 ~
 				}
 				{
-					c'8 ~
+					c'32
+					c'32
+					c'32 ~
 				}
 			}
 			{
 				\time 4/8
 				{
-					c'16
-					c'8 ~
-				}
-				\times 4/5 {
-					c'16
-					c'16
-					c'16
-					c'16
-					c'16 ~
+					c'32 ~
 				}
 				{
+					c'16
+					c'32
 					c'16 ~
+				}
+				\times 2/3 {
+					c'32
+					c'32
+					c'32
+					c'32
+					c'16 ~
+				}
+				\tweak #'text #tuplet-number::calc-fraction-text
+				\times 5/6 {
+					c'32
+					c'16
+					c'32
+					c'32
+					c'32 ~
+				}
+				{
+					c'32 ~
 				}
 			}
 			{
 				\time 3/16
-				\tweak #'text #tuplet-number::calc-fraction-text
-				\times 3/5 {
+				{
 					c'16
-					c'8
+					c'32 ~
+				}
+				{
 					c'16
-					c'16 ~
+					c'32 ~
 				}
 			}
 			{
 				\time 4/16
-				{
-					c'16 ~
+				\times 2/3 {
+					c'32
+					c'32
+					c'32 ~
 				}
 				{
 					c'16
-					c'8 ~
+					c'32
+					c'32 ~
+				}
+				{
+					c'32
+					c'32 ~
 				}
 			}
 			{
 				\time 5/8
+				\tweak #'text #tuplet-number::calc-fraction-text
+				\times 3/4 {
+					c'32
+					c'32
+					c'32
+					c'32 ~
+				}
 				{
+					c'32
+					c'32
 					c'16 ~
 				}
 				{
-					c'8
-					c'16
-					c'16
+					c'32
+					c'32
+					c'32
+					c'32
+					c'32 ~
+				}
+				{
+					c'32
+					c'32
 					c'16 ~
 				}
 				\times 4/5 {
-					c'16
-					c'8
-					c'16
-					c'16 ~
+					c'32
+					c'32
+					c'32
+					c'32
+					c'32 ~
 				}
 			}
 			{
 				\time 2/4
 				{
+					c'32 ~
+				}
+				\times 2/3 {
+					c'32
 					c'16
-					c'16
-					c'16
-					c'16
-					c'16 ~
+					c'32
+					c'32
+					c'32 ~
 				}
 				\tweak #'text #tuplet-number::calc-fraction-text
-				\times 3/5 {
-					c'8
+				\times 5/6 {
+					c'32
 					c'16
-					c'8 ~
+					c'32
+					c'16 ~
+				}
+				{
+					c'32
+					c'32
+					c'32
+					c'32 ~
+				}
+				{
+					c'16 ~
 				}
 			}
 			{
 				\time 5/16
 				{
+					c'32
 					c'16 ~
 				}
+				\times 4/5 {
+					c'32
+					c'32
+					c'32
+					c'32
+					c'32 ~
+				}
 				{
-					c'16
-					c'16
-					c'16
-					c'16 ~
+					c'32
+					c'32
+					c'32 ~
 				}
 			}
 			{
 				\time 2/8
 				{
+					c'32
+					c'32 ~
+				}
+				\times 4/5 {
+					c'32
+					c'32
+					c'32
 					c'16 ~
 				}
 				{
-					c'16
-					c'8 ~
+					c'32
+					c'32 ~
 				}
 			}
 			{
 				\time 7/8
 				{
-					c'16 ~
+					c'32
+					c'32
+					c'32 ~
 				}
 				{
-					c'16
-					c'16
-					c'16
-					c'8 ~
-				}
-				\times 2/3 {
-					c'16
-					c'8
-					c'16
-					c'16
+					c'32
+					c'32
 					c'16 ~
 				}
+				\tweak #'text #tuplet-number::calc-fraction-text
+				\times 5/6 {
+					c'32
+					c'16
+					c'32
+					c'32
+					c'32 ~
+				}
+				{
+					c'32
+					c'16
+					c'32 ~
+				}
+				\tweak #'text #tuplet-number::calc-fraction-text
+				\times 5/7 {
+					c'16
+					c'32
+					c'32
+					c'32
+					c'32
+					c'32 ~
+				}
 				\times 4/5 {
+					c'32
+					c'32
 					c'16
-					c'8
-					c'16
-					c'16
+					c'32 ~
+				}
+				{
+					c'32
+					c'32
+					c'32
 				}
 			}
 		}
