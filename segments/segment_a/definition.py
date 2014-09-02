@@ -14,6 +14,7 @@ import zaira
 segment_maker = zaira.makers.ZairaSegmentMaker(
     discard_final_silence=True,
     permitted_time_signatures=(
+        (2, 4),
         (3, 8),
         ),
     rehearsal_mark='A',

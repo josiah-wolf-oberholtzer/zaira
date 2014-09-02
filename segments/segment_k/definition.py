@@ -14,6 +14,10 @@ import zaira
 
 segment_maker = zaira.makers.ZairaSegmentMaker(
     is_final_segment=True,
+    permitted_time_signatures=(
+        (2, 4),
+        (3, 8),
+        ),
     rehearsal_mark='K',
     tempo=indicatortools.Tempo((1, 4), 108),
     )
