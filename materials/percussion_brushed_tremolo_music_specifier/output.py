@@ -54,7 +54,13 @@ percussion_brushed_tremolo_music_specifier = consort.makers.MusicSpecifier(
                             ),
                         ]
                     ),
-                selector=selectortools.Selector(),
+                selector=selectortools.Selector(
+                    callbacks=(
+                        selectortools.PrototypeSelectorCallback(
+                            prototype=scoretools.Leaf,
+                            ),
+                        ),
+                    ),
                 ),
             consort.makers.AttachmentExpression(
                 attachments=datastructuretools.TypedList(
@@ -62,7 +68,13 @@ percussion_brushed_tremolo_music_specifier = consort.makers.MusicSpecifier(
                         spannertools.StemTremoloSpanner(),
                         ]
                     ),
-                selector=selectortools.Selector(),
+                selector=selectortools.Selector(
+                    callbacks=(
+                        selectortools.PrototypeSelectorCallback(
+                            prototype=scoretools.Leaf,
+                            ),
+                        ),
+                    ),
                 ),
             ),
         ),

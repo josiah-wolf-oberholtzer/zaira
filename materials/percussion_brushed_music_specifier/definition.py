@@ -12,7 +12,7 @@ percussion_brushed_music_specifier = consort.makers.MusicSpecifier(
                 attachments=consort.makers.ComplexTextSpanner(
                     markup=Markup('brush').pad_around(0.5).with_box(),
                     ),
-                selector=selectortools.Selector(),
+                selector=selectortools.Selector().by_leaves(),
                 ),
             ),
         ),

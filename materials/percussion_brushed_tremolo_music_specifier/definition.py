@@ -12,11 +12,11 @@ percussion_brushed_tremolo_music_specifier = consort.makers.MusicSpecifier(
                 attachments=consort.makers.ComplexTextSpanner(
                     markup=Markup('brush').pad_around(0.5).with_box(),
                     ),
-                selector=selectortools.Selector(),
+                selector=selectortools.Selector().by_leaves(),
                 ),
             consort.makers.AttachmentExpression(
                 attachments=spannertools.StemTremoloSpanner(),
-                selector=selectortools.Selector(),
+                selector=selectortools.Selector().by_leaves(),
                 ),
             ),
         ),

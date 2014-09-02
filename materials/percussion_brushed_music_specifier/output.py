@@ -56,7 +56,13 @@ percussion_brushed_music_specifier = consort.makers.MusicSpecifier(
                             ),
                         ]
                     ),
-                selector=selectortools.Selector(),
+                selector=selectortools.Selector(
+                    callbacks=(
+                        selectortools.PrototypeSelectorCallback(
+                            prototype=scoretools.Leaf,
+                            ),
+                        ),
+                    ),
                 ),
             ),
         ),

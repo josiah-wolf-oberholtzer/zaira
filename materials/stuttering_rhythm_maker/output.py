@@ -4,7 +4,6 @@ from abjad import *
 
 stuttering_rhythm_maker = rhythmmakertools.IncisedRhythmMaker(
     incise_specifier=rhythmmakertools.InciseSpecifier(
-        outer_divisions_only=False,
         prefix_talea=(1, 1, 1, 2, 1, 2),
         prefix_counts=(2, 2, 1, 2, 3, 2, 2, 2, 1),
         suffix_talea=(1,),

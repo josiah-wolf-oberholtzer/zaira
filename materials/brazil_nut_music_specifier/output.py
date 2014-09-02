@@ -77,7 +77,13 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
                             ),
                         ]
                     ),
-                selector=selectortools.Selector(),
+                selector=selectortools.Selector(
+                    callbacks=(
+                        selectortools.PrototypeSelectorCallback(
+                            prototype=scoretools.Leaf,
+                            ),
+                        ),
+                    ),
                 ),
             consort.makers.AttachmentExpression(
                 attachments=datastructuretools.TypedList(
