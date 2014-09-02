@@ -316,10 +316,10 @@ afterGraceFraction = #(cons 127 128)
         \override Stem.direction = #DOWN
         \override Stem.stemlet-length = 1.5
 
-        \override StemTremolo.beam-thickness = 0.75
         \override StemTremolo.beam-width = 1.5
-        \override StemTremolo.length-fraction = 1.5
+        \override StemTremolo.flag-count = 4
         \override StemTremolo.slope = 0.5
+        \override StemTremolo.Y-offset = -4
         \override StemTremolo.style = #'default
 
         \override SustainPedal.self-alignment-X = #CENTER
@@ -351,7 +351,7 @@ afterGraceFraction = #(cons 127 128)
             )
         autoBeaming = ##f
         pedalSustainStyle = #'mixed
-        proportionalNotationDuration = #(ly:make-moment 1 32)
+        proportionalNotationDuration = #(ly:make-moment 1 28)
         tupletFullLength = ##t
     }
 
