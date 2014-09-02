@@ -1198,48 +1198,20 @@
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
 								g8.
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
 								\set stemRightBeamCount = 1
-								g8 :64 \f ~ \startTextSpan
+								g8 :64 \f ~
 							}
 							{
 								g4 :32
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g2 \p ~ \startTextSpan
+								g2 \p ~
 							}
 							{
 								g4
@@ -1267,25 +1239,11 @@
 									}
 								\once \override TextSpanner.dash-fraction = 1
 								g2. :32 \p \startTextSpan
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g4 \pp ~ \startTextSpan
+								g4 \pp ~
 							}
 							{
 								g2 ~
@@ -1321,44 +1279,16 @@
 									}
 								\once \override TextSpanner.dash-fraction = 1
 								g2 \ppp \startTextSpan
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g4. :32 \f \startTextSpan
-								<> \stopTextSpan
+								g4. :32 \f
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g8. \p \startTextSpan
+								g8. \p
 								<> \stopTextSpan
 							}
 						}
@@ -1389,48 +1319,20 @@
 								g16 \pp ~ \startTextSpan [
 								\set stemLeftBeamCount = 1
 								g8 ]
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
 								\set stemRightBeamCount = 1
-								g8 :64 \p ~ \startTextSpan
+								g8 :64 \p ~
 							}
 							{
 								g2 :32
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g4. \ppp \startTextSpan
+								g4. \ppp
 								<> \stopTextSpan
 							}
 						}
@@ -1457,45 +1359,17 @@
 								\set stemRightBeamCount = 2
 								g16 \p ~ \startTextSpan
 								g4
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g4 :32 \f \startTextSpan
-								<> \stopTextSpan
+								g4 :32 \f
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
 								\set stemRightBeamCount = 1
-								g8 \pp ~ \startTextSpan
+								g8 \pp ~
 								g4 ~
 								\set stemLeftBeamCount = 2
 								g16
@@ -1525,25 +1399,11 @@
 								g4 :32 \p ~ \startTextSpan
 								\set stemLeftBeamCount = 2
 								g16 :128
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g2 \ppp \startTextSpan
+								g2 \ppp
 								<> \stopTextSpan
 							}
 						}
@@ -1568,63 +1428,21 @@
 									}
 								\once \override TextSpanner.dash-fraction = 1
 								g4. \p \startTextSpan
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g2 :32 \f \startTextSpan
-								<> \stopTextSpan
+								g2 :32 \f
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g2. \pp \startTextSpan
-								<> \stopTextSpan
+								g2. \pp
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g4 :32 \p ~ \startTextSpan
+								g4 :32 \p ~
 								\set stemLeftBeamCount = 2
 								g16 :128
 								<> \stopTextSpan
@@ -1664,26 +1482,12 @@
 								g2 ~
 								\set stemLeftBeamCount = 2
 								g16
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
 								\set stemRightBeamCount = 1
-								g8. :64 \f ~ \startTextSpan [
+								g8. :64 \f ~ [
 								\set stemLeftBeamCount = 1
 								g8. :64 ]
 								<> \stopTextSpan
@@ -1943,26 +1747,12 @@
 								g2. :32 \p ~ \startTextSpan
 								\set stemLeftBeamCount = 2
 								g16 :128
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
 								\set stemRightBeamCount = 1
-								g8. \ppp ~ \startTextSpan [
+								g8. \ppp ~ [
 							}
 							{
 								\set stemLeftBeamCount = 1
@@ -1997,46 +1787,18 @@
 								\set stemRightBeamCount = 1
 								g8 \p ~ \startTextSpan
 								g2
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g4 :32 \f ~ \startTextSpan
+								g4 :32 \f ~
 								\set stemLeftBeamCount = 2
 								g16 :128
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g2 \pp ~ \startTextSpan
+								g2 \pp ~
 								\set stemLeftBeamCount = 2
 								g16
 								<> \stopTextSpan
@@ -2068,26 +1830,12 @@
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
 								g8 :64
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
 								\set stemRightBeamCount = 1
-								g8 \ppp ~ \startTextSpan
+								g8 \ppp ~
 								g4 ~
 							}
 							{
@@ -2098,127 +1846,43 @@
 							}
 							{
 								g4.
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g4. :32 \f \startTextSpan
-								<> \stopTextSpan
+								g4. :32 \f
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g4. \p ~ \startTextSpan
+								g4. \p ~
 							}
 							{
 								g4
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g4 :32 \p \startTextSpan
-								<> \stopTextSpan
+								g4 :32 \p
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g4. \pp ~ \startTextSpan
+								g4. \pp ~
 							}
 							{
 								g2
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g4 :32 \f \startTextSpan
-								<> \stopTextSpan
+								g4 :32 \f
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
 								\set stemRightBeamCount = 1
-								g8 \ppp ~ \startTextSpan [
+								g8 \ppp ~ [
 								\set stemLeftBeamCount = 1
 								g8. ]
 								<> \stopTextSpan
@@ -2251,25 +1915,11 @@
 							}
 							{
 								g2 :32 \f
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g4. \p \startTextSpan
+								g4. \p
 								<> \stopTextSpan
 							}
 						}
@@ -2294,47 +1944,19 @@
 									}
 								\once \override TextSpanner.dash-fraction = 1
 								g2 \pp \startTextSpan
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g4 :32 \f ~ \startTextSpan
+								g4 :32 \f ~
 								\set stemLeftBeamCount = 2
 								g16 :128
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
 								\set stemRightBeamCount = 2
-								g16 \ppp ~ \startTextSpan
+								g16 \ppp ~
 								g4
 								<> \stopTextSpan
 							}
@@ -2368,25 +1990,11 @@
 									}
 								\once \override TextSpanner.dash-fraction = 1
 								g2. :32 \p \startTextSpan
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g4 \p ~ \startTextSpan
+								g4 \p ~
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
 								g16 ~
@@ -2398,26 +2006,12 @@
 								g4 ~
 								\set stemLeftBeamCount = 2
 								g16
-								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
 								\set stemRightBeamCount = 2
-								g16 :128 ~ \startTextSpan [ \> \f
+								g16 :128 ~ [ \> \f
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
 								g8 :64 ~
