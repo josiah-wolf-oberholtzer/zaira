@@ -2,7 +2,7 @@
 		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
-				\time 5/16
+				\time 3/8
 				\tempo 4=108
 				\mark \markup {
 					\override
@@ -14,68 +14,61 @@
 						#-3
 						" "
 					}
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				\time 4/4
-				s1 * 1
+				s1 * 3/8
 			}
 		}
 		\context EnsembleGroup = "Wind Section Staff Group" <<
@@ -92,67 +85,61 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 1
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -173,67 +160,61 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 1
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -254,67 +235,61 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 1
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -349,20 +324,6 @@
 								\set stemRightBeamCount = 2
 								f'16 -\staccato \ppp [
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
 								f'16 -\staccato
 								\set stemLeftBeamCount = 2
@@ -374,292 +335,6 @@
 								\set stemRightBeamCount = 2
 								f'16 -\staccato
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
 								f'16 -\staccato
 								\set stemLeftBeamCount = 2
@@ -692,6 +367,11 @@
 								\set stemRightBeamCount = 2
 								f'16 -\staccato
 								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
 								f'16 -\staccato
 								\set stemLeftBeamCount = 2
@@ -701,6 +381,297 @@
 								\set stemRightBeamCount = 2
 								f'16 -\staccato
 								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
 								f'16 -\staccato
 								\set stemLeftBeamCount = 2
@@ -719,11 +690,6 @@
 								f'16 -\staccato ]
 							}
 						}
-						{
-							{
-								r8
-							}
-						}
 					}
 				}
 			>>
@@ -740,67 +706,61 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 1
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -829,70 +789,65 @@
 						}
 						{
 							{
+								r16
 								r8
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 1
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -963,70 +918,65 @@
 					}
 					{
 						{
+							r16
 							r8
 						}
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 1
+							R1 * 3/8
 							\stopStaff
 							\startStaff
 						}
@@ -1036,87 +986,61 @@
 			\context Dynamics = "Piano Dynamics" {
 				{
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r1
+						r4.
 					}
 				}
 			}
@@ -1177,70 +1101,65 @@
 					}
 					{
 						{
+							r16
 							r8
 						}
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-						}
-						{
-							R1 * 1
+							R1 * 3/8
 							\stopStaff
 							\startStaff
 						}
@@ -1256,86 +1175,61 @@
 				}
 				{
 					{
-						r8
+						r8.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r1
+						r4.
 					}
 				}
 			}
@@ -1354,67 +1248,61 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 1
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -1435,67 +1323,61 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 1
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -1516,67 +1398,61 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 1
+								R1 * 3/8
 									_ \markup {
 										\italic
 											\right-column

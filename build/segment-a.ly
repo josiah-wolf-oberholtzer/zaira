@@ -35,10 +35,8 @@
 				s1 * 3/8
 			}
 			{
-				s1 * 3/8
-			}
-			{
-				s1 * 3/8
+				\time 2/4
+				s1 * 1/2
 			}
 		}
 		\context EnsembleGroup = "Wind Section Staff Group" <<
@@ -76,10 +74,7 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
-							}
-							{
-								R1 * 3/8
+								R1 * 1/2
 								\stopStaff
 								\startStaff
 							}
@@ -121,10 +116,7 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
-							}
-							{
-								R1 * 3/8
+								R1 * 1/2
 								\stopStaff
 								\startStaff
 							}
@@ -166,10 +158,7 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
-							}
-							{
-								R1 * 3/8
+								R1 * 1/2
 								\stopStaff
 								\startStaff
 							}
@@ -345,20 +334,13 @@
 								\set stemRightBeamCount = 2
 								f'16 -\accent
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
+								\set stemRightBeamCount = 2
 								f'16 -\accent
-							}
-							{
-								\set stemLeftBeamCount = 1
+								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
 								f'16 -\accent
 								\set stemLeftBeamCount = 2
 								f'16 -\accent ]
-							}
-						}
-						{
-							{
-								r4
 							}
 						}
 					}
@@ -398,10 +380,7 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
-							}
-							{
-								R1 * 3/8
+								R1 * 1/2
 								\stopStaff
 								\startStaff
 							}
@@ -574,20 +553,13 @@
 								\set stemRightBeamCount = 2
 								b16 -\accent
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
+								\set stemRightBeamCount = 2
 								b16 -\accent
-							}
-							{
-								\set stemLeftBeamCount = 1
+								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
 								b16 -\accent
 								\set stemLeftBeamCount = 2
 								b16 -\accent ]
-							}
-						}
-						{
-							{
-								r4
 							}
 						}
 					}
@@ -1359,14 +1331,12 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 1
+							\set stemRightBeamCount = 2
 							<f'' a'' c''' e'''>16 -\accent
 								^ \markup {
 									\center-align
 										\natural
 									}
-						}
-						{
 							\once \override Accidental.stencil = ##f
 							\once \override AccidentalCautionary.stencil = ##f
 							\once \override Arpeggio.X-offset = #-2
@@ -1374,7 +1344,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 1
+							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 2
 							<g' b' d'' f''>16 -\accent
 								^ \markup {
@@ -1398,11 +1368,6 @@
 									\center-align
 										\flat
 									}
-						}
-					}
-					{
-						{
-							r4
 						}
 					}
 				}
@@ -1431,10 +1396,7 @@
 						r4.
 					}
 					{
-						r4.
-					}
-					{
-						r4.
+						r2
 					}
 				}
 			}
@@ -2206,7 +2168,7 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 1
+							\set stemRightBeamCount = 2
 							<e, g, b, d>16 -\accent
 								^ \markup {
 									\center-align
@@ -2216,8 +2178,6 @@
 												\flat
 											}
 									}
-						}
-						{
 							\once \override Accidental.stencil = ##f
 							\once \override AccidentalCautionary.stencil = ##f
 							\once \override Arpeggio.X-offset = #-2
@@ -2225,7 +2185,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 1
+							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 2
 							<c, e, g, b,>16 -\accent
 								^ \markup {
@@ -2245,11 +2205,6 @@
 									\center-align
 										\natural
 									}
-						}
-					}
-					{
-						{
-							r4
 						}
 					}
 				}
@@ -2278,16 +2233,8 @@
 						s1 * 3/8
 					}
 					{
-						s1 * 3/8
-					}
-					{
-						s1 * 1/8
+						s1 * 1/2
 						<> \sustainOff
-					}
-				}
-				{
-					{
-						r4
 					}
 				}
 			}
@@ -2327,10 +2274,7 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
-							}
-							{
-								R1 * 3/8
+								R1 * 1/2
 								\stopStaff
 								\startStaff
 							}
@@ -2372,10 +2316,7 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
-							}
-							{
-								R1 * 3/8
+								R1 * 1/2
 								\stopStaff
 								\startStaff
 							}
@@ -2417,10 +2358,7 @@
 								R1 * 3/8
 							}
 							{
-								R1 * 3/8
-							}
-							{
-								R1 * 3/8
+								R1 * 1/2
 								\bar "||"
 								\stopStaff
 								\startStaff
