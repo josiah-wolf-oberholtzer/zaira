@@ -29,16 +29,34 @@ segment_maker.set_duration_in_seconds(
 
 
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.dense_timespan_maker,
-    drums=None,
-    metals=None,
+    timespan_maker=new(
+        zaira.materials.sustained_timespan_maker,
+        fuse_groups=True,
+        ),
+    drums=new(
+        zaira.materials.percussion_brushed_music_specifier,
+        pitch_maker__pitches=zaira.makers.Percussion.BASS_DRUM,
+        ),
+    metals=new(
+        zaira.materials.percussion_brushed_music_specifier,
+        pitch_maker__pitches=zaira.makers.Percussion.TAM_TAM,
+        ),
     )
 
 
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.sparse_timespan_maker,
-    drums=None,
-    metals=None,
+    timespan_maker=new(
+        zaira.materials.sparse_timespan_maker,
+        fuse_groups=True,
+        ),
+    drums=new(
+        zaira.materials.percussion_brushed_tremolo_music_specifier,
+        pitch_maker__pitches=zaira.makers.Percussion.BASS_DRUM,
+        ),
+    metals=new(
+        zaira.materials.percussion_brushed_tremolo_music_specifier,
+        pitch_maker__pitches=zaira.makers.Percussion.TAM_TAM,
+        ),
     )
 
 
