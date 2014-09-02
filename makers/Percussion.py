@@ -4,10 +4,11 @@ from abjad.tools import pitchtools
 
 class Percussion(object):
 
-    BRAKE_DRUM = pitchtools.NamedPitch("f'")
-    HIGH_GONG = pitchtools.NamedPitch("d'")
-    LOW_GONG = pitchtools.NamedPitch("b")
-    TAM_TAM = pitchtools.NamedPitch("g")
+    BRAKE_DRUM = pitchtools.NamedPitch("g'")
+    HIGH_CYMBAL = pitchtools.NamedPitch("e'")
+    MIDDLE_CYMBAL = pitchtools.NamedPitch("c'")
+    LOW_CYMBAL = pitchtools.NamedPitch("a")
+    TAM_TAM = pitchtools.NamedPitch("f")
 
     TAMBOURINE = pitchtools.NamedPitch("e'")
     GUERO = pitchtools.NamedPitch("c'")
