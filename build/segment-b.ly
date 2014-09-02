@@ -1368,10 +1368,19 @@
 					{
 						{
 							\clef "treble^8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
 							\pitchedTrill
-							e''''8 \p ^ \markup { (prepared) } \startTrillSpan f''''
+							e''''8 \p \startTextSpan \startTrillSpan f''''
 							\revert NoteHead #'style
+							<> \stopTextSpan
 							\clef "treble"
 							<> \stopTrillSpan
 						}
@@ -1830,10 +1839,19 @@
 					{
 						{
 							\clef "bass_8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
 							\pitchedTrill
-							cs,,8 \p ^ \markup { (prepared) } \startTrillSpan d,,
+							cs,,8 \p \startTextSpan \startTrillSpan d,,
 							\revert NoteHead #'style
+							<> \stopTextSpan
 							\clef "bass"
 							<> \stopTrillSpan
 						}

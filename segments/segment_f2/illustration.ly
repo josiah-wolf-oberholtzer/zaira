@@ -96,9 +96,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\stopStaff
 								\startStaff
@@ -127,23 +125,30 @@
 						{
 							{
 								\clef "percussion"
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											shaker
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
 								\override NoteHead #'no-ledgers = ##t
 								\override NoteHead #'style = #'cross
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'8 :64 \p ^ \markup {
-									\box
-										\pad-around
-											#0.5
-											{
-												shaker
-											}
-									}
+								c'8 :64 \p \startTextSpan
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
 								\revert NoteHead #'style
+								<> \stopTextSpan
 								\clef "treble"
 							}
 						}
@@ -173,9 +178,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -233,9 +236,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -359,9 +360,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -418,9 +417,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\stopStaff
 								\startStaff
@@ -458,9 +455,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -504,23 +499,30 @@
 						{
 							{
 								\clef "percussion"
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											shaker
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
 								\override NoteHead #'no-ledgers = ##t
 								\override NoteHead #'style = #'cross
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'8 :64 \p ^ \markup {
-									\box
-										\pad-around
-											#0.5
-											{
-												shaker
-											}
-									}
+								c'8 :64 \p \startTextSpan
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
 								\revert NoteHead #'style
+								<> \stopTextSpan
 								\clef "treble"
 							}
 						}
@@ -747,30 +749,68 @@
 						\clef "percussion"
 						{
 							{
+								a16 -\staccato \mf
+							}
+						}
+						{
+							{
+								r8.
+								r4
+							}
+							{
+								\stopStaff
+								\once \override Staff.StaffSymbol.line-count = 1
+								\startStaff
+								R1 * 1/2
+								\stopStaff
+								\startStaff
+							}
+							{
+								r8.
+							}
+						}
+						{
+							{
+								a8 :64 \mp
+							}
+						}
+						{
+							{
+								\stopStaff
+								\once \override Staff.StaffSymbol.line-count = 1
+								\startStaff
+								R1 * 3/4
+							}
+							{
+								R1 * 1
+								\stopStaff
+								\startStaff
+							}
+							{
+								r4.
+								r16
+							}
+						}
+						{
+							\tweak #'text #tuplet-number::calc-fraction-text
+							\times 3/4 {
+								\set stemRightBeamCount = 1
+								a8 :64 -\staccato \mf [
+								\set stemLeftBeamCount = 1
+								r8 ]
+							}
+						}
+						{
+							{
+								r8
+							}
+							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 1/2
 							}
 							{
-								R1 * 1/2
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 1/2
-							}
-							{
 								R1 * 3/8
 							}
 							{
@@ -781,11 +821,29 @@
 							}
 							{
 								R1 * 1/2
+								\stopStaff
+								\startStaff
+							}
+						}
+						{
+							\times 4/5 {
+								\set stemRightBeamCount = 2
+								a16 -\staccato \mp [
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								r8
+								\set stemLeftBeamCount = 1
+								a8 :64 -\staccato \mf ]
+							}
+						}
+						{
+							{
+								r4.
 							}
 							{
-								R1 * 5/8
-							}
-							{
+								\stopStaff
+								\once \override Staff.StaffSymbol.line-count = 1
+								\startStaff
 								R1 * 5/16
 							}
 							{
@@ -1312,9 +1370,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1371,9 +1427,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\stopStaff
 								\startStaff
@@ -1404,9 +1458,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\stopStaff
 								\startStaff
@@ -1439,9 +1491,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1490,9 +1540,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1559,9 +1607,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\stopStaff
 								\startStaff
@@ -1590,23 +1636,30 @@
 						{
 							{
 								\clef "percussion"
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											shaker
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
 								\override NoteHead #'no-ledgers = ##t
 								\override NoteHead #'style = #'cross
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'8 :64 \pp ^ \markup {
-									\box
-										\pad-around
-											#0.5
-											{
-												shaker
-											}
-									}
+								c'8 :64 \pp \startTextSpan
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
 								\revert NoteHead #'style
+								<> \stopTextSpan
 								\clef "alto"
 							}
 						}
@@ -1629,9 +1682,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1667,23 +1718,30 @@
 						{
 							{
 								\clef "percussion"
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											shaker
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
 								\override NoteHead #'no-ledgers = ##t
 								\override NoteHead #'style = #'cross
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'8 :64 \p ^ \markup {
-									\box
-										\pad-around
-											#0.5
-											{
-												shaker
-											}
-									}
+								c'8 :64 \p \startTextSpan
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
 								\revert NoteHead #'style
+								<> \stopTextSpan
 								\clef "alto"
 							}
 						}
@@ -1720,9 +1778,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {

@@ -24,6 +24,7 @@ segment_maker.set_duration_in_seconds(
     zaira.materials.total_duration_in_seconds,
     )
 
+fanfare_duration = durationtools.Duration(2, 16)
 
 ### PERCUSSION SETTINGS #######################################################
 
@@ -63,6 +64,9 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=consort.makers.FloodedTimespanMaker(),
+    timespan_identifier=timespantools.Timespan(
+        start_offset=fanfare_duration,
+        ),
     clarinet=new(
         zaira.materials.brazil_nut_music_specifier,
         rhythm_maker=zaira.materials.sustained_rhythm_maker,
@@ -88,7 +92,7 @@ segment_maker.add_setting(
 segment_maker.add_setting(
     timespan_maker=consort.makers.FloodedTimespanMaker(),
     timespan_identifier=timespantools.Timespan(
-        stop_offset=durationtools.Duration(1, 8),
+        stop_offset=fanfare_duration,
         ),
     piano_rh=new(
         zaira.materials.piano_fanfare_music_specifier,

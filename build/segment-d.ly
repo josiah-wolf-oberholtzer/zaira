@@ -538,7 +538,7 @@
 					}
 					{
 						{
-							<f a f' fs' c''>2 :32 \ppp
+							<g b g' af' d''>2 :32 \ppp
 						}
 					}
 					{
@@ -549,9 +549,9 @@
 					{
 						{
 							\set stemRightBeamCount = 1
-							<f a f' fs' c''>8 :64 \p ~ [
+							<g b g' af' d''>8 :64 \p ~ [
 							\set stemLeftBeamCount = 1
-							<f a f' fs' c''>8 :64 ]
+							<g b g' af' d''>8 :64 ]
 						}
 					}
 					{
@@ -710,7 +710,7 @@
 					}
 					{
 						{
-							<f a f' fs' c''>8 :64 \pp
+							<g b g' af' d''>8 :64 \pp
 						}
 					}
 					{

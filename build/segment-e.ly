@@ -2999,10 +2999,19 @@
 					{
 						{
 							\clef "treble^8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
 							\pitchedTrill
-							a''''8 \p ^ \markup { (prepared) } \startTrillSpan bf''''
+							a''''8 \p \startTextSpan \startTrillSpan bf''''
 							\revert NoteHead #'style
+							<> \stopTextSpan
 							\clef "treble"
 							<> \stopTrillSpan
 						}

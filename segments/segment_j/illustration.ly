@@ -52,15 +52,18 @@
 						\clef "treble"
 						{
 							{
+								r8
+							}
+						}
+						{
+							{
 								\clef "percussion"
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -73,7 +76,7 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'4. :32 \ppp ~ \startTextSpan
+								c'4 :32 \ppp ~ \startTextSpan
 							}
 							{
 								c'2 :32 ~
@@ -150,15 +153,18 @@
 						\clef "treble"
 						{
 							{
+								r8
+							}
+						}
+						{
+							{
 								\clef "percussion"
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -171,7 +177,7 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'4. :32 \p ~ \startTextSpan
+								c'4 :32 \p ~ \startTextSpan
 							}
 							{
 								c'2 :32 ~
@@ -429,10 +435,19 @@
 					{
 						{
 							\clef "treble^8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
 							\pitchedTrill
-							c''''8 \ppp ^ \markup { (prepared) } \startTrillSpan df''''
+							c''''8 \ppp \startTextSpan \startTrillSpan df''''
 							\revert NoteHead #'style
+							<> \stopTextSpan
 							\clef "treble"
 							<> \stopTrillSpan
 						}
@@ -459,10 +474,19 @@
 					{
 						{
 							\clef "treble^8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
 							\pitchedTrill
-							b''''4. \p ^ \markup { (prepared) } \startTrillSpan c'''''
+							b''''4. \p \startTextSpan \startTrillSpan c'''''
 							\revert NoteHead #'style
+							<> \stopTextSpan
 							\clef "treble"
 							<> \stopTrillSpan
 						}
@@ -660,15 +684,18 @@
 						\clef "treble"
 						{
 							{
+								r8
+							}
+						}
+						{
+							{
 								\clef "percussion"
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -681,7 +708,7 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'4. :32 \pp ~ \startTextSpan
+								c'4 :32 \pp ~ \startTextSpan
 							}
 							{
 								c'2 :32 ~
@@ -725,15 +752,18 @@
 						\clef "alto"
 						{
 							{
+								r8
+							}
+						}
+						{
+							{
 								\clef "percussion"
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -746,7 +776,7 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'4. :32 \ppp ~ \startTextSpan
+								c'4 :32 \ppp ~ \startTextSpan
 							}
 							{
 								c'2 :32 ~

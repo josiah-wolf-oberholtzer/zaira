@@ -123,9 +123,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\stopStaff
 								\startStaff
@@ -159,9 +157,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -209,9 +205,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -281,9 +275,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -338,9 +330,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -393,9 +383,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -437,9 +425,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -497,9 +483,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -666,9 +650,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\stopStaff
 								\startStaff
@@ -706,9 +688,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -757,9 +737,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -810,9 +788,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -854,9 +830,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -894,9 +868,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -961,9 +933,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\stopStaff
 								\startStaff
@@ -989,9 +959,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1057,9 +1025,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3657,9 +3623,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3704,9 +3668,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3784,9 +3746,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3825,9 +3785,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3884,23 +3842,30 @@
 						{
 							{
 								\clef "percussion"
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											shaker
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
 								\override NoteHead #'no-ledgers = ##t
 								\override NoteHead #'style = #'cross
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'8 :64 \ppp ^ \markup {
-									\box
-										\pad-around
-											#0.5
-											{
-												shaker
-											}
-									}
+								c'8 :64 \ppp \startTextSpan
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
 								\revert NoteHead #'style
+								<> \stopTextSpan
 								\clef "treble"
 							}
 						}
@@ -3929,9 +3894,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3987,9 +3950,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4038,9 +3999,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4113,9 +4072,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4154,9 +4111,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4200,9 +4155,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4243,23 +4196,30 @@
 						{
 							{
 								\clef "percussion"
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											shaker
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
 								\override NoteHead #'no-ledgers = ##t
 								\override NoteHead #'style = #'cross
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'8. :64 \p ^ \markup {
-									\box
-										\pad-around
-											#0.5
-											{
-												shaker
-											}
-									}
+								c'8. :64 \p \startTextSpan
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
 								\revert NoteHead #'style
+								<> \stopTextSpan
 								\clef "alto"
 							}
 						}
@@ -4282,9 +4242,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4338,9 +4296,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4390,9 +4346,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4452,9 +4406,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4504,9 +4456,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4565,9 +4515,7 @@
 									\box
 										\pad-around
 											#0.5
-											{
-												shaker
-											}
+											shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
