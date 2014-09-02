@@ -25,7 +25,24 @@ segment_maker.set_duration_in_seconds(
     )
 
 
-### MUSIC SETTINGS ############################################################
+### PERCUSSION SETTINGS #######################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.dense_timespan_maker,
+    metals=None,
+    drums=None,
+    )
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.sparse_timespan_maker,
+    metals=None,
+    drums=None,
+    )
+
+
+### PIANO SETTINGS ############################################################
 
 
 segment_maker.add_setting(
@@ -39,6 +56,33 @@ segment_maker.add_setting(
         rhythm_maker=zaira.materials.sustained_rhythm_maker,
         ),
     )
+
+
+### SHAKER SETTINGS ###########################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=consort.makers.FloodedTimespanMaker(),
+    clarinet=new(
+        zaira.materials.brazil_nut_music_specifier,
+        rhythm_maker=zaira.materials.sustained_rhythm_maker,
+        ),
+    flute=new(
+        zaira.materials.brazil_nut_music_specifier,
+        rhythm_maker=zaira.materials.sustained_rhythm_maker,
+        ),
+    violin=new(
+        zaira.materials.brazil_nut_music_specifier,
+        rhythm_maker=zaira.materials.sustained_rhythm_maker,
+        ),
+    viola=new(
+        zaira.materials.brazil_nut_music_specifier,
+        rhythm_maker=zaira.materials.sustained_rhythm_maker,
+        ),
+    )
+
+
+### FANFARE SETTINGS ##########################################################
 
 
 segment_maker.add_setting(

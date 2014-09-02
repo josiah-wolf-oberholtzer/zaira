@@ -4,6 +4,8 @@ from abjad import show
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import mathtools
+from abjad.tools import spannertools
+from abjad.tools import selectortools
 from abjad.tools import timespantools
 import consort
 import zaira
@@ -25,7 +27,64 @@ segment_maker.set_duration_in_seconds(
     )
 
 
-### MUSIC SETTINGS ############################################################
+### PERCUSSION SETTINGS #######################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.dense_timespan_maker,
+    drums=None,
+    woods=None,
+    )
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.sparse_timespan_maker,
+    drums=None,
+    woods=None,
+    )
+
+
+### PIANO SETTINGS ############################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.sparse_timespan_maker,
+        minimum_duration=0,
+        playing_groupings=(1,),
+        playing_talea__counts=(5, 3, 3, 3, 6, 4, 3),
+        ),
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(1, 3, 5),
+        ratio=(1, 2, 1, 2, 1, 2, 1),
+        ),
+    piano_rh=new(
+        zaira.materials.piano_flourish_music_specifier,
+        attachment_maker=consort.makers.AttachmentMaker(
+            attachment_expressions=(
+                consort.makers.AttachmentExpression(
+                    attachments=spannertools.Slur(),
+                    selector=selectortools.Selector(),
+                    ),
+                zaira.materials.background_dynamic_attachment_expression,
+                ),
+            ),
+        pitch_maker__register_specifier__center_pitch="c''",
+        ),
+    piano_lh=new(
+        zaira.materials.piano_flourish_music_specifier,
+        attachment_maker=consort.makers.AttachmentMaker(
+            attachment_expressions=(
+                consort.makers.AttachmentExpression(
+                    attachments=spannertools.Slur(),
+                    selector=selectortools.selects_pitched_runs(),
+                    ),
+                zaira.materials.background_dynamic_attachment_expression,
+                ),
+            ),
+        pitch_maker__register_specifier__center_pitch="c,",
+        ),
+    )
 
 
 segment_maker.add_setting(
@@ -39,6 +98,22 @@ segment_maker.add_setting(
         rhythm_maker=zaira.materials.sustained_rhythm_maker,
         ),
     )
+
+
+### SHAKER SETTINGS ###########################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.sparse_timespan_maker,
+    clarinet=zaira.materials.brazil_nut_music_specifier,
+    flute=zaira.materials.brazil_nut_music_specifier,
+    violin=zaira.materials.brazil_nut_music_specifier,
+    viola=zaira.materials.brazil_nut_music_specifier,
+    woods=zaira.materials.percussion_bamboo_music_specifier,
+    )
+
+
+### FANFARE SETTINGS ##########################################################
 
 
 segment_maker.add_setting(

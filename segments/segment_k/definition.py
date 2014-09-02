@@ -26,7 +26,7 @@ segment_maker.set_duration_in_seconds(
     )
 
 
-### MUSIC SETTINGS ############################################################
+### PERCUSSION SETTINGS #######################################################
 
 
 segment_maker.add_setting(
@@ -36,6 +36,9 @@ segment_maker.add_setting(
         pitch_maker__pitches=zaira.makers.Percussion.BRAKE_DRUM,
         ),
     )
+
+
+### FANFARE SETTINGS ##########################################################
 
 
 segment_maker.add_setting(

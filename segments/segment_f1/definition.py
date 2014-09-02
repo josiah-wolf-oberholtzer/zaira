@@ -25,7 +25,24 @@ segment_maker.set_duration_in_seconds(
     )
 
 
-### MUSIC SETTINGS ############################################################
+### PERCUSSION SETTINGS #######################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.dense_timespan_maker,
+    drums=None,
+    metals=None,
+    )
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.sparse_timespan_maker,
+    drums=None,
+    metals=None,
+    )
+
+
+### PIANO SETTINGS ############################################################
 
 
 segment_maker.add_setting(
@@ -35,6 +52,49 @@ segment_maker.add_setting(
         ),
     piano_rh=zaira.materials.piano_drone_music_specifier,
     )
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.sparse_timespan_maker,
+        minimum_duration=0,
+        playing_groupings=(1,),
+        playing_talea__counts=(3, 3, 3, 3, 3, 5, 3, 4),
+        ),
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(1, 3, 5),
+        ratio=(3, 1, 2, 1, 3, 1, 1),
+        ),
+    piano_rh=new(
+        zaira.materials.piano_flourish_music_specifier,
+        pitch_maker__register_specifier__center_pitch="c''",
+        seed=1,
+        ),
+    piano_lh=new(
+        zaira.materials.piano_flourish_music_specifier,
+        pitch_maker__register_specifier__center_pitch="c,",
+        seed=2,
+        ),
+    )
+
+
+### SHAKER SETTINGS ###########################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.tutti_timespan_maker,
+        playing_talea__counts=(3, 2, 3, 3, 2, 4),
+        playing_groupings=(1,),
+        ),
+    clarinet=zaira.materials.brazil_nut_music_specifier,
+    flute=zaira.materials.brazil_nut_music_specifier,
+    viola=zaira.materials.brazil_nut_music_specifier,
+    violin=zaira.materials.brazil_nut_music_specifier,
+    )
+
+
+### FANFARE SETTINGS ##########################################################
 
 
 segment_maker.add_setting(

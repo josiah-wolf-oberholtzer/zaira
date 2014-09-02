@@ -25,7 +25,24 @@ segment_maker.set_duration_in_seconds(
     )
 
 
-### MUSIC SETTINGS ############################################################
+### PERCUSSION SETTINGS #######################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.dense_timespan_maker,
+    drums=None,
+    woods=None,
+    )
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.sparse_timespan_maker,
+    drums=None,
+    woods=None,
+    )
+
+
+### PIANO SETTINGS ############################################################
 
 
 segment_maker.add_setting(
@@ -39,6 +56,45 @@ segment_maker.add_setting(
         pitch_maker__register_specifier__center_pitch="g,,",
         ),
     )
+
+
+### SHAKER SETTINGS ###########################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.sparse_timespan_maker,
+    clarinet=zaira.materials.brazil_nut_music_specifier,
+    flute=zaira.materials.brazil_nut_music_specifier,
+    woods=zaira.materials.percussion_bamboo_music_specifier,
+    violin=zaira.materials.brazil_nut_music_specifier,
+    viola=zaira.materials.brazil_nut_music_specifier,
+    )
+
+
+### FANFARE SETTINGS ##########################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.sparse_timespan_maker,
+        minimum_duration=0,
+        playing_groupings=(1,),
+        playing_talea__counts=(5, 3, 3, 3, 6, 4, 3),
+        ),
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(1, 3, 5),
+        ratio=(1, 2, 1, 2, 1, 2, 1),
+        ),
+    piano_rh=new(
+        zaira.materials.piano_flourish_music_specifier,
+        pitch_maker__register_specifier__center_pitch="c''",
+        ),
+    piano_lh=new(
+        zaira.materials.piano_flourish_music_specifier,
+        pitch_maker__register_specifier__center_pitch="c,",
+        ),
+    )
+
 
 segment_maker.add_setting(
     timespan_maker=consort.makers.FloodedTimespanMaker(),

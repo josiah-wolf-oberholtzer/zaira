@@ -25,7 +25,24 @@ segment_maker.set_duration_in_seconds(
     )
 
 
-### MUSIC SETTINGS ############################################################
+### PERCUSSION SETTINGS #######################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.dense_timespan_maker,
+    metals=None,
+    woods=None,
+    )
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.sparse_timespan_maker,
+    metals=None,
+    woods=None,
+    )
+
+
+### PIANO SETTINGS ############################################################
 
 
 segment_maker.add_setting(
@@ -36,6 +53,26 @@ segment_maker.add_setting(
         ),
     piano_rh=zaira.materials.piano_drone_music_specifier,
     )
+
+
+### SHAKER SETTINGS ###########################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.tutti_timespan_maker,
+        playing_talea__counts=(3, 2, 3, 3, 2, 4),
+        playing_groupings=(1,),
+        ),
+    clarinet=zaira.materials.brazil_nut_music_specifier,
+    flute=zaira.materials.brazil_nut_music_specifier,
+    violin=zaira.materials.brazil_nut_music_specifier,
+    viola=zaira.materials.brazil_nut_music_specifier,
+    woods=zaira.materials.percussion_bamboo_music_specifier,
+    )
+
+
+### FANFARE SETTINGS ##########################################################
 
 
 segment_maker.add_setting(

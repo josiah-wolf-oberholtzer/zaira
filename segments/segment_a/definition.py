@@ -28,7 +28,7 @@ segment_maker.set_duration_in_seconds(
     )
 
 
-### MUSIC SETTINGS ############################################################
+### FANFARE SETTINGS ##########################################################
 
 
 segment_maker.add_setting(

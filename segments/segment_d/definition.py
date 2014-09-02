@@ -25,7 +25,24 @@ segment_maker.set_duration_in_seconds(
     )
 
 
-### MUSIC SETTINGS ############################################################
+### PERCUSSION SETTINGS #######################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.dense_timespan_maker,
+    metals=None,
+    woods=None,
+    )
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.sparse_timespan_maker,
+    metals=None,
+    woods=None,
+    )
+
+
+### PIANO SETTINGS ############################################################
 
 
 segment_maker.add_setting(
@@ -46,6 +63,9 @@ segment_maker.add_setting(
     piano_rh=zaira.materials.piano_prepared_treble_music_specifier,
     piano_lh=zaira.materials.piano_prepared_bass_music_specifier,
     )
+
+
+### FANFARE SETTINGS ##########################################################
 
 
 segment_maker.add_setting(
