@@ -150,11 +150,3 @@ segment_maker.add_setting(
     timespan_maker=zaira.materials.pedals_timespan_maker,
     piano_pedals=zaira.materials.piano_pedals_music_specifier,
     )
-
-
-### ETC #######################################################################
-
-
-if __name__ == '__main__':
-    lilypond_file = segment_maker()
-    show(lilypond_file)

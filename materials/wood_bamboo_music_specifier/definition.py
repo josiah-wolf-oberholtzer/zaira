@@ -4,7 +4,7 @@ import consort
 import zaira
 
 
-percussion_bamboo_music_specifier = consort.makers.MusicSpecifier(
+wood_bamboo_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
         attachment_expressions=(
             zaira.materials.midground_dynamic_attachment_expression,

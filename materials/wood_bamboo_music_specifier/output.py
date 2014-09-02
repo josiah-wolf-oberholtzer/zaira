@@ -3,7 +3,7 @@ from abjad import *
 import consort
 
 
-percussion_bamboo_music_specifier = consort.makers.MusicSpecifier(
+wood_bamboo_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
         attachment_expressions=(
             consort.makers.AttachmentExpression(

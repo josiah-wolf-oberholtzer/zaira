@@ -71,7 +71,7 @@ segment_maker.add_setting(
     flute=zaira.materials.brazil_nut_music_specifier,
     viola=zaira.materials.brazil_nut_music_specifier,
     violin=zaira.materials.brazil_nut_music_specifier,
-    woods=zaira.materials.percussion_bamboo_music_specifier,
+    woods=zaira.materials.wood_bamboo_music_specifier,
     )
 
 
@@ -82,11 +82,3 @@ segment_maker.add_setting(
     timespan_maker=zaira.materials.pedals_timespan_maker,
     piano_pedals=zaira.materials.piano_pedals_music_specifier,
     )
-
-
-### ETC #######################################################################
-
-
-if __name__ == '__main__':
-    lilypond_file = segment_maker()
-    show(lilypond_file)
