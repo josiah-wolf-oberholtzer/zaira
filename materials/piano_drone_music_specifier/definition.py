@@ -19,5 +19,6 @@ piano_drone_music_specifier = consort.makers.MusicSpecifier(
                 interval_numbers=(-7, -3, 0, 1, 5, 12),
                 ),
             ),
+        pitches="d'",
         ),
     )
