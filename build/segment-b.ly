@@ -25,12 +25,11 @@
 				s1 * 1/2
 			}
 			{
-				\time 3/8
-				s1 * 3/8
+				s1 * 1/2
 			}
 			{
-				\time 4/4
-				s1 * 1
+				\time 5/16
+				s1 * 5/16
 			}
 			{
 				\time 6/8
@@ -41,23 +40,12 @@
 				s1 * 1/2
 			}
 			{
-				s1 * 1/2
-			}
-			{
 				\time 3/8
 				s1 * 3/8
 			}
 			{
-				\time 4/4
-				s1 * 1
-			}
-			{
-				\time 5/8
-				s1 * 5/8
-			}
-			{
-				\time 5/16
-				s1 * 5/16
+				\time 3/4
+				s1 * 3/4
 			}
 			{
 				\time 3/8
@@ -68,12 +56,28 @@
 				s1 * 1/2
 			}
 			{
+				\time 4/4
+				s1 * 1
+			}
+			{
 				\time 3/8
 				s1 * 3/8
 			}
 			{
 				\time 4/4
 				s1 * 1
+			}
+			{
+				\time 2/4
+				s1 * 1/2
+			}
+			{
+				\time 5/16
+				s1 * 5/16
+			}
+			{
+				\time 2/4
+				s1 * 1/2
 			}
 			{
 				\time 6/8
@@ -84,8 +88,8 @@
 				s1 * 1/2
 			}
 			{
-				\time 5/16
-				s1 * 5/16
+				\time 3/8
+				s1 * 3/8
 			}
 		}
 		\context EnsembleGroup = "Wind Section Staff Group" <<
@@ -111,10 +115,10 @@
 								R1 * 1/2
 							}
 							{
-								R1 * 3/8
+								R1 * 1/2
 							}
 							{
-								R1 * 1
+								R1 * 5/16
 							}
 							{
 								R1 * 3/4
@@ -123,7 +127,19 @@
 								R1 * 1/2
 							}
 							{
+								R1 * 3/8
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 3/8
+							}
+							{
 								R1 * 1/2
+							}
+							{
+								R1 * 1
 							}
 							{
 								R1 * 3/8
@@ -132,22 +148,13 @@
 								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 1/2
 							}
 							{
 								R1 * 5/16
 							}
 							{
-								R1 * 3/8
-							}
-							{
 								R1 * 1/2
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1
 							}
 							{
 								R1 * 3/4
@@ -156,7 +163,7 @@
 								R1 * 1/2
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -186,10 +193,10 @@
 								R1 * 1/2
 							}
 							{
-								R1 * 3/8
+								R1 * 1/2
 							}
 							{
-								R1 * 1
+								R1 * 5/16
 							}
 							{
 								R1 * 3/4
@@ -198,7 +205,19 @@
 								R1 * 1/2
 							}
 							{
+								R1 * 3/8
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 3/8
+							}
+							{
 								R1 * 1/2
+							}
+							{
+								R1 * 1
 							}
 							{
 								R1 * 3/8
@@ -207,22 +226,13 @@
 								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 1/2
 							}
 							{
 								R1 * 5/16
 							}
 							{
-								R1 * 3/8
-							}
-							{
 								R1 * 1/2
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1
 							}
 							{
 								R1 * 3/4
@@ -231,7 +241,7 @@
 								R1 * 1/2
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -261,10 +271,10 @@
 								R1 * 1/2
 							}
 							{
-								R1 * 3/8
+								R1 * 1/2
 							}
 							{
-								R1 * 1
+								R1 * 5/16
 							}
 							{
 								R1 * 3/4
@@ -273,7 +283,19 @@
 								R1 * 1/2
 							}
 							{
+								R1 * 3/8
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 3/8
+							}
+							{
 								R1 * 1/2
+							}
+							{
+								R1 * 1
 							}
 							{
 								R1 * 3/8
@@ -282,22 +304,13 @@
 								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 1/2
 							}
 							{
 								R1 * 5/16
 							}
 							{
-								R1 * 3/8
-							}
-							{
 								R1 * 1/2
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1
 							}
 							{
 								R1 * 3/4
@@ -306,7 +319,7 @@
 								R1 * 1/2
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -332,65 +345,235 @@
 						}
 						{
 							{
-								r8.
+								\set stemRightBeamCount = 1
+								c'8. ~ [
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8 ~
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8 ~ ]
+							}
+							{
+								c'4.
+							}
+						}
+						{
+							{
+								r8
+							}
+						}
+						{
+							{
+								\set stemRightBeamCount = 1
+								c'8 ~ [
+								\set stemLeftBeamCount = 1
+								c'8 ]
+							}
+						}
+						{
+							{
+								r8
+							}
+							{
+								r8
+							}
+						}
+						{
+							{
+								\set stemRightBeamCount = 1
+								c'8 ~
+								c'4 ~
+							}
+							{
+								c'4 ~
+								\set stemLeftBeamCount = 2
+								c'16
+							}
+						}
+						{
+							{
+								r4.
+								r16
+							}
+						}
+						{
+							{
+								\set stemRightBeamCount = 2
+								c'16 ~
+								c'4 ~
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8. ~ [
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								c'16 ~ ]
+								c'4 ~
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8
+							}
+						}
+						{
+							{
 								r4
 							}
+						}
+						{
+							{
+								c'4 ~
+								\set stemLeftBeamCount = 1
+								c'8.
+							}
+						}
+						{
+							{
+								r16
+								r4
+							}
+						}
+						{
+							{
+								\set stemRightBeamCount = 1
+								c'8 ~ [
+								\set stemLeftBeamCount = 2
+								c'16 ]
+							}
+						}
+						{
+							{
+								r16
+								r8
+							}
+							{
+								r8
+							}
+						}
+						{
+							{
+								\set stemRightBeamCount = 1
+								c'8 ~
+								c'4 ~
+							}
+							{
+								c'4 ~
+							}
+							{
+								c'4 ~
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8 ~ [
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8 ~ ]
+								c'4 ~
+							}
+							{
+								c'4 ~
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8
+							}
+						}
+						{
+							{
+								r4
+							}
+						}
+						{
+							{
+								c'4 ~
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8 ~ [
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8 ~ ]
+							}
+							{
+								c'4 ~
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8
+							}
+						}
+						{
+							{
+								r8
+								r4
+							}
+						}
+						{
+							{
+								c'4 ~
+								\set stemLeftBeamCount = 2
+								c'16
+							}
+						}
+						{
+							{
+								r8
+							}
+						}
+						{
+							{
+								\set stemRightBeamCount = 1
+								c'8 ~ [
+								\set stemLeftBeamCount = 1
+								c'8. ]
+							}
+						}
+						{
+							{
+								r16
+							}
+						}
+						{
+							{
+								c'4 ~
+								\set stemLeftBeamCount = 2
+								c'16
+							}
+						}
+						{
+							{
+								r16
+								r8.
+							}
+						}
+						{
+							{
+								\set stemRightBeamCount = 1
+								c'8. ~
+							}
+							{
+								c'2
+							}
+						}
+						{
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 3/8
-							}
-							{
-								R1 * 1/2
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 1/2
-							}
-							{
-								R1 * 1/2
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1/2
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 1/2
-							}
-							{
-								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -420,10 +603,10 @@
 								R1 * 1/2
 							}
 							{
-								R1 * 3/8
+								R1 * 1/2
 							}
 							{
-								R1 * 1
+								R1 * 5/16
 							}
 							{
 								R1 * 3/4
@@ -432,7 +615,19 @@
 								R1 * 1/2
 							}
 							{
+								R1 * 3/8
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 3/8
+							}
+							{
 								R1 * 1/2
+							}
+							{
+								R1 * 1
 							}
 							{
 								R1 * 3/8
@@ -441,22 +636,13 @@
 								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 1/2
 							}
 							{
 								R1 * 5/16
 							}
 							{
-								R1 * 3/8
-							}
-							{
 								R1 * 1/2
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1
 							}
 							{
 								R1 * 3/4
@@ -465,7 +651,7 @@
 								R1 * 1/2
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -489,6 +675,255 @@
 						{
 							{
 								r8.
+							}
+						}
+						{
+							{
+								c'4
+							}
+						}
+						{
+							{
+								r16
+							}
+						}
+						{
+							{
+								c'8
+							}
+						}
+						{
+							{
+								r16
+								r8
+							}
+						}
+						{
+							{
+								c'8.
+							}
+						}
+						{
+							{
+								r16
+								r4
+							}
+						}
+						{
+							{
+								c'4 ~
+							}
+							{
+								c'4 ~
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8
+							}
+						}
+						{
+							{
+								r8.
+							}
+						}
+						{
+							{
+								c'4. ~
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8. ~ [
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8. ]
+							}
+						}
+						{
+							{
+								r4
+							}
+						}
+						{
+							{
+								c'4 ~
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8 ~
+							}
+							{
+								c'4 ~
+							}
+							{
+								c'4
+							}
+						}
+						{
+							{
+								r4
+							}
+						}
+						{
+							{
+								c'4
+							}
+						}
+						{
+							{
+								r8
+							}
+						}
+						{
+							{
+								c'4
+							}
+						}
+						{
+							{
+								r4
+							}
+						}
+						{
+							{
+								c'8.
+							}
+						}
+						{
+							{
+								r16
+							}
+						}
+						{
+							{
+								c'4 ~
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								c'16 ~ [
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8. ~ ]
+								c'4 ~
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								c'16 ~ [
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								c'16 ~
+								\set stemLeftBeamCount = 2
+								c'16 ]
+							}
+						}
+						{
+							{
+								r16
+							}
+						}
+						{
+							{
+								\set stemRightBeamCount = 1
+								c'8 ~ [
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								c'16 ~
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								c'16 ~
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8 ~
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8. ]
+							}
+						}
+						{
+							{
+								r16
+								r8.
+							}
+						}
+						{
+							{
+								\set stemRightBeamCount = 2
+								c'16 ~ [
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8. ~
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								c'16 ~ ]
+								c'4
+							}
+						}
+						{
+							{
+								r4
+								r16
+							}
+						}
+						{
+							{
+								c'8.
+							}
+						}
+						{
+							{
+								\stopStaff
+								\once \override Staff.StaffSymbol.line-count = 1
+								\startStaff
+								R1 * 5/16
+								\stopStaff
+								\startStaff
+							}
+						}
+						{
+							{
+								c'4 ~
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								c'16 ~ [
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8. ~
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								c'8 ]
+							}
+						}
+						{
+							{
+								r4
+							}
+						}
+						{
+							{
+								c'4. ~
+							}
+							{
+								c'4
+							}
+						}
+						{
+							{
 								r4
 							}
 							{
@@ -496,57 +931,6 @@
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 3/8
-							}
-							{
-								R1 * 1/2
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 1/2
-							}
-							{
-								R1 * 1/2
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/8
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1/2
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 1/2
-							}
-							{
-								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
@@ -664,17 +1048,21 @@
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 3/8
+							R1 * 1/2
+						}
+						{
+							R1 * 5/16
 							\stopStaff
 							\startStaff
 						}
 						{
-							r2.
-							r8
+							r4.
+							r16
 						}
 					}
 					{
-						\times 4/5 {
+						\tweak #'text #tuplet-number::calc-fraction-text
+						\times 6/7 {
 							\set stemRightBeamCount = 2
 							f''16 \f [ (
 							\set stemLeftBeamCount = 2
@@ -684,19 +1072,21 @@
 							\set stemRightBeamCount = 3
 							g''32
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 1
-							cs'''32 ~
-						}
-						{
-							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 3
-							cs'''32 ] )
+							cs'''32
+							\set stemLeftBeamCount = 3
+							\set stemRightBeamCount = 3
+							bf''32 )
+							\set stemLeftBeamCount = 3
+							r32 ]
 						}
 					}
 					{
 						{
-							r16.
-							r4
+							r8
+						}
+						{
+							r8.
 						}
 					}
 					{
@@ -711,31 +1101,15 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
+							\set stemRightBeamCount = 2
 							\pitchedTrill
-							b''''4 \p \startTextSpan \startTrillSpan c'''''
+							b''''16 \p ~ \startTextSpan [ \startTrillSpan c'''''
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							b''''8.
 							<> \stopTrillSpan
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 2
-							d''''16 -\staccato [
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 1
-							r16
-						}
-						{
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 1
-							r8
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 2
-							cs''''16 -\staccato \pp
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 2
-							r16
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 2
-							r16
-							\set stemLeftBeamCount = 2
-							e''''16 -\staccato \ppp ]
+							d''''16 -\staccato ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
 							\clef "treble"
@@ -743,10 +1117,48 @@
 					}
 					{
 						{
-							r8
+							r16
+						}
+					}
+					{
+						\tweak #'text #tuplet-number::calc-fraction-text
+						\times 5/6 {
+							\clef "treble^8"
+							\once \override TextSpanner.bound-details.left-broken.text = ##f
+							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.right-broken.text = ##f
+							\once \override TextSpanner.bound-details.right.text = \markup {
+								\draw-line
+									#'(0 . -1)
+								}
+							\once \override TextSpanner.dash-fraction = 1
+							\override NoteHead #'style = #'cross
+							r4 \startTextSpan
+							\set stemRightBeamCount = 1
+							\pitchedTrill
+							d''''8 \pp [ \startTrillSpan ef''''
+							<> \stopTrillSpan
 						}
 						{
-							r8.
+							\once \override TrillSpanner.bound-details.left.text = \markup {
+								\null
+								}
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							\pitchedTrill
+							cs''''8 \startTrillSpan d''''
+							<> \stopTrillSpan
+							\set stemLeftBeamCount = 2
+							e''''16 -\staccato ]
+							\revert NoteHead #'style
+							<> \stopTextSpan
+							\clef "treble"
+						}
+					}
+					{
+						{
+							r16
+							r8
 						}
 					}
 					{
@@ -786,40 +1198,41 @@
 					}
 					{
 						{
+							r16
+						}
+						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
 							R1 * 3/8
+						}
+						{
+							R1 * 1/2
 							\stopStaff
 							\startStaff
 						}
 						{
-							r2.
-							r8.
+							r4
+							r8
 						}
 					}
 					{
 						{
 							\set stemRightBeamCount = 3
 							g''32 \f [ (
-							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 1
-							cs'''32 ~
-						}
-						{
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 3
-							cs'''32 ] )
+							\set stemLeftBeamCount = 2
+							cs'''16 ] )
 						}
 					}
 					{
 						{
-							r16.
-							r2
+							r32
+							r4
+							r8
 						}
 					}
 					{
-						{
+						\times 2/3 {
 							\clef "treble^8"
 							\once \override TextSpanner.bound-details.left-broken.text = ##f
 							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
@@ -832,33 +1245,41 @@
 							\override NoteHead #'style = #'cross
 							\set stemRightBeamCount = 1
 							\pitchedTrill
-							d''''8. \pp \startTextSpan [ \startTrillSpan ef''''
+							cs''''8 \ppp \startTextSpan [ \startTrillSpan d''''
+							<> \stopTrillSpan
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 1
+							r16
+						}
+						\times 4/5 {
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							r8.
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							\pitchedTrill
+							e''''8 \p \startTrillSpan f''''
+							<> \stopTrillSpan
+						}
+						{
+							\once \override TrillSpanner.bound-details.left.text = \markup {
+								\null
+								}
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							\pitchedTrill
+							ds''''8 \startTrillSpan e''''
 							<> \stopTrillSpan
 						}
 						{
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							cs''''16 -\staccato
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 1
-							e''''16 -\staccato
-						}
-						\tweak #'text #tuplet-number::calc-fraction-text
-						\times 3/4 {
+							f''''16 -\staccato
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
 							r8.
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 2
-							ds''''16 \ppp
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 1
-							r8
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 2
-							f''''16 \p
 							\set stemLeftBeamCount = 2
-							r16 ]
+							g''''16 -\staccato \pp ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
 							\clef "treble"
@@ -867,6 +1288,7 @@
 					{
 						{
 							r8.
+							r16
 						}
 					}
 					{
@@ -905,17 +1327,22 @@
 					}
 					{
 						{
+							r8
+						}
+						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 3/8
+							R1 * 1/2
+						}
+						{
+							R1 * 5/16
 							\stopStaff
 							\startStaff
 						}
 						{
-							r2.
-							r8
-							r32
+							r4
+							r16.
 						}
 					}
 					{
@@ -923,26 +1350,40 @@
 							\set stemRightBeamCount = 3
 							bf''32 \f [ (
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 1
-							d'''16 ~
-						}
-						\times 2/3 {
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 3
-							d'''32 )
-							\set stemLeftBeamCount = 2
-							r16 ]
+							\set stemRightBeamCount = 2
+							d'''16
+							\set stemLeftBeamCount = 3
+							f'''32 ] )
 						}
 					}
 					{
 						{
+							r32
+						}
+						{
+							r4.
 							r16
-							r4
+						}
+					}
+					{
+						{
+							\clef "treble^8"
+							\override NoteHead #'style = #'cross
+							\pitchedTrill
+							e''''8 \p ^ \markup { (prepared) } \startTrillSpan f''''
+							\revert NoteHead #'style
+							\clef "treble"
+							<> \stopTrillSpan
+						}
+					}
+					{
+						{
+							r8.
 						}
 					}
 					{
 						\tweak #'text #tuplet-number::calc-fraction-text
-						\times 6/7 {
+						\times 7/8 {
 							\clef "treble^8"
 							\once \override TextSpanner.bound-details.left-broken.text = ##f
 							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
@@ -953,30 +1394,18 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\pitchedTrill
-							cs''''8 \ppp \startTextSpan \startTrillSpan d''''
-							<> \stopTrillSpan
-							r4
+							\set stemRightBeamCount = 2
+							ds''''16 \pp \startTextSpan [
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
-							e''''16 \p [
-						}
-						\times 8/9 {
+							r8
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
 							\pitchedTrill
-							ds''''8. \startTrillSpan e''''
+							f''''8 \ppp \startTrillSpan gf''''
 							<> \stopTrillSpan
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 2
-							f''''16
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 1
-							r8.
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 2
-							g''''16 \pp
-							\set stemLeftBeamCount = 2
-							r16 ]
+							r8. ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
 							\clef "treble"
@@ -984,10 +1413,13 @@
 					}
 					{
 						{
+							r16
+						}
+						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 5/16
+							R1 * 3/8
 							\stopStaff
 							\startStaff
 						}
@@ -1006,10 +1438,11 @@
 						r2
 					}
 					{
-						r4.
+						r2
 					}
 					{
-						r1
+						r4
+						r16
 					}
 					{
 						r2.
@@ -1018,7 +1451,19 @@
 						r2
 					}
 					{
+						r4.
+					}
+					{
+						r2.
+					}
+					{
+						r4.
+					}
+					{
 						r2
+					}
+					{
+						r1
 					}
 					{
 						r4.
@@ -1028,23 +1473,13 @@
 					}
 					{
 						r2
-						r8
 					}
 					{
 						r4
 						r16
 					}
 					{
-						r4.
-					}
-					{
 						r2
-					}
-					{
-						r4.
-					}
-					{
-						r1
 					}
 					{
 						r2.
@@ -1053,8 +1488,7 @@
 						r2
 					}
 					{
-						r4
-						r16
+						r4.
 					}
 				}
 			}
@@ -1155,19 +1589,23 @@
 					}
 					{
 						{
+							r8
 							r4
 						}
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 1
+							R1 * 5/16
+						}
+						{
+							R1 * 3/4
 							\stopStaff
 							\startStaff
 						}
 						{
-							r4.
-							r8.
+							r4
+							r8
 						}
 					}
 					{
@@ -1184,33 +1622,44 @@
 							\override NoteHead #'style = #'cross
 							\set stemRightBeamCount = 1
 							\pitchedTrill
-							c,,8. \p \startTextSpan [ \startTrillSpan df,,
+							c,,8 \p \startTextSpan [ \startTrillSpan df,,
 							<> \stopTrillSpan
 						}
 						{
+							\once \override TrillSpanner.bound-details.left.text = \markup {
+								\null
+								}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 2
-							b,,,16 -\staccato
+							\set stemRightBeamCount = 1
+							\pitchedTrill
+							b,,,8 \startTrillSpan c,,
+							<> \stopTrillSpan
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 1
 							d,,16 -\staccato
 						}
 						\tweak #'text #tuplet-number::calc-fraction-text
-						\times 3/4 {
+						\times 3/5 {
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
 							r8.
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
 							cs,,16 \pp
-							\set stemLeftBeamCount = 1
+							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 1
-							r8
+							r16
+						}
+						\tweak #'text #tuplet-number::calc-fraction-text
+						\times 3/4 {
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
-							e,,16 \ppp
+							r16
 							\set stemLeftBeamCount = 2
-							r16 ]
+							\set stemRightBeamCount = 1
+							e,,16 \ppp
+							\set stemLeftBeamCount = 1
+							r8 ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
 							\clef "bass"
@@ -1218,44 +1667,49 @@
 					}
 					{
 						{
+							r16
 							r4
-							r8.
+							r8
 						}
 					}
 					{
-						\times 2/3 {
+						\times 4/5 {
 							\set stemRightBeamCount = 2
 							f,16 \f [ (
-							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 1
-							e,32 ~
-						}
-						{
-							\set stemLeftBeamCount = 1
+							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 3
 							e,32
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
 							g,32
 							\set stemLeftBeamCount = 3
+							\set stemRightBeamCount = 1
+							cs32 ~
+						}
+						{
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 3
 							cs32 ] )
 						}
 					}
 					{
 						{
-							r32
+							r16.
 							r4
 						}
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 1
+							R1 * 1/2
 						}
 						{
-							R1 * 5/8
+							R1 * 1
 							\stopStaff
 							\startStaff
+						}
+						{
+							r16
 						}
 					}
 					{
@@ -1296,58 +1750,57 @@
 					{
 						{
 							r16
-							r8
-						}
-						{
-							r4
-							r8
-							r16.
+							r2
+							r16
 						}
 					}
 					{
-						{
+						\times 2/3 {
+							\set stemRightBeamCount = 3
+							r32 [
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							e16 \p (
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 3
+							g,32
+							\set stemLeftBeamCount = 3
+							\set stemRightBeamCount = 3
+							cs32
+							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 1
-							e32 \p ~ [ (
+							bf32 ~
 						}
 						\times 2/3 {
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 3
-							e32
-							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 3
-							g,32
-							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 1
-							cs32 ~
-						}
-						{
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 3
-							cs32
-							\set stemLeftBeamCount = 3
-							bf,32 ] )
+							bf32
+							\set stemLeftBeamCount = 2
+							d16 ] )
 						}
 					}
 					{
 						{
-							r4
-						}
-						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 1
+							R1 * 1/2
+						}
+						{
+							R1 * 5/16
+						}
+						{
+							R1 * 1/2
 							\stopStaff
 							\startStaff
 						}
 						{
 							r4.
-							r8.
+							r8
 						}
 					}
 					{
-						\tweak #'text #tuplet-number::calc-fraction-text
-						\times 3/4 {
+						\times 4/5 {
 							\clef "bass_8"
 							\once \override TextSpanner.bound-details.left-broken.text = ##f
 							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
@@ -1363,28 +1816,7 @@
 							d,,8 \ppp \startTextSpan [ \startTrillSpan ef,,
 							<> \stopTrillSpan
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 1
-							r8
-						}
-						\times 2/3 {
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 1
-							r8
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 1
-							cs,,16 \p
-						}
-						{
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 1
-							\pitchedTrill
-							e,,8 ~ \startTrillSpan f,,
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 2
-							e,,16
-							<> \stopTrillSpan
-							\set stemLeftBeamCount = 2
-							ds,,16 -\staccato ]
+							r8. ]
 							\revert NoteHead #'style
 							<> \stopTextSpan
 							\clef "bass"
@@ -1392,13 +1824,29 @@
 					}
 					{
 						{
-							r8
+							r8.
+						}
+					}
+					{
+						{
+							\clef "bass_8"
+							\override NoteHead #'style = #'cross
+							\pitchedTrill
+							cs,,8 \p ^ \markup { (prepared) } \startTrillSpan d,,
+							\revert NoteHead #'style
+							\clef "bass"
+							<> \stopTrillSpan
+						}
+					}
+					{
+						{
+							r8.
 						}
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 5/16
+							R1 * 3/8
 							\stopStaff
 							\startStaff
 						}
@@ -1443,25 +1891,28 @@
 				}
 				{
 					{
-						r4
+						r4.
 					}
 					{
-						r2..
+						r4
+						r16
+					}
+					{
+						r4..
 					}
 				}
 				{
 					{
-						s1 * 1/8 \sustainOn
-					}
-					{
-						s1 * 1/16
+						s1 * 3/16 \sustainOn
 						<> \sustainOff
 					}
 				}
 				{
 					{
-						r4
-						r16
+						r8
+					}
+					{
+						r8.
 					}
 				}
 				{
@@ -1469,13 +1920,19 @@
 						s1 * 3/16 \sustainOn
 					}
 					{
-						s1 * 3/16
+						s1 * 1/8
+					}
+					{
+						s1 * 1/16
 					}
 					{
 						s1 * 1/8
 					}
 					{
-						s1 * 3/8
+						s1 * 3/16
+					}
+					{
+						s1 * 3/16
 						<> \sustainOff
 					}
 				}
@@ -1492,24 +1949,29 @@
 						s1 * 1/16
 					}
 					{
-						s1 * 1/8
+						s1 * 1/16
+					}
+					{
+						s1 * 1/16
 						<> \sustainOff
 					}
 				}
 				{
 					{
 						r4
+						r16
 					}
 					{
-						r2..
+						r2
+					}
+					{
+						r4
+						r16
 					}
 				}
 				{
 					{
-						s1 * 1/8 \sustainOn
-					}
-					{
-						s1 * 1/16
+						s1 * 3/16 \sustainOn
 						<> \sustainOff
 					}
 				}
@@ -1520,7 +1982,10 @@
 				}
 				{
 					{
-						s1 * 3/16 \sustainOn
+						s1 * 1/8 \sustainOn
+					}
+					{
+						s1 * 1/16
 					}
 					{
 						s1 * 3/16
@@ -1552,18 +2017,20 @@
 				}
 				{
 					{
-						r4
+						r2
 					}
 					{
-						r2..
+						r4
+						r16
+					}
+					{
+						r4
+						r16
 					}
 				}
 				{
 					{
-						s1 * 1/8 \sustainOn
-					}
-					{
-						s1 * 1/16
+						s1 * 3/16 \sustainOn
 						<> \sustainOff
 					}
 				}
@@ -1581,7 +2048,10 @@
 						s1 * 3/16
 					}
 					{
-						s1 * 1/8
+						s1 * 1/16
+					}
+					{
+						s1 * 1/16
 					}
 					{
 						s1 * 3/8
@@ -1590,8 +2060,10 @@
 				}
 				{
 					{
-						r4
 						r16
+					}
+					{
+						r4.
 					}
 				}
 			}
@@ -1619,10 +2091,10 @@
 								R1 * 1/2
 							}
 							{
-								R1 * 3/8
+								R1 * 1/2
 							}
 							{
-								R1 * 1
+								R1 * 5/16
 							}
 							{
 								R1 * 3/4
@@ -1631,7 +2103,19 @@
 								R1 * 1/2
 							}
 							{
+								R1 * 3/8
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 3/8
+							}
+							{
 								R1 * 1/2
+							}
+							{
+								R1 * 1
 							}
 							{
 								R1 * 3/8
@@ -1640,22 +2124,13 @@
 								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 1/2
 							}
 							{
 								R1 * 5/16
 							}
 							{
-								R1 * 3/8
-							}
-							{
 								R1 * 1/2
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1
 							}
 							{
 								R1 * 3/4
@@ -1664,7 +2139,7 @@
 								R1 * 1/2
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -1694,10 +2169,10 @@
 								R1 * 1/2
 							}
 							{
-								R1 * 3/8
+								R1 * 1/2
 							}
 							{
-								R1 * 1
+								R1 * 5/16
 							}
 							{
 								R1 * 3/4
@@ -1706,7 +2181,19 @@
 								R1 * 1/2
 							}
 							{
+								R1 * 3/8
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 3/8
+							}
+							{
 								R1 * 1/2
+							}
+							{
+								R1 * 1
 							}
 							{
 								R1 * 3/8
@@ -1715,22 +2202,13 @@
 								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 1/2
 							}
 							{
 								R1 * 5/16
 							}
 							{
-								R1 * 3/8
-							}
-							{
 								R1 * 1/2
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1
 							}
 							{
 								R1 * 3/4
@@ -1739,7 +2217,7 @@
 								R1 * 1/2
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -1769,10 +2247,10 @@
 								R1 * 1/2
 							}
 							{
-								R1 * 3/8
+								R1 * 1/2
 							}
 							{
-								R1 * 1
+								R1 * 5/16
 							}
 							{
 								R1 * 3/4
@@ -1781,7 +2259,19 @@
 								R1 * 1/2
 							}
 							{
+								R1 * 3/8
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 3/8
+							}
+							{
 								R1 * 1/2
+							}
+							{
+								R1 * 1
 							}
 							{
 								R1 * 3/8
@@ -1790,22 +2280,13 @@
 								R1 * 1
 							}
 							{
-								R1 * 5/8
+								R1 * 1/2
 							}
 							{
 								R1 * 5/16
 							}
 							{
-								R1 * 3/8
-							}
-							{
 								R1 * 1/2
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1
 							}
 							{
 								R1 * 3/4
@@ -1814,7 +2295,7 @@
 								R1 * 1/2
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 								\bar "||"
 								\stopStaff
 								\startStaff
