@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+from abjad import Markup
 from abjad.tools import indicatortools
 from abjad.tools import spannertools
 from abjad.tools import selectortools
@@ -12,8 +13,8 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
             zaira.materials.background_dynamic_attachment_expression,
             zaira.materials.percussion_staff_attachment_expression,
             consort.makers.AttachmentExpression(
-                consort.makers.ComplexTextSpanner(
-                    markup=r'\box \pad-around #0.5 { shaker }',
+                attachments=consort.makers.ComplexTextSpanner(
+                    markup=Markup('shaker').pad_around(0.5).with_box(),
                     ),
                 selector=selectortools.Selector(),
                 ),
