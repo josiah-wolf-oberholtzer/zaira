@@ -129,7 +129,7 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.pedals_timespan_maker,
-    piano_pedals=zaira.materials.pedals_music_specifier,
+    piano_pedals=zaira.materials.piano_pedals_music_specifier,
     )
 
 
