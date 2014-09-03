@@ -319,7 +319,6 @@ afterGraceFraction = #(cons 127 128)
         \override StemTremolo.beam-width = 1.5
         \override StemTremolo.flag-count = 4
         \override StemTremolo.slope = 0.5
-        \override StemTremolo.Y-offset = -4
         \override StemTremolo.style = #'default
 
         \override SustainPedal.self-alignment-X = #CENTER
