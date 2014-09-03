@@ -318,6 +318,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                 piano,
                 strings,
                 ],
+            name='Zaira Score',
             )
 
         return score

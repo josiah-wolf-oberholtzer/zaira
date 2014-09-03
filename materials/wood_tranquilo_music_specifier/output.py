@@ -1,6 +1,0 @@
-# -*- encoding: utf-8 -*-
-from abjad import *
-import consort
-
-
-wood_tranquilo_music_specifier = consort.makers.MusicSpecifier()
