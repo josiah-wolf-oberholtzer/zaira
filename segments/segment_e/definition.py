@@ -24,6 +24,41 @@ segment_maker.set_duration_in_seconds(
     zaira.materials.total_duration_in_seconds,
     )
 
+fanfare_duration = durationtools.Duration(3, 4)
+
+
+### WINDS SETTINGS ############################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.dense_timespan_maker,
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(1, 3, 5),
+        ratio=(1, 2, 1, 2, 1, 2, 1),
+        timespan=timespantools.Timespan(
+            start_offset=fanfare_duration,
+            ),
+        ),
+    clarinet=zaira.materials.wind_airtone_music_specifier,
+    flute=zaira.materials.wind_airtone_music_specifier,
+    oboe=zaira.materials.wind_airtone_music_specifier,
+    )
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.dense_timespan_maker,
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(0, 2, 4, 6),
+        ratio=(1, 1, 3, 1, 1, 1, 2),
+        timespan=timespantools.Timespan(
+            start_offset=fanfare_duration,
+            ),
+        ),
+    clarinet=zaira.materials.wind_keyclick_music_specifier,
+    flute=zaira.materials.wind_keyclick_music_specifier,
+    oboe=zaira.materials.wind_keyclick_music_specifier,
+    )
+
 
 ### PERCUSSION SETTINGS #######################################################
 
@@ -104,7 +139,7 @@ segment_maker.add_setting(
 segment_maker.add_setting(
     timespan_maker=consort.makers.FloodedTimespanMaker(),
     timespan_identifier=timespantools.Timespan(
-        stop_offset=durationtools.Duration(3, 4),
+        stop_offset=fanfare_duration,
         ),
     piano_rh=new(
         zaira.materials.piano_fanfare_music_specifier,

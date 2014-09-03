@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 from abjad import new
-from abjad import show
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import mathtools
@@ -24,21 +23,41 @@ segment_maker.set_duration_in_seconds(
     zaira.materials.total_duration_in_seconds,
     )
 
+fanfare_duration = durationtools.Duration(1, 16)
+
+
+### WINDS SETTINGS ############################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.dense_timespan_maker,
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(0, 2, 4),
+        ratio=(1, 1, 1, 1, 1),
+        timespan=timespantools.Timespan(
+            start_offset=fanfare_duration,
+            ),
+        ),
+    clarinet=zaira.materials.wind_keyclick_music_specifier,
+    flute=zaira.materials.wind_keyclick_music_specifier,
+    oboe=zaira.materials.wind_keyclick_music_specifier,
+    )
+
 
 ### PERCUSSION SETTINGS #######################################################
 
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.dense_timespan_maker,
-    drums=None,
-    metals=None,
+    drums=zaira.materials.drum_tranquilo_music_specifier,
+    metals=zaira.materials.metal_tranquilo_music_specifier,
     )
 
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.sparse_timespan_maker,
-    drums=None,
-    metals=None,
+    drums=zaira.materials.drum_brushed_music_specifier,
+    metals=zaira.materials.metal_brushed_music_specifier,
     )
 
 
@@ -84,7 +103,7 @@ segment_maker.add_setting(
 segment_maker.add_setting(
     timespan_maker=consort.makers.FloodedTimespanMaker(),
     timespan_identifier=timespantools.Timespan(
-        stop_offset=durationtools.Duration(1, 16),
+        stop_offset=fanfare_duration,
         ),
     piano_rh=new(
         zaira.materials.piano_fanfare_music_specifier,

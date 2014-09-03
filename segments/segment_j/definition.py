@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 from abjad import new
-from abjad import show
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import mathtools
@@ -13,6 +12,10 @@ import zaira
 
 
 segment_maker = zaira.makers.ZairaSegmentMaker(
+    permitted_time_signatures=(
+        (2, 4),
+        (3, 8),
+        ),
     rehearsal_mark='J',
     tempo=indicatortools.Tempo((1, 4), 48),
     )
@@ -30,16 +33,18 @@ fanfare_duration = durationtools.Duration(2, 16)
 
 
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.dense_timespan_maker,
-    metals=None,
-    drums=None,
-    )
-
-
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.sparse_timespan_maker,
-    metals=None,
-    drums=None,
+    timespan_maker=new(
+        zaira.materials.sustained_timespan_maker,
+        fuse_groups=True,
+        ),
+    drums=new(
+        zaira.materials.percussion_superball_music_specifier,
+        pitch_maker__pitches=zaira.makers.Percussion.BASS_DRUM,
+        ),
+    metals=new(
+        zaira.materials.percussion_superball_music_specifier,
+        pitch_maker__pitches=zaira.makers.Percussion.TAM_TAM,
+        ),
     )
 
 
@@ -64,9 +69,6 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=consort.makers.FloodedTimespanMaker(),
-    timespan_identifier=timespantools.Timespan(
-        start_offset=fanfare_duration,
-        ),
     clarinet=new(
         zaira.materials.brazil_nut_music_specifier,
         rhythm_maker=zaira.materials.sustained_rhythm_maker,
