@@ -42,7 +42,7 @@ piano_prepared_bass_music_specifier = consort.makers.MusicSpecifier(
                     [
                         consort.makers.ClefSpanner(
                             clef=indicatortools.Clef(
-                                name='bass_8',
+                                name='bass_15',
                                 ),
                             ),
                         ]

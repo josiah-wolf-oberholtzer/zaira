@@ -31,7 +31,7 @@ piano_prepared_bass_music_specifier = consort.makers.MusicSpecifier(
             zaira.materials.background_dynamic_attachment_expression,
             consort.makers.AttachmentExpression(
                 attachments=consort.makers.ClefSpanner(
-                    clef='bass_8',
+                    clef='bass_15',
                     ),
                 selector=selectortools.Selector(),
                 ),
