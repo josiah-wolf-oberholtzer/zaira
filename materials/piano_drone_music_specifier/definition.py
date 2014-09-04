@@ -1,4 +1,6 @@
 # -*- encoding: utf-8 -*-
+from abjad.tools import spannertools
+from abjad.tools import selectortools
 import consort
 import zaira
 
@@ -7,7 +9,10 @@ piano_drone_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
         attachment_expressions=(
             zaira.materials.background_dynamic_attachment_expression,
-            zaira.materials.tremolo_attachment_expression,
+            consort.makers.AttachmentExpression(
+                attachments=spannertools.StemTremoloSpanner(),
+                selector=selectortools.selects_pitched_runs(),
+                ),
             ),
         ),
     labels='pedaled',
