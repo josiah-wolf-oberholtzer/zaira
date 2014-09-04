@@ -17,7 +17,7 @@ segment_maker = zaira.makers.ZairaSegmentMaker(
         (3, 8),
         ),
     rehearsal_mark='J',
-    tempo=indicatortools.Tempo((1, 4), 48),
+    tempo=indicatortools.Tempo((1, 4), 84),
     )
 
 ratio = mathtools.NonreducedRatio(2)

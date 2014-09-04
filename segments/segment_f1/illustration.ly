@@ -7,7 +7,7 @@
 
 \score {
 	\context Score = "Zaira Score" <<
-		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
+		\tag score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
 				\time 5/16
@@ -127,7 +127,7 @@
 			}
 		}
 		\context EnsembleGroup = "Wind Section Staff Group" <<
-			\keepWithTag #'score.flute
+			\tag score.flute
 			\context PerformerGroup = "Flute Performer Group" \with {
 				instrumentName = \markup { Flute }
 				shortInstrumentName = \markup { Fl. }
@@ -733,6 +733,7 @@
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -740,7 +741,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.oboe
+			\tag score.oboe
 			\context PerformerGroup = "Oboe Performer Group" \with {
 				instrumentName = \markup { Oboe }
 				shortInstrumentName = \markup { Ob. }
@@ -1350,6 +1351,7 @@
 							}
 							{
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -1357,7 +1359,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.clarinet-in-e-flat
+			\tag score.clarinet-in-e-flat
 			\context PerformerGroup = "Clarinet In E-Flat Performer Group" \with {
 				instrumentName = \markup { Clarinet in E-flat }
 				shortInstrumentName = \markup { Cl. E-flat }
@@ -1997,6 +1999,7 @@
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -2005,9 +2008,9 @@
 				}
 			>>
 		>>
-		\keepWithTag #'score.percussion
+		\tag score.percussion
 		\context EnsembleGroup = "Percussion Section Staff Group" <<
-			\keepWithTag #'score.percussion
+			\tag score.percussion
 			\context PerformerGroup = "Metals Performer Group" \with {
 				instrumentName = \markup { Metals }
 				shortInstrumentName = \markup { Metals }
@@ -2027,7 +2030,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2051,7 +2055,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2103,7 +2108,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2124,7 +2130,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2155,7 +2162,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2174,7 +2182,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2195,7 +2204,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2229,7 +2239,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2253,7 +2264,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2285,7 +2297,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2333,7 +2346,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2354,7 +2368,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2379,7 +2394,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2414,7 +2430,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2441,7 +2458,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2491,7 +2509,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2521,7 +2540,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2544,12 +2564,13 @@
 						{
 							{
 								r8
+								\bar "||"
 							}
 						}
 					}
 				}
 			>>
-			\keepWithTag #'score.percussion
+			\tag score.percussion
 			\context PerformerGroup = "Woods Performer Group" \with {
 				instrumentName = \markup { Woods }
 				shortInstrumentName = \markup { Woods }
@@ -2644,6 +2665,7 @@
 							}
 							{
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -2651,7 +2673,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.percussion
+			\tag score.percussion
 			\context PerformerGroup = "Drums Performer Group" \with {
 				instrumentName = \markup { Drums }
 				shortInstrumentName = \markup { Drums }
@@ -2676,7 +2698,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2738,7 +2761,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2758,7 +2782,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2780,7 +2805,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2801,7 +2827,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2838,7 +2865,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2867,7 +2895,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2912,7 +2941,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2953,7 +2983,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2973,7 +3004,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2995,7 +3027,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3030,7 +3063,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3049,7 +3083,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3075,7 +3110,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3109,7 +3145,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3133,7 +3170,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3160,7 +3198,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3194,6 +3233,7 @@
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -3202,7 +3242,7 @@
 				}
 			>>
 		>>
-		\keepWithTag #'score.piano
+		\tag score.piano
 		\context PianoStaff = "Piano Performer Group" \with {
 			instrumentName = \markup { Piano }
 			shortInstrumentName = \markup { Pf. }
@@ -3301,19 +3341,19 @@
 					{
 						\tweak #'text #tuplet-number::calc-fraction-text
 						\times 6/7 {
-							f''16 \f [ (
+							af''16 \f [ (
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 3
-							e''32
-							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
 							g''32
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
-							cs'''32
+							bf''32
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
-							bf''32 )
+							e'''32
+							\set stemLeftBeamCount = 3
+							\set stemRightBeamCount = 3
+							cs'''32 )
 							\set stemLeftBeamCount = 3
 							r32 ]
 						}
@@ -3391,32 +3431,20 @@
 					}
 					{
 						{
-							r32
+							r16
 						}
 					}
 					{
-						{
+						\times 4/5 {
+							g''16 \p [ (
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 3
+							bf''32
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 1
-							e'''32 \p ~ [ (
-						}
-						\times 2/3 {
-							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 3
 							e'''32
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 3
-							g''32
-							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 1
-							cs'''32 ~
-						}
-						{
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 3
-							cs'''32
-							\set stemLeftBeamCount = 3
-							bf''32 ] )
+							cs'''32 ] )
 						}
 					}
 					{
@@ -3517,14 +3545,12 @@
 					}
 					{
 						{
-							g''32 \f [ (
-							\set stemLeftBeamCount = 2
-							cs'''16 ] )
+							bf''16 \f
 						}
 					}
 					{
 						{
-							r32
+							r16
 						}
 						{
 							r8.
@@ -3580,6 +3606,7 @@
 					{
 						{
 							r8.
+							\bar "||"
 						}
 					}
 				}
@@ -3677,6 +3704,7 @@
 					{
 						r4
 						r16
+						%%% \bar "||" %%%
 					}
 				}
 			}
@@ -3727,34 +3755,17 @@
 							\startStaff
 						}
 						{
-							r16
+							r8
 						}
 					}
 					{
-						\times 2/3 {
-							r32 [
-							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 3
-							e,32 \p ~ (
-							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 3
-							e,32
-							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 3
-							g,32
-							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 3
-							cs32
-							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 1
-							bf,32 ~
-						}
-						\times 2/3 {
-							\set stemLeftBeamCount = 1
+						{
+							g,16 \p [ (
+							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 3
 							bf,32
-							\set stemLeftBeamCount = 2
-							d16 ] )
+							\set stemLeftBeamCount = 3
+							e32 ] )
 						}
 					}
 					{
@@ -3790,15 +3801,12 @@
 					}
 					{
 						{
-							g,32 \f [ (
-							\set stemLeftBeamCount = 2
-							cs16 ] )
+							bf,16 \f
 						}
 					}
 					{
 						{
-							r32
-							r8
+							r8.
 							r2
 						}
 						{
@@ -3832,24 +3840,17 @@
 						}
 					}
 					{
-						\times 4/5 {
-							cs'32 \p [ (
+						\tweak #'text #tuplet-number::calc-fraction-text
+						\times 6/7 {
+							e32 \p [ (
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 2
-							bf16
+							cs16
 							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 3
-							d32
-							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 1
-							f,32 ~
-						}
-						{
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 3
-							f,32
-							\set stemLeftBeamCount = 3
-							e,32 ] )
+							\set stemRightBeamCount = 2
+							f16
+							\set stemLeftBeamCount = 2
+							af,16 ] )
 						}
 					}
 					{
@@ -3873,6 +3874,7 @@
 						}
 						{
 							R1 * 5/16
+							\bar "||"
 							\stopStaff
 							\startStaff
 						}
@@ -4169,12 +4171,13 @@
 				{
 					{
 						r8.
+						%%% \bar "||" %%%
 					}
 				}
 			}
 		>>
 		\context EnsembleGroup = "String Section Staff Group" <<
-			\keepWithTag #'score.violin
+			\tag score.violin
 			\context StringPerformerGroup = "Violin Performer Group" \with {
 				instrumentName = \markup { Violin }
 				shortInstrumentName = \markup { Vn. }
@@ -4505,6 +4508,7 @@
 							}
 							{
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -4512,7 +4516,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.viola
+			\tag score.viola
 			\context StringPerformerGroup = "Viola Performer Group" \with {
 				instrumentName = \markup { Viola }
 				shortInstrumentName = \markup { Va. }
@@ -4884,6 +4888,7 @@
 							}
 							{
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -4891,7 +4896,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.cello
+			\tag score.cello
 			\context StringPerformerGroup = "Cello Performer Group" \with {
 				instrumentName = \markup { Cello }
 				shortInstrumentName = \markup { Vc. }

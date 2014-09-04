@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 from abjad import new
-from abjad import show
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import mathtools
+from abjad.tools import pitchtools
 from abjad.tools import timespantools
 import consort
 import zaira
@@ -101,10 +101,18 @@ segment_maker.add_setting(
     piano_rh=new(
         zaira.materials.piano_flourish_music_specifier,
         pitch_maker__register_specifier__center_pitch="c''",
+        pitch_maker__transform_stack=(
+            pitchtools.Inversion(),
+            pitchtools.Transposition(3),
+            ),
         ),
     piano_lh=new(
         zaira.materials.piano_flourish_music_specifier,
         pitch_maker__register_specifier__center_pitch="c,",
+        pitch_maker__transform_stack=(
+            pitchtools.Inversion(),
+            pitchtools.Transposition(3),
+            ),
         ),
     )
 

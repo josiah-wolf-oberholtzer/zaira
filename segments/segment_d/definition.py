@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 from abjad import new
-from abjad import show
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import mathtools
@@ -14,7 +13,7 @@ import zaira
 
 segment_maker = zaira.makers.ZairaSegmentMaker(
     rehearsal_mark='D',
-    tempo=indicatortools.Tempo((1, 4), 48),
+    tempo=indicatortools.Tempo((1, 4), 84),
     )
 
 ratio = mathtools.NonreducedRatio(1, 2, 1)

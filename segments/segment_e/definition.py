@@ -61,6 +61,9 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.sparse_timespan_maker,
+    timespan_identifier=timespantools.Timespan(
+        start_offset=fanfare_duration,
+        ),
     clarinet=new(
         zaira.materials.wind_ramtongue_music_specifier,
         pitch_maker__register_specifier__center_pitch='D3',
@@ -78,13 +81,14 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.dense_timespan_maker,
-    metals=None,
+    metals=zaira.materials.metal_agitation_music_specifier,
     )
 
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.sparse_timespan_maker,
-    metals=None,
+    metals=zaira.materials.metal_brushed_music_specifier,
+    drums=zaira.materials.drum_agitation_music_specifier,
     )
 
 
