@@ -63,10 +63,6 @@ wood_agitation_music_specifier = consort.makers.MusicSpecifier(
                 attachments=datastructuretools.TypedList(
                     [
                         indicatortools.Articulation('accent'),
-                        indicatortools.Articulation('accent'),
-                        None,
-                        indicatortools.Articulation('accent'),
-                        None,
                         ]
                     ),
                 selector=selectortools.Selector(
@@ -115,24 +111,16 @@ wood_agitation_music_specifier = consort.makers.MusicSpecifier(
                 ]
             ),
         ),
-    rhythm_maker=rhythmmakertools.IncisedRhythmMaker(
-        incise_specifier=rhythmmakertools.InciseSpecifier(
-            prefix_talea=(1, 1, 2, 4, 4, 1, 2, 1, 6),
-            prefix_counts=(2, 2, 4, 3, 2, 5, 4, 2, 1),
-            suffix_talea=(1,),
-            suffix_counts=(0,),
-            talea_denominator=16,
-            fill_with_notes=False,
-            ),
+    rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
+        denominators=(16, 4),
         extra_counts_per_division=(0, 1, 0, 1, 2),
         beam_specifier=rhythmmakertools.BeamSpecifier(
             beam_each_division=False,
             beam_divisions_together=False,
             ),
-        tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
-            avoid_dots=True,
-            is_diminution=True,
-            simplify_tuplets=True,
+        duration_spelling_specifier=rhythmmakertools.DurationSpellingSpecifier(
+            decrease_durations_monotonically=True,
+            forbidden_written_duration=durationtools.Duration(1, 2),
             ),
         ),
     )

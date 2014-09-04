@@ -46,7 +46,7 @@ metal_tranquilo_music_specifier = consort.makers.MusicSpecifier(
                                 contents=(
                                     markuptools.MarkupCommand(
                                         'override',
-                                        schemetools.SchemePair('padding', 0.75),
+                                        schemetools.SchemePair('padding', 0.5),
                                         markuptools.MarkupCommand(
                                             'parenthesize',
                                             markuptools.MarkupCommand(

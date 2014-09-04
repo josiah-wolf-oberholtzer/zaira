@@ -17,10 +17,6 @@ wood_agitation_music_specifier = consort.makers.MusicSpecifier(
             consort.makers.AttachmentExpression(
                 attachments=(
                     indicatortools.Articulation('accent'),
-                    indicatortools.Articulation('accent'),
-                    None,
-                    indicatortools.Articulation('accent'),
-                    None,
                     ),
                 selector=selectortools.Selector(
                     ).by_logical_tie(pitched=True)[0],
@@ -53,9 +49,8 @@ wood_agitation_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     rhythm_maker=new(
-        zaira.materials.stuttering_rhythm_maker,
-        incise_specifier__prefix_counts=(2, 2, 4, 3, 2, 5, 4, 2, 1),
-        incise_specifier__prefix_talea=(1, 1, 2, 4, 4, 1, 2, 1, 6),
+        zaira.materials.reiterating_rhythm_maker,
+        denominators=(16, 4),
         extra_counts_per_division=(0, 1, 0, 1, 2),
         ),
     )
