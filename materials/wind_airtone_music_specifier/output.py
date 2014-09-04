@@ -101,83 +101,8 @@ wind_airtone_music_specifier = consort.makers.MusicSpecifier(
                 pitchtools.NamedPitch('e'),
                 ]
             ),
-        register_specifier=consort.makers.RegisterSpecifier(
-            division_inflections=consort.makers.RegisterInflectionInventory(
-                [
-                    consort.makers.RegisterInflection(
-                        inflections=pitchtools.IntervalSegment(
-                            (
-                                pitchtools.NumberedInterval(-3),
-                                pitchtools.NumberedInterval(3),
-                                ),
-                            item_class=pitchtools.NumberedInterval,
-                            ),
-                        ratio=mathtools.Ratio(1),
-                        ),
-                    consort.makers.RegisterInflection(
-                        inflections=pitchtools.IntervalSegment(
-                            (
-                                pitchtools.NumberedInterval(-3),
-                                pitchtools.NumberedInterval(3),
-                                ),
-                            item_class=pitchtools.NumberedInterval,
-                            ),
-                        ratio=mathtools.Ratio(1),
-                        ),
-                    consort.makers.RegisterInflection(
-                        inflections=pitchtools.IntervalSegment(
-                            (
-                                pitchtools.NumberedInterval(3),
-                                pitchtools.NumberedInterval(-3),
-                                ),
-                            item_class=pitchtools.NumberedInterval,
-                            ),
-                        ratio=mathtools.Ratio(1),
-                        ),
-                    ]
-                ),
-            phrase_inflections=consort.makers.RegisterInflectionInventory(
-                [
-                    consort.makers.RegisterInflection(
-                        inflections=pitchtools.IntervalSegment(
-                            (
-                                pitchtools.NumberedInterval(-3),
-                                pitchtools.NumberedInterval(3),
-                                ),
-                            item_class=pitchtools.NumberedInterval,
-                            ),
-                        ratio=mathtools.Ratio(1),
-                        ),
-                    consort.makers.RegisterInflection(
-                        inflections=pitchtools.IntervalSegment(
-                            (
-                                pitchtools.NumberedInterval(6),
-                                pitchtools.NumberedInterval(3),
-                                pitchtools.NumberedInterval(-6),
-                                ),
-                            item_class=pitchtools.NumberedInterval,
-                            ),
-                        ratio=mathtools.Ratio(2, 1),
-                        ),
-                    ]
-                ),
-            segment_inflections=consort.makers.RegisterInflectionInventory(
-                [
-                    consort.makers.RegisterInflection(
-                        inflections=pitchtools.IntervalSegment(
-                            (
-                                pitchtools.NumberedInterval(-12),
-                                pitchtools.NumberedInterval(6),
-                                pitchtools.NumberedInterval(-6),
-                                pitchtools.NumberedInterval(12),
-                                ),
-                            item_class=pitchtools.NumberedInterval,
-                            ),
-                        ratio=mathtools.Ratio(2, 1, 3),
-                        ),
-                    ]
-                ),
-            ),
+        register_specifier=consort.makers.RegisterSpecifier(),
+        register_spread=0,
         ),
     rhythm_maker=rhythmmakertools.TaleaRhythmMaker(
         talea=rhythmmakertools.Talea(

@@ -14,7 +14,10 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
             zaira.materials.percussion_staff_attachment_expression,
             consort.makers.AttachmentExpression(
                 attachments=consort.makers.ComplexTextSpanner(
-                    markup=Markup('shaker').pad_around(0.5).with_box(),
+                    markup=Markup('shaker')
+                        .italic()
+                        .pad_around(0.5)
+                        .with_box(),
                     ),
                 selector=selectortools.Selector().by_leaves(),
                 ),

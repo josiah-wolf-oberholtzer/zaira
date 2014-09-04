@@ -29,7 +29,8 @@ wind_airtone_music_specifier = consort.makers.MusicSpecifier(
         ),
     pitch_maker=consort.makers.PitchClassPitchMaker(
         pitch_classes='a c b d b f gs e',
-        register_specifier=zaira.materials.register_specifier_inventory[3],
+        register_specifier=consort.makers.RegisterSpecifier(),
+        register_spread=0,
         ),
     rhythm_maker=zaira.materials.legato_rhythm_maker,
     )

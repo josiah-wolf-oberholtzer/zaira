@@ -69,7 +69,10 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
                                         markuptools.MarkupCommand(
                                             'pad-around',
                                             0.5,
-                                            'shaker'
+                                            markuptools.MarkupCommand(
+                                                'italic',
+                                                'shaker'
+                                                )
                                             )
                                         ),
                                     ),
