@@ -18,11 +18,11 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
         >>> score = template()
         >>> print(format(score))
         \context Score = "Zaira Score" <<
-            \keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
+            \tag score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
             \context TimeSignatureContext = "TimeSignatureContext" {
             }
             \context EnsembleGroup = "Wind Section Staff Group" <<
-                \keepWithTag #'score.flute
+                \tag score.flute
                 \context PerformerGroup = "Flute Performer Group" \with {
                     instrumentName = \markup { Flute }
                     shortInstrumentName = \markup { Fl. }
@@ -33,7 +33,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                         }
                     }
                 >>
-                \keepWithTag #'score.oboe
+                \tag score.oboe
                 \context PerformerGroup = "Oboe Performer Group" \with {
                     instrumentName = \markup { Oboe }
                     shortInstrumentName = \markup { Ob. }
@@ -44,7 +44,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                         }
                     }
                 >>
-                \keepWithTag #'score.clarinet-in-e-flat
+                \tag score.clarinet-in-e-flat
                 \context PerformerGroup = "Clarinet In E-Flat Performer Group" \with {
                     instrumentName = \markup { Clarinet in E-flat }
                     shortInstrumentName = \markup { Cl. E-flat }
@@ -56,9 +56,9 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                     }
                 >>
             >>
-            \keepWithTag #'score.percussion
+            \tag score.percussion
             \context EnsembleGroup = "Percussion Section Staff Group" <<
-                \keepWithTag #'score.percussion
+                \tag score.percussion
                 \context PerformerGroup = "Metals Performer Group" \with {
                     instrumentName = \markup { Metals }
                     shortInstrumentName = \markup { Metals }
@@ -69,7 +69,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                         }
                     }
                 >>
-                \keepWithTag #'score.percussion
+                \tag score.percussion
                 \context PerformerGroup = "Woods Performer Group" \with {
                     instrumentName = \markup { Woods }
                     shortInstrumentName = \markup { Woods }
@@ -80,7 +80,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                         }
                     }
                 >>
-                \keepWithTag #'score.percussion
+                \tag score.percussion
                 \context PerformerGroup = "Drums Performer Group" \with {
                     instrumentName = \markup { Drums }
                     shortInstrumentName = \markup { Drums }
@@ -92,7 +92,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                     }
                 >>
             >>
-            \keepWithTag #'score.piano
+            \tag score.piano
             \context PianoStaff = "Piano Performer Group" \with {
                 instrumentName = \markup { Piano }
                 shortInstrumentName = \markup { Pf. }
@@ -113,7 +113,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                 }
             >>
             \context EnsembleGroup = "String Section Staff Group" <<
-                \keepWithTag #'score.violin
+                \tag score.violin
                 \context StringPerformerGroup = "Violin Performer Group" \with {
                     instrumentName = \markup { Violin }
                     shortInstrumentName = \markup { Vn. }
@@ -124,7 +124,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                         }
                     }
                 >>
-                \keepWithTag #'score.viola
+                \tag score.viola
                 \context StringPerformerGroup = "Viola Performer Group" \with {
                     instrumentName = \markup { Viola }
                     shortInstrumentName = \markup { Va. }
@@ -135,7 +135,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                         }
                     }
                 >>
-                \keepWithTag #'score.cello
+                \tag score.cello
                 \context StringPerformerGroup = "Cello Performer Group" \with {
                     instrumentName = \markup { Cello }
                     shortInstrumentName = \markup { Vc. }
