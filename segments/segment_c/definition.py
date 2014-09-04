@@ -67,7 +67,10 @@ segment_maker.add_setting(
     timespan_identifier=timespantools.Timespan(
         start_offset=fanfare_duration,
         ),
-    drums=zaira.materials.drum_brushed_music_specifier,
+    drums=(
+        zaira.materials.drum_brushed_music_specifier,
+        zaira.materials.drum_agitation_music_specifier,
+        ),
     )
 
 

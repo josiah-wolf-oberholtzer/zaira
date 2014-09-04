@@ -3,5 +3,5 @@ import collections
 
 
 metadata = collections.OrderedDict([
-    ('view_name', 'attachment expressions'),
+    ('output_material_class_name', 'MusicSpecifier'),
     ])

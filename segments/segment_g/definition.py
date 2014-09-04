@@ -28,14 +28,19 @@ segment_maker.set_duration_in_seconds(
 
 
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.dense_timespan_maker,
-    drums=zaira.materials.drum_agitation_music_specifier,
+    timespan_maker=new(
+        zaira.materials.dense_timespan_maker,
+        reflect=True,
+        ),
+    drums=zaira.materials.drum_storm_music_specifier,
     )
 
 
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.sparse_timespan_maker,
-    drums=zaira.materials.drum_tranquilo_music_specifier,
+    timespan_maker=new(
+        zaira.materials.sparse_timespan_maker,
+        ),
+    drums=zaira.materials.drum_agitation_music_specifier,
     )
 
 

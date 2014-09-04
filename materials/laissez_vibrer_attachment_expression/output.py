@@ -11,13 +11,16 @@ laissez_vibrer_attachment_expression = consort.makers.AttachmentExpression(
                 markuptools.Markup(
                     contents=(
                         markuptools.MarkupCommand(
-                            'box',
+                            'override',
+                            schemetools.SchemePair('padding', 0.5),
                             markuptools.MarkupCommand(
-                                'pad-around',
-                                0.5,
+                                'parenthesize',
                                 markuptools.MarkupCommand(
-                                    'caps',
-                                    'L.V.'
+                                    'smaller',
+                                    markuptools.MarkupCommand(
+                                        'caps',
+                                        'L.V.'
+                                        )
                                     )
                                 )
                             ),

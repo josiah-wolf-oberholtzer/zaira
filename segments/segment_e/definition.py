@@ -81,14 +81,19 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.dense_timespan_maker,
+    drums=zaira.materials.drum_agitation_music_specifier,
     metals=zaira.materials.metal_agitation_music_specifier,
     )
 
 
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.sparse_timespan_maker,
+    timespan_maker=new(
+        zaira.materials.sparse_timespan_maker,
+        padding=durationtools.Duration(1, 4),
+        reflect=True,
+        ),
+    drums=zaira.materials.drum_brushed_music_specifier,
     metals=zaira.materials.metal_brushed_music_specifier,
-    drums=zaira.materials.drum_agitation_music_specifier,
     )
 
 

@@ -4,17 +4,22 @@ import consort
 import zaira
 
 
-drum_agitation_music_specifier = consort.makers.MusicSpecifier(
+drum_storm_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
         attachment_expressions=(
-            zaira.materials.foreground_dynamic_attachment_expression,
+            zaira.materials.erratic_dynamic_attachment_expression,
             consort.makers.AttachmentExpression(
-                attachments=indicatortools.Articulation('accent'),
-                selector=selectortools.selects_first_logical_tie_in_pitched_runs()[0],
+                attachments=spannertools.StemTremoloSpanner(),
+                selector=selectortools.Selector(
+                    ).by_logical_tie(pitched=True
+                    ).longer_than((1, 16))
                 ),
             consort.makers.AttachmentExpression(
-                attachments=indicatortools.Articulation('staccato'),
-                selector=selectortools.selects_all_but_first_logical_tie_in_pitched_runs()[0],
+                attachments=(
+                    indicatortools.Articulation('accent'),
+                    ),
+                selector=selectortools.Selector(
+                    ).by_logical_tie(pitched=True)[0],
                 ),
             ),
         ),
@@ -32,7 +37,8 @@ drum_agitation_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     rhythm_maker=new(
-        zaira.materials.stuttering_rhythm_maker,
-        extra_counts_per_division=(2, 1, 2, 1, 0, 2, 1, 0),
+        zaira.materials.reiterating_rhythm_maker,
+        denominators=(16, 16, 4, 16, 4),
+        extra_counts_per_division=(0, 1, 0, 1, 2),
         ),
     )
