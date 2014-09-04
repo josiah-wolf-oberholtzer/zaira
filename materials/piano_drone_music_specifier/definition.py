@@ -10,6 +10,7 @@ piano_drone_music_specifier = consort.makers.MusicSpecifier(
             zaira.materials.tremolo_attachment_expression,
             ),
         ),
+    labels='pedaled',
     pitch_maker=consort.makers.AbsolutePitchMaker(
         chord_expressions=(
             consort.makers.ChordExpression(

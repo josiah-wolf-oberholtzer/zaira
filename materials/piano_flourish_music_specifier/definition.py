@@ -14,6 +14,7 @@ piano_flourish_music_specifier = consort.makers.MusicSpecifier(
             zaira.materials.erratic_dynamic_attachment_expression,
             ),
         ),
+    labels='pedaled',
     pitch_maker=consort.makers.PitchClassPitchMaker(
         pitch_classes='d f e g cs as',
         register_specifier=zaira.materials.register_specifier_inventory[2],

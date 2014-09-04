@@ -59,6 +59,7 @@ piano_drone_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
+    labels=('pedaled',),
     pitch_maker=consort.makers.AbsolutePitchMaker(
         allow_repetition=False,
         chord_expressions=datastructuretools.CyclicTuple(

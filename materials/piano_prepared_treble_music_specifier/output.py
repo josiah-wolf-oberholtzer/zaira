@@ -123,6 +123,7 @@ piano_prepared_treble_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
+    labels=('pedaled',),
     pitch_maker=consort.makers.AbsolutePitchMaker(
         allow_repetition=False,
         pitches=datastructuretools.CyclicTuple(

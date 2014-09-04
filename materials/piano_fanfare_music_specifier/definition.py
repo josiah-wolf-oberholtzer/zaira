@@ -21,6 +21,7 @@ piano_fanfare_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
+    labels='pedaled',
     pitch_maker=consort.makers.PitchClassPitchMaker(
         chord_expressions=(
             consort.makers.KeyClusterExpression(

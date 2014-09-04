@@ -10,6 +10,7 @@ piano_clusters_music_specifier = consort.makers.MusicSpecifier(
             zaira.materials.background_dynamic_attachment_expression,
             ),
         ),
+    labels='pedaled',
     pitch_maker=consort.makers.PitchClassPitchMaker(
         chord_expressions=(
             consort.makers.KeyClusterExpression(

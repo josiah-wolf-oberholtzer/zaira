@@ -59,6 +59,7 @@ piano_fanfare_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
+    labels=('pedaled',),
     pitch_maker=consort.makers.PitchClassPitchMaker(
         allow_repetition=False,
         chord_expressions=datastructuretools.CyclicTuple(
