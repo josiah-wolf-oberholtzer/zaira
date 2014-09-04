@@ -6,11 +6,11 @@
 #(ly:set-option 'relative-includes #t)
 \include "../stylesheets/stylesheet.ily"
 
-\paper {
-    max-systems-per-page = 2
-}
+#(set-default-paper-size "11x17" 'portrait)
+#(set-global-staff-size 14)
 
 \score {
+    \keepWithTag violin
     { 
         \include "segment-a.ly"
         \include "segment-b.ly"

@@ -6,11 +6,10 @@
 #(ly:set-option 'relative-includes #t)
 \include "../stylesheets/stylesheet.ily"
 
-\paper {
-    max-systems-per-page = 2
-}
+#(set-global-staff-size 12)
 
 \score {
+    \keepWithTag piano
     { 
         \include "segment-a.ly"
         \include "segment-b.ly"

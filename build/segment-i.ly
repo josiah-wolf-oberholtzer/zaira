@@ -1,5 +1,5 @@
 	\context Score = "Zaira Score" <<
-		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
+		\tag score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
 				\time 3/8
@@ -127,7 +127,7 @@
 			}
 		}
 		\context EnsembleGroup = "Wind Section Staff Group" <<
-			\keepWithTag #'score.flute
+			\tag score.flute
 			\context PerformerGroup = "Flute Performer Group" \with {
 				instrumentName = \markup { Flute }
 				shortInstrumentName = \markup { Fl. }
@@ -459,6 +459,7 @@
 							}
 							{
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -466,7 +467,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.oboe
+			\tag score.oboe
 			\context PerformerGroup = "Oboe Performer Group" \with {
 				instrumentName = \markup { Oboe }
 				shortInstrumentName = \markup { Ob. }
@@ -564,6 +565,7 @@
 							}
 							{
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -571,7 +573,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.clarinet-in-e-flat
+			\tag score.clarinet-in-e-flat
 			\context PerformerGroup = "Clarinet In E-Flat Performer Group" \with {
 				instrumentName = \markup { Clarinet in E-flat }
 				shortInstrumentName = \markup { Cl. E-flat }
@@ -956,6 +958,7 @@
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -964,9 +967,9 @@
 				}
 			>>
 		>>
-		\keepWithTag #'score.percussion
+		\tag score.percussion
 		\context EnsembleGroup = "Percussion Section Staff Group" <<
-			\keepWithTag #'score.percussion
+			\tag score.percussion
 			\context PerformerGroup = "Metals Performer Group" \with {
 				instrumentName = \markup { Metals }
 				shortInstrumentName = \markup { Metals }
@@ -986,7 +989,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1022,7 +1026,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1050,7 +1055,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1069,7 +1075,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1093,7 +1100,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1117,7 +1125,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1137,7 +1146,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1166,7 +1176,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1192,7 +1203,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1217,7 +1229,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1259,7 +1272,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1285,7 +1299,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1311,7 +1326,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1342,7 +1358,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1372,7 +1389,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1391,7 +1409,8 @@
 									\box
 										\pad-around
 											#0.5
-											brush
+											\italic
+												brush
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1410,7 +1429,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1440,7 +1460,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1473,7 +1494,8 @@
 									\box
 										\pad-around
 											#0.5
-											superball
+											\italic
+												superball
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1491,12 +1513,13 @@
 						{
 							{
 								r16
+								\bar "||"
 							}
 						}
 					}
 				}
 			>>
-			\keepWithTag #'score.percussion
+			\tag score.percussion
 			\context PerformerGroup = "Woods Performer Group" \with {
 				instrumentName = \markup { Woods }
 				shortInstrumentName = \markup { Woods }
@@ -1690,6 +1713,7 @@
 							}
 							{
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -1697,7 +1721,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.percussion
+			\tag score.percussion
 			\context PerformerGroup = "Drums Performer Group" \with {
 				instrumentName = \markup { Drums }
 				shortInstrumentName = \markup { Drums }
@@ -1872,6 +1896,7 @@
 							}
 							{
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -1880,8 +1905,8 @@
 				}
 			>>
 		>>
-		\keepWithTag #'score.piano
-		\context PianoPerformerGroup = "Piano Performer Group" \with {
+		\tag score.piano
+		\context PianoStaff = "Piano Performer Group" \with {
 			instrumentName = \markup { Piano }
 			shortInstrumentName = \markup { Pf. }
 		} <<
@@ -2080,6 +2105,7 @@
 					{
 						{
 							r16
+							\bar "||"
 						}
 					}
 				}
@@ -2177,6 +2203,7 @@
 					{
 						r4
 						r16
+						%%% \bar "||" %%%
 					}
 				}
 			}
@@ -2290,6 +2317,7 @@
 						}
 						{
 							R1 * 5/16
+							\bar "||"
 							\stopStaff
 							\startStaff
 						}
@@ -2464,12 +2492,13 @@
 				{
 					{
 						r16
+						%%% \bar "||" %%%
 					}
 				}
 			}
 		>>
 		\context EnsembleGroup = "String Section Staff Group" <<
-			\keepWithTag #'score.violin
+			\tag score.violin
 			\context StringPerformerGroup = "Violin Performer Group" \with {
 				instrumentName = \markup { Violin }
 				shortInstrumentName = \markup { Vn. }
@@ -2884,6 +2913,7 @@
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -2891,7 +2921,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.viola
+			\tag score.viola
 			\context StringPerformerGroup = "Viola Performer Group" \with {
 				instrumentName = \markup { Viola }
 				shortInstrumentName = \markup { Va. }
@@ -3281,6 +3311,7 @@
 							}
 							{
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -3288,7 +3319,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.cello
+			\tag score.cello
 			\context StringPerformerGroup = "Cello Performer Group" \with {
 				instrumentName = \markup { Cello }
 				shortInstrumentName = \markup { Vc. }

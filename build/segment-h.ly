@@ -1,5 +1,5 @@
 	\context Score = "Zaira Score" <<
-		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
+		\tag score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
 				\time 2/4
@@ -62,7 +62,7 @@
 			}
 		}
 		\context EnsembleGroup = "Wind Section Staff Group" <<
-			\keepWithTag #'score.flute
+			\tag score.flute
 			\context PerformerGroup = "Flute Performer Group" \with {
 				instrumentName = \markup { Flute }
 				shortInstrumentName = \markup { Fl. }
@@ -409,6 +409,7 @@
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -416,7 +417,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.oboe
+			\tag score.oboe
 			\context PerformerGroup = "Oboe Performer Group" \with {
 				instrumentName = \markup { Oboe }
 				shortInstrumentName = \markup { Ob. }
@@ -805,6 +806,7 @@
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -812,7 +814,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.clarinet-in-e-flat
+			\tag score.clarinet-in-e-flat
 			\context PerformerGroup = "Clarinet In E-Flat Performer Group" \with {
 				instrumentName = \markup { Clarinet in E-flat }
 				shortInstrumentName = \markup { Cl. E-flat }
@@ -1176,6 +1178,7 @@
 							}
 							{
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -1184,9 +1187,9 @@
 				}
 			>>
 		>>
-		\keepWithTag #'score.percussion
+		\tag score.percussion
 		\context EnsembleGroup = "Percussion Section Staff Group" <<
-			\keepWithTag #'score.percussion
+			\tag score.percussion
 			\context PerformerGroup = "Metals Performer Group" \with {
 				instrumentName = \markup { Metals }
 				shortInstrumentName = \markup { Metals }
@@ -1244,6 +1247,7 @@
 							}
 							{
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -1251,7 +1255,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.percussion
+			\tag score.percussion
 			\context PerformerGroup = "Woods Performer Group" \with {
 				instrumentName = \markup { Woods }
 				shortInstrumentName = \markup { Woods }
@@ -1444,6 +1448,7 @@
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -1451,7 +1456,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.percussion
+			\tag score.percussion
 			\context PerformerGroup = "Drums Performer Group" \with {
 				instrumentName = \markup { Drums }
 				shortInstrumentName = \markup { Drums }
@@ -1668,6 +1673,7 @@
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -1676,8 +1682,8 @@
 				}
 			>>
 		>>
-		\keepWithTag #'score.piano
-		\context PianoPerformerGroup = "Piano Performer Group" \with {
+		\tag score.piano
+		\context PianoStaff = "Piano Performer Group" \with {
 			instrumentName = \markup { Piano }
 			shortInstrumentName = \markup { Pf. }
 		} <<
@@ -1904,7 +1910,13 @@
 						{
 							\clef "treble^15"
 							\once \override TextSpanner.bound-details.left-broken.text = ##f
-							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.left.text = \markup {
+								\box
+									\pad-around
+										#0.5
+										\italic
+											prepared
+								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
 								\draw-line
@@ -1963,7 +1975,13 @@
 						{
 							\clef "treble^15"
 							\once \override TextSpanner.bound-details.left-broken.text = ##f
-							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.left.text = \markup {
+								\box
+									\pad-around
+										#0.5
+										\italic
+											prepared
+								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
 								\draw-line
@@ -2133,7 +2151,13 @@
 						{
 							\clef "treble^15"
 							\once \override TextSpanner.bound-details.left-broken.text = ##f
-							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.left.text = \markup {
+								\box
+									\pad-around
+										#0.5
+										\italic
+											prepared
+								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
 								\draw-line
@@ -2156,23 +2180,21 @@
 					}
 					{
 						{
-							d''''32 \ppp [ (
+							g'''32 \ppp [ (
+							\set stemLeftBeamCount = 3
+							\set stemRightBeamCount = 3
+							e'''32
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
 							f'''32
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 1
-							e''32 ~
-						}
-						{
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 2
-							e''16
-							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 3
-							g''32
+							d'''32
 							\set stemLeftBeamCount = 3
-							cs'''32 ] )
+							\set stemRightBeamCount = 2
+							af'''32
+							\set stemLeftBeamCount = 2
+							b''16 ] )
 						}
 					}
 					{
@@ -2185,7 +2207,13 @@
 						{
 							\clef "treble^15"
 							\once \override TextSpanner.bound-details.left-broken.text = ##f
-							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.left.text = \markup {
+								\box
+									\pad-around
+										#0.5
+										\italic
+											prepared
+								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
 								\draw-line
@@ -2210,7 +2238,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							<g''' b''' d'''' f''''>16 \p [
+							<g'' b'' d''' f'''>16 \p [
 								^ \markup {
 									\center-align
 										\concat
@@ -2353,6 +2381,7 @@
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
 							R1 * 5/16
+							\bar "||"
 							\stopStaff
 							\startStaff
 						}
@@ -2402,6 +2431,7 @@
 					{
 						r4
 						r16
+						%%% \bar "||" %%%
 					}
 				}
 			}
@@ -2500,18 +2530,18 @@
 					}
 					{
 						{
-							d32 \ppp [ (
+							g32 \ppp [ (
+							\set stemLeftBeamCount = 3
+							\set stemRightBeamCount = 3
+							e,32
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
 							f,32
 							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 1
-							e,32 ~
-						}
-						{
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 2
-							e,16 ] )
+							\set stemRightBeamCount = 3
+							d,32
+							\set stemLeftBeamCount = 3
+							af,32 ] )
 						}
 					}
 					{
@@ -2616,7 +2646,13 @@
 						{
 							\clef "bass_15"
 							\once \override TextSpanner.bound-details.left-broken.text = ##f
-							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.left.text = \markup {
+								\box
+									\pad-around
+										#0.5
+										\italic
+											prepared
+								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
 								\draw-line
@@ -2683,7 +2719,13 @@
 						{
 							\clef "bass_15"
 							\once \override TextSpanner.bound-details.left-broken.text = ##f
-							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.left.text = \markup {
+								\box
+									\pad-around
+										#0.5
+										\italic
+											prepared
+								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
 								\draw-line
@@ -2870,7 +2912,13 @@
 						{
 							\clef "bass_15"
 							\once \override TextSpanner.bound-details.left-broken.text = ##f
-							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.left.text = \markup {
+								\box
+									\pad-around
+										#0.5
+										\italic
+											prepared
+								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
 								\draw-line
@@ -2894,19 +2942,19 @@
 					{
 						\tweak #'text #tuplet-number::calc-fraction-text
 						\times 6/7 {
-							f,16 \p [ (
+							e,16 \p [ (
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 3
-							e32
+							f,32
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
-							g,32
+							d32
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
-							cs32
+							af32
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
-							bf,32 )
+							b,32 )
 							\set stemLeftBeamCount = 3
 							r32 ]
 						}
@@ -2921,7 +2969,13 @@
 						{
 							\clef "bass_15"
 							\once \override TextSpanner.bound-details.left-broken.text = ##f
-							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
+							\once \override TextSpanner.bound-details.left.text = \markup {
+								\box
+									\pad-around
+										#0.5
+										\italic
+											prepared
+								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
 								\draw-line
@@ -3068,6 +3122,7 @@
 						}
 						{
 							R1 * 5/16
+							\bar "||"
 							\stopStaff
 							\startStaff
 						}
@@ -3080,23 +3135,17 @@
 						s1 * 1/8 \sustainOn
 					}
 					{
-						s1 * 1/8
-					}
-					{
-						s1 * 1/8
-					}
-					{
-						s1 * 1/8
-					}
-					{
-						s1 * 1/8
-					}
-					{
 						s1 * 1/4
 						<> \sustainOff
 					}
 				}
 				{
+					{
+						r8
+					}
+					{
+						r4.
+					}
 					{
 						r8.
 					}
@@ -3157,19 +3206,9 @@
 				}
 				{
 					{
-						r16
+						r2
+						r8.
 					}
-				}
-				{
-					{
-						s1 * 3/8 \sustainOn
-					}
-					{
-						s1 * 1/4
-						<> \sustainOff
-					}
-				}
-				{
 					{
 						r8.
 					}
@@ -3234,36 +3273,22 @@
 						r16
 					}
 					{
-						r16
+						r4.
 					}
-				}
-				{
-					{
-						s1 * 5/16 \sustainOn
-						<> \sustainOff
-					}
-				}
-				{
-					{
-						r16
-					}
-				}
-				{
-					{
-						s1 * 1/4 \sustainOn
-						<> \sustainOff
-					}
-				}
-				{
 					{
 						r4
 						r16
+					}
+					{
+						r4
+						r16
+						%%% \bar "||" %%%
 					}
 				}
 			}
 		>>
 		\context EnsembleGroup = "String Section Staff Group" <<
-			\keepWithTag #'score.violin
+			\tag score.violin
 			\context StringPerformerGroup = "Violin Performer Group" \with {
 				instrumentName = \markup { Violin }
 				shortInstrumentName = \markup { Vn. }
@@ -3454,6 +3479,7 @@
 							}
 							{
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -3461,7 +3487,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.viola
+			\tag score.viola
 			\context StringPerformerGroup = "Viola Performer Group" \with {
 				instrumentName = \markup { Viola }
 				shortInstrumentName = \markup { Va. }
@@ -3652,6 +3678,7 @@
 							}
 							{
 								R1 * 5/16
+								\bar "||"
 								\stopStaff
 								\startStaff
 							}
@@ -3659,7 +3686,7 @@
 					}
 				}
 			>>
-			\keepWithTag #'score.cello
+			\tag score.cello
 			\context StringPerformerGroup = "Cello Performer Group" \with {
 				instrumentName = \markup { Cello }
 				shortInstrumentName = \markup { Vc. }
