@@ -1572,13 +1572,22 @@
 							}
 						}
 						{
-							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 6/7 {
-								e'16 [ \< \p
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								e'8 :64 -\accent ~ ]
-								e'4 :32 \f
+							{
+								e'16 -\accent [ \< \p
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								e'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16 -\accent
+								\set stemLeftBeamCount = 2
+								e'16 -\accent ] \f
 							}
 						}
 						{
@@ -1589,11 +1598,8 @@
 						}
 						{
 							{
-								e'8 :64 -\accent [ \> \f
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								c'16 ]
-								c'4 :32 -\accent \p
+								e'8. :64 -\accent \f ~
+								e'4 :32
 							}
 						}
 						{
@@ -1628,27 +1634,28 @@
 						}
 						{
 							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 3/4 {
-								c'16 [ \< \p
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 :64 -\accent
+							\times 3/5 {
+								c'16 -\accent [ \< \p
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								e'16 -\accent
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								c'16 -\accent
+								e'16 -\accent
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								e'16
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								e'8 :64 -\accent
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 :64 ~
+								c'16 :128 -\accent ~ ]
+								c'4 :32 ~
 								\set stemLeftBeamCount = 2
-								c'16 :128 ] \f
+								c'16 :128 \f
 							}
 						}
 						{
@@ -1679,23 +1686,36 @@
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
 								c'8. :64
-								\set stemLeftBeamCount = 2
-								c'16 -\accent ] \p
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								c'16 :128 -\accent ~
+								\set stemLeftBeamCount = 1
+								c'8. :64 ] \p
 							}
 						}
 						{
 							{
-								r2
+								r16
+								r4
 							}
 							{
 								r16
 							}
 						}
 						{
-							\times 2/3 {
-								c'4 :32 -\accent \p
-								\set stemLeftBeamCount = 1
-								e'8 :64
+							\times 4/5 {
+								c'16 -\accent [ \< \p
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								e'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								e'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16 -\accent
+								\set stemLeftBeamCount = 2
+								e'16 -\accent ] \f
 							}
 						}
 						{
@@ -1707,10 +1727,10 @@
 							}
 						}
 						{
-							\times 4/5 {
-								e'8 :64 \f [
+							{
+								e'8 :64 -\accent \f ~ [
 								\set stemLeftBeamCount = 1
-								e'8. :64 -\accent ]
+								e'8 :64 ]
 							}
 						}
 						{
@@ -1744,25 +1764,36 @@
 							}
 						}
 						{
-							{
+							\tweak #'text #tuplet-number::calc-fraction-text
+							\times 3/4 {
 								e'16 -\accent [ \< \p
-								\set stemLeftBeamCount = 1
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								e'16 -\accent
+								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								c'8 :64
+								e'16 -\accent
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
 								e'8 :64 -\accent
 							}
-							\times 2/3 {
+							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
 								e'16 -\accent
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								e'16 :128 ~ ]
-								e'4 :32 \f
+								\set stemRightBeamCount = 2
+								c'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								c'16 -\accent
+								\set stemLeftBeamCount = 2
+								e'16 -\accent ] \f
 							}
 						}
 						{
@@ -1802,23 +1833,54 @@
 						}
 						{
 							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 ~
-							}
-							{
-								c'4 ~
-							}
-							{
-								c'4 ~
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8
+								f'16 \laissezVibrer \ppp
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
 							}
 						}
 						{
+							{
+								r16
+							}
+						}
+						{
+							\times 2/3 {
+								d'16 -\accent \fff [
+								g16 -\staccato ]
+								r4
+							}
+							\times 4/5 {
+								f'16 -\accent \f [
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								g8 -\staccato
+								\set stemLeftBeamCount = 1
+								r8 ]
+							}
+						}
+						{
+							{
+								g16 \laissezVibrer \p
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
+							}
+						}
+						{
+							{
+								r16
+							}
 							{
 								r4
 								r16
@@ -1826,147 +1888,86 @@
 						}
 						{
 							{
-								c'8. ~ [
+								f'16 \laissezVibrer \pp [
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								c'8 ~
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 ~ ]
-								c'4
-							}
-						}
-						{
-							{
 								r8
-							}
-						}
-						{
-							{
-								c'4 ~
-							}
-							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								c'8 ~ [
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8. ]
-							}
-						}
-						{
-							{
-								r16
-							}
-						}
-						{
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8. ~
-							}
-							{
-								c'4 ~
-							}
-							{
-								c'4 ~
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 ~ [
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 ~ ]
-								c'4 ~
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 ~ [
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 ~
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 ~
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 ~ ]
-								c'4
-							}
-						}
-						{
-							{
-								r4
-							}
-							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 5/16
-								\stopStaff
-								\startStaff
-							}
-							{
-								r16
-							}
-						}
-						{
-							{
-								c'8. ~ [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8. ~
+								r8
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								c'16 ~
-								\set stemLeftBeamCount = 1
-								c'8 ]
+								g16 \laissezVibrer \ppp ]
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
 							}
 						}
 						{
+							{
+								r16
+								r4
+							}
 							{
 								r8
 							}
 						}
 						{
 							{
-								c'4 ~
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											\italic
+												brush
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
+								g4 :32 \mf ~ \startTextSpan
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								c'8 ~ [
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 ~
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 ~
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 ~ ]
-								c'4
+								g8 :64
+								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								r4
+								d'16 \laissezVibrer \ppp
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
+							}
+						}
+						{
+							{
+								r8
 							}
 							{
 								r16
@@ -1974,29 +1975,139 @@
 						}
 						{
 							{
-								c'8. ~ [
+								f'16 \laissezVibrer \p
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
+							}
+						}
+						{
+							{
+								r8
+							}
+						}
+						{
+							{
+								g8 -\accent \f
+							}
+						}
+						{
+							{
+								r8
+							}
+						}
+						{
+							{
+								d'16 \laissezVibrer \pp [
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								c'8 ~
+								r8.
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								r8
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 \laissezVibrer \ppp ]
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
+							}
+						}
+						{
+							{
+								r16
+								r4
+								r8
+							}
+						}
+						{
+							{
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											\italic
+												brush
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								f'8 \mp ~ \startTextSpan [
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								c'8 ~ ]
-								c'4 ~
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 ~ [
+								f'8 ~
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								c'8 ~
+								f'8 ~ ]
+								f'4
+								<> \stopTextSpan
+							}
+						}
+						{
+							{
+								r4
 							}
 							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 ]
+								\stopStaff
+								\once \override Staff.StaffSymbol.line-count = 1
+								\startStaff
+								R1 * 5/16
+								\stopStaff
+								\startStaff
+							}
+							{
+								r16
+							}
+						}
+						{
+							\tweak #'text #tuplet-number::calc-fraction-text
+							\times 6/7 {
+								d'16 -\accent \ff [
+								g8 -\staccato ]
+								r4
+							}
+						}
+						{
+							{
+								g16 \laissezVibrer \ppp
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
 							}
 						}
 						{
@@ -2006,36 +2117,233 @@
 						}
 						{
 							{
-								c'4 ~
-							}
-							{
-								c'4 ~
+								f'16 \laissezVibrer \p [
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
 								\set stemLeftBeamCount = 1
-								c'8
+								\set stemRightBeamCount = 1
+								r8.
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								g16 \laissezVibrer \pp
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								r16
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								d'16 \laissezVibrer \ppp
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								r16
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								r8
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 \laissezVibrer \p ]
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
 							}
 						}
 						{
 							{
-								r8
+								r16
+								r2
 							}
 							{
-								r8
+								r16
 							}
 						}
 						{
 							{
-								c'4 ~
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											\italic
+												brush
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
+								g8. :64 \mf ~ \startTextSpan [
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								g8 :64 ~
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								c'8 ~
-							}
-							{
-								c'4
+								g8 :64 ~ ]
+								g4 :32 ~
+								\set stemLeftBeamCount = 1
+								g8 :64
+								<> \stopTextSpan
 							}
 						}
 						{
+							{
+								d'16 \laissezVibrer \pp [
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								r16
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 \laissezVibrer \ppp ]
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
+							}
+						}
+						{
+							{
+								r16
+								r4
+							}
+						}
+						{
+							{
+								f'16 \laissezVibrer \ppp
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
+							}
+						}
+						{
+							{
+								r8.
+							}
+						}
+						{
+							\tweak #'text #tuplet-number::calc-fraction-text
+							\times 3/4 {
+								g8 -\accent \mf [
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								d'16 -\staccato
+								r16 ]
+								r4
+							}
+						}
+						{
+							{
+								r8
+							}
+							{
+								r8
+							}
+						}
+						{
+							{
+								d'16 \laissezVibrer \p [
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								r16
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								r8
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 \laissezVibrer \pp
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								r16
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								d'16 \laissezVibrer \ppp ]
+									^ \markup {
+										\override
+											#'(padding . 0.5)
+											\parenthesize
+												\smaller
+													\caps
+														L.V.
+										}
+							}
+						}
+						{
+							{
+								r16
+								r8
+							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
@@ -2050,8 +2358,23 @@
 						}
 						{
 							{
-								c'4
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											\italic
+												brush
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
+								f'4 \mp \startTextSpan
 								\bar "||"
+								<> \stopTextSpan
 							}
 						}
 					}
@@ -2516,12 +2839,18 @@
 							r16
 						}
 						{
-							r2
+							r4
+							r8.
 						}
 					}
 					{
-						{
-							b''16 \p
+						\times 4/5 {
+							r16 [
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							b''16 \p (
+							\set stemLeftBeamCount = 3
+							af''32 ] )
 						}
 					}
 					{
@@ -2698,8 +3027,7 @@
 						}
 					}
 					{
-						\tweak #'text #tuplet-number::calc-fraction-text
-						\times 6/7 {
+						{
 							d'''32 \p [ (
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 2
@@ -2707,8 +3035,8 @@
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 2
 							cs'''16
-							\set stemLeftBeamCount = 2
-							bf'16 ] )
+							\set stemLeftBeamCount = 3
+							bf'32 ] )
 						}
 					}
 					{

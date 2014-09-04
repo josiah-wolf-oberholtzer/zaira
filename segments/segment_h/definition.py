@@ -89,22 +89,18 @@ segment_maker.add_setting(
 
 
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.dense_timespan_maker,
+    timespan_maker=new(
+        zaira.materials.sparse_timespan_maker,
+        fuse_groups=True,
+        reflect=True,
+        ),
     timespan_identifier=timespantools.Timespan(
         start_offset=fanfare_duration,
         ),
-    drums=None,
-    woods=None,
-    )
-
-
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.sparse_timespan_maker,
-    timespan_identifier=timespantools.Timespan(
-        start_offset=fanfare_duration,
+    drums=new(
+        zaira.materials.drum_brushed_music_specifier,
+        pitch_maker__pitches=zaira.makers.Percussion.BASS_DRUM,
         ),
-    drums=None,
-    woods=None,
     )
 
 

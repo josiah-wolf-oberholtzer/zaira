@@ -1459,7 +1459,7 @@
 								a16 \laissezVibrer \ppp
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -1478,7 +1478,7 @@
 								c'16 \laissezVibrer \p
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -1527,7 +1527,7 @@
 								c'16 \laissezVibrer \pp
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -1545,7 +1545,7 @@
 								a16 \laissezVibrer \ppp
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -1578,32 +1578,13 @@
 								e'4 :32 \mf ~ \startTextSpan
 							}
 							{
+								e'4 :32 ~
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								e'16 :128 ~
+							}
+							{
 								e'4 :32
-								<> \stopTextSpan
-							}
-						}
-						{
-							{
-								r16
-							}
-						}
-						{
-							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											\italic
-												brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								f4 \mp \startTextSpan
 								<> \stopTextSpan
 							}
 						}
@@ -1614,10 +1595,10 @@
 						}
 						{
 							{
-								c'16 \laissezVibrer \p
+								f16 \laissezVibrer \p
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -1634,10 +1615,10 @@
 						}
 						{
 							{
-								a16 \laissezVibrer \pp
+								c'16 \laissezVibrer \pp
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -1656,10 +1637,10 @@
 						}
 						{
 							{
-								e'16 \laissezVibrer \ppp [
+								a16 \laissezVibrer \ppp [
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -1672,10 +1653,10 @@
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f16 \laissezVibrer \p ]
+								e'16 \laissezVibrer \p ]
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -1705,8 +1686,8 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								f8 :64 \mf ~ \startTextSpan
-								f4 :32
+								e'8 \mp ~ \startTextSpan
+								e'4
 								<> \stopTextSpan
 							}
 						}
@@ -1717,10 +1698,10 @@
 						}
 						{
 							{
-								a16 \laissezVibrer \p [
+								f16 \laissezVibrer \p [
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -1733,10 +1714,10 @@
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								c'16 \laissezVibrer \pp ]
+								a16 \laissezVibrer \pp ]
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -1766,19 +1747,12 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								c'4 \mp ~ \startTextSpan
+								a4 :32 \mf ~ \startTextSpan
 							}
 							{
+								a4 :32 ~
 								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 ~ [
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 ~
-								\set stemLeftBeamCount = 1
-								c'8 ]
+								a8 :64
 								<> \stopTextSpan
 							}
 						}
@@ -1790,10 +1764,10 @@
 						}
 						{
 							{
-								e'16 \laissezVibrer \pp
+								c'16 \laissezVibrer \pp
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -1811,10 +1785,10 @@
 						}
 						{
 							{
-								a16 \laissezVibrer \ppp [
+								e'16 \laissezVibrer \ppp [
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -1827,10 +1801,10 @@
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								c'16 \laissezVibrer \p ]
+								a16 \laissezVibrer \p ]
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -1848,10 +1822,10 @@
 						}
 						{
 							{
-								c'16 \laissezVibrer \p
+								a16 \laissezVibrer \p
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -1976,12 +1950,12 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								f'4 :32 \mf ~ \startTextSpan
+								f'4 \mp ~ \startTextSpan
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								f'8 :64
+								f'8
 								<> \stopTextSpan
 							}
 						}
@@ -1998,7 +1972,7 @@
 								d'16 \laissezVibrer \pp [
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -2017,7 +1991,7 @@
 								g16 \laissezVibrer \ppp
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -2033,7 +2007,7 @@
 								f'16 \laissezVibrer \p ]
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -2055,7 +2029,7 @@
 								g16 \laissezVibrer \ppp
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -2085,7 +2059,7 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								f'2 \mp \startTextSpan
+								f'2 :32 \mf \startTextSpan
 								<> \stopTextSpan
 							}
 						}
@@ -2100,7 +2074,7 @@
 								g16 \laissezVibrer \p [
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -2113,7 +2087,7 @@
 								d'16 \laissezVibrer \pp
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -2150,7 +2124,7 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								d'4 :32 \mf \startTextSpan
+								d'4 \mp \startTextSpan
 								<> \stopTextSpan
 							}
 						}
@@ -2167,7 +2141,7 @@
 								f'16 \laissezVibrer \pp
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -2186,7 +2160,7 @@
 								g16 \laissezVibrer \ppp
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -2205,7 +2179,7 @@
 								d'16 \laissezVibrer \p
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -2235,8 +2209,8 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								f'8 \mp ~ \startTextSpan
-								f'4
+								f'8 :64 \mf ~ \startTextSpan
+								f'4 :32
 								<> \stopTextSpan
 							}
 						}
@@ -2255,7 +2229,7 @@
 								d'16 \laissezVibrer \pp [
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -2274,7 +2248,7 @@
 								g16 \laissezVibrer \ppp ]
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -2303,19 +2277,12 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								g4 :32 \mf ~ \startTextSpan
+								g4 \mp ~ \startTextSpan
 							}
 							{
+								g4 ~
 								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								g8 :64 ~ [
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								g8 :64 ~
-								\set stemLeftBeamCount = 1
-								g8 :64 ]
+								g8
 								<> \stopTextSpan
 							}
 						}
@@ -2331,7 +2298,7 @@
 								f'16 \laissezVibrer \ppp [
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -2347,7 +2314,7 @@
 								g16 \laissezVibrer \p ]
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps
@@ -2365,7 +2332,7 @@
 								g16 \laissezVibrer \p
 									^ \markup {
 										\override
-											#'(padding . 0.75)
+											#'(padding . 0.5)
 											\parenthesize
 												\smaller
 													\caps

@@ -28,16 +28,9 @@ segment_maker.set_duration_in_seconds(
 
 
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.dense_timespan_maker,
-    metals=None,
-    woods=None,
-    )
-
-
-segment_maker.add_setting(
     timespan_maker=zaira.materials.sparse_timespan_maker,
-    metals=None,
-    woods=None,
+    metals=zaira.materials.metal_agitation_music_specifier,
+    woods=zaira.materials.wood_agitation_music_specifier,
     )
 
 

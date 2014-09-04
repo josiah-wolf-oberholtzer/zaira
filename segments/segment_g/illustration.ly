@@ -798,31 +798,21 @@
 							}
 						}
 						{
-							{
+							\times 2/3 {
 								g16 -\accent [ \> \f
 								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\accent
+								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\accent
+								g16 -\accent
 							}
-							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 5/6 {
+							{
 								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								f'16 -\accent ] \p
+								\set stemRightBeamCount = 1
+								d'8 :64 -\accent ~
+								\set stemLeftBeamCount = 1
+								d'8. :64 ] \p
 							}
 						}
 						{
@@ -875,30 +865,13 @@
 						}
 						{
 							{
-								g16 -\accent [ \< \p
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\accent
+								g8 :64 -\accent ~ \< \p
+								g4 :32
 							}
 							\times 4/5 {
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
+								d'16 -\accent [
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
 								f'16 -\accent
@@ -906,19 +879,19 @@
 								\set stemRightBeamCount = 2
 								g16 -\accent
 								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								d'16 -\accent
+								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								d'16 -\accent ]
+								f'16 -\accent ]
 							}
 							{
-								f'4 :32 -\accent
+								d'4 :32 -\accent
 							}
-							\times 2/3 {
+							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
 								g16 -\accent [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
 								\set stemLeftBeamCount = 2
 								f'16 -\accent ] \f
 							}
@@ -932,7 +905,7 @@
 							}
 						}
 						{
-							{
+							\times 4/5 {
 								f'16 -\accent [ \> \f
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
@@ -941,28 +914,16 @@
 								\set stemRightBeamCount = 2
 								d'16 -\accent
 								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\accent
+								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\accent
+								d'16 -\accent ]
 							}
-							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 5/6 {
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								d'16 -\accent
+							{
+								g4 :32 -\accent ~
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								f'16 -\accent ] \p
+								g16 :128 \p
 							}
 						}
 						{
@@ -996,44 +957,34 @@
 						}
 						{
 							{
-								d'16 -\accent [ \< \p
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
+								d'8 :64 -\accent ~ [ \< \p
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								d'8 :64
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								f'8 :64 -\accent ~
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								f'8 :64
+							}
+							{
+								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
 								d'16 -\accent
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\accent
+								g16 -\accent
 							}
 							\times 2/3 {
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								g16 -\accent
+								f'16 -\accent
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								d'16 -\accent
+								g16 -\accent
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\accent
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								d'8 :64 -\accent ] \f
+								d'16 -\accent ] \f
 							}
 						}
 						{
@@ -1086,7 +1037,8 @@
 							}
 						}
 						{
-							{
+							\tweak #'text #tuplet-number::calc-fraction-text
+							\times 6/7 {
 								f'16 -\accent [ \< \p
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
@@ -1101,28 +1053,16 @@
 								\set stemRightBeamCount = 2
 								g16 -\accent
 								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								d'16 -\accent
+								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								d'16 -\accent
+								f'16 -\accent ]
 							}
-							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 5/6 {
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								f'16 -\accent
+							{
+								d'4 :32 -\accent ~
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								d'16 -\accent ] \f
+								d'16 :128 \f
 							}
 						}
 						{
@@ -1158,27 +1098,8 @@
 						}
 						{
 							{
-								d'16 -\accent [ \> \f
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								f'16 -\accent ] \p
+								d'4 :32 -\accent \f
+								f'4 :32 -\accent
 							}
 						}
 						{
@@ -1203,27 +1124,27 @@
 							}
 						}
 						{
-							{
+							\times 2/3 {
 								g16 -\accent [ \< \p
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								d'16 -\accent
-							}
-							\times 2/3 {
-								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
+								d'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
 								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								g16 -\accent
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								f'8 :64 -\accent
+								d'8 :64 -\accent
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								g16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\accent
 							}
 							\tweak #'text #tuplet-number::calc-fraction-text
 							\times 6/7 {
@@ -1257,32 +1178,33 @@
 						}
 						{
 							{
-								d'16 -\accent [ \> \f
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\accent
-							}
-							\times 4/5 {
 								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								d'16 -\accent
+								d'8 :64 -\accent [ \> \f
 							}
 							{
 								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								f'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								d'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								g16 -\accent
+								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'8 :64 -\accent ] \p
+								f'16 -\accent
+							}
+							\times 2/3 {
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								g16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								d'16 -\accent
+								\set stemLeftBeamCount = 2
+								f'16 -\accent ] \p
 							}
 						}
 						{
@@ -1321,13 +1243,17 @@
 							}
 						}
 						{
-							{
+							\tweak #'text #tuplet-number::calc-fraction-text
+							\times 3/4 {
 								g16 -\accent \f [
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
 								f'16 -\accent
 								\set stemLeftBeamCount = 2
-								g16 -\accent ]
+								\set stemRightBeamCount = 2
+								g16 -\accent
+								\set stemLeftBeamCount = 2
+								d'16 -\accent ]
 							}
 						}
 						{

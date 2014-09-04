@@ -89,6 +89,7 @@ segment_maker.add_setting(
 segment_maker.add_setting(
     timespan_maker=new(
         zaira.materials.sparse_timespan_maker,
+        fuse_groups=True,
         padding=durationtools.Duration(1, 4),
         reflect=True,
         ),
