@@ -151,11 +151,14 @@
 								\set stemRightBeamCount = 2
 								r16
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
+								\set stemRightBeamCount = 2
 								f16 -\staccato \pp
-								\set stemLeftBeamCount = 1
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								r16
+								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								r8
+								r16
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
 								g'8 :64 -\staccato \ppp
@@ -456,9 +459,12 @@
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
 								f16 -\staccato \ppp
-								\set stemLeftBeamCount = 1
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								r16
+								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								r8
+								r16
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
 								c'8 :64 -\staccato \p
@@ -605,9 +611,12 @@
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
 								g'16 -\staccato \ppp \startTextSpan [
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								r16
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								r8.
+								r8
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
 								c'16 -\staccato \p
@@ -768,10 +777,19 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								f8 :64 -\staccato \ppp \startTextSpan
-								r4
+								f8 :64 -\staccato \ppp \startTextSpan [
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								r16
+								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								g'16 -\staccato \p [
+								r8
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								r16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								g'16 -\staccato \p
 							}
 							{
 								\set stemLeftBeamCount = 1
@@ -788,9 +806,12 @@
 							\times 5/6 {
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								r8.
+								r8
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
+								r16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
 								f16 -\staccato \pp
 								\set stemLeftBeamCount = 1
 								r8 ]
@@ -990,11 +1011,14 @@
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
 								f16 -\staccato \p \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								r8
-								\set stemLeftBeamCount = 1
+								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
+								r16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								r16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
 								g'16 -\staccato \pp
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
@@ -1133,9 +1157,12 @@
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
 								f16 -\staccato \pp
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								r8
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								r16
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								r16
 								\set stemLeftBeamCount = 2
 								c'16 -\staccato \ppp ]
 								\stopStaff
@@ -1227,9 +1254,16 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r4 \startTextSpan
+								r8. \startTextSpan [
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								r16
+								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f8. :64 \pp [
+								f16 :128 \pp ~
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								f8 :64
 							}
 							\tweak #'text #tuplet-number::calc-fraction-text
 							\times 5/6 {
@@ -1241,7 +1275,10 @@
 								f16 -\staccato
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								r8.
+								r8
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								r16
 								\set stemLeftBeamCount = 2
 								g'16 -\staccato \ppp ]
 								\stopStaff
@@ -2095,7 +2132,7 @@
 			>>
 		>>
 		\keepWithTag #'score.piano
-		\context PianoPerformerGroup = "Piano Performer Group" \with {
+		\context PianoStaff = "Piano Performer Group" \with {
 			instrumentName = \markup { Piano }
 			shortInstrumentName = \markup { Pf. }
 		} <<
@@ -2287,10 +2324,13 @@
 					{
 						\times 2/3 {
 							r32 [
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 2
-							e'''16 \< \p (
-							\set stemLeftBeamCount = 2
+							\set stemLeftBeamCount = 3
+							\set stemRightBeamCount = 3
+							e'''32 ~ \< \p (
+							\set stemLeftBeamCount = 3
+							\set stemRightBeamCount = 3
+							e'''32
+							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
 							g''32
 							\set stemLeftBeamCount = 3
@@ -2311,9 +2351,12 @@
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 3
 							f''32
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 2
-							e''16
+							\set stemLeftBeamCount = 3
+							\set stemRightBeamCount = 3
+							e''32 ~
+							\set stemLeftBeamCount = 3
+							\set stemRightBeamCount = 3
+							e''32
 							\set stemLeftBeamCount = 3
 							g''32 ] \f )
 						}
@@ -2361,11 +2404,20 @@
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
 							\pitchedTrill
-							cs''''8 \ppp \startTextSpan \startTrillSpan d''''
+							cs''''8 \ppp \startTextSpan [ \startTrillSpan d''''
 							<> \stopTrillSpan
-							r4
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 2
+							r16
+							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
-							e''''16 \p [
+							r8
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 2
+							r16
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 1
+							e''''16 \p
 						}
 						\tweak #'text #tuplet-number::calc-fraction-text
 						\times 6/7 {
@@ -2377,9 +2429,12 @@
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
 							f''''16
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 1
+							r16
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
-							r8.
+							r8
 						}
 						{
 							\set stemLeftBeamCount = 1
@@ -2663,9 +2718,12 @@
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 2
 							b,,,16 \pp
-							\set stemLeftBeamCount = 1
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							r16
+							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 1
-							r8
+							r16
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
 							\pitchedTrill
@@ -2857,10 +2915,13 @@
 					{
 						\times 2/3 {
 							r32 [
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 2
-							e16 \p (
-							\set stemLeftBeamCount = 2
+							\set stemLeftBeamCount = 3
+							\set stemRightBeamCount = 3
+							e32 \p ~ (
+							\set stemLeftBeamCount = 3
+							\set stemRightBeamCount = 3
+							e32
+							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
 							g,32
 							\set stemLeftBeamCount = 3

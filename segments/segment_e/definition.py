@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 from abjad import new
-from abjad import show
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import mathtools
@@ -30,19 +29,19 @@ fanfare_duration = durationtools.Duration(3, 4)
 ### WINDS SETTINGS ############################################################
 
 
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.dense_timespan_maker,
-    timespan_identifier=consort.makers.RatioPartsExpression(
-        parts=(1, 3, 5),
-        ratio=(1, 2, 1, 2, 1, 2, 1),
-        timespan=timespantools.Timespan(
-            start_offset=fanfare_duration,
-            ),
-        ),
-    clarinet=zaira.materials.wind_airtone_music_specifier,
-    flute=zaira.materials.wind_airtone_music_specifier,
-    oboe=zaira.materials.wind_airtone_music_specifier,
-    )
+#segment_maker.add_setting(
+#    timespan_maker=zaira.materials.dense_timespan_maker,
+#    timespan_identifier=consort.makers.RatioPartsExpression(
+#        parts=(1, 3, 5),
+#        ratio=(1, 2, 1, 2, 1, 2, 1),
+#        timespan=timespantools.Timespan(
+#            start_offset=fanfare_duration,
+#            ),
+#        ),
+#    clarinet=zaira.materials.wind_airtone_music_specifier,
+#    flute=zaira.materials.wind_airtone_music_specifier,
+#    oboe=zaira.materials.wind_airtone_music_specifier,
+#    )
 
 
 segment_maker.add_setting(
@@ -57,6 +56,20 @@ segment_maker.add_setting(
     clarinet=zaira.materials.wind_keyclick_music_specifier,
     flute=zaira.materials.wind_keyclick_music_specifier,
     oboe=zaira.materials.wind_keyclick_music_specifier,
+    )
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.sparse_timespan_maker,
+    clarinet=new(
+        zaira.materials.wind_ramtongue_music_specifier,
+        pitch_maker__register_specifier__center_pitch='D3',
+        ),
+    flute=zaira.materials.wind_ramtongue_music_specifier,
+    oboe=new(
+        zaira.materials.wind_ramtongue_music_specifier,
+        pitch_maker__register_specifier__center_pitch='Bb3',
+        ),
     )
 
 
@@ -129,6 +142,25 @@ segment_maker.add_setting(
                 ),
             ),
         pitch_maker__register_specifier__center_pitch="c,,",
+        ),
+    )
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.sparse_timespan_maker,
+        fuse_groups=True,
+        padding=durationtools.Duration(1, 4),
+        reflect=True,
+        ),
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(0, 2, 4),
+        ratio=(1, 2, 1, 2, 1),
+        ),
+    piano_rh=zaira.materials.piano_guero_music_specifier,
+    piano_lh=new(
+        zaira.materials.piano_guero_music_specifier,
+        seed=1,
         ),
     )
 

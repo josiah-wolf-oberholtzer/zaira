@@ -29,19 +29,19 @@ fanfare_duration = durationtools.Duration(1, 16)
 ### WINDS SETTINGS ############################################################
 
 
-segment_maker.add_setting(
-    timespan_maker=zaira.materials.tutti_timespan_maker,
-    timespan_identifier=consort.makers.RatioPartsExpression(
-        parts=(1, 3, 5),
-        ratio=(1, 2, 1, 2, 1, 2, 1),
-        timespan=timespantools.Timespan(
-            start_offset=fanfare_duration,
-            ),
-        ),
-    clarinet=zaira.materials.wind_airtone_music_specifier,
-    flute=zaira.materials.wind_airtone_music_specifier,
-    oboe=zaira.materials.wind_airtone_music_specifier,
-    )
+#segment_maker.add_setting(
+#    timespan_maker=zaira.materials.tutti_timespan_maker,
+#    timespan_identifier=consort.makers.RatioPartsExpression(
+#        parts=(1, 3, 5),
+#        ratio=(1, 2, 1, 2, 1, 2, 1),
+#        timespan=timespantools.Timespan(
+#            start_offset=fanfare_duration,
+#            ),
+#        ),
+#    clarinet=zaira.materials.wind_airtone_music_specifier,
+#    flute=zaira.materials.wind_airtone_music_specifier,
+#    oboe=zaira.materials.wind_airtone_music_specifier,
+#    )
 
 
 ### PERCUSSION SETTINGS #######################################################
@@ -106,6 +106,7 @@ segment_maker.add_setting(
         zaira.materials.tutti_timespan_maker,
         playing_talea__counts=(3, 2, 3, 3, 2, 4),
         playing_groupings=(1,),
+        padding=durationtools.Duration(3, 8),
         ),
     clarinet=zaira.materials.brazil_nut_music_specifier,
     flute=zaira.materials.brazil_nut_music_specifier,

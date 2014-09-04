@@ -29,6 +29,7 @@ segment_maker.set_duration_in_seconds(
 
 fanfare_duration = durationtools.Duration(2, 16)
 
+
 ### PERCUSSION SETTINGS #######################################################
 
 

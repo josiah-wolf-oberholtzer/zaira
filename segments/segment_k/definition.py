@@ -30,29 +30,18 @@ segment_maker.set_duration_in_seconds(
     )
 
 
-### PERCUSSION SETTINGS #######################################################
-
-
-segment_maker.add_setting(
-    timespan_maker=consort.makers.FloodedTimespanMaker(),
-    metals=new(
-        zaira.materials.percussion_reiteration_music_specifier,
-        pitch_maker__pitches=zaira.makers.Percussion.BRAKE_DRUM,
-        ),
-    )
-
-
 ### FANFARE SETTINGS ##########################################################
 
 
 segment_maker.add_setting(
     timespan_maker=consort.makers.FloodedTimespanMaker(),
     timespan_identifier=timespantools.Timespan(
-        stop_offset=durationtools.Duration(3, 16),
+        stop_offset=durationtools.Duration(3, 8),
         ),
     piano_rh=new(
         zaira.materials.piano_fanfare_music_specifier,
         pitch_maker__register_specifier__center_pitch="g'",
+        rhythm_maker__denominators=[8],
         ),
     piano_lh=new(
         zaira.materials.piano_fanfare_music_specifier,
@@ -61,13 +50,31 @@ segment_maker.add_setting(
                 .pitch_maker.chord_expressions[:-1],
         pitch_maker__pitch_classes="g c a f d f e b e",
         pitch_maker__register_specifier__center_pitch="g,,",
+        rhythm_maker__denominators=[8],
         ),
     drums=new(
         zaira.materials.percussion_fanfare_music_specifier,
         pitch_maker__pitches=zaira.makers.Percussion.KICK_DRUM,
+        rhythm_maker__denominators=[8],
         ),
     metals=new(
         zaira.materials.percussion_fanfare_music_specifier,
+        pitch_maker__pitches=zaira.makers.Percussion.BRAKE_DRUM,
+        rhythm_maker__denominators=[8],
+        ),
+    )
+
+
+### PERCUSSION SETTINGS #######################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=consort.makers.FloodedTimespanMaker(),
+    timespan_identifier=timespantools.Timespan(
+        start_offset=durationtools.Duration(5, 16),
+        ),
+    metals=new(
+        zaira.materials.percussion_reiteration_music_specifier,
         pitch_maker__pitches=zaira.makers.Percussion.BRAKE_DRUM,
         ),
     )

@@ -170,14 +170,20 @@ afterGraceFraction = #(cons 127 128)
     }
 
     \context {
-        \StaffGroup
+        \PianoStaff
         \name PianoPerformerGroup
         \type Engraver_group
-        \alias StaffGroup
+        \alias PianoStaff
         \accepts Staff
         \accepts PianoUpperStaff
         \accepts PianoLowerStaff
-        systemStartDelimiter = #'SystemStartBrace
+        \override SystemStartBracket.stencil = ##f
+    }
+
+    \context {
+        \PianoStaff
+        \accepts PianoUpperStaff
+        \accepts PianoLowerStaff
     }
 
     %%% STRINGS %%%
@@ -392,7 +398,7 @@ afterGraceFraction = #(cons 127 128)
 
     %%% PAGE BREAKING %%%
 
-    page-breaking = #ly:optimal-breaking
+    page-breaking = #ly:minimal-breaking
     ragged-bottom = ##f
     ragged-last-bottom = ##f
 

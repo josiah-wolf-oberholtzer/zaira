@@ -573,7 +573,7 @@
 			>>
 		>>
 		\keepWithTag #'score.piano
-		\context PianoPerformerGroup = "Piano Performer Group" \with {
+		\context PianoStaff = "Piano Performer Group" \with {
 			instrumentName = \markup { Piano }
 			shortInstrumentName = \markup { Pf. }
 		} <<

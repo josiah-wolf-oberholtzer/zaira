@@ -31,23 +31,46 @@ fanfare_duration = durationtools.Duration(1, 8),
 ### WINDS SETTINGS ############################################################
 
 
+#segment_maker.add_setting(
+#    timespan_maker=zaira.materials.dense_timespan_maker,
+#    timespan_identifier=consort.makers.RatioPartsExpression(
+#        parts=(1, 3, 5),
+#        ratio=(1, 2, 1, 2, 1, 2, 1),
+#        timespan=timespantools.Timespan(
+#            start_offset=fanfare_duration,
+#            ),
+#        ),
+#    clarinet=zaira.materials.wind_airtone_music_specifier,
+#    flute=zaira.materials.wind_airtone_music_specifier,
+#    oboe=zaira.materials.wind_airtone_music_specifier,
+#    )
+
+
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.dense_timespan_maker,
-    timespan_identifier=consort.makers.RatioPartsExpression(
-        parts=(1, 3, 5),
-        ratio=(1, 2, 1, 2, 1, 2, 1),
-        timespan=timespantools.Timespan(
-            start_offset=fanfare_duration,
-            ),
+    timespan_maker=new(
+        zaira.materials.sparse_timespan_maker,
+        playing_groupings=(1,),
         ),
-    clarinet=zaira.materials.wind_airtone_music_specifier,
-    flute=zaira.materials.wind_airtone_music_specifier,
-    oboe=zaira.materials.wind_airtone_music_specifier,
+    timespan_identifier=timespantools.Timespan(
+        start_offset=fanfare_duration,
+        ),
+    clarinet=new(
+        zaira.materials.wind_ramtongue_music_specifier,
+        pitch_maker__register_specifier__center_pitch='D3',
+        ),
+    flute=zaira.materials.wind_ramtongue_music_specifier,
+    oboe=new(
+        zaira.materials.wind_ramtongue_music_specifier,
+        pitch_maker__register_specifier__center_pitch='Bb3',
+        ),
     )
 
 
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.sparse_timespan_maker,
+    timespan_maker=new(
+        zaira.materials.sparse_timespan_maker,
+        playing_groupings=(1,),
+        ),
     timespan_identifier=consort.makers.RatioPartsExpression(
         parts=(0, 2, 4),
         ratio=(3, 1, 2, 1, 1),
@@ -66,6 +89,9 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.dense_timespan_maker,
+    timespan_identifier=timespantools.Timespan(
+        start_offset=fanfare_duration,
+        ),
     drums=None,
     woods=None,
     )
@@ -73,6 +99,9 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.sparse_timespan_maker,
+    timespan_identifier=timespantools.Timespan(
+        start_offset=fanfare_duration,
+        ),
     drums=None,
     woods=None,
     )
@@ -91,6 +120,9 @@ segment_maker.add_setting(
     timespan_identifier=consort.makers.RatioPartsExpression(
         parts=(1, 3, 5),
         ratio=(1, 2, 1, 2, 1, 2, 1),
+        timespan=timespantools.Timespan(
+            start_offset=fanfare_duration,
+            ),
         ),
     piano_rh=new(
         zaira.materials.piano_flourish_music_specifier,
@@ -123,6 +155,9 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.sparse_timespan_maker,
+    timespan_identifier=timespantools.Timespan(
+        start_offset=fanfare_duration,
+        ),
     piano_rh=new(
         zaira.materials.piano_prepared_treble_music_specifier,
         rhythm_maker=zaira.materials.sustained_rhythm_maker,
@@ -136,6 +171,9 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.tutti_timespan_maker,
+    timespan_identifier=timespantools.Timespan(
+        start_offset=fanfare_duration,
+        ),
     piano_rh=new(
         zaira.materials.piano_clusters_music_specifier,
         attachment_maker=consort.makers.AttachmentMaker(
@@ -158,11 +196,36 @@ segment_maker.add_setting(
     )
 
 
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.sparse_timespan_maker,
+        fuse_groups=True,
+        padding=durationtools.Duration(1, 4),
+        reflect=True,
+        ),
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(0, 2, 4),
+        ratio=(1, 2, 1, 2, 1),
+        ),
+    piano_rh=zaira.materials.piano_guero_music_specifier,
+    piano_lh=new(
+        zaira.materials.piano_guero_music_specifier,
+        seed=1,
+        ),
+    )
+
+
 ### SHAKER SETTINGS ###########################################################
 
 
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.sparse_timespan_maker,
+    timespan_maker=new(
+        zaira.materials.sparse_timespan_maker,
+        padding=durationtools.Duration(3, 8),
+        ),
+    timespan_identifier=timespantools.Timespan(
+        start_offset=fanfare_duration,
+        ),
     clarinet=zaira.materials.brazil_nut_music_specifier,
     flute=zaira.materials.brazil_nut_music_specifier,
     violin=zaira.materials.brazil_nut_music_specifier,

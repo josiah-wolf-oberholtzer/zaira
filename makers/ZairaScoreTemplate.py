@@ -5,7 +5,6 @@ from abjad.tools import indicatortools
 from abjad.tools import instrumenttools
 from abjad.tools import scoretools
 from abjad.tools.topleveltools import attach
-from abjad.tools.topleveltools import override
 from consort import makers
 
 
@@ -18,7 +17,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
         >>> template = zaira.makers.ZairaScoreTemplate()
         >>> score = template()
         >>> print(format(score))
-        \new Score <<
+        \context Score = "Zaira Score" <<
             \keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
             \context TimeSignatureContext = "TimeSignatureContext" {
             }
@@ -94,7 +93,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                 >>
             >>
             \keepWithTag #'score.piano
-            \context PianoPerformerGroup = "Piano Performer Group" \with {
+            \context PianoStaff = "Piano Performer Group" \with {
                 instrumentName = \markup { Piano }
                 shortInstrumentName = \markup { Pf. }
             } <<

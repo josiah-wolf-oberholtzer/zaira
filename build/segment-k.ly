@@ -1,4 +1,4 @@
-	\new Score <<
+	\context Score = "Zaira Score" <<
 		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
@@ -309,385 +309,377 @@
 					\context Voice = "Metals Voice" {
 						\clef "percussion"
 						{
-							{
-								\set stemRightBeamCount = 2
-								f'16 -\accent \fff [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								f'16 -\accent ]
+							\tweak #'text #tuplet-number::calc-fraction-text
+							\times 5/4 {
+								g'8 -\accent \fff [
+								\set stemLeftBeamCount = 1
+								g'8 -\accent ]
 							}
 						}
 						{
 							{
-								\set stemRightBeamCount = 2
-								f'16 -\staccato \ppp [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato \ppp [
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'16 -\staccato
+								g'16 -\staccato
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
-								f'16 -\staccato
+								g'16 -\staccato
 								\set stemLeftBeamCount = 2
-								f'16 -\staccato ]
+								g'16 -\staccato ]
 							}
 						}
 					}
@@ -778,20 +770,15 @@
 						\clef "percussion"
 						{
 							{
-								\set stemRightBeamCount = 2
-								b16 -\accent \fff [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								b16 -\accent
-								\set stemLeftBeamCount = 2
-								b16 -\accent ]
+								b8 -\accent \fff [
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								b8 -\accent
+								\set stemLeftBeamCount = 1
+								b8 -\accent ]
 							}
 						}
 						{
-							{
-								r16
-								r8
-							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
@@ -857,7 +844,7 @@
 			>>
 		>>
 		\keepWithTag #'score.piano
-		\context PianoPerformerGroup = "Piano Performer Group" \with {
+		\context PianoStaff = "Piano Performer Group" \with {
 			instrumentName = \markup { Piano }
 			shortInstrumentName = \markup { Pf. }
 		} <<
@@ -873,8 +860,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemRightBeamCount = 2
-							<g'' b'' d''' f'''>16 -\accent \fff [
+							<g'' b'' d''' f'''>8 -\accent \fff [
 								^ \markup {
 									\center-align
 										\natural
@@ -886,9 +872,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 2
-							<d' f' a' c'' e''>16 -\accent
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							<d' f' a' c'' e''>8 -\accent
 								^ \markup {
 									\center-align
 										\concat
@@ -904,8 +890,8 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 2
-							<c'' e'' g'' b''>16 -\accent ]
+							\set stemLeftBeamCount = 1
+							<c'' e'' g'' b''>8 -\accent ]
 								^ \markup {
 									\center-align
 										\concat
@@ -917,10 +903,6 @@
 						}
 					}
 					{
-						{
-							r16
-							r8
-						}
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
@@ -1056,8 +1038,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemRightBeamCount = 2
-							<d, f, a, c>16 -\accent \fff [
+							<d, f, a, c>8 -\accent \fff [
 								^ \markup {
 									\center-align
 										\natural
@@ -1069,9 +1050,9 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 2
-							<f,, a,, c, e, g,>16 -\accent
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							<f,, a,, c, e, g,>8 -\accent
 								^ \markup {
 									\center-align
 										\concat
@@ -1087,8 +1068,8 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 2
-							<e,, g,, b,, d,>16 -\accent ]
+							\set stemLeftBeamCount = 1
+							<e,, g,, b,, d,>8 -\accent ]
 								^ \markup {
 									\center-align
 										\concat
@@ -1100,10 +1081,6 @@
 						}
 					}
 					{
-						{
-							r16
-							r8
-						}
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
@@ -1169,14 +1146,11 @@
 			\context Dynamics = "Piano Pedals" {
 				{
 					{
-						s1 * 3/16 \sustainOn
+						s1 * 3/8 \sustainOn
 						<> \sustainOff
 					}
 				}
 				{
-					{
-						r8.
-					}
 					{
 						r4.
 					}

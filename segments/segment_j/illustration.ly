@@ -56,7 +56,8 @@
 									\box
 										\pad-around
 											#0.5
-											shaker
+											\italic
+												shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -142,7 +143,8 @@
 									\box
 										\pad-around
 											#0.5
-											shaker
+											\italic
+												shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -352,7 +354,7 @@
 			>>
 		>>
 		\keepWithTag #'score.piano
-		\context PianoPerformerGroup = "Piano Performer Group" \with {
+		\context PianoStaff = "Piano Performer Group" \with {
 			instrumentName = \markup { Piano }
 			shortInstrumentName = \markup { Pf. }
 		} <<
@@ -631,7 +633,8 @@
 									\box
 										\pad-around
 											#0.5
-											shaker
+											\italic
+												shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -684,7 +687,8 @@
 									\box
 										\pad-around
 											#0.5
-											shaker
+											\italic
+												shaker
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {

@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 from abjad import new
-from abjad import show
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import mathtools
@@ -28,19 +27,19 @@ segment_maker.set_duration_in_seconds(
 ### WINDS SETTINGS ############################################################
 
 
-segment_maker.add_setting(
-    timespan_maker=new(
-        zaira.materials.tutti_timespan_maker,
-        fuse_groups=True,
-        ),
-    timespan_identifier=consort.makers.RatioPartsExpression(
-        parts=(1, 3, 5),
-        ratio=(1, 1, 2, 1, 2, 1, 2),
-        ),
-    clarinet=zaira.materials.wind_airtone_music_specifier,
-    flute=zaira.materials.wind_airtone_music_specifier,
-    oboe=zaira.materials.wind_airtone_music_specifier,
-    )
+#segment_maker.add_setting(
+#    timespan_maker=new(
+#        zaira.materials.tutti_timespan_maker,
+#        fuse_groups=True,
+#        ),
+#    timespan_identifier=consort.makers.RatioPartsExpression(
+#        parts=(1, 3, 5),
+#        ratio=(1, 1, 2, 1, 2, 1, 2),
+#        ),
+#    clarinet=zaira.materials.wind_airtone_music_specifier,
+#    flute=zaira.materials.wind_airtone_music_specifier,
+#    oboe=zaira.materials.wind_airtone_music_specifier,
+#    )
 
 
 segment_maker.add_setting(
@@ -116,6 +115,7 @@ segment_maker.add_setting(
         zaira.materials.tutti_timespan_maker,
         playing_talea__counts=(3, 2, 3, 3, 2, 4),
         playing_groupings=(1,),
+        padding=durationtools.Duration(3, 8),
         ),
     clarinet=zaira.materials.brazil_nut_music_specifier,
     flute=zaira.materials.brazil_nut_music_specifier,

@@ -1,4 +1,4 @@
-	\new Score <<
+	\context Score = "Zaira Score" <<
 		\keepWithTag #'score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
@@ -184,7 +184,7 @@
 						\clef "percussion"
 						{
 							{
-								f'16 -\accent \fff
+								g'16 -\accent \fff
 							}
 						}
 						{
@@ -504,7 +504,7 @@
 					}
 					{
 						{
-							\clef "treble^8"
+							\clef "treble^15"
 							\override NoteHead #'style = #'cross
 							c''''16 -\staccato \ppp ^ \markup { (prepared) }
 							\revert NoteHead #'style
@@ -549,7 +549,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							<d'' f'' a'' c'''>8 \p
+							<d'' f'' a'' c'''>8 \p [
 								^ \markup {
 									\center-align
 										\concat
@@ -558,13 +558,13 @@
 												\flat
 											}
 									}
+							r16 ]
 							r4
-							r16
 						}
 					}
 					{
 						{
-							\clef "treble^8"
+							\clef "treble^15"
 							\once \override TextSpanner.bound-details.left-broken.text = ##f
 							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -702,7 +702,7 @@
 					{
 						\tweak #'text #tuplet-number::calc-fraction-text
 						\times 5/6 {
-							\clef "treble^8"
+							\clef "treble^15"
 							\once \override TextSpanner.bound-details.left-broken.text = ##f
 							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -935,7 +935,7 @@
 					}
 					{
 						{
-							\clef "bass_8"
+							\clef "bass_15"
 							\override NoteHead #'style = #'cross
 							a,,,16 -\staccato \ppp ^ \markup { (prepared) }
 							\revert NoteHead #'style
@@ -1065,7 +1065,7 @@
 					}
 					{
 						{
-							\clef "bass_8"
+							\clef "bass_15"
 							\once \override TextSpanner.bound-details.left-broken.text = ##f
 							\once \override TextSpanner.bound-details.left.text = \markup { (prepared) }
 							\once \override TextSpanner.bound-details.right-broken.text = ##f

@@ -445,7 +445,7 @@
 			>>
 		>>
 		\keepWithTag #'score.piano
-		\context PianoPerformerGroup = "Piano Performer Group" \with {
+		\context PianoStaff = "Piano Performer Group" \with {
 			instrumentName = \markup { Piano }
 			shortInstrumentName = \markup { Pf. }
 		} <<
@@ -557,7 +557,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							<d'' f'' a'' c'''>8 \p
+							<d'' f'' a'' c'''>8 \p [
 								^ \markup {
 									\center-align
 										\concat
@@ -566,8 +566,8 @@
 												\flat
 											}
 									}
+							r16 ]
 							r4
-							r16
 						}
 					}
 					{
