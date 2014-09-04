@@ -10,7 +10,10 @@ percussion_superball_music_specifier = consort.makers.MusicSpecifier(
             zaira.materials.background_dynamic_attachment_expression,
             consort.makers.AttachmentExpression(
                 attachments=consort.makers.ComplexTextSpanner(
-                    markup=Markup('superball').pad_around(0.5).with_box(),
+                    markup=Markup('superball')
+                        .italic()
+                        .pad_around(0.5)
+                        .with_box(),
                     ),
                 selector=selectortools.Selector().by_leaves(),
                 ),

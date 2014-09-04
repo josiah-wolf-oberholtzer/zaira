@@ -38,6 +38,7 @@ piano_clusters_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         pitch_classes="c g e a",
+        pitch_range=pitchtools.PitchRange('[A1, C7)'),
         register_specifier=zaira.materials.register_specifier_inventory[0],
         ),
     rhythm_maker=zaira.materials.stuttering_rhythm_maker,

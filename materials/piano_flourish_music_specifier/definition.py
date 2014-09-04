@@ -17,6 +17,7 @@ piano_flourish_music_specifier = consort.makers.MusicSpecifier(
     labels='pedaled',
     pitch_maker=consort.makers.PitchClassPitchMaker(
         pitch_classes='d f e g cs as',
+        pitch_range=pitchtools.PitchRange('[A1, C7)'),
         register_specifier=zaira.materials.register_specifier_inventory[2],
         ),
     rhythm_maker=zaira.materials.flourish_rhythm_maker,

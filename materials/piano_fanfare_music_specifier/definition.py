@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 from abjad.tools import indicatortools
 from abjad.tools import selectortools
+from abjad.tools import pitchtools
 import consort
 import zaira
 
@@ -61,8 +62,9 @@ piano_fanfare_music_specifier = consort.makers.MusicSpecifier(
                 staff_space_width=9,
                 ),
             ),
-            pitch_classes="c a f d e b",
-            register_specifier=consort.makers.RegisterSpecifier(),
+        pitch_classes="c a f d e b",
+        pitch_range=pitchtools.PitchRange('[A1, C7)'),
+        register_specifier=consort.makers.RegisterSpecifier(),
         ),
     rhythm_maker=zaira.materials.reiterating_rhythm_maker,
     )

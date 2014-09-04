@@ -37,7 +37,10 @@ piano_prepared_treble_music_specifier = consort.makers.MusicSpecifier(
                 ),
             consort.makers.AttachmentExpression(
                 attachments=consort.makers.ComplexTextSpanner(
-                    markup=Markup('(prepared)'),
+                    markup=Markup('prepared')
+                        .italic()
+                        .pad_around(0.5)
+                        .with_box(),
                     overrides={
                         'note_head__style': 'cross',
                         },

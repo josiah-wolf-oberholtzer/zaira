@@ -12,7 +12,10 @@ tailpiece_attachment_expression = consort.makers.AttachmentExpression(
             consort.makers.ClefSpanner('percussion'),
             staff_lines_spanner,
             consort.makers.ComplexTextSpanner(
-                markup=Markup('tailpiece').pad_around(0.5).with_box(),
+                markup=Markup('tailpiece')
+                    .italic()
+                    .pad_around(0.5)
+                    .with_box(),
                 ),
             ),
         ),

@@ -126,6 +126,9 @@ piano_fanfare_music_specifier = consort.makers.MusicSpecifier(
                 pitchtools.NamedPitch('b'),
                 ]
             ),
+        pitch_range=pitchtools.PitchRange(
+            range_string='[A1, C7)',
+            ),
         register_specifier=consort.makers.RegisterSpecifier(),
         ),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(

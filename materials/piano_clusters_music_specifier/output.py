@@ -89,6 +89,9 @@ piano_clusters_music_specifier = consort.makers.MusicSpecifier(
                 pitchtools.NamedPitch('a'),
                 ]
             ),
+        pitch_range=pitchtools.PitchRange(
+            range_string='[A1, C7)',
+            ),
         register_specifier=consort.makers.RegisterSpecifier(
             division_inflections=consort.makers.RegisterInflectionInventory(
                 [

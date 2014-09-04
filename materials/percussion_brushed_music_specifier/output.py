@@ -48,7 +48,10 @@ percussion_brushed_music_specifier = consort.makers.MusicSpecifier(
                                         markuptools.MarkupCommand(
                                             'pad-around',
                                             0.5,
-                                            'brush'
+                                            markuptools.MarkupCommand(
+                                                'italic',
+                                                'brush'
+                                                )
                                             )
                                         ),
                                     ),

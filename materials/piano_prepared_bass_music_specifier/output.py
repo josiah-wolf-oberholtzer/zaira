@@ -54,7 +54,19 @@ piano_prepared_bass_music_specifier = consort.makers.MusicSpecifier(
                     [
                         consort.makers.ComplexTextSpanner(
                             markup=markuptools.Markup(
-                                contents=('(prepared)',),
+                                contents=(
+                                    markuptools.MarkupCommand(
+                                        'box',
+                                        markuptools.MarkupCommand(
+                                            'pad-around',
+                                            0.5,
+                                            markuptools.MarkupCommand(
+                                                'italic',
+                                                'prepared'
+                                                )
+                                            )
+                                        ),
+                                    ),
                                 ),
                             overrides={
                                 'note_head__style': 'cross',
