@@ -63,36 +63,49 @@ afterGraceFraction = #(cons 127 128)
     %%% TIME SIGNATURE CONTEXT %%%
 
     \context {
-        \type Engraver_group
         \name TimeSignatureContext
-        \consists Time_signature_engraver
+        \type Engraver_group
         \consists Axis_group_engraver
-        \consists Metronome_mark_engraver
-        \consists Mark_engraver
         \consists Bar_number_engraver
+        \consists Mark_engraver
+        \consists Metronome_mark_engraver
+        \consists Time_signature_engraver
+
         \override BarNumber.X-extent = #'(0 . 0)
         \override BarNumber.Y-extent = #'(0 . 0)
         \override BarNumber.extra-offset = #'(-8 . -4)
         \override BarNumber.font-name = "Didot Italic"
         \override BarNumber.font-size = 2
         \override BarNumber.stencil = #(make-stencil-circler 0.1 0.7 ly:text-interface::print)
+
         \override MetronomeMark.X-extent = #'(0 . 0)
         \override MetronomeMark.X-offset = 5
         \override MetronomeMark.Y-offset = -2.5
         \override MetronomeMark.break-align-symbols = #'(time-signature)
         \override MetronomeMark.font-size = 3
+
         \override RehearsalMark.X-extent = #'(0 . 0)
         \override RehearsalMark.Y-offset = 8
         \override RehearsalMark.break-align-symbols = #'(time-signature)
         \override RehearsalMark.break-visibility = #end-of-line-invisible
         \override RehearsalMark.font-name = "Didot"
         \override RehearsalMark.font-size = 10
+        \override RehearsalMark.outside-staff-priority = 500
         \override RehearsalMark.self-alignment-X = #CENTER
+
         \override TimeSignature.X-extent = #'(0 . 0)
         \override TimeSignature.break-align-symbols = #'(staff-bar)
         \override TimeSignature.break-visibility = #end-of-line-invisible
         \override TimeSignature.font-size = 3
         \override TimeSignature.style = #'numbered
+
+        \override VerticalAxisGroup.default-staff-staff-spacing = #'(
+            (basic-distance . 0)
+            (minimum-distance . 14)
+            (padding . 0)
+            (stretchability . 0)
+            )
+        \override VerticalAxisGroup.minimum-Y-extent = #'(-20 . 20)
         \override VerticalAxisGroup.staff-staff-spacing = #'(
             (basic-distance . 8)
             (minimum-distance . 8)
@@ -319,15 +332,13 @@ afterGraceFraction = #(cons 127 128)
         \override SpacingSpanner.uniform-stretching = ##t
         \override Stem.details.beamed-lengths = #'(6)
         \override Stem.details.lengths = #'(6)
-        \override Stem.direction = #DOWN
         \override Stem.stemlet-length = 1.5
-
         \override StemTremolo.beam-width = 1.5
         \override StemTremolo.flag-count = 4
         \override StemTremolo.slope = 0.5
         \override StemTremolo.style = #'default
-
         \override SustainPedal.self-alignment-X = #CENTER
+        \override SustainPedalLineSpanner.padding = 2
         \override SustainPedalLineSpanner.to-barline = ##t
         \override TextScript.add-stem-support = ##t
         \override TextScript.outside-staff-padding = 1
@@ -349,10 +360,10 @@ afterGraceFraction = #(cons 127 128)
         \override TupletNumber.font-size = 1
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
         \override VerticalAxisGroup.staff-staff-spacing = #'(
-            (basic-distance . 6)
-            (minimum-distance . 8)
-            (padding . 6)
-            (stretchability . 30)
+            (basic-distance . 8)
+            (minimum-distance . 0)
+            (padding . 4)
+            (stretchability . 100)
             )
         autoBeaming = ##f
         pedalSustainStyle = #'mixed
@@ -366,7 +377,7 @@ afterGraceFraction = #(cons 127 128)
 
     %%% MARGINS %%%
 
-    bottom-margin = 10\mm
+    % bottom-margin = 10\mm
     left-margin = 30\mm
     right-margin = 10\mm
     top-margin = 10\mm
@@ -398,7 +409,7 @@ afterGraceFraction = #(cons 127 128)
 
     %%% PAGE BREAKING %%%
 
-    page-breaking = #ly:minimal-breaking
+    page-breaking = #ly:optimal-breaking
     ragged-bottom = ##f
     ragged-last-bottom = ##f
 
@@ -409,24 +420,28 @@ afterGraceFraction = #(cons 127 128)
         (minimum-distance . 12)
         (padding . 0)
         (stretchability . 0)
-        )
-
+    )
     system-system-spacing = #'(
         (basic-distance . 0)
-        (padding . 8)
+        (minimum-distance . 12)
+        (padding . 4)
         (stretchability . 100)
-        )
-
+    )
     top-markup-spacing = #'(
         (basic-distance . 0)
         (minimum-distance . 0)
-        (padding . 12)
-        (stretchability . 100)
-        )
+        (padding . 8)
+        (stretchability . 0)
+    )
+    top-system-spacing = #'(
+        (basic-distance . 0)
+        (minimum-distance . 20)
+        (padding . 0)
+        (stretchability . 0)
+    )
 
     %%% ETC %%%
 
-    max-systems-per-page = 2
     system-separator-markup = \slashSeparator
 
 }
