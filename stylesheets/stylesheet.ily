@@ -99,17 +99,10 @@ afterGraceFraction = #(cons 127 128)
         \override TimeSignature.font-size = 3
         \override TimeSignature.style = #'numbered
 
-        \override VerticalAxisGroup.default-staff-staff-spacing = #'(
-            (basic-distance . 0)
-            (minimum-distance . 14)
-            (padding . 0)
-            (stretchability . 0)
-            )
-        \override VerticalAxisGroup.minimum-Y-extent = #'(-20 . 20)
         \override VerticalAxisGroup.staff-staff-spacing = #'(
             (basic-distance . 8)
             (minimum-distance . 8)
-            (padding . 9)
+            (padding . 8)
             (stretchability . 0)
             )
     }
@@ -363,7 +356,7 @@ afterGraceFraction = #(cons 127 128)
             (basic-distance . 8)
             (minimum-distance . 0)
             (padding . 4)
-            (stretchability . 100)
+            (stretchability . 0)
             )
         autoBeaming = ##f
         pedalSustainStyle = #'mixed
@@ -409,7 +402,7 @@ afterGraceFraction = #(cons 127 128)
 
     %%% PAGE BREAKING %%%
 
-    page-breaking = #ly:optimal-breaking
+    page-breaking = #ly:minimal-breaking
     ragged-bottom = ##f
     ragged-last-bottom = ##f
 
@@ -442,6 +435,6 @@ afterGraceFraction = #(cons 127 128)
 
     %%% ETC %%%
 
-    system-separator-markup = \slashSeparator
+    % system-separator-markup = \slashSeparator
 
 }
