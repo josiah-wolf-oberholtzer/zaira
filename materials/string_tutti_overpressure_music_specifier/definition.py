@@ -4,10 +4,9 @@ import consort
 import zaira
 
 
-string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
+string_tutti_overpressure_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
         attachment_expressions=(
-            zaira.materials.midground_dynamic_attachment_expression,
             consort.makers.AttachmentExpression(
                 attachments=consort.makers.ComplexTextSpanner(
                     markup=Markup('overpressure')
@@ -20,6 +19,7 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
             consort.makers.AttachmentExpression(
                 attachments=(
                     (
+                        indicatortools.Dynamic('fff'),
                         indicatortools.Articulation('accent'),
                         indicatortools.Articulation('tenuto'),
                         ),
@@ -28,21 +28,14 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                     .by_leaves()
                     .by_logical_tie(pitched=True)[0],
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=(
-                    None,
-                    None,
-                    spannertools.StemTremoloSpanner(),
-                    ),
-                selector=selectortools.Selector()
-                    .by_leaves()
-                    .by_logical_tie(pitched=True)
+            ),
+        ),
+    pitch_maker=consort.makers.AbsolutePitchMaker(
+        chord_expressions=(
+            consort.makers.ChordExpression(
+                interval_numbers=(0, 7),
                 ),
             ),
         ),
-    pitch_maker=consort.makers.PitchClassPitchMaker(
-        pitch_classes='a c b d',
-        register_specifier=zaira.materials.register_specifier_inventory[3],
-        ),
-    rhythm_maker=zaira.materials.undergrowth_rhythm_maker,
+    rhythm_maker=zaira.materials.sustained_rhythm_maker,
     )

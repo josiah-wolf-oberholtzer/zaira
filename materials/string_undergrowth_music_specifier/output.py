@@ -44,17 +44,28 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                             markup=markuptools.Markup(
                                 contents=(
                                     markuptools.MarkupCommand(
-                                        'filled-box',
-                                        schemetools.SchemePair(-0.5, 1.5),
-                                        schemetools.SchemePair(-1, 1),
-                                        0.25
+                                        'box',
+                                        markuptools.MarkupCommand(
+                                            'pad-around',
+                                            0.5,
+                                            markuptools.MarkupCommand(
+                                                'italic',
+                                                'overpressure'
+                                                )
+                                            )
                                         ),
                                     ),
                                 ),
                             ),
                         ]
                     ),
-                selector=selectortools.Selector(),
+                selector=selectortools.Selector(
+                    callbacks=(
+                        selectortools.PrototypeSelectorCallback(
+                            prototype=scoretools.Leaf,
+                            ),
+                        ),
+                    ),
                 ),
             consort.makers.AttachmentExpression(
                 attachments=datastructuretools.TypedList(

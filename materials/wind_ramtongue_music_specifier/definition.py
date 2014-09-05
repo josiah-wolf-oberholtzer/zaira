@@ -24,6 +24,15 @@ wind_ramtongue_music_specifier = consort.makers.MusicSpecifier(
                 selector=selectortools.selects_pitched_runs(),
                 ),
             consort.makers.AttachmentExpression(
+                attachments=consort.makers.ComplexTextSpanner(
+                    markup=Markup('ram/slap')
+                        .italic()
+                        .pad_around(0.5)
+                        .with_box(),
+                    ),
+                selector=selectortools.Selector().by_leaves(),
+                ),
+            consort.makers.AttachmentExpression(
                 attachments=(
                     (
                         indicatortools.Articulation('accent'),

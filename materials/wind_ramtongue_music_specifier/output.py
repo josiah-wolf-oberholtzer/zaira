@@ -90,6 +90,36 @@ wind_ramtongue_music_specifier = consort.makers.MusicSpecifier(
             consort.makers.AttachmentExpression(
                 attachments=datastructuretools.TypedList(
                     [
+                        consort.makers.ComplexTextSpanner(
+                            markup=markuptools.Markup(
+                                contents=(
+                                    markuptools.MarkupCommand(
+                                        'box',
+                                        markuptools.MarkupCommand(
+                                            'pad-around',
+                                            0.5,
+                                            markuptools.MarkupCommand(
+                                                'italic',
+                                                'ram/slap'
+                                                )
+                                            )
+                                        ),
+                                    ),
+                                ),
+                            ),
+                        ]
+                    ),
+                selector=selectortools.Selector(
+                    callbacks=(
+                        selectortools.PrototypeSelectorCallback(
+                            prototype=scoretools.Leaf,
+                            ),
+                        ),
+                    ),
+                ),
+            consort.makers.AttachmentExpression(
+                attachments=datastructuretools.TypedList(
+                    [
                         (
                             indicatortools.Articulation('accent'),
                             indicatortools.Articulation('staccato'),
