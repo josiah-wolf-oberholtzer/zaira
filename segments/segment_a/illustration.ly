@@ -3,6 +3,7 @@
 
 #(ly:set-option 'relative-includes #t)
 
+\include "/Users/josiah/Documents/Scores/zaira/stylesheets/parts-stylesheet.ily"
 \include "/Users/josiah/Documents/Scores/zaira/stylesheets/stylesheet.ily"
 
 \score {

@@ -3,6 +3,7 @@
 
 #(ly:set-option 'relative-includes #t)
 
+\include "/Users/josiah/Documents/Scores/zaira/stylesheets/parts-stylesheet.ily"
 \include "/Users/josiah/Documents/Scores/zaira/stylesheets/stylesheet.ily"
 
 \score {
@@ -124,7 +125,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -163,7 +168,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -214,7 +223,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -270,7 +283,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -323,7 +340,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -364,7 +385,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -421,7 +446,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -471,7 +500,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\stopStaff
 								\startStaff
@@ -494,7 +527,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -560,7 +597,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -614,7 +655,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -731,7 +776,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -786,7 +835,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -824,7 +877,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -873,7 +930,8 @@
 						}
 						{
 							{
-								ef'''32 -\accent -\staccato [ \< \p
+								\override Hairpin #'circled-tip = ##t
+								ef'''32 -\accent -\staccato [ \> \mf
 								\set stemLeftBeamCount = 3
 								\set stemRightBeamCount = 3
 								ef'''32 -\accent -\staccato
@@ -955,7 +1013,8 @@
 								\set stemRightBeamCount = 3
 								d'''32 -\accent -\staccato
 								\set stemLeftBeamCount = 3
-								d'''32 -\accent -\staccato ] \f
+								d'''32 -\accent -\staccato ] \!
+								\revert Hairpin #'circled-tip
 							}
 						}
 						{
@@ -965,7 +1024,8 @@
 						}
 						{
 							{
-								d'''32 -\accent -\staccato [ \> \f
+								\override Hairpin #'circled-tip = ##t
+								d'''32 -\accent -\staccato [ \<
 								\set stemLeftBeamCount = 3
 								\set stemRightBeamCount = 3
 								d'''32 -\accent -\staccato
@@ -985,7 +1045,8 @@
 								\set stemRightBeamCount = 3
 								d'''32 -\accent -\staccato
 								\set stemLeftBeamCount = 3
-								d'''32 -\accent -\staccato ] \p
+								d'''32 -\accent -\staccato ] \ff
+								\revert Hairpin #'circled-tip
 							}
 						}
 						{
@@ -1003,7 +1064,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1046,7 +1111,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1120,7 +1189,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\stopStaff
 								\startStaff
@@ -1154,7 +1227,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1217,7 +1294,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1262,7 +1343,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1302,7 +1387,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1359,7 +1448,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1401,7 +1494,11 @@
 										\pad-around
 											#0.5
 											\italic
-												keyclick
+												\concat
+													{
+														\vstrut
+														keyclick
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1483,7 +1580,11 @@
 										\pad-around
 											#0.5
 											\italic
-												brush
+												\concat
+													{
+														\vstrut
+														brush
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1563,7 +1664,11 @@
 										\pad-around
 											#0.5
 											\italic
-												brush
+												\concat
+													{
+														\vstrut
+														brush
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1627,7 +1732,11 @@
 										\pad-around
 											#0.5
 											\italic
-												brush
+												\concat
+													{
+														\vstrut
+														brush
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1739,7 +1848,11 @@
 										\pad-around
 											#0.5
 											\italic
-												brush
+												\concat
+													{
+														\vstrut
+														brush
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1811,7 +1924,11 @@
 										\pad-around
 											#0.5
 											\italic
-												brush
+												\concat
+													{
+														\vstrut
+														brush
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2009,7 +2126,11 @@
 										\pad-around
 											#0.5
 											\italic
-												brush
+												\concat
+													{
+														\vstrut
+														brush
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2103,7 +2224,11 @@
 										\pad-around
 											#0.5
 											\italic
-												brush
+												\concat
+													{
+														\vstrut
+														brush
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2179,7 +2304,11 @@
 										\pad-around
 											#0.5
 											\italic
-												brush
+												\concat
+													{
+														\vstrut
+														brush
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2275,7 +2404,11 @@
 										\pad-around
 											#0.5
 											\italic
-												brush
+												\concat
+													{
+														\vstrut
+														brush
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2338,7 +2471,11 @@
 										\pad-around
 											#0.5
 											\italic
-												brush
+												\concat
+													{
+														\vstrut
+														brush
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2452,7 +2589,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2527,7 +2668,7 @@
 					}
 					{
 						\times 4/5 {
-							f''16 \f [ (
+							f''16 [ \> \f (
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 3
 							e''32
@@ -2541,7 +2682,7 @@
 						{
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 3
-							cs'''32 ] )
+							cs'''32 ] \p )
 						}
 					}
 					{
@@ -2562,7 +2703,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2607,7 +2752,8 @@
 					{
 						\times 4/5 {
 							r16
-							e'''16 [ \< \p (
+							\override Hairpin #'circled-tip = ##t
+							e'''16 [ \> \mf (
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 1
 							g''32 ~
@@ -2630,7 +2776,8 @@
 							\set stemRightBeamCount = 2
 							f''32
 							\set stemLeftBeamCount = 2
-							e''16 ] \f )
+							e''16 ] )
+							\revert Hairpin #'circled-tip
 						}
 					}
 					{
@@ -2655,7 +2802,7 @@
 					}
 					{
 						{
-							g''16 \f
+							g''16 \ff
 						}
 					}
 					{
@@ -2683,7 +2830,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2765,11 +2916,11 @@
 						\tweak #'text #tuplet-number::calc-fraction-text
 						\times 6/7 {
 							r32
-							bf''32 \f [ (
+							bf''32 [ \> \f (
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 2
 							d'''16
-							f''16 ] )
+							f''16 ] \p )
 							r32
 						}
 					}
@@ -2792,7 +2943,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2955,7 +3110,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2998,7 +3157,7 @@
 					}
 					{
 						{
-							d32 \p [ (
+							d32 [ \< \p (
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
 							f,32
@@ -3009,7 +3168,7 @@
 							\set stemRightBeamCount = 3
 							g,32
 							\set stemLeftBeamCount = 3
-							cs,32 ] )
+							cs,32 ] \f )
 						}
 					}
 					{
@@ -3040,7 +3199,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3080,7 +3243,7 @@
 					{
 						\tweak #'text #tuplet-number::calc-fraction-text
 						\times 6/7 {
-							f,16 \f [ (
+							f,16 [ \> \f (
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 3
 							e,32
@@ -3090,7 +3253,7 @@
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
 							cs32
-							bf,32 ] )
+							bf,32 ] \p )
 							r32
 						}
 					}
@@ -3129,7 +3292,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3172,7 +3339,8 @@
 					{
 						\times 4/5 {
 							r16
-							e16 \p [ (
+							\override Hairpin #'circled-tip = ##t
+							e16 [ \> \mf (
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 1
 							g,32 ~
@@ -3186,6 +3354,7 @@
 							cs32
 							\set stemLeftBeamCount = 3
 							bf,32 ] )
+							\revert Hairpin #'circled-tip
 						}
 					}
 					{
@@ -3215,7 +3384,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3250,7 +3423,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3524,7 +3701,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3574,7 +3755,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3628,7 +3813,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3667,7 +3856,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3718,7 +3911,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3763,7 +3960,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3804,7 +4005,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3866,7 +4071,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3927,7 +4136,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3965,7 +4178,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 							}
 						}
@@ -3994,7 +4211,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4046,7 +4267,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4093,7 +4318,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4143,7 +4372,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4199,7 +4432,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4261,7 +4498,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4309,7 +4550,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4352,7 +4597,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4397,7 +4646,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4447,7 +4700,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {

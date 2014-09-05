@@ -3,6 +3,7 @@ from abjad import new
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import mathtools
+from abjad.tools import pitchtools
 from abjad.tools import timespantools
 import consort
 import zaira
@@ -134,6 +135,27 @@ segment_maker.add_setting(
         zaira.materials.string_undergrowth_music_specifier,
         pitch_maker__register_specifier__center_pitch='c,',
         seed=2,
+        ),
+    )
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.granular_timespan_maker,
+        playing_talea__counts=(2, 2, 3, 2, 7, 1, 3, 2, 1),
+        ),
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(0, 2, 4),
+        ratio=(1, 1, 1, 1, 1),
+        timespan=timespantools.Timespan(
+            start_offset=fanfare_duration,
+            ),
+        ),
+    cello=new(
+        zaira.materials.cello_solo_music_specifier,
+        pitch_maker__transform_stack=(
+            pitchtools.Transposition(3),
+            ),
         ),
     )
 

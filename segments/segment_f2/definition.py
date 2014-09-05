@@ -164,6 +164,19 @@ segment_maker.add_setting(
     )
 
 
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.dense_timespan_maker,
+        reflect=True,
+        ),
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(0, 2, 4),
+        ratio=(1, 1, 1, 1, 1),
+        ),
+    cello=zaira.materials.cello_solo_music_specifier,
+    )
+
+
 ### SHAKER SETTINGS ###########################################################
 
 

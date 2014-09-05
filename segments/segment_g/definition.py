@@ -171,6 +171,27 @@ segment_maker.add_setting(
     )
 
 
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.granular_timespan_maker,
+        playing_talea__counts=(5, 4, 6, 5, 3, 5, 9),
+        ),
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(1, 3, 5),
+        ratio=(1, 1, 1, 1, 1, 1, 1),
+        timespan=timespantools.Timespan(
+            start_offset=fanfare_duration,
+            ),
+        ),
+    cello=new(
+        zaira.materials.cello_solo_music_specifier,
+        pitch_maker__transform_stack=(
+            pitchtools.Transposition(3),
+            ),
+        ),
+    )
+
+
 ### FANFARE SETTINGS ##########################################################
 
 

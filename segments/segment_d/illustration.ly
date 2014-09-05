@@ -3,6 +3,7 @@
 
 #(ly:set-option 'relative-includes #t)
 
+\include "/Users/josiah/Documents/Scores/zaira/stylesheets/parts-stylesheet.ily"
 \include "/Users/josiah/Documents/Scores/zaira/stylesheets/stylesheet.ily"
 
 \score {
@@ -366,7 +367,8 @@
 						}
 						{
 							{
-								ef'''32 -\accent -\staccato [ \< \p
+								\override Hairpin #'circled-tip = ##t
+								ef'''32 -\accent -\staccato [ \> \mf
 								\set stemLeftBeamCount = 3
 								\set stemRightBeamCount = 3
 								ef'''32 -\accent -\staccato
@@ -398,7 +400,8 @@
 								\set stemRightBeamCount = 3
 								ef'''32 -\accent -\staccato
 								\set stemLeftBeamCount = 3
-								ef'''32 -\accent -\staccato ] \f
+								ef'''32 -\accent -\staccato ] \!
+								\revert Hairpin #'circled-tip
 							}
 						}
 						{
@@ -446,7 +449,8 @@
 						}
 						{
 							{
-								d'''32 -\accent -\staccato [ \> \f
+								\override Hairpin #'circled-tip = ##t
+								d'''32 -\accent -\staccato [ \<
 								\set stemLeftBeamCount = 3
 								\set stemRightBeamCount = 3
 								d'''32 -\accent -\staccato
@@ -472,7 +476,8 @@
 								\set stemRightBeamCount = 3
 								d'''32 -\accent -\staccato
 								\set stemLeftBeamCount = 3
-								d'''32 -\accent -\staccato ] \p
+								d'''32 -\accent -\staccato ] \ff
+								\revert Hairpin #'circled-tip
 							}
 						}
 						{
@@ -885,12 +890,12 @@
 						}
 						{
 							{
-								e'16 -\accent \p [
+								e'16 -\accent [ \< \p
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
 								c'16 -\accent
 								\set stemLeftBeamCount = 2
-								e'16 -\accent ]
+								e'16 -\accent ] \f
 							}
 						}
 						{
@@ -929,7 +934,8 @@
 						}
 						{
 							{
-								e'16 -\accent [ \< \p
+								\override Hairpin #'circled-tip = ##t
+								e'16 -\accent [ \> \mf
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
 								e'16 -\accent
@@ -949,7 +955,8 @@
 								\set stemRightBeamCount = 2
 								e'16 -\accent
 								\set stemLeftBeamCount = 2
-								c'16 -\accent ] \f
+								c'16 -\accent ] \!
+								\revert Hairpin #'circled-tip
 							}
 						}
 						{
@@ -970,7 +977,7 @@
 						}
 						{
 							{
-								e'4 :32 -\accent \f
+								e'4 :32 -\accent \ff
 							}
 						}
 						{
@@ -1203,7 +1210,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1232,9 +1243,9 @@
 					}
 					{
 						{
-							<g b g' af' d''>16 :128 \ppp ~ [
+							<g b d' g' af' d''>16 :128 \ppp ~ [
 							\set stemLeftBeamCount = 1
-							<g b g' af' d''>8 :64 ]
+							<g b d' g' af' d''>8 :64 ]
 						}
 					}
 					{
@@ -1272,8 +1283,8 @@
 					}
 					{
 						{
-							<g b ef' g' d''>16 :128 \p ~
-							<g b ef' g' d''>4 :32
+							<g b d' ef' g' d''>16 :128 \p ~
+							<g b d' ef' g' d''>4 :32
 						}
 					}
 					{
@@ -1364,7 +1375,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1404,7 +1419,7 @@
 					}
 					{
 						{
-							<g b g' af' d''>8. :64 \pp
+							<g b d' g' af' d''>8. :64 \pp
 						}
 					}
 					{
@@ -1417,9 +1432,9 @@
 					}
 					{
 						{
-							<g b ef' g' d''>8 :64 \ppp ~ [
+							<g b d' ef' g' d''>8 :64 \ppp ~ [
 							\set stemLeftBeamCount = 1
-							<g b ef' g' d''>8 :64 ]
+							<g b d' ef' g' d''>8 :64 ]
 						}
 					}
 					{
@@ -1471,13 +1486,13 @@
 					}
 					{
 						{
-							<g b g' af' d''>8. :64 \p ~
-							<g b g' af' d''>4 :32 ~
+							<g b d' g' af' d''>8. :64 \p ~
+							<g b d' g' af' d''>4 :32 ~
 						}
 						{
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
-							<g b g' af' d''>8. :64
+							<g b d' g' af' d''>8. :64
 						}
 					}
 					{
@@ -1581,7 +1596,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1755,7 +1774,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -1894,7 +1917,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2056,7 +2083,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\revert NoteHead #'style
 							\clef "bass"
@@ -2439,7 +2470,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2521,7 +2556,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2618,7 +2657,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2726,7 +2769,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2821,7 +2868,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2878,7 +2929,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -2970,7 +3025,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3028,7 +3087,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3116,7 +3179,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3198,7 +3265,11 @@
 										\pad-around
 											#0.5
 											\italic
-												flautando
+												\concat
+													{
+														\vstrut
+														flautando
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
