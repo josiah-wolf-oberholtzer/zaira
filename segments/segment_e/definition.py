@@ -109,6 +109,22 @@ segment_maker.add_setting(
     )
 
 
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.dense_timespan_maker,
+        reflect=True,
+        ),
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(0, 2, 4),
+        ratio=(1, 1, 1, 1, 1),
+        timespan=timespantools.Timespan(
+            start_offset=fanfare_duration,
+            ),
+        ),
+    oboe=zaira.materials.oboe_solo_music_specifier,
+    )
+
+
 ### PERCUSSION SETTINGS #######################################################
 
 
@@ -270,6 +286,40 @@ segment_maker.add_setting(
     cello=new(
         zaira.materials.string_undergrowth_music_specifier,
         pitch_maker__register_specifier__center_pitch='c,',
+        seed=2,
+        ),
+    )
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.tutti_timespan_maker,
+        padding=durationtools.Duration(1, 4),
+        playing_groupings=(1,),
+        playing_talea__counts=(8,),
+        reflect=True,
+        repeat=False,
+        ),
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(1, 3, 5),
+        ratio=(1, 2, 1, 1, 1, 2, 1),
+        timespan=timespantools.Timespan(
+            start_offset=fanfare_duration,
+            ),
+        ),
+    violin=new(
+        zaira.materials.string_tutti_overpressure_music_specifier,
+        pitch_maker__pitches='g',
+        seed=0,
+        ),
+    viola=new(
+        zaira.materials.string_tutti_overpressure_music_specifier,
+        pitch_maker__pitches='c',
+        seed=1,
+        ),
+    cello=new(
+        zaira.materials.string_tutti_overpressure_music_specifier,
+        pitch_maker__pitches='c,',
         seed=2,
         ),
     )

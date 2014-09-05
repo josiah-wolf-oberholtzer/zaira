@@ -7,10 +7,10 @@
 
 \score {
 	\context Score = "Zaira Score" <<
-		\tag score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
+		\tag score.cello.clarinet-in-b-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
-				\time 5/16
+				\time 5/8
 				\tempo 4=48
 				\mark \markup {
 					\override
@@ -22,10 +22,7 @@
 						#-3
 						" "
 					}
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
+				s1 * 5/8
 			}
 			{
 				\time 4/4
@@ -51,12 +48,15 @@
 				s1 * 1
 			}
 			{
-				\time 3/8
-				s1 * 3/8
+				\time 2/4
+				s1 * 1/2
 			}
 			{
-				\time 4/4
-				s1 * 1
+				s1 * 1/2
+			}
+			{
+				\time 3/8
+				s1 * 3/8
 			}
 			{
 				\time 5/16
@@ -89,27 +89,27 @@
 				s1 * 1
 			}
 			{
-				\time 5/16
-				s1 * 5/16
+				\time 3/8
+				s1 * 3/8
 			}
 			{
-				s1 * 5/16
+				s1 * 3/8
 			}
 			{
 				\time 4/4
 				s1 * 1
+			}
+			{
+				\time 2/4
+				s1 * 1/2
 			}
 			{
 				\time 5/8
 				s1 * 5/8
 			}
 			{
-				\time 4/4
-				s1 * 1
-			}
-			{
-				\time 3/8
-				s1 * 3/8
+				\time 3/4
+				s1 * 3/4
 			}
 			{
 				\time 5/16
@@ -130,15 +130,7 @@
 						\clef "treble"
 						{
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 5/16
-								\stopStaff
-								\startStaff
-							}
-							{
-								r16
+								r4.
 							}
 						}
 						{
@@ -165,7 +157,8 @@
 						}
 						{
 							{
-								r8.
+								r16
+								r8
 							}
 							{
 								\stopStaff
@@ -198,12 +191,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'16 -\staccato \ppp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								c'16 -\staccato \ppp \startTextSpan
 								r8.
-								\set stemLeftBeamCount = 2
-								g'16 -\staccato \p ]
+								g'16 -\staccato \p
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -289,29 +279,16 @@
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
 								f16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
+								g'16 -\staccato ]
 								r16
 							}
 							\tweak #'text #tuplet-number::calc-fraction-text
 							\times 5/7 {
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
 								r8
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
 								g'16 -\staccato \pp
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
 								r8
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
 								c'16 -\staccato \ppp
-								\set stemLeftBeamCount = 2
-								r16 ]
+								r16
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -359,13 +336,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r8. \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								r8. \startTextSpan
 								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f16 :128 \pp ~
+								f16 :128 \pp ~ [
 								\set stemLeftBeamCount = 1
 								f8 :64 ]
 								\stopStaff
@@ -378,8 +351,15 @@
 						}
 						{
 							{
-								r2
 								r8
+							}
+							{
+								\stopStaff
+								\once \override Staff.StaffSymbol.line-count = 1
+								\startStaff
+								R1 * 1/2
+								\stopStaff
+								\startStaff
 							}
 						}
 						{
@@ -405,9 +385,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'8 :64 -\staccato \pp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								r8 ]
+								c'8 :64 -\staccato \pp \startTextSpan
+								r8
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -418,7 +397,8 @@
 						}
 						{
 							{
-								r8.
+								r16
+								r8
 							}
 							{
 								\stopStaff
@@ -496,18 +476,13 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								g'8 :64 -\staccato \ppp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								g'8 :64 -\staccato \ppp \startTextSpan
 								r8
 							}
 							\tweak #'text #tuplet-number::calc-fraction-text
 							\times 3/4 {
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
 								r8
-								\set stemLeftBeamCount = 1
-								g'8 :64 -\staccato \p ]
+								g'8 :64 -\staccato \p
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -544,12 +519,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'16 -\staccato \ppp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								c'16 -\staccato \ppp \startTextSpan
 								r8
-								\set stemLeftBeamCount = 1
-								c'8 :64 -\staccato \p ]
+								c'8 :64 -\staccato \p
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -618,9 +590,7 @@
 									}
 								\once \override TextSpanner.dash-fraction = 1
 								\override NoteHead #'style = #'slash
-								c'4 \p ~ \startTextSpan
-								\set stemLeftBeamCount = 2
-								c'16
+								c'4. \p \startTextSpan
 								\revert NoteHead #'style
 								<> \stopTextSpan
 							}
@@ -630,12 +600,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 3/8
 								\stopStaff
 								\startStaff
-							}
-							{
-								r8
 							}
 						}
 						{
@@ -661,12 +628,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r8 \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								r8 \startTextSpan
 								c'16 -\staccato \p
-								\set stemLeftBeamCount = 1
-								r8 ]
+								r8
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -677,19 +641,20 @@
 						}
 						{
 							{
-								r8.
-								r2
+								r16
+								r2.
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/8
+								R1 * 1/2
 								\stopStaff
 								\startStaff
 							}
 							{
-								r8.
+								r8
+								r16
 							}
 						}
 						{
@@ -716,13 +681,13 @@
 						}
 						{
 							{
-								r2.
+								r4.
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 3/4
 								\stopStaff
 								\startStaff
 							}
@@ -753,16 +718,11 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'16 -\staccato \pp \startTextSpan [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
+								c'16 -\staccato \pp \startTextSpan
 								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
 								r16
-								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f16 -\staccato \ppp
+								f16 -\staccato \ppp [
 							}
 							{
 								\set stemLeftBeamCount = 1
@@ -795,12 +755,25 @@
 						\clef "treble"
 						{
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 5/16
-								\stopStaff
-								\startStaff
+								r8
+							}
+						}
+						{
+							{
+								b''32 -\accent -\staccato \p [
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								b''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								b''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								b''32 -\accent -\staccato ]
+							}
+						}
+						{
+							{
+								r16
 							}
 						}
 						{
@@ -826,15 +799,10 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r8 \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								r8 \startTextSpan
 								f16 -\staccato \ppp
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
 								r8
-								\set stemLeftBeamCount = 1
-								c'8 :64 -\staccato \p ]
+								c'8 :64 -\staccato \p
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -845,81 +813,60 @@
 						}
 						{
 							{
-								r16
-							}
-						}
-						{
-							{
-								\clef "percussion"
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											\italic
-												keyclick
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								\override NoteHead #'no-ledgers = ##t
-								\override NoteHead #'style = #'cross
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-								\startStaff
-								c'16 -\staccato \p \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
 								r8
-								\set stemLeftBeamCount = 2
-								f16 -\staccato \pp ]
-								\stopStaff
-								\startStaff
-								\revert NoteHead #'no-ledgers
-								\revert NoteHead #'style
-								<> \stopTextSpan
-								\clef "treble"
 							}
 						}
 						{
 							{
-								r8.
-								r2
+								\pitchedTrill
+								b''8 -\accent \f \startTrillSpan d'''
+								<> \stopTrillSpan
+							}
+						}
+						{
+							{
+								r2.
 							}
 							{
 								r4
-								r8
 							}
 						}
 						{
 							{
-								\clef "percussion"
-								\override NoteHead #'no-ledgers = ##t
-								\override NoteHead #'style = #'cross
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-								\startStaff
-								f16 -\staccato \pp ^ \markup {
-									\box
-										\pad-around
-											#0.5
-											\italic
-												keyclick
-									}
-								\stopStaff
-								\startStaff
-								\revert NoteHead #'no-ledgers
-								\revert NoteHead #'style
-								\clef "treble"
+								c'''32 -\accent -\staccato [ \< \p
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								c'''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								c'''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								c'''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								c'''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 1
+								c'''32 -\accent -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 3
+								b''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								b''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								b''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								b''32 -\accent -\staccato ] \f
 							}
 						}
 						{
 							{
 								r16
-								r8
 							}
 						}
 						{
@@ -947,7 +894,7 @@
 							}
 						}
 						{
-							\times 2/3 {
+							{
 								\clef "percussion"
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
@@ -968,17 +915,14 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								g'16 -\staccato \ppp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								r8
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								c'16 -\staccato \p \startTextSpan
 								r16
-								\set stemLeftBeamCount = 2
-								c'16 -\staccato \p ]
+							}
+							\times 2/3 {
+								r16
+								f16 -\staccato \pp
+								r8
+								g'8 :64 -\staccato \ppp
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -989,7 +933,7 @@
 						}
 						{
 							{
-								r4
+								r8
 							}
 							{
 								\stopStaff
@@ -1002,9 +946,12 @@
 								\stopStaff
 								\startStaff
 							}
+							{
+								r8.
+							}
 						}
 						{
-							\times 8/9 {
+							{
 								\clef "percussion"
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
@@ -1025,21 +972,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'8. :64 \p ~ \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								c'16 :128
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								c'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								r16
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								f16 -\staccato \pp \startTextSpan
 								r8
-								\set stemLeftBeamCount = 2
-								f16 -\staccato \pp ]
+								g'16 -\staccato \ppp
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1050,55 +985,70 @@
 						}
 						{
 							{
+								r16
 								r2
 							}
+							{
+								r4
+							}
+						}
+						{
+							\times 4/5 {
+								\clef "percussion"
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											\italic
+												keyclick
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
+								\override NoteHead #'no-ledgers = ##t
+								\override NoteHead #'style = #'cross
+								\stopStaff
+								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+								\startStaff
+								g'16 -\staccato \ppp \startTextSpan
+								r8.
+								c'16 -\staccato \p
+								\stopStaff
+								\startStaff
+								\revert NoteHead #'no-ledgers
+								\revert NoteHead #'style
+								<> \stopTextSpan
+								\clef "treble"
+							}
+						}
+						{
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 1/2
 								\stopStaff
 								\startStaff
 							}
-						}
-						{
-							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 3/4 {
-								\clef "percussion"
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											\italic
-												keyclick
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								\override NoteHead #'no-ledgers = ##t
-								\override NoteHead #'style = #'cross
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-								\startStaff
-								r8 \startTextSpan [
-								\set stemLeftBeamCount = 1
-								c'8 :64 -\staccato \pp ]
-								\stopStaff
-								\startStaff
-								\revert NoteHead #'no-ledgers
-								\revert NoteHead #'style
-								<> \stopTextSpan
-								\clef "treble"
+							{
+								r4
 							}
 						}
 						{
 							{
-								r16
-								r2.
+								b''32 -\accent -\staccato \f [
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								b''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								b''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								b''32 -\accent -\staccato ]
 							}
 						}
 						{
@@ -1132,6 +1082,13 @@
 						}
 						{
 							{
+								\pitchedTrill
+								c'''8 -\accent \p \startTrillSpan ef'''
+								<> \stopTrillSpan
+							}
+						}
+						{
+							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
 									\box
@@ -1147,10 +1104,9 @@
 									}
 								\once \override TextSpanner.dash-fraction = 1
 								\override NoteHead #'style = #'slash
-								b16 \pp ~ \startTextSpan
-								b4 ~
+								b8. \pp ~ \startTextSpan [
 								\set stemLeftBeamCount = 2
-								b16
+								b16 ]
 								\revert NoteHead #'style
 								<> \stopTextSpan
 							}
@@ -1161,17 +1117,49 @@
 								r4
 							}
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 3/8
-								\stopStaff
-								\startStaff
+								r4
+								r16
 							}
 						}
 						{
-							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 5/6 {
+							{
+								d'''32 -\accent -\staccato [ \> \f
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 1
+								d'''32 -\accent -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								\pitchedTrill
+								b''8 -\accent \startTrillSpan cs'''
+								<> \stopTrillSpan
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 3
+								e'''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								e'''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								e'''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								e'''32 -\accent -\staccato ] \p
+							}
+						}
+						{
+							{
+								r8
+								r4.
+							}
+							{
+								r8.
+							}
+						}
+						{
+							{
 								\clef "percussion"
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
@@ -1189,11 +1177,19 @@
 								\once \override TextSpanner.dash-fraction = 1
 								\override NoteHead #'no-ledgers = ##t
 								\override NoteHead #'style = #'cross
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								f8 :64 -\staccato \ppp \startTextSpan
-								r4
+								c'8 :64 \p \startTextSpan [
+							}
+							\times 4/5 {
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								c'16 -\staccato
+								f16 -\staccato ]
+								r8.
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1205,15 +1201,17 @@
 						{
 							{
 								r16
-								r4.
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 1
 								\stopStaff
 								\startStaff
+							}
+							{
+								r16
 							}
 						}
 						{
@@ -1238,9 +1236,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								g'8 :64 -\staccato \p \startTextSpan [
-								\set stemLeftBeamCount = 1
-								r8. ]
+								c'8 :64 -\staccato \pp \startTextSpan
+								r8.
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1251,65 +1248,7 @@
 						}
 						{
 							{
-								r16
-							}
-						}
-						{
-							{
-								\clef "percussion"
-								\override NoteHead #'no-ledgers = ##t
-								\override NoteHead #'style = #'cross
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-								\startStaff
-								c'16 -\staccato \pp ^ \markup {
-									\box
-										\pad-around
-											#0.5
-											\italic
-												keyclick
-									}
-								\stopStaff
-								\startStaff
-								\revert NoteHead #'no-ledgers
-								\revert NoteHead #'style
-								\clef "treble"
-							}
-						}
-						{
-							{
 								r8.
-								r2.
-							}
-							{
-								r8.
-							}
-						}
-						{
-							{
-								\clef "percussion"
-								\override NoteHead #'no-ledgers = ##t
-								\override NoteHead #'style = #'cross
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-								\startStaff
-								g'16 -\staccato \ppp ^ \markup {
-									\box
-										\pad-around
-											#0.5
-											\italic
-												keyclick
-									}
-								\stopStaff
-								\startStaff
-								\revert NoteHead #'no-ledgers
-								\revert NoteHead #'style
-								\clef "treble"
-							}
-						}
-						{
-							{
-								r4
 								r8
 							}
 						}
@@ -1336,7 +1275,7 @@
 							}
 						}
 						{
-							\times 4/5 {
+							\times 2/3 {
 								\clef "percussion"
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
@@ -1357,23 +1296,13 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								f16 -\staccato \p \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								r8 \startTextSpan
+								f8 :64 -\staccato \ppp
 								r8
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								g'16 -\staccato \pp
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								r16
 							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								r16
-								\set stemLeftBeamCount = 2
-								g'16 -\staccato \ppp ]
+							\times 2/3 {
+								r8
+								g'16 -\staccato \p
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1399,39 +1328,61 @@
 									}
 								\once \override TextSpanner.dash-fraction = 1
 								\override NoteHead #'style = #'slash
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								b8. \p ~ \startTextSpan [
+								b4 \p ~ \startTextSpan
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								b8. ]
+								b8
 								\revert NoteHead #'style
 								<> \stopTextSpan
 							}
 						}
 						{
 							{
+								r4
+							}
+							{
+								r4
 								r8
 							}
+						}
+						{
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 1
+								\pitchedTrill
+								b''8 -\accent \p \startTrillSpan d'''
+								<> \stopTrillSpan
 							}
+						}
+						{
 							{
-								R1 * 5/8
-								\stopStaff
-								\startStaff
+								r2
+							}
+						}
+						{
+							{
+								e'''32 -\accent -\staccato \f [
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								e'''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								e'''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								e'''32 -\accent -\staccato ]
+							}
+						}
+						{
+							{
+								r8
+								r4
 							}
 							{
 								r4
 							}
 						}
 						{
-							\times 8/9 {
+							{
 								\clef "percussion"
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
@@ -1452,26 +1403,10 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r8. \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								g'16 -\staccato \pp
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								r8
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								g'16 -\staccato \ppp
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								r8
-							}
-							\times 4/5 {
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								c'8 :64 -\staccato \p
-								\set stemLeftBeamCount = 1
-								r8. ]
+								g'16 -\staccato \p \startTextSpan
+								r16
+								r16
+								c'8 :64 \pp
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1482,12 +1417,45 @@
 						}
 						{
 							{
+								r16
+							}
+						}
+						{
+							{
+								b''32 -\accent -\staccato [ \< \p
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								b''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								b''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								b''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 3
+								b''32 -\accent -\staccato
+								\set stemLeftBeamCount = 3
+								\set stemRightBeamCount = 1
+								b''32 -\accent -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								\pitchedTrill
+								b''8 -\accent ] \f \startTrillSpan cs'''
+								<> \stopTrillSpan
+							}
+						}
+						{
+							{
+								r8.
+								r4
+							}
+							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
-							}
-							{
 								R1 * 5/16
 							}
 							{
@@ -1500,23 +1468,20 @@
 					}
 				}
 			>>
-			\tag score.clarinet-in-e-flat
-			\context PerformerGroup = "Clarinet In E-Flat Performer Group" \with {
-				instrumentName = \markup { Clarinet in E-flat }
-				shortInstrumentName = \markup { Cl. E-flat }
+			\tag score.clarinet-in-b-flat
+			\context PerformerGroup = "Clarinet In B-Flat Performer Group" \with {
+				instrumentName = \markup { Clarinet in B-flat }
+				shortInstrumentName = \markup { Cl. in B-flat }
 			} <<
-				\context ClarinetInEFlatStaff = "Clarinet In E-Flat Staff" {
-					\context Voice = "Clarinet In E-Flat Voice" {
+				\context ClarinetInBFlatStaff = "Clarinet In B-Flat Staff" {
+					\context Voice = "Clarinet In B-Flat Voice" {
 						\clef "treble"
 						{
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
+								R1 * 5/8
 								\stopStaff
 								\startStaff
 							}
@@ -1526,7 +1491,8 @@
 							}
 						}
 						{
-							{
+							\tweak #'text #tuplet-number::calc-fraction-text
+							\times 6/7 {
 								\clef "percussion"
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
@@ -1547,15 +1513,12 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								g'16 -\staccato \ppp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								c'16 -\staccato \pp \startTextSpan
 								r8
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								g'16 -\staccato \ppp
 								r16
-								\set stemLeftBeamCount = 2
-								c'16 -\staccato \p ]
+								r16
+								f16 -\staccato \p
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1566,11 +1529,12 @@
 						}
 						{
 							{
-								r8
+								r16
 							}
 						}
 						{
-							{
+							\tweak #'text #tuplet-number::calc-fraction-text
+							\times 3/4 {
 								\clef "percussion"
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
@@ -1591,7 +1555,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'8. :64 \p \startTextSpan
+								r8. \startTextSpan
+								g'16 -\staccato \ppp
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1650,9 +1615,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'16 -\staccato \ppp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								r8 ]
+								c'16 -\staccato \ppp \startTextSpan
+								r8
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1666,12 +1630,35 @@
 								r8.
 							}
 							{
+								r8
+								r16
+							}
+						}
+						{
+							{
+								\clef "percussion"
+								\override NoteHead #'no-ledgers = ##t
+								\override NoteHead #'style = #'cross
 								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
+								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								R1 * 3/8
+								f16 -\staccato \p ^ \markup {
+									\box
+										\pad-around
+											#0.5
+											\italic
+												keyclick
+									}
 								\stopStaff
 								\startStaff
+								\revert NoteHead #'no-ledgers
+								\revert NoteHead #'style
+								\clef "treble"
+							}
+						}
+						{
+							{
+								r8
 							}
 							{
 								r4
@@ -1700,7 +1687,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								f8 :64 \pp \startTextSpan
+								g'8 :64 \pp ~ \startTextSpan [
+								\set stemLeftBeamCount = 2
+								g'16 :128 ]
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1711,7 +1700,7 @@
 						}
 						{
 							{
-								r4
+								r8.
 							}
 							{
 								r8
@@ -1759,16 +1748,13 @@
 								R1 * 1
 							}
 							{
-								R1 * 3/8
+								R1 * 1/2
 								\stopStaff
 								\startStaff
 							}
-							{
-								r8
-							}
 						}
 						{
-							{
+							\times 2/3 {
 								\clef "percussion"
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
@@ -1789,7 +1775,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'8 :64 \ppp \startTextSpan
+								r8 \startTextSpan
+								g'16 -\staccato \ppp
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1800,7 +1787,16 @@
 						}
 						{
 							{
-								r2.
+								r8
+								r4
+							}
+							{
+								\stopStaff
+								\once \override Staff.StaffSymbol.line-count = 1
+								\startStaff
+								R1 * 3/8
+								\stopStaff
+								\startStaff
 							}
 							{
 								r8.
@@ -1886,9 +1882,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'8 :64 -\staccato \pp \startTextSpan [
-								\set stemLeftBeamCount = 2
-								r16 ]
+								c'8 :64 -\staccato \pp \startTextSpan
+								r16
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1914,8 +1909,7 @@
 							}
 						}
 						{
-							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 5/6 {
+							{
 								\clef "percussion"
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
@@ -1936,18 +1930,7 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								f16 -\staccato \p \startTextSpan [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								r16
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								g'8 :64 -\staccato \pp
-								\set stemLeftBeamCount = 2
-								r16 ]
+								c'8 :64 \p \startTextSpan
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1957,6 +1940,9 @@
 							}
 						}
 						{
+							{
+								r8.
+							}
 							{
 								r2.
 							}
@@ -1983,12 +1969,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r8 \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								r8 \startTextSpan
 								c'8 :64 -\staccato \ppp
-								\set stemLeftBeamCount = 1
-								r8 ]
+								r8
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1999,13 +1982,11 @@
 						}
 						{
 							{
-								r2
-								r8
+								r2.
 							}
 						}
 						{
-							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 6/7 {
+							{
 								\clef "percussion"
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
@@ -2026,15 +2007,7 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r8 \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								g'16 -\staccato \pp
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								r8
-								\set stemLeftBeamCount = 1
-								c'8 :64 -\staccato \ppp ]
+								f8 :64 \pp \startTextSpan
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -2044,6 +2017,9 @@
 							}
 						}
 						{
+							{
+								r8
+							}
 							{
 								r16
 							}
@@ -2065,7 +2041,8 @@
 									}
 								\once \override TextSpanner.dash-fraction = 1
 								\override NoteHead #'style = #'slash
-								d'4 \ppp \startTextSpan
+								d16 \ppp ~ \startTextSpan
+								d4
 								\revert NoteHead #'style
 								<> \stopTextSpan
 							}
@@ -2075,12 +2052,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 3/8
 								\stopStaff
 								\startStaff
-							}
-							{
-								r8
 							}
 						}
 						{
@@ -2107,26 +2081,26 @@
 						}
 						{
 							{
-								r16
+								r8.
 								r2.
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/8
+								R1 * 1/2
 							}
 							{
-								R1 * 1
+								R1 * 5/8
 								\stopStaff
 								\startStaff
 							}
 							{
-								r8
+								r2
 							}
 						}
 						{
-							{
+							\times 4/5 {
 								\clef "percussion"
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
@@ -2147,32 +2121,16 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'16 -\staccato \ppp \startTextSpan [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								c'16 -\staccato \p
-							}
-							\times 2/3 {
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								c'16 -\staccato \ppp \startTextSpan
 								r8
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f16 -\staccato \pp
+								f8 :64 -\staccato \p
 							}
-							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 3/4 {
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								g'16 -\staccato
-								\set stemLeftBeamCount = 1
-								r8. ]
+							{
+								r8
+							}
+							{
+								r8
+								g'16 -\staccato \pp
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -2227,35 +2185,14 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								f8. :64 \p \startTextSpan
-								<> \stopTextSpan
+								f16 :128 \p ~ \startTextSpan [
+								\set stemLeftBeamCount = 1
+								f8 :64 ]
 							}
 						}
 						{
 							{
-								r16
-							}
-						}
-						{
-							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											\italic
-												brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								f4 \ppp ~ \startTextSpan
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f16 ~
+								f4. \ppp ~
 							}
 							{
 								f2. ~
@@ -2406,12 +2343,7 @@
 								f8 \p ~ \startTextSpan
 							}
 							{
-								f4. ~
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								f8
+								f2
 								<> \stopTextSpan
 							}
 						}
@@ -2436,7 +2368,13 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								f2 \pp \startTextSpan
+								f8 \pp ~ \startTextSpan
+								f4 ~
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								f8
 								<> \stopTextSpan
 							}
 						}
@@ -2461,7 +2399,9 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								f8. :64 \f \startTextSpan
+								f16 :128 \f ~ \startTextSpan [
+								\set stemLeftBeamCount = 1
+								f8 :64 ]
 								<> \stopTextSpan
 							}
 						}
@@ -2627,12 +2567,12 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
 							{
-								r8.
+								r8
 							}
 						}
 						{
@@ -2651,14 +2591,10 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								f8 \pp ~ \startTextSpan
+								f4 \pp ~ \startTextSpan
 							}
 							{
-								f4 ~
-								\set stemLeftBeamCount = 1
-								f8
+								f4
 								<> \stopTextSpan
 							}
 						}
@@ -2683,21 +2619,18 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								f16 :128 \p ~ \startTextSpan [
-								\set stemLeftBeamCount = 1
-								f8. :64 ]
+								f8. :64 \p ~ \startTextSpan [
+								\set stemLeftBeamCount = 2
+								f16 :128 ]
 							}
 						}
 						{
 							{
-								f16 \ppp ~
+								f8. \ppp ~
 								f4 ~
 							}
 							{
 								f2 ~
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								f8 ~
 							}
 							{
 								f4 ~
@@ -2707,16 +2640,14 @@
 						}
 						{
 							{
-								f8. :64 \f ~ [
-								\set stemLeftBeamCount = 1
-								f8. :64 ]
+								f16 :128 \f ~
+								f4 :32
 								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								r16
-								r16
+								r8.
 							}
 						}
 						{
@@ -2735,23 +2666,16 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								f8. \p ~ \startTextSpan [
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								f8 ~
+								f16 \p ~ \startTextSpan
+								f4 ~
 								\set stemLeftBeamCount = 2
-								f16 ]
+								f16
 								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								r16
-								r8
+								r8.
 							}
 							{
 								r16
@@ -2802,76 +2726,76 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 3/8
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 1
-							}
-							{
 								R1 * 5/8
 							}
 							{
 								R1 * 1
 							}
 							{
+								R1 * 1
+							}
+							{
 								R1 * 3/8
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 3/4
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 5/16
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 5/8
+							}
+							{
+								R1 * 3/4
 							}
 							{
 								R1 * 5/16
@@ -2901,7 +2825,8 @@
 						}
 						{
 							{
-								r4
+								r16
+								r8
 							}
 						}
 						{
@@ -2920,9 +2845,7 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								g4 :32 \p ~ \startTextSpan
-								\set stemLeftBeamCount = 2
-								g16 :128
+								g4. :32 \p \startTextSpan
 							}
 						}
 						{
@@ -3054,13 +2977,18 @@
 								g8 \p ~ \startTextSpan
 							}
 							{
-								g4.
+								g4 ~
+								\set stemLeftBeamCount = 1
+								g8
 								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								r4
+								r8
+							}
+							{
+								r8
 							}
 						}
 						{
@@ -3099,9 +3027,7 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								g8 \pp ~ \startTextSpan [
-								\set stemLeftBeamCount = 1
-								g8 ]
+								g4 \pp \startTextSpan
 								<> \stopTextSpan
 							}
 						}
@@ -3121,8 +3047,7 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								g8 \ppp ~ \startTextSpan
-								g4
+								g4. \ppp \startTextSpan
 								<> \stopTextSpan
 							}
 						}
@@ -3315,7 +3240,7 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -3336,9 +3261,7 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								g4 \pp ~ \startTextSpan
-								\set stemLeftBeamCount = 2
-								g16
+								g4 \pp \startTextSpan
 								<> \stopTextSpan
 							}
 						}
@@ -3358,98 +3281,121 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								g4 \pp \startTextSpan
-								<> \stopTextSpan
-							}
-						}
-						{
-							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											\italic
-												brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g4 \ppp ~ \startTextSpan
 								\set stemLeftBeamCount = 1
-								g8.
+								\set stemRightBeamCount = 1
+								g8 \pp ~ \startTextSpan [
 							}
-						}
-						{
 							{
-								g16 :128 \p ~
-								g4 :32
-								<> \stopTextSpan
-							}
-						}
-						{
-							{
-								r16
-							}
-						}
-						{
-							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											\italic
-												brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g16 \p ~ \startTextSpan
-								g2
-								<> \stopTextSpan
-							}
-						}
-						{
-							{
-								r16
-							}
-						}
-						{
-							{
-								\once \override TextSpanner.bound-details.left-broken.text = ##f
-								\once \override TextSpanner.bound-details.left.text = \markup {
-									\box
-										\pad-around
-											#0.5
-											\italic
-												brush
-									}
-								\once \override TextSpanner.bound-details.right-broken.text = ##f
-								\once \override TextSpanner.bound-details.right.text = \markup {
-									\draw-line
-										#'(0 . -1)
-									}
-								\once \override TextSpanner.dash-fraction = 1
-								g8. :64 ~ \startTextSpan \> \f
-								g4 :32 ~
 								\set stemLeftBeamCount = 1
-								g8. :64 \p
+								\set stemRightBeamCount = 1
+								g8 ]
+								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								g16 \pp ~
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											\italic
+												brush
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
+								g8 \ppp ~ \startTextSpan
 								g4 ~
+								\set stemLeftBeamCount = 2
+								g16
 							}
+						}
+						{
 							{
-								g4. ~
+								g8. :64 \p ~ [
+								\set stemLeftBeamCount = 1
+								g8. :64 ]
+								<> \stopTextSpan
+							}
+						}
+						{
+							{
+								r16
+							}
+						}
+						{
+							{
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											\italic
+												brush
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
+								g2 \p \startTextSpan
+								<> \stopTextSpan
+							}
+						}
+						{
+							{
+								r16
+							}
+						}
+						{
+							{
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											\italic
+												brush
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
+								g16 :128 \f ~ \startTextSpan
+								g2 :32
+								<> \stopTextSpan
+							}
+						}
+						{
+							{
+								r16
+							}
+						}
+						{
+							{
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											\italic
+												brush
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
+								g8. \pp ~ \startTextSpan
+								g2 ~
 							}
 							{
 								\set stemLeftBeamCount = 1
@@ -3497,7 +3443,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							<g'' b'' d''' f'''>16 -\accent \p
+							<g'' b'' d''' f'''>16 -\accent \fff
 								^ \markup {
 									\center-align
 										\natural
@@ -3506,13 +3452,8 @@
 					}
 					{
 						{
-							<g b g' af' d''>4 :32 \ppp ~
-						}
-						{
-							<g b g' af' d''>4 :32 ~
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 1
-							<g b g' af' d''>16 :128 ~
+							<g b g' af' d''>16 :128 \ppp ~
+							<g b g' af' d''>2 :32 ~
 						}
 						{
 							<g b g' af' d''>4 :32
@@ -3589,11 +3530,8 @@
 							\set stemLeftBeamCount = 3
 							\set stemRightBeamCount = 3
 							e'''32
-							\set stemLeftBeamCount = 3
-							\set stemRightBeamCount = 3
-							cs'''32 )
-							\set stemLeftBeamCount = 3
-							r32 ]
+							cs'''32 ] )
+							r32
 						}
 					}
 					{
@@ -3625,19 +3563,19 @@
 					}
 					{
 						{
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 1
-							<g b ef' g' d''>8 :64 \p ~
+							<g b ef' g' d''>4 :32 \p ~
 						}
 						{
-							<g b ef' g' d''>2 :32 ~
-							\set stemLeftBeamCount = 2
-							<g b ef' g' d''>16 :128
+							<g b ef' g' d''>4 :32 ~
+							\set stemLeftBeamCount = 1
+							<g b ef' g' d''>8. :64
 						}
 					}
 					{
 						{
 							r16
+						}
+						{
 							r16
 						}
 					}
@@ -3670,10 +3608,8 @@
 					{
 						\tweak #'text #tuplet-number::calc-fraction-text
 						\times 6/7 {
-							r16 [
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 2
-							g''16 \p (
+							r16
+							g''16 \p [ (
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 3
 							bf''32
@@ -3755,10 +3691,7 @@
 					}
 					{
 						{
-							r16
-						}
-						{
-							r16
+							r8
 						}
 					}
 					{
@@ -3768,35 +3701,36 @@
 					}
 					{
 						{
-							r4
+							r8
 						}
-					}
-					{
-						{
-							<g b ef' g' d''>2 :32 \ppp ~
-							\set stemLeftBeamCount = 1
-							<g b ef' g' d''>8. :64
-						}
-					}
-					{
-						{
-							r16
-						}
-					}
-					{
-						\times 4/5 {
-							bf''16 \f [ (
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 2
-							e'''16 )
-							\set stemLeftBeamCount = 3
-							r32 ]
-						}
-					}
-					{
 						{
 							r8
+						}
+					}
+					{
+						{
+							<g b ef' g' d''>8 :64 \ppp ~
+							<g b ef' g' d''>2 :32 ~
+							\set stemLeftBeamCount = 2
+							<g b ef' g' d''>16 :128
+						}
+					}
+					{
+						{
 							r16
+						}
+					}
+					{
+						{
+							bf''16 \f
+						}
+					}
+					{
+						{
+							r16
+						}
+						{
+							r8.
 						}
 					}
 					{
@@ -3812,15 +3746,18 @@
 					}
 					{
 						{
-							r8.
+							r16
+							r8
 						}
 					}
 					{
 						{
-							<g b ef' g' d''>2 :32 \pp ~
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							<g b ef' g' d''>8 :64 \pp ~
 						}
 						{
-							<g b ef' g' d''>4. :32
+							<g b ef' g' d''>2. :32
 						}
 					}
 					{
@@ -3849,76 +3786,6 @@
 			\context Dynamics = "Piano Dynamics" {
 				{
 					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r1
-					}
-					{
-						r1
-					}
-					{
-						r4.
-					}
-					{
-						r2.
-					}
-					{
-						r4.
-					}
-					{
-						r1
-					}
-					{
-						r4.
-					}
-					{
-						r1
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r1
-					}
-					{
-						r4.
-					}
-					{
-						r2.
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r1
-					}
-					{
-						r1
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r1
-					}
-					{
 						r2
 						r8
 					}
@@ -3926,7 +3793,74 @@
 						r1
 					}
 					{
+						r1
+					}
+					{
 						r4.
+					}
+					{
+						r2.
+					}
+					{
+						r4.
+					}
+					{
+						r1
+					}
+					{
+						r2
+					}
+					{
+						r2
+					}
+					{
+						r4.
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r1
+					}
+					{
+						r4.
+					}
+					{
+						r2.
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r4
+						r16
+					}
+					{
+						r1
+					}
+					{
+						r1
+					}
+					{
+						r4.
+					}
+					{
+						r4.
+					}
+					{
+						r1
+					}
+					{
+						r2
+					}
+					{
+						r2
+						r8
+					}
+					{
+						r2.
 					}
 					{
 						r4
@@ -3951,7 +3885,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							<d, f, a, c>16 -\accent \p
+							<d, f, a, c>16 -\accent \fff
 								^ \markup {
 									\center-align
 										\natural
@@ -3960,15 +3894,13 @@
 					}
 					{
 						{
-							r4
+							r16
+							r2
 						}
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 5/16
-						}
-						{
 							R1 * 1
 						}
 						{
@@ -3992,10 +3924,8 @@
 					{
 						\tweak #'text #tuplet-number::calc-fraction-text
 						\times 6/7 {
-							r16 [
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 2
-							g,16 \p (
+							r16
+							g,16 \p [ (
 							\set stemLeftBeamCount = 2
 							\set stemRightBeamCount = 3
 							bf,32
@@ -4014,10 +3944,13 @@
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 3/8
+							R1 * 1/2
 						}
 						{
-							R1 * 1
+							R1 * 1/2
+						}
+						{
+							R1 * 3/8
 						}
 						{
 							R1 * 5/16
@@ -4034,11 +3967,8 @@
 					{
 						\times 4/5 {
 							bf,16 \f [ (
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 2
-							e16 )
-							\set stemLeftBeamCount = 3
-							r32 ]
+							e16 ] )
+							r32
 						}
 					}
 					{
@@ -4062,10 +3992,10 @@
 							R1 * 1
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 3/8
 						}
 						{
 							R1 * 1
@@ -4073,7 +4003,6 @@
 							\startStaff
 						}
 						{
-							r8
 							r16
 						}
 					}
@@ -4098,10 +4027,10 @@
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 1
+							R1 * 5/8
 						}
 						{
-							R1 * 3/8
+							R1 * 3/4
 						}
 						{
 							R1 * 5/16
@@ -4121,10 +4050,7 @@
 						s1 * 1/16 \sustainOn
 					}
 					{
-						s1 * 1/4
-					}
-					{
-						s1 * 5/16
+						s1 * 9/16
 					}
 					{
 						s1 * 1/4
@@ -4214,16 +4140,19 @@
 				}
 				{
 					{
-						s1 * 1/8 \sustainOn
+						s1 * 1/4 \sustainOn
 					}
 					{
-						s1 * 9/16
+						s1 * 7/16
 						<> \sustainOff
 					}
 				}
 				{
 					{
-						r8
+						r16
+					}
+					{
+						r16
 					}
 				}
 				{
@@ -4325,10 +4254,7 @@
 				}
 				{
 					{
-						r16
-					}
-					{
-						r16
+						r8
 					}
 				}
 				{
@@ -4339,7 +4265,10 @@
 				}
 				{
 					{
-						r4
+						r8
+					}
+					{
+						r8
 					}
 				}
 				{
@@ -4347,10 +4276,7 @@
 						s1 * 11/16 \sustainOn
 					}
 					{
-						s1 * 1/16
-					}
-					{
-						s1 * 1/8
+						s1 * 3/16
 						<> \sustainOff
 					}
 				}
@@ -4381,10 +4307,10 @@
 				}
 				{
 					{
-						s1 * 1/2 \sustainOn
+						s1 * 1/8 \sustainOn
 					}
 					{
-						s1 * 3/8
+						s1 * 3/4
 						<> \sustainOff
 					}
 				}
@@ -4419,15 +4345,7 @@
 						\clef "treble"
 						{
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 5/16
-								\stopStaff
-								\startStaff
-							}
-							{
-								r16
+								r4.
 							}
 						}
 						{
@@ -4453,15 +4371,10 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'16 -\staccato \pp \startTextSpan [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
+								c'16 -\staccato \pp \startTextSpan
 								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
 								r16
-								\set stemLeftBeamCount = 2
-								c'16 -\staccato \ppp ]
+								c'16 -\staccato \ppp
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -4482,10 +4395,11 @@
 						{
 							{
 								a16 -\accent -\tenuto \mf ^ \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 							}
 						}
@@ -4546,13 +4460,12 @@
 								R1 * 1
 							}
 							{
-								R1 * 3/8
-								\stopStaff
-								\startStaff
+								R1 * 1/2
 							}
 							{
-								r2
-								r8
+								R1 * 1/2
+								\stopStaff
+								\startStaff
 							}
 						}
 						{
@@ -4590,7 +4503,8 @@
 						}
 						{
 							{
-								r8.
+								r16
+								r8
 							}
 							{
 								\stopStaff
@@ -4661,15 +4575,15 @@
 								R1 * 1
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
 							{
-								r4
+								r8
 							}
 						}
 						{
@@ -4696,19 +4610,20 @@
 						}
 						{
 							{
-								r8.
-								r2
+								r16
+								r2.
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/8
+								R1 * 1/2
 								\stopStaff
 								\startStaff
 							}
 							{
-								r8.
+								r8
+								r16
 							}
 						}
 						{
@@ -4733,9 +4648,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'16 -\staccato \p \startTextSpan [
-								\set stemLeftBeamCount = 1
-								r8 ]
+								c'16 -\staccato \p \startTextSpan
+								r8
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -4746,14 +4660,14 @@
 						}
 						{
 							{
-								r8.
-								r2
+								r16
+								r4
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 3/4
 								\stopStaff
 								\startStaff
 							}
@@ -4765,10 +4679,11 @@
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4804,15 +4719,7 @@
 						\clef "alto"
 						{
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 5/16
-								\stopStaff
-								\startStaff
-							}
-							{
-								r16
+								r4.
 							}
 						}
 						{
@@ -4838,12 +4745,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r8 \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								r8 \startTextSpan
 								c'16 -\staccato \pp
-								\set stemLeftBeamCount = 2
-								r16 ]
+								r16
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -4865,10 +4769,11 @@
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4956,9 +4861,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r8. \startTextSpan [
-								\set stemLeftBeamCount = 2
-								c'16 -\staccato \p ]
+								r8. \startTextSpan
+								c'16 -\staccato \p
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -4975,13 +4879,12 @@
 								R1 * 1
 							}
 							{
-								R1 * 3/8
-								\stopStaff
-								\startStaff
+								R1 * 1/2
 							}
 							{
-								r2
-								r8
+								R1 * 1/2
+								\stopStaff
+								\startStaff
 							}
 						}
 						{
@@ -5007,12 +4910,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'16 -\staccato \pp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								c'16 -\staccato \pp \startTextSpan
 								r8.
-								\set stemLeftBeamCount = 2
-								c'16 -\staccato \ppp ]
+								c'16 -\staccato \ppp
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -5023,7 +4923,8 @@
 						}
 						{
 							{
-								r8.
+								r16
+								r8
 							}
 							{
 								\stopStaff
@@ -5094,15 +4995,12 @@
 								R1 * 1
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 								\stopStaff
 								\startStaff
-							}
-							{
-								r8
 							}
 						}
 						{
@@ -5128,9 +5026,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'8 :64 -\staccato \p \startTextSpan [
-								\set stemLeftBeamCount = 1
-								r8 ]
+								c'8 :64 -\staccato \p \startTextSpan
+								r8
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -5141,19 +5038,20 @@
 						}
 						{
 							{
-								r8.
-								r2
+								r16
+								r2.
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/8
+								R1 * 1/2
 								\stopStaff
 								\startStaff
 							}
 							{
-								r8.
+								r8
+								r16
 							}
 						}
 						{
@@ -5178,9 +5076,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r8 \startTextSpan [
-								\set stemLeftBeamCount = 2
-								c'16 -\staccato \pp ]
+								r8 \startTextSpan
+								c'16 -\staccato \pp
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -5191,14 +5088,14 @@
 						}
 						{
 							{
-								r8.
-								r2
+								r16
+								r4
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 3/4
 								\stopStaff
 								\startStaff
 							}
@@ -5210,10 +5107,11 @@
 							\times 4/5 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -5253,10 +5151,7 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
+								R1 * 5/8
 								\stopStaff
 								\startStaff
 							}
@@ -5269,10 +5164,11 @@
 							\times 4/5 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -5308,10 +5204,13 @@
 								R1 * 1
 							}
 							{
-								R1 * 3/8
+								R1 * 1/2
 							}
 							{
-								R1 * 1
+								R1 * 1/2
+							}
+							{
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -5320,10 +5219,11 @@
 							\times 4/5 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -5331,9 +5231,8 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								d8 -\accent -\tenuto \mp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								r8. ]
+								d8 -\accent -\tenuto \mp \startTextSpan
+								r8.
 								<> \stopTextSpan
 							}
 						}
@@ -5370,10 +5269,11 @@
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -5397,22 +5297,22 @@
 								R1 * 1
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
-								R1 * 5/16
+								R1 * 3/8
 							}
 							{
 								R1 * 1
+							}
+							{
+								R1 * 1/2
 							}
 							{
 								R1 * 5/8
 							}
 							{
-								R1 * 1
-							}
-							{
-								R1 * 3/8
+								R1 * 3/4
 								\stopStaff
 								\startStaff
 							}
@@ -5424,10 +5324,11 @@
 							\times 4/5 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -5435,12 +5336,9 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								c''16 :128 -\accent -\tenuto \mp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								c''16 :128 -\accent -\tenuto \mp \startTextSpan
 								r8
-								\set stemLeftBeamCount = 1
-								b8 -\accent -\tenuto \mf ]
+								b8 -\accent -\tenuto \mf
 								<> \stopTextSpan
 							}
 						}

@@ -69,6 +69,27 @@ segment_maker.add_setting(
     )
 
 
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.granular_timespan_maker,
+        playing_talea__counts=(2, 2, 3, 2, 7, 1, 3, 2, 1),
+        ),
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(0, 2, 4),
+        ratio=(1, 1, 1, 1, 1),
+        timespan=timespantools.Timespan(
+            start_offset=fanfare_duration,
+            ),
+        ),
+    oboe=new(
+        zaira.materials.oboe_solo_music_specifier,
+        pitch_maker__transform_stack=(
+            pitchtools.Transposition(-3),
+            ),
+        ),
+    )
+
+
 ### PERCUSSION SETTINGS #######################################################
 
 

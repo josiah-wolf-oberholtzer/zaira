@@ -1,3 +1,15 @@
+#(define-markup-command (vstrut layout props)
+  ()
+  #:category other
+  "
+@cindex creating vertical space in text
+
+Create a box of the same height as the current font."
+  (let ((ref-mrkp (interpret-markup layout props "fp")))
+    (ly:make-stencil (ly:stencil-expr empty-stencil)
+                     empty-interval
+                     (ly:stencil-extent ref-mrkp Y))))
+
 afterGraceFraction = #(cons 127 128)
 #(set-default-paper-size "11x17" 'landscape)
 #(set-global-staff-size 12)
@@ -85,7 +97,7 @@ afterGraceFraction = #(cons 127 128)
 
     \context {
         \Staff
-        \name ClarinetInEFlatStaff
+        \name ClarinetInBFlatStaff
         \type Engraver_group
         \alias Staff
     }
@@ -104,8 +116,6 @@ afterGraceFraction = #(cons 127 128)
         \name MetalsStaff
         \type Engraver_group
         \alias Staff
-        \override BarLine.bar-extent = #'(-1 . 1)
-        \override StaffSymbol.line-count = 3
     }
 
     \context {
@@ -233,7 +243,7 @@ afterGraceFraction = #(cons 127 128)
         \accepts Staff
         \accepts FluteStaff
         \accepts OboeStaff
-        \accepts ClarinetInEFlatStaff
+        \accepts ClarinetInBFlatStaff
         \accepts DrumsStaff
         \accepts WoodsStaff
         \accepts MetalsStaff
@@ -368,7 +378,7 @@ afterGraceFraction = #(cons 127 128)
 
     %%% PAGE BREAKING %%%
 
-    page-breaking = #ly:minimal-breaking
+    page-breaking = #ly:optimal-breaking
     ragged-bottom = ##f
     ragged-last-bottom = ##f
 
@@ -394,7 +404,7 @@ afterGraceFraction = #(cons 127 128)
     )
     top-system-spacing = #'(
         (basic-distance . 0)
-        (minimum-distance . 20)
+        (minimum-distance . 10)
         (padding . 0)
         (stretchability . 0)
     )

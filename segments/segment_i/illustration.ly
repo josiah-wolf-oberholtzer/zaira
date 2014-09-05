@@ -7,7 +7,7 @@
 
 \score {
 	\context Score = "Zaira Score" <<
-		\tag score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
+		\tag score.cello.clarinet-in-b-flat.flute.oboe.percussion.piano.viola.violin
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
 				\time 6/8
@@ -319,9 +319,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'8 :64 -\staccato \pp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								r8 ]
+								c'8 :64 -\staccato \pp \startTextSpan
+								r8
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -447,12 +446,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'16 -\staccato \ppp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								c'16 -\staccato \ppp \startTextSpan
 								r8
-								\set stemLeftBeamCount = 1
-								c'8 :64 -\staccato \p ]
+								c'8 :64 -\staccato \p
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -528,12 +524,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r8 \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								r8 \startTextSpan
 								c'16 -\staccato \p
-								\set stemLeftBeamCount = 1
-								r8 ]
+								r8
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1013,13 +1006,13 @@
 					}
 				}
 			>>
-			\tag score.clarinet-in-e-flat
-			\context PerformerGroup = "Clarinet In E-Flat Performer Group" \with {
-				instrumentName = \markup { Clarinet in E-flat }
-				shortInstrumentName = \markup { Cl. E-flat }
+			\tag score.clarinet-in-b-flat
+			\context PerformerGroup = "Clarinet In B-Flat Performer Group" \with {
+				instrumentName = \markup { Clarinet in B-flat }
+				shortInstrumentName = \markup { Cl. in B-flat }
 			} <<
-				\context ClarinetInEFlatStaff = "Clarinet In E-Flat Staff" {
-					\context Voice = "Clarinet In E-Flat Voice" {
+				\context ClarinetInBFlatStaff = "Clarinet In B-Flat Staff" {
+					\context Voice = "Clarinet In B-Flat Voice" {
 						\clef "treble"
 						{
 							{
@@ -1049,9 +1042,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'16 -\staccato \ppp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								r8. ]
+								c'16 -\staccato \ppp \startTextSpan
+								r8.
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1210,9 +1202,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'8 :64 -\staccato \pp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								r8 ]
+								c'8 :64 -\staccato \pp \startTextSpan
+								r8
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1297,8 +1288,8 @@
 									}
 								\once \override TextSpanner.dash-fraction = 1
 								\override NoteHead #'style = #'slash
-								d'16 \ppp ~ \startTextSpan
-								d'4
+								d16 \ppp ~ \startTextSpan
+								d4
 								\revert NoteHead #'style
 								<> \stopTextSpan
 							}
@@ -1338,15 +1329,10 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'16 -\staccato \ppp \startTextSpan [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
+								c'16 -\staccato \ppp \startTextSpan
 								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
 								r16
-								\set stemLeftBeamCount = 2
-								c'16 -\staccato \p ]
+								c'16 -\staccato \p
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1484,9 +1470,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'16 -\staccato \pp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								r8 ]
+								c'16 -\staccato \pp \startTextSpan
+								r8
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -1538,9 +1523,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r8. \startTextSpan [
-								\set stemLeftBeamCount = 2
-								c'16 -\staccato \ppp ]
+								r8. \startTextSpan
+								c'16 -\staccato \ppp
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -2214,9 +2198,8 @@
 						{
 							\tweak #'text #tuplet-number::calc-fraction-text
 							\times 3/4 {
-								a8 :64 -\staccato \mf [
-								\set stemLeftBeamCount = 1
-								r8 ]
+								a8 :64 -\staccato \mf
+								r8
 							}
 						}
 						{
@@ -2252,12 +2235,9 @@
 						}
 						{
 							\times 4/5 {
-								a16 -\staccato \mp [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								a16 -\staccato \mp
 								r8
-								\set stemLeftBeamCount = 1
-								a8 :64 -\staccato \mf ]
+								a8 :64 -\staccato \mf
 							}
 						}
 						{
@@ -2283,12 +2263,9 @@
 						{
 							\tweak #'text #tuplet-number::calc-fraction-text
 							\times 3/5 {
-								r8 [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								r8
 								a16 -\staccato \mf
-								\set stemLeftBeamCount = 1
-								r8 ]
+								r8
 							}
 						}
 						{
@@ -2403,14 +2380,10 @@
 						{
 							\times 2/3 {
 								b4 \mp
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								r8 [
+								r8
 							}
 							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								b8 \mf ]
+								b8 \mf
 							}
 						}
 						{
@@ -2479,11 +2452,8 @@
 							\tweak #'text #tuplet-number::calc-fraction-text
 							\times 3/4 {
 								b4 \mp
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								b8 [
-								\set stemLeftBeamCount = 1
-								r8 ]
+								b8
+								r8
 							}
 						}
 						{
@@ -2536,7 +2506,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							<g'' b'' d''' f'''>16 -\accent \p
+							<g'' b'' d''' f'''>16 -\accent \fff
 								^ \markup {
 									\center-align
 										\natural
@@ -2874,7 +2844,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							<d, f, a, c>16 -\accent \p
+							<d, f, a, c>16 -\accent \fff
 								^ \markup {
 									\center-align
 										\natural
@@ -3217,10 +3187,11 @@
 						{
 							{
 								a16 -\accent -\tenuto \mf ^ \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 							}
 						}
@@ -3281,10 +3252,11 @@
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3321,10 +3293,11 @@
 							\times 6/7 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3332,13 +3305,9 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								r8. \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								r8. \startTextSpan
 								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								b16 :128 -\accent -\tenuto \mf ~
+								b16 :128 -\accent -\tenuto \mf ~ [
 								\set stemLeftBeamCount = 1
 								b8 :64 ]
 								<> \stopTextSpan
@@ -3398,10 +3367,11 @@
 							\times 6/7 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3409,18 +3379,11 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								d'8 -\accent -\tenuto \mp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								d'8 -\accent -\tenuto \mp \startTextSpan
 								r16
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
 								r8
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
 								r16
-								\set stemLeftBeamCount = 2
-								a'16 -\accent -\tenuto \mf ]
+								a'16 -\accent -\tenuto \mf
 								<> \stopTextSpan
 							}
 						}
@@ -3448,10 +3411,11 @@
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3498,12 +3462,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'16 -\staccato \p \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								c'16 -\staccato \p \startTextSpan
 								r8
-								\set stemLeftBeamCount = 1
-								c'8 :64 -\staccato \pp ]
+								c'8 :64 -\staccato \pp
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -3525,10 +3486,11 @@
 							\times 3/4 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3536,15 +3498,10 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								c''16 :128 -\accent -\tenuto \mp \startTextSpan [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
+								c''16 :128 -\accent -\tenuto \mp \startTextSpan
 								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
 								r16
-								\set stemLeftBeamCount = 2
-								b16 -\accent -\tenuto \mf ]
+								b16 -\accent -\tenuto \mf
 								<> \stopTextSpan
 							}
 						}
@@ -3589,12 +3546,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r8 \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								r8 \startTextSpan
 								c'16 -\staccato \pp
-								\set stemLeftBeamCount = 2
-								r16 ]
+								r16
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -3613,10 +3567,11 @@
 							\times 3/4 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3624,21 +3579,12 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								r8 \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								r8 \startTextSpan
 								b'16 -\accent -\tenuto \mf
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
 								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
 								r16
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
 								d'8 -\accent -\tenuto \mp
-								\set stemLeftBeamCount = 2
-								r16 ]
+								r16
 								<> \stopTextSpan
 							}
 						}
@@ -3684,10 +3630,11 @@
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3695,15 +3642,10 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								d''16 -\accent -\tenuto \mp \startTextSpan [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
+								d''16 -\accent -\tenuto \mp \startTextSpan
 								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
 								r16
-								\set stemLeftBeamCount = 2
-								a'16 :128 -\accent -\tenuto \mf ]
+								a'16 :128 -\accent -\tenuto \mf
 								<> \stopTextSpan
 							}
 						}
@@ -3746,9 +3688,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r8. \startTextSpan [
-								\set stemLeftBeamCount = 2
-								c'16 -\staccato \p ]
+								r8. \startTextSpan
+								c'16 -\staccato \p
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -3813,12 +3754,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'16 -\staccato \pp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								c'16 -\staccato \pp \startTextSpan
 								r8.
-								\set stemLeftBeamCount = 2
-								c'16 -\staccato \ppp ]
+								c'16 -\staccato \ppp
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -3844,10 +3782,11 @@
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3931,10 +3870,11 @@
 							\times 6/7 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -3942,18 +3882,11 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								b8 :64 -\accent -\tenuto \mf \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								b8 :64 -\accent -\tenuto \mf \startTextSpan
 								r16
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
 								r8
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
 								r16
-								\set stemLeftBeamCount = 2
-								d'16 -\accent -\tenuto \mp ]
+								d'16 -\accent -\tenuto \mp
 								<> \stopTextSpan
 							}
 						}
@@ -3989,9 +3922,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'8 :64 -\staccato \p \startTextSpan [
-								\set stemLeftBeamCount = 1
-								r8 ]
+								c'8 :64 -\staccato \p \startTextSpan
+								r8
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -4012,10 +3944,11 @@
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4065,9 +3998,8 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r8 \startTextSpan [
-								\set stemLeftBeamCount = 2
-								c'16 -\staccato \pp ]
+								r8 \startTextSpan
+								c'16 -\staccato \pp
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -4089,10 +4021,11 @@
 							\times 4/5 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4100,12 +4033,9 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								a16 -\accent -\tenuto \mf \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								a16 -\accent -\tenuto \mf \startTextSpan
 								r8
-								\set stemLeftBeamCount = 1
-								c'8 :64 -\accent -\tenuto \mp ]
+								c'8 :64 -\accent -\tenuto \mp
 								<> \stopTextSpan
 							}
 						}
@@ -4144,15 +4074,10 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								c'16 -\staccato \ppp \startTextSpan [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
+								c'16 -\staccato \ppp \startTextSpan
 								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
 								r16
-								\set stemLeftBeamCount = 2
-								c'16 -\staccato \p ]
+								c'16 -\staccato \p
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -4174,10 +4099,11 @@
 							\times 3/5 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4185,12 +4111,9 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								r8 \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								r8 \startTextSpan
 								c'16 :128 -\accent -\tenuto \mp
-								\set stemLeftBeamCount = 1
-								r8 ]
+								r8
 								<> \stopTextSpan
 							}
 						}
@@ -4235,12 +4158,9 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-positions = #'(4 -4)
 								\startStaff
-								r8 \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								r8 \startTextSpan
 								c'16 -\staccato \p
-								\set stemLeftBeamCount = 2
-								r16 ]
+								r16
 								\stopStaff
 								\startStaff
 								\revert NoteHead #'no-ledgers
@@ -4258,10 +4178,11 @@
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4269,15 +4190,10 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								b16 -\accent -\tenuto \mf \startTextSpan [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
+								b16 -\accent -\tenuto \mf \startTextSpan
 								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
 								r16
-								\set stemLeftBeamCount = 2
-								d'16 -\accent -\tenuto \mp ]
+								d'16 -\accent -\tenuto \mp
 								<> \stopTextSpan
 							}
 						}
@@ -4329,10 +4245,11 @@
 						{
 							{
 								d'16 -\accent -\tenuto \mp ^ \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 							}
 						}
@@ -4387,10 +4304,11 @@
 							\times 4/5 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4427,10 +4345,11 @@
 							\times 5/6 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4466,10 +4385,11 @@
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4503,10 +4423,11 @@
 							\times 6/7 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4514,15 +4435,10 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								c'16 :128 -\accent -\tenuto \mp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								c'16 :128 -\accent -\tenuto \mp \startTextSpan
 								r8
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
 								b,8 -\accent -\tenuto \mf
-								\set stemLeftBeamCount = 1
-								r8 ]
+								r8
 								<> \stopTextSpan
 							}
 						}
@@ -4549,10 +4465,11 @@
 							\times 2/3 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4560,18 +4477,11 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								r8 \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
+								r8 \startTextSpan
 								b,16 -\accent -\tenuto \mf
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
 								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
 								r16
-								\set stemLeftBeamCount = 2
-								d,16 -\accent -\tenuto \mp ]
+								d,16 -\accent -\tenuto \mp
 								<> \stopTextSpan
 							}
 						}
@@ -4595,10 +4505,11 @@
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4606,15 +4517,10 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								d,16 -\accent -\tenuto \mp \startTextSpan [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
+								d,16 -\accent -\tenuto \mp \startTextSpan
 								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
 								r16
-								\set stemLeftBeamCount = 2
-								a,16 :128 -\accent -\tenuto \mf ]
+								a,16 :128 -\accent -\tenuto \mf
 								<> \stopTextSpan
 							}
 						}
@@ -4641,10 +4547,11 @@
 						{
 							{
 								a,16 :128 -\accent -\tenuto \mf ^ \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 							}
 						}
@@ -4669,10 +4576,11 @@
 							\times 6/7 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4680,18 +4588,11 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								c'16 -\accent -\tenuto \mp \startTextSpan [
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
+								c'16 -\accent -\tenuto \mp \startTextSpan
 								r8
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
 								r16
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
 								b,16 -\accent -\tenuto \mf
-								\set stemLeftBeamCount = 1
-								r8 ]
+								r8
 								<> \stopTextSpan
 							}
 						}
@@ -4712,10 +4613,11 @@
 							\times 4/5 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
 								\once \override TextSpanner.bound-details.left.text = \markup {
-									\filled-box
-										#'(-0.5 . 1.5)
-										#'(-1 . 1)
-										#0.25
+									\box
+										\pad-around
+											#0.5
+											\italic
+												overpressure
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {

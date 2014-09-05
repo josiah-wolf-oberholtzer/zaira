@@ -59,6 +59,22 @@ segment_maker.add_setting(
     )
 
 
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.dense_timespan_maker,
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(1, 3),
+        ratio=(3, 1, 2, 1, 1),
+        timespan=timespantools.Timespan(
+            start_offset=fanfare_duration,
+            ),
+        ),
+    oboe=new(
+        zaira.materials.oboe_solo_music_specifier,
+        seed=1,
+        ),
+    )
+
+
 ### PERCUSSION SETTINGS #######################################################
 
 

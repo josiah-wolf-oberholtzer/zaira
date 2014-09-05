@@ -3,6 +3,7 @@ from abjad import new
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import mathtools
+from abjad.tools import pitchtools
 import consort
 import zaira
 
@@ -57,6 +58,24 @@ segment_maker.add_setting(
     clarinet=zaira.materials.wind_keyclick_music_specifier,
     flute=zaira.materials.wind_keyclick_music_specifier,
     oboe=zaira.materials.wind_keyclick_music_specifier,
+    )
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.granular_timespan_maker,
+        playing_talea__counts=(1, 1, 1, 1, 3, 2, 1),
+        ),
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(1, 3),
+        ratio=(2, 1, 2, 1, 1),
+        ),
+    oboe=new(
+        zaira.materials.oboe_solo_music_specifier,
+        pitch_maker__transform_stack=(
+            pitchtools.Transposition(-5),
+            ),
+        ),
     )
 
 
