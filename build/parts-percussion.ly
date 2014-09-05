@@ -8,6 +8,39 @@
 
 #(set-global-staff-size 13)
 
+\header {
+    composer = \markup {
+        \column {
+            \override #'(font-name . "Didot")
+                \fontsize #3 "Josiah Wolf Oberholtzer (1984)"
+            " "
+        }
+    }
+    tagline = \markup { "" }
+    title = \markup {
+        \column {
+            \center-align {
+                \override #'(font-name . "Didot Italic")
+                    \fontsize #4 {
+                        \line { Invisible Cities (i): }
+                    }
+                \vspace #0.5
+                \override #'(font-name . "Didot")
+                    \fontsize #18 {
+                        \line { ZAIRA }
+                    }
+                \vspace #1
+                \override #'(font-name . "Didot Italic")
+                    \fontsize #4 {
+                        \line { "for Ensemble Mosaik" }
+                        " "
+                        " "
+                    }
+            }
+        }
+    }
+}
+
 \score {
     \keepWithTag percussion
     { 

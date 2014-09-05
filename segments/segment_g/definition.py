@@ -3,6 +3,7 @@ from abjad import new
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import mathtools
+from abjad.tools import pitchtools
 from abjad.tools import timespantools
 import consort
 import zaira
@@ -21,6 +22,43 @@ ratio = mathtools.NonreducedRatio(1, 4, 2)
 segment_maker.set_duration_in_seconds(
     durationtools.Multiplier(sum(ratio), 91) *
     zaira.materials.total_duration_in_seconds,
+    )
+
+fanfare_duration = durationtools.Duration(13, 16)
+
+
+### WINDS SETTINGS ############################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.granular_timespan_maker,
+        reflect=True,
+        ),
+    timespan_identifier=timespantools.Timespan(
+        start_offset=fanfare_duration,
+        ),
+    flute=new(
+        zaira.materials.wind_trills_music_specifier,
+        pitch_maker__transform_stack=(
+            pitchtools.Inversion(),
+            ),
+        seed=0,
+        ),
+    oboe=new(
+        zaira.materials.wind_trills_music_specifier,
+        pitch_maker__transform_stack=(
+            pitchtools.Inversion(),
+            ),
+        seed=1,
+        ),
+    clarinet=new(
+        zaira.materials.wind_trills_music_specifier,
+        pitch_maker__transform_stack=(
+            pitchtools.Inversion(),
+            ),
+        seed=2,
+        ),
     )
 
 
@@ -74,13 +112,39 @@ segment_maker.add_setting(
     )
 
 
+### STRING SETTINGS ###########################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.granular_timespan_maker,
+    timespan_identifier=timespantools.Timespan(
+        start_offset=fanfare_duration,
+        ),
+    violin=new(
+        zaira.materials.string_trills_music_specifier,
+        pitch_maker__register_specifier__center_pitch="c'",
+        seed=0,
+        ),
+    viola=new(
+        zaira.materials.string_trills_music_specifier,
+        pitch_maker__register_specifier__center_pitch='c',
+        seed=1,
+        ),
+    cello=new(
+        zaira.materials.string_trills_music_specifier,
+        pitch_maker__register_specifier__center_pitch='c,',
+        seed=2,
+        ),
+    )
+
+
 ### FANFARE SETTINGS ##########################################################
 
 
 segment_maker.add_setting(
     timespan_maker=consort.makers.FloodedTimespanMaker(),
     timespan_identifier=timespantools.Timespan(
-        stop_offset=durationtools.Duration(13, 16),
+        stop_offset=fanfare_duration,
         ),
     piano_rh=new(
         zaira.materials.piano_fanfare_music_specifier,

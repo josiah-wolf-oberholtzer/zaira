@@ -386,7 +386,7 @@
 								\once \override TextSpanner.dash-fraction = 1
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								g8 \pp ~ \startTextSpan
+								g8 \ppp ~ \startTextSpan
 							}
 							{
 								g2 ~
@@ -422,7 +422,7 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								g2 \ppp ~ \startTextSpan
+								g2 \p ~ \startTextSpan
 							}
 							{
 								g2 ~
@@ -467,7 +467,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							<g'' b'' d''' f'''>16 -\accent \fff [
+							<g'' b'' d''' f'''>16 -\accent \p [
 								^ \markup {
 									\center-align
 										\natural
@@ -660,7 +660,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							<d, f, a, c>16 -\accent \fff [
+							<d, f, a, c>16 -\accent \p [
 								^ \markup {
 									\center-align
 										\natural
@@ -673,7 +673,7 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							<f,, a,, c, e, g,>16 -\accent ]
+							<a,, c, e, g, b,>16 -\accent ]
 								^ \markup {
 									\center-align
 										\concat

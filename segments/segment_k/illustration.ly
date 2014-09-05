@@ -797,7 +797,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							<g'' b'' d''' f'''>8 -\accent \fff [
+							<g'' b'' d''' f'''>8 -\accent [ \< \p
 								^ \markup {
 									\center-align
 										\natural
@@ -828,7 +828,7 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							<c'' e'' g'' b''>8 -\accent ]
+							<c'' e'' g'' b''>8 -\accent ] \f
 								^ \markup {
 									\center-align
 										\concat
@@ -965,7 +965,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							<d, f, a, c>8 -\accent \fff [
+							<d, f, a, c>8 -\accent [ \< \p
 								^ \markup {
 									\center-align
 										\natural
@@ -979,7 +979,7 @@
 							}
 							\set stemLeftBeamCount = 1
 							\set stemRightBeamCount = 1
-							<f,, a,, c, e, g,>8 -\accent
+							<a,, c, e, g, b,>8 -\accent
 								^ \markup {
 									\center-align
 										\concat
@@ -996,7 +996,7 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							<e,, g,, b,, d,>8 -\accent ]
+							<a,, c, e, g,>8 -\accent ] \f
 								^ \markup {
 									\center-align
 										\concat

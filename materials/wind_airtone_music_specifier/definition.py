@@ -14,11 +14,6 @@ wind_airtone_music_specifier = consort.makers.MusicSpecifier(
                         .italic()
                         .pad_around(0.5)
                         .with_box(),
-                    ),
-                selector=selectortools.Selector().by_leaves(),
-                ),
-            consort.makers.AttachmentExpression(
-                attachments=spannertools.Slur(
                     overrides={
                         'note_head__style': 'slash',
                         }
@@ -32,5 +27,5 @@ wind_airtone_music_specifier = consort.makers.MusicSpecifier(
         register_specifier=consort.makers.RegisterSpecifier(),
         register_spread=0,
         ),
-    rhythm_maker=zaira.materials.legato_rhythm_maker,
+    rhythm_maker=zaira.materials.sustained_rhythm_maker,
     )

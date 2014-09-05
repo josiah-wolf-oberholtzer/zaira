@@ -26,7 +26,40 @@ segment_maker.set_duration_in_seconds(
 
 fanfare_duration = durationtools.Duration(1, 4)
 
+
 ### WINDS SETTINGS ############################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.granular_timespan_maker,
+    timespan_identifier=timespantools.Timespan(
+        start_offset=fanfare_duration,
+        ),
+    flute=new(
+        zaira.materials.wind_trills_music_specifier,
+        pitch_maker__transform_stack=(
+            pitchtools.Transposition(-3),
+            pitchtools.Inversion(),
+            ),
+        seed=0,
+        ),
+    oboe=new(
+        zaira.materials.wind_trills_music_specifier,
+        pitch_maker__transform_stack=(
+            pitchtools.Transposition(-3),
+            pitchtools.Inversion(),
+            ),
+        seed=1,
+        ),
+    clarinet=new(
+        zaira.materials.wind_trills_music_specifier,
+        pitch_maker__transform_stack=(
+            pitchtools.Transposition(-3),
+            pitchtools.Inversion(),
+            ),
+        seed=2,
+        ),
+    )
 
 
 segment_maker.add_setting(
@@ -131,6 +164,79 @@ segment_maker.add_setting(
     piano_lh=new(
         zaira.materials.piano_guero_music_specifier,
         seed=1,
+        ),
+    )
+
+
+### STRING SETTINGS ###########################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.sparse_timespan_maker,
+        padding=durationtools.Duration(1, 4),
+        playing_groupings=(1,),
+        playing_talea__counts=(4, 3, 2, 4, 3),
+        reflect=True,
+        ),
+    timespan_identifier=timespantools.Timespan(
+        start_offset=fanfare_duration,
+        ),
+    violin=new(
+        zaira.materials.string_flourish_music_specifier,
+        pitch_maker__register_specifier__center_pitch=None,
+        pitch_maker__transform_stack=(
+            pitchtools.Transposition(3),
+            ),
+        rhythm_maker__talea__denominator=16,
+        seed=0,
+        ),
+    viola=new(
+        zaira.materials.string_flourish_music_specifier,
+        pitch_maker__register_specifier__center_pitch='c',
+        pitch_maker__transform_stack=(
+            pitchtools.Transposition(3),
+            ),
+        rhythm_maker__talea__denominator=16,
+        seed=1,
+        ),
+    cello=new(
+        zaira.materials.string_flourish_music_specifier,
+        pitch_maker__register_specifier__center_pitch='c,',
+        pitch_maker__transform_stack=(
+            pitchtools.Transposition(3),
+            ),
+        rhythm_maker__talea__denominator=16,
+        seed=2,
+        ),
+    )
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.tutti_timespan_maker,
+        padding=durationtools.Duration(1, 4),
+        playing_groupings=(1,),
+        reflect=True,
+        ),
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(0, 2, 4),
+        ratio=(1, 2, 1, 1, 1),
+        ),
+    violin=new(
+        zaira.materials.string_undergrowth_music_specifier,
+        pitch_maker__register_specifier__center_pitch='g',
+        seed=0,
+        ),
+    viola=new(
+        zaira.materials.string_undergrowth_music_specifier,
+        pitch_maker__register_specifier__center_pitch='c',
+        seed=1,
+        ),
+    cello=new(
+        zaira.materials.string_undergrowth_music_specifier,
+        pitch_maker__register_specifier__center_pitch='c,',
+        seed=2,
         ),
     )
 

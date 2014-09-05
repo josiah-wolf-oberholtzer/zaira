@@ -18,7 +18,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
         >>> score = template()
         >>> print(format(score))
         \context Score = "Zaira Score" <<
-            \tag score.cello.clarinet-in-e-flat.flute.oboe.percussion.piano.viola.violin
+            \tag score.cello.clarinet-in-b-flat.flute.oboe.percussion.piano.viola.violin
             \context TimeSignatureContext = "TimeSignatureContext" {
             }
             \context EnsembleGroup = "Wind Section Staff Group" <<
@@ -44,13 +44,13 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                         }
                     }
                 >>
-                \tag score.clarinet-in-e-flat
-                \context PerformerGroup = "Clarinet In E-Flat Performer Group" \with {
-                    instrumentName = \markup { Clarinet in E-flat }
-                    shortInstrumentName = \markup { Cl. E-flat }
+                \tag score.clarinet-in-b-flat
+                \context PerformerGroup = "Clarinet In B-Flat Performer Group" \with {
+                    instrumentName = \markup { Clarinet in B-flat }
+                    shortInstrumentName = \markup { Cl. B-flat }
                 } <<
-                    \context ClarinetInEFlatStaff = "Clarinet In E-Flat Staff" {
-                        \context Voice = "Clarinet In E-Flat Voice" {
+                    \context ClarinetInBFlatStaff = "Clarinet In B-Flat Staff" {
+                        \context Voice = "Clarinet In B-Flat Voice" {
                             \clef "treble"
                         }
                     }
@@ -188,7 +188,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
         self._voice_name_abbreviations['oboe'] = oboe_voice.name
 
         clarinet, label = manager.make_single_wind_performer(
-            instrument=instrumenttools.ClarinetInEFlat(),
+            instrument=instrumenttools.ClarinetInBFlat(),
             )
         clarinet_voice = clarinet[0][0]
         attach(indicatortools.Clef('treble'), clarinet_voice)

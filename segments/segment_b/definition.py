@@ -104,6 +104,41 @@ segment_maker.add_setting(
     )
 
 
+### STRING SETTINGS ###########################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.sparse_timespan_maker,
+        padding=durationtools.Duration(1, 4),
+        playing_groupings=(1,),
+        playing_talea__counts=(4, 3, 2, 4, 3),
+        reflect=True,
+        ),
+    timespan_identifier=timespantools.Timespan(
+        start_offset=fanfare_duration,
+        ),
+    violin=new(
+        zaira.materials.string_flourish_music_specifier,
+        pitch_maker__register_specifier__center_pitch=None,
+        pitch_maker__transform_stack=(),
+        seed=0,
+        ),
+    viola=new(
+        zaira.materials.string_flourish_music_specifier,
+        pitch_maker__register_specifier__center_pitch='c',
+        pitch_maker__transform_stack=(),
+        seed=1,
+        ),
+    cello=new(
+        zaira.materials.string_flourish_music_specifier,
+        pitch_maker__register_specifier__center_pitch='c,',
+        pitch_maker__transform_stack=(),
+        seed=2,
+        ),
+    )
+
+
 ### FANFARE SETTINGS ##########################################################
 
 

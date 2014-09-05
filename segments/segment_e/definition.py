@@ -3,6 +3,7 @@ from abjad import new
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import mathtools
+from abjad.tools import pitchtools
 from abjad.tools import timespantools
 import consort
 import zaira
@@ -29,19 +30,51 @@ fanfare_duration = durationtools.Duration(3, 4)
 ### WINDS SETTINGS ############################################################
 
 
-#segment_maker.add_setting(
-#    timespan_maker=zaira.materials.dense_timespan_maker,
-#    timespan_identifier=consort.makers.RatioPartsExpression(
-#        parts=(1, 3, 5),
-#        ratio=(1, 2, 1, 2, 1, 2, 1),
-#        timespan=timespantools.Timespan(
-#            start_offset=fanfare_duration,
-#            ),
-#        ),
-#    clarinet=zaira.materials.wind_airtone_music_specifier,
-#    flute=zaira.materials.wind_airtone_music_specifier,
-#    oboe=zaira.materials.wind_airtone_music_specifier,
-#    )
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.granular_timespan_maker,
+        reflect=True,
+        ),
+    timespan_identifier=timespantools.Timespan(
+        start_offset=fanfare_duration,
+        ),
+    flute=new(
+        zaira.materials.wind_trills_music_specifier,
+        seed=0,
+        ),
+    oboe=new(
+        zaira.materials.wind_trills_music_specifier,
+        seed=1,
+        ),
+    clarinet=new(
+        zaira.materials.wind_trills_music_specifier,
+        seed=2,
+        ),
+    )
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.dense_timespan_maker,
+        playing_groupings=(1,),
+        ),
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(1, 3, 5),
+        ratio=(1, 2, 1, 2, 1, 2, 1),
+        timespan=timespantools.Timespan(
+            start_offset=fanfare_duration,
+            ),
+        ),
+    clarinet=new(
+        zaira.materials.wind_airtone_music_specifier,
+        pitch_maker__register_specifier__center_pitch='D3',
+        ),
+    flute=zaira.materials.wind_airtone_music_specifier,
+    oboe=new(
+        zaira.materials.wind_airtone_music_specifier,
+        pitch_maker__register_specifier__center_pitch='Bb3',
+        ),
+    )
 
 
 segment_maker.add_setting(
@@ -171,6 +204,73 @@ segment_maker.add_setting(
     piano_lh=new(
         zaira.materials.piano_guero_music_specifier,
         seed=1,
+        ),
+    )
+
+
+### STRING SETTINGS ###########################################################
+
+
+segment_maker.add_setting(
+    timespan_maker=zaira.materials.granular_timespan_maker,
+    timespan_identifier=timespantools.Timespan(
+        start_offset=fanfare_duration,
+        ),
+    violin=new(
+        zaira.materials.string_trills_music_specifier,
+        pitch_maker__register_specifier__center_pitch="c''",
+        pitch_maker__transform_stack=(
+            pitchtools.Transposition(-3),
+            ),
+        seed=0,
+        ),
+    viola=new(
+        zaira.materials.string_trills_music_specifier,
+        pitch_maker__register_specifier__center_pitch="c'",
+        pitch_maker__transform_stack=(
+            pitchtools.Transposition(-3),
+            ),
+        seed=1,
+        ),
+    cello=new(
+        zaira.materials.string_trills_music_specifier,
+        pitch_maker__register_specifier__center_pitch='c',
+        pitch_maker__transform_stack=(
+            pitchtools.Transposition(-3),
+            ),
+        seed=2,
+        ),
+    )
+
+
+segment_maker.add_setting(
+    timespan_maker=new(
+        zaira.materials.tutti_timespan_maker,
+        padding=durationtools.Duration(1, 4),
+        playing_groupings=(1,),
+        reflect=True,
+        ),
+    timespan_identifier=consort.makers.RatioPartsExpression(
+        parts=(0, 2, 4, 6),
+        ratio=(1, 2, 1, 1, 1, 2, 1),
+        timespan=timespantools.Timespan(
+            start_offset=fanfare_duration,
+            ),
+        ),
+    violin=new(
+        zaira.materials.string_undergrowth_music_specifier,
+        pitch_maker__register_specifier__center_pitch='g',
+        seed=0,
+        ),
+    viola=new(
+        zaira.materials.string_undergrowth_music_specifier,
+        pitch_maker__register_specifier__center_pitch='c',
+        seed=1,
+        ),
+    cello=new(
+        zaira.materials.string_undergrowth_music_specifier,
+        pitch_maker__register_specifier__center_pitch='c,',
+        seed=2,
         ),
     )
 

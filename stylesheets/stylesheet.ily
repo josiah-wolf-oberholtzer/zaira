@@ -2,39 +2,6 @@ afterGraceFraction = #(cons 127 128)
 #(set-default-paper-size "11x17" 'landscape)
 #(set-global-staff-size 12)
 
-\header {
-    composer = \markup {
-        \column {
-            \override #'(font-name . "Didot")
-                \fontsize #3 "Josiah Wolf Oberholtzer (1984)"
-            " "
-        }
-    }
-    tagline = \markup { "" }
-    title = \markup {
-        \column {
-            \center-align {
-                \override #'(font-name . "Didot Italic")
-                    \fontsize #4 {
-                        \line { Invisible Cities (i): }
-                    }
-                \vspace #0.5
-                \override #'(font-name . "Didot")
-                    \fontsize #18 {
-                        \line { ZAIRA }
-                    }
-                \vspace #1
-                \override #'(font-name . "Didot Italic")
-                    \fontsize #4 {
-                        \line { "for Ensemble Mosaik" }
-                        " "
-                        " "
-                    }
-            }
-        }
-    }
-}
-
 \layout {
 
     indent = 0
@@ -346,7 +313,6 @@ afterGraceFraction = #(cons 127 128)
         \override TrillSpanner.outside-staff-padding = 1
         \override TrillSpanner.padding = 1
         \override TupletBracket.avoid-scripts = ##t
-        \override TupletBracket.direction = #DOWN
         \override TupletBracket.full-length-to-extent = ##t
         \override TupletBracket.outside-staff-padding = 2
         \override TupletBracket.padding = 2
@@ -354,13 +320,13 @@ afterGraceFraction = #(cons 127 128)
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
         \override VerticalAxisGroup.staff-staff-spacing = #'(
             (basic-distance . 8)
-            (minimum-distance . 0)
+            (minimum-distance . 14)
             (padding . 4)
             (stretchability . 0)
             )
         autoBeaming = ##f
         pedalSustainStyle = #'mixed
-        proportionalNotationDuration = #(ly:make-moment 1 28)
+        proportionalNotationDuration = #(ly:make-moment 1 32)
         tupletFullLength = ##t
     }
 
@@ -415,10 +381,10 @@ afterGraceFraction = #(cons 127 128)
         (stretchability . 0)
     )
     system-system-spacing = #'(
-        (basic-distance . 0)
+        (basic-distance . 8)
         (minimum-distance . 12)
         (padding . 4)
-        (stretchability . 100)
+        (stretchability . 0)
     )
     top-markup-spacing = #'(
         (basic-distance . 0)

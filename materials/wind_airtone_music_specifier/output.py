@@ -56,21 +56,6 @@ wind_airtone_music_specifier = consort.makers.MusicSpecifier(
                                         ),
                                     ),
                                 ),
-                            ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        ),
-                    ),
-                ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        spannertools.Slur(
                             overrides={
                                 'note_head__style': 'slash',
                                 },
@@ -104,21 +89,13 @@ wind_airtone_music_specifier = consort.makers.MusicSpecifier(
         register_specifier=consort.makers.RegisterSpecifier(),
         register_spread=0,
         ),
-    rhythm_maker=rhythmmakertools.TaleaRhythmMaker(
-        talea=rhythmmakertools.Talea(
-            counts=(3, 2, 1, 1, 1, 4, 3, 1, 1, 1, 1, 5, 2, 4),
-            denominator=8,
-            ),
-        extra_counts_per_division=(0, 0, 1, 2, 0, 1),
+    rhythm_maker=rhythmmakertools.NoteRhythmMaker(
         beam_specifier=rhythmmakertools.BeamSpecifier(
             beam_each_division=False,
             beam_divisions_together=False,
             ),
-        tie_split_notes=False,
-        tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
-            avoid_dots=True,
-            is_diminution=True,
-            simplify_tuplets=True,
+        tie_specifier=rhythmmakertools.TieSpecifier(
+            tie_across_divisions=(True, True, False),
             ),
         ),
     )
