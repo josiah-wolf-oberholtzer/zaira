@@ -5,40 +5,29 @@
 
 #(ly:set-option 'relative-includes #t)
 \include "../stylesheets/stylesheet.ily"
+\include "../stylesheets/parts-stylesheet.ily"
 
 #(set-global-staff-size 13)
 
-\header {
-    composer = \markup {
-        \column {
-            \override #'(font-name . "Didot")
-                \fontsize #3 "Josiah Wolf Oberholtzer (1984)"
-            " "
-        }
+\layout {
+    \context {
+        \Score
+        \override VerticalAxisGroup.staff-staff-spacing = #'(
+            (basic-distance . 0)
+            (minimum-distance . 0)
+            (padding . 4)
+            (stretchability . 0)
+            )
     }
-    tagline = \markup { "" }
-    title = \markup {
-        \column {
-            \center-align {
-                \override #'(font-name . "Didot Italic")
-                    \fontsize #4 {
-                        \line { Invisible Cities (i): }
-                    }
-                \vspace #0.5
-                \override #'(font-name . "Didot")
-                    \fontsize #18 {
-                        \line { ZAIRA }
-                    }
-                \vspace #1
-                \override #'(font-name . "Didot Italic")
-                    \fontsize #4 {
-                        \line { "for Ensemble Mosaik" }
-                        " "
-                        " "
-                    }
-            }
-        }
-    }
+}
+
+\paper {
+    system-system-spacing = #'(
+        (basic-distance . 0)
+        (minimum-distance . 0)
+        (padding . 4)
+        (stretchability . 100)
+    )
 }
 
 \score {
