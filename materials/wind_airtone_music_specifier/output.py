@@ -50,7 +50,15 @@ wind_airtone_music_specifier = consort.makers.MusicSpecifier(
                                             0.5,
                                             markuptools.MarkupCommand(
                                                 'italic',
-                                                'airtone'
+                                                markuptools.MarkupCommand(
+                                                    'concat',
+                                                    [
+                                                        markuptools.MarkupCommand(
+                                                            'vstrut'
+                                                            ),
+                                                        'airtone',
+                                                        ]
+                                                    )
                                                 )
                                             )
                                         ),

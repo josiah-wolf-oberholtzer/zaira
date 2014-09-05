@@ -12,12 +12,22 @@ percussion_brushed_tremolo_music_specifier = consort.makers.MusicSpecifier(
                         consort.makers.DynamicExpression(
                             hairpin_start_token='p',
                             hairpin_stop_token='f',
-                            minimum_duration=durationtools.Duration(1, 4),
+                            minimum_duration=durationtools.Duration(1, 8),
                             ),
                         consort.makers.DynamicExpression(
                             hairpin_start_token='f',
                             hairpin_stop_token='p',
-                            minimum_duration=durationtools.Duration(1, 4),
+                            minimum_duration=durationtools.Duration(1, 8),
+                            ),
+                        consort.makers.DynamicExpression(
+                            hairpin_start_token='mf',
+                            hairpin_stop_token='o',
+                            minimum_duration=durationtools.Duration(1, 8),
+                            ),
+                        consort.makers.DynamicExpression(
+                            hairpin_start_token='o',
+                            hairpin_stop_token='ff',
+                            minimum_duration=durationtools.Duration(1, 8),
                             ),
                         ]
                     ),
@@ -48,7 +58,15 @@ percussion_brushed_tremolo_music_specifier = consort.makers.MusicSpecifier(
                                             0.5,
                                             markuptools.MarkupCommand(
                                                 'italic',
-                                                'brush'
+                                                markuptools.MarkupCommand(
+                                                    'concat',
+                                                    [
+                                                        markuptools.MarkupCommand(
+                                                            'vstrut'
+                                                            ),
+                                                        'brush',
+                                                        ]
+                                                    )
                                                 )
                                             )
                                         ),

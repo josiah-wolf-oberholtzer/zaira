@@ -50,7 +50,15 @@ metal_brushed_music_specifier = consort.makers.MusicSpecifier(
                                             0.5,
                                             markuptools.MarkupCommand(
                                                 'italic',
-                                                'brush'
+                                                markuptools.MarkupCommand(
+                                                    'concat',
+                                                    [
+                                                        markuptools.MarkupCommand(
+                                                            'vstrut'
+                                                            ),
+                                                        'brush',
+                                                        ]
+                                                    )
                                                 )
                                             )
                                         ),

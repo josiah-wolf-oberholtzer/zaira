@@ -62,7 +62,15 @@ piano_prepared_bass_music_specifier = consort.makers.MusicSpecifier(
                                             0.5,
                                             markuptools.MarkupCommand(
                                                 'italic',
-                                                'prepared'
+                                                markuptools.MarkupCommand(
+                                                    'concat',
+                                                    [
+                                                        markuptools.MarkupCommand(
+                                                            'vstrut'
+                                                            ),
+                                                        'prepared',
+                                                        ]
+                                                    )
                                                 )
                                             )
                                         ),

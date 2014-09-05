@@ -4,6 +4,16 @@ import consort
 import zaira
 
 
+slow_markup = Markup(r'\concat { \vstrut slow }', Up)
+slow_markup = slow_markup.italic()
+slow_markup = slow_markup.pad_around(0.5)
+slow_markup = slow_markup.box()
+
+fast_markup = Markup(r'\concat { \vstrut fast }', Up)
+fast_markup = fast_markup.italic()
+fast_markup = fast_markup.pad_around(0.5)
+fast_markup = fast_markup.box()
+
 piano_guero_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
         attachment_expressions=(
@@ -11,7 +21,7 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
             zaira.materials.percussion_staff_attachment_expression,
             consort.makers.AttachmentExpression(
                 attachments=consort.makers.ComplexTextSpanner(
-                    markup=Markup('guero')
+                    markup=Markup(r'\concat { \vstrut guero }')
                         .italic()
                         .pad_around(0.5)
                         .with_box(),
@@ -20,11 +30,11 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
                 ),
             consort.makers.AttachmentExpression(
                 attachments=(
-                    Markup('slow', Up).italic().pad_around(0.5).with_box(),
-                    Markup('slow', Up).italic().pad_around(0.5).with_box(),
-                    Markup('fast', Up).italic().pad_around(0.5).with_box(),
-                    Markup('slow', Up).italic().pad_around(0.5).with_box(),
-                    Markup('fast', Up).italic().pad_around(0.5).with_box(),
+                    slow_markup,
+                    slow_markup,
+                    fast_markup,
+                    slow_markup,
+                    fast_markup,
                     ),
                 selector=selectortools.selects_pitched_runs()[0],
                 ),

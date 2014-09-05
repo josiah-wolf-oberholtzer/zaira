@@ -14,7 +14,7 @@ wind_keyclick_music_specifier = consort.makers.MusicSpecifier(
             zaira.materials.percussion_staff_attachment_expression,
             consort.makers.AttachmentExpression(
                 attachments=consort.makers.ComplexTextSpanner(
-                    markup=Markup('keyclick')
+                    markup=Markup(r'\concat { \vstrut keyclick }')
                         .italic()
                         .pad_around(0.5)
                         .with_box(),

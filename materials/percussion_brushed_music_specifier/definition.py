@@ -10,7 +10,7 @@ percussion_brushed_music_specifier = consort.makers.MusicSpecifier(
             zaira.materials.background_dynamic_attachment_expression,
             consort.makers.AttachmentExpression(
                 attachments=consort.makers.ComplexTextSpanner(
-                    markup=Markup('brush')
+                    markup=Markup(r'\concat { \vstrut brush }')
                         .italic()
                         .pad_around(0.5)
                         .with_box(),

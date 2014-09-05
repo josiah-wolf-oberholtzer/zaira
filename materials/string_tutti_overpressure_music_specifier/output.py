@@ -19,7 +19,15 @@ string_tutti_overpressure_music_specifier = consort.makers.MusicSpecifier(
                                             0.5,
                                             markuptools.MarkupCommand(
                                                 'italic',
-                                                'overpressure'
+                                                markuptools.MarkupCommand(
+                                                    'concat',
+                                                    [
+                                                        markuptools.MarkupCommand(
+                                                            'vstrut'
+                                                            ),
+                                                        'overpressure',
+                                                        ]
+                                                    )
                                                 )
                                             )
                                         ),

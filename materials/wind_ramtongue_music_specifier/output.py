@@ -100,7 +100,15 @@ wind_ramtongue_music_specifier = consort.makers.MusicSpecifier(
                                             0.5,
                                             markuptools.MarkupCommand(
                                                 'italic',
-                                                'ram/slap'
+                                                markuptools.MarkupCommand(
+                                                    'concat',
+                                                    [
+                                                        markuptools.MarkupCommand(
+                                                            'vstrut'
+                                                            ),
+                                                        'ram/slap',
+                                                        ]
+                                                    )
                                                 )
                                             )
                                         ),

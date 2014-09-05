@@ -37,7 +37,7 @@ piano_prepared_bass_music_specifier = consort.makers.MusicSpecifier(
                 ),
             consort.makers.AttachmentExpression(
                 attachments=consort.makers.ComplexTextSpanner(
-                    markup=Markup('prepared')
+                    markup=Markup(r'\concat { \vstrut prepared }')
                         .italic()
                         .pad_around(0.5)
                         .with_box(),

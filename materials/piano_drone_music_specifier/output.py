@@ -65,10 +65,10 @@ piano_drone_music_specifier = consort.makers.MusicSpecifier(
         chord_expressions=datastructuretools.CyclicTuple(
             [
                 consort.makers.ChordExpression(
-                    interval_numbers=frozenset([-7, 12, -3, 6, 5]),
+                    interval_numbers=frozenset([0, 5, 6, 12, -7, -3]),
                     ),
                 consort.makers.ChordExpression(
-                    interval_numbers=frozenset([-7, 5, -3, 12, 1]),
+                    interval_numbers=frozenset([0, 1, 5, 12, -7, -3]),
                     ),
                 ]
             ),

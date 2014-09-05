@@ -9,7 +9,7 @@ string_tutti_overpressure_music_specifier = consort.makers.MusicSpecifier(
         attachment_expressions=(
             consort.makers.AttachmentExpression(
                 attachments=consort.makers.ComplexTextSpanner(
-                    markup=Markup('overpressure')
+                    markup=Markup(r'\concat { \vstrut overpressure }')
                         .italic()
                         .pad_around(0.5)
                         .with_box(),

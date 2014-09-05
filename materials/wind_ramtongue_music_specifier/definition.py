@@ -25,7 +25,7 @@ wind_ramtongue_music_specifier = consort.makers.MusicSpecifier(
                 ),
             consort.makers.AttachmentExpression(
                 attachments=consort.makers.ComplexTextSpanner(
-                    markup=Markup('ram/slap')
+                    markup=Markup(r'\concat { \vstrut ram/slap }')
                         .italic()
                         .pad_around(0.5)
                         .with_box(),

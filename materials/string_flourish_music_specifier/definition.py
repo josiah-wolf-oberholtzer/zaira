@@ -12,7 +12,7 @@ string_flourish_music_specifier = consort.makers.MusicSpecifier(
                     (
                         spannertools.Slur(),
                         consort.makers.ComplexTextSpanner(
-                            markup=Markup('flautando')
+                            markup=Markup(r'\concat { \vstrut flautando }')
                                 .italic()
                                 .pad_around(0.5)
                                 .with_box(),

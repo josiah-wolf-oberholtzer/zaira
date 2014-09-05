@@ -10,7 +10,7 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
             zaira.materials.midground_dynamic_attachment_expression,
             consort.makers.AttachmentExpression(
                 attachments=consort.makers.ComplexTextSpanner(
-                    markup=Markup('overpressure')
+                    markup=Markup(r'\concat { \vstrut overpressure }')
                         .italic()
                         .pad_around(0.5)
                         .with_box(),

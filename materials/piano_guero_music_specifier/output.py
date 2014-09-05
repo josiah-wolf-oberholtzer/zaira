@@ -71,7 +71,15 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
                                             0.5,
                                             markuptools.MarkupCommand(
                                                 'italic',
-                                                'guero'
+                                                markuptools.MarkupCommand(
+                                                    'concat',
+                                                    [
+                                                        markuptools.MarkupCommand(
+                                                            'vstrut'
+                                                            ),
+                                                        'guero',
+                                                        ]
+                                                    )
                                                 )
                                             )
                                         ),
@@ -100,7 +108,15 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
                                         0.5,
                                         markuptools.MarkupCommand(
                                             'italic',
-                                            'slow'
+                                            markuptools.MarkupCommand(
+                                                'concat',
+                                                [
+                                                    markuptools.MarkupCommand(
+                                                        'vstrut'
+                                                        ),
+                                                    'slow',
+                                                    ]
+                                                )
                                             )
                                         )
                                     ),
@@ -116,7 +132,15 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
                                         0.5,
                                         markuptools.MarkupCommand(
                                             'italic',
-                                            'slow'
+                                            markuptools.MarkupCommand(
+                                                'concat',
+                                                [
+                                                    markuptools.MarkupCommand(
+                                                        'vstrut'
+                                                        ),
+                                                    'slow',
+                                                    ]
+                                                )
                                             )
                                         )
                                     ),
@@ -132,7 +156,15 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
                                         0.5,
                                         markuptools.MarkupCommand(
                                             'italic',
-                                            'fast'
+                                            markuptools.MarkupCommand(
+                                                'concat',
+                                                [
+                                                    markuptools.MarkupCommand(
+                                                        'vstrut'
+                                                        ),
+                                                    'fast',
+                                                    ]
+                                                )
                                             )
                                         )
                                     ),
@@ -148,7 +180,15 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
                                         0.5,
                                         markuptools.MarkupCommand(
                                             'italic',
-                                            'slow'
+                                            markuptools.MarkupCommand(
+                                                'concat',
+                                                [
+                                                    markuptools.MarkupCommand(
+                                                        'vstrut'
+                                                        ),
+                                                    'slow',
+                                                    ]
+                                                )
                                             )
                                         )
                                     ),
@@ -164,7 +204,15 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
                                         0.5,
                                         markuptools.MarkupCommand(
                                             'italic',
-                                            'fast'
+                                            markuptools.MarkupCommand(
+                                                'concat',
+                                                [
+                                                    markuptools.MarkupCommand(
+                                                        'vstrut'
+                                                        ),
+                                                    'fast',
+                                                    ]
+                                                )
                                             )
                                         )
                                     ),

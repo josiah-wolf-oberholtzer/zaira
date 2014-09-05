@@ -71,7 +71,15 @@ wind_keyclick_music_specifier = consort.makers.MusicSpecifier(
                                             0.5,
                                             markuptools.MarkupCommand(
                                                 'italic',
-                                                'keyclick'
+                                                markuptools.MarkupCommand(
+                                                    'concat',
+                                                    [
+                                                        markuptools.MarkupCommand(
+                                                            'vstrut'
+                                                            ),
+                                                        'keyclick',
+                                                        ]
+                                                    )
                                                 )
                                             )
                                         ),

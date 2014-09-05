@@ -71,7 +71,15 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
                                             0.5,
                                             markuptools.MarkupCommand(
                                                 'italic',
-                                                'shaker'
+                                                markuptools.MarkupCommand(
+                                                    'concat',
+                                                    [
+                                                        markuptools.MarkupCommand(
+                                                            'vstrut'
+                                                            ),
+                                                        'shaker',
+                                                        ]
+                                                    )
                                                 )
                                             )
                                         ),
