@@ -1173,6 +1173,7 @@
 								\startStaff
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -1250,6 +1251,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -1346,6 +1348,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -1393,6 +1396,7 @@
 								\startStaff
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -1485,6 +1489,7 @@
 								\startStaff
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -1552,6 +1557,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f

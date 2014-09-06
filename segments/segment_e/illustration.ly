@@ -3859,6 +3859,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -3946,6 +3947,7 @@
 								\clef "treble"
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -3990,6 +3992,7 @@
 								r4
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -4016,6 +4019,7 @@
 								<> \stopTextSpan
 							}
 						}
+						\transpose bf c'
 						{
 							\tweak #'text #tuplet-number::calc-fraction-text
 							\times 6/7 {
@@ -4058,6 +4062,7 @@
 								<> \stopTextSpan
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -4086,6 +4091,7 @@
 								<> \stopTextSpan
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -4099,6 +4105,7 @@
 								r4
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -4159,6 +4166,7 @@
 								<> \stopTextSpan
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -4190,6 +4198,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -4259,6 +4268,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -4302,6 +4312,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							\times 2/3 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -4417,6 +4428,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -4525,6 +4537,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -4538,6 +4551,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -4638,6 +4652,7 @@
 								\clef "treble"
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -4757,6 +4772,7 @@
 								\clef "treble"
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -4783,6 +4799,7 @@
 								<> \stopTextSpan
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\set stemLeftBeamCount = 2
@@ -4799,6 +4816,7 @@
 								<> \stopTrillSpan
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -4833,6 +4851,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							\times 2/3 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -4901,6 +4920,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -4914,6 +4934,7 @@
 								r4
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -4940,6 +4961,7 @@
 								<> \stopTextSpan
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -5082,6 +5104,7 @@
 								r8.
 							}
 						}
+						\transpose bf c'
 						{
 							\times 4/5 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -5128,6 +5151,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -5144,6 +5168,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\override NoteHead #'stencil = #ly:text-interface::print
@@ -5180,6 +5205,7 @@
 								r4
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -5221,6 +5247,7 @@
 								\startStaff
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -5299,6 +5326,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -5348,6 +5376,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							\tweak #'text #tuplet-number::calc-fraction-text
 							\times 6/7 {
@@ -5488,6 +5517,7 @@
 								r8.
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -5626,6 +5656,7 @@
 								\clef "treble"
 							}
 						}
+						\transpose bf c'
 						{
 							\tweak #'text #tuplet-number::calc-fraction-text
 							\times 3/4 {
@@ -5673,6 +5704,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\override NoteHead #'stencil = #ly:text-interface::print
@@ -8564,7 +8596,7 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							<e' g' b' d''>8 ]
+							<e' g' b' d''>8 ] \!
 								^ \markup {
 									\center-align
 										\natural
@@ -8748,7 +8780,7 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							<c' e' g' b' d''>16 ]
+							<c' e' g' b' d''>16 ] \!
 								^ \markup {
 									\center-align
 										\concat
@@ -8961,7 +8993,7 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							<e' g' b' d''>16 ]
+							<e' g' b' d''>16 ] \!
 								^ \markup {
 									\center-align
 										\concat
@@ -10272,7 +10304,7 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							<a,, c, e, g, b,>16 ]
+							<a,, c, e, g, b,>16 ] \!
 								^ \markup {
 									\center-align
 										\concat
@@ -10345,7 +10377,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							<a,, c, e, g,>8 ]
+							<a,, c, e, g,>8 ] \!
 								^ \markup {
 									\center-align
 										\natural

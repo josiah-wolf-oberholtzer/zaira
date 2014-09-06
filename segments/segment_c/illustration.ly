@@ -1335,6 +1335,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -1429,6 +1430,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							\times 4/5 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -1537,6 +1539,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -1609,6 +1612,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -1683,6 +1687,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -1741,6 +1746,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							\times 4/5 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -1790,6 +1796,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\set stemLeftBeamCount = 2
@@ -1814,6 +1821,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -1863,6 +1871,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill

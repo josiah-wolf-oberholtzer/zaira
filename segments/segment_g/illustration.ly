@@ -805,6 +805,7 @@
 								r8.
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -817,6 +818,7 @@
 								r4
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -841,6 +843,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -866,6 +869,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\set stemLeftBeamCount = 1
@@ -897,6 +901,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -911,6 +916,7 @@
 								r8.
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -941,6 +947,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -956,6 +963,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\set stemLeftBeamCount = 1
@@ -987,6 +995,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -1013,6 +1022,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -1034,6 +1044,7 @@
 								\startStaff
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -1050,6 +1061,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\set stemLeftBeamCount = 1
@@ -1084,6 +1096,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -1099,6 +1112,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -1629,7 +1643,7 @@
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
 								d'8 :64 -\accent ~ ]
-								d'4 :32
+								d'4 :32 \!
 								\revert Hairpin #'circled-tip
 							}
 						}
@@ -1840,7 +1854,7 @@
 								\set stemRightBeamCount = 2
 								g16 -\accent
 								\set stemLeftBeamCount = 2
-								d'16 -\accent ]
+								d'16 -\accent ] \!
 								\revert Hairpin #'circled-tip
 							}
 						}
@@ -1999,7 +2013,7 @@
 								\set stemRightBeamCount = 2
 								f'16 -\accent
 								\set stemLeftBeamCount = 2
-								g16 -\accent ]
+								g16 -\accent ] \!
 								\revert Hairpin #'circled-tip
 							}
 						}
@@ -5446,7 +5460,7 @@
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
 								\pitchedTrill
-								aqf,8 -\tenuto ] \startTrillSpan cqf
+								aqf,8 -\tenuto ] \! \startTrillSpan cqf
 								\revert Hairpin #'circled-tip
 								<> \stopTrillSpan
 							}

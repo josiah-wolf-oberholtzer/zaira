@@ -8,22 +8,24 @@
 \include "../stylesheets/parts-stylesheet.ily"
 
 #(set-default-paper-size "11x17" 'portrait)
-#(set-global-staff-size 14)
+#(set-global-staff-size 13)
 
 \score {
-    \keepWithTag clarinet-in-b-flat
-    { 
-        \include "segment-a.ly"
-        \include "segment-b.ly"
-        \include "segment-c.ly"
-        \include "segment-d.ly"
-        \include "segment-e.ly"
-        \include "segment-f1.ly"
-        \include "segment-f2.ly"
-        \include "segment-g.ly"
-        \include "segment-h.ly"
-        \include "segment-i.ly"
-        \include "segment-j.ly"
-        \include "segment-k.ly"
+    {
+        \keepWithTag clarinet-in-b-flat
+        { 
+            \include "segment-a.ly"
+            \include "segment-b.ly"
+            \include "segment-c.ly"
+            \include "segment-d.ly"
+            \include "segment-e.ly"
+            \include "segment-f1.ly"
+            \include "segment-f2.ly"
+            \include "segment-g.ly"
+            \include "segment-h.ly"
+            \include "segment-i.ly"
+            \include "segment-j.ly"
+            \include "segment-k.ly"
+        }
     }
 }

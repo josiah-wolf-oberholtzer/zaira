@@ -1140,6 +1140,7 @@
 								r8.
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -1181,6 +1182,7 @@
 								<> \stopTextSpan
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -1354,6 +1356,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -1380,6 +1383,7 @@
 								<> \stopTextSpan
 							}
 						}
+						\transpose bf c'
 						{
 							\times 4/5 {
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -2173,7 +2177,7 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							<e' g' b' d''>8 ]
+							<e' g' b' d''>8 ] \!
 								^ \markup {
 									\center-align
 										\natural
@@ -2597,7 +2601,7 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							<e'' g'' b'' d'''>16 ]
+							<e'' g'' b'' d'''>16 ] \!
 								^ \markup {
 									\center-align
 										\concat
@@ -2918,7 +2922,7 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							<e g b d'>8 ]
+							<e g b d'>8 ] \!
 								^ \markup {
 									\center-align
 										\natural

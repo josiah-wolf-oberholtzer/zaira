@@ -36,5 +36,6 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
+    pitches_are_nonsemantic=True,
     rhythm_maker=zaira.materials.undergrowth_rhythm_maker,
     )

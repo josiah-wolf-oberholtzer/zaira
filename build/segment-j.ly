@@ -59,7 +59,11 @@
 										\pad-around
 											#0.5
 											\italic
-												shaker
+												\concat
+													{
+														\vstrut
+														shaker
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -166,7 +170,11 @@
 										\pad-around
 											#0.5
 											\italic
-												shaker
+												\concat
+													{
+														\vstrut
+														shaker
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -239,7 +247,11 @@
 										\pad-around
 											#0.5
 											\italic
-												superball
+												\concat
+													{
+														\vstrut
+														superball
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -273,7 +285,11 @@
 										\pad-around
 											#0.5
 											\italic
-												superball
+												\concat
+													{
+														\vstrut
+														superball
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -376,7 +392,11 @@
 										\pad-around
 											#0.5
 											\italic
-												superball
+												\concat
+													{
+														\vstrut
+														superball
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -414,7 +434,11 @@
 										\pad-around
 											#0.5
 											\italic
-												superball
+												\concat
+													{
+														\vstrut
+														superball
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -500,7 +524,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -545,7 +573,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -589,7 +621,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -698,7 +734,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -742,7 +782,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -787,7 +831,11 @@
 									\pad-around
 										#0.5
 										\italic
-											prepared
+											\concat
+												{
+													\vstrut
+													prepared
+												}
 								}
 							\once \override TextSpanner.bound-details.right-broken.text = ##f
 							\once \override TextSpanner.bound-details.right.text = \markup {
@@ -907,7 +955,11 @@
 										\pad-around
 											#0.5
 											\italic
-												shaker
+												\concat
+													{
+														\vstrut
+														shaker
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -971,7 +1023,11 @@
 										\pad-around
 											#0.5
 											\italic
-												shaker
+												\concat
+													{
+														\vstrut
+														shaker
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {

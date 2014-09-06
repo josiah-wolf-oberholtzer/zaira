@@ -1705,6 +1705,7 @@
 								\clef "treble"
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -1962,6 +1963,7 @@
 								\startStaff
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -1993,6 +1995,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -2212,6 +2215,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -2427,7 +2431,7 @@
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								f8 :64
+								f8 :64 \!
 								\revert Hairpin #'circled-tip
 								<> \stopTextSpan
 							}
@@ -2858,7 +2862,7 @@
 								\override Hairpin #'circled-tip = ##t
 								f8. :64 ~ \startTextSpan [ \> \mf
 								\set stemLeftBeamCount = 2
-								f16 :128 ]
+								f16 :128 ] \!
 								\revert Hairpin #'circled-tip
 							}
 						}
@@ -3623,7 +3627,7 @@
 								\override Hairpin #'circled-tip = ##t
 								g8. :64 ~ [ \> \mf
 								\set stemLeftBeamCount = 1
-								g8. :64 ]
+								g8. :64 ] \!
 								\revert Hairpin #'circled-tip
 								<> \stopTextSpan
 							}
@@ -3941,7 +3945,7 @@
 							\set stemRightBeamCount = 3
 							e'''32
 							\set stemLeftBeamCount = 3
-							cs'''32 ] )
+							cs'''32 ] \! )
 							\revert Hairpin #'circled-tip
 						}
 					}
@@ -4259,7 +4263,7 @@
 							\set stemRightBeamCount = 3
 							e32
 							\set stemLeftBeamCount = 3
-							cs32 ] )
+							cs32 ] \! )
 							\revert Hairpin #'circled-tip
 						}
 					}

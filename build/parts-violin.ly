@@ -8,7 +8,7 @@
 \include "../stylesheets/parts-stylesheet.ily"
 
 #(set-default-paper-size "11x17" 'portrait)
-#(set-global-staff-size 14)
+#(set-global-staff-size 13)
 
 \score {
     \keepWithTag violin

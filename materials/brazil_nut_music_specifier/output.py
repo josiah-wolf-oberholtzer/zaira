@@ -150,6 +150,7 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
+    pitches_are_nonsemantic=True,
     rhythm_maker=rhythmmakertools.TaleaRhythmMaker(
         talea=rhythmmakertools.Talea(
             counts=(1, -3, 1, -2, 1, -2, 2, -4, 4),

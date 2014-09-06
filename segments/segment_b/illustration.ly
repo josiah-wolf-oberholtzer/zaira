@@ -2776,7 +2776,7 @@
 							\set stemRightBeamCount = 2
 							f''32
 							\set stemLeftBeamCount = 2
-							e''16 ] )
+							e''16 ] \! )
 							\revert Hairpin #'circled-tip
 						}
 					}
@@ -3353,7 +3353,7 @@
 							\set stemRightBeamCount = 3
 							cs32
 							\set stemLeftBeamCount = 3
-							bf,32 ] )
+							bf,32 ] \! )
 							\revert Hairpin #'circled-tip
 						}
 					}

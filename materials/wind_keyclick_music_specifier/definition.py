@@ -39,5 +39,6 @@ wind_keyclick_music_specifier = consort.makers.MusicSpecifier(
     pitch_maker=consort.makers.AbsolutePitchMaker(
         pitches="c' g' f g' g' c' f c' f g' c' c' f g'",
         ),
+    pitches_are_nonsemantic=True,
     rhythm_maker=zaira.materials.undergrowth_rhythm_maker,
     )

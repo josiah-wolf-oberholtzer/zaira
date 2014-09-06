@@ -36,8 +36,8 @@
     \context {
         \Score
         \override VerticalAxisGroup.staff-staff-spacing = #'(
-            (basic-distance . 8)
-            (minimum-distance . 8)
+            (basic-distance . 0)
+            (minimum-distance . 0)
             (padding . 8)
             (stretchability . 0)
             )
@@ -52,5 +52,5 @@
         (padding . 8)
         (stretchability . 0)
     )
-    page-breaking = #ly:minimal-breaking
+    page-breaking = #ly:optimal-breaking
 }

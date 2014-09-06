@@ -7,7 +7,7 @@
 \include "../stylesheets/stylesheet.ily"
 \include "../stylesheets/parts-stylesheet.ily"
 
-#(set-global-staff-size 12)
+#(set-global-staff-size 13)
 
 \paper {
     system-system-spacing = #'(

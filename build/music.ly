@@ -44,7 +44,6 @@
 }
 
 \score {
-    \keepWithTag score
     { 
         \include "segment-a.ly"
         \include "segment-b.ly"

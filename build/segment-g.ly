@@ -20,12 +20,32 @@
 				s1 * 1
 			}
 			{
+				\time 3/4
+				s1 * 3/4
+			}
+			{
+				\time 5/8
+				s1 * 5/8
+			}
+			{
+				\time 3/8
+				s1 * 3/8
+			}
+			{
 				\time 5/16
 				s1 * 5/16
 			}
 			{
-				\time 3/4
-				s1 * 3/4
+				\time 4/4
+				s1 * 1
+			}
+			{
+				\time 2/4
+				s1 * 1/2
+			}
+			{
+				\time 4/4
+				s1 * 1
 			}
 			{
 				\time 3/8
@@ -39,27 +59,8 @@
 				s1 * 1/2
 			}
 			{
-				\time 4/4
-				s1 * 1
-			}
-			{
-				\time 5/16
-				s1 * 5/16
-			}
-			{
-				s1 * 5/16
-			}
-			{
-				\time 3/4
-				s1 * 3/4
-			}
-			{
-				\time 4/4
-				s1 * 1
-			}
-			{
-				\time 2/4
-				s1 * 1/2
+				\time 3/8
+				s1 * 3/8
 			}
 			{
 				\time 4/4
@@ -152,15 +153,8 @@
 								r8
 							}
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 5/16
-								\stopStaff
-								\startStaff
-							}
-							{
-								r16
+								r4
+								r8
 							}
 						}
 						{
@@ -172,22 +166,23 @@
 						}
 						{
 							{
-								r16
-								r2
+								r4
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 5/8
 							}
 							{
 								R1 * 3/8
+							}
+							{
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
 							{
-								r4
 								r16
 							}
 						}
@@ -201,8 +196,6 @@
 						{
 							{
 								r8
-							}
-							{
 								r8
 							}
 						}
@@ -223,18 +216,18 @@
 						{
 							{
 								r8.
-								r2
+								r4
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 1/2
 								\stopStaff
 								\startStaff
 							}
 							{
-								r8
+								r8.
 							}
 						}
 						{
@@ -246,17 +239,11 @@
 						}
 						{
 							{
-								r16
+								r8.
+								r2
 							}
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 3/4
-								\stopStaff
-								\startStaff
-							}
-							{
+								r8
 								r16
 							}
 						}
@@ -270,10 +257,20 @@
 						{
 							{
 								r16
-								r2.
 							}
 							{
-								r8.
+								\stopStaff
+								\once \override Staff.StaffSymbol.line-count = 1
+								\startStaff
+								R1 * 3/8
+							}
+							{
+								R1 * 1/2
+								\stopStaff
+								\startStaff
+							}
+							{
+								r16
 							}
 						}
 						{
@@ -499,19 +496,10 @@
 						}
 						{
 							{
-								r16
+								r2
 							}
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 3/4
-								\stopStaff
-								\startStaff
-							}
-							{
-								r8
-								r16
+								r2
 							}
 						}
 						{
@@ -523,9 +511,6 @@
 						}
 						{
 							{
-								r16
-							}
-							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
@@ -534,7 +519,7 @@
 								\startStaff
 							}
 							{
-								r16
+								r8
 							}
 						}
 						{
@@ -547,37 +532,30 @@
 						{
 							{
 								r8
-								r4
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 1
-								\stopStaff
-								\startStaff
 							}
 							{
-								r4
+								R1 * 1/2
+								\stopStaff
+								\startStaff
 							}
 						}
 						{
 							{
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
 								\pitchedTrill
-								bf''16 \pp ~ [ \startTrillSpan df'''
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								bf''16 ]
+								bf''8 \pp \startTrillSpan df'''
 								<> \stopTrillSpan
 							}
 						}
 						{
 							{
-								r4
+								r8
+								r8
 							}
 						}
 						{
@@ -598,11 +576,19 @@
 						}
 						{
 							{
-								r16
-								r2
+								r8.
+								r4
 							}
 							{
-								r2
+								\stopStaff
+								\once \override Staff.StaffSymbol.line-count = 1
+								\startStaff
+								R1 * 3/8
+								\stopStaff
+								\startStaff
+							}
+							{
+								r4
 								r16
 							}
 						}
@@ -615,14 +601,13 @@
 						}
 						{
 							{
-								r8
-								r4
-							}
-							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 1/2
+							}
+							{
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -811,6 +796,7 @@
 								r8.
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -823,37 +809,32 @@
 								r4
 							}
 						}
+						\transpose bf c'
 						{
 							{
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
 								\pitchedTrill
-								c''16 \ppp ~ [ \startTrillSpan ef''
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								c''16 ]
+								c''8 \ppp \startTrillSpan ef''
 								<> \stopTrillSpan
 							}
 						}
 						{
 							{
-								r8.
-								r2
+								r8
+								r4
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 5/8
 								\stopStaff
 								\startStaff
 							}
 							{
-								r16
+								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -863,20 +844,23 @@
 						}
 						{
 							{
-								r4
+								r16
+								r8
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1/2
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
 							{
+								r4
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\set stemLeftBeamCount = 1
@@ -894,17 +878,21 @@
 						{
 							{
 								r8.
-								r2
+								r4
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 1/2
 								\stopStaff
 								\startStaff
 							}
+							{
+								r16
+							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -914,13 +902,12 @@
 						}
 						{
 							{
+								r16
+								r4
 								r8.
 							}
-							{
-								r4
-								r16
-							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -930,22 +917,28 @@
 						}
 						{
 							{
-								r16
-								r4
+								r8.
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1
+								R1 * 3/8
+							}
+							{
+								R1 * 3/8
+							}
+							{
+								R1 * 1/2
 								\stopStaff
 								\startStaff
 							}
 							{
-								r4
+								r8
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -961,6 +954,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\set stemLeftBeamCount = 1
@@ -992,6 +986,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -1018,6 +1013,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -1039,6 +1035,7 @@
 								\startStaff
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -1055,6 +1052,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\set stemLeftBeamCount = 1
@@ -1089,6 +1087,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -1104,6 +1103,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -1190,49 +1190,13 @@
 								R1 * 1
 							}
 							{
-								R1 * 5/16
-							}
-							{
 								R1 * 3/4
 							}
 							{
-								R1 * 3/8
+								R1 * 5/8
 							}
 							{
 								R1 * 3/8
-							}
-							{
-								R1 * 1/2
-								\stopStaff
-								\startStaff
-							}
-							{
-								r2
-								r8
-							}
-						}
-						{
-							{
-								a16 -\staccato \ppp [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								a16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								a16 -\staccato
-								\set stemLeftBeamCount = 2
-								a16 -\staccato ]
-							}
-						}
-						{
-							{
-								r8
-							}
-							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 5/16
 							}
 							{
 								R1 * 5/16
@@ -1240,18 +1204,13 @@
 								\startStaff
 							}
 							{
-								r2
+								r2.
+								r8
 							}
 						}
 						{
 							{
 								a16 -\staccato \ppp [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								a16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								a16 -\staccato
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
 								a16 -\staccato
@@ -1267,13 +1226,49 @@
 						{
 							{
 								r8
+								r4
+							}
+							{
 								r2.
+								r8
+							}
+						}
+						{
+							{
+								a16 -\staccato \ppp [
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								a16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								a16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								a16 -\staccato
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								a16 -\staccato
+								\set stemLeftBeamCount = 2
+								a16 -\staccato ]
+							}
+						}
+						{
+							{
+								r8
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
+								R1 * 3/8
+							}
+							{
 								R1 * 1/2
+							}
+							{
+								R1 * 3/8
 							}
 							{
 								R1 * 1
@@ -1384,10 +1379,25 @@
 								R1 * 1
 							}
 							{
+								R1 * 3/4
+							}
+							{
+								R1 * 5/8
+							}
+							{
+								R1 * 3/8
+							}
+							{
 								R1 * 5/16
 							}
 							{
-								R1 * 3/4
+								R1 * 1
+							}
+							{
+								R1 * 1/2
+							}
+							{
+								R1 * 1
 							}
 							{
 								R1 * 3/8
@@ -1399,22 +1409,7 @@
 								R1 * 1/2
 							}
 							{
-								R1 * 1
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 3/4
-							}
-							{
-								R1 * 1
-							}
-							{
-								R1 * 1/2
+								R1 * 3/8
 							}
 							{
 								R1 * 1
@@ -1573,30 +1568,27 @@
 						}
 						{
 							{
-								r4
-								r16
+								r8.
+								r8
 							}
 						}
 						{
 							{
-								d'8 -\accent \f
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								d'8 -\accent \f [
 							}
-						}
-						{
-							{
-								r16
-								r4
-							}
-							{
-								r16
-							}
-						}
-						{
 							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 5/6 {
+							\times 3/4 {
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								g16 -\staccato
+								f'16 -\staccato ]
+								r4.
+							}
+							\times 4/5 {
 								g16 -\accent \ff [
-								f'8 -\staccato ]
-								r16
+								d'8 -\staccato ]
 								r8
 							}
 						}
@@ -1606,21 +1598,58 @@
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 3/8
-								\stopStaff
-								\startStaff
 							}
 							{
-								r4
+								R1 * 5/16
+								\stopStaff
+								\startStaff
 							}
 						}
 						{
 							{
-								g4 :32 -\accent \< \p
+								\override Hairpin #'circled-tip = ##t
+								g4 :32 -\accent ~ \> \mf
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								g8 :64 [
 							}
-							\times 2/3 {
+							\times 4/5 {
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								f'16 -\accent [
+								f'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								g16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								d'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								g16 -\accent
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								d'8 :64 -\accent ~ ]
+								d'4 :32 \!
+								\revert Hairpin #'circled-tip
+							}
+						}
+						{
+							\tweak #'text #tuplet-number::calc-fraction-text
+							\times 6/7 {
+								g16 -\accent \ff [
+								f'8 -\staccato ]
+								r4
+							}
+						}
+						{
+							\times 2/3 {
+								\override Hairpin #'circled-tip = ##t
+								f'16 -\accent [ \<
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
 								g16 -\accent
@@ -1631,10 +1660,7 @@
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								f'8 :64 -\accent ~
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								f'8 :64
+								f'8 :64 -\accent
 							}
 							{
 								\set stemLeftBeamCount = 1
@@ -1650,29 +1676,54 @@
 								\set stemRightBeamCount = 2
 								d'16 -\accent
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								f'16 -\accent ] \f
+								g16 -\accent ] \ff
+								\revert Hairpin #'circled-tip
 							}
 						}
 						{
-							\times 2/3 {
-								f'8 -\accent \mf [
-								g16 -\staccato ]
+							{
 								r16
-								r8
-							}
-							\times 2/3 {
-								d'8 -\accent \fff [
-								\set stemLeftBeamCount = 2
-								f'16 -\staccato ]
 							}
 						}
 						{
 							\tweak #'text #tuplet-number::calc-fraction-text
 							\times 3/4 {
-								f'16 -\accent \f [
+								f'8 -\accent \mf [
+								g16 -\staccato ]
+								r16
+								r4
+							}
+							\times 2/3 {
+								d'8 -\accent \fff [
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								g16 -\staccato ]
+							}
+						}
+						{
+							{
+								r16
+								r8
+							}
+						}
+						{
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								g8 :64 -\accent [ \< \p
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								d'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\accent
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
 								g16 -\accent
@@ -1680,38 +1731,40 @@
 								\set stemRightBeamCount = 2
 								d'16 -\accent
 								\set stemLeftBeamCount = 2
-								f'16 -\accent ]
+								\set stemRightBeamCount = 2
+								f'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								d'16 -\accent
 							}
-						}
-						{
-							{
-								r16
-							}
-						}
-						{
-							{
-								g4 :32 -\accent \p
-							}
-						}
-						{
-							{
-								r8
+							\times 4/5 {
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 2
+								g16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								g16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								d'16 -\accent
+								\set stemLeftBeamCount = 2
+								f'16 -\accent ] \f
 							}
 						}
 						{
 							{
 								g16 -\accent \fff [
+								\set stemLeftBeamCount = 1
 								d'8 -\staccato ]
-								r8.
-							}
-							\times 2/3 {
-								f'16 -\accent \f [
-								g8 -\staccato ]
-								r16
-								r8
 							}
 						}
 						{
+							{
+								r16
+							}
 							{
 								r8
 							}
@@ -1726,75 +1779,7 @@
 								\set stemRightBeamCount = 2
 								g16 -\accent
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\accent
-							}
-							\times 4/5 {
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
 								d'16 -\accent ] \p
-							}
-						}
-						{
-							\times 2/3 {
-								d'16 -\accent \f [
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\staccato
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								g16 -\staccato
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								d'16 -\staccato
-								\set stemLeftBeamCount = 2
-								f'16 -\staccato ]
-							}
-						}
-						{
-							{
-								r8
-							}
-						}
-						{
-							\times 4/5 {
-								f'16 -\accent [ \< \p
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								d'16 -\accent ] \f
 							}
 						}
 						{
@@ -1804,10 +1789,14 @@
 						}
 						{
 							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 3/4 {
-								f'16 -\accent \ff [
-								g16 -\staccato ]
-								r4.
+							\times 6/7 {
+								d'16 -\accent \f [
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\staccato
+								g8 -\staccato ]
+								r16
+								r8
 							}
 						}
 						{
@@ -1816,13 +1805,36 @@
 							}
 						}
 						{
+							\tweak #'text #tuplet-number::calc-fraction-text
+							\times 6/7 {
+								\override Hairpin #'circled-tip = ##t
+								f'16 -\accent [ \> \mf
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								g16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								d'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								d'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								g16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 1
+								f'16 -\accent
+							}
 							{
-								g4 :32 -\accent ~ \> \f
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								g8 :64 [
+								g8 :64 -\accent
 							}
-							\times 2/3 {
+							\tweak #'text #tuplet-number::calc-fraction-text
+							\times 3/4 {
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
 								d'16 -\accent
@@ -1830,15 +1842,11 @@
 								\set stemRightBeamCount = 2
 								f'16 -\accent
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								d'16 -\accent
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								g8 :64 -\accent ~
+								\set stemRightBeamCount = 2
+								g16 -\accent
 								\set stemLeftBeamCount = 2
-								g16 :128 ] \p
+								d'16 -\accent ] \!
+								\revert Hairpin #'circled-tip
 							}
 						}
 						{
@@ -1857,15 +1865,15 @@
 						}
 						{
 							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 6/7 {
-								g8 -\accent \mf
-								r16
-								r4
+							\times 3/4 {
+								f'16 -\accent \ff [
+								g16 -\staccato ]
+								r4.
 							}
-							{
-								d'16 -\accent \fff [
-								\set stemLeftBeamCount = 2
-								f'16 -\staccato ]
+							\times 2/3 {
+								d'16 -\accent \mf [
+								\set stemLeftBeamCount = 1
+								f'8 -\staccato ]
 							}
 						}
 						{
@@ -1874,79 +1882,77 @@
 							}
 						}
 						{
+							{
+								\override Hairpin #'circled-tip = ##t
+								g4 :32 -\accent ~ \<
+								\set stemLeftBeamCount = 1
+								g8. :64 \ff
+								\revert Hairpin #'circled-tip
+							}
+						}
+						{
+							{
+								r16
+								r16
+							}
+						}
+						{
 							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 7/8 {
+							\times 3/4 {
+								g8 -\accent \mf
+								r8
+							}
+							{
+								d'16 -\accent \fff [
+								\set stemLeftBeamCount = 2
+								f'16 -\staccato ]
+							}
+						}
+						{
+							\times 2/3 {
 								d'16 -\accent [ \< \p
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
 								f'16 -\accent
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
+								\set stemRightBeamCount = 1
 								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								g8 :64 -\accent
+							}
+							{
+								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
 								f'16 -\accent
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
+								\set stemRightBeamCount = 1
 								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								f'16 -\accent ] \f
 							}
-						}
-						{
-							{
-								r16
-								r16
-							}
-						}
-						{
 							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 3/5 {
-								d'16 -\accent \fff [
-								f'8 -\staccato ]
-								r8
-							}
-							\times 2/3 {
-								d'16 -\accent \f
-								r8
-							}
-						}
-						{
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								f'8 :64 -\accent [ \> \f
-							}
-							{
+							\times 6/7 {
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
 								d'16 -\accent
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								g16 -\accent
-							}
-							\times 2/3 {
-								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
 								f'16 -\accent
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 2
 								g16 -\accent
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
+								\set stemRightBeamCount = 2
 								d'16 -\accent
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								f'8 :64 -\accent ~ ]
-								f'4 :32 \p
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								d'16 -\accent
+								\set stemLeftBeamCount = 2
+								g16 -\accent ] \f
 							}
 						}
 						{
@@ -1957,102 +1963,91 @@
 						}
 						{
 							{
-								d'16 -\accent [ \< \p
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								f'16 -\accent
+								f'8 :64 -\accent ~ \> \f
+								f'4 :32
 							}
-							\times 2/3 {
+							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								g16 -\accent
+								d'16 -\accent [
 								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								f'16 -\accent ] \f
+								g16 -\accent ] \p
 							}
 						}
 						{
 							{
-								\set stemLeftBeamCount = 1
+								d'16 -\accent \fff [
+								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
-								f'8 -\accent \f [
+								f'16 -\staccato
 							}
-							\times 2/3 {
+							\times 4/5 {
 								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
-								d'8 -\staccato
-								g16 -\staccato ]
+								\set stemRightBeamCount = 2
+								d'16 -\staccato ]
+								r4
+							}
+						}
+						{
+							{
 								r16
+							}
+						}
+						{
+							{
+								\override Hairpin #'circled-tip = ##t
+								d'16 -\accent [ \> \mf
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								g16 -\accent
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\accent
+								\set stemLeftBeamCount = 2
+								g16 -\accent ] \!
+								\revert Hairpin #'circled-tip
+							}
+						}
+						{
+							{
 								r8
 							}
 						}
 						{
+							\times 2/3 {
+								\override Hairpin #'circled-tip = ##t
+								g16 -\accent [ \<
+								\set stemLeftBeamCount = 2
+								\set stemRightBeamCount = 2
+								f'16 -\accent
+								\set stemLeftBeamCount = 2
+								g16 -\accent ] \ff
+								\revert Hairpin #'circled-tip
+							}
+						}
+						{
+							{
+								r16
+							}
+						}
+						{
+							{
+								f'8 -\accent \f [
+								\set stemLeftBeamCount = 2
+								d'16 -\staccato ]
+							}
+						}
+						{
+							{
+								r8
+							}
 							{
 								r16
 							}
 						}
 						{
 							\times 4/5 {
-								g16 -\accent [ \> \f
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								f'16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								g16 -\accent
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 2
-								d'16 -\accent
-								\set stemLeftBeamCount = 2
-								f'16 -\accent ] \p
-							}
-						}
-						{
-							{
-								r8
-							}
-						}
-						{
-							{
-								f'8 :64 -\accent \p
-							}
-						}
-						{
-							{
-								r16
-							}
-						}
-						{
-							\tweak #'text #tuplet-number::calc-fraction-text
-							\times 5/6 {
 								d'16 -\accent \ff
-								r16
-								r4
-							}
-						}
-						{
-							{
-								r16
-							}
-						}
-						{
-							\times 2/3 {
-								g16 -\accent \mf [
-								f'16 -\staccato ]
 								r4
 							}
 						}
@@ -2371,13 +2366,9 @@
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 5/16
+							R1 * 3/4
 							\stopStaff
 							\startStaff
-						}
-						{
-							r4
-							r8.
 						}
 					}
 					{
@@ -2404,18 +2395,22 @@
 					}
 					{
 						{
+							r16
+							r4
+						}
+						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
 							R1 * 3/8
 						}
 						{
-							R1 * 3/8
-						}
-						{
-							R1 * 1/2
+							R1 * 5/16
 							\stopStaff
 							\startStaff
+						}
+						{
+							r4
 						}
 					}
 					{
@@ -2492,7 +2487,45 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 2
-							<a'' c''' e''' g''' b'''>16 ]
+							\set stemRightBeamCount = 1
+							<a'' c''' e''' g''' b'''>16
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+						}
+						{
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							<e' g' b' d''>8
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							<g'' b'' d''' f'''>16 ]
 								^ \markup {
 									\center-align
 										\concat
@@ -2505,21 +2538,12 @@
 					}
 					{
 						{
+							r16
 							r4
 						}
 						{
-							\stopStaff
-							\once \override Staff.StaffSymbol.line-count = 1
-							\startStaff
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-							\stopStaff
-							\startStaff
-						}
-						{
-							r4
+							r2
+							r8
 						}
 					}
 					{
@@ -2556,50 +2580,8 @@
 							r16
 							r8
 						}
-						{
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							<c'' e'' g'' b'' d'''>8 \p [
-								^ \markup {
-									\center-align
-										\flat
-									}
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							\set stemLeftBeamCount = 2
-							<a'' c''' e''' g''' b'''>16 ]
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-						}
 					}
 					{
-						{
-							\stopStaff
-							\once \override Staff.StaffSymbol.line-count = 1
-							\startStaff
-							R1 * 1
-						}
-						{
-							R1 * 1/2
-							\stopStaff
-							\startStaff
-						}
 						{
 							r16
 						}
@@ -2629,53 +2611,18 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
+							\set stemLeftBeamCount = 1
 							<b'' d''' f''' a''' c''''>8 ]
 								^ \markup {
 									\center-align
 										\flat
 									}
-							r8.
-						}
-						\tweak #'text #tuplet-number::calc-fraction-text
-						\times 6/7 {
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							<a'' c''' e''' g''' b'''>16 \pp [
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							<d''' f''' a''' c''''>8 ]
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-							r4
 						}
 					}
 					{
 						{
-							r8.
+							r16
+							r8
 						}
 						{
 							\stopStaff
@@ -2684,12 +2631,15 @@
 							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 1/2
+						}
+						{
+							R1 * 3/8
 							\stopStaff
 							\startStaff
 						}
 						{
-							r8
+							r16
 						}
 					}
 					{
@@ -2731,8 +2681,44 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
+							<e'' g'' b'' d'''>8 ]
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							r16
+							r16
+						}
+						{
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							<g' b' d'' f''>16 \ppp [
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
 							\set stemLeftBeamCount = 1
-							<d''' f''' a''' c''''>8 ]
+							<b'' d''' f''' a''' c''''>8 ]
 								^ \markup {
 									\center-align
 										\concat
@@ -2745,15 +2731,22 @@
 					}
 					{
 						{
+							r8
+							r4
+						}
+						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
+							R1 * 3/8
+						}
+						{
 							R1 * 5/16
 							\stopStaff
 							\startStaff
 						}
 						{
-							r2
+							r8
 						}
 					}
 					{
@@ -2781,6 +2774,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
+							\set stemLeftBeamCount = 2
 							<d''' f''' a''' c''''>16 ]
 								^ \markup {
 									\center-align
@@ -2789,56 +2783,6 @@
 												\natural
 												\flat
 											}
-									}
-							r8
-						}
-						{
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							<g'' b'' d''' f'''>16 \p [
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 1
-							<b'' d''' f''' a''' c''''>8
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							\set stemLeftBeamCount = 2
-							<b'' d''' f''' a'''>16 ]
-								^ \markup {
-									\center-align
-										\natural
 									}
 						}
 					}
@@ -2850,12 +2794,12 @@
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 1/2
+							R1 * 5/16
 							\stopStaff
 							\startStaff
 						}
 						{
-							r2.
+							r2
 						}
 					}
 					{
@@ -2916,7 +2860,7 @@
 					}
 					{
 						{
-							r8.
+							r4
 						}
 						{
 							\stopStaff
@@ -2927,8 +2871,7 @@
 							\startStaff
 						}
 						{
-							r8
-							r16
+							r2.
 						}
 					}
 					{
@@ -2956,9 +2899,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 1
-							<b'' d''' f''' a''' c''''>8
+							<b'' d''' f''' a''' c''''>8 ]
 								^ \markup {
 									\center-align
 										\concat
@@ -2967,6 +2908,7 @@
 												\flat
 											}
 									}
+							r16
 						}
 						\times 2/3 {
 							\once \override Accidental.stencil = ##f
@@ -2976,16 +2918,34 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 2
-							<b'' d''' f''' a'''>16 ]
+							<b'' d''' f''' a'''>16 \ppp
 								^ \markup {
 									\center-align
 										\natural
 									}
 							r8
 						}
+					}
+					{
 						{
+							r8.
+						}
+						{
+							\stopStaff
+							\once \override Staff.StaffSymbol.line-count = 1
+							\startStaff
+							R1 * 1/2
+							\stopStaff
+							\startStaff
+						}
+						{
+							r8
+							r16
+						}
+					}
+					{
+						\tweak #'text #tuplet-number::calc-fraction-text
+						\times 3/4 {
 							\once \override Accidental.stencil = ##f
 							\once \override AccidentalCautionary.stencil = ##f
 							\once \override Arpeggio.X-offset = #-2
@@ -2993,7 +2953,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							<d''' f''' a''' c''''>16 \ppp [
+							<b'' d''' f''' a''' c''''>8 \ppp [
 								^ \markup {
 									\center-align
 										\concat
@@ -3009,18 +2969,52 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 2
+							<b'' d''' f''' a'''>16 ]
+								^ \markup {
+									\center-align
+										\natural
+									}
+							r16
+						}
+						{
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemRightBeamCount = 1
+							<d''' f''' a''' c''''>8 \p [
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+						}
+						\tweak #'text #tuplet-number::calc-fraction-text
+						\times 3/4 {
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 2
 							<f'' a'' c''' e''' g'''>16 ]
 								^ \markup {
 									\center-align
 										\flat
 									}
+							r8.
 						}
 					}
 					{
-						{
-							r16
-						}
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
@@ -3042,11 +3036,27 @@
 						r1
 					}
 					{
+						r2.
+					}
+					{
+						r2
+						r8
+					}
+					{
+						r4.
+					}
+					{
 						r4
 						r16
 					}
 					{
-						r2.
+						r1
+					}
+					{
+						r2
+					}
+					{
+						r1
 					}
 					{
 						r4.
@@ -3058,24 +3068,7 @@
 						r2
 					}
 					{
-						r1
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r4
-						r16
-					}
-					{
-						r2.
-					}
-					{
-						r1
-					}
-					{
-						r2
+						r4.
 					}
 					{
 						r1
@@ -3407,13 +3400,9 @@
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
-							R1 * 5/16
+							R1 * 3/4
 							\stopStaff
 							\startStaff
-						}
-						{
-							r4
-							r8.
 						}
 					}
 					{
@@ -3451,7 +3440,8 @@
 					}
 					{
 						{
-							r8
+							r16
+							r4.
 						}
 						{
 							\stopStaff
@@ -3460,12 +3450,12 @@
 							R1 * 3/8
 						}
 						{
-							R1 * 3/8
-						}
-						{
-							R1 * 1/2
+							R1 * 5/16
 							\stopStaff
 							\startStaff
+						}
+						{
+							r4
 						}
 					}
 					{
@@ -3532,8 +3522,7 @@
 							r16
 							r8
 						}
-						\tweak #'text #tuplet-number::calc-fraction-text
-						\times 6/7 {
+						\times 2/3 {
 							\once \override Accidental.stencil = ##f
 							\once \override AccidentalCautionary.stencil = ##f
 							\once \override Arpeggio.X-offset = #-2
@@ -3551,161 +3540,6 @@
 											}
 									}
 							r8
-							r4
-						}
-					}
-					{
-						{
-							\stopStaff
-							\once \override Staff.StaffSymbol.line-count = 1
-							\startStaff
-							R1 * 5/16
-						}
-						{
-							R1 * 5/16
-							\stopStaff
-							\startStaff
-						}
-						{
-							r4
-						}
-					}
-					{
-						{
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							<g b d' f'>16 \p [
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							<c e g b d'>8 ]
-								^ \markup {
-									\center-align
-										\flat
-									}
-							r16
-							r16
-						}
-						\tweak #'text #tuplet-number::calc-fraction-text
-						\times 3/4 {
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							<a, c e g b>16 \pp [
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							<e, g, b, d>8 ]
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-							r16
-						}
-					}
-					{
-						{
-							\stopStaff
-							\once \override Staff.StaffSymbol.line-count = 1
-							\startStaff
-							R1 * 1
-						}
-						{
-							R1 * 1/2
-							\stopStaff
-							\startStaff
-						}
-						{
-							r16
-						}
-					}
-					{
-						{
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							<c e g b d'>16 \pp [
-								^ \markup {
-									\center-align
-										\flat
-									}
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							\set stemLeftBeamCount = 2
-							\set stemRightBeamCount = 1
-							<a, c e g b>16
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							<e, g, b, d>8 ]
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-							r16
-							r16
 						}
 						{
 							\once \override Accidental.stencil = ##f
@@ -3745,8 +3579,107 @@
 					}
 					{
 						{
-							r8
+							r16
 							r4
+						}
+						{
+							r2
+							r8
+						}
+					}
+					{
+						{
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							<g b d' f'>16 \p [
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 1
+							<c e g b d'>8 ]
+								^ \markup {
+									\center-align
+										\flat
+									}
+						}
+					}
+					{
+						{
+							r8.
+						}
+					}
+					{
+						{
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							<c, e, g, b, d>16 \pp [
+								^ \markup {
+									\center-align
+										\flat
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 2
+							<a, c e g b>16
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							<e, g, b, d>16 ]
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+						}
+					}
+					{
+						{
+							r16
+							r8
 						}
 						{
 							\stopStaff
@@ -3755,12 +3688,15 @@
 							R1 * 3/8
 						}
 						{
-							R1 * 5/16
+							R1 * 1/2
+						}
+						{
+							R1 * 3/8
 							\stopStaff
 							\startStaff
 						}
 						{
-							r8
+							r16
 						}
 					}
 					{
@@ -3788,8 +3724,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemLeftBeamCount = 2
-							<e g b d'>16 ]
+							<e, g, b, d>16 ]
 								^ \markup {
 									\center-align
 										\concat
@@ -3798,22 +3733,77 @@
 												\flat
 											}
 									}
+							r16
+							r8.
+						}
+						{
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							<g, b, d f>16 \p [
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 1
+							\set stemRightBeamCount = 1
+							<c e g b d'>8
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							<b, d f a>16 ]
+								^ \markup {
+									\center-align
+										\natural
+									}
 						}
 					}
 					{
 						{
-							r8
+							r16
+							r4
 						}
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
 							\startStaff
+							R1 * 3/8
+						}
+						{
 							R1 * 5/16
 							\stopStaff
 							\startStaff
 						}
 						{
-							r2
+							r8
 						}
 					}
 					{
@@ -3836,6 +3826,21 @@
 									}
 							r8.
 						}
+					}
+					{
+						{
+							\stopStaff
+							\once \override Staff.StaffSymbol.line-count = 1
+							\startStaff
+							R1 * 5/16
+							\stopStaff
+							\startStaff
+						}
+						{
+							r2
+						}
+					}
+					{
 						{
 							\once \override Accidental.stencil = ##f
 							\once \override AccidentalCautionary.stencil = ##f
@@ -3845,59 +3850,6 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							<g, b, d f>16 \pp [
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							\set stemLeftBeamCount = 2
-							<c e g b d'>16 ]
-								^ \markup {
-									\center-align
-										\concat
-											{
-												\natural
-												\flat
-											}
-									}
-						}
-					}
-					{
-						{
-							r4
-						}
-						{
-							\stopStaff
-							\once \override Staff.StaffSymbol.line-count = 1
-							\startStaff
-							R1 * 1/2
-							\stopStaff
-							\startStaff
-						}
-						{
-							r2.
-						}
-					}
-					{
-						{
-							\once \override Accidental.stencil = ##f
-							\once \override AccidentalCautionary.stencil = ##f
-							\once \override Arpeggio.X-offset = #-2
-							\once \override NoteHead.stencil = #ly:text-interface::print
-							\once \override NoteHead.text = \markup {
-								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
-							}
-							<g b d' f'>16 \pp [
 								^ \markup {
 									\center-align
 										\concat
@@ -3924,7 +3876,8 @@
 									}
 							r16
 						}
-						\times 2/3 {
+						\tweak #'text #tuplet-number::calc-fraction-text
+						\times 6/7 {
 							\once \override Accidental.stencil = ##f
 							\once \override AccidentalCautionary.stencil = ##f
 							\once \override Arpeggio.X-offset = #-2
@@ -3938,12 +3891,10 @@
 										\natural
 									}
 							r8
+							r4
 						}
 					}
 					{
-						{
-							r8.
-						}
 						{
 							\stopStaff
 							\once \override Staff.StaffSymbol.line-count = 1
@@ -3953,13 +3904,11 @@
 							\startStaff
 						}
 						{
-							r8
-							r16
+							r2.
 						}
 					}
 					{
-						\tweak #'text #tuplet-number::calc-fraction-text
-						\times 3/4 {
+						\times 4/5 {
 							\once \override Accidental.stencil = ##f
 							\once \override AccidentalCautionary.stencil = ##f
 							\once \override Arpeggio.X-offset = #-2
@@ -3983,12 +3932,12 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							<b d' f' a'>16 ]
+							<b, d f a>16 ]
 								^ \markup {
 									\center-align
 										\natural
 									}
-							r16
+							r8
 						}
 						{
 							\once \override Accidental.stencil = ##f
@@ -3998,8 +3947,7 @@
 							\once \override NoteHead.text = \markup {
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
-							\set stemRightBeamCount = 1
-							<e g b d'>8 \p [
+							<e g b d'>8 \p
 								^ \markup {
 									\center-align
 										\concat
@@ -4009,8 +3957,73 @@
 											}
 									}
 						}
-						\tweak #'text #tuplet-number::calc-fraction-text
-						\times 3/4 {
+					}
+					{
+						{
+							r8.
+						}
+						{
+							\stopStaff
+							\once \override Staff.StaffSymbol.line-count = 1
+							\startStaff
+							R1 * 1/2
+							\stopStaff
+							\startStaff
+						}
+						{
+							r8
+							r16
+						}
+					}
+					{
+						{
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							<b d' f' a'>16 \p
+								^ \markup {
+									\center-align
+										\natural
+									}
+							r8
+						}
+						\times 2/3 {
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							<e' g' b' d''>8 \pp [
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							\set stemRightBeamCount = 1
+							<f a c' e' g'>16
+								^ \markup {
+									\center-align
+										\flat
+									}
+						}
+						{
 							\once \override Accidental.stencil = ##f
 							\once \override AccidentalCautionary.stencil = ##f
 							\once \override Arpeggio.X-offset = #-2
@@ -4019,13 +4032,33 @@
 								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
 							}
 							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 2
-							<f a c' e' g'>16 ]
+							\set stemRightBeamCount = 1
+							<c' e' g' b' d''>8
 								^ \markup {
 									\center-align
-										\flat
+										\concat
+											{
+												\natural
+												\flat
+											}
 									}
-							r8.
+							\once \override Accidental.stencil = ##f
+							\once \override AccidentalCautionary.stencil = ##f
+							\once \override Arpeggio.X-offset = #-2
+							\once \override NoteHead.stencil = #ly:text-interface::print
+							\once \override NoteHead.text = \markup {
+								\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
+							}
+							\set stemLeftBeamCount = 2
+							<b, d f a>16 ]
+								^ \markup {
+									\center-align
+										\concat
+											{
+												\natural
+												\flat
+											}
+									}
 						}
 					}
 					{
@@ -4067,11 +4100,7 @@
 				}
 				{
 					{
-						r4
-						r16
-					}
-					{
-						r4..
+						r2.
 					}
 				}
 				{
@@ -4082,13 +4111,18 @@
 				}
 				{
 					{
-						r4.
+						r4
+						r16
 					}
 					{
 						r4.
 					}
 					{
-						r2
+						r4
+						r16
+					}
+					{
+						r4
 					}
 				}
 				{
@@ -4099,38 +4133,51 @@
 						s1 * 3/8
 					}
 					{
-						s1 * 3/8
+						s1 * 1/8
+					}
+					{
+						s1 * 1/4
 						<> \sustainOff
 					}
 				}
 				{
 					{
 						r4
-						r16
 					}
 					{
-						r4
-						r16
-					}
-					{
-						r4
+						r2
+						r8
 					}
 				}
 				{
 					{
 						s1 * 5/16 \sustainOn
-					}
-					{
-						s1 * 3/16
 						<> \sustainOff
 					}
 				}
 				{
 					{
-						r1
+						r16
+					}
+				}
+				{
+					{
+						s1 * 3/16 \sustainOn
+						<> \sustainOff
+					}
+				}
+				{
+					{
+						r8.
+					}
+					{
+						r4.
 					}
 					{
 						r2
+					}
+					{
+						r4.
 					}
 					{
 						r16
@@ -4299,7 +4346,11 @@
 										\pad-around
 											#0.5
 											\italic
-												overpressure
+												\concat
+													{
+														\vstrut
+														overpressure
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4313,15 +4364,15 @@
 							}
 							{
 								<g d'>4 ~
-								\set stemLeftBeamCount = 2
-								<g d'>16
+								\set stemLeftBeamCount = 1
+								<g d'>8
 								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								r4
-								r16
+								r8
+								r8
 							}
 						}
 						{
@@ -4340,20 +4391,15 @@
 						}
 						{
 							{
-								r16
-								r4
-							}
-							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/8
+								R1 * 5/8
 								\stopStaff
 								\startStaff
 							}
 							{
-								r8
-								r16
+								r4
 							}
 						}
 						{
@@ -4372,18 +4418,15 @@
 						}
 						{
 							{
-								r16
-							}
-							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1/2
+								R1 * 5/16
 								\stopStaff
 								\startStaff
 							}
 							{
-								r2
+								r2.
 								r16
 							}
 						}
@@ -4404,6 +4447,8 @@
 						{
 							{
 								r8
+							}
+							{
 								r8
 							}
 						}
@@ -4423,21 +4468,18 @@
 						}
 						{
 							{
+								r4
+							}
+							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
-							}
-							{
-								R1 * 5/16
-							}
-							{
-								R1 * 3/4
+								R1 * 1
 								\stopStaff
 								\startStaff
 							}
 							{
-								r8
+								r4
 							}
 						}
 						{
@@ -4448,7 +4490,11 @@
 										\pad-around
 											#0.5
 											\italic
-												overpressure
+												\concat
+													{
+														\vstrut
+														overpressure
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4456,17 +4502,19 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								<g d'>8 -\accent -\tenuto \fff ~ \startTextSpan
-								<g d'>4 ~
 								\set stemLeftBeamCount = 1
-								<g d'>8
+								\set stemRightBeamCount = 1
+								<g d'>8 -\accent -\tenuto \fff ~ \startTextSpan
+							}
+							{
+								<g d'>4.
 								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								r8
-								r8.
+								r4
+								r16
 							}
 						}
 						{
@@ -4485,10 +4533,13 @@
 						}
 						{
 							{
+								r8
+							}
+							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1/2
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -4558,7 +4609,11 @@
 										\pad-around
 											#0.5
 											\italic
-												overpressure
+												\concat
+													{
+														\vstrut
+														overpressure
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4770,7 +4825,11 @@
 										\pad-around
 											#0.5
 											\italic
-												overpressure
+												\concat
+													{
+														\vstrut
+														overpressure
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4784,23 +4843,23 @@
 							}
 							{
 								<c g>4 ~
-								\set stemLeftBeamCount = 2
-								<c g>16
+								\set stemLeftBeamCount = 1
+								<c g>8
 								<> \stopTextSpan
 							}
 						}
 						{
 							{
+								r8
+								r4
+							}
+							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/4
+								R1 * 5/8
 								\stopStaff
 								\startStaff
-							}
-							{
-								r4
-								r16
 							}
 						}
 						{
@@ -4810,15 +4869,8 @@
 									\musicglyph
 										#"noteheads.s0harmonic"
 									}
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
 								\pitchedTrill
-								b16 \pp ~ [ \startTrillSpan e'
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								b16 ]
+								b8 \pp \startTrillSpan e'
 								\revert TrillPitchHead #'stencil
 								\revert TrillPitchHead #'text
 								<> \stopTrillSpan
@@ -4826,9 +4878,7 @@
 						}
 						{
 							{
-								r16
-								r8
-								r16
+								r4
 							}
 						}
 						{
@@ -4847,17 +4897,18 @@
 						}
 						{
 							{
+								r4
+							}
+							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1/2
-							}
-							{
 								R1 * 1
 								\stopStaff
 								\startStaff
 							}
 							{
+								r4
 								r8
 							}
 						}
@@ -4884,15 +4935,9 @@
 						}
 						{
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 5/16
-								\stopStaff
-								\startStaff
-							}
-							{
 								r8.
+								r4
+								r16
 							}
 						}
 						{
@@ -4911,11 +4956,11 @@
 						}
 						{
 							{
-								r8.
+								r16
 								r4
 							}
 							{
-								r8
+								r4
 							}
 						}
 						{
@@ -4926,7 +4971,11 @@
 										\pad-around
 											#0.5
 											\italic
-												overpressure
+												\concat
+													{
+														\vstrut
+														overpressure
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -4934,23 +4983,24 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								<c g>8 -\accent -\tenuto \fff ~ \startTextSpan
-								<c g>4 ~
 								\set stemLeftBeamCount = 1
-								<c g>8
+								\set stemRightBeamCount = 1
+								<c g>8 -\accent -\tenuto \fff ~ \startTextSpan
+							}
+							{
+								<c g>4.
 								<> \stopTextSpan
 							}
 						}
 						{
 							{
-								r8
-								r4
-							}
-							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
 								R1 * 1/2
+							}
+							{
+								R1 * 3/8
 								\stopStaff
 								\startStaff
 							}
@@ -5019,7 +5069,11 @@
 										\pad-around
 											#0.5
 											\italic
-												overpressure
+												\concat
+													{
+														\vstrut
+														overpressure
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -5232,7 +5286,11 @@
 										\pad-around
 											#0.5
 											\italic
-												overpressure
+												\concat
+													{
+														\vstrut
+														overpressure
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -5242,118 +5300,70 @@
 								\once \override TextSpanner.dash-fraction = 1
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 1
-								<c, g,>8 -\accent -\tenuto \fff ~ \startTextSpan
+								<c, g,>8 -\accent -\tenuto \fff ~ \startTextSpan [
 							}
 							{
-								<c, g,>4 ~
-								\set stemLeftBeamCount = 2
-								<c, g,>16
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								<c, g,>8. ]
 								<> \stopTextSpan
 							}
 						}
 						{
-							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 3/4
-								\stopStaff
-								\startStaff
-							}
-						}
-						{
-							{
-								\override TrillPitchHead #'stencil = #ly:text-interface::print
-								\override TrillPitchHead #'text = \markup {
-									\musicglyph
-										#"noteheads.s0harmonic"
+							\tweak #'text #tuplet-number::calc-fraction-text
+							\times 5/4 {
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											\italic
+												\concat
+													{
+														\vstrut
+														"col legno"
+													}
 									}
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								\pitchedTrill
-								c,16 \p ~ [ \startTrillSpan f,
-							}
-							{
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
+								f,8 -\tenuto \startTextSpan [ \< \p
 								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								c,16 ~
-								\set stemLeftBeamCount = 2
-								c,16 ]
-								\revert TrillPitchHead #'stencil
-								\revert TrillPitchHead #'text
+								\pitchedTrill
+								f,8 -\tenuto ] \f \startTrillSpan af,
+								<> \stopTextSpan
 								<> \stopTrillSpan
 							}
 						}
 						{
 							{
-								r16
-								r8
-							}
-							{
-								r4
-								r16
-							}
-						}
-						{
-							{
-								\override TrillPitchHead #'stencil = #ly:text-interface::print
-								\override TrillPitchHead #'text = \markup {
-									\musicglyph
-										#"noteheads.s0harmonic"
-									}
-								\set stemLeftBeamCount = 2
-								\set stemRightBeamCount = 1
-								\pitchedTrill
-								b16 \pp ~ [ \startTrillSpan e'
-							}
-							{
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 2
-								b16 ]
-								\revert TrillPitchHead #'stencil
-								\revert TrillPitchHead #'text
-								<> \stopTrillSpan
-							}
-						}
-						{
-							{
-								r8.
 								r4
 							}
 							{
-								r2
-								r16
+								r4
 							}
 						}
 						{
 							{
-								\override TrillPitchHead #'stencil = #ly:text-interface::print
-								\override TrillPitchHead #'text = \markup {
-									\musicglyph
-										#"noteheads.s0harmonic"
-									}
 								\pitchedTrill
-								a,16 \ppp \startTrillSpan c
-								\revert TrillPitchHead #'stencil
-								\revert TrillPitchHead #'text
+								af,4 -\tenuto \f \startTrillSpan cf
 								<> \stopTrillSpan
 							}
 						}
 						{
 							{
 								r8
-								r4
 							}
 							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 5/16
+								R1 * 3/8
 								\stopStaff
 								\startStaff
-							}
-							{
-								r8.
 							}
 						}
 						{
@@ -5372,13 +5382,81 @@
 						}
 						{
 							{
+								r8.
+							}
+							{
+								r2.
+								r16
+							}
+						}
+						{
+							{
+								\override TrillPitchHead #'stencil = #ly:text-interface::print
+								\override TrillPitchHead #'text = \markup {
+									\musicglyph
+										#"noteheads.s0harmonic"
+									}
+								\pitchedTrill
+								b16 \pp \startTrillSpan e'
+								\revert TrillPitchHead #'stencil
+								\revert TrillPitchHead #'text
+								<> \stopTrillSpan
+							}
+						}
+						{
+							{
+								r8
+							}
+							{
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 3/4
+								R1 * 1/2
 								\stopStaff
 								\startStaff
 							}
+							{
+								r4
+							}
+						}
+						{
+							{
+								\override TrillPitchHead #'stencil = #ly:text-interface::print
+								\override TrillPitchHead #'text = \markup {
+									\musicglyph
+										#"noteheads.s0harmonic"
+									}
+								\pitchedTrill
+								a,8 \ppp \startTrillSpan c
+								\revert TrillPitchHead #'stencil
+								\revert TrillPitchHead #'text
+								<> \stopTrillSpan
+							}
+						}
+						{
+							{
+								r8
+								r4
+								r16
+							}
+						}
+						{
+							{
+								\override Hairpin #'circled-tip = ##t
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								f,8. -\tenuto [ \glissando \> \mf
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								\pitchedTrill
+								aqf,8 -\tenuto ] \! \startTrillSpan cqf
+								\revert Hairpin #'circled-tip
+								<> \stopTrillSpan
+							}
+						}
+						{
 							{
 								r8
 							}
@@ -5391,7 +5469,11 @@
 										\pad-around
 											#0.5
 											\italic
-												overpressure
+												\concat
+													{
+														\vstrut
+														overpressure
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -5399,10 +5481,47 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								<c, g,>8 -\accent -\tenuto \fff ~ \startTextSpan
-								<c, g,>4 ~
 								\set stemLeftBeamCount = 1
-								<c, g,>8
+								\set stemRightBeamCount = 1
+								<c, g,>8 -\accent -\tenuto \fff ~ \startTextSpan
+							}
+							{
+								<c, g,>4
+								<> \stopTextSpan
+							}
+						}
+						{
+							{
+								\once \override TextSpanner.bound-details.left-broken.text = ##f
+								\once \override TextSpanner.bound-details.left.text = \markup {
+									\box
+										\pad-around
+											#0.5
+											\italic
+												\concat
+													{
+														\vstrut
+														"col legno"
+													}
+									}
+								\once \override TextSpanner.bound-details.right-broken.text = ##f
+								\once \override TextSpanner.bound-details.right.text = \markup {
+									\draw-line
+										#'(0 . -1)
+									}
+								\once \override TextSpanner.dash-fraction = 1
+								\override Hairpin #'circled-tip = ##t
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								\pitchedTrill
+								aqf,8 -\tenuto \startTextSpan [ \< \startTrillSpan cqf
+								<> \stopTrillSpan
+							}
+							{
+								\set stemLeftBeamCount = 1
+								\set stemRightBeamCount = 1
+								gf,8 -\tenuto ] \ff
+								\revert Hairpin #'circled-tip
 								<> \stopTextSpan
 							}
 						}
@@ -5415,7 +5534,7 @@
 								\stopStaff
 								\once \override Staff.StaffSymbol.line-count = 1
 								\startStaff
-								R1 * 1/2
+								R1 * 3/8
 							}
 							{
 								R1 * 1
@@ -5431,7 +5550,7 @@
 										#"noteheads.s0harmonic"
 									}
 								\pitchedTrill
-								b,8 \pp \startTrillSpan e
+								c8 \p \startTrillSpan f
 								\revert TrillPitchHead #'stencil
 								\revert TrillPitchHead #'text
 								<> \stopTrillSpan
@@ -5462,7 +5581,11 @@
 										\pad-around
 											#0.5
 											\italic
-												overpressure
+												\concat
+													{
+														\vstrut
+														overpressure
+													}
 									}
 								\once \override TextSpanner.bound-details.right-broken.text = ##f
 								\once \override TextSpanner.bound-details.right.text = \markup {
@@ -5484,8 +5607,15 @@
 						}
 						{
 							{
-								r4
-								r8
+								r16
+							}
+						}
+						{
+							\tweak #'text #tuplet-number::calc-fraction-text
+							\times 5/4 {
+								gf,8 -\tenuto [ \< \p
+								\set stemLeftBeamCount = 1
+								gf,8 -\tenuto ] \f
 							}
 						}
 						{
@@ -5498,14 +5628,14 @@
 								\set stemLeftBeamCount = 2
 								\set stemRightBeamCount = 1
 								\pitchedTrill
-								a16 \ppp ~ [ \startTrillSpan c'
+								b,16 \pp ~ [ \startTrillSpan e
 							}
 							{
 								\set stemLeftBeamCount = 1
 								\set stemRightBeamCount = 2
-								a16 ~
+								b,16 ~
 								\set stemLeftBeamCount = 2
-								a16 ]
+								b,16 ]
 								\revert TrillPitchHead #'stencil
 								\revert TrillPitchHead #'text
 								<> \stopTrillSpan
@@ -5516,13 +5646,15 @@
 								r8.
 							}
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
-								R1 * 3/8
-								\stopStaff
-								\startStaff
+								r8
 							}
+						}
+						{
+							{
+								f,4 -\tenuto \f
+							}
+						}
+						{
 							{
 								r4
 								r16
@@ -5536,7 +5668,7 @@
 										#"noteheads.s0harmonic"
 									}
 								\pitchedTrill
-								c,16 \p \startTrillSpan f,
+								a16 \ppp \startTrillSpan c'
 								\revert TrillPitchHead #'stencil
 								\revert TrillPitchHead #'text
 								<> \stopTrillSpan
@@ -5563,7 +5695,7 @@
 										#"noteheads.s0harmonic"
 									}
 								\pitchedTrill
-								b8 \pp \startTrillSpan e'
+								c8 \p \startTrillSpan f
 								\revert TrillPitchHead #'stencil
 								\revert TrillPitchHead #'text
 								<> \stopTrillSpan
@@ -5585,7 +5717,7 @@
 										#"noteheads.s0harmonic"
 									}
 								\pitchedTrill
-								a,16 \ppp \startTrillSpan c
+								b16 \pp \startTrillSpan e'
 								\revert TrillPitchHead #'stencil
 								\revert TrillPitchHead #'text
 								<> \stopTrillSpan

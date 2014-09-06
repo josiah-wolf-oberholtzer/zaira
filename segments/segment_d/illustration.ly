@@ -545,6 +545,7 @@
 								r4
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -568,6 +569,7 @@
 								r4
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -580,6 +582,7 @@
 								r4
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -606,6 +609,7 @@
 								r16
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\set stemLeftBeamCount = 2
@@ -634,6 +638,7 @@
 								r8
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
@@ -650,6 +655,7 @@
 								r8.
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\set stemLeftBeamCount = 2
@@ -674,6 +680,7 @@
 								r8.
 							}
 						}
+						\transpose bf c'
 						{
 							{
 								\pitchedTrill
