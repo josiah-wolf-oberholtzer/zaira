@@ -13,7 +13,7 @@ wind_airtone_music_specifier = consort.makers.MusicSpecifier(
                     markup=Markup(r'\concat { \vstrut airtone }')
                         .italic()
                         .pad_around(0.5)
-                        .with_box(),
+                        .box(),
                     overrides={
                         'note_head__style': 'slash',
                         }

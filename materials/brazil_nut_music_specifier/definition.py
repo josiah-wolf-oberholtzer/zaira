@@ -17,7 +17,7 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
                     markup=Markup(r'\concat { \vstrut shaker }')
                         .italic()
                         .pad_around(0.5)
-                        .with_box(),
+                        .box(),
                     ),
                 selector=selectortools.Selector().by_leaves(),
                 ),
