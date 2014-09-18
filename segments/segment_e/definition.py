@@ -186,20 +186,12 @@ segment_maker.add_setting(
         ),
     piano_rh=new(
         zaira.materials.piano_clusters_music_specifier,
-        attachment_maker=consort.makers.AttachmentMaker(
-            attachment_expressions=(
-                zaira.materials.erratic_dynamic_attachment_expression,
-                ),
-            ),
+        attachment_maker__dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
         pitch_maker__register_specifier__center_pitch="g",
         ),
     piano_lh=new(
         zaira.materials.piano_clusters_music_specifier,
-        attachment_maker=consort.makers.AttachmentMaker(
-            attachment_expressions=(
-                zaira.materials.erratic_dynamic_attachment_expression,
-                ),
-            ),
+        attachment_maker__dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
         pitch_maker__register_specifier__center_pitch="c,,",
         ),
     )
