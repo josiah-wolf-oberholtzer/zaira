@@ -1,15 +1,13 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
+from abjad.tools.topleveltools import new
 import consort
 import zaira
 
 
 metal_tranquilo_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            zaira.materials.background_dynamic_attachment_expression,
-            zaira.materials.laissez_vibrer_attachment_expression,
-            ),
+        dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
+        laissez_vibrer=zaira.materials.laissez_vibrer_attachment_expression,
         ),
     pitch_maker=consort.makers.AbsolutePitchMaker(
         pitches=(

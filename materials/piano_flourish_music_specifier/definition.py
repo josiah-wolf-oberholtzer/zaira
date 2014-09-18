@@ -1,17 +1,17 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
+from abjad.tools import pitchtools
+from abjad.tools import spannertools
+from abjad.tools import selectortools
 import consort
 import zaira
 
 
 piano_flourish_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            consort.makers.AttachmentExpression(
-                attachments=spannertools.Slur(),
-                selector=selectortools.selects_pitched_runs(),
-                ),
-            zaira.materials.erratic_dynamic_attachment_expression,
+        dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
+        slur=consort.makers.AttachmentExpression(
+            attachments=spannertools.Slur(),
+            selector=selectortools.selects_pitched_runs(),
             ),
         ),
     labels='pedaled',

@@ -1,5 +1,10 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
+from abjad import Duration
+from abjad import Markup
+from abjad.tools import indicatortools
+from abjad.tools import pitchtools
+from abjad.tools import selectortools
+from abjad.tools import spannertools
 import consort
 import zaira
 
@@ -14,7 +19,6 @@ staccato_selector = staccato_selector.shorter_than(
     or_equal_to=True,
     )
 
-
 sustain_selector = selectortools.Selector()
 sustain_selector = sustain_selector.by_leaves()
 sustain_selector = sustain_selector.by_logical_tie(
@@ -24,39 +28,36 @@ sustain_selector = sustain_selector.longer_than(
     duration=Duration(1, 16),
     )
 
-
 piano_prepared_bass_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            zaira.materials.background_dynamic_attachment_expression,
-            consort.makers.AttachmentExpression(
-                attachments=consort.makers.ClefSpanner(
-                    clef='bass_15',
-                    ),
-                selector=selectortools.Selector(),
+        dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
+        clef_spanner=consort.makers.AttachmentExpression(
+            attachments=consort.makers.ClefSpanner(
+                clef='bass_15',
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=consort.makers.ComplexTextSpanner(
-                    markup=Markup(r'\concat { \vstrut prepared }')
-                        .italic()
-                        .pad_around(0.5)
-                        .box(),
-                    overrides={
-                        'note_head__style': 'cross',
-                        },
-                    ),
-                selector=selectortools.Selector(),
+            selector=selectortools.Selector(),
+            ),
+        text_spanner=consort.makers.AttachmentExpression(
+            attachments=consort.makers.ComplexTextSpanner(
+                markup=Markup(r'\concat { \vstrut prepared }')
+                    .italic()
+                    .pad_around(0.5)
+                    .box(),
+                overrides={
+                    'note_head__style': 'cross',
+                    },
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=indicatortools.Articulation('.'),
-                selector=staccato_selector,
+            selector=selectortools.Selector(),
+            ),
+        staccato=consort.makers.AttachmentExpression(
+            attachments=indicatortools.Articulation('.'),
+            selector=staccato_selector,
+            ),
+        trill_spanner=consort.makers.AttachmentExpression(
+            attachments=spannertools.ComplexTrillSpanner(
+                interval='m2',
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=spannertools.ComplexTrillSpanner(
-                    interval='m2',
-                    ),
-                selector=sustain_selector,
-                ),
+            selector=sustain_selector,
             ),
         ),
     labels='pedaled',

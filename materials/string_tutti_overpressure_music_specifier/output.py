@@ -5,73 +5,71 @@ import consort
 
 string_tutti_overpressure_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        consort.makers.ComplexTextSpanner(
-                            markup=markuptools.Markup(
-                                contents=(
-                                    markuptools.MarkupCommand(
-                                        'box',
-                                        markuptools.MarkupCommand(
-                                            'pad-around',
-                                            0.5,
-                                            markuptools.MarkupCommand(
-                                                'italic',
-                                                markuptools.MarkupCommand(
-                                                    'concat',
-                                                    [
-                                                        markuptools.MarkupCommand(
-                                                            'vstrut'
-                                                            ),
-                                                        'overpressure',
-                                                        ]
-                                                    )
-                                                )
-                                            )
-                                        ),
-                                    ),
-                                ),
+        dynamic_and_accent=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    (
+                        indicatortools.Dynamic(
+                            name='fff',
                             ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
+                        indicatortools.Articulation('accent'),
+                        indicatortools.Articulation('tenuto'),
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.LogicalTieSelectorCallback(
+                        flatten=True,
+                        pitched=True,
+                        trivial=True,
+                        only_with_head=False,
+                        only_with_tail=False,
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        (
-                            indicatortools.Dynamic(
-                                name='fff',
+            ),
+        text_spanner=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    consort.makers.ComplexTextSpanner(
+                        markup=markuptools.Markup(
+                            contents=(
+                                markuptools.MarkupCommand(
+                                    'box',
+                                    markuptools.MarkupCommand(
+                                        'pad-around',
+                                        0.5,
+                                        markuptools.MarkupCommand(
+                                            'italic',
+                                            markuptools.MarkupCommand(
+                                                'concat',
+                                                [
+                                                    markuptools.MarkupCommand(
+                                                        'vstrut'
+                                                        ),
+                                                    'overpressure',
+                                                    ]
+                                                )
+                                            )
+                                        )
+                                    ),
                                 ),
-                            indicatortools.Articulation('accent'),
-                            indicatortools.Articulation('tenuto'),
                             ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.LogicalTieSelectorCallback(
-                            flatten=True,
-                            pitched=True,
-                            trivial=True,
-                            only_with_head=False,
-                            only_with_tail=False,
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
                         ),
                     ),
                 ),

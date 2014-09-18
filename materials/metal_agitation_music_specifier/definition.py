@@ -1,21 +1,21 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
+from abjad.tools import indicatortools
+from abjad.tools import selectortools
+from abjad.tools.topleveltools import new
 import consort
 import zaira
 
 
 metal_agitation_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            zaira.materials.foreground_dynamic_attachment_expression,
-            consort.makers.AttachmentExpression(
-                attachments=indicatortools.Articulation('accent'),
-                selector=selectortools.selects_first_logical_tie_in_pitched_runs()[0],
-                ),
-            consort.makers.AttachmentExpression(
-                attachments=indicatortools.Articulation('staccato'),
-                selector=selectortools.selects_all_but_first_logical_tie_in_pitched_runs()[0],
-                ),
+        dynamic_expression=zaira.materials.foreground_dynamic_attachment_expression,
+        accent=consort.makers.AttachmentExpression(
+            attachments=indicatortools.Articulation('accent'),
+            selector=selectortools.selects_first_logical_tie_in_pitched_runs()[0],
+            ),
+        staccato=consort.makers.AttachmentExpression(
+            attachments=indicatortools.Articulation('staccato'),
+            selector=selectortools.selects_all_but_first_logical_tie_in_pitched_runs()[0],
             ),
         ),
     pitch_maker=consort.makers.AbsolutePitchMaker(

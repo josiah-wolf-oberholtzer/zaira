@@ -9,31 +9,29 @@ import zaira
 
 wind_keyclick_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            zaira.materials.background_dynamic_attachment_expression,
-            zaira.materials.percussion_staff_attachment_expression,
-            consort.makers.AttachmentExpression(
-                attachments=consort.makers.ComplexTextSpanner(
-                    markup=Markup(r'\concat { \vstrut keyclick }')
-                        .italic()
-                        .pad_around(0.5)
-                        .box(),
-                    ),
-                selector=selectortools.Selector().by_leaves(),
+        dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
+        percussion_staff=zaira.materials.percussion_staff_attachment_expression,
+        text_spanner=consort.makers.AttachmentExpression(
+            attachments=consort.makers.ComplexTextSpanner(
+                markup=Markup(r'\concat { \vstrut keyclick }')
+                    .italic()
+                    .pad_around(0.5)
+                    .box(),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=spannertools.StemTremoloSpanner(),
-                selector=selectortools.Selector(
-                    ).by_logical_tie(pitched=True
-                    ).longer_than((1, 16))
-                ),
-            consort.makers.AttachmentExpression(
-                attachments=indicatortools.Articulation('.'),
-                selector=selectortools.Selector(
-                    ).by_logical_tie(pitched=True
-                    ).shorter_than((1, 8)
-                    ).by_length(1)
-                ),
+            selector=selectortools.Selector().by_leaves(),
+            ),
+        stem_tremolo_spanner=consort.makers.AttachmentExpression(
+            attachments=spannertools.StemTremoloSpanner(),
+            selector=selectortools.Selector(
+                ).by_logical_tie(pitched=True
+                ).longer_than((1, 16))
+            ),
+        staccato=consort.makers.AttachmentExpression(
+            attachments=indicatortools.Articulation('.'),
+            selector=selectortools.Selector(
+                ).by_logical_tie(pitched=True
+                ).shorter_than((1, 8)
+                ).by_length(1)
             ),
         ),
     pitch_maker=consort.makers.AbsolutePitchMaker(

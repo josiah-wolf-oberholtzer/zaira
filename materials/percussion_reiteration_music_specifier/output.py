@@ -5,55 +5,53 @@ import consort
 
 percussion_reiteration_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        indicatortools.Dynamic(
-                            name='ppp',
+        dynamic_expression=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    indicatortools.Dynamic(
+                        name='ppp',
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
                             ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
-                                ),
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        indicatortools.Articulation('.'),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.LogicalTieSelectorCallback(
-                            flatten=True,
-                            pitched=True,
-                            trivial=True,
-                            only_with_head=False,
-                            only_with_tail=False,
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
+            ),
+        staccato=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    indicatortools.Articulation('.'),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.LogicalTieSelectorCallback(
+                        flatten=True,
+                        pitched=True,
+                        trivial=True,
+                        only_with_head=False,
+                        only_with_tail=False,
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
                         ),
                     ),
                 ),

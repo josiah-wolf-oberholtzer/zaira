@@ -1,26 +1,27 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
+from abjad.tools import indicatortools
+from abjad.tools import spannertools
+from abjad.tools import selectortools
+from abjad.tools.topleveltools import new
 import consort
 import zaira
 
 
 drum_storm_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            zaira.materials.erratic_dynamic_attachment_expression,
-            consort.makers.AttachmentExpression(
-                attachments=spannertools.StemTremoloSpanner(),
-                selector=selectortools.Selector(
-                    ).by_logical_tie(pitched=True
-                    ).longer_than((1, 16))
+        dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
+        stem_tremolo_spanner=consort.makers.AttachmentExpression(
+            attachments=spannertools.StemTremoloSpanner(),
+            selector=selectortools.Selector(
+                ).by_logical_tie(pitched=True
+                ).longer_than((1, 16))
+            ),
+        accent=consort.makers.AttachmentExpression(
+            attachments=(
+                indicatortools.Articulation('accent'),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=(
-                    indicatortools.Articulation('accent'),
-                    ),
-                selector=selectortools.Selector(
-                    ).by_logical_tie(pitched=True)[0],
-                ),
+            selector=selectortools.Selector(
+                ).by_logical_tie(pitched=True)[0],
             ),
         ),
     pitch_maker=consort.makers.AbsolutePitchMaker(

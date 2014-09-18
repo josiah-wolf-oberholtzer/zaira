@@ -1,14 +1,12 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
+from abjad.tools.topleveltools import new
 import consort
 import zaira
 
 
 drum_heartbeat_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            zaira.materials.midground_dynamic_attachment_expression,
-            ),
+        dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
         ),
     pitch_maker=consort.makers.AbsolutePitchMaker(
         pitches=zaira.makers.Percussion.KICK_DRUM,

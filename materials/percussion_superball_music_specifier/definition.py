@@ -1,22 +1,21 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
+from abjad import Markup
+from abjad.tools import selectortools
 import consort
 import zaira
 
 
 percussion_superball_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            zaira.materials.background_dynamic_attachment_expression,
-            consort.makers.AttachmentExpression(
-                attachments=consort.makers.ComplexTextSpanner(
-                    markup=Markup(r'\concat { \vstrut superball }')
-                        .italic()
-                        .pad_around(0.5)
-                        .box(),
-                    ),
-                selector=selectortools.Selector().by_leaves(),
+        dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
+        text_spanner=consort.makers.AttachmentExpression(
+            attachments=consort.makers.ComplexTextSpanner(
+                markup=Markup(r'\concat { \vstrut superball }')
+                    .italic()
+                    .pad_around(0.5)
+                    .box(),
                 ),
+            selector=selectortools.Selector().by_leaves(),
             ),
         ),
     pitch_maker=consort.makers.AbsolutePitchMaker(

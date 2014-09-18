@@ -5,124 +5,122 @@ import consort
 
 string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='mf',
-                            minimum_duration=durationtools.Duration(1, 4),
-                            ),
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='mp',
-                            minimum_duration=durationtools.Duration(1, 4),
-                            ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
-                                ),
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
+        accent_and_tenuto=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    (
+                        indicatortools.Articulation('accent'),
+                        indicatortools.Articulation('tenuto'),
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.LogicalTieSelectorCallback(
+                        flatten=True,
+                        pitched=True,
+                        trivial=True,
+                        only_with_head=False,
+                        only_with_tail=False,
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        consort.makers.ComplexTextSpanner(
-                            markup=markuptools.Markup(
-                                contents=(
+            ),
+        dynamic_expression=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='mf',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='mp',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
+                            ),
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
+                        ),
+                    ),
+                ),
+            ),
+        stem_tremolo_spanner=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    None,
+                    None,
+                    spannertools.StemTremoloSpanner(),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.LogicalTieSelectorCallback(
+                        flatten=True,
+                        pitched=True,
+                        trivial=True,
+                        only_with_head=False,
+                        only_with_tail=False,
+                        ),
+                    ),
+                ),
+            ),
+        text_spanner=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    consort.makers.ComplexTextSpanner(
+                        markup=markuptools.Markup(
+                            contents=(
+                                markuptools.MarkupCommand(
+                                    'box',
                                     markuptools.MarkupCommand(
-                                        'box',
+                                        'pad-around',
+                                        0.5,
                                         markuptools.MarkupCommand(
-                                            'pad-around',
-                                            0.5,
+                                            'italic',
                                             markuptools.MarkupCommand(
-                                                'italic',
-                                                markuptools.MarkupCommand(
-                                                    'concat',
-                                                    [
-                                                        markuptools.MarkupCommand(
-                                                            'vstrut'
-                                                            ),
-                                                        'overpressure',
-                                                        ]
-                                                    )
+                                                'concat',
+                                                [
+                                                    markuptools.MarkupCommand(
+                                                        'vstrut'
+                                                        ),
+                                                    'overpressure',
+                                                    ]
                                                 )
                                             )
-                                        ),
+                                        )
                                     ),
                                 ),
                             ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
                         ),
-                    ),
+                    ]
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        (
-                            indicatortools.Articulation('accent'),
-                            indicatortools.Articulation('tenuto'),
-                            ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.LogicalTieSelectorCallback(
-                            flatten=True,
-                            pitched=True,
-                            trivial=True,
-                            only_with_head=False,
-                            only_with_tail=False,
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
-                        ),
-                    ),
-                ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        None,
-                        None,
-                        spannertools.StemTremoloSpanner(),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.LogicalTieSelectorCallback(
-                            flatten=True,
-                            pitched=True,
-                            trivial=True,
-                            only_with_head=False,
-                            only_with_tail=False,
-                            ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
                         ),
                     ),
                 ),

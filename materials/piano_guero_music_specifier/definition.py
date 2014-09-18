@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
+from abjad import Markup
+from abjad.tools import selectortools
 import consort
 import zaira
 
@@ -16,28 +17,26 @@ fast_markup = fast_markup.box()
 
 piano_guero_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            zaira.materials.midground_dynamic_attachment_expression,
-            zaira.materials.percussion_staff_attachment_expression,
-            consort.makers.AttachmentExpression(
-                attachments=consort.makers.ComplexTextSpanner(
-                    markup=Markup(r'\concat { \vstrut guero }')
-                        .italic()
-                        .pad_around(0.5)
-                        .box(),
-                    ),
-                selector=selectortools.Selector().by_leaves(),
+        dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
+        percussion_staff=zaira.materials.percussion_staff_attachment_expression,
+        text_spanner=consort.makers.AttachmentExpression(
+            attachments=consort.makers.ComplexTextSpanner(
+                markup=Markup(r'\concat { \vstrut guero }')
+                    .italic()
+                    .pad_around(0.5)
+                    .box(),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=(
-                    slow_markup,
-                    slow_markup,
-                    fast_markup,
-                    slow_markup,
-                    fast_markup,
-                    ),
-                selector=selectortools.selects_pitched_runs()[0],
+            selector=selectortools.Selector().by_leaves(),
+            ),
+        direction_markup=consort.makers.AttachmentExpression(
+            attachments=(
+                slow_markup,
+                slow_markup,
+                fast_markup,
+                slow_markup,
+                fast_markup,
                 ),
+            selector=selectortools.selects_pitched_runs()[0],
             ),
         ),
     pitch_maker=consort.makers.AbsolutePitchMaker(),

@@ -5,55 +5,53 @@ import consort
 
 piano_fanfare_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        indicatortools.Articulation('accent'),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.LogicalTieSelectorCallback(
-                            flatten=True,
-                            pitched=True,
-                            trivial=True,
-                            only_with_head=False,
-                            only_with_tail=False,
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
+        accent=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    indicatortools.Articulation('accent'),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.LogicalTieSelectorCallback(
+                        flatten=True,
+                        pitched=True,
+                        trivial=True,
+                        only_with_head=False,
+                        only_with_tail=False,
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        indicatortools.Dynamic(
-                            name='fff',
+            ),
+        dynamic_expression=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    indicatortools.Dynamic(
+                        name='fff',
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
                             ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
-                                ),
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
                         ),
                     ),
                 ),

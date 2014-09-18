@@ -1,14 +1,12 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
+from abjad.tools import pitchtools
 import consort
 import zaira
 
 
 piano_clusters_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            zaira.materials.background_dynamic_attachment_expression,
-            ),
+        dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         ),
     labels='pedaled',
     pitch_maker=consort.makers.PitchClassPitchMaker(

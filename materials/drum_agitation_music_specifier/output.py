@@ -5,116 +5,114 @@ import consort
 
 drum_agitation_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='fff',
-                            minimum_duration=durationtools.Duration(1, 4),
+        accent=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    indicatortools.Articulation('accent'),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
                             ),
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='f',
-                            minimum_duration=durationtools.Duration(1, 4),
-                            ),
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='ff',
-                            minimum_duration=durationtools.Duration(1, 4),
-                            ),
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='mf',
-                            minimum_duration=durationtools.Duration(1, 4),
-                            ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
-                                ),
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
+                        ),
+                    selectortools.LogicalTieSelectorCallback(
+                        flatten=False,
+                        pitched=False,
+                        trivial=True,
+                        only_with_head=False,
+                        only_with_tail=False,
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        indicatortools.Articulation('accent'),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
+            ),
+        dynamic_expression=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='fff',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='f',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='ff',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='mf',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
                             ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
-                                ),
-                            ),
-                        selectortools.LogicalTieSelectorCallback(
-                            flatten=False,
-                            pitched=False,
-                            trivial=True,
-                            only_with_head=False,
-                            only_with_tail=False,
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        indicatortools.Articulation('staccato'),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
+            ),
+        staccato=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    indicatortools.Articulation('staccato'),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
                             ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
-                                ),
-                            ),
-                        selectortools.LogicalTieSelectorCallback(
-                            flatten=False,
-                            pitched=False,
-                            trivial=True,
-                            only_with_head=False,
-                            only_with_tail=False,
-                            ),
-                        selectortools.SliceSelectorCallback(
-                            start=1,
-                            apply_to_each=True,
-                            ),
-                        selectortools.FlattenSelectorCallback(
-                            depth=1,
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
+                        ),
+                    selectortools.LogicalTieSelectorCallback(
+                        flatten=False,
+                        pitched=False,
+                        trivial=True,
+                        only_with_head=False,
+                        only_with_tail=False,
+                        ),
+                    selectortools.SliceSelectorCallback(
+                        start=1,
+                        apply_to_each=True,
+                        ),
+                    selectortools.FlattenSelectorCallback(
+                        depth=1,
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
                         ),
                     ),
                 ),

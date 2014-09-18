@@ -5,81 +5,96 @@ import consort
 
 string_flourish_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        (
-                            spannertools.Slur(),
-                            consort.makers.ComplexTextSpanner(
-                                markup=markuptools.Markup(
-                                    contents=(
-                                        markuptools.MarkupCommand(
-                                            'box',
-                                            markuptools.MarkupCommand(
-                                                'pad-around',
-                                                0.5,
-                                                markuptools.MarkupCommand(
-                                                    'italic',
-                                                    markuptools.MarkupCommand(
-                                                        'concat',
-                                                        [
-                                                            markuptools.MarkupCommand(
-                                                                'vstrut'
-                                                                ),
-                                                            'flautando',
-                                                            ]
-                                                        )
-                                                    )
-                                                )
-                                            ),
-                                        ),
-                                    ),
-                                ),
-                            ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
-                                ),
+        dynamic_expression=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='ppp',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='p',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='pp',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
                             ),
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='ppp',
-                            minimum_duration=durationtools.Duration(1, 4),
+            ),
+        slur=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    spannertools.Slur(),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
                             ),
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='p',
-                            minimum_duration=durationtools.Duration(1, 4),
-                            ),
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='pp',
-                            minimum_duration=durationtools.Duration(1, 4),
-                            ),
-                        ]
+                        ),
                     ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
+                ),
+            ),
+        text_spanner=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    consort.makers.ComplexTextSpanner(
+                        markup=markuptools.Markup(
+                            contents=(
+                                markuptools.MarkupCommand(
+                                    'box',
+                                    markuptools.MarkupCommand(
+                                        'pad-around',
+                                        0.5,
+                                        markuptools.MarkupCommand(
+                                            'italic',
+                                            markuptools.MarkupCommand(
+                                                'concat',
+                                                [
+                                                    markuptools.MarkupCommand(
+                                                        'vstrut'
+                                                        ),
+                                                    'flautando',
+                                                    ]
+                                                )
+                                            )
+                                        )
+                                    ),
                                 ),
+                            ),
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
                             ),
                         ),
                     ),

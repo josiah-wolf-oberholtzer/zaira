@@ -1,46 +1,48 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
+from abjad import Markup
+from abjad.tools import indicatortools
+from abjad.tools import selectortools
+from abjad.tools import spannertools
+from abjad.tools.topleveltools import new
 import consort
 import zaira
 
 
 cello_solo_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            zaira.materials.erratic_dynamic_attachment_expression,
-            consort.makers.AttachmentExpression(
-                attachments=(
-                    None,
-                    spannertools.ComplexTrillSpanner(interval='+m3'),
-                    None,
-                    spannertools.ComplexTrillSpanner(interval='+m3'),
-                    None,
-                    None,
-                    spannertools.ComplexTrillSpanner(interval='+M2'),
+        dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
+        trill_spanner=consort.makers.AttachmentExpression(
+            attachments=(
+                None,
+                spannertools.ComplexTrillSpanner(interval='+m3'),
+                None,
+                spannertools.ComplexTrillSpanner(interval='+m3'),
+                None,
+                None,
+                spannertools.ComplexTrillSpanner(interval='+M2'),
+                ),
+            selector=selectortools.Selector()
+                .by_leaves()
+                .by_logical_tie(pitched=True)
+            ),
+        tenuto=consort.makers.AttachmentExpression(
+            attachments=indicatortools.Articulation('tenuto'),
+            selector=selectortools.Selector()
+                .by_leaves()
+                .by_logical_tie(pitched=True)[0],
+            ),
+        text_spanner=consort.makers.AttachmentExpression(
+            attachments=(
+                consort.makers.ComplexTextSpanner(
+                    markup=Markup(r'\concat { \vstrut "col legno" }')
+                        .italic()
+                        .pad_around(0.5)
+                        .box(),
                     ),
-                selector=selectortools.Selector()
-                    .by_leaves()
-                    .by_logical_tie(pitched=True)
+                None,
+                spannertools.Glissando(),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=indicatortools.Articulation('tenuto'),
-                selector=selectortools.Selector()
-                    .by_leaves()
-                    .by_logical_tie(pitched=True)[0],
-                ),
-            consort.makers.AttachmentExpression(
-                attachments=(
-                    consort.makers.ComplexTextSpanner(
-                        markup=Markup(r'\concat { \vstrut "col legno" }')
-                            .italic()
-                            .pad_around(0.5)
-                            .box(),
-                        ),
-                    None,
-                    spannertools.Glissando(),
-                    ),
-                selector=selectortools.selects_pitched_runs(),
-                ),
+            selector=selectortools.selects_pitched_runs(),
             ),
         ),
     pitch_maker=consort.makers.AbsolutePitchMaker(

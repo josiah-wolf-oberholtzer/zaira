@@ -5,80 +5,78 @@ import consort
 
 metal_tranquilo_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='ppp',
-                            minimum_duration=durationtools.Duration(1, 4),
-                            ),
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='p',
-                            minimum_duration=durationtools.Duration(1, 4),
-                            ),
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='pp',
-                            minimum_duration=durationtools.Duration(1, 4),
-                            ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
-                                ),
+        dynamic_expression=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='ppp',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='p',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='pp',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
                             ),
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        (
-                            indicatortools.LaissezVibrer(),
-                            markuptools.Markup(
-                                contents=(
+            ),
+        laissez_vibrer=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    (
+                        indicatortools.LaissezVibrer(),
+                        markuptools.Markup(
+                            contents=(
+                                markuptools.MarkupCommand(
+                                    'override',
+                                    schemetools.SchemePair('padding', 0.5),
                                     markuptools.MarkupCommand(
-                                        'override',
-                                        schemetools.SchemePair('padding', 0.5),
+                                        'parenthesize',
                                         markuptools.MarkupCommand(
-                                            'parenthesize',
+                                            'smaller',
                                             markuptools.MarkupCommand(
-                                                'smaller',
-                                                markuptools.MarkupCommand(
-                                                    'caps',
-                                                    'L.V.'
-                                                    )
+                                                'caps',
+                                                'L.V.'
                                                 )
                                             )
-                                        ),
+                                        )
                                     ),
-                                direction=Up,
                                 ),
+                            direction=Up,
                             ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
                             ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
-                                ),
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=-1,
-                            apply_to_each=True,
-                            ),
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=-1,
+                        apply_to_each=True,
                         ),
                     ),
                 ),

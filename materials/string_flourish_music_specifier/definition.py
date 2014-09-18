@@ -1,27 +1,27 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
+from abjad import Markup
+from abjad.tools import selectortools
+from abjad.tools import spannertools
+from abjad.tools.topleveltools import new
 import consort
 import zaira
 
 
 string_flourish_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            consort.makers.AttachmentExpression(
-                attachments=(
-                    (
-                        spannertools.Slur(),
-                        consort.makers.ComplexTextSpanner(
-                            markup=Markup(r'\concat { \vstrut flautando }')
-                                .italic()
-                                .pad_around(0.5)
-                                .box(),
-                            ),
-                        ),
-                    ),
-                selector=selectortools.selects_pitched_runs(),
+        dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
+        slur=consort.makers.AttachmentExpression(
+            attachments=spannertools.Slur(),
+            selector=selectortools.selects_pitched_runs(),
+            ),
+        text_spanner=consort.makers.AttachmentExpression(
+            attachments=consort.makers.ComplexTextSpanner(
+                markup=Markup(r'\concat { \vstrut flautando }')
+                    .italic()
+                    .pad_around(0.5)
+                    .box(),
                 ),
-            zaira.materials.background_dynamic_attachment_expression,
+            selector=selectortools.selects_pitched_runs(),
             ),
         ),
     pitch_maker=consort.makers.PitchClassPitchMaker(

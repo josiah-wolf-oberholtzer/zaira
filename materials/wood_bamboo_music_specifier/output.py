@@ -5,86 +5,84 @@ import consort
 
 wood_bamboo_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='mf',
-                            minimum_duration=durationtools.Duration(1, 4),
+        dynamic_expression=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='mf',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='mp',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
                             ),
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='mp',
-                            minimum_duration=durationtools.Duration(1, 4),
-                            ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
-                                ),
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        spannertools.StemTremoloSpanner(),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.LogicalTieSelectorCallback(
-                            flatten=True,
-                            pitched=True,
-                            trivial=True,
-                            only_with_head=False,
-                            only_with_tail=False,
+            ),
+        staccato=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    indicatortools.Articulation('.'),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.LogicalTieSelectorCallback(
+                        flatten=True,
+                        pitched=True,
+                        trivial=True,
+                        only_with_head=False,
+                        only_with_tail=False,
+                        ),
+                    selectortools.DurationSelectorCallback(
+                        duration=durationtools.Duration(1, 8),
+                        parts=(
+                            Less,
                             ),
-                        selectortools.DurationSelectorCallback(
-                            duration=durationtools.Duration(1, 16),
-                            parts=(
-                                More,
-                                ),
-                            ),
+                        ),
+                    selectortools.LengthSelectorCallback(
+                        length=1,
+                        parts=Exact,
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        indicatortools.Articulation('.'),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.LogicalTieSelectorCallback(
-                            flatten=True,
-                            pitched=True,
-                            trivial=True,
-                            only_with_head=False,
-                            only_with_tail=False,
-                            ),
-                        selectortools.DurationSelectorCallback(
-                            duration=durationtools.Duration(1, 8),
-                            parts=(
-                                Less,
-                                ),
-                            ),
-                        selectortools.LengthSelectorCallback(
-                            length=1,
-                            parts=Exact,
+            ),
+        stem_tremolo_spanner=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    spannertools.StemTremoloSpanner(),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.LogicalTieSelectorCallback(
+                        flatten=True,
+                        pitched=True,
+                        trivial=True,
+                        only_with_head=False,
+                        only_with_tail=False,
+                        ),
+                    selectortools.DurationSelectorCallback(
+                        duration=durationtools.Duration(1, 16),
+                        parts=(
+                            More,
                             ),
                         ),
                     ),

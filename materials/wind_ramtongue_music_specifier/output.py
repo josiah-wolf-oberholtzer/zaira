@@ -5,151 +5,149 @@ import consort
 
 wind_ramtongue_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='mf',
-                            minimum_duration=durationtools.Duration(1, 4),
-                            ),
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='mp',
-                            minimum_duration=durationtools.Duration(1, 4),
-                            ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
-                                ),
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
+        accent_and_staccato=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    (
+                        indicatortools.Articulation('accent'),
+                        indicatortools.Articulation('staccato'),
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.LogicalTieSelectorCallback(
+                        flatten=True,
+                        pitched=True,
+                        trivial=True,
+                        only_with_head=False,
+                        only_with_tail=False,
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        spannertools.Spanner(
-                            overrides={
-                                'note_head__stencil': schemetools.Scheme(
-                                    'ly:text-interface::print'
-                                    ),
-                                'note_head__text': markuptools.Markup(
-                                    contents=(
-                                        markuptools.MarkupCommand(
-                                            'translate',
-                                            schemetools.SchemePair(0, -0.9),
-                                            markuptools.MarkupCommand(
-                                                'override',
-                                                schemetools.SchemePair('thickness', 0.5),
-                                                markuptools.MarkupCommand(
-                                                    'scale',
-                                                    schemetools.SchemePair(0.667, 0.667),
-                                                    markuptools.MarkupCommand(
-                                                        'rotate',
-                                                        180,
-                                                        markuptools.MarkupCommand(
-                                                            'triangle',
-                                                            False
-                                                            )
-                                                        )
-                                                    )
-                                                )
-                                            ),
-                                        ),
-                                    ),
-                                },
+            ),
+        dynamic_expression=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='mf',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='mp',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
                             ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
-                                ),
-                            ),
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        consort.makers.ComplexTextSpanner(
-                            markup=markuptools.Markup(
+            ),
+        override_spanner=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    spannertools.Spanner(
+                        overrides={
+                            'note_head__stencil': schemetools.Scheme(
+                                'ly:text-interface::print'
+                                ),
+                            'note_head__text': markuptools.Markup(
                                 contents=(
                                     markuptools.MarkupCommand(
-                                        'box',
+                                        'translate',
+                                        schemetools.SchemePair(0, -0.9),
                                         markuptools.MarkupCommand(
-                                            'pad-around',
-                                            0.5,
+                                            'override',
+                                            schemetools.SchemePair('thickness', 0.5),
                                             markuptools.MarkupCommand(
-                                                'italic',
+                                                'scale',
+                                                schemetools.SchemePair(0.667, 0.667),
                                                 markuptools.MarkupCommand(
-                                                    'concat',
-                                                    [
-                                                        markuptools.MarkupCommand(
-                                                            'vstrut'
-                                                            ),
-                                                        'ram/slap',
-                                                        ]
+                                                    'rotate',
+                                                    180,
+                                                    markuptools.MarkupCommand(
+                                                        'triangle',
+                                                        False
+                                                        )
                                                     )
                                                 )
                                             )
                                         ),
                                     ),
                                 ),
-                            ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
+                            },
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
                             ),
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        (
-                            indicatortools.Articulation('accent'),
-                            indicatortools.Articulation('staccato'),
+            ),
+        text_spanner=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    consort.makers.ComplexTextSpanner(
+                        markup=markuptools.Markup(
+                            contents=(
+                                markuptools.MarkupCommand(
+                                    'box',
+                                    markuptools.MarkupCommand(
+                                        'pad-around',
+                                        0.5,
+                                        markuptools.MarkupCommand(
+                                            'italic',
+                                            markuptools.MarkupCommand(
+                                                'concat',
+                                                [
+                                                    markuptools.MarkupCommand(
+                                                        'vstrut'
+                                                        ),
+                                                    'ram/slap',
+                                                    ]
+                                                )
+                                            )
+                                        )
+                                    ),
+                                ),
                             ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.LogicalTieSelectorCallback(
-                            flatten=True,
-                            pitched=True,
-                            trivial=True,
-                            only_with_head=False,
-                            only_with_tail=False,
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
-                            ),
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
                         ),
                     ),
                 ),

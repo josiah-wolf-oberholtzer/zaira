@@ -7,18 +7,16 @@ import zaira
 
 percussion_fanfare_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            consort.makers.AttachmentExpression(
-                attachments=indicatortools.Articulation('accent'),
-                selector=selectortools.Selector(
-                    ).by_leaves(
-                    ).by_logical_tie(pitched=True,
-                    )[0],
-                ),
-            consort.makers.AttachmentExpression(
-                attachments=indicatortools.Dynamic('fff'),
-                selector=selectortools.selects_pitched_runs()[0],
-                ),
+        dynamic_expression=consort.makers.AttachmentExpression(
+            attachments=indicatortools.Dynamic('fff'),
+            selector=selectortools.selects_pitched_runs()[0],
+            ),
+        accent=consort.makers.AttachmentExpression(
+            attachments=indicatortools.Articulation('accent'),
+            selector=selectortools.Selector(
+                ).by_leaves(
+                ).by_logical_tie(pitched=True,
+                )[0],
             ),
         ),
     pitch_maker=consort.makers.AbsolutePitchMaker(),

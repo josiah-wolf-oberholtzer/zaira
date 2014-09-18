@@ -5,94 +5,92 @@ import consort
 
 metal_brushed_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='mf',
-                            minimum_duration=durationtools.Duration(1, 4),
+        dynamic_expression=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='mf',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    consort.makers.DynamicExpression(
+                        hairpin_start_token='mp',
+                        minimum_duration=durationtools.Duration(1, 4),
+                        ),
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
                             ),
-                        consort.makers.DynamicExpression(
-                            hairpin_start_token='mp',
-                            minimum_duration=durationtools.Duration(1, 4),
-                            ),
-                        ]
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
+                        ),
                     ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
-                                ),
-                            ),
-                        selectortools.ItemSelectorCallback(
-                            item=0,
-                            apply_to_each=True,
+                ),
+            ),
+        stem_tremolo_spanner=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    spannertools.StemTremoloSpanner(),
+                    None,
+                    ]
+                ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
+                        ),
+                    selectortools.RunSelectorCallback(
+                        prototype=(
+                            scoretools.Note,
+                            scoretools.Chord,
                             ),
                         ),
                     ),
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        consort.makers.ComplexTextSpanner(
-                            markup=markuptools.Markup(
-                                contents=(
+            ),
+        text_spanner=consort.makers.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    consort.makers.ComplexTextSpanner(
+                        markup=markuptools.Markup(
+                            contents=(
+                                markuptools.MarkupCommand(
+                                    'box',
                                     markuptools.MarkupCommand(
-                                        'box',
+                                        'pad-around',
+                                        0.5,
                                         markuptools.MarkupCommand(
-                                            'pad-around',
-                                            0.5,
+                                            'italic',
                                             markuptools.MarkupCommand(
-                                                'italic',
-                                                markuptools.MarkupCommand(
-                                                    'concat',
-                                                    [
-                                                        markuptools.MarkupCommand(
-                                                            'vstrut'
-                                                            ),
-                                                        'brush',
-                                                        ]
-                                                    )
+                                                'concat',
+                                                [
+                                                    markuptools.MarkupCommand(
+                                                        'vstrut'
+                                                        ),
+                                                    'brush',
+                                                    ]
                                                 )
                                             )
-                                        ),
+                                        )
                                     ),
                                 ),
                             ),
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
                         ),
-                    ),
+                    ]
                 ),
-            consort.makers.AttachmentExpression(
-                attachments=datastructuretools.TypedList(
-                    [
-                        spannertools.StemTremoloSpanner(),
-                        None,
-                        ]
-                    ),
-                selector=selectortools.Selector(
-                    callbacks=(
-                        selectortools.PrototypeSelectorCallback(
-                            prototype=scoretools.Leaf,
-                            ),
-                        selectortools.RunSelectorCallback(
-                            prototype=(
-                                scoretools.Note,
-                                scoretools.Chord,
-                                ),
-                            ),
+            selector=selectortools.Selector(
+                callbacks=(
+                    selectortools.PrototypeSelectorCallback(
+                        prototype=scoretools.Leaf,
                         ),
                     ),
                 ),

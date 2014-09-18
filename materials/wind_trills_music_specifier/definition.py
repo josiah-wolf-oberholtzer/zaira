@@ -1,24 +1,23 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
+from abjad.tools import selectortools
+from abjad.tools import spannertools
 import consort
 import zaira
 
 
 wind_trills_music_specifier = consort.makers.MusicSpecifier(
     attachment_maker=consort.makers.AttachmentMaker(
-        attachment_expressions=(
-            zaira.materials.background_dynamic_attachment_expression,
-            consort.makers.AttachmentExpression(
-                attachments=(
-                    spannertools.ComplexTrillSpanner(interval='+P4'),
-                    spannertools.ComplexTrillSpanner(interval='+P4'),
-                    spannertools.ComplexTrillSpanner(interval='+m3'),
-                    spannertools.ComplexTrillSpanner(interval='+m3'),
-                    spannertools.ComplexTrillSpanner(interval='+P4'),
-                    spannertools.ComplexTrillSpanner(interval='+m3'),
-                    ),
-                selector=selectortools.selects_pitched_runs(),
+        dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
+        trill_spanner=consort.makers.AttachmentExpression(
+            attachments=(
+                spannertools.ComplexTrillSpanner(interval='+P4'),
+                spannertools.ComplexTrillSpanner(interval='+P4'),
+                spannertools.ComplexTrillSpanner(interval='+m3'),
+                spannertools.ComplexTrillSpanner(interval='+m3'),
+                spannertools.ComplexTrillSpanner(interval='+P4'),
+                spannertools.ComplexTrillSpanner(interval='+m3'),
                 ),
+            selector=selectortools.selects_pitched_runs(),
             ),
         ),
     pitch_maker=consort.makers.PitchClassPitchMaker(
