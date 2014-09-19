@@ -4,7 +4,7 @@ import consort
 
 
 piano_prepared_treble_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         clef_spanner=consort.makers.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
@@ -142,7 +142,7 @@ piano_prepared_treble_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     labels=('pedaled',),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         allow_repetition=False,
         pitches=datastructuretools.CyclicTuple(
             [

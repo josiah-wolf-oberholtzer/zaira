@@ -8,7 +8,7 @@ import zaira
 
 
 oboe_solo_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
         trill_spanner=consort.makers.AttachmentExpression(
             attachments=(
@@ -35,7 +35,7 @@ oboe_solo_music_specifier = consort.makers.MusicSpecifier(
                 ).by_logical_tie(pitched=True)[0],
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         pitches="d''' d''' ef''' d''' ef''' f''' d''' g''' d''' d''' as''",
         pitch_application_rate='division',
         ),

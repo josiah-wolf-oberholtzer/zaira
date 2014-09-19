@@ -29,7 +29,7 @@ sustain_selector = sustain_selector.longer_than(
     )
 
 piano_prepared_bass_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         clef_spanner=consort.makers.AttachmentExpression(
             attachments=consort.makers.ClefSpanner(
@@ -61,7 +61,7 @@ piano_prepared_bass_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     labels='pedaled',
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         pitches=pitchtools.PitchSegment(
             'A0 C1 B0 D1 C#1 E1 D#1 F1 G1 A#0 F#1',
             ),

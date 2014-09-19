@@ -7,7 +7,7 @@ import zaira
 
 
 string_tutti_overpressure_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         text_spanner=consort.makers.AttachmentExpression(
             attachments=consort.makers.ComplexTextSpanner(
                 markup=Markup(r'\concat { \vstrut overpressure }')
@@ -30,7 +30,7 @@ string_tutti_overpressure_music_specifier = consort.makers.MusicSpecifier(
                 .by_logical_tie(pitched=True)[0],
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         chord_expressions=(
             consort.makers.ChordExpression(
                 interval_numbers=(0, 7),

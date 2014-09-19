@@ -6,7 +6,7 @@ import zaira
 
 
 percussion_reiteration_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=consort.makers.AttachmentExpression(
             attachments=indicatortools.Dynamic('ppp'),
             selector=selectortools.selects_pitched_runs()[0],
@@ -19,6 +19,6 @@ percussion_reiteration_music_specifier = consort.makers.MusicSpecifier(
                 )[0],
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(),
+    pitch_handler=consort.makers.AbsolutePitchHandler(),
     rhythm_maker=zaira.materials.reiterating_rhythm_maker,
     )

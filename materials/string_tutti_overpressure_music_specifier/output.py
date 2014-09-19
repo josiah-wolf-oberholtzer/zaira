@@ -4,7 +4,7 @@ import consort
 
 
 string_tutti_overpressure_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_and_accent=consort.makers.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
@@ -75,7 +75,7 @@ string_tutti_overpressure_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         allow_repetition=False,
         chord_expressions=datastructuretools.CyclicTuple(
             [

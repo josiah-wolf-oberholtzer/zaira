@@ -7,7 +7,7 @@ import zaira
 
 
 piano_flourish_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
         slur=consort.makers.AttachmentExpression(
             attachments=spannertools.Slur(),
@@ -15,7 +15,7 @@ piano_flourish_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     labels='pedaled',
-    pitch_maker=consort.makers.PitchClassPitchMaker(
+    pitch_handler=consort.makers.PitchClassPitchHandler(
         pitch_classes='d f e g cs as',
         pitch_range=pitchtools.PitchRange('[A1, C7)'),
         register_specifier=zaira.materials.register_specifier_inventory[2],

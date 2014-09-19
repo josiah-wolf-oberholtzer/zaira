@@ -4,7 +4,7 @@ import consort
 
 
 wind_ramtongue_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         accent_and_staccato=consort.makers.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
@@ -153,7 +153,7 @@ wind_ramtongue_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_maker=consort.makers.PitchClassPitchMaker(
+    pitch_handler=consort.makers.PitchClassPitchHandler(
         allow_repetition=False,
         pitch_classes=datastructuretools.CyclicTuple(
             [

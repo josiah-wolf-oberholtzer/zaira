@@ -9,7 +9,7 @@ import zaira
 
 
 cello_solo_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
         trill_spanner=consort.makers.AttachmentExpression(
             attachments=(
@@ -45,7 +45,7 @@ cello_solo_music_specifier = consort.makers.MusicSpecifier(
             selector=selectortools.selects_pitched_runs(),
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         pitches="d, f, d, fqs, ef, d, ef, f, fqs, d, g, d, d, as,",
         pitch_application_rate='division',
         ),

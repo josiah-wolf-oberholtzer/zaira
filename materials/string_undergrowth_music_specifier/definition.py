@@ -8,7 +8,7 @@ import zaira
 
 
 string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
         text_spanner=consort.makers.AttachmentExpression(
             attachments=consort.makers.ComplexTextSpanner(
@@ -41,7 +41,7 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                 .by_logical_tie(pitched=True)
             ),
         ),
-    pitch_maker=consort.makers.PitchClassPitchMaker(
+    pitch_handler=consort.makers.PitchClassPitchHandler(
         pitch_classes='a c b d',
         register_specifier=zaira.materials.register_specifier_inventory[3],
         ),

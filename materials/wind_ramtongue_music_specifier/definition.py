@@ -10,7 +10,7 @@ import zaira
 
 
 wind_ramtongue_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
         override_spanner=consort.makers.AttachmentExpression(
             attachments=spannertools.Spanner(
@@ -49,7 +49,7 @@ wind_ramtongue_music_specifier = consort.makers.MusicSpecifier(
                 [0],
             ),
         ),
-    pitch_maker=consort.makers.PitchClassPitchMaker(
+    pitch_handler=consort.makers.PitchClassPitchHandler(
         pitch_classes='a c b d b f gs e d f cs',
         register_specifier=consort.makers.RegisterSpecifier(),
         register_spread=0,

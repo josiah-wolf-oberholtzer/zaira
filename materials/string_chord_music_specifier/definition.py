@@ -4,10 +4,10 @@ import zaira
 
 
 string_chord_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         ),
-    pitch_maker=consort.makers.PitchClassPitchMaker(
+    pitch_handler=consort.makers.PitchClassPitchHandler(
         pitch_classes='c ef d',
         register_specifier=consort.makers.RegisterSpecifier(),
         ),

@@ -16,7 +16,7 @@ fast_markup = fast_markup.pad_around(0.5)
 fast_markup = fast_markup.box()
 
 piano_guero_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
         percussion_staff=zaira.materials.percussion_staff_attachment_expression,
         text_spanner=consort.makers.AttachmentExpression(
@@ -39,6 +39,6 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
             selector=selectortools.selects_pitched_runs()[0],
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(),
+    pitch_handler=consort.makers.AbsolutePitchHandler(),
     rhythm_maker=zaira.materials.sustained_rhythm_maker,
     )

@@ -6,7 +6,7 @@ import zaira
 
 
 wind_airtone_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         text_spanner=consort.makers.AttachmentExpression(
             attachments=consort.makers.ComplexTextSpanner(
@@ -21,7 +21,7 @@ wind_airtone_music_specifier = consort.makers.MusicSpecifier(
             selector=selectortools.Selector().by_leaves(),
             ),
         ),
-    pitch_maker=consort.makers.PitchClassPitchMaker(
+    pitch_handler=consort.makers.PitchClassPitchHandler(
         pitch_classes='a c b d b f gs e',
         register_specifier=consort.makers.RegisterSpecifier(),
         register_spread=0,

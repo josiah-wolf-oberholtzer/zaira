@@ -4,7 +4,7 @@ import consort
 
 
 piano_pedals_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         piano_pedal_spanner=consort.makers.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [

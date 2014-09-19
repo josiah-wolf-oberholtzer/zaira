@@ -31,7 +31,7 @@ sustain_selector = sustain_selector.longer_than(
 
 
 piano_prepared_treble_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         clef_spanner=consort.makers.AttachmentExpression(
             attachments=consort.makers.ClefSpanner(
@@ -63,7 +63,7 @@ piano_prepared_treble_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     labels='pedaled',
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         pitches=pitchtools.PitchSegment(
             'C7 B7 D7 C#7 E7 D#7 F7 G7 A#7 F#7 A7',
             ),

@@ -4,7 +4,7 @@ import consort
 
 
 drum_agitation_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         accent=consort.makers.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
@@ -118,7 +118,7 @@ drum_agitation_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         allow_repetition=False,
         pitches=datastructuretools.CyclicTuple(
             [

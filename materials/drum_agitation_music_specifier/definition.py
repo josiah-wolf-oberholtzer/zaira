@@ -7,7 +7,7 @@ import zaira
 
 
 drum_agitation_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.foreground_dynamic_attachment_expression,
         accent=consort.makers.AttachmentExpression(
             attachments=indicatortools.Articulation('accent'),
@@ -18,7 +18,7 @@ drum_agitation_music_specifier = consort.makers.MusicSpecifier(
             selector=selectortools.selects_all_but_first_logical_tie_in_pitched_runs()[0],
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         pitches=(
             zaira.makers.Percussion.HIGH_TOM,
             zaira.makers.Percussion.LOW_TOM,

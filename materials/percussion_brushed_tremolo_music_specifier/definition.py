@@ -7,7 +7,7 @@ import zaira
 
 
 percussion_brushed_tremolo_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
         text_spanner=consort.makers.AttachmentExpression(
             attachments=consort.makers.ComplexTextSpanner(
@@ -23,7 +23,7 @@ percussion_brushed_tremolo_music_specifier = consort.makers.MusicSpecifier(
             selector=selectortools.Selector().by_leaves(),
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         ),
     rhythm_maker=zaira.materials.sustained_rhythm_maker,
     )

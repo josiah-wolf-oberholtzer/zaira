@@ -8,7 +8,7 @@ import zaira
 
 
 string_flourish_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         slur=consort.makers.AttachmentExpression(
             attachments=spannertools.Slur(),
@@ -24,7 +24,7 @@ string_flourish_music_specifier = consort.makers.MusicSpecifier(
             selector=selectortools.selects_pitched_runs(),
             ),
         ),
-    pitch_maker=consort.makers.PitchClassPitchMaker(
+    pitch_handler=consort.makers.PitchClassPitchHandler(
         pitch_classes='d f e g cs as',
         register_specifier=zaira.materials.register_specifier_inventory[2],
         register_spread=0,

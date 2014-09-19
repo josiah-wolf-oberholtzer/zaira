@@ -4,7 +4,7 @@ import consort
 
 
 brazil_nut_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=consort.makers.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [

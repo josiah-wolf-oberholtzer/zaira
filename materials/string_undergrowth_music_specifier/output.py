@@ -4,7 +4,7 @@ import consort
 
 
 string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         accent_and_tenuto=consort.makers.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
@@ -126,7 +126,7 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_maker=consort.makers.PitchClassPitchMaker(
+    pitch_handler=consort.makers.PitchClassPitchHandler(
         allow_repetition=False,
         pitch_classes=datastructuretools.CyclicTuple(
             [

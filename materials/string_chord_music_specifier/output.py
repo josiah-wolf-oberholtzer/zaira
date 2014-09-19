@@ -4,7 +4,7 @@ import consort
 
 
 string_chord_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=consort.makers.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
@@ -37,7 +37,7 @@ string_chord_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_maker=consort.makers.PitchClassPitchMaker(
+    pitch_handler=consort.makers.PitchClassPitchHandler(
         allow_repetition=False,
         pitch_classes=datastructuretools.CyclicTuple(
             [

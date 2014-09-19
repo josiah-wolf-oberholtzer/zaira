@@ -4,7 +4,7 @@ import consort
 
 
 percussion_fanfare_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         accent=consort.makers.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
@@ -57,7 +57,7 @@ percussion_fanfare_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         allow_repetition=False,
         ),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(

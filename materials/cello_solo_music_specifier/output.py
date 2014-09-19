@@ -4,7 +4,7 @@ import consort
 
 
 cello_solo_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=consort.makers.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
@@ -151,7 +151,7 @@ cello_solo_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         allow_repetition=False,
         pitch_application_rate='division',
         pitches=datastructuretools.CyclicTuple(

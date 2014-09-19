@@ -6,7 +6,7 @@ import zaira
 
 
 wind_trills_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         trill_spanner=consort.makers.AttachmentExpression(
             attachments=(
@@ -20,7 +20,7 @@ wind_trills_music_specifier = consort.makers.MusicSpecifier(
             selector=selectortools.selects_pitched_runs(),
             ),
         ),
-    pitch_maker=consort.makers.PitchClassPitchMaker(
+    pitch_handler=consort.makers.PitchClassPitchHandler(
         pitch_classes='c ef d',
         register_specifier=consort.makers.RegisterSpecifier(
             center_pitch="g'",

@@ -8,7 +8,7 @@ import zaira
 
 
 wind_keyclick_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         percussion_staff=zaira.materials.percussion_staff_attachment_expression,
         text_spanner=consort.makers.AttachmentExpression(
@@ -34,7 +34,7 @@ wind_keyclick_music_specifier = consort.makers.MusicSpecifier(
                 ).by_length(1)
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         pitches="c' g' f g' g' c' f c' f g' c' c' f g'",
         ),
     pitches_are_nonsemantic=True,

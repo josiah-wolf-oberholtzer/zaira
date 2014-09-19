@@ -4,7 +4,7 @@ import consort
 
 
 percussion_brushed_tremolo_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=consort.makers.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
@@ -97,7 +97,7 @@ percussion_brushed_tremolo_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         allow_repetition=False,
         ),
     rhythm_maker=rhythmmakertools.NoteRhythmMaker(

@@ -7,7 +7,7 @@ import zaira
 
 
 piano_fanfare_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=consort.makers.AttachmentExpression(
             attachments=indicatortools.Dynamic('fff'),
             selector=selectortools.selects_pitched_runs()[0],
@@ -21,7 +21,7 @@ piano_fanfare_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     labels='pedaled',
-    pitch_maker=consort.makers.PitchClassPitchMaker(
+    pitch_handler=consort.makers.PitchClassPitchHandler(
         chord_expressions=(
             consort.makers.KeyClusterExpression(
                 include_black_keys=False,

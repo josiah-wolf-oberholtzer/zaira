@@ -4,7 +4,7 @@ import consort
 
 
 piano_fanfare_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         accent=consort.makers.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
@@ -58,7 +58,7 @@ piano_fanfare_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     labels=('pedaled',),
-    pitch_maker=consort.makers.PitchClassPitchMaker(
+    pitch_handler=consort.makers.PitchClassPitchHandler(
         allow_repetition=False,
         chord_expressions=datastructuretools.CyclicTuple(
             [

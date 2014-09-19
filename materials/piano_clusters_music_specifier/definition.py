@@ -5,11 +5,11 @@ import zaira
 
 
 piano_clusters_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         ),
     labels='pedaled',
-    pitch_maker=consort.makers.PitchClassPitchMaker(
+    pitch_handler=consort.makers.PitchClassPitchHandler(
         chord_expressions=(
             consort.makers.KeyClusterExpression(
                 staff_space_width=7,

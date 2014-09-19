@@ -36,23 +36,23 @@ segment_maker.add_setting(
     timespan_maker=consort.makers.FloodedTimespanMaker(),
     piano_rh=new(
         zaira.materials.piano_fanfare_music_specifier,
-        pitch_maker__register_specifier__center_pitch="g'",
+        pitch_handler__register_specifier__center_pitch="g'",
         ),
     piano_lh=new(
         zaira.materials.piano_fanfare_music_specifier,
-        pitch_maker__chord_expressions=
+        pitch_handler__chord_expressions=
             zaira.materials.piano_fanfare_music_specifier
-                .pitch_maker.chord_expressions[:-1],
-        pitch_maker__pitch_classes="g c a f d f e b e",
-        pitch_maker__register_specifier__center_pitch="g,,",
+                .pitch_handler.chord_expressions[:-1],
+        pitch_handler__pitch_classes="g c a f d f e b e",
+        pitch_handler__register_specifier__center_pitch="g,,",
         ),
     drums=new(
         zaira.materials.percussion_fanfare_music_specifier,
-        pitch_maker__pitches=zaira.makers.Percussion.KICK_DRUM,
+        pitch_handler__pitches=zaira.makers.Percussion.KICK_DRUM,
         ),
     metals=new(
         zaira.materials.percussion_fanfare_music_specifier,
-        pitch_maker__pitches=zaira.makers.Percussion.BRAKE_DRUM,
+        pitch_handler__pitches=zaira.makers.Percussion.BRAKE_DRUM,
         ),
     )
 

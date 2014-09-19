@@ -6,7 +6,7 @@ import zaira
 
 
 percussion_superball_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         text_spanner=consort.makers.AttachmentExpression(
             attachments=consort.makers.ComplexTextSpanner(
@@ -18,7 +18,7 @@ percussion_superball_music_specifier = consort.makers.MusicSpecifier(
             selector=selectortools.Selector().by_leaves(),
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         ),
     rhythm_maker=zaira.materials.sustained_rhythm_maker,
     )

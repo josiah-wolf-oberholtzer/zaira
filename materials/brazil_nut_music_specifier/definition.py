@@ -8,7 +8,7 @@ import zaira
 
 
 brazil_nut_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         percussion_staff=zaira.materials.percussion_staff_attachment_expression,
         text_spanner=consort.makers.AttachmentExpression(

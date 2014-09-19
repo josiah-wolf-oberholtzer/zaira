@@ -6,7 +6,7 @@ import zaira
 
 
 piano_drone_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         stem_tremolo_spanner=consort.makers.AttachmentExpression(
             attachments=spannertools.StemTremoloSpanner(),
@@ -14,7 +14,7 @@ piano_drone_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     labels='pedaled',
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         chord_expressions=(
             consort.makers.ChordExpression(
                 interval_numbers=(-7, -3, 0, 5, 6, 12),

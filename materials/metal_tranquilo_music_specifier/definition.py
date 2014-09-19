@@ -5,11 +5,11 @@ import zaira
 
 
 metal_tranquilo_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         laissez_vibrer=zaira.materials.laissez_vibrer_attachment_expression,
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         pitches=(
             zaira.makers.Percussion.HIGH_CYMBAL,
             zaira.makers.Percussion.LOW_CYMBAL,

@@ -4,7 +4,7 @@ import consort
 
 
 wind_keyclick_music_specifier = consort.makers.MusicSpecifier(
-    attachment_maker=consort.makers.AttachmentMaker(
+    attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=consort.makers.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
@@ -148,7 +148,7 @@ wind_keyclick_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_maker=consort.makers.AbsolutePitchMaker(
+    pitch_handler=consort.makers.AbsolutePitchHandler(
         allow_repetition=False,
         pitches=datastructuretools.CyclicTuple(
             [
