@@ -128,7 +128,7 @@ oboe_solo_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.makers.AbsolutePitchHandler(
-        allow_repetition=False,
+        forbid_repetitions=None,
         pitch_application_rate='division',
         pitches=datastructuretools.CyclicTuple(
             [

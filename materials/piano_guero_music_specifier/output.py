@@ -240,7 +240,7 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.makers.AbsolutePitchHandler(
-        allow_repetition=False,
+        forbid_repetitions=None,
         ),
     rhythm_maker=rhythmmakertools.NoteRhythmMaker(
         beam_specifier=rhythmmakertools.BeamSpecifier(

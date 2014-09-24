@@ -143,7 +143,7 @@ piano_prepared_bass_music_specifier = consort.makers.MusicSpecifier(
         ),
     labels=('pedaled',),
     pitch_handler=consort.makers.AbsolutePitchHandler(
-        allow_repetition=False,
+        forbid_repetitions=None,
         pitches=datastructuretools.CyclicTuple(
             [
                 pitchtools.NamedPitch('a,,,'),

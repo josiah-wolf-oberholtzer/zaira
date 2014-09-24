@@ -90,7 +90,7 @@ wood_bamboo_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.makers.AbsolutePitchHandler(
-        allow_repetition=False,
+        forbid_repetitions=None,
         pitches=datastructuretools.CyclicTuple(
             [
                 pitchtools.NamedPitch('a'),

@@ -67,7 +67,7 @@ piano_flourish_music_specifier = consort.makers.MusicSpecifier(
         ),
     labels=('pedaled',),
     pitch_handler=consort.makers.PitchClassPitchHandler(
-        allow_repetition=False,
+        forbid_repetitions=None,
         pitch_classes=datastructuretools.CyclicTuple(
             [
                 pitchtools.NamedPitch('d'),

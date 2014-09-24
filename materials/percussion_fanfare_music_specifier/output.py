@@ -58,7 +58,7 @@ percussion_fanfare_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.makers.AbsolutePitchHandler(
-        allow_repetition=False,
+        forbid_repetitions=None,
         ),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
         denominators=(16,),

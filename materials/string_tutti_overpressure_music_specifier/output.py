@@ -76,7 +76,7 @@ string_tutti_overpressure_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.makers.AbsolutePitchHandler(
-        allow_repetition=False,
+        forbid_repetitions=None,
         chord_expressions=datastructuretools.CyclicTuple(
             [
                 consort.makers.ChordExpression(
