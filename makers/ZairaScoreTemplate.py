@@ -245,15 +245,8 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
 
         piano = manager.make_single_piano_performer(
             instrument=instrumenttools.Piano(),
+            score_template=self,
             )
-        upper_voice = piano[0][0]
-        lower_voice = piano[2][0]
-        attach(indicatortools.Clef('treble'), upper_voice)
-        attach(indicatortools.Clef('bass'), lower_voice)
-        self._voice_name_abbreviations['piano_rh'] = upper_voice.name
-        self._voice_name_abbreviations['piano_dynamics'] = piano[1].name
-        self._voice_name_abbreviations['piano_lh'] = lower_voice.name
-        self._voice_name_abbreviations['piano_pedals'] = piano[3].name
 
         ### STRINGS ###
 
