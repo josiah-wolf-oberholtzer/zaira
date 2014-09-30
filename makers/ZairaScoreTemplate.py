@@ -4,7 +4,6 @@ from abjad.tools import abctools
 from abjad.tools import indicatortools
 from abjad.tools import instrumenttools
 from abjad.tools import scoretools
-from abjad.tools.topleveltools import attach
 from consort import makers
 
 
@@ -58,7 +57,6 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
             >>
             \tag percussion
             \context EnsembleGroup = "Percussion Section Staff Group" <<
-                \tag percussion
                 \context PerformerGroup = "Metals Performer Group" \with {
                     instrumentName = \markup { Metals }
                     shortInstrumentName = \markup { Metals }
@@ -69,7 +67,6 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                         }
                     }
                 >>
-                \tag percussion
                 \context PerformerGroup = "Woods Performer Group" \with {
                     instrumentName = \markup { Woods }
                     shortInstrumentName = \markup { Woods }
@@ -80,7 +77,6 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                         }
                     }
                 >>
-                \tag percussion
                 \context PerformerGroup = "Drums Performer Group" \with {
                     instrumentName = \markup { Drums }
                     shortInstrumentName = \markup { Drums }
@@ -189,57 +185,52 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
             )
 
         winds = manager.make_ensemble_group(
-            'Wind Section Staff Group',
-            (
+            name='Wind Section Staff Group',
+            performer_groups=[
                 flute,
                 oboe,
                 clarinet,
-                ),
+                ],
             )
 
         ### PERCUSSION ###
 
         metals = manager.make_single_basic_performer(
+            clef=indicatortools.Clef('percussion'),
             instrument=instrumenttools.UntunedPercussion(
                 instrument_name='Metals',
                 short_instrument_name='Metals',
                 ),
-            label='percussion',
+            score_template=self,
             )
-        self._voice_name_abbreviations['metals'] = metals[0][0].name
-        attach(indicatortools.Clef('percussion'), metals[0][0])
 
         woods = manager.make_single_basic_performer(
+            clef=indicatortools.Clef('percussion'),
             instrument=instrumenttools.UntunedPercussion(
                 instrument_name='Woods',
                 short_instrument_name='Woods',
                 ),
-            label='percussion',
+            score_template=self,
             )
-        self._voice_name_abbreviations['woods'] = woods[0][0].name
-        attach(indicatortools.Clef('percussion'), woods[0][0])
 
         drums = manager.make_single_basic_performer(
+            clef=indicatortools.Clef('percussion'),
             instrument=instrumenttools.UntunedPercussion(
                 instrument_name='Drums',
                 short_instrument_name='Drums',
                 ),
-            label='percussion',
+            score_template=self,
             )
-        self._voice_name_abbreviations['drums'] = drums[0][0].name
-        attach(indicatortools.Clef('percussion'), drums[0][0])
 
-        percussion = scoretools.StaffGroup(
-            [
+        percussion = manager.make_ensemble_group(
+            label='percussion',
+            name='Percussion Section Staff Group',
+            performer_groups=[
                 metals,
                 woods,
                 drums,
                 ],
-            name='Percussion Section Staff Group',
-            context_name='EnsembleGroup',
             )
-
-        manager.attach_tag('percussion', percussion)
 
         ### PIANO ###
 
@@ -272,12 +263,12 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
             )
 
         strings = manager.make_ensemble_group(
-            'String Section Staff Group',
-            (
+            name='String Section Staff Group',
+            performer_groups=[
                 violin,
                 viola,
                 cello,
-                ),
+                ],
             )
 
         ### SCORE ###
@@ -285,13 +276,13 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
         time_signature_context = manager.make_time_signature_context()
 
         score = scoretools.Score(
-            (
+            [
                 time_signature_context,
                 winds,
                 percussion,
                 piano,
                 strings,
-                ),
+                ],
             name='Zaira Score',
             )
 
