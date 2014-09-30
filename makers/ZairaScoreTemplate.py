@@ -171,25 +171,22 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
         ### WINDS ###
 
         flute = manager.make_single_wind_performer(
+            clef=indicatortools.Clef('treble'),
             instrument=instrumenttools.Flute(),
+            score_template=self,
             )
-        flute_voice = flute[0][0]
-        attach(indicatortools.Clef('treble'), flute_voice)
-        self._voice_name_abbreviations['flute'] = flute_voice.name
 
         oboe = manager.make_single_wind_performer(
+            clef=indicatortools.Clef('treble'),
             instrument=instrumenttools.Oboe(),
+            score_template=self,
             )
-        oboe_voice = oboe[0][0]
-        attach(indicatortools.Clef('treble'), oboe_voice)
-        self._voice_name_abbreviations['oboe'] = oboe_voice.name
 
         clarinet = manager.make_single_wind_performer(
+            clef=indicatortools.Clef('treble'),
             instrument=instrumenttools.ClarinetInBFlat(),
+            score_template=self,
             )
-        clarinet_voice = clarinet[0][0]
-        attach(indicatortools.Clef('treble'), clarinet_voice)
-        self._voice_name_abbreviations['clarinet'] = clarinet_voice.name
 
         winds = scoretools.StaffGroup(
             [
