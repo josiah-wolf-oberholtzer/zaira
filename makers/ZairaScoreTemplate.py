@@ -18,11 +18,11 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
         >>> score = template()
         >>> print(format(score))
         \context Score = "Zaira Score" <<
-            \tag score.cello.clarinet-in-b-flat.flute.oboe.percussion.piano.viola.violin
+            \tag time
             \context TimeSignatureContext = "TimeSignatureContext" {
             }
             \context EnsembleGroup = "Wind Section Staff Group" <<
-                \tag score.flute
+                \tag flute
                 \context PerformerGroup = "Flute Performer Group" \with {
                     instrumentName = \markup { Flute }
                     shortInstrumentName = \markup { Fl. }
@@ -33,7 +33,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                         }
                     }
                 >>
-                \tag score.oboe
+                \tag oboe
                 \context PerformerGroup = "Oboe Performer Group" \with {
                     instrumentName = \markup { Oboe }
                     shortInstrumentName = \markup { Ob. }
@@ -44,10 +44,10 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                         }
                     }
                 >>
-                \tag score.clarinet-in-b-flat
+                \tag clarinet-in-b-flat
                 \context PerformerGroup = "Clarinet In B-Flat Performer Group" \with {
                     instrumentName = \markup { Clarinet in B-flat }
-                    shortInstrumentName = \markup { Cl. B-flat }
+                    shortInstrumentName = \markup { Cl. in B-flat }
                 } <<
                     \context ClarinetInBFlatStaff = "Clarinet In B-Flat Staff" {
                         \context Voice = "Clarinet In B-Flat Voice" {
@@ -56,9 +56,9 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                     }
                 >>
             >>
-            \tag score.percussion
+            \tag percussion
             \context EnsembleGroup = "Percussion Section Staff Group" <<
-                \tag score.percussion
+                \tag percussion
                 \context PerformerGroup = "Metals Performer Group" \with {
                     instrumentName = \markup { Metals }
                     shortInstrumentName = \markup { Metals }
@@ -69,7 +69,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                         }
                     }
                 >>
-                \tag score.percussion
+                \tag percussion
                 \context PerformerGroup = "Woods Performer Group" \with {
                     instrumentName = \markup { Woods }
                     shortInstrumentName = \markup { Woods }
@@ -80,7 +80,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                         }
                     }
                 >>
-                \tag score.percussion
+                \tag percussion
                 \context PerformerGroup = "Drums Performer Group" \with {
                     instrumentName = \markup { Drums }
                     shortInstrumentName = \markup { Drums }
@@ -92,7 +92,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                     }
                 >>
             >>
-            \tag score.piano
+            \tag piano
             \context PianoStaff = "Piano Performer Group" \with {
                 instrumentName = \markup { Piano }
                 shortInstrumentName = \markup { Pf. }
@@ -113,7 +113,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                 }
             >>
             \context EnsembleGroup = "String Section Staff Group" <<
-                \tag score.violin
+                \tag violin
                 \context StringPerformerGroup = "Violin Performer Group" \with {
                     instrumentName = \markup { Violin }
                     shortInstrumentName = \markup { Vn. }
@@ -124,7 +124,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                         }
                     }
                 >>
-                \tag score.viola
+                \tag viola
                 \context StringPerformerGroup = "Viola Performer Group" \with {
                     instrumentName = \markup { Viola }
                     shortInstrumentName = \markup { Va. }
@@ -135,7 +135,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                         }
                     }
                 >>
-                \tag score.cello
+                \tag cello
                 \context StringPerformerGroup = "Cello Performer Group" \with {
                     instrumentName = \markup { Cello }
                     shortInstrumentName = \markup { Vc. }
@@ -167,32 +167,28 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
     def __call__(self):
 
         manager = makers.ScoreTemplateManager
-        labels = []
 
         ### WINDS ###
 
-        flute, label = manager.make_single_wind_performer(
+        flute = manager.make_single_wind_performer(
             instrument=instrumenttools.Flute(),
             )
         flute_voice = flute[0][0]
         attach(indicatortools.Clef('treble'), flute_voice)
-        labels.append(label)
         self._voice_name_abbreviations['flute'] = flute_voice.name
 
-        oboe, label = manager.make_single_wind_performer(
+        oboe = manager.make_single_wind_performer(
             instrument=instrumenttools.Oboe(),
             )
         oboe_voice = oboe[0][0]
         attach(indicatortools.Clef('treble'), oboe_voice)
-        labels.append(label)
         self._voice_name_abbreviations['oboe'] = oboe_voice.name
 
-        clarinet, label = manager.make_single_wind_performer(
+        clarinet = manager.make_single_wind_performer(
             instrument=instrumenttools.ClarinetInBFlat(),
             )
         clarinet_voice = clarinet[0][0]
         attach(indicatortools.Clef('treble'), clarinet_voice)
-        labels.append(label)
         self._voice_name_abbreviations['clarinet'] = clarinet_voice.name
 
         winds = scoretools.StaffGroup(
@@ -207,7 +203,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
 
         ### PERCUSSION ###
 
-        metals, label = manager.make_single_basic_performer(
+        metals = manager.make_single_basic_performer(
             instrument=instrumenttools.UntunedPercussion(
                 instrument_name='Metals',
                 short_instrument_name='Metals',
@@ -217,7 +213,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
         self._voice_name_abbreviations['metals'] = metals[0][0].name
         attach(indicatortools.Clef('percussion'), metals[0][0])
 
-        woods, label = manager.make_single_basic_performer(
+        woods = manager.make_single_basic_performer(
             instrument=instrumenttools.UntunedPercussion(
                 instrument_name='Woods',
                 short_instrument_name='Woods',
@@ -227,7 +223,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
         self._voice_name_abbreviations['woods'] = woods[0][0].name
         attach(indicatortools.Clef('percussion'), woods[0][0])
 
-        drums, label = manager.make_single_basic_performer(
+        drums = manager.make_single_basic_performer(
             instrument=instrumenttools.UntunedPercussion(
                 instrument_name='Drums',
                 short_instrument_name='Drums',
@@ -247,20 +243,17 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
             context_name='EnsembleGroup',
             )
 
-        manager.attach_tag('score.percussion', percussion)
-
-        labels.append('percussion')
+        manager.attach_tag('percussion', percussion)
 
         ### PIANO ###
 
-        piano, label = manager.make_single_piano_performer(
+        piano = manager.make_single_piano_performer(
             instrument=instrumenttools.Piano(),
             )
         upper_voice = piano[0][0]
         lower_voice = piano[2][0]
         attach(indicatortools.Clef('treble'), upper_voice)
         attach(indicatortools.Clef('bass'), lower_voice)
-        labels.append(label)
         self._voice_name_abbreviations['piano_rh'] = upper_voice.name
         self._voice_name_abbreviations['piano_dynamics'] = piano[1].name
         self._voice_name_abbreviations['piano_lh'] = lower_voice.name
@@ -268,31 +261,28 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
 
         ### STRINGS ###
 
-        violin, label = manager.make_single_string_performer(
+        violin = manager.make_single_string_performer(
             instrument=instrumenttools.Violin(),
             split=False,
             )
         violin_voice = violin[0][0]
         attach(indicatortools.Clef('treble'), violin_voice)
-        labels.append(label)
         self._voice_name_abbreviations['violin'] = violin_voice.name
 
-        viola, label = manager.make_single_string_performer(
+        viola = manager.make_single_string_performer(
             instrument=instrumenttools.Viola(),
             split=False,
             )
         viola_voice = viola[0][0]
         attach(indicatortools.Clef('alto'), viola_voice)
-        labels.append(label)
         self._voice_name_abbreviations['viola'] = viola_voice.name
 
-        cello, label = manager.make_single_string_performer(
+        cello = manager.make_single_string_performer(
             instrument=instrumenttools.Cello(),
             split=False,
             )
         cello_voice = cello[0][0]
         attach(indicatortools.Clef('bass'), cello_voice)
-        labels.append(label)
         self._voice_name_abbreviations['cello'] = cello_voice.name
 
         strings = scoretools.StaffGroup(
@@ -307,7 +297,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
 
         ### SCORE ###
 
-        time_signature_context = manager.make_time_signature_context(labels)
+        time_signature_context = manager.make_time_signature_context()
 
         score = scoretools.Score(
             [
