@@ -188,14 +188,13 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
             score_template=self,
             )
 
-        winds = scoretools.StaffGroup(
-            [
+        winds = manager.make_ensemble_group(
+            'Wind Section Staff Group',
+            (
                 flute,
                 oboe,
                 clarinet,
-                ],
-            name='Wind Section Staff Group',
-            context_name='EnsembleGroup',
+                ),
             )
 
         ### PERCUSSION ###
@@ -259,37 +258,33 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
         ### STRINGS ###
 
         violin = manager.make_single_string_performer(
+            clef=indicatortools.Clef('treble'),
             instrument=instrumenttools.Violin(),
             split=False,
+            score_template=self,
             )
-        violin_voice = violin[0][0]
-        attach(indicatortools.Clef('treble'), violin_voice)
-        self._voice_name_abbreviations['violin'] = violin_voice.name
 
         viola = manager.make_single_string_performer(
+            clef=indicatortools.Clef('alto'),
             instrument=instrumenttools.Viola(),
             split=False,
+            score_template=self,
             )
-        viola_voice = viola[0][0]
-        attach(indicatortools.Clef('alto'), viola_voice)
-        self._voice_name_abbreviations['viola'] = viola_voice.name
 
         cello = manager.make_single_string_performer(
+            clef=indicatortools.Clef('bass'),
             instrument=instrumenttools.Cello(),
             split=False,
+            score_template=self,
             )
-        cello_voice = cello[0][0]
-        attach(indicatortools.Clef('bass'), cello_voice)
-        self._voice_name_abbreviations['cello'] = cello_voice.name
 
-        strings = scoretools.StaffGroup(
-            [
+        strings = manager.make_ensemble_group(
+            'String Section Staff Group',
+            (
                 violin,
                 viola,
                 cello,
-                ],
-            name='String Section Staff Group',
-            context_name='EnsembleGroup',
+                ),
             )
 
         ### SCORE ###
@@ -297,13 +292,13 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
         time_signature_context = manager.make_time_signature_context()
 
         score = scoretools.Score(
-            [
+            (
                 time_signature_context,
                 winds,
                 percussion,
                 piano,
                 strings,
-                ],
+                ),
             name='Zaira Score',
             )
 
