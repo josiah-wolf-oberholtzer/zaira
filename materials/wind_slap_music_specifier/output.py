@@ -3,7 +3,7 @@ from abjad import *
 import consort
 
 
-wind_ramtongue_music_specifier = consort.makers.MusicSpecifier(
+wind_slap_music_specifier = consort.makers.MusicSpecifier(
     attachment_handler=consort.makers.AttachmentHandler(
         accent_and_staccato=consort.makers.AttachmentExpression(
             attachments=datastructuretools.TypedList(

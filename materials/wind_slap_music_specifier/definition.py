@@ -9,7 +9,7 @@ import consort
 import zaira
 
 
-wind_ramtongue_music_specifier = consort.makers.MusicSpecifier(
+wind_slap_music_specifier = consort.makers.MusicSpecifier(
     attachment_handler=consort.makers.AttachmentHandler(
         dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
         override_spanner=consort.makers.AttachmentExpression(
@@ -29,7 +29,7 @@ wind_ramtongue_music_specifier = consort.makers.MusicSpecifier(
             ),
         text_spanner=consort.makers.AttachmentExpression(
             attachments=consort.makers.ComplexTextSpanner(
-                markup=Markup(r'\concat { \vstrut ram/slap }')
+                markup=Markup(r'\concat { \vstrut slap }')
                     .italic()
                     .pad_around(0.5)
                     .box(),
