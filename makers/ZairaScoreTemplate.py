@@ -179,6 +179,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
             )
 
         clarinet = manager.make_single_wind_performer(
+            abbreviation='clarinet',
             clef=indicatortools.Clef('treble'),
             instrument=instrumenttools.ClarinetInBFlat(),
             score_template=self,
