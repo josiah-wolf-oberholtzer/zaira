@@ -196,29 +196,11 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
 
         ### PERCUSSION ###
 
-        metals = manager.make_single_basic_performer(
+        percussion = manager.make_single_basic_performer(
             clef=indicatortools.Clef('percussion'),
             instrument=instrumenttools.UntunedPercussion(
-                instrument_name='Metals',
-                short_instrument_name='Metals',
-                ),
-            score_template=self,
-            )
-
-        woods = manager.make_single_basic_performer(
-            clef=indicatortools.Clef('percussion'),
-            instrument=instrumenttools.UntunedPercussion(
-                instrument_name='Woods',
-                short_instrument_name='Woods',
-                ),
-            score_template=self,
-            )
-
-        drums = manager.make_single_basic_performer(
-            clef=indicatortools.Clef('percussion'),
-            instrument=instrumenttools.UntunedPercussion(
-                instrument_name='Drums',
-                short_instrument_name='Drums',
+                instrument_name='Percussion',
+                short_instrument_name='Percussion',
                 ),
             score_template=self,
             )
@@ -227,9 +209,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
             label='percussion',
             name='Percussion Section Staff Group',
             performer_groups=[
-                metals,
-                woods,
-                drums,
+                percussion,
                 ],
             )
 
