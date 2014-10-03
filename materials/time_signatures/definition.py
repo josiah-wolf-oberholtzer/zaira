@@ -9,6 +9,7 @@ time_signatures = indicatortools.TimeSignatureInventory(
         (3, 8),
         (4, 4),
         (5, 16),
+        (7, 16),
         (5, 8),
         (6, 8),
     ]
