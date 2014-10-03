@@ -57,32 +57,12 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
             >>
             \tag percussion
             \context EnsembleGroup = "Percussion Section Staff Group" <<
-                \context PerformerGroup = "Metals Performer Group" \with {
-                    instrumentName = \markup { Metals }
-                    shortInstrumentName = \markup { Metals }
+                \context PerformerGroup = "Percussion Performer Group" \with {
+                    instrumentName = \markup { Percussion }
+                    shortInstrumentName = \markup { Percussion }
                 } <<
-                    \context MetalsStaff = "Metals Staff" {
-                        \context Voice = "Metals Voice" {
-                            \clef "percussion"
-                        }
-                    }
-                >>
-                \context PerformerGroup = "Woods Performer Group" \with {
-                    instrumentName = \markup { Woods }
-                    shortInstrumentName = \markup { Woods }
-                } <<
-                    \context WoodsStaff = "Woods Staff" {
-                        \context Voice = "Woods Voice" {
-                            \clef "percussion"
-                        }
-                    }
-                >>
-                \context PerformerGroup = "Drums Performer Group" \with {
-                    instrumentName = \markup { Drums }
-                    shortInstrumentName = \markup { Drums }
-                } <<
-                    \context DrumsStaff = "Drums Staff" {
-                        \context Voice = "Drums Voice" {
+                    \context PercussionStaff = "Percussion Staff" {
+                        \context Voice = "Percussion Voice" {
                             \clef "percussion"
                         }
                     }
