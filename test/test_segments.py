@@ -1,6 +1,8 @@
 # -*- encoding: utf-8 -*-
 import os
+import pytest
 import zaira
+
 
 path = zaira.__path__[0]
 path = os.path.join(path, 'segments')
