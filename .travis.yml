@@ -16,8 +16,8 @@ before_install:
 #    - sudo sh lilypond-2.19.15-1.linux-64.sh --batch
 
 install:
-    - pip install --allow-all-external --allow-unverified supriya -r requirements.txt
-    - pip install --allow-all-external --allow-unverified supriya -e .
+    - pip install --allow-all-external --allow-unverified consort --allow-unverified supriya -r requirements.txt
+    - pip install -e .
 
 script:
     - ajv doctest ./zaira
