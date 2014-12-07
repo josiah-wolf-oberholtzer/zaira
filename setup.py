@@ -2,21 +2,15 @@
 
 from distutils.core import setup
 
-dependency_links=(
-    'https://github.com/josiah-wolf-oberholtzer/consort/archive/master.zip#egg=consort',
-    )
-
 install_requires = (
     'abjad',
     'consort',
     )
 
-
 def main():
     setup(
         author='Josiah Wolf Oberholtzer',
         author_email='josiah.oberholtzer@gmail.com',
-        dependency_links=dependency_links,
         install_requires=install_requires,
         name='zaira',
         packages=('zaira',),
