@@ -3,9 +3,9 @@ from abjad import *
 import consort
 
 
-drum_agitation_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        accent=consort.makers.AttachmentExpression(
+drum_agitation_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        accent=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     indicatortools.Articulation('accent'),
@@ -40,22 +40,22 @@ drum_agitation_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        dynamic_expression=consort.makers.AttachmentExpression(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='fff',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='f',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='ff',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='mf',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
@@ -79,7 +79,7 @@ drum_agitation_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        staccato=consort.makers.AttachmentExpression(
+        staccato=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     indicatortools.Articulation('staccato'),
@@ -118,7 +118,7 @@ drum_agitation_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         forbid_repetitions=None,
         pitches=datastructuretools.CyclicTuple(
             [

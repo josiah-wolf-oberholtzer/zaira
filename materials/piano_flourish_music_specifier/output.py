@@ -3,27 +3,27 @@ from abjad import *
 import consort
 
 
-piano_flourish_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        dynamic_expression=consort.makers.AttachmentExpression(
+piano_flourish_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='p',
                         hairpin_stop_token='f',
                         minimum_duration=durationtools.Duration(1, 8),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='f',
                         hairpin_stop_token='p',
                         minimum_duration=durationtools.Duration(1, 8),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='mf',
                         hairpin_stop_token='o',
                         minimum_duration=durationtools.Duration(1, 8),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='o',
                         hairpin_stop_token='ff',
                         minimum_duration=durationtools.Duration(1, 8),
@@ -44,7 +44,7 @@ piano_flourish_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        slur=consort.makers.AttachmentExpression(
+        slur=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     spannertools.Slur(),
@@ -66,7 +66,7 @@ piano_flourish_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     labels=('pedaled',),
-    pitch_handler=consort.makers.PitchClassPitchHandler(
+    pitch_handler=consort.PitchClassPitchHandler(
         forbid_repetitions=None,
         pitch_classes=datastructuretools.CyclicTuple(
             [
@@ -81,10 +81,10 @@ piano_flourish_music_specifier = consort.makers.MusicSpecifier(
         pitch_range=pitchtools.PitchRange(
             range_string='[A1, C7)',
             ),
-        register_specifier=consort.makers.RegisterSpecifier(
-            division_inflections=consort.makers.RegisterInflectionInventory(
+        register_specifier=consort.RegisterSpecifier(
+            division_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(3),
@@ -94,7 +94,7 @@ piano_flourish_music_specifier = consort.makers.MusicSpecifier(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(3),
@@ -104,7 +104,7 @@ piano_flourish_music_specifier = consort.makers.MusicSpecifier(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-3),
@@ -116,9 +116,9 @@ piano_flourish_music_specifier = consort.makers.MusicSpecifier(
                         ),
                     ]
                 ),
-            phrase_inflections=consort.makers.RegisterInflectionInventory(
+            phrase_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(6),
@@ -128,7 +128,7 @@ piano_flourish_music_specifier = consort.makers.MusicSpecifier(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-3),
@@ -141,9 +141,9 @@ piano_flourish_music_specifier = consort.makers.MusicSpecifier(
                         ),
                     ]
                 ),
-            segment_inflections=consort.makers.RegisterInflectionInventory(
+            segment_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-6),

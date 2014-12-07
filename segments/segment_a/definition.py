@@ -33,7 +33,7 @@ segment_maker.set_duration_in_seconds(
 
 
 segment_maker.add_setting(
-    timespan_maker=consort.makers.FloodedTimespanMaker(),
+    timespan_maker=consort.FloodedTimespanMaker(),
     piano_rh=new(
         zaira.materials.piano_fanfare_music_specifier,
         pitch_handler__register_specifier__center_pitch="g'",

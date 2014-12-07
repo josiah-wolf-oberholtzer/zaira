@@ -3,7 +3,7 @@ from abjad import *
 import consort
 
 
-proportions = consort.makers.Proportions(
+proportions = consort.Proportions(
     [
         [2],
         [1, 6, 3],

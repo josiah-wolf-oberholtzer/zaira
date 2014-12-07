@@ -28,17 +28,17 @@ sustain_selector = sustain_selector.longer_than(
     duration=Duration(1, 16),
     )
 
-piano_prepared_bass_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
+piano_prepared_bass_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
-        clef_spanner=consort.makers.AttachmentExpression(
-            attachments=consort.makers.ClefSpanner(
+        clef_spanner=consort.AttachmentExpression(
+            attachments=consort.ClefSpanner(
                 clef='bass_15',
                 ),
             selector=selectortools.Selector(),
             ),
-        text_spanner=consort.makers.AttachmentExpression(
-            attachments=consort.makers.ComplexTextSpanner(
+        text_spanner=consort.AttachmentExpression(
+            attachments=consort.ComplexTextSpanner(
                 markup=Markup(r'\concat { \vstrut prepared }')
                     .italic()
                     .pad_around(0.5)
@@ -49,11 +49,11 @@ piano_prepared_bass_music_specifier = consort.makers.MusicSpecifier(
                 ),
             selector=selectortools.Selector(),
             ),
-        staccato=consort.makers.AttachmentExpression(
+        staccato=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('.'),
             selector=staccato_selector,
             ),
-        trill_spanner=consort.makers.AttachmentExpression(
+        trill_spanner=consort.AttachmentExpression(
             attachments=spannertools.ComplexTrillSpanner(
                 interval='m2',
                 ),
@@ -61,7 +61,7 @@ piano_prepared_bass_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     labels='pedaled',
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         pitches=pitchtools.PitchSegment(
             'A0 C1 B0 D1 C#1 E1 D#1 F1 G1 A#0 F#1',
             ),

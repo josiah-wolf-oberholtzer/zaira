@@ -2,7 +2,7 @@
 import consort
 
 
-class ZairaSegmentMaker(consort.makers.SegmentMaker):
+class ZairaSegmentMaker(consort.SegmentMaker):
 
     ### CLASS VARIABLES ###
 
@@ -27,7 +27,7 @@ class ZairaSegmentMaker(consort.makers.SegmentMaker):
         permitted_time_signatures = permitted_time_signatures or \
             zaira.materials.time_signatures
         score_template = score_template or zaira.makers.ZairaScoreTemplate()
-        consort.makers.SegmentMaker.__init__(
+        consort.SegmentMaker.__init__(
             self,
             annotation_specifier=annotation_specifier,
             discard_final_silence=discard_final_silence,

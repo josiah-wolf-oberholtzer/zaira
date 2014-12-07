@@ -3,9 +3,9 @@ from abjad import *
 import consort
 
 
-piano_fanfare_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        accent=consort.makers.AttachmentExpression(
+piano_fanfare_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        accent=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     indicatortools.Articulation('accent'),
@@ -30,7 +30,7 @@ piano_fanfare_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        dynamic_expression=consort.makers.AttachmentExpression(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     indicatortools.Dynamic(
@@ -58,56 +58,56 @@ piano_fanfare_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     labels=('pedaled',),
-    pitch_handler=consort.makers.PitchClassPitchHandler(
+    pitch_handler=consort.PitchClassPitchHandler(
         forbid_repetitions=None,
         chord_expressions=datastructuretools.CyclicTuple(
             [
-                consort.makers.KeyClusterExpression(
+                consort.KeyClusterExpression(
                     include_black_keys=False,
                     include_white_keys=True,
                     staff_space_width=7,
                     ),
-                consort.makers.KeyClusterExpression(
+                consort.KeyClusterExpression(
                     include_black_keys=True,
                     include_white_keys=True,
                     staff_space_width=9,
                     ),
-                consort.makers.KeyClusterExpression(
+                consort.KeyClusterExpression(
                     include_black_keys=True,
                     include_white_keys=True,
                     staff_space_width=7,
                     ),
-                consort.makers.KeyClusterExpression(
+                consort.KeyClusterExpression(
                     include_black_keys=False,
                     include_white_keys=True,
                     staff_space_width=7,
                     ),
-                consort.makers.KeyClusterExpression(
+                consort.KeyClusterExpression(
                     include_black_keys=False,
                     include_white_keys=True,
                     staff_space_width=9,
                     ),
-                consort.makers.KeyClusterExpression(
+                consort.KeyClusterExpression(
                     include_black_keys=True,
                     include_white_keys=True,
                     staff_space_width=7,
                     ),
-                consort.makers.KeyClusterExpression(
+                consort.KeyClusterExpression(
                     include_black_keys=True,
                     include_white_keys=False,
                     staff_space_width=9,
                     ),
-                consort.makers.KeyClusterExpression(
+                consort.KeyClusterExpression(
                     include_black_keys=False,
                     include_white_keys=True,
                     staff_space_width=7,
                     ),
-                consort.makers.KeyClusterExpression(
+                consort.KeyClusterExpression(
                     include_black_keys=True,
                     include_white_keys=True,
                     staff_space_width=7,
                     ),
-                consort.makers.KeyClusterExpression(
+                consort.KeyClusterExpression(
                     include_black_keys=True,
                     include_white_keys=False,
                     staff_space_width=9,
@@ -127,7 +127,7 @@ piano_fanfare_music_specifier = consort.makers.MusicSpecifier(
         pitch_range=pitchtools.PitchRange(
             range_string='[A1, C7)',
             ),
-        register_specifier=consort.makers.RegisterSpecifier(),
+        register_specifier=consort.RegisterSpecifier(),
         ),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
         denominators=(16,),

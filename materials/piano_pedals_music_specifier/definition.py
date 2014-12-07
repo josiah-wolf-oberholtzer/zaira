@@ -4,11 +4,11 @@ from abjad.tools import selectortools
 import consort
 
 
-piano_pedals_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        piano_pedal_spanner=consort.makers.AttachmentExpression(
+piano_pedals_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        piano_pedal_spanner=consort.AttachmentExpression(
             attachments=(
-                consort.makers.ComplexPianoPedalSpanner(),
+                consort.ComplexPianoPedalSpanner(),
                 ),
             selector=selectortools.Selector(),
             ),

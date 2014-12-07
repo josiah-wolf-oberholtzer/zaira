@@ -9,10 +9,10 @@ staff_lines_spanner = spannertools.StaffLinesSpanner(
 override(staff_lines_spanner).note_head.no_ledgers = True
 override(staff_lines_spanner).note_head.style = 'cross'
 
-percussion_staff_attachment_expression = consort.makers.AttachmentExpression(
+percussion_staff_attachment_expression = consort.AttachmentExpression(
     attachments=(
         (
-            consort.makers.ClefSpanner('percussion'),
+            consort.ClefSpanner('percussion'),
             staff_lines_spanner,
             ),
         ),

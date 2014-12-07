@@ -3,7 +3,7 @@ from abjad import *
 import consort
 
 
-sparse_timespan_maker = consort.makers.TaleaTimespanMaker(
+sparse_timespan_maker = consort.TaleaTimespanMaker(
     can_split=True,
     initial_silence_talea=rhythmmakertools.Talea(
         counts=(0, 4, 2, 6, 3),

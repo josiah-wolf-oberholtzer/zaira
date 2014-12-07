@@ -6,11 +6,11 @@ import consort
 import zaira
 
 
-percussion_brushed_tremolo_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
+percussion_brushed_tremolo_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
-        text_spanner=consort.makers.AttachmentExpression(
-            attachments=consort.makers.ComplexTextSpanner(
+        text_spanner=consort.AttachmentExpression(
+            attachments=consort.ComplexTextSpanner(
                 markup=Markup(r'\concat { \vstrut brush }')
                     .italic()
                     .pad_around(0.5)
@@ -18,12 +18,12 @@ percussion_brushed_tremolo_music_specifier = consort.makers.MusicSpecifier(
                 ),
             selector=selectortools.Selector().by_leaves(),
             ),
-        stem_tremolo_spanner=consort.makers.AttachmentExpression(
+        stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=spannertools.StemTremoloSpanner(),
             selector=selectortools.Selector().by_leaves(),
             ),
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         ),
     rhythm_maker=zaira.materials.sustained_rhythm_maker,
     )

@@ -3,9 +3,9 @@ from abjad import *
 import consort
 
 
-percussion_reiteration_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        dynamic_expression=consort.makers.AttachmentExpression(
+percussion_reiteration_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     indicatortools.Dynamic(
@@ -31,7 +31,7 @@ percussion_reiteration_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        staccato=consort.makers.AttachmentExpression(
+        staccato=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     indicatortools.Articulation('.'),
@@ -57,7 +57,7 @@ percussion_reiteration_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         forbid_repetitions=None,
         ),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(

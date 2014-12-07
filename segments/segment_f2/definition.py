@@ -33,7 +33,7 @@ segment_maker.add_setting(
         playing_groupings=(1,),
         silence_talea__denominator=4,
         ),
-    timespan_identifier=consort.makers.RatioPartsExpression(
+    timespan_identifier=consort.RatioPartsExpression(
         parts=(1, 3, 5),
         ratio=(1, 1, 2, 1, 2, 1, 2),
         ),
@@ -51,7 +51,7 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.sparse_timespan_maker,
-    timespan_identifier=consort.makers.RatioPartsExpression(
+    timespan_identifier=consort.RatioPartsExpression(
         parts=(0, 2, 4),
         ratio=(1, 2, 1, 2, 1),
         ),
@@ -66,7 +66,7 @@ segment_maker.add_setting(
         zaira.materials.granular_timespan_maker,
         playing_talea__counts=(1, 1, 1, 1, 3, 2, 1),
         ),
-    timespan_identifier=consort.makers.RatioPartsExpression(
+    timespan_identifier=consort.RatioPartsExpression(
         parts=(1, 3),
         ratio=(2, 1, 2, 1, 1),
         ),
@@ -101,7 +101,7 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.sparse_timespan_maker,
-    timespan_identifier=consort.makers.RatioPartsExpression(
+    timespan_identifier=consort.RatioPartsExpression(
         parts=(1, 3),
         ratio=(1, 1, 1, 1, 1),
         ),
@@ -142,7 +142,7 @@ segment_maker.add_setting(
         playing_groupings=(1,),
         reflect=True,
         ),
-    timespan_identifier=consort.makers.RatioPartsExpression(
+    timespan_identifier=consort.RatioPartsExpression(
         parts=(0, 2, 4),
         ratio=(1, 2, 1, 3, 1),
         ),
@@ -169,7 +169,7 @@ segment_maker.add_setting(
         zaira.materials.dense_timespan_maker,
         reflect=True,
         ),
-    timespan_identifier=consort.makers.RatioPartsExpression(
+    timespan_identifier=consort.RatioPartsExpression(
         parts=(0, 2, 4),
         ratio=(1, 1, 1, 1, 1),
         ),

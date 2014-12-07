@@ -3,20 +3,20 @@ from abjad import *
 import consort
 
 
-brazil_nut_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        dynamic_expression=consort.makers.AttachmentExpression(
+brazil_nut_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='ppp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='p',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='pp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
@@ -36,11 +36,11 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        percussion_staff=consort.makers.AttachmentExpression(
+        percussion_staff=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     (
-                        consort.makers.ClefSpanner(
+                        consort.ClefSpanner(
                             clef=indicatortools.Clef(
                                 name='percussion',
                                 ),
@@ -57,7 +57,7 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
                 ),
             selector=selectortools.Selector(),
             ),
-        staccato=consort.makers.AttachmentExpression(
+        staccato=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     indicatortools.Articulation('.'),
@@ -85,7 +85,7 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        stem_tremolo_spanner=consort.makers.AttachmentExpression(
+        stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     spannertools.StemTremoloSpanner(),
@@ -109,10 +109,10 @@ brazil_nut_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        text_spanner=consort.makers.AttachmentExpression(
+        text_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.ComplexTextSpanner(
+                    consort.ComplexTextSpanner(
                         markup=markuptools.Markup(
                             contents=(
                                 markuptools.MarkupCommand(

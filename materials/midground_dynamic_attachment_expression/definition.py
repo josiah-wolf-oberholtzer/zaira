@@ -3,10 +3,10 @@ from abjad import *
 import consort
 
 
-midground_dynamic_attachment_expression = consort.makers.AttachmentExpression(
+midground_dynamic_attachment_expression = consort.AttachmentExpression(
     attachments=(
-        consort.makers.DynamicExpression('mf'),
-        consort.makers.DynamicExpression('mp'),
+        consort.DynamicExpression('mf'),
+        consort.DynamicExpression('mp'),
         ),
     selector=selectortools.selects_pitched_runs()[0],
     )

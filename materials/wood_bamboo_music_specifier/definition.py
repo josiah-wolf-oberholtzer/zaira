@@ -6,16 +6,16 @@ import consort
 import zaira
 
 
-wood_bamboo_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
+wood_bamboo_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
-        stem_tremolo_spanner=consort.makers.AttachmentExpression(
+        stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=spannertools.StemTremoloSpanner(),
             selector=selectortools.Selector(
                 ).by_logical_tie(pitched=True
                 ).longer_than((1, 16))
             ),
-        staccato=consort.makers.AttachmentExpression(
+        staccato=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('.'),
             selector=selectortools.Selector(
                 ).by_logical_tie(pitched=True
@@ -23,7 +23,7 @@ wood_bamboo_music_specifier = consort.makers.MusicSpecifier(
                 ).by_length(1)
             ),
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         pitches=zaira.makers.Percussion.BAMBOO_WINDCHIMES,
         ),
     rhythm_maker=zaira.materials.undergrowth_rhythm_maker,

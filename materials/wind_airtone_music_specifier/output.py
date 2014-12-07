@@ -3,20 +3,20 @@ from abjad import *
 import consort
 
 
-wind_airtone_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        dynamic_expression=consort.makers.AttachmentExpression(
+wind_airtone_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='ppp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='p',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='pp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
@@ -36,10 +36,10 @@ wind_airtone_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        text_spanner=consort.makers.AttachmentExpression(
+        text_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.ComplexTextSpanner(
+                    consort.ComplexTextSpanner(
                         markup=markuptools.Markup(
                             contents=(
                                 markuptools.MarkupCommand(
@@ -78,7 +78,7 @@ wind_airtone_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_handler=consort.makers.PitchClassPitchHandler(
+    pitch_handler=consort.PitchClassPitchHandler(
         forbid_repetitions=None,
         pitch_classes=datastructuretools.CyclicTuple(
             [
@@ -92,7 +92,7 @@ wind_airtone_music_specifier = consort.makers.MusicSpecifier(
                 pitchtools.NamedPitch('e'),
                 ]
             ),
-        register_specifier=consort.makers.RegisterSpecifier(),
+        register_specifier=consort.RegisterSpecifier(),
         register_spread=0,
         ),
     rhythm_maker=rhythmmakertools.NoteRhythmMaker(

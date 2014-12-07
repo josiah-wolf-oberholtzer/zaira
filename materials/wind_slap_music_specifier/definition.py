@@ -9,10 +9,10 @@ import consort
 import zaira
 
 
-wind_slap_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
+wind_slap_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
-        override_spanner=consort.makers.AttachmentExpression(
+        override_spanner=consort.AttachmentExpression(
             attachments=spannertools.Spanner(
                 overrides={
                     'note_head__stencil': schemetools.Scheme(
@@ -27,8 +27,8 @@ wind_slap_music_specifier = consort.makers.MusicSpecifier(
                 ),
             selector=selectortools.selects_pitched_runs(),
             ),
-        text_spanner=consort.makers.AttachmentExpression(
-            attachments=consort.makers.ComplexTextSpanner(
+        text_spanner=consort.AttachmentExpression(
+            attachments=consort.ComplexTextSpanner(
                 markup=Markup(r'\concat { \vstrut slap }')
                     .italic()
                     .pad_around(0.5)
@@ -36,7 +36,7 @@ wind_slap_music_specifier = consort.makers.MusicSpecifier(
                 ),
             selector=selectortools.Selector().by_leaves(),
             ),
-        accent_and_staccato=consort.makers.AttachmentExpression(
+        accent_and_staccato=consort.AttachmentExpression(
             attachments=(
                 (
                     indicatortools.Articulation('accent'),
@@ -49,9 +49,9 @@ wind_slap_music_specifier = consort.makers.MusicSpecifier(
                 [0],
             ),
         ),
-    pitch_handler=consort.makers.PitchClassPitchHandler(
+    pitch_handler=consort.PitchClassPitchHandler(
         pitch_classes='a c b d b f gs e d f cs',
-        register_specifier=consort.makers.RegisterSpecifier(),
+        register_specifier=consort.RegisterSpecifier(),
         register_spread=0,
         ),
     rhythm_maker=zaira.materials.stuttering_rhythm_maker,

@@ -3,9 +3,9 @@ from abjad import *
 import consort
 
 
-wind_slap_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        accent_and_staccato=consort.makers.AttachmentExpression(
+wind_slap_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        accent_and_staccato=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     (
@@ -33,14 +33,14 @@ wind_slap_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        dynamic_expression=consort.makers.AttachmentExpression(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='mf',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='mp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
@@ -64,7 +64,7 @@ wind_slap_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        override_spanner=consort.makers.AttachmentExpression(
+        override_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     spannertools.Spanner(
@@ -114,10 +114,10 @@ wind_slap_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        text_spanner=consort.makers.AttachmentExpression(
+        text_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.ComplexTextSpanner(
+                    consort.ComplexTextSpanner(
                         markup=markuptools.Markup(
                             contents=(
                                 markuptools.MarkupCommand(
@@ -153,7 +153,7 @@ wind_slap_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_handler=consort.makers.PitchClassPitchHandler(
+    pitch_handler=consort.PitchClassPitchHandler(
         forbid_repetitions=None,
         pitch_classes=datastructuretools.CyclicTuple(
             [
@@ -170,7 +170,7 @@ wind_slap_music_specifier = consort.makers.MusicSpecifier(
                 pitchtools.NamedPitch('cs'),
                 ]
             ),
-        register_specifier=consort.makers.RegisterSpecifier(),
+        register_specifier=consort.RegisterSpecifier(),
         register_spread=0,
         ),
     rhythm_maker=rhythmmakertools.IncisedRhythmMaker(

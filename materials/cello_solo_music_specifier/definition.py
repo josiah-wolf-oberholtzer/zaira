@@ -8,10 +8,10 @@ import consort
 import zaira
 
 
-cello_solo_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
+cello_solo_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
-        trill_spanner=consort.makers.AttachmentExpression(
+        trill_spanner=consort.AttachmentExpression(
             attachments=(
                 None,
                 spannertools.ComplexTrillSpanner(interval='+m3'),
@@ -25,15 +25,15 @@ cello_solo_music_specifier = consort.makers.MusicSpecifier(
                 .by_leaves()
                 .by_logical_tie(pitched=True)
             ),
-        tenuto=consort.makers.AttachmentExpression(
+        tenuto=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('tenuto'),
             selector=selectortools.Selector()
                 .by_leaves()
                 .by_logical_tie(pitched=True)[0],
             ),
-        text_spanner=consort.makers.AttachmentExpression(
+        text_spanner=consort.AttachmentExpression(
             attachments=(
-                consort.makers.ComplexTextSpanner(
+                consort.ComplexTextSpanner(
                     markup=Markup(r'\concat { \vstrut "col legno" }')
                         .italic()
                         .pad_around(0.5)
@@ -45,7 +45,7 @@ cello_solo_music_specifier = consort.makers.MusicSpecifier(
             selector=selectortools.selects_pitched_runs(),
             ),
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         pitches="d, f, d, fqs, ef, d, ef, f, fqs, d, g, d, d, as,",
         pitch_application_rate='division',
         ),

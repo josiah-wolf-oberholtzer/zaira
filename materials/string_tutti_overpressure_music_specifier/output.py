@@ -3,9 +3,9 @@ from abjad import *
 import consort
 
 
-string_tutti_overpressure_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        dynamic_and_accent=consort.makers.AttachmentExpression(
+string_tutti_overpressure_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        dynamic_and_accent=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     (
@@ -36,10 +36,10 @@ string_tutti_overpressure_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        text_spanner=consort.makers.AttachmentExpression(
+        text_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.ComplexTextSpanner(
+                    consort.ComplexTextSpanner(
                         markup=markuptools.Markup(
                             contents=(
                                 markuptools.MarkupCommand(
@@ -75,11 +75,11 @@ string_tutti_overpressure_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         forbid_repetitions=None,
         chord_expressions=datastructuretools.CyclicTuple(
             [
-                consort.makers.ChordExpression(
+                consort.ChordExpression(
                     interval_numbers=frozenset([0, 7]),
                     ),
                 ]

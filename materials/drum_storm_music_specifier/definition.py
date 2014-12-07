@@ -7,16 +7,16 @@ import consort
 import zaira
 
 
-drum_storm_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
+drum_storm_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
-        stem_tremolo_spanner=consort.makers.AttachmentExpression(
+        stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=spannertools.StemTremoloSpanner(),
             selector=selectortools.Selector(
                 ).by_logical_tie(pitched=True
                 ).longer_than((1, 16))
             ),
-        accent=consort.makers.AttachmentExpression(
+        accent=consort.AttachmentExpression(
             attachments=(
                 indicatortools.Articulation('accent'),
                 ),
@@ -24,7 +24,7 @@ drum_storm_music_specifier = consort.makers.MusicSpecifier(
                 ).by_logical_tie(pitched=True)[0],
             ),
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         pitches=(
             zaira.makers.Percussion.HIGH_TOM,
             zaira.makers.Percussion.LOW_TOM,

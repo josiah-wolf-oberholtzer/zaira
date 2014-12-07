@@ -7,11 +7,11 @@ import consort
 import zaira
 
 
-string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
+string_undergrowth_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
-        text_spanner=consort.makers.AttachmentExpression(
-            attachments=consort.makers.ComplexTextSpanner(
+        text_spanner=consort.AttachmentExpression(
+            attachments=consort.ComplexTextSpanner(
                 markup=Markup(r'\concat { \vstrut overpressure }')
                     .italic()
                     .pad_around(0.5)
@@ -19,7 +19,7 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                 ),
             selector=selectortools.Selector().by_leaves(),
             ),
-        accent_and_tenuto=consort.makers.AttachmentExpression(
+        accent_and_tenuto=consort.AttachmentExpression(
             attachments=(
                 (
                     indicatortools.Articulation('accent'),
@@ -30,7 +30,7 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                 .by_leaves()
                 .by_logical_tie(pitched=True)[0],
             ),
-        stem_tremolo_spanner=consort.makers.AttachmentExpression(
+        stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=(
                 None,
                 None,
@@ -41,7 +41,7 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                 .by_logical_tie(pitched=True)
             ),
         ),
-    pitch_handler=consort.makers.PitchClassPitchHandler(
+    pitch_handler=consort.PitchClassPitchHandler(
         pitch_classes='a c b d',
         register_specifier=zaira.materials.register_specifier_inventory[3],
         ),

@@ -4,34 +4,34 @@ import consort
 import zaira
 
 
-piano_clusters_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
+piano_clusters_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         ),
     labels='pedaled',
-    pitch_handler=consort.makers.PitchClassPitchHandler(
+    pitch_handler=consort.PitchClassPitchHandler(
         chord_expressions=(
-            consort.makers.KeyClusterExpression(
+            consort.KeyClusterExpression(
                 staff_space_width=7,
                 ),
-            consort.makers.KeyClusterExpression(
+            consort.KeyClusterExpression(
                 staff_space_width=7,
                 ),
-            consort.makers.KeyClusterExpression(
+            consort.KeyClusterExpression(
                 staff_space_width=9,
                 ),
-            consort.makers.KeyClusterExpression(
+            consort.KeyClusterExpression(
                 include_black_keys=False,
                 staff_space_width=7,
                 ),
-            consort.makers.KeyClusterExpression(
+            consort.KeyClusterExpression(
                 staff_space_width=7,
                 ),
-            consort.makers.KeyClusterExpression(
+            consort.KeyClusterExpression(
                 include_white_keys=False,
                 staff_space_width=9,
                 ),
-            consort.makers.KeyClusterExpression(
+            consort.KeyClusterExpression(
                 staff_space_width=9,
                 ),
             ),

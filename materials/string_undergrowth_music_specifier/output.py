@@ -3,9 +3,9 @@ from abjad import *
 import consort
 
 
-string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        accent_and_tenuto=consort.makers.AttachmentExpression(
+string_undergrowth_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        accent_and_tenuto=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     (
@@ -33,14 +33,14 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        dynamic_expression=consort.makers.AttachmentExpression(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='mf',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='mp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
@@ -64,7 +64,7 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        stem_tremolo_spanner=consort.makers.AttachmentExpression(
+        stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     None,
@@ -87,10 +87,10 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        text_spanner=consort.makers.AttachmentExpression(
+        text_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.ComplexTextSpanner(
+                    consort.ComplexTextSpanner(
                         markup=markuptools.Markup(
                             contents=(
                                 markuptools.MarkupCommand(
@@ -126,7 +126,7 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_handler=consort.makers.PitchClassPitchHandler(
+    pitch_handler=consort.PitchClassPitchHandler(
         forbid_repetitions=None,
         pitch_classes=datastructuretools.CyclicTuple(
             [
@@ -136,10 +136,10 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                 pitchtools.NamedPitch('d'),
                 ]
             ),
-        register_specifier=consort.makers.RegisterSpecifier(
-            division_inflections=consort.makers.RegisterInflectionInventory(
+        register_specifier=consort.RegisterSpecifier(
+            division_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-3),
@@ -149,7 +149,7 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-3),
@@ -159,7 +159,7 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(3),
@@ -171,9 +171,9 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                         ),
                     ]
                 ),
-            phrase_inflections=consort.makers.RegisterInflectionInventory(
+            phrase_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-3),
@@ -183,7 +183,7 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(6),
@@ -196,9 +196,9 @@ string_undergrowth_music_specifier = consort.makers.MusicSpecifier(
                         ),
                     ]
                 ),
-            segment_inflections=consort.makers.RegisterInflectionInventory(
+            segment_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-12),

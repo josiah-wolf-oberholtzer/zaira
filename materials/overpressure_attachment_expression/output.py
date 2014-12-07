@@ -3,10 +3,10 @@ from abjad import *
 import consort
 
 
-overpressure_attachment_expression = consort.makers.AttachmentExpression(
+overpressure_attachment_expression = consort.AttachmentExpression(
     attachments=datastructuretools.TypedList(
         [
-            consort.makers.ComplexTextSpanner(
+            consort.ComplexTextSpanner(
                 markup=markuptools.Markup(
                     contents=(
                         markuptools.MarkupCommand(

@@ -3,11 +3,11 @@ from abjad import *
 import consort
 
 
-percussion_staff_attachment_expression = consort.makers.AttachmentExpression(
+percussion_staff_attachment_expression = consort.AttachmentExpression(
     attachments=datastructuretools.TypedList(
         [
             (
-                consort.makers.ClefSpanner(
+                consort.ClefSpanner(
                     clef=indicatortools.Clef(
                         name='percussion',
                         ),

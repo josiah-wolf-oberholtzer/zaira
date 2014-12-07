@@ -3,20 +3,20 @@ from abjad import *
 import consort
 
 
-metal_tranquilo_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        dynamic_expression=consort.makers.AttachmentExpression(
+metal_tranquilo_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='ppp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='p',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='pp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
@@ -36,7 +36,7 @@ metal_tranquilo_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        laissez_vibrer=consort.makers.AttachmentExpression(
+        laissez_vibrer=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     (
@@ -82,7 +82,7 @@ metal_tranquilo_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         forbid_repetitions=None,
         pitches=datastructuretools.CyclicTuple(
             [

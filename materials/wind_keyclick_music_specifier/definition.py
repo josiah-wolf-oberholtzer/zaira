@@ -7,12 +7,12 @@ import consort
 import zaira
 
 
-wind_keyclick_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
+wind_keyclick_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         percussion_staff=zaira.materials.percussion_staff_attachment_expression,
-        text_spanner=consort.makers.AttachmentExpression(
-            attachments=consort.makers.ComplexTextSpanner(
+        text_spanner=consort.AttachmentExpression(
+            attachments=consort.ComplexTextSpanner(
                 markup=Markup(r'\concat { \vstrut keyclick }')
                     .italic()
                     .pad_around(0.5)
@@ -20,13 +20,13 @@ wind_keyclick_music_specifier = consort.makers.MusicSpecifier(
                 ),
             selector=selectortools.Selector().by_leaves(),
             ),
-        stem_tremolo_spanner=consort.makers.AttachmentExpression(
+        stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=spannertools.StemTremoloSpanner(),
             selector=selectortools.Selector(
                 ).by_logical_tie(pitched=True
                 ).longer_than((1, 16))
             ),
-        staccato=consort.makers.AttachmentExpression(
+        staccato=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('.'),
             selector=selectortools.Selector(
                 ).by_logical_tie(pitched=True
@@ -34,7 +34,7 @@ wind_keyclick_music_specifier = consort.makers.MusicSpecifier(
                 ).by_length(1)
             ),
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         pitches="c' g' f g' g' c' f c' f g' c' c' f g'",
         ),
     pitches_are_nonsemantic=True,

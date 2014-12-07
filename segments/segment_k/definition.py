@@ -33,7 +33,7 @@ segment_maker.set_duration_in_seconds(
 
 
 segment_maker.add_setting(
-    timespan_maker=consort.makers.FloodedTimespanMaker(),
+    timespan_maker=consort.FloodedTimespanMaker(),
     timespan_identifier=timespantools.Timespan(
         stop_offset=durationtools.Duration(3, 8),
         ),
@@ -68,7 +68,7 @@ segment_maker.add_setting(
 
 
 segment_maker.add_setting(
-    timespan_maker=consort.makers.FloodedTimespanMaker(),
+    timespan_maker=consort.FloodedTimespanMaker(),
     timespan_identifier=timespantools.Timespan(
         start_offset=durationtools.Duration(5, 16),
         ),

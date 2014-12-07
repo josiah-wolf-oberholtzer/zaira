@@ -3,27 +3,27 @@ from abjad import *
 import consort
 
 
-cello_solo_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        dynamic_expression=consort.makers.AttachmentExpression(
+cello_solo_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='p',
                         hairpin_stop_token='f',
                         minimum_duration=durationtools.Duration(1, 8),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='f',
                         hairpin_stop_token='p',
                         minimum_duration=durationtools.Duration(1, 8),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='mf',
                         hairpin_stop_token='o',
                         minimum_duration=durationtools.Duration(1, 8),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='o',
                         hairpin_stop_token='ff',
                         minimum_duration=durationtools.Duration(1, 8),
@@ -44,7 +44,7 @@ cello_solo_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        tenuto=consort.makers.AttachmentExpression(
+        tenuto=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     indicatortools.Articulation('tenuto'),
@@ -69,10 +69,10 @@ cello_solo_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        text_spanner=consort.makers.AttachmentExpression(
+        text_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.ComplexTextSpanner(
+                    consort.ComplexTextSpanner(
                         markup=markuptools.Markup(
                             contents=(
                                 markuptools.MarkupCommand(
@@ -117,7 +117,7 @@ cello_solo_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        trill_spanner=consort.makers.AttachmentExpression(
+        trill_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     None,
@@ -151,7 +151,7 @@ cello_solo_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         forbid_repetitions=None,
         pitch_application_rate='division',
         pitches=datastructuretools.CyclicTuple(

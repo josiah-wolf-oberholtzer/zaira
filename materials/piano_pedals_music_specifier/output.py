@@ -3,12 +3,12 @@ from abjad import *
 import consort
 
 
-piano_pedals_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        piano_pedal_spanner=consort.makers.AttachmentExpression(
+piano_pedals_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        piano_pedal_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.ComplexPianoPedalSpanner(
+                    consort.ComplexPianoPedalSpanner(
                         include_inner_leaves=False,
                         ),
                     ]

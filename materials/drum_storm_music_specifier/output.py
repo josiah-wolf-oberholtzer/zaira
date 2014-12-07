@@ -3,9 +3,9 @@ from abjad import *
 import consort
 
 
-drum_storm_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        accent=consort.makers.AttachmentExpression(
+drum_storm_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        accent=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     indicatortools.Articulation('accent'),
@@ -27,25 +27,25 @@ drum_storm_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        dynamic_expression=consort.makers.AttachmentExpression(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='p',
                         hairpin_stop_token='f',
                         minimum_duration=durationtools.Duration(1, 8),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='f',
                         hairpin_stop_token='p',
                         minimum_duration=durationtools.Duration(1, 8),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='mf',
                         hairpin_stop_token='o',
                         minimum_duration=durationtools.Duration(1, 8),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='o',
                         hairpin_stop_token='ff',
                         minimum_duration=durationtools.Duration(1, 8),
@@ -66,7 +66,7 @@ drum_storm_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        stem_tremolo_spanner=consort.makers.AttachmentExpression(
+        stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     spannertools.StemTremoloSpanner(),
@@ -91,7 +91,7 @@ drum_storm_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         forbid_repetitions=None,
         pitches=datastructuretools.CyclicTuple(
             [

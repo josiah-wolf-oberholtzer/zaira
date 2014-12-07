@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 from abjad import *
-from consort import makers
+import consort
 
 
 erratic_dynamic_attachment_expression = makers.AttachmentExpression(

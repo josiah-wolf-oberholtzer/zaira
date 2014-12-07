@@ -35,7 +35,7 @@ segment_maker.add_setting(
         zaira.materials.dense_timespan_maker,
         playing_groupings=(1,),
         ),
-    timespan_identifier=consort.makers.RatioPartsExpression(
+    timespan_identifier=consort.RatioPartsExpression(
         parts=(1, 3, 5),
         ratio=(1, 1, 2, 1, 2, 1, 2),
         timespan=timespantools.Timespan(
@@ -56,7 +56,7 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.sparse_timespan_maker,
-    timespan_identifier=consort.makers.RatioPartsExpression(
+    timespan_identifier=consort.RatioPartsExpression(
         parts=(0, 2, 4),
         ratio=(3, 1, 2, 1, 1),
         timespan=timespantools.Timespan(
@@ -74,7 +74,7 @@ segment_maker.add_setting(
         zaira.materials.granular_timespan_maker,
         playing_talea__counts=(2, 2, 3, 2, 7, 1, 3, 2, 1),
         ),
-    timespan_identifier=consort.makers.RatioPartsExpression(
+    timespan_identifier=consort.RatioPartsExpression(
         parts=(0, 2, 4),
         ratio=(1, 1, 1, 1, 1),
         timespan=timespantools.Timespan(
@@ -114,7 +114,7 @@ segment_maker.add_setting(
         zaira.materials.sparse_timespan_maker,
         fuse_groups=True,
         ),
-    timespan_identifier=consort.makers.RatioPartsExpression(
+    timespan_identifier=consort.RatioPartsExpression(
         parts=(0, 2, 4),
         ratio=(1, 1, 1, 1, 1),
         ),
@@ -134,7 +134,7 @@ segment_maker.add_setting(
         zaira.materials.sparse_timespan_maker,
         fuse_groups=True,
         ),
-    timespan_identifier=consort.makers.RatioPartsExpression(
+    timespan_identifier=consort.RatioPartsExpression(
         parts=(1, 3),
         ratio=(1, 1, 1, 1, 1),
         ),
@@ -168,7 +168,7 @@ segment_maker.add_setting(
         playing_groupings=(1,),
         playing_talea__counts=(3, 3, 3, 3, 3, 5, 3, 4),
         ),
-    timespan_identifier=consort.makers.RatioPartsExpression(
+    timespan_identifier=consort.RatioPartsExpression(
         parts=(1, 3, 5),
         ratio=(3, 1, 2, 1, 3, 1, 1),
         ),
@@ -201,7 +201,7 @@ segment_maker.add_setting(
         playing_groupings=(1,),
         reflect=True,
         ),
-    timespan_identifier=consort.makers.RatioPartsExpression(
+    timespan_identifier=consort.RatioPartsExpression(
         parts=(0, 2, 4, 6),
         ratio=(1, 2, 1, 1, 1, 2, 1),
         timespan=timespantools.Timespan(
@@ -228,7 +228,7 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=zaira.materials.dense_timespan_maker,
-    timespan_identifier=consort.makers.RatioPartsExpression(
+    timespan_identifier=consort.RatioPartsExpression(
         parts=(1, 3),
         ratio=(3, 1, 2, 1, 1),
         timespan=timespantools.Timespan(
@@ -263,7 +263,7 @@ segment_maker.add_setting(
 
 
 segment_maker.add_setting(
-    timespan_maker=consort.makers.FloodedTimespanMaker(),
+    timespan_maker=consort.FloodedTimespanMaker(),
     timespan_identifier=timespantools.Timespan(
         stop_offset=fanfare_duration,
         ),

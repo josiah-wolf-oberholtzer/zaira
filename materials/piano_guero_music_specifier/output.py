@@ -3,9 +3,9 @@ from abjad import *
 import consort
 
 
-piano_guero_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        direction_markup=consort.makers.AttachmentExpression(
+piano_guero_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        direction_markup=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     markuptools.Markup(
@@ -148,14 +148,14 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        dynamic_expression=consort.makers.AttachmentExpression(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='mf',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='mp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
@@ -179,11 +179,11 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        percussion_staff=consort.makers.AttachmentExpression(
+        percussion_staff=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     (
-                        consort.makers.ClefSpanner(
+                        consort.ClefSpanner(
                             clef=indicatortools.Clef(
                                 name='percussion',
                                 ),
@@ -200,10 +200,10 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
                 ),
             selector=selectortools.Selector(),
             ),
-        text_spanner=consort.makers.AttachmentExpression(
+        text_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.ComplexTextSpanner(
+                    consort.ComplexTextSpanner(
                         markup=markuptools.Markup(
                             contents=(
                                 markuptools.MarkupCommand(
@@ -239,7 +239,7 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         forbid_repetitions=None,
         ),
     rhythm_maker=rhythmmakertools.NoteRhythmMaker(

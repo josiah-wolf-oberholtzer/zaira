@@ -5,13 +5,13 @@ import consort
 import zaira
 
 
-percussion_reiteration_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        dynamic_expression=consort.makers.AttachmentExpression(
+percussion_reiteration_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=indicatortools.Dynamic('ppp'),
             selector=selectortools.selects_pitched_runs()[0],
             ),
-        staccato=consort.makers.AttachmentExpression(
+        staccato=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('.'),
             selector=selectortools.Selector(
                 ).by_leaves(
@@ -19,6 +19,6 @@ percussion_reiteration_music_specifier = consort.makers.MusicSpecifier(
                 )[0],
             ),
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(),
+    pitch_handler=consort.AbsolutePitchHandler(),
     rhythm_maker=zaira.materials.reiterating_rhythm_maker,
     )

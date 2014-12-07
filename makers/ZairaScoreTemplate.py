@@ -4,7 +4,7 @@ from abjad.tools import abctools
 from abjad.tools import indicatortools
 from abjad.tools import instrumenttools
 from abjad.tools import scoretools
-from consort import makers
+import consort
 
 
 class ZairaScoreTemplate(abctools.AbjadValueObject):

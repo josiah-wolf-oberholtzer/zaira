@@ -5,10 +5,10 @@ import consort
 import zaira
 
 
-wind_trills_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
+wind_trills_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
-        trill_spanner=consort.makers.AttachmentExpression(
+        trill_spanner=consort.AttachmentExpression(
             attachments=(
                 spannertools.ComplexTrillSpanner(interval='+P4'),
                 spannertools.ComplexTrillSpanner(interval='+P4'),
@@ -20,9 +20,9 @@ wind_trills_music_specifier = consort.makers.MusicSpecifier(
             selector=selectortools.selects_pitched_runs(),
             ),
         ),
-    pitch_handler=consort.makers.PitchClassPitchHandler(
+    pitch_handler=consort.PitchClassPitchHandler(
         pitch_classes='c ef d',
-        register_specifier=consort.makers.RegisterSpecifier(
+        register_specifier=consort.RegisterSpecifier(
             center_pitch="g'",
             ),
         ),

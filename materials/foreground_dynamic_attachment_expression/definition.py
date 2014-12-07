@@ -3,12 +3,12 @@ from abjad import *
 import consort
 
 
-foreground_dynamic_attachment_expression = consort.makers.AttachmentExpression(
+foreground_dynamic_attachment_expression = consort.AttachmentExpression(
     attachments=(
-        consort.makers.DynamicExpression('fff'),
-        consort.makers.DynamicExpression('f'),
-        consort.makers.DynamicExpression('ff'),
-        consort.makers.DynamicExpression('mf'),
+        consort.DynamicExpression('fff'),
+        consort.DynamicExpression('f'),
+        consort.DynamicExpression('ff'),
+        consort.DynamicExpression('mf'),
         ),
     selector=selectortools.selects_pitched_runs()[0],
     )

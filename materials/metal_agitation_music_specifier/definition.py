@@ -6,19 +6,19 @@ import consort
 import zaira
 
 
-metal_agitation_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
+metal_agitation_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.foreground_dynamic_attachment_expression,
-        accent=consort.makers.AttachmentExpression(
+        accent=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('accent'),
             selector=selectortools.selects_first_logical_tie_in_pitched_runs()[0],
             ),
-        staccato=consort.makers.AttachmentExpression(
+        staccato=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('staccato'),
             selector=selectortools.selects_all_but_first_logical_tie_in_pitched_runs()[0],
             ),
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         pitches=(
             zaira.makers.Percussion.HIGH_CYMBAL,
             zaira.makers.Percussion.LOW_CYMBAL,

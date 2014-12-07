@@ -3,11 +3,11 @@ from abjad import *
 import consort
 
 
-background_dynamic_attachment_expression = consort.makers.AttachmentExpression(
+background_dynamic_attachment_expression = consort.AttachmentExpression(
     attachments=(
-        consort.makers.DynamicExpression('ppp'),
-        consort.makers.DynamicExpression('p'),
-        consort.makers.DynamicExpression('pp'),
+        consort.DynamicExpression('ppp'),
+        consort.DynamicExpression('p'),
+        consort.DynamicExpression('pp'),
         ),
     selector=selectortools.selects_pitched_runs(),
     )

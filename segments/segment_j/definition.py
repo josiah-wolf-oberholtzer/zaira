@@ -69,7 +69,7 @@ segment_maker.add_setting(
 
 
 segment_maker.add_setting(
-    timespan_maker=consort.makers.FloodedTimespanMaker(),
+    timespan_maker=consort.FloodedTimespanMaker(),
     clarinet=new(
         zaira.materials.brazil_nut_music_specifier,
         rhythm_maker=zaira.materials.sustained_rhythm_maker,
@@ -93,7 +93,7 @@ segment_maker.add_setting(
 
 
 segment_maker.add_setting(
-    timespan_maker=consort.makers.FloodedTimespanMaker(),
+    timespan_maker=consort.FloodedTimespanMaker(),
     timespan_identifier=timespantools.Timespan(
         stop_offset=fanfare_duration,
         ),

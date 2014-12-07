@@ -3,12 +3,12 @@ from abjad import *
 import consort
 
 
-piano_prepared_treble_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        clef_spanner=consort.makers.AttachmentExpression(
+piano_prepared_treble_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        clef_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.ClefSpanner(
+                    consort.ClefSpanner(
                         clef=indicatortools.Clef(
                             name='treble^15',
                             ),
@@ -17,18 +17,18 @@ piano_prepared_treble_music_specifier = consort.makers.MusicSpecifier(
                 ),
             selector=selectortools.Selector(),
             ),
-        dynamic_expression=consort.makers.AttachmentExpression(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='ppp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='p',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='pp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
@@ -48,7 +48,7 @@ piano_prepared_treble_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        staccato=consort.makers.AttachmentExpression(
+        staccato=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     indicatortools.Articulation('.'),
@@ -76,10 +76,10 @@ piano_prepared_treble_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        text_spanner=consort.makers.AttachmentExpression(
+        text_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.ComplexTextSpanner(
+                    consort.ComplexTextSpanner(
                         markup=markuptools.Markup(
                             contents=(
                                 markuptools.MarkupCommand(
@@ -111,7 +111,7 @@ piano_prepared_treble_music_specifier = consort.makers.MusicSpecifier(
                 ),
             selector=selectortools.Selector(),
             ),
-        trill_spanner=consort.makers.AttachmentExpression(
+        trill_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     spannertools.ComplexTrillSpanner(
@@ -142,7 +142,7 @@ piano_prepared_treble_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     labels=('pedaled',),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         forbid_repetitions=None,
         pitches=datastructuretools.CyclicTuple(
             [

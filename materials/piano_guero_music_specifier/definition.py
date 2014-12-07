@@ -15,12 +15,12 @@ fast_markup = fast_markup.italic()
 fast_markup = fast_markup.pad_around(0.5)
 fast_markup = fast_markup.box()
 
-piano_guero_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
+piano_guero_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
         percussion_staff=zaira.materials.percussion_staff_attachment_expression,
-        text_spanner=consort.makers.AttachmentExpression(
-            attachments=consort.makers.ComplexTextSpanner(
+        text_spanner=consort.AttachmentExpression(
+            attachments=consort.ComplexTextSpanner(
                 markup=Markup(r'\concat { \vstrut guero }')
                     .italic()
                     .pad_around(0.5)
@@ -28,7 +28,7 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
                 ),
             selector=selectortools.Selector().by_leaves(),
             ),
-        direction_markup=consort.makers.AttachmentExpression(
+        direction_markup=consort.AttachmentExpression(
             attachments=(
                 slow_markup,
                 slow_markup,
@@ -39,6 +39,6 @@ piano_guero_music_specifier = consort.makers.MusicSpecifier(
             selector=selectortools.selects_pitched_runs()[0],
             ),
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(),
+    pitch_handler=consort.AbsolutePitchHandler(),
     rhythm_maker=zaira.materials.sustained_rhythm_maker,
     )

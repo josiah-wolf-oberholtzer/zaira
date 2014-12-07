@@ -3,7 +3,7 @@ from abjad import *
 import consort
 
 
-laissez_vibrer_attachment_expression = consort.makers.AttachmentExpression(
+laissez_vibrer_attachment_expression = consort.AttachmentExpression(
     attachments=datastructuretools.TypedList(
         [
             (

@@ -4,11 +4,11 @@ import consort
 import zaira
 
 
-drum_heartbeat_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
+drum_heartbeat_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         pitches=zaira.makers.Percussion.KICK_DRUM,
         ),
     rhythm_maker=new(

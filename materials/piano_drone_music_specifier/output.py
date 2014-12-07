@@ -3,20 +3,20 @@ from abjad import *
 import consort
 
 
-piano_drone_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        dynamic_expression=consort.makers.AttachmentExpression(
+piano_drone_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='ppp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='p',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='pp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
@@ -36,7 +36,7 @@ piano_drone_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        stem_tremolo_spanner=consort.makers.AttachmentExpression(
+        stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     spannertools.StemTremoloSpanner(),
@@ -58,14 +58,14 @@ piano_drone_music_specifier = consort.makers.MusicSpecifier(
             ),
         ),
     labels=('pedaled',),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         forbid_repetitions=None,
         chord_expressions=datastructuretools.CyclicTuple(
             [
-                consort.makers.ChordExpression(
+                consort.ChordExpression(
                     interval_numbers=frozenset([0, 5, 6, 12, -7, -3]),
                     ),
-                consort.makers.ChordExpression(
+                consort.ChordExpression(
                     interval_numbers=frozenset([0, 1, 5, 12, -7, -3]),
                     ),
                 ]

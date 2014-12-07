@@ -6,16 +6,16 @@ import consort
 import zaira
 
 
-piano_flourish_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
+piano_flourish_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
-        slur=consort.makers.AttachmentExpression(
+        slur=consort.AttachmentExpression(
             attachments=spannertools.Slur(),
             selector=selectortools.selects_pitched_runs(),
             ),
         ),
     labels='pedaled',
-    pitch_handler=consort.makers.PitchClassPitchHandler(
+    pitch_handler=consort.PitchClassPitchHandler(
         pitch_classes='d f e g cs as',
         pitch_range=pitchtools.PitchRange('[A1, C7)'),
         register_specifier=zaira.materials.register_specifier_inventory[2],

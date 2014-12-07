@@ -3,20 +3,20 @@ from abjad import *
 import consort
 
 
-string_trills_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
-        dynamic_expression=consort.makers.AttachmentExpression(
+string_trills_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
+        dynamic_expression=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='ppp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='p',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.makers.DynamicExpression(
+                    consort.DynamicExpression(
                         hairpin_start_token='pp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
@@ -36,7 +36,7 @@ string_trills_music_specifier = consort.makers.MusicSpecifier(
                     ),
                 ),
             ),
-        trill_spanner=consort.makers.AttachmentExpression(
+        trill_spanner=consort.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     spannertools.ComplexTrillSpanner(
@@ -95,7 +95,7 @@ string_trills_music_specifier = consort.makers.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_handler=consort.makers.PitchClassPitchHandler(
+    pitch_handler=consort.PitchClassPitchHandler(
         forbid_repetitions=None,
         pitch_classes=datastructuretools.CyclicTuple(
             [
@@ -104,10 +104,10 @@ string_trills_music_specifier = consort.makers.MusicSpecifier(
                 pitchtools.NamedPitch('b'),
                 ]
             ),
-        register_specifier=consort.makers.RegisterSpecifier(
-            division_inflections=consort.makers.RegisterInflectionInventory(
+        register_specifier=consort.RegisterSpecifier(
+            division_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-3),
@@ -117,7 +117,7 @@ string_trills_music_specifier = consort.makers.MusicSpecifier(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-3),
@@ -127,7 +127,7 @@ string_trills_music_specifier = consort.makers.MusicSpecifier(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(3),
@@ -139,9 +139,9 @@ string_trills_music_specifier = consort.makers.MusicSpecifier(
                         ),
                     ]
                 ),
-            phrase_inflections=consort.makers.RegisterInflectionInventory(
+            phrase_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-3),
@@ -151,7 +151,7 @@ string_trills_music_specifier = consort.makers.MusicSpecifier(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(6),
@@ -164,9 +164,9 @@ string_trills_music_specifier = consort.makers.MusicSpecifier(
                         ),
                     ]
                 ),
-            segment_inflections=consort.makers.RegisterInflectionInventory(
+            segment_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-12),

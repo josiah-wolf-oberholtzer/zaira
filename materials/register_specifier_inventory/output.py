@@ -3,12 +3,12 @@ from abjad import *
 import consort
 
 
-register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
+register_specifier_inventory = consort.RegisterSpecifierInventory(
     [
-        consort.makers.RegisterSpecifier(
-            division_inflections=consort.makers.RegisterInflectionInventory(
+        consort.RegisterSpecifier(
+            division_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-3),
@@ -18,7 +18,7 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(3),
@@ -29,7 +29,7 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                             ),
                         ratio=mathtools.Ratio(2, 1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-6),
@@ -42,9 +42,9 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                         ),
                     ]
                 ),
-            phrase_inflections=consort.makers.RegisterInflectionInventory(
+            phrase_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(6),
@@ -55,7 +55,7 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                             ),
                         ratio=mathtools.Ratio(2, 1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(3),
@@ -68,9 +68,9 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                         ),
                     ]
                 ),
-            segment_inflections=consort.makers.RegisterInflectionInventory(
+            segment_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-12),
@@ -84,10 +84,10 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                     ]
                 ),
             ),
-        consort.makers.RegisterSpecifier(
-            division_inflections=consort.makers.RegisterInflectionInventory(
+        consort.RegisterSpecifier(
+            division_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-6),
@@ -97,7 +97,7 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-12),
@@ -108,7 +108,7 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                             ),
                         ratio=mathtools.Ratio(2, 1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(6),
@@ -120,9 +120,9 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                         ),
                     ]
                 ),
-            phrase_inflections=consort.makers.RegisterInflectionInventory(
+            phrase_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(3),
@@ -132,7 +132,7 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-3),
@@ -144,9 +144,9 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                         ),
                     ]
                 ),
-            segment_inflections=consort.makers.RegisterInflectionInventory(
+            segment_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(12),
@@ -161,10 +161,10 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                     ]
                 ),
             ),
-        consort.makers.RegisterSpecifier(
-            division_inflections=consort.makers.RegisterInflectionInventory(
+        consort.RegisterSpecifier(
+            division_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(3),
@@ -174,7 +174,7 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(3),
@@ -184,7 +184,7 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-3),
@@ -196,9 +196,9 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                         ),
                     ]
                 ),
-            phrase_inflections=consort.makers.RegisterInflectionInventory(
+            phrase_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(6),
@@ -208,7 +208,7 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-3),
@@ -221,9 +221,9 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                         ),
                     ]
                 ),
-            segment_inflections=consort.makers.RegisterInflectionInventory(
+            segment_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-6),
@@ -237,10 +237,10 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                     ]
                 ),
             ),
-        consort.makers.RegisterSpecifier(
-            division_inflections=consort.makers.RegisterInflectionInventory(
+        consort.RegisterSpecifier(
+            division_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-3),
@@ -250,7 +250,7 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-3),
@@ -260,7 +260,7 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(3),
@@ -272,9 +272,9 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                         ),
                     ]
                 ),
-            phrase_inflections=consort.makers.RegisterInflectionInventory(
+            phrase_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-3),
@@ -284,7 +284,7 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                             ),
                         ratio=mathtools.Ratio(1),
                         ),
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(6),
@@ -297,9 +297,9 @@ register_specifier_inventory = consort.makers.RegisterSpecifierInventory(
                         ),
                     ]
                 ),
-            segment_inflections=consort.makers.RegisterInflectionInventory(
+            segment_inflections=consort.RegisterInflectionInventory(
                 [
-                    consort.makers.RegisterInflection(
+                    consort.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
                             (
                                 pitchtools.NumberedInterval(-12),

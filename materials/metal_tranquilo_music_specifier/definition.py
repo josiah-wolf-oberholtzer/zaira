@@ -4,12 +4,12 @@ import consort
 import zaira
 
 
-metal_tranquilo_music_specifier = consort.makers.MusicSpecifier(
-    attachment_handler=consort.makers.AttachmentHandler(
+metal_tranquilo_music_specifier = consort.MusicSpecifier(
+    attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         laissez_vibrer=zaira.materials.laissez_vibrer_attachment_expression,
         ),
-    pitch_handler=consort.makers.AbsolutePitchHandler(
+    pitch_handler=consort.AbsolutePitchHandler(
         pitches=(
             zaira.makers.Percussion.HIGH_CYMBAL,
             zaira.makers.Percussion.LOW_CYMBAL,

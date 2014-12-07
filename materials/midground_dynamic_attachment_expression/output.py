@@ -3,14 +3,14 @@ from abjad import *
 import consort
 
 
-midground_dynamic_attachment_expression = consort.makers.AttachmentExpression(
+midground_dynamic_attachment_expression = consort.AttachmentExpression(
     attachments=datastructuretools.TypedList(
         [
-            consort.makers.DynamicExpression(
+            consort.DynamicExpression(
                 hairpin_start_token='mf',
                 minimum_duration=durationtools.Duration(1, 4),
                 ),
-            consort.makers.DynamicExpression(
+            consort.DynamicExpression(
                 hairpin_start_token='mp',
                 minimum_duration=durationtools.Duration(1, 4),
                 ),

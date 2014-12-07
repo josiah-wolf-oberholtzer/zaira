@@ -3,18 +3,18 @@ from abjad import *
 import consort
 
 
-background_dynamic_attachment_expression = consort.makers.AttachmentExpression(
+background_dynamic_attachment_expression = consort.AttachmentExpression(
     attachments=datastructuretools.TypedList(
         [
-            consort.makers.DynamicExpression(
+            consort.DynamicExpression(
                 hairpin_start_token='ppp',
                 minimum_duration=durationtools.Duration(1, 4),
                 ),
-            consort.makers.DynamicExpression(
+            consort.DynamicExpression(
                 hairpin_start_token='p',
                 minimum_duration=durationtools.Duration(1, 4),
                 ),
-            consort.makers.DynamicExpression(
+            consort.DynamicExpression(
                 hairpin_start_token='pp',
                 minimum_duration=durationtools.Duration(1, 4),
                 ),
