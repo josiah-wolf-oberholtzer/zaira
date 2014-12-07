@@ -5,19 +5,19 @@ python:
     - 3.4
 
 before_install:
-    - sudo apt-get update -qq
-    - sudo apt-get install -y graphviz
-    - sudo apt-get install -y imagemagick
-    - sudo apt-get install -y texlive 
-    - sudo apt-get install -y texlive-fonts-recommended
-    - sudo apt-get install -y texlive-latex-extra 
-    - sudo apt-get install -y texlive-latex-recommended 
-    - wget -q http://download.linuxaudio.org/lilypond/binaries/linux-64/lilypond-2.19.15-1.linux-64.sh
-    - sudo sh lilypond-2.19.15-1.linux-64.sh --batch
+#    - sudo apt-get update -qq
+#    - sudo apt-get install -y graphviz
+#    - sudo apt-get install -y imagemagick
+#    - sudo apt-get install -y texlive 
+#    - sudo apt-get install -y texlive-fonts-recommended
+#    - sudo apt-get install -y texlive-latex-extra 
+#    - sudo apt-get install -y texlive-latex-recommended 
+#    - wget -q http://download.linuxaudio.org/lilypond/binaries/linux-64/lilypond-2.19.15-1.linux-64.sh
+#    - sudo sh lilypond-2.19.15-1.linux-64.sh --batch
 
 install:
-    - pip install -r --allow-external requirements.txt
-    - pip install -e --allow-external . 
+    - pip install --allow-external -r requirements.txt
+    - pip install --allow-external -e .
 
 script:
     - ajv doctest ./zaira
