@@ -16,7 +16,10 @@ before_install:
 #    - sudo sh lilypond-2.19.15-1.linux-64.sh --batch
 
 install:
-    - pip install --allow-all-external --allow-unverified consort --allow-unverified supriya -r requirements.txt
+
+    - pip install --allow-external abjad --allow-unverified abjad -e git://github.com/Abjad/abjad.git#egg=abjad
+    - pip install --allow-external supriya --allow-unverified supriya -e git://github.com/Pulgama/supriya.git#egg=supriya
+    - pip install --allow-external consort --allow-unverified consort -e git://github.com/josiah-wolf-oberholtzer/consort.git#egg=consort
     - pip install -e .
 
 script:
