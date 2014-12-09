@@ -15,4 +15,4 @@ paths = [os.path.join(_, 'definition.py') for _ in paths]
 
 @pytest.mark.parametrize('path', paths)
 def test_segments_01(path):
-    assert path
+    pass
