@@ -150,19 +150,19 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
     ### CLASS VARIABLES ###
 
     __slots__ = (
-        '_voice_name_abbreviations',
+        '_context_name_abbreviations',
         )
 
     ### INITIALIZER ###
 
     def __init__(self):
-        self._voice_name_abbreviations = collections.OrderedDict()
+        self._context_name_abbreviations = collections.OrderedDict()
 
     ### SPECIAL METHODS ###
 
     def __call__(self):
 
-        manager = makers.ScoreTemplateManager
+        manager = consort.ScoreTemplateManager
 
         ### WINDS ###
 
@@ -292,5 +292,5 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
     ### PUBLIC PROPERTIES ###
 
     @property
-    def voice_name_abbreviations(self):
-        return self._voice_name_abbreviations
+    def context_name_abbreviations(self):
+        return self._context_name_abbreviations
