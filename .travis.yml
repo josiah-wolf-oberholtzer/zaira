@@ -24,8 +24,8 @@ install:
     - pip install -e .
 
 script:
-    - ajv doctest ./zaira
-    - py.test -rf ./zaira
+    - ajv doctest ./zaira -x
+    - py.test -rf ./zaira -x
 
 notifications:
     email: false
