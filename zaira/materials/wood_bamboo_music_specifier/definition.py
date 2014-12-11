@@ -13,13 +13,13 @@ wood_bamboo_music_specifier = consort.MusicSpecifier(
             attachments=spannertools.StemTremoloSpanner(),
             selector=selectortools.Selector(
                 ).by_logical_tie(pitched=True
-                ).longer_than((1, 16))
+                ).by_duration('>', (1, 16))
             ),
         staccato=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('.'),
             selector=selectortools.Selector(
                 ).by_logical_tie(pitched=True
-                ).shorter_than((1, 8)
+                ).by_duration('<', (1, 8)
                 ).by_length(1)
             ),
         ),

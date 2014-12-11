@@ -1,5 +1,4 @@
 # -*- encoding: utf-8 -*-
-from abjad import Duration
 from abjad import Markup
 from abjad.tools import indicatortools
 from abjad.tools import pitchtools
@@ -14,10 +13,7 @@ staccato_selector = staccato_selector.by_leaves()
 staccato_selector = staccato_selector.by_logical_tie(
     pitched=True,
     )
-staccato_selector = staccato_selector.shorter_than(
-    duration=Duration(1, 16),
-    or_equal_to=True,
-    )
+staccato_selector = staccato_selector.by_duration('<=', (1, 16))
 
 
 sustain_selector = selectortools.Selector()
@@ -25,9 +21,7 @@ sustain_selector = sustain_selector.by_leaves()
 sustain_selector = sustain_selector.by_logical_tie(
     pitched=True,
     )
-sustain_selector = sustain_selector.longer_than(
-    duration=Duration(1, 16),
-    )
+sustain_selector = sustain_selector.by_duration('>', (1, 16))
 
 
 piano_prepared_treble_music_specifier = consort.MusicSpecifier(
