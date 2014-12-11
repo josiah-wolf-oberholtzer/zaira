@@ -1,27 +1,30 @@
-\version "2.19.12"
+\version "2.19.15"
 \language "english"
 
 #(ly:set-option 'relative-includes #t)
 
-\include "/Users/josiah/Documents/Scores/zaira/stylesheets/parts-stylesheet.ily"
-\include "/Users/josiah/Documents/Scores/zaira/stylesheets/stylesheet.ily"
+\include "/Users/josiah/Documents/Scores/zaira/zaira/stylesheets/parts-stylesheet.ily"
+\include "/Users/josiah/Documents/Scores/zaira/zaira/stylesheets/stylesheet.ily"
 
 \score {
 	\context Score = "Zaira Score" <<
-		\tag score.cello.clarinet-in-b-flat.flute.oboe.percussion.piano.viola.violin
+		\tag time
 		\context TimeSignatureContext = "TimeSignatureContext" {
 			{
 				\time 3/8
 				\tempo 4=84
 				\mark \markup {
-					\override
-						#'(box-padding . 0.5)
-						\box
-							J
-					" "
-					\fontsize
-						#-3
-						" "
+					\concat
+						{
+							\override
+								#'(box-padding . 0.5)
+								\box
+									J
+							" "
+							\fontsize
+								#-3
+								" "
+						}
 					}
 				s1 * 3/8
 			}
@@ -51,7 +54,7 @@
 			}
 		}
 		\context EnsembleGroup = "Wind Section Staff Group" <<
-			\tag score.flute
+			\tag flute
 			\context PerformerGroup = "Flute Performer Group" \with {
 				instrumentName = \markup { Flute }
 				shortInstrumentName = \markup { Fl. }
@@ -119,7 +122,7 @@
 					}
 				}
 			>>
-			\tag score.oboe
+			\tag oboe
 			\context PerformerGroup = "Oboe Performer Group" \with {
 				instrumentName = \markup { Oboe }
 				shortInstrumentName = \markup { Ob. }
@@ -129,9 +132,6 @@
 						\clef "treble"
 						{
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
 								R1 * 3/8
 							}
 							{
@@ -155,14 +155,12 @@
 							{
 								R1 * 1/2
 								\bar "||"
-								\stopStaff
-								\startStaff
 							}
 						}
 					}
 				}
 			>>
-			\tag score.clarinet-in-b-flat
+			\tag clarinet-in-b-flat
 			\context PerformerGroup = "Clarinet In B-Flat Performer Group" \with {
 				instrumentName = \markup { Clarinet in B-flat }
 				shortInstrumentName = \markup { Cl. in B-flat }
@@ -231,9 +229,8 @@
 				}
 			>>
 		>>
-		\tag score.percussion
+		\tag percussion
 		\context EnsembleGroup = "Percussion Section Staff Group" <<
-			\tag score.percussion
 			\context PerformerGroup = "Metals Performer Group" \with {
 				instrumentName = \markup { Metals }
 				shortInstrumentName = \markup { Metals }
@@ -318,19 +315,13 @@
 						}
 						{
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
 								R1 * 1/2
 								\bar "||"
-								\stopStaff
-								\startStaff
 							}
 						}
 					}
 				}
 			>>
-			\tag score.percussion
 			\context PerformerGroup = "Woods Performer Group" \with {
 				instrumentName = \markup { Woods }
 				shortInstrumentName = \markup { Woods }
@@ -340,9 +331,6 @@
 						\clef "percussion"
 						{
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
 								R1 * 3/8
 							}
 							{
@@ -366,14 +354,11 @@
 							{
 								R1 * 1/2
 								\bar "||"
-								\stopStaff
-								\startStaff
 							}
 						}
 					}
 				}
 			>>
-			\tag score.percussion
 			\context PerformerGroup = "Drums Performer Group" \with {
 				instrumentName = \markup { Drums }
 				shortInstrumentName = \markup { Drums }
@@ -413,8 +398,6 @@
 										#'(0 . -1)
 									}
 								\once \override TextSpanner.dash-fraction = 1
-								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
 								g8 \ppp ~ \startTextSpan
 							}
 							{
@@ -425,7 +408,6 @@
 							}
 							{
 								\set stemLeftBeamCount = 1
-								\set stemRightBeamCount = 1
 								g8
 								<> \stopTextSpan
 							}
@@ -470,20 +452,15 @@
 								r4
 							}
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
 								R1 * 1/2
 								\bar "||"
-								\stopStaff
-								\startStaff
 							}
 						}
 					}
 				}
 			>>
 		>>
-		\tag score.piano
+		\tag piano
 		\context PianoStaff = "Piano Performer Group" \with {
 			instrumentName = \markup { Piano }
 			shortInstrumentName = \markup { Pf. }
@@ -559,15 +536,10 @@
 							r8
 						}
 						{
-							\stopStaff
-							\once \override Staff.StaffSymbol.line-count = 1
-							\startStaff
 							R1 * 1/2
 						}
 						{
 							R1 * 3/8
-							\stopStaff
-							\startStaff
 						}
 						{
 							r4
@@ -595,8 +567,6 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 1
 							\pitchedTrill
 							b''''8 \p ~ \startTextSpan \startTrillSpan c'''''
 						}
@@ -613,12 +583,7 @@
 							r4
 						}
 						{
-							\stopStaff
-							\once \override Staff.StaffSymbol.line-count = 1
-							\startStaff
 							R1 * 1/2
-							\stopStaff
-							\startStaff
 						}
 					}
 					{
@@ -667,28 +632,28 @@
 			\context Dynamics = "Piano Dynamics" {
 				{
 					{
-						r4.
+						R1 * 3/8
 					}
 					{
-						r2
+						R1 * 1/2
 					}
 					{
-						r4.
+						R1 * 3/8
 					}
 					{
-						r4.
+						R1 * 3/8
 					}
 					{
-						r2
+						R1 * 1/2
 					}
 					{
-						r2
+						R1 * 1/2
 					}
 					{
-						r2
+						R1 * 1/2
 					}
 					{
-						r2
+						R1 * 1/2
 						%%% \bar "||" %%%
 					}
 				}
@@ -756,8 +721,6 @@
 								}
 							\once \override TextSpanner.dash-fraction = 1
 							\override NoteHead #'style = #'cross
-							\set stemLeftBeamCount = 1
-							\set stemRightBeamCount = 1
 							\pitchedTrill
 							a,,,8 \ppp ~ \startTextSpan \startTrillSpan bf,,,
 						}
@@ -774,12 +737,7 @@
 							r4
 						}
 						{
-							\stopStaff
-							\once \override Staff.StaffSymbol.line-count = 1
-							\startStaff
 							R1 * 3/8
-							\stopStaff
-							\startStaff
 						}
 					}
 					{
@@ -820,12 +778,7 @@
 							r4
 						}
 						{
-							\stopStaff
-							\once \override Staff.StaffSymbol.line-count = 1
-							\startStaff
 							R1 * 1/2
-							\stopStaff
-							\startStaff
 						}
 						{
 							r8
@@ -868,13 +821,8 @@
 							r8
 						}
 						{
-							\stopStaff
-							\once \override Staff.StaffSymbol.line-count = 1
-							\startStaff
 							R1 * 1/2
 							\bar "||"
-							\stopStaff
-							\startStaff
 						}
 					}
 				}
@@ -882,13 +830,7 @@
 			\context Dynamics = "Piano Pedals" {
 				{
 					{
-						s1 * 1/8 \sustainOn
-					}
-					{
-						s1 * 1/8
-					}
-					{
-						s1 * 1/8
+						s1 * 3/8 \sustainOn
 					}
 					{
 						s1 * 1/4
@@ -900,15 +842,12 @@
 						r4
 					}
 					{
-						r4.
+						R1 * 3/8
 					}
 				}
 				{
 					{
-						s1 * 1/4 \sustainOn
-					}
-					{
-						s1 * 1/8
+						s1 * 3/8 \sustainOn
 					}
 					{
 						s1 * 1/4
@@ -920,18 +859,12 @@
 						r4
 					}
 					{
-						r2
+						R1 * 1/2
 					}
 				}
 				{
 					{
-						s1 * 1/8 \sustainOn
-					}
-					{
-						s1 * 1/4
-					}
-					{
-						s1 * 1/8
+						s1 * 1/2 \sustainOn
 					}
 					{
 						s1 * 5/16
@@ -947,7 +880,7 @@
 			}
 		>>
 		\context EnsembleGroup = "String Section Staff Group" <<
-			\tag score.violin
+			\tag violin
 			\context StringPerformerGroup = "Violin Performer Group" \with {
 				instrumentName = \markup { Violin }
 				shortInstrumentName = \markup { Vn. }
@@ -1015,7 +948,7 @@
 					}
 				}
 			>>
-			\tag score.viola
+			\tag viola
 			\context StringPerformerGroup = "Viola Performer Group" \with {
 				instrumentName = \markup { Viola }
 				shortInstrumentName = \markup { Va. }
@@ -1083,7 +1016,7 @@
 					}
 				}
 			>>
-			\tag score.cello
+			\tag cello
 			\context StringPerformerGroup = "Cello Performer Group" \with {
 				instrumentName = \markup { Cello }
 				shortInstrumentName = \markup { Vc. }
@@ -1093,9 +1026,6 @@
 						\clef "bass"
 						{
 							{
-								\stopStaff
-								\once \override Staff.StaffSymbol.line-count = 1
-								\startStaff
 								R1 * 3/8
 							}
 							{
@@ -1119,8 +1049,6 @@
 							{
 								R1 * 1/2
 								\bar "||"
-								\stopStaff
-								\startStaff
 							}
 						}
 					}
