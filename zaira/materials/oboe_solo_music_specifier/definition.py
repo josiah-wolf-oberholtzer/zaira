@@ -18,13 +18,13 @@ oboe_solo_music_specifier = consort.MusicSpecifier(
                 ),
             selector=selectortools.Selector(
                 ).by_logical_tie(pitched=True
-                ).longer_than((1, 32))
+                ).by_duration('>', (1, 32))
             ),
         staccato=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('staccato'),
             selector=selectortools.Selector(
                 ).by_logical_tie(pitched=True
-                ).shorter_than((1, 16)
+                ).by_duration('<', (1, 16)
                 ).by_length(1)
             ),
         accent=consort.AttachmentExpression(

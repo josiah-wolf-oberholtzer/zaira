@@ -14,7 +14,7 @@ wood_agitation_music_specifier = consort.MusicSpecifier(
             attachments=spannertools.StemTremoloSpanner(),
             selector=selectortools.Selector(
                 ).by_logical_tie(pitched=True
-                ).longer_than((1, 16))
+                ).by_duration('>', (1, 16))
             ),
         accent=consort.AttachmentExpression(
             attachments=(
