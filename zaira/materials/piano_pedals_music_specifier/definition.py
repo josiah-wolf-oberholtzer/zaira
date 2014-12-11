@@ -13,5 +13,9 @@ piano_pedals_music_specifier = consort.MusicSpecifier(
             selector=selectortools.Selector(),
             ),
         ),
-    rhythm_maker=rhythmmakertools.SkipRhythmMaker(),
+    rhythm_maker=rhythmmakertools.SkipRhythmMaker(
+        duration_spelling_specifier=rhythmmakertools.DurationSpellingSpecifier(
+            permit_meter_rewriting=False,
+            ),
+        ),
     )
