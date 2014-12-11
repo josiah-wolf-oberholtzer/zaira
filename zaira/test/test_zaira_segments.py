@@ -25,22 +25,38 @@ def test_zaira_segments_01(segment_path):
         segment_path,
         '__illustrate_segment__.py',
         )
-    local_output_path = os.path.join(
+    illustration_ly_path = os.path.join(
         segment_path,
         'illustration.ly',
+        )
+    illustration_pdf_path = os.path.join(
+        segment_path,
+        'illustration.pdf',
+        )
+    illustration_candidate_ly_path = os.path.join(
+        segment_path,
+        'illustration.candidate.ly',
+        )
+    illustration_candidate_pdf_path = os.path.join(
+        segment_path,
+        'illustration.candidate.pdf',
         )
     if os.path.exists(local_boilerplate_path):
         os.remove(local_boilerplate_path)
     with systemtools.FilesystemState(
-        #keep=[local_output_path],
         remove=[local_boilerplate_path],
         ):
         shutil.copyfile(boilerplate_path, local_boilerplate_path)
-        if os.path.exists(local_output_path):
-            os.remove(local_output_path)
         assert os.path.exists(local_boilerplate_path)
-        assert not os.path.exists(local_output_path)
+        assert not os.path.exists(illustration_candidate_ly_path)
+        assert not os.path.exists(illustration_candidate_pdf_path)
+
         command = 'python {}'.format(local_boilerplate_path)
         exit_status = systemtools.IOManager.spawn_subprocess(command)
         assert exit_status == 0
-        assert os.path.exists(local_output_path)
+
+        assert os.path.exists(illustration_candidate_ly_path)
+        assert os.path.exists(illustration_candidate_pdf_path)
+
+        shutil.move(illustration_candidate_ly_path, illustration_ly_path)
+        shutil.move(illustration_candidate_pdf_path, illustration_pdf_path)
