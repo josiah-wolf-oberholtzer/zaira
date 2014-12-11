@@ -18,9 +18,9 @@ segment_maker = zaira.makers.ZairaSegmentMaker(
 
 ratio = mathtools.NonreducedRatio(1, 6, 3)
 
-segment_maker.set_duration_in_seconds(
+segment_maker.desired_duration_in_seconds = (
     durationtools.Multiplier(sum(ratio), 91) *
-    zaira.materials.total_duration_in_seconds,
+    zaira.materials.total_duration_in_seconds
     )
 
 fanfare_duration = durationtools.Duration(1, 16)

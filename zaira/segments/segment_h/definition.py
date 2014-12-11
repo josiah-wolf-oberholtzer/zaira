@@ -4,8 +4,6 @@ from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import mathtools
 from abjad.tools import pitchtools
-from abjad.tools import spannertools
-from abjad.tools import selectortools
 from abjad.tools import timespantools
 import consort
 import zaira
@@ -21,9 +19,9 @@ segment_maker = zaira.makers.ZairaSegmentMaker(
 
 ratio = mathtools.NonreducedRatio(5)
 
-segment_maker.set_duration_in_seconds(
+segment_maker.desired_duration_in_seconds = (
     durationtools.Multiplier(sum(ratio), 91) *
-    zaira.materials.total_duration_in_seconds,
+    zaira.materials.total_duration_in_seconds
     )
 
 fanfare_duration = durationtools.Duration(1, 8),

@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 from abjad import new
-from abjad import show
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import mathtools
@@ -23,9 +22,9 @@ segment_maker = zaira.makers.ZairaSegmentMaker(
 
 ratio = mathtools.NonreducedRatio(2)
 
-segment_maker.set_duration_in_seconds(
+segment_maker.desired_duration_in_seconds = (
     durationtools.Multiplier(sum(ratio), 91) *
-    zaira.materials.total_duration_in_seconds,
+    zaira.materials.total_duration_in_seconds
     )
 
 

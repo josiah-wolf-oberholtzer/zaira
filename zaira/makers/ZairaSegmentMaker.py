@@ -12,9 +12,8 @@ class ZairaSegmentMaker(consort.SegmentMaker):
 
     def __init__(
         self,
-        annotation_specifier=None,
         discard_final_silence=None,
-        duration_in_seconds=None,
+        desired_duration_in_seconds=None,
         is_final_segment=None,
         name=None,
         rehearsal_mark=None,
@@ -29,9 +28,8 @@ class ZairaSegmentMaker(consort.SegmentMaker):
         score_template = score_template or zaira.makers.ZairaScoreTemplate()
         consort.SegmentMaker.__init__(
             self,
-            annotation_specifier=annotation_specifier,
             discard_final_silence=discard_final_silence,
-            duration_in_seconds=duration_in_seconds,
+            desired_duration_in_seconds=desired_duration_in_seconds,
             is_final_segment=is_final_segment,
             name=name,
             rehearsal_mark=rehearsal_mark,
