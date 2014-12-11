@@ -13,8 +13,9 @@ fourth_spanner = spannertools.ComplexTrillSpanner(
         'trill_pitch_head__stencil': schemetools.Scheme(
             'ly:text-interface::print',
             ),
-        'trill_pitch_head__text': markuptools.Markup(
-            markuptools.Markup.musicglyph('noteheads.s0harmonic'),
+        'trill_pitch_head__text': markuptools.Markup.musicglyph(
+            'noteheads.s0harmonic',
+            direction=None,
             ),
         },
     )
@@ -25,8 +26,9 @@ third_spanner = spannertools.ComplexTrillSpanner(
         'trill_pitch_head__stencil': schemetools.Scheme(
             'ly:text-interface::print',
             ),
-        'trill_pitch_head__text': markuptools.Markup(
-            markuptools.Markup.musicglyph('noteheads.s0harmonic'),
+        'trill_pitch_head__text': markuptools.Markup.musicglyph(
+            'noteheads.s0harmonic',
+            direction=None,
             ),
         },
     )

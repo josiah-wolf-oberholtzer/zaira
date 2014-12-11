@@ -63,7 +63,6 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                             )
                                         ),
                                     ),
-                                direction=Up,
                                 ),
                             },
                         interval=pitchtools.NamedInterval('+m3'),
@@ -83,7 +82,6 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                             )
                                         ),
                                     ),
-                                direction=Up,
                                 ),
                             },
                         interval=pitchtools.NamedInterval('+P4'),
@@ -103,7 +101,6 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                             )
                                         ),
                                     ),
-                                direction=Up,
                                 ),
                             },
                         interval=pitchtools.NamedInterval('+P4'),
