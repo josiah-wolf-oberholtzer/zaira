@@ -68,12 +68,12 @@ segment_maker.add_setting(
         start_offset=fanfare_duration,
         ),
     clarinet=new(
-        zaira.materials.wind_ramtongue_music_specifier,
+        zaira.materials.wind_slap_music_specifier,
         pitch_handler__register_specifier__center_pitch='D3',
         ),
-    flute=zaira.materials.wind_ramtongue_music_specifier,
+    flute=zaira.materials.wind_slap_music_specifier,
     oboe=new(
-        zaira.materials.wind_ramtongue_music_specifier,
+        zaira.materials.wind_slap_music_specifier,
         pitch_handler__register_specifier__center_pitch='Bb3',
         ),
     )
