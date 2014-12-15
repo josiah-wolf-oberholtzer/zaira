@@ -65,7 +65,7 @@ piano_fanfare_music_specifier = consort.tools.MusicSpecifier(
         ),
     labels=('pedaled',),
     pitch_handler=consort.tools.PitchClassPitchHandler(
-        chord_expressions=datastructuretools.CyclicTuple(
+        logical_tie_expressions=datastructuretools.CyclicTuple(
             [
                 consort.tools.KeyClusterExpression(
                     include_black_keys=False,

@@ -10,7 +10,7 @@ piano_clusters_music_specifier = consort.MusicSpecifier(
         ),
     labels='pedaled',
     pitch_handler=consort.PitchClassPitchHandler(
-        chord_expressions=(
+        logical_tie_expressions=(
             consort.KeyClusterExpression(
                 staff_space_width=7,
                 ),

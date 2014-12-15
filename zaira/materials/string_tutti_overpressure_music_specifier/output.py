@@ -81,7 +81,7 @@ string_tutti_overpressure_music_specifier = consort.tools.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.tools.AbsolutePitchHandler(
-        chord_expressions=datastructuretools.CyclicTuple(
+        logical_tie_expressions=datastructuretools.CyclicTuple(
             [
                 consort.tools.ChordExpression(
                     interval_numbers=(0, 7),

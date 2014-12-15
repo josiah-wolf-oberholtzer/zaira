@@ -15,7 +15,7 @@ piano_drone_music_specifier = consort.MusicSpecifier(
         ),
     labels='pedaled',
     pitch_handler=consort.AbsolutePitchHandler(
-        chord_expressions=(
+        logical_tie_expressions=(
             consort.ChordExpression(
                 interval_numbers=(-7, -3, 0, 5, 6, 12),
                 ),

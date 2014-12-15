@@ -105,7 +105,7 @@ segment_maker.add_setting(
         zaira.materials.piano_fanfare_music_specifier,
         pitch_handler__chord_expressions=
             zaira.materials.piano_fanfare_music_specifier
-                .pitch_handler.chord_expressions[:-1],
+                .pitch_handler.logical_tie_expressions[:-1],
         pitch_handler__pitch_classes="g c a f d f e b e",
         pitch_handler__register_specifier__center_pitch="g,,",
         ),
