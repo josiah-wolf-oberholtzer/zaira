@@ -8,7 +8,6 @@ dense_timespan_maker = consort.TaleaTimespanMaker(
         counts=(0, 3, 4, 2, 5),
         denominator=16,
         ),
-    minimum_duration=durationtools.Duration(1, 8),
     playing_talea=rhythmmakertools.Talea(
         counts=(6, 8, 4, 5, 6, 6, 4),
         denominator=16,
@@ -22,4 +21,7 @@ dense_timespan_maker = consort.TaleaTimespanMaker(
     step_anchor=Right,
     synchronize_groupings=False,
     synchronize_step=False,
+    timespan_specifier=consort.TimespanSpecifier(
+        minimum_duration=durationtools.Duration(1, 8),
+        ),
     )
