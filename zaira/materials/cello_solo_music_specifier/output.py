@@ -107,7 +107,8 @@ cello_solo_music_specifier = consort.tools.MusicSpecifier(
                         ),
                     None,
                     spannertools.Glissando(
-                        include_tied_leaves=False,
+                        allow_repeated_pitches=False,
+                        allow_ties=False,
                         ),
                     ]
                 ),
