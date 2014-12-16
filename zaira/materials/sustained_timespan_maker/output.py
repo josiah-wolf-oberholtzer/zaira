@@ -6,7 +6,6 @@ import consort
 
 
 sustained_timespan_maker = consort.tools.TaleaTimespanMaker(
-    can_split=True,
     initial_silence_talea=rhythmmakertools.Talea(
         counts=(0, 2, 1),
         denominator=8,

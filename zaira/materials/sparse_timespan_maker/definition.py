@@ -4,7 +4,6 @@ import consort
 
 
 sparse_timespan_maker = consort.TaleaTimespanMaker(
-    can_split=True,
     initial_silence_talea=rhythmmakertools.Talea(
         counts=(0, 4, 2, 6, 3),
         denominator=16,

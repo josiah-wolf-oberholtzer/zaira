@@ -4,7 +4,6 @@ import consort
 
 
 pedals_timespan_maker = consort.DependentTimespanMaker(
-    can_split=True,
     labels=(
         'pedaled',
         ),

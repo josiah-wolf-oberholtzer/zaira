@@ -6,7 +6,6 @@ import consort
 
 
 tutti_timespan_maker = consort.tools.TaleaTimespanMaker(
-    can_split=True,
     minimum_duration=durationtools.Duration(1, 8),
     playing_talea=rhythmmakertools.Talea(
         counts=(4, 6, 6, 5),

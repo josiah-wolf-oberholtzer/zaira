@@ -6,7 +6,6 @@ import consort
 
 
 granular_timespan_maker = consort.tools.TaleaTimespanMaker(
-    can_split=True,
     initial_silence_talea=rhythmmakertools.Talea(
         counts=(1, 4, 3),
         denominator=16,
