@@ -164,9 +164,11 @@ segment_maker.add_setting(
 segment_maker.add_setting(
     timespan_maker=new(
         zaira.materials.sparse_timespan_maker,
-        minimum_duration=0,
         playing_groupings=(1,),
         playing_talea__counts=(3, 3, 3, 3, 3, 5, 3, 4),
+        timespan_specifier=consort.TimespanSpecifier(
+            minimum_duration=0,
+            ),
         ),
     timespan_identifier=consort.RatioPartsExpression(
         parts=(1, 3, 5),

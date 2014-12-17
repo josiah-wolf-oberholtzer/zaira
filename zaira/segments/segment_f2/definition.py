@@ -86,7 +86,9 @@ segment_maker.add_setting(
     timespan_maker=new(
         zaira.materials.sustained_timespan_maker,
         fuse_groups=True,
-        minimum_duration=durationtools.Duration(1, 4),
+        timespan_specifier=consort.TimespanSpecifier(
+            minimum_duration=durationtools.Duration(1, 4),
+            ),
         ),
     drums=new(
         zaira.materials.percussion_superball_music_specifier,
