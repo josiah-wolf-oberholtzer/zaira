@@ -10,7 +10,6 @@ sustained_timespan_maker = consort.tools.TaleaTimespanMaker(
         counts=(0, 2, 1),
         denominator=8,
         ),
-    minimum_duration=durationtools.Duration(1, 8),
     playing_talea=rhythmmakertools.Talea(
         counts=(4, 5, 4, 3, 7, 6),
         denominator=8,
@@ -24,4 +23,7 @@ sustained_timespan_maker = consort.tools.TaleaTimespanMaker(
     step_anchor=Right,
     synchronize_groupings=False,
     synchronize_step=False,
+    timespan_specifier=consort.tools.TimespanSpecifier(
+        minimum_duration=durationtools.Duration(1, 8),
+        ),
     )

@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 from abjad.tools import datastructuretools
-from abjad.tools import durationtools
 from abjad.tools import rhythmmakertools
 import consort
 
@@ -23,7 +22,5 @@ granular_timespan_maker = consort.tools.TaleaTimespanMaker(
     step_anchor=Right,
     synchronize_groupings=False,
     synchronize_step=False,
-    timespan_specifier=consort.TimespanSpecifier(
-        minimum_duration=None,
-        ),
+    timespan_specifier=consort.tools.TimespanSpecifier(),
     )
