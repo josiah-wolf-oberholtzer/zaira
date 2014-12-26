@@ -5,9 +5,9 @@ import consort
 
 background_dynamic_attachment_expression = consort.AttachmentExpression(
     attachments=(
-        consort.DynamicExpression('ppp'),
-        consort.DynamicExpression('p'),
-        consort.DynamicExpression('pp'),
+        consort.SimpleDynamicExpression('ppp'),
+        consort.SimpleDynamicExpression('p'),
+        consort.SimpleDynamicExpression('pp'),
         ),
     selector=selectortools.selects_pitched_runs(),
     )

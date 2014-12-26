@@ -5,10 +5,10 @@ import consort
 
 foreground_dynamic_attachment_expression = consort.AttachmentExpression(
     attachments=(
-        consort.DynamicExpression('fff'),
-        consort.DynamicExpression('f'),
-        consort.DynamicExpression('ff'),
-        consort.DynamicExpression('mf'),
+        consort.SimpleDynamicExpression('fff'),
+        consort.SimpleDynamicExpression('f'),
+        consort.SimpleDynamicExpression('ff'),
+        consort.SimpleDynamicExpression('mf'),
         ),
     selector=selectortools.selects_pitched_runs()[0],
     )

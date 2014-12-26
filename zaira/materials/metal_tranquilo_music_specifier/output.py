@@ -16,15 +16,15 @@ metal_tranquilo_music_specifier = consort.tools.MusicSpecifier(
         dynamic_expression=consort.tools.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.tools.DynamicExpression(
+                    consort.tools.SimpleDynamicExpression(
                         hairpin_start_token='ppp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.tools.DynamicExpression(
+                    consort.tools.SimpleDynamicExpression(
                         hairpin_start_token='p',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.tools.DynamicExpression(
+                    consort.tools.SimpleDynamicExpression(
                         hairpin_start_token='pp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),

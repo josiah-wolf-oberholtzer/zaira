@@ -49,19 +49,19 @@ drum_agitation_music_specifier = consort.tools.MusicSpecifier(
         dynamic_expression=consort.tools.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    consort.tools.DynamicExpression(
+                    consort.tools.SimpleDynamicExpression(
                         hairpin_start_token='fff',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.tools.DynamicExpression(
+                    consort.tools.SimpleDynamicExpression(
                         hairpin_start_token='f',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.tools.DynamicExpression(
+                    consort.tools.SimpleDynamicExpression(
                         hairpin_start_token='ff',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
-                    consort.tools.DynamicExpression(
+                    consort.tools.SimpleDynamicExpression(
                         hairpin_start_token='mf',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),

@@ -9,11 +9,11 @@ import consort
 midground_dynamic_attachment_expression = consort.tools.AttachmentExpression(
     attachments=datastructuretools.TypedList(
         [
-            consort.tools.DynamicExpression(
+            consort.tools.SimpleDynamicExpression(
                 hairpin_start_token='mf',
                 minimum_duration=durationtools.Duration(1, 4),
                 ),
-            consort.tools.DynamicExpression(
+            consort.tools.SimpleDynamicExpression(
                 hairpin_start_token='mp',
                 minimum_duration=durationtools.Duration(1, 4),
                 ),

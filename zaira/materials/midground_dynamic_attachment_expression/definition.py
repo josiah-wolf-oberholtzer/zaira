@@ -5,8 +5,8 @@ import consort
 
 midground_dynamic_attachment_expression = consort.AttachmentExpression(
     attachments=(
-        consort.DynamicExpression('mf'),
-        consort.DynamicExpression('mp'),
+        consort.SimpleDynamicExpression('mf'),
+        consort.SimpleDynamicExpression('mp'),
         ),
     selector=selectortools.selects_pitched_runs()[0],
     )
