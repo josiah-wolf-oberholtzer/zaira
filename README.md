@@ -1,4 +1,6 @@
-zaira
-=======
+Invisible Cities (i): Zaira
+===========================
 
-Invisible Cities (i): Zaira [for ensemble] (to Ensemble Mosaik)
+Invisible Cities (i): Zaira (2014) for eight players.
+
+Written for Ensemble Mosaik.
