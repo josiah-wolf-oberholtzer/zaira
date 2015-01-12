@@ -10,7 +10,7 @@ metal_tranquilo_music_specifier = consort.MusicSpecifier(
         laissez_vibrer=zaira.materials.laissez_vibrer_attachment_expression,
         ),
     pitch_handler=consort.AbsolutePitchHandler(
-        pitches=(
+        pitch_specifier=(
             zaira.makers.Percussion.HIGH_CYMBAL,
             zaira.makers.Percussion.LOW_CYMBAL,
             zaira.makers.Percussion.MIDDLE_CYMBAL,

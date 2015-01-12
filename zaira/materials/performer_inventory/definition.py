@@ -112,7 +112,7 @@ performer_inventory = instrumenttools.PerformerInventory(
                                 ]
                             ),
                         default_tuning=indicatortools.Tuning(
-                            pitches=pitchtools.PitchSegment(
+                            pitch_specifier=pitchtools.PitchSegment(
                                 (
                                     pitchtools.NamedPitch('g'),
                                     pitchtools.NamedPitch("d'"),
@@ -154,7 +154,7 @@ performer_inventory = instrumenttools.PerformerInventory(
                                 ]
                             ),
                         default_tuning=indicatortools.Tuning(
-                            pitches=pitchtools.PitchSegment(
+                            pitch_specifier=pitchtools.PitchSegment(
                                 (
                                     pitchtools.NamedPitch('c'),
                                     pitchtools.NamedPitch('g'),
@@ -199,7 +199,7 @@ performer_inventory = instrumenttools.PerformerInventory(
                                 ]
                             ),
                         default_tuning=indicatortools.Tuning(
-                            pitches=pitchtools.PitchSegment(
+                            pitch_specifier=pitchtools.PitchSegment(
                                 (
                                     pitchtools.NamedPitch('c,'),
                                     pitchtools.NamedPitch('g,'),

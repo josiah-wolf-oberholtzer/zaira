@@ -9,7 +9,7 @@ drum_heartbeat_music_specifier = consort.MusicSpecifier(
         dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
         ),
     pitch_handler=consort.AbsolutePitchHandler(
-        pitches=zaira.makers.Percussion.KICK_DRUM,
+        pitch_specifier=zaira.makers.Percussion.KICK_DRUM,
         ),
     rhythm_maker=new(
         zaira.materials.stuttering_rhythm_maker,

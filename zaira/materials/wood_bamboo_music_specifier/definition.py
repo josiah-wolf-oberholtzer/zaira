@@ -24,7 +24,7 @@ wood_bamboo_music_specifier = consort.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.AbsolutePitchHandler(
-        pitches=zaira.makers.Percussion.BAMBOO_WINDCHIMES,
+        pitch_specifier=zaira.makers.Percussion.BAMBOO_WINDCHIMES,
         ),
     rhythm_maker=zaira.materials.undergrowth_rhythm_maker,
     )

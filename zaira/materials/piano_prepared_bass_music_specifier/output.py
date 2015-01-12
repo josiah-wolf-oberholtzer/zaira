@@ -3,6 +3,7 @@ from abjad.tools import datastructuretools
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import markuptools
+from abjad.tools import mathtools
 from abjad.tools import pitchtools
 from abjad.tools import rhythmmakertools
 from abjad.tools import scoretools
@@ -150,20 +151,26 @@ piano_prepared_bass_music_specifier = consort.tools.MusicSpecifier(
         ),
     labels=('pedaled',),
     pitch_handler=consort.tools.AbsolutePitchHandler(
-        pitches=datastructuretools.CyclicTuple(
-            [
-                pitchtools.NamedPitch('a,,,'),
-                pitchtools.NamedPitch('c,,'),
-                pitchtools.NamedPitch('b,,,'),
-                pitchtools.NamedPitch('d,,'),
-                pitchtools.NamedPitch('cs,,'),
-                pitchtools.NamedPitch('e,,'),
-                pitchtools.NamedPitch('ds,,'),
-                pitchtools.NamedPitch('f,,'),
-                pitchtools.NamedPitch('g,,'),
-                pitchtools.NamedPitch('as,,,'),
-                pitchtools.NamedPitch('fs,,'),
-                ]
+        pitch_specifier=consort.tools.PitchSpecifier(
+            pitch_segments=(
+                pitchtools.PitchSegment(
+                    (
+                        pitchtools.NamedPitch('a,,,'),
+                        pitchtools.NamedPitch('c,,'),
+                        pitchtools.NamedPitch('b,,,'),
+                        pitchtools.NamedPitch('d,,'),
+                        pitchtools.NamedPitch('cs,,'),
+                        pitchtools.NamedPitch('e,,'),
+                        pitchtools.NamedPitch('ds,,'),
+                        pitchtools.NamedPitch('f,,'),
+                        pitchtools.NamedPitch('g,,'),
+                        pitchtools.NamedPitch('as,,,'),
+                        pitchtools.NamedPitch('fs,,'),
+                        ),
+                    item_class=pitchtools.NamedPitch,
+                    ),
+                ),
+            ratio=mathtools.Ratio(1),
             ),
         ),
     rhythm_maker=rhythmmakertools.TaleaRhythmMaker(

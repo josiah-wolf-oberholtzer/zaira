@@ -57,7 +57,7 @@ piano_prepared_bass_music_specifier = consort.MusicSpecifier(
         ),
     labels='pedaled',
     pitch_handler=consort.AbsolutePitchHandler(
-        pitches=pitchtools.PitchSegment(
+        pitch_specifier=pitchtools.PitchSegment(
             'A0 C1 B0 D1 C#1 E1 D#1 F1 G1 A#0 F#1',
             ),
         ),

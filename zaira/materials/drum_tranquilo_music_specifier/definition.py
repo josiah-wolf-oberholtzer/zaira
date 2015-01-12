@@ -10,7 +10,7 @@ drum_tranquilo_music_specifier = consort.MusicSpecifier(
         laissez_vibrer=zaira.materials.laissez_vibrer_attachment_expression,
         ),
     pitch_handler=consort.AbsolutePitchHandler(
-        pitches=(
+        pitch_specifier=(
             zaira.makers.Percussion.HIGH_TOM,
             zaira.makers.Percussion.LOW_TOM,
             zaira.makers.Percussion.BASS_DRUM,

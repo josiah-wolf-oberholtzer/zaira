@@ -23,6 +23,6 @@ piano_drone_music_specifier = consort.MusicSpecifier(
                 interval_numbers=(-7, -3, 0, 1, 5, 12),
                 ),
             ),
-        pitches="d'",
+        pitch_specifier="d'",
         ),
     )

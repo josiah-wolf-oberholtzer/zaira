@@ -3,6 +3,7 @@ from abjad.tools import datastructuretools
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import markuptools
+from abjad.tools import mathtools
 from abjad.tools import pitchtools
 from abjad.tools import rhythmmakertools
 from abjad.tools import scoretools
@@ -163,23 +164,29 @@ cello_solo_music_specifier = consort.tools.MusicSpecifier(
         ),
     pitch_handler=consort.tools.AbsolutePitchHandler(
         pitch_application_rate='division',
-        pitches=datastructuretools.CyclicTuple(
-            [
-                pitchtools.NamedPitch('d,'),
-                pitchtools.NamedPitch('f,'),
-                pitchtools.NamedPitch('d,'),
-                pitchtools.NamedPitch('fqs,'),
-                pitchtools.NamedPitch('ef,'),
-                pitchtools.NamedPitch('d,'),
-                pitchtools.NamedPitch('ef,'),
-                pitchtools.NamedPitch('f,'),
-                pitchtools.NamedPitch('fqs,'),
-                pitchtools.NamedPitch('d,'),
-                pitchtools.NamedPitch('g,'),
-                pitchtools.NamedPitch('d,'),
-                pitchtools.NamedPitch('d,'),
-                pitchtools.NamedPitch('as,'),
-                ]
+        pitch_specifier=consort.tools.PitchSpecifier(
+            pitch_segments=(
+                pitchtools.PitchSegment(
+                    (
+                        pitchtools.NamedPitch('d,'),
+                        pitchtools.NamedPitch('f,'),
+                        pitchtools.NamedPitch('d,'),
+                        pitchtools.NamedPitch('fqs,'),
+                        pitchtools.NamedPitch('ef,'),
+                        pitchtools.NamedPitch('d,'),
+                        pitchtools.NamedPitch('ef,'),
+                        pitchtools.NamedPitch('f,'),
+                        pitchtools.NamedPitch('fqs,'),
+                        pitchtools.NamedPitch('d,'),
+                        pitchtools.NamedPitch('g,'),
+                        pitchtools.NamedPitch('d,'),
+                        pitchtools.NamedPitch('d,'),
+                        pitchtools.NamedPitch('as,'),
+                        ),
+                    item_class=pitchtools.NamedPitch,
+                    ),
+                ),
+            ratio=mathtools.Ratio(1),
             ),
         ),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(

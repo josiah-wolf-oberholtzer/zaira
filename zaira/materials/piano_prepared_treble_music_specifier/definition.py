@@ -58,7 +58,7 @@ piano_prepared_treble_music_specifier = consort.MusicSpecifier(
         ),
     labels='pedaled',
     pitch_handler=consort.AbsolutePitchHandler(
-        pitches=pitchtools.PitchSegment(
+        pitch_specifier=pitchtools.PitchSegment(
             'C7 B7 D7 C#7 E7 D#7 F7 G7 A#7 F#7 A7',
             ),
         ),

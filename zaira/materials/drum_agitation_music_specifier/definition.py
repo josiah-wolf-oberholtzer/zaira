@@ -19,7 +19,7 @@ drum_agitation_music_specifier = consort.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.AbsolutePitchHandler(
-        pitches=(
+        pitch_specifier=(
             zaira.makers.Percussion.HIGH_TOM,
             zaira.makers.Percussion.LOW_TOM,
             zaira.makers.Percussion.BASS_DRUM,

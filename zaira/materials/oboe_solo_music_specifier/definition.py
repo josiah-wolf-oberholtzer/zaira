@@ -36,7 +36,7 @@ oboe_solo_music_specifier = consort.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.AbsolutePitchHandler(
-        pitches="d''' d''' ef''' d''' ef''' f''' d''' g''' d''' d''' as''",
+        pitch_specifier="d''' d''' ef''' d''' ef''' f''' d''' g''' d''' d''' as''",
         pitch_application_rate='division',
         ),
     rhythm_maker=new(

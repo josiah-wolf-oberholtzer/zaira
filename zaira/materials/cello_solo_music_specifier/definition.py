@@ -46,7 +46,7 @@ cello_solo_music_specifier = consort.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.AbsolutePitchHandler(
-        pitches="d, f, d, fqs, ef, d, ef, f, fqs, d, g, d, d, as,",
+        pitch_specifier="d, f, d, fqs, ef, d, ef, f, fqs, d, g, d, d, as,",
         pitch_application_rate='division',
         ),
     rhythm_maker=new(

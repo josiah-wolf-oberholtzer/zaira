@@ -19,7 +19,7 @@ metal_agitation_music_specifier = consort.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.AbsolutePitchHandler(
-        pitches=(
+        pitch_specifier=(
             zaira.makers.Percussion.HIGH_CYMBAL,
             zaira.makers.Percussion.LOW_CYMBAL,
             zaira.makers.Percussion.MIDDLE_CYMBAL,
