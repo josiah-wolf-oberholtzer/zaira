@@ -17,10 +17,10 @@ piano_drone_music_specifier = consort.MusicSpecifier(
     pitch_handler=consort.AbsolutePitchHandler(
         logical_tie_expressions=(
             consort.ChordExpression(
-                interval_numbers=(-7, -3, 0, 5, 6, 12),
+                chord_expr=(-7, -3, 0, 5, 6, 12),
                 ),
             consort.ChordExpression(
-                interval_numbers=(-7, -3, 0, 1, 5, 12),
+                chord_expr=(-7, -3, 0, 1, 5, 12),
                 ),
             ),
         pitch_specifier="d'",

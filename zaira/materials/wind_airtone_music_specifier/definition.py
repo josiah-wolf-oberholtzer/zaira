@@ -22,7 +22,7 @@ wind_airtone_music_specifier = consort.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.PitchClassPitchHandler(
-        pitch_classes='a c b d b f gs e',
+        pitch_specifier='a c b d b f gs e',
         register_specifier=consort.RegisterSpecifier(),
         register_spread=0,
         ),

@@ -46,7 +46,7 @@ string_trills_music_specifier = consort.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.PitchClassPitchHandler(
-        pitch_classes='a c b',
+        pitch_specifier='a c b',
         register_specifier=zaira.materials.register_specifier_inventory[3],
         ),
     rhythm_maker=zaira.materials.sustained_rhythm_maker,

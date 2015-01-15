@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 from abjad import Markup
+from abjad.tools import pitchtools
 from abjad.tools import spannertools
 from abjad.tools import selectortools
 import consort
@@ -27,16 +28,18 @@ drum_brushed_music_specifier = consort.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.AbsolutePitchHandler(
-        pitch_specifier=(
-            zaira.makers.Percussion.HIGH_TOM,
-            zaira.makers.Percussion.LOW_TOM,
-            zaira.makers.Percussion.BASS_DRUM,
-            zaira.makers.Percussion.HIGH_TOM,
-            zaira.makers.Percussion.BASS_DRUM,
-            zaira.makers.Percussion.LOW_TOM,
-            zaira.makers.Percussion.HIGH_TOM,
-            zaira.makers.Percussion.BASS_DRUM,
-            zaira.makers.Percussion.LOW_TOM,
+        pitch_specifier=pitchtools.PitchSegment(
+            items=(
+                zaira.makers.Percussion.HIGH_TOM,
+                zaira.makers.Percussion.LOW_TOM,
+                zaira.makers.Percussion.BASS_DRUM,
+                zaira.makers.Percussion.HIGH_TOM,
+                zaira.makers.Percussion.BASS_DRUM,
+                zaira.makers.Percussion.LOW_TOM,
+                zaira.makers.Percussion.HIGH_TOM,
+                zaira.makers.Percussion.BASS_DRUM,
+                zaira.makers.Percussion.LOW_TOM,
+                ),
             ),
         ),
     rhythm_maker=zaira.materials.sustained_rhythm_maker,

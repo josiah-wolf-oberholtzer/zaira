@@ -2,7 +2,8 @@
 from abjad.tools import datastructuretools
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
-from abjad.tools import markuptools
+from abjad.tools import mathtools
+from abjad.tools import pitchtools
 from abjad.tools import rhythmmakertools
 from abjad.tools import scoretools
 from abjad.tools import selectortools
@@ -10,32 +11,17 @@ from abjad.tools import spannertools
 import consort
 
 
-brazil_nut_music_specifier = consort.tools.MusicSpecifier(
+wood_bamboo_music_specifier = consort.tools.MusicSpecifier(
     attachment_handler=consort.tools.AttachmentHandler(
-        clef_spanner=consort.tools.AttachmentExpression(
-            attachments=datastructuretools.TypedList(
-                [
-                    consort.tools.ClefSpanner(
-                        clef=indicatortools.Clef(
-                            name='percussion',
-                            ),
-                        ),
-                    ]
-                ),
-            ),
         dynamic_expression=consort.tools.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
                     consort.tools.SimpleDynamicExpression(
-                        hairpin_start_token='ppp',
+                        hairpin_start_token='mf',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
                     consort.tools.SimpleDynamicExpression(
-                        hairpin_start_token='p',
-                        minimum_duration=durationtools.Duration(1, 4),
-                        ),
-                    consort.tools.SimpleDynamicExpression(
-                        hairpin_start_token='pp',
+                        hairpin_start_token='mp',
                         minimum_duration=durationtools.Duration(1, 4),
                         ),
                     ]
@@ -50,6 +36,10 @@ brazil_nut_music_specifier = consort.tools.MusicSpecifier(
                             scoretools.Note,
                             scoretools.Chord,
                             ),
+                        ),
+                    selectortools.ItemSelectorCallback(
+                        item=0,
+                        apply_to_each=True,
                         ),
                     ),
                 ),
@@ -81,19 +71,6 @@ brazil_nut_music_specifier = consort.tools.MusicSpecifier(
                     ),
                 ),
             ),
-        staff_lines_spanner=consort.tools.AttachmentExpression(
-            attachments=datastructuretools.TypedList(
-                [
-                    spannertools.StaffLinesSpanner(
-                        lines=(4, -4),
-                        overrides={
-                            'note_head__no_ledgers': True,
-                            'note_head__style': 'cross',
-                            },
-                        ),
-                    ]
-                ),
-            ),
         stem_tremolo_spanner=consort.tools.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
@@ -118,46 +95,20 @@ brazil_nut_music_specifier = consort.tools.MusicSpecifier(
                     ),
                 ),
             ),
-        text_spanner=consort.tools.AttachmentExpression(
-            attachments=datastructuretools.TypedList(
-                [
-                    consort.tools.ComplexTextSpanner(
-                        markup=markuptools.Markup(
-                            contents=(
-                                markuptools.MarkupCommand(
-                                    'box',
-                                    markuptools.MarkupCommand(
-                                        'pad-around',
-                                        0.5,
-                                        markuptools.MarkupCommand(
-                                            'italic',
-                                            markuptools.MarkupCommand(
-                                                'concat',
-                                                [
-                                                    markuptools.MarkupCommand(
-                                                        'vstrut'
-                                                        ),
-                                                    'shaker',
-                                                    ]
-                                                )
-                                            )
-                                        )
-                                    ),
-                                ),
-                            ),
+        ),
+    pitch_handler=consort.tools.AbsolutePitchHandler(
+        pitch_specifier=consort.tools.PitchSpecifier(
+            pitch_segments=(
+                pitchtools.PitchSegment(
+                    (
+                        pitchtools.NamedPitch('a'),
                         ),
-                    ]
-                ),
-            selector=selectortools.Selector(
-                callbacks=(
-                    selectortools.PrototypeSelectorCallback(
-                        prototype=scoretools.Leaf,
-                        ),
+                    item_class=pitchtools.NamedPitch,
                     ),
                 ),
+            ratio=mathtools.Ratio(1),
             ),
         ),
-    pitches_are_nonsemantic=True,
     rhythm_maker=rhythmmakertools.TaleaRhythmMaker(
         talea=rhythmmakertools.Talea(
             counts=(1, -3, 1, -2, 1, -2, 2, -4, 4),

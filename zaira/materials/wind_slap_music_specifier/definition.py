@@ -50,7 +50,7 @@ wind_slap_music_specifier = consort.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.PitchClassPitchHandler(
-        pitch_classes='a c b d b f gs e d f cs',
+        pitch_specifier='a c b d b f gs e d f cs',
         register_specifier=consort.RegisterSpecifier(),
         register_spread=0,
         ),

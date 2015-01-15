@@ -12,6 +12,17 @@ import consort
 
 piano_guero_music_specifier = consort.tools.MusicSpecifier(
     attachment_handler=consort.tools.AttachmentHandler(
+        clef_spanner=consort.tools.AttachmentExpression(
+            attachments=datastructuretools.TypedList(
+                [
+                    consort.tools.ClefSpanner(
+                        clef=indicatortools.Clef(
+                            name='percussion',
+                            ),
+                        ),
+                    ]
+                ),
+            ),
         direction_markup=consort.tools.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
@@ -186,26 +197,18 @@ piano_guero_music_specifier = consort.tools.MusicSpecifier(
                     ),
                 ),
             ),
-        percussion_staff=consort.tools.AttachmentExpression(
+        staff_lines_spanner=consort.tools.AttachmentExpression(
             attachments=datastructuretools.TypedList(
                 [
-                    (
-                        consort.tools.ClefSpanner(
-                            clef=indicatortools.Clef(
-                                name='percussion',
-                                ),
-                            ),
-                        spannertools.StaffLinesSpanner(
-                            lines=(4, -4),
-                            overrides={
-                                'note_head__no_ledgers': True,
-                                'note_head__style': 'cross',
-                                },
-                            ),
+                    spannertools.StaffLinesSpanner(
+                        lines=(4, -4),
+                        overrides={
+                            'note_head__no_ledgers': True,
+                            'note_head__style': 'cross',
+                            },
                         ),
                     ]
                 ),
-            selector=selectortools.Selector(),
             ),
         text_spanner=consort.tools.AttachmentExpression(
             attachments=datastructuretools.TypedList(

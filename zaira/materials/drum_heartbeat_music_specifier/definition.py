@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
-from abjad.tools.topleveltools import new
+from abjad import new
+from abjad.tools import pitchtools
 import consort
 import zaira
 
@@ -9,7 +10,9 @@ drum_heartbeat_music_specifier = consort.MusicSpecifier(
         dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
         ),
     pitch_handler=consort.AbsolutePitchHandler(
-        pitch_specifier=zaira.makers.Percussion.KICK_DRUM,
+        pitch_specifier=pitchtools.PitchSegment(
+            items=[zaira.makers.Percussion.KICK_DRUM],
+            ),
         ),
     rhythm_maker=new(
         zaira.materials.stuttering_rhythm_maker,

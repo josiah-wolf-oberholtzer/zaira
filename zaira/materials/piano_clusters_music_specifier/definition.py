@@ -35,7 +35,7 @@ piano_clusters_music_specifier = consort.MusicSpecifier(
                 staff_space_width=9,
                 ),
             ),
-        pitch_classes="c g e a",
+        pitch_specifier="c g e a",
         pitch_range=pitchtools.PitchRange('[A1, C7)'),
         register_specifier=zaira.materials.register_specifier_inventory[0],
         ),

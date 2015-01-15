@@ -33,7 +33,7 @@ string_tutti_overpressure_music_specifier = consort.MusicSpecifier(
     pitch_handler=consort.AbsolutePitchHandler(
         logical_tie_expressions=(
             consort.ChordExpression(
-                interval_numbers=(0, 7),
+                chord_expr=(0, 7),
                 ),
             ),
         ),

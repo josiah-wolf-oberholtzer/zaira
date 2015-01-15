@@ -42,7 +42,7 @@ string_undergrowth_music_specifier = consort.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.PitchClassPitchHandler(
-        pitch_classes='a c b d',
+        pitch_specifier='a c b d',
         register_specifier=zaira.materials.register_specifier_inventory[3],
         ),
     rhythm_maker=zaira.materials.undergrowth_rhythm_maker,

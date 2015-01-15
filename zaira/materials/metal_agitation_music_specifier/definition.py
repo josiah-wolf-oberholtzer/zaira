@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 from abjad.tools import indicatortools
+from abjad.tools import pitchtools
 from abjad.tools import selectortools
 from abjad.tools.topleveltools import new
 import consort
@@ -19,21 +20,23 @@ metal_agitation_music_specifier = consort.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.AbsolutePitchHandler(
-        pitch_specifier=(
-            zaira.makers.Percussion.HIGH_CYMBAL,
-            zaira.makers.Percussion.LOW_CYMBAL,
-            zaira.makers.Percussion.MIDDLE_CYMBAL,
-            zaira.makers.Percussion.HIGH_CYMBAL,
-            zaira.makers.Percussion.MIDDLE_CYMBAL,
-            zaira.makers.Percussion.LOW_CYMBAL,
-            zaira.makers.Percussion.HIGH_CYMBAL,
-            zaira.makers.Percussion.TAM_TAM,
-            zaira.makers.Percussion.MIDDLE_CYMBAL,
-            zaira.makers.Percussion.LOW_CYMBAL,
-            zaira.makers.Percussion.HIGH_CYMBAL,
-            zaira.makers.Percussion.TAM_TAM,
-            zaira.makers.Percussion.LOW_CYMBAL,
-            zaira.makers.Percussion.MIDDLE_CYMBAL,
+        pitch_specifier=pitchtools.PitchSegment(
+            items=(
+                zaira.makers.Percussion.HIGH_CYMBAL,
+                zaira.makers.Percussion.LOW_CYMBAL,
+                zaira.makers.Percussion.MIDDLE_CYMBAL,
+                zaira.makers.Percussion.HIGH_CYMBAL,
+                zaira.makers.Percussion.MIDDLE_CYMBAL,
+                zaira.makers.Percussion.LOW_CYMBAL,
+                zaira.makers.Percussion.HIGH_CYMBAL,
+                zaira.makers.Percussion.TAM_TAM,
+                zaira.makers.Percussion.MIDDLE_CYMBAL,
+                zaira.makers.Percussion.LOW_CYMBAL,
+                zaira.makers.Percussion.HIGH_CYMBAL,
+                zaira.makers.Percussion.TAM_TAM,
+                zaira.makers.Percussion.LOW_CYMBAL,
+                zaira.makers.Percussion.MIDDLE_CYMBAL,
+                ),
             ),
         ),
     rhythm_maker=new(

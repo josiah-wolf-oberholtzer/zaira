@@ -3,6 +3,8 @@ from abjad.tools import datastructuretools
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import markuptools
+from abjad.tools import mathtools
+from abjad.tools import pitchtools
 from abjad.tools import rhythmmakertools
 from abjad.tools import scoretools
 from abjad.tools import selectortools
@@ -10,7 +12,7 @@ from abjad.tools import spannertools
 import consort
 
 
-brazil_nut_music_specifier = consort.tools.MusicSpecifier(
+wind_keyclick_music_specifier = consort.tools.MusicSpecifier(
     attachment_handler=consort.tools.AttachmentHandler(
         clef_spanner=consort.tools.AttachmentExpression(
             attachments=datastructuretools.TypedList(
@@ -137,7 +139,7 @@ brazil_nut_music_specifier = consort.tools.MusicSpecifier(
                                                     markuptools.MarkupCommand(
                                                         'vstrut'
                                                         ),
-                                                    'shaker',
+                                                    'keyclick',
                                                     ]
                                                 )
                                             )
@@ -155,6 +157,32 @@ brazil_nut_music_specifier = consort.tools.MusicSpecifier(
                         ),
                     ),
                 ),
+            ),
+        ),
+    pitch_handler=consort.tools.AbsolutePitchHandler(
+        pitch_specifier=consort.tools.PitchSpecifier(
+            pitch_segments=(
+                pitchtools.PitchSegment(
+                    (
+                        pitchtools.NamedPitch("c'"),
+                        pitchtools.NamedPitch("g'"),
+                        pitchtools.NamedPitch('f'),
+                        pitchtools.NamedPitch("g'"),
+                        pitchtools.NamedPitch("g'"),
+                        pitchtools.NamedPitch("c'"),
+                        pitchtools.NamedPitch('f'),
+                        pitchtools.NamedPitch("c'"),
+                        pitchtools.NamedPitch('f'),
+                        pitchtools.NamedPitch("g'"),
+                        pitchtools.NamedPitch("c'"),
+                        pitchtools.NamedPitch("c'"),
+                        pitchtools.NamedPitch('f'),
+                        pitchtools.NamedPitch("g'"),
+                        ),
+                    item_class=pitchtools.NamedPitch,
+                    ),
+                ),
+            ratio=mathtools.Ratio(1),
             ),
         ),
     pitches_are_nonsemantic=True,

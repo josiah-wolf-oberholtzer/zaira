@@ -60,7 +60,7 @@ piano_fanfare_music_specifier = consort.MusicSpecifier(
                 staff_space_width=9,
                 ),
             ),
-        pitch_classes="c a f d e b",
+        pitch_specifier="c a f d e b",
         pitch_range=pitchtools.PitchRange('[A1, C7)'),
         register_specifier=consort.RegisterSpecifier(),
         ),

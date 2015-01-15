@@ -25,7 +25,7 @@ string_flourish_music_specifier = consort.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.PitchClassPitchHandler(
-        pitch_classes='d f e g cs as',
+        pitch_specifier='d f e g cs as',
         register_specifier=zaira.materials.register_specifier_inventory[2],
         register_spread=0,
         ),

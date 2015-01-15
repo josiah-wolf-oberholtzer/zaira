@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
-from abjad.tools.topleveltools import new
+from abjad import new
+from abjad.tools import pitchtools
 import consort
 import zaira
 
@@ -10,16 +11,18 @@ drum_tranquilo_music_specifier = consort.MusicSpecifier(
         laissez_vibrer=zaira.materials.laissez_vibrer_attachment_expression,
         ),
     pitch_handler=consort.AbsolutePitchHandler(
-        pitch_specifier=(
-            zaira.makers.Percussion.HIGH_TOM,
-            zaira.makers.Percussion.LOW_TOM,
-            zaira.makers.Percussion.BASS_DRUM,
-            zaira.makers.Percussion.HIGH_TOM,
-            zaira.makers.Percussion.BASS_DRUM,
-            zaira.makers.Percussion.LOW_TOM,
-            zaira.makers.Percussion.HIGH_TOM,
-            zaira.makers.Percussion.BASS_DRUM,
-            zaira.makers.Percussion.LOW_TOM,
+        pitch_specifier=pitchtools.PitchSegment(
+            items=(
+                zaira.makers.Percussion.HIGH_TOM,
+                zaira.makers.Percussion.LOW_TOM,
+                zaira.makers.Percussion.BASS_DRUM,
+                zaira.makers.Percussion.HIGH_TOM,
+                zaira.makers.Percussion.BASS_DRUM,
+                zaira.makers.Percussion.LOW_TOM,
+                zaira.makers.Percussion.HIGH_TOM,
+                zaira.makers.Percussion.BASS_DRUM,
+                zaira.makers.Percussion.LOW_TOM,
+                ),
             ),
         ),
     rhythm_maker=new(

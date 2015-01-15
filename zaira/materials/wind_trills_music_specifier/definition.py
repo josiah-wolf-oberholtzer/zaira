@@ -21,7 +21,7 @@ wind_trills_music_specifier = consort.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.PitchClassPitchHandler(
-        pitch_classes='c ef d',
+        pitch_specifier='c ef d',
         register_specifier=consort.RegisterSpecifier(
             center_pitch="g'",
             ),
