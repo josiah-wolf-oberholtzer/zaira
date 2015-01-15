@@ -1,6 +1,7 @@
 # -*- encoding: utf-8 -*-
 from abjad import Markup
 from abjad.tools import selectortools
+from abjad.tools import spannertools
 import consort
 import zaira
 
@@ -17,8 +18,15 @@ fast_markup = fast_markup.box()
 
 piano_guero_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
+        clef_spanner=consort.ClefSpanner('percussion'),
         dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
-        percussion_staff=zaira.materials.percussion_staff_attachment_expression,
+        staff_lines_spanner=spannertools.StaffLinesSpanner(
+            lines=(4, -4),
+            overrides={
+                'note_head__no_ledgers': True,
+                'note_head__style': 'cross',
+                }
+            ),
         text_spanner=consort.AttachmentExpression(
             attachments=consort.ComplexTextSpanner(
                 markup=Markup(r'\concat { \vstrut guero }')

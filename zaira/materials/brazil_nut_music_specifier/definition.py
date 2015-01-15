@@ -10,7 +10,27 @@ import zaira
 brazil_nut_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
-        percussion_staff=zaira.materials.percussion_staff_attachment_expression,
+        clef_spanner=consort.ClefSpanner('percussion'),
+        staff_lines_spanner=spannertools.StaffLinesSpanner(
+            lines=(4, -4),
+            overrides={
+                'note_head__no_ledgers': True,
+                'note_head__style': 'cross',
+                }
+            ),
+        staccato=consort.AttachmentExpression(
+            attachments=indicatortools.Articulation('.'),
+            selector=selectortools.Selector(
+                ).by_logical_tie(pitched=True
+                ).by_duration('<', (1, 8)
+                ).by_length(1)
+            ),
+        stem_tremolo_spanner=consort.AttachmentExpression(
+            attachments=spannertools.StemTremoloSpanner(),
+            selector=selectortools.Selector(
+                ).by_logical_tie(pitched=True
+                ).by_duration('>', (1, 16))
+            ),
         text_spanner=consort.AttachmentExpression(
             attachments=consort.ComplexTextSpanner(
                 markup=Markup(r'\concat { \vstrut shaker }')
@@ -19,19 +39,6 @@ brazil_nut_music_specifier = consort.MusicSpecifier(
                     .box(),
                 ),
             selector=selectortools.Selector().by_leaves(),
-            ),
-        stem_tremolo_spanner=consort.AttachmentExpression(
-            attachments=spannertools.StemTremoloSpanner(),
-            selector=selectortools.Selector(
-                ).by_logical_tie(pitched=True
-                ).by_duration('>', (1, 16))
-            ),
-        staccato=consort.AttachmentExpression(
-            attachments=indicatortools.Articulation('.'),
-            selector=selectortools.Selector(
-                ).by_logical_tie(pitched=True
-                ).by_duration('<', (1, 8)
-                ).by_length(1)
             ),
         ),
     pitches_are_nonsemantic=True,
