@@ -72,7 +72,7 @@ segment_maker.add_setting(
         ),
     oboe=new(
         zaira.materials.oboe_solo_music_specifier,
-        pitch_handler__transform_stack=(
+        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
             pitchtools.Transposition(-5),
             ),
         ),
@@ -92,11 +92,11 @@ segment_maker.add_setting(
         ),
     drums=new(
         zaira.materials.percussion_superball_music_specifier,
-        pitch_handler__pitches=zaira.makers.Percussion.BASS_DRUM,
+        pitch_handler__pitch_specifier=zaira.makers.Percussion.BASS_DRUM,
         ),
     metals=new(
         zaira.materials.percussion_superball_music_specifier,
-        pitch_handler__pitches=zaira.makers.Percussion.TAM_TAM,
+        pitch_handler__pitch_specifier=zaira.makers.Percussion.TAM_TAM,
         ),
     )
 
@@ -109,11 +109,11 @@ segment_maker.add_setting(
         ),
     drums=new(
         zaira.materials.percussion_brushed_music_specifier,
-        pitch_handler__pitches=zaira.makers.Percussion.TAM_TAM,
+        pitch_handler__pitch_specifier=zaira.makers.Percussion.TAM_TAM,
         ),
     metals=new(
         zaira.materials.percussion_brushed_music_specifier,
-        pitch_handler__pitches=zaira.makers.Percussion.BASS_DRUM,
+        pitch_handler__pitch_specifier=zaira.makers.Percussion.BASS_DRUM,
         ),
     )
 
@@ -129,7 +129,7 @@ segment_maker.add_setting(
         ),
     piano_rh=new(
         zaira.materials.piano_drone_music_specifier,
-        pitch_handler__pitches='b',
+        pitch_handler__pitch_specifier='b',
         ),
     )
 

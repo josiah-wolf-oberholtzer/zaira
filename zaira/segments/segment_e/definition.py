@@ -227,7 +227,7 @@ segment_maker.add_setting(
     violin=new(
         zaira.materials.string_trills_music_specifier,
         pitch_handler__register_specifier__center_pitch="c''",
-        pitch_handler__transform_stack=(
+        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
             pitchtools.Transposition(-3),
             ),
         seed=0,
@@ -235,7 +235,7 @@ segment_maker.add_setting(
     viola=new(
         zaira.materials.string_trills_music_specifier,
         pitch_handler__register_specifier__center_pitch="c'",
-        pitch_handler__transform_stack=(
+        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
             pitchtools.Transposition(-3),
             ),
         seed=1,
@@ -243,7 +243,7 @@ segment_maker.add_setting(
     cello=new(
         zaira.materials.string_trills_music_specifier,
         pitch_handler__register_specifier__center_pitch='c',
-        pitch_handler__transform_stack=(
+        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
             pitchtools.Transposition(-3),
             ),
         seed=2,
@@ -301,17 +301,17 @@ segment_maker.add_setting(
         ),
     violin=new(
         zaira.materials.string_tutti_overpressure_music_specifier,
-        pitch_handler__pitches='g',
+        pitch_handler__pitch_specifier='g',
         seed=0,
         ),
     viola=new(
         zaira.materials.string_tutti_overpressure_music_specifier,
-        pitch_handler__pitches='c',
+        pitch_handler__pitch_specifier='c',
         seed=1,
         ),
     cello=new(
         zaira.materials.string_tutti_overpressure_music_specifier,
-        pitch_handler__pitches='c,',
+        pitch_handler__pitch_specifier='c,',
         seed=2,
         ),
     )
@@ -334,16 +334,16 @@ segment_maker.add_setting(
         pitch_handler__logical_tie_expressions=
             zaira.materials.piano_fanfare_music_specifier
                 .pitch_handler.logical_tie_expressions[:-1],
-        pitch_handler__pitch_classes="g c a f d f e b e",
+        pitch_handler__pitch_specifier="g c a f d f e b e",
         pitch_handler__register_specifier__center_pitch="g,,",
         ),
     drums=new(
         zaira.materials.percussion_fanfare_music_specifier,
-        pitch_handler__pitches=zaira.makers.Percussion.KICK_DRUM,
+        pitch_handler__pitch_specifier=zaira.makers.Percussion.KICK_DRUM,
         ),
     metals=new(
         zaira.materials.percussion_fanfare_music_specifier,
-        pitch_handler__pitches=zaira.makers.Percussion.BRAKE_DRUM,
+        pitch_handler__pitch_specifier=zaira.makers.Percussion.BRAKE_DRUM,
         ),
     )
 
