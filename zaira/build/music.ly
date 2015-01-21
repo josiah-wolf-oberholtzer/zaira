@@ -43,7 +43,16 @@
 }
 
 \paper {
-    max-systems-per-page = 2
+    page-breaking = #ly:optimal-breaking
+    print-first-page-number = ##f
+    print-page-number = ##t
+    ragged-bottom = ##f
+    ragged-last-bottom = ##t
+    system-system-spacing = #'(
+        (basic-distance . 0)
+        (padding . 12)
+        (stretchability . 100)
+        )
 }
 
 \score {
