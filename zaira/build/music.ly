@@ -6,6 +6,9 @@
 #(ly:set-option 'relative-includes #t)
 \include "../stylesheets/stylesheet.ily"
 
+#(set-default-paper-size "11x17" 'portrait)
+#(set-global-staff-size 10)
+
 \header {
     composer = \markup {
         \column {
