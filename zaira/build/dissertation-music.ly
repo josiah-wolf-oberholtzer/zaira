@@ -6,8 +6,31 @@
 #(ly:set-option 'relative-includes #t)
 \include "../stylesheets/stylesheet.ily"
 
-#(set-default-paper-size "11x17" 'portrait)
-#(set-global-staff-size 10)
+#(set-default-paper-size "letter" 'portrait)
+#(set-global-staff-size 5)
+
+\paper {
+    bottom-margin = 1\in
+    left-margin = 1\in
+    right-margin = 1\in
+    top-margin = 1\in
+    evenFooterMarkup = \markup { \null }
+    oddFooterMarkup = \markup { \null }
+    page-breaking = #ly:optimal-breaking
+    system-system-spacing = #'(
+        (basic-distance . 0)
+        (minimum-distance . 0)
+        (padding . 0)
+        (stretchability . 100)
+    )
+}
+
+\layout {
+    \context {
+        \Score
+        proportionalNotationDuration = #(ly:make-moment 1 32)
+    }
+}
 
 \header {
     composer = \markup {
