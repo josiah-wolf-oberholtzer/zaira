@@ -41,6 +41,8 @@ brazil_nut_music_specifier = consort.MusicSpecifier(
             selector=selectortools.Selector().by_leaves(),
             ),
         ),
-    pitches_are_nonsemantic=True,
+    pitch_handler=consort.AbsolutePitchHandler(
+        pitches_are_nonsemantic=True,
+        ),
     rhythm_maker=zaira.materials.undergrowth_rhythm_maker,
     )

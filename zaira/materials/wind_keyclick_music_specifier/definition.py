@@ -43,7 +43,7 @@ wind_keyclick_music_specifier = consort.MusicSpecifier(
         ),
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier="c' g' f g' g' c' f c' f g' c' c' f g'",
+        pitches_are_nonsemantic=True,
         ),
-    pitches_are_nonsemantic=True,
     rhythm_maker=zaira.materials.undergrowth_rhythm_maker,
     )

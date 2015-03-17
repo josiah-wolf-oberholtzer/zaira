@@ -21,7 +21,6 @@ glissando_rhythm_maker = rhythmmakertools.IncisedRhythmMaker(
     duration_spelling_specifier=rhythmmakertools.DurationSpellingSpecifier(
         decrease_durations_monotonically=True,
         forbidden_written_duration=durationtools.Duration(1, 2),
-        permit_meter_rewriting=True,
         ),
     tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
         avoid_dots=True,
