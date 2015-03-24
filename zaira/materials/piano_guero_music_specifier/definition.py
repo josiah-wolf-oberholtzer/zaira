@@ -44,7 +44,7 @@ piano_guero_music_specifier = consort.MusicSpecifier(
                 slow_markup,
                 fast_markup,
                 ),
-            selector=selectortools.selects_pitched_runs()[0],
+            selector=selectortools.select_pitched_runs()[0],
             ),
         ),
     pitch_handler=consort.AbsolutePitchHandler(),

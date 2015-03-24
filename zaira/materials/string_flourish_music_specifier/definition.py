@@ -12,7 +12,7 @@ string_flourish_music_specifier = consort.MusicSpecifier(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         slur=consort.AttachmentExpression(
             attachments=spannertools.Slur(),
-            selector=selectortools.selects_pitched_runs(),
+            selector=selectortools.select_pitched_runs(),
             ),
         text_spanner=consort.AttachmentExpression(
             attachments=consort.ComplexTextSpanner(
@@ -21,7 +21,7 @@ string_flourish_music_specifier = consort.MusicSpecifier(
                     .pad_around(0.5)
                     .box(),
                 ),
-            selector=selectortools.selects_pitched_runs(),
+            selector=selectortools.select_pitched_runs(),
             ),
         ),
     pitch_handler=consort.PitchClassPitchHandler(

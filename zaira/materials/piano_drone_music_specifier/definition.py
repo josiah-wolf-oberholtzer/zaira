@@ -10,7 +10,7 @@ piano_drone_music_specifier = consort.MusicSpecifier(
         dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
         stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=spannertools.StemTremoloSpanner(),
-            selector=selectortools.selects_pitched_runs(),
+            selector=selectortools.select_pitched_runs(),
             ),
         ),
     labels='pedaled',

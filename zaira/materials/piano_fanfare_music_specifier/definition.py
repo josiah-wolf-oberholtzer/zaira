@@ -10,7 +10,7 @@ piano_fanfare_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         dynamic_expression=consort.AttachmentExpression(
             attachments=indicatortools.Dynamic('fff'),
-            selector=selectortools.selects_pitched_runs()[0],
+            selector=selectortools.select_pitched_runs()[0],
             ),
         accent=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('accent'),

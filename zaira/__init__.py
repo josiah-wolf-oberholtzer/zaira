@@ -5,3 +5,4 @@ lilypondparsertools.LilyPondParser.register_markup_function('vstrut', [])
 
 from zaira import makers
 from zaira import materials
+from zaira.makers import *

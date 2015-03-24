@@ -26,5 +26,5 @@ erratic_dynamic_attachment_expression = consort.AttachmentExpression(
             minimum_duration=durationtools.Duration(1, 8),
             ),
         ),
-    selector=selectortools.selects_pitched_runs(),
+    selector=selectortools.select_pitched_runs(),
     )

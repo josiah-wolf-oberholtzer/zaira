@@ -42,7 +42,7 @@ string_trills_music_specifier = consort.MusicSpecifier(
                 fourth_spanner,
                 fourth_spanner,
                 ),
-            selector=selectortools.selects_pitched_runs(),
+            selector=selectortools.select_pitched_runs(),
             ),
         ),
     pitch_handler=consort.PitchClassPitchHandler(

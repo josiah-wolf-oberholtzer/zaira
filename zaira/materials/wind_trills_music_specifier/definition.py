@@ -17,7 +17,7 @@ wind_trills_music_specifier = consort.MusicSpecifier(
                 spannertools.ComplexTrillSpanner(interval='+P4'),
                 spannertools.ComplexTrillSpanner(interval='+m3'),
                 ),
-            selector=selectortools.selects_pitched_runs(),
+            selector=selectortools.select_pitched_runs(),
             ),
         ),
     pitch_handler=consort.PitchClassPitchHandler(

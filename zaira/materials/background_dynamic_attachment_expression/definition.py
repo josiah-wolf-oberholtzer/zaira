@@ -9,5 +9,5 @@ background_dynamic_attachment_expression = consort.AttachmentExpression(
         consort.SimpleDynamicExpression('p'),
         consort.SimpleDynamicExpression('pp'),
         ),
-    selector=selectortools.selects_pitched_runs(),
+    selector=selectortools.select_pitched_runs(),
     )

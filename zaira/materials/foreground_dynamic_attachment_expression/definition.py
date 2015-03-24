@@ -10,5 +10,5 @@ foreground_dynamic_attachment_expression = consort.AttachmentExpression(
         consort.SimpleDynamicExpression('ff'),
         consort.SimpleDynamicExpression('mf'),
         ),
-    selector=selectortools.selects_pitched_runs()[0],
+    selector=selectortools.select_pitched_runs()[0],
     )

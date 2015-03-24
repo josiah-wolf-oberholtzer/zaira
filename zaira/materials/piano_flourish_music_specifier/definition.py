@@ -11,7 +11,7 @@ piano_flourish_music_specifier = consort.MusicSpecifier(
         dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
         slur=consort.AttachmentExpression(
             attachments=spannertools.Slur(),
-            selector=selectortools.selects_pitched_runs(),
+            selector=selectortools.select_pitched_runs(),
             ),
         ),
     labels='pedaled',

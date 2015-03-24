@@ -25,7 +25,7 @@ wind_slap_music_specifier = consort.MusicSpecifier(
                         .translate((0, -0.9)),
                     },
                 ),
-            selector=selectortools.selects_pitched_runs(),
+            selector=selectortools.select_pitched_runs(),
             ),
         text_spanner=consort.AttachmentExpression(
             attachments=consort.ComplexTextSpanner(

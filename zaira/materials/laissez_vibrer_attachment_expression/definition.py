@@ -14,5 +14,5 @@ laissez_vibrer_attachment_expression = consort.AttachmentExpression(
                 .override(('padding', 0.5))
             ),
         ),
-    selector=selectortools.selects_pitched_runs()[-1],
+    selector=selectortools.select_pitched_runs()[-1],
     )
