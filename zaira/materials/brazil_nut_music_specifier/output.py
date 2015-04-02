@@ -157,7 +157,7 @@ brazil_nut_music_specifier = consort.tools.MusicSpecifier(
                 ),
             ),
         ),
-    pitch_handler=consort.AbsolutePitchHandler(
+    pitch_handler=consort.tools.AbsolutePitchHandler(
         pitches_are_nonsemantic=True,
         ),
     rhythm_maker=rhythmmakertools.TaleaRhythmMaker(
