@@ -12,7 +12,7 @@ before_install:
 #    - sudo apt-get install -y texlive-latex-extra 
 #    - sudo apt-get install -y texlive-latex-recommended 
     - wget -q http://download.linuxaudio.org/lilypond/binaries/linux-64/lilypond-2.19.16-1.linux-64.sh
-    - sudo sh lilypond-2.19.l6-1.linux-64.sh --batch
+    - sudo sh lilypond-2.19.16-1.linux-64.sh --batch
 
 install:
 
