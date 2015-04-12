@@ -39,7 +39,7 @@ segment_maker.add_setting(
         ),
     piano_rh=new(
         zaira.materials.piano_fanfare_music_specifier,
-        pitch_handler__register_specifier__center_pitch="g'",
+        pitch_handler__register_specifier__base_pitch="g'",
         rhythm_maker__denominators=[8],
         ),
     piano_lh=new(
@@ -48,7 +48,7 @@ segment_maker.add_setting(
             zaira.materials.piano_fanfare_music_specifier
                 .pitch_handler.logical_tie_expressions[:-1],
         pitch_handler__pitch_specifier="g c a f d f e b e",
-        pitch_handler__register_specifier__center_pitch="g,,",
+        pitch_handler__register_specifier__base_pitch="g,,",
         rhythm_maker__denominators=[8],
         ),
     drums=new(

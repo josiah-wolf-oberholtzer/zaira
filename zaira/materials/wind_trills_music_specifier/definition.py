@@ -23,7 +23,7 @@ wind_trills_music_specifier = consort.MusicSpecifier(
     pitch_handler=consort.PitchClassPitchHandler(
         pitch_specifier='c ef d',
         register_specifier=consort.RegisterSpecifier(
-            center_pitch="g'",
+            base_pitch="g'",
             ),
         ),
     rhythm_maker=zaira.materials.sustained_rhythm_maker,

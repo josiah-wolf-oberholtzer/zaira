@@ -39,12 +39,12 @@ segment_maker.add_setting(
         ),
     clarinet=new(
         zaira.materials.wind_airtone_music_specifier,
-        pitch_handler__register_specifier__center_pitch='D3',
+        pitch_handler__register_specifier__base_pitch='D3',
         ),
     flute=zaira.materials.wind_airtone_music_specifier,
     oboe=new(
         zaira.materials.wind_airtone_music_specifier,
-        pitch_handler__register_specifier__center_pitch='Bb3',
+        pitch_handler__register_specifier__base_pitch='Bb3',
         ),
     )
 
@@ -150,17 +150,17 @@ segment_maker.add_setting(
         ),
     violin=new(
         zaira.materials.string_undergrowth_music_specifier,
-        pitch_handler__register_specifier__center_pitch='g',
+        pitch_handler__register_specifier__base_pitch='g',
         seed=0,
         ),
     viola=new(
         zaira.materials.string_undergrowth_music_specifier,
-        pitch_handler__register_specifier__center_pitch='c',
+        pitch_handler__register_specifier__base_pitch='c',
         seed=1,
         ),
     cello=new(
         zaira.materials.string_undergrowth_music_specifier,
-        pitch_handler__register_specifier__center_pitch='c,',
+        pitch_handler__register_specifier__base_pitch='c,',
         seed=2,
         ),
     )

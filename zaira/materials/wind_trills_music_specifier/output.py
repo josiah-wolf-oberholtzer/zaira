@@ -83,7 +83,7 @@ wind_trills_music_specifier = consort.tools.MusicSpecifier(
         ),
     pitch_handler=consort.tools.PitchClassPitchHandler(
         register_specifier=consort.tools.RegisterSpecifier(
-            center_pitch=pitchtools.NumberedPitch(7),
+            base_pitch=pitchtools.NumberedPitch(7),
             ),
         pitch_specifier=consort.tools.PitchSpecifier(
             pitch_segments=(

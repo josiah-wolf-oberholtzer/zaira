@@ -121,7 +121,7 @@ segment_maker.add_setting(
         ),
     violin=new(
         zaira.materials.string_trills_music_specifier,
-        pitch_handler__register_specifier__center_pitch="c''",
+        pitch_handler__register_specifier__base_pitch="c''",
         pitch_handler__pitch_operation_specifier=consort.PitchOperation(
             operators=(
                 pitchtools.Transposition(-3),
@@ -132,7 +132,7 @@ segment_maker.add_setting(
         ),
     viola=new(
         zaira.materials.string_trills_music_specifier,
-        pitch_handler__register_specifier__center_pitch="c'",
+        pitch_handler__register_specifier__base_pitch="c'",
         pitch_handler__pitch_operation_specifier=consort.PitchOperation(
             operators=(
                 pitchtools.Transposition(-3),
@@ -143,7 +143,7 @@ segment_maker.add_setting(
         ),
     cello=new(
         zaira.materials.string_trills_music_specifier,
-        pitch_handler__register_specifier__center_pitch='c',
+        pitch_handler__register_specifier__base_pitch='c',
         pitch_handler__pitch_operation_specifier=consort.PitchOperation(
             operators=(
                 pitchtools.Transposition(-3),
@@ -166,7 +166,7 @@ segment_maker.add_setting(
         ),
     violin=new(
         zaira.materials.string_flourish_music_specifier,
-        pitch_handler__register_specifier__center_pitch=None,
+        pitch_handler__register_specifier__base_pitch=None,
         pitch_handler__pitch_operation_specifier=consort.PitchOperation(
             pitchtools.Transposition(-3),
             ),
@@ -175,7 +175,7 @@ segment_maker.add_setting(
         ),
     viola=new(
         zaira.materials.string_flourish_music_specifier,
-        pitch_handler__register_specifier__center_pitch='c',
+        pitch_handler__register_specifier__base_pitch='c',
         pitch_handler__pitch_operation_specifier=consort.PitchOperation(
             pitchtools.Transposition(-3),
             ),
@@ -184,7 +184,7 @@ segment_maker.add_setting(
         ),
     cello=new(
         zaira.materials.string_flourish_music_specifier,
-        pitch_handler__register_specifier__center_pitch='c,',
+        pitch_handler__register_specifier__base_pitch='c,',
         pitch_handler__pitch_operation_specifier=consort.PitchOperation(
             pitchtools.Transposition(-3),
             ),
@@ -201,11 +201,11 @@ segment_maker.add_setting(
     timespan_maker=zaira.materials.sparse_timespan_maker,
     piano_rh=new(
         zaira.materials.piano_clusters_music_specifier,
-        pitch_handler__register_specifier__center_pitch="c''",
+        pitch_handler__register_specifier__base_pitch="c''",
         ),
     piano_lh=new(
         zaira.materials.piano_clusters_music_specifier,
-        pitch_handler__register_specifier__center_pitch="c,",
+        pitch_handler__register_specifier__base_pitch="c,",
         ),
     )
 
@@ -217,7 +217,7 @@ segment_maker.add_setting(
         ),
     piano_rh=new(
         zaira.materials.piano_fanfare_music_specifier,
-        pitch_handler__register_specifier__center_pitch="g'",
+        pitch_handler__register_specifier__base_pitch="g'",
         ),
     piano_lh=new(
         zaira.materials.piano_fanfare_music_specifier,
@@ -225,7 +225,7 @@ segment_maker.add_setting(
             zaira.materials.piano_fanfare_music_specifier
                 .pitch_handler.logical_tie_expressions[:-1],
         pitch_handler__pitch_specifier="g c a f d f e b e",
-        pitch_handler__register_specifier__center_pitch="g,,",
+        pitch_handler__register_specifier__base_pitch="g,,",
         ),
     drums=new(
         zaira.materials.percussion_fanfare_music_specifier,
