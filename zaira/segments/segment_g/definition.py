@@ -17,7 +17,7 @@ segment_maker = zaira.makers.ZairaSegmentMaker(
     tempo=indicatortools.Tempo((1, 4), 96),
     )
 
-ratio = mathtools.NonreducedRatio(1, 4, 2)
+ratio = mathtools.NonreducedRatio([1, 4, 2])
 
 segment_maker.desired_duration_in_seconds = (
     durationtools.Multiplier(sum(ratio), 91) *

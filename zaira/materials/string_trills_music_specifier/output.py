@@ -134,7 +134,7 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -144,7 +144,7 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -154,7 +154,7 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     ]
                 ),
@@ -168,7 +168,7 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -179,7 +179,7 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(2, 1),
+                        ratio=mathtools.Ratio([2, 1]),
                         ),
                     ]
                 ),
@@ -195,7 +195,7 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(2, 1, 3),
+                        ratio=mathtools.Ratio([2, 1, 3]),
                         ),
                     ]
                 ),
@@ -211,7 +211,7 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                     item_class=pitchtools.NamedPitch,
                     ),
                 ),
-            ratio=mathtools.Ratio(1),
+            ratio=mathtools.Ratio([1]),
             ),
         ),
     rhythm_maker=rhythmmakertools.NoteRhythmMaker(

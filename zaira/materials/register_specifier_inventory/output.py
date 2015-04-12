@@ -17,7 +17,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -28,7 +28,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(2, 1),
+                        ratio=mathtools.Ratio([2, 1]),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -39,7 +39,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1, 2),
+                        ratio=mathtools.Ratio([1, 2]),
                         ),
                     ]
                 ),
@@ -54,7 +54,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(2, 1),
+                        ratio=mathtools.Ratio([2, 1]),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -65,7 +65,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1, 2),
+                        ratio=mathtools.Ratio([1, 2]),
                         ),
                     ]
                 ),
@@ -80,7 +80,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(2, 1),
+                        ratio=mathtools.Ratio([2, 1]),
                         ),
                     ]
                 ),
@@ -96,7 +96,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -107,7 +107,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(2, 1),
+                        ratio=mathtools.Ratio([2, 1]),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -117,7 +117,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     ]
                 ),
@@ -131,7 +131,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -141,7 +141,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     ]
                 ),
@@ -157,7 +157,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(3, 2, 1),
+                        ratio=mathtools.Ratio([3, 2, 1]),
                         ),
                     ]
                 ),
@@ -173,7 +173,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -183,7 +183,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -193,7 +193,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     ]
                 ),
@@ -207,7 +207,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -218,7 +218,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(2, 1),
+                        ratio=mathtools.Ratio([2, 1]),
                         ),
                     ]
                 ),
@@ -233,7 +233,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(2, 1),
+                        ratio=mathtools.Ratio([2, 1]),
                         ),
                     ]
                 ),
@@ -249,7 +249,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -259,7 +259,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -269,7 +269,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     ]
                 ),
@@ -283,7 +283,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(1),
+                        ratio=mathtools.Ratio([1]),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -294,7 +294,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(2, 1),
+                        ratio=mathtools.Ratio([2, 1]),
                         ),
                     ]
                 ),
@@ -310,7 +310,7 @@ register_specifier_inventory = consort.tools.RegisterSpecifierInventory(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio(2, 1, 3),
+                        ratio=mathtools.Ratio([2, 1, 3]),
                         ),
                     ]
                 ),
