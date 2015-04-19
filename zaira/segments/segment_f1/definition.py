@@ -37,7 +37,7 @@ segment_maker.add_setting(
     timespan_identifier=consort.RatioPartsExpression(
         parts=(1, 3, 5),
         ratio=(1, 1, 2, 1, 2, 1, 2),
-        timespan=timespantools.Timespan(
+        mask_timespan=timespantools.Timespan(
             start_offset=fanfare_duration,
             ),
         ),
@@ -58,7 +58,7 @@ segment_maker.add_setting(
     timespan_identifier=consort.RatioPartsExpression(
         parts=(0, 2, 4),
         ratio=(3, 1, 2, 1, 1),
-        timespan=timespantools.Timespan(
+        mask_timespan=timespantools.Timespan(
             start_offset=fanfare_duration,
             ),
         ),
@@ -76,13 +76,13 @@ segment_maker.add_setting(
     timespan_identifier=consort.RatioPartsExpression(
         parts=(0, 2, 4),
         ratio=(1, 1, 1, 1, 1),
-        timespan=timespantools.Timespan(
+        mask_timespan=timespantools.Timespan(
             start_offset=fanfare_duration,
             ),
         ),
     oboe=new(
         zaira.materials.oboe_solo_music_specifier,
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             pitchtools.Transposition(-3),
             ),
         ),
@@ -176,7 +176,7 @@ segment_maker.add_setting(
     piano_rh=new(
         zaira.materials.piano_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch="c''",
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             pitchtools.Transposition(3),
             ),
         seed=1,
@@ -184,7 +184,7 @@ segment_maker.add_setting(
     piano_lh=new(
         zaira.materials.piano_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch="c,",
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             pitchtools.Transposition(3),
             ),
         seed=2,
@@ -205,7 +205,7 @@ segment_maker.add_setting(
     timespan_identifier=consort.RatioPartsExpression(
         parts=(0, 2, 4, 6),
         ratio=(1, 2, 1, 1, 1, 2, 1),
-        timespan=timespantools.Timespan(
+        mask_timespan=timespantools.Timespan(
             start_offset=fanfare_duration,
             ),
         ),
@@ -232,7 +232,7 @@ segment_maker.add_setting(
     timespan_identifier=consort.RatioPartsExpression(
         parts=(1, 3),
         ratio=(3, 1, 2, 1, 1),
-        timespan=timespantools.Timespan(
+        mask_timespan=timespantools.Timespan(
             start_offset=fanfare_duration,
             ),
         ),

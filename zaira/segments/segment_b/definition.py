@@ -33,7 +33,7 @@ segment_maker.add_setting(
     timespan_identifier=consort.RatioPartsExpression(
         parts=(0, 2, 4),
         ratio=(1, 1, 1, 1, 1),
-        timespan=timespantools.Timespan(
+        mask_timespan=timespantools.Timespan(
             start_offset=fanfare_duration,
             ),
         ),
@@ -48,7 +48,7 @@ segment_maker.add_setting(
     timespan_identifier=consort.RatioPartsExpression(
         parts=(1, 3),
         ratio=(3, 1, 2, 1, 1),
-        timespan=timespantools.Timespan(
+        mask_timespan=timespantools.Timespan(
             start_offset=fanfare_duration,
             ),
         ),

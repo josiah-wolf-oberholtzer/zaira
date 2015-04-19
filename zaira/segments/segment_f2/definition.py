@@ -71,7 +71,7 @@ segment_maker.add_setting(
         ),
     oboe=new(
         zaira.materials.oboe_solo_music_specifier,
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             pitchtools.Transposition(-5),
             ),
         ),

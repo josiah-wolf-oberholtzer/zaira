@@ -39,21 +39,21 @@ segment_maker.add_setting(
         ),
     flute=new(
         zaira.materials.wind_trills_music_specifier,
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             pitchtools.Inversion(),
             ),
         seed=0,
         ),
     oboe=new(
         zaira.materials.wind_trills_music_specifier,
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             pitchtools.Inversion(),
             ),
         seed=1,
         ),
     clarinet=new(
         zaira.materials.wind_trills_music_specifier,
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             pitchtools.Inversion(),
             ),
         seed=2,
@@ -148,7 +148,7 @@ segment_maker.add_setting(
     timespan_identifier=consort.RatioPartsExpression(
         parts=(1, 3, 5),
         ratio=(1, 2, 1, 1, 1, 2, 1),
-        timespan=timespantools.Timespan(
+        mask_timespan=timespantools.Timespan(
             start_offset=fanfare_duration,
             ),
         ),
@@ -178,13 +178,13 @@ segment_maker.add_setting(
     timespan_identifier=consort.RatioPartsExpression(
         parts=(1, 3, 5),
         ratio=(1, 1, 1, 1, 1, 1, 1),
-        timespan=timespantools.Timespan(
+        mask_timespan=timespantools.Timespan(
             start_offset=fanfare_duration,
             ),
         ),
     cello=new(
         zaira.materials.cello_solo_music_specifier,
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             pitchtools.Transposition(3),
             ),
         ),

@@ -36,7 +36,7 @@ segment_maker.add_setting(
         ),
     flute=new(
         zaira.materials.wind_trills_music_specifier,
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             operators=(
                 pitchtools.Transposition(-3),
                 pitchtools.Inversion(),
@@ -46,7 +46,7 @@ segment_maker.add_setting(
         ),
     oboe=new(
         zaira.materials.wind_trills_music_specifier,
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             operators=(
                 pitchtools.Transposition(-3),
                 pitchtools.Inversion(),
@@ -56,7 +56,7 @@ segment_maker.add_setting(
         ),
     clarinet=new(
         zaira.materials.wind_trills_music_specifier,
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             operators=(
                 pitchtools.Transposition(-3),
                 pitchtools.Inversion(),
@@ -144,7 +144,7 @@ segment_maker.add_setting(
     piano_rh=new(
         zaira.materials.piano_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch="c''",
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             operators=(
                 pitchtools.Inversion(),
                 pitchtools.Transposition(3),
@@ -154,7 +154,7 @@ segment_maker.add_setting(
     piano_lh=new(
         zaira.materials.piano_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch="c,",
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             operators=(
                 pitchtools.Inversion(),
                 pitchtools.Transposition(3),
@@ -196,7 +196,7 @@ segment_maker.add_setting(
     violin=new(
         zaira.materials.string_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch=None,
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             operators=(
                 pitchtools.Transposition(3),
                 ),
@@ -207,7 +207,7 @@ segment_maker.add_setting(
     viola=new(
         zaira.materials.string_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch='c',
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             operators=(
                 pitchtools.Transposition(3),
                 ),
@@ -218,7 +218,7 @@ segment_maker.add_setting(
     cello=new(
         zaira.materials.string_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch='c,',
-        pitch_handler__pitch_operation_specifier=consort.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             operators=(
                 pitchtools.Transposition(3),
                 ),
@@ -263,7 +263,7 @@ segment_maker.add_setting(
     timespan_identifier=consort.RatioPartsExpression(
         parts=(1, 3),
         ratio=(3, 1, 2, 1, 1),
-        timespan=timespantools.Timespan(
+        mask_timespan=timespantools.Timespan(
             start_offset=fanfare_duration,
             ),
         ),
