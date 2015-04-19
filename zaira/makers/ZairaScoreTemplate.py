@@ -18,7 +18,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
         >>> print(format(score))
         \context Score = "Zaira Score" <<
             \tag #'time
-            \context TimeSignatureContext = "TimeSignatureContext" {
+            \context TimeSignatureContext = "Time Signature Context" {
             }
             \context EnsembleGroup = "Wind Section Staff Group" <<
                 \tag #'flute
@@ -198,7 +198,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
 
         metals = manager.make_single_basic_performer(
             clef=indicatortools.Clef('percussion'),
-            instrument=instrumenttools.UntunedPercussion(
+            instrument=instrumenttools.Percussion(
                 instrument_name='Metals',
                 short_instrument_name='Metals',
                 ),
@@ -207,7 +207,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
 
         woods = manager.make_single_basic_performer(
             clef=indicatortools.Clef('percussion'),
-            instrument=instrumenttools.UntunedPercussion(
+            instrument=instrumenttools.Percussion(
                 instrument_name='Woods',
                 short_instrument_name='Woods',
                 ),
@@ -216,7 +216,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
 
         drums = manager.make_single_basic_performer(
             clef=indicatortools.Clef('percussion'),
-            instrument=instrumenttools.UntunedPercussion(
+            instrument=instrumenttools.Percussion(
                 instrument_name='Drums',
                 short_instrument_name='Drums',
                 ),
