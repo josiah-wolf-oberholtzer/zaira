@@ -30,6 +30,7 @@ flourish_rhythm_maker = rhythmmakertools.TaleaRhythmMaker(
     beam_specifier=rhythmmakertools.BeamSpecifier(
         beam_each_division=False,
         beam_divisions_together=False,
+        use_feather_beams=False,
         ),
     burnish_specifier=rhythmmakertools.BurnishSpecifier(
         left_classes=(-1, 1, -1, -1, 1),
@@ -47,7 +48,9 @@ flourish_rhythm_maker = rhythmmakertools.TaleaRhythmMaker(
     tie_split_notes=False,
     tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
         avoid_dots=False,
+        flatten_trivial_tuplets=False,
         is_diminution=False,
         simplify_tuplets=False,
+        use_note_duration_bracket=False,
         ),
     )

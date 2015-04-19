@@ -117,7 +117,7 @@ drum_storm_music_specifier = consort.tools.MusicSpecifier(
                     item_class=pitchtools.NamedPitch,
                     ),
                 ),
-            ratio=mathtools.Ratio([1]),
+            ratio=mathtools.Ratio((1,)),
             ),
         ),
     rhythm_maker=rhythmmakertools.EvenDivisionRhythmMaker(
@@ -126,10 +126,12 @@ drum_storm_music_specifier = consort.tools.MusicSpecifier(
         beam_specifier=rhythmmakertools.BeamSpecifier(
             beam_each_division=False,
             beam_divisions_together=False,
+            use_feather_beams=False,
             ),
         duration_spelling_specifier=rhythmmakertools.DurationSpellingSpecifier(
             decrease_durations_monotonically=True,
             forbidden_written_duration=durationtools.Duration(1, 2),
             ),
+        preferred_denominator='from_counts',
         ),
     )

@@ -49,25 +49,7 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
             attachments=datastructuretools.TypedList(
                 [
                     spannertools.ComplexTrillSpanner(
-                        overrides={
-                            'trill_pitch_head__stencil': schemetools.Scheme(
-                                'ly:text-interface::print'
-                                ),
-                            'trill_pitch_head__text': markuptools.Markup(
-                                contents=(
-                                    markuptools.MarkupCommand(
-                                        'musicglyph',
-                                        schemetools.Scheme(
-                                            'noteheads.s0harmonic',
-                                            force_quotes=True,
-                                            )
-                                        ),
-                                    ),
-                                ),
-                            },
                         interval=pitchtools.NamedInterval('+m3'),
-                        ),
-                    spannertools.ComplexTrillSpanner(
                         overrides={
                             'trill_pitch_head__stencil': schemetools.Scheme(
                                 'ly:text-interface::print'
@@ -84,9 +66,9 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                     ),
                                 ),
                             },
-                        interval=pitchtools.NamedInterval('+P4'),
                         ),
                     spannertools.ComplexTrillSpanner(
+                        interval=pitchtools.NamedInterval('+P4'),
                         overrides={
                             'trill_pitch_head__stencil': schemetools.Scheme(
                                 'ly:text-interface::print'
@@ -103,7 +85,25 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                     ),
                                 ),
                             },
+                        ),
+                    spannertools.ComplexTrillSpanner(
                         interval=pitchtools.NamedInterval('+P4'),
+                        overrides={
+                            'trill_pitch_head__stencil': schemetools.Scheme(
+                                'ly:text-interface::print'
+                                ),
+                            'trill_pitch_head__text': markuptools.Markup(
+                                contents=(
+                                    markuptools.MarkupCommand(
+                                        'musicglyph',
+                                        schemetools.Scheme(
+                                            'noteheads.s0harmonic',
+                                            force_quotes=True,
+                                            )
+                                        ),
+                                    ),
+                                ),
+                            },
                         ),
                     ]
                 ),
@@ -134,7 +134,7 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio([1]),
+                        ratio=mathtools.Ratio((1,)),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -144,7 +144,7 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio([1]),
+                        ratio=mathtools.Ratio((1,)),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -154,7 +154,7 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio([1]),
+                        ratio=mathtools.Ratio((1,)),
                         ),
                     ]
                 ),
@@ -168,7 +168,7 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio([1]),
+                        ratio=mathtools.Ratio((1,)),
                         ),
                     consort.tools.RegisterInflection(
                         inflections=pitchtools.IntervalSegment(
@@ -179,7 +179,7 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio([2, 1]),
+                        ratio=mathtools.Ratio((2, 1)),
                         ),
                     ]
                 ),
@@ -195,7 +195,7 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                                 ),
                             item_class=pitchtools.NumberedInterval,
                             ),
-                        ratio=mathtools.Ratio([2, 1, 3]),
+                        ratio=mathtools.Ratio((2, 1, 3)),
                         ),
                     ]
                 ),
@@ -211,13 +211,14 @@ string_trills_music_specifier = consort.tools.MusicSpecifier(
                     item_class=pitchtools.NamedPitch,
                     ),
                 ),
-            ratio=mathtools.Ratio([1]),
+            ratio=mathtools.Ratio((1,)),
             ),
         ),
     rhythm_maker=rhythmmakertools.NoteRhythmMaker(
         beam_specifier=rhythmmakertools.BeamSpecifier(
             beam_each_division=False,
             beam_divisions_together=False,
+            use_feather_beams=False,
             ),
         tie_specifier=rhythmmakertools.TieSpecifier(
             tie_across_divisions=(True, True, False),

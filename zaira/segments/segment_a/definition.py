@@ -16,7 +16,6 @@ segment_maker = zaira.makers.ZairaSegmentMaker(
         (2, 4),
         (3, 8),
         ),
-    rehearsal_mark='A',
     tempo=indicatortools.Tempo((1, 4), 72),
     )
 

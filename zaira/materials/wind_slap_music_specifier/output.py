@@ -185,7 +185,7 @@ wind_slap_music_specifier = consort.tools.MusicSpecifier(
                     item_class=pitchtools.NamedPitch,
                     ),
                 ),
-            ratio=mathtools.Ratio([1]),
+            ratio=mathtools.Ratio((1,)),
             ),
         ),
     rhythm_maker=rhythmmakertools.IncisedRhythmMaker(
@@ -201,11 +201,14 @@ wind_slap_music_specifier = consort.tools.MusicSpecifier(
         beam_specifier=rhythmmakertools.BeamSpecifier(
             beam_each_division=False,
             beam_divisions_together=False,
+            use_feather_beams=False,
             ),
         tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
             avoid_dots=True,
+            flatten_trivial_tuplets=False,
             is_diminution=True,
             simplify_tuplets=True,
+            use_note_duration_bracket=False,
             ),
         ),
     )

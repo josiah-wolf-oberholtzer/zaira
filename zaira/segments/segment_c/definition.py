@@ -13,7 +13,6 @@ import zaira
 
 
 segment_maker = zaira.makers.ZairaSegmentMaker(
-    rehearsal_mark='C',
     tempo=indicatortools.Tempo((1, 4), 72),
     )
 

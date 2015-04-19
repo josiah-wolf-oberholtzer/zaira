@@ -8,9 +8,11 @@ reiterating_rhythm_maker = rhythmmakertools.EvenDivisionRhythmMaker(
     beam_specifier=rhythmmakertools.BeamSpecifier(
         beam_each_division=False,
         beam_divisions_together=False,
+        use_feather_beams=False,
         ),
     duration_spelling_specifier=rhythmmakertools.DurationSpellingSpecifier(
         decrease_durations_monotonically=True,
         forbidden_written_duration=durationtools.Duration(1, 2),
         ),
+    preferred_denominator='from_counts',
     )

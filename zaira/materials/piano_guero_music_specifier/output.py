@@ -254,6 +254,7 @@ piano_guero_music_specifier = consort.tools.MusicSpecifier(
         beam_specifier=rhythmmakertools.BeamSpecifier(
             beam_each_division=False,
             beam_divisions_together=False,
+            use_feather_beams=False,
             ),
         tie_specifier=rhythmmakertools.TieSpecifier(
             tie_across_divisions=(True, True, False),

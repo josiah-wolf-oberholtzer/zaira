@@ -11,12 +11,13 @@ glissando_rhythm_maker = rhythmmakertools.IncisedRhythmMaker(
         suffix_talea=(1,),
         suffix_counts=(1,),
         talea_denominator=16,
-        body_ratio=mathtools.Ratio([1]),
+        body_ratio=mathtools.Ratio((1,)),
         outer_divisions_only=True,
         ),
     beam_specifier=rhythmmakertools.BeamSpecifier(
         beam_each_division=False,
         beam_divisions_together=False,
+        use_feather_beams=False,
         ),
     duration_spelling_specifier=rhythmmakertools.DurationSpellingSpecifier(
         decrease_durations_monotonically=True,
@@ -24,7 +25,9 @@ glissando_rhythm_maker = rhythmmakertools.IncisedRhythmMaker(
         ),
     tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
         avoid_dots=True,
+        flatten_trivial_tuplets=False,
         is_diminution=True,
         simplify_tuplets=True,
+        use_note_duration_bracket=False,
         ),
     )
