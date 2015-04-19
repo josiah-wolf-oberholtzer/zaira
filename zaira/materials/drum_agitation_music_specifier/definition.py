@@ -12,11 +12,11 @@ drum_agitation_music_specifier = consort.MusicSpecifier(
         dynamic_expression=zaira.materials.foreground_dynamic_attachment_expression,
         accent=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('accent'),
-            selector=selectortools.selects_first_logical_tie_in_pitched_runs()[0],
+            selector=selectortools.select_first_logical_tie_in_pitched_runs()[0],
             ),
         staccato=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('staccato'),
-            selector=selectortools.selects_all_but_first_logical_tie_in_pitched_runs()[0],
+            selector=selectortools.select_all_but_first_logical_tie_in_pitched_runs()[0],
             ),
         ),
     pitch_handler=consort.AbsolutePitchHandler(
