@@ -16,9 +16,6 @@ afterGraceFraction = #(cons 127 128)
 
 \layout {
 
-    indent = 0
-    ragged-bottom = ##t
-    ragged-last = ##t
     ragged-right = ##t
 
     %%% COMMON %%%
@@ -354,13 +351,13 @@ afterGraceFraction = #(cons 127 128)
     %%% HEADERS AND FOOTERS %%%
 
     evenFooterMarkup = \markup \fill-line {
-        " "
         \concat {
             \bold \fontsize #3
             \on-the-fly #print-page-number-check-first
             \fromproperty #'page:page-number-string
             %\hspace #18
         }
+        " "
     }
     evenHeaderMarkup = \markup \fill-line { " " }
     oddFooterMarkup = \markup \fill-line {

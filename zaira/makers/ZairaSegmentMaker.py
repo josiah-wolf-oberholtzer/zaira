@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 import consort
+from abjad.tools import markuptools
 
 
 class ZairaSegmentMaker(consort.SegmentMaker):
@@ -50,6 +51,24 @@ class ZairaSegmentMaker(consort.SegmentMaker):
             )
 
     ### PUBLIC PROPERTIES ###
+
+    @property
+    def final_markup(self):
+        jamaica_plain = markuptools.Markup('Jamaica Plain, OR')
+        queens = markuptools.Markup('Fresh Meadows, NY')
+        date = markuptools.Markup('June 2014 - September 2014')
+        null = markuptools.Markup.null()
+        contents = [
+            null,
+            null,
+            null,
+            jamaica_plain,
+            queens,
+            date,
+            ]
+        markup = markuptools.Markup.right_column(contents)
+        markup = markup.italic()
+        return markup
 
     @property
     def score_package_name(self):
