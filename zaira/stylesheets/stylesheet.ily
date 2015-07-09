@@ -11,7 +11,6 @@ Create a box of the same height as the current font."
                      (ly:stencil-extent ref-mrkp Y))))
 
 afterGraceFraction = #(cons 127 128)
-#(set-default-paper-size "11x17" 'landscape)
 #(set-global-staff-size 12)
 
 \layout {

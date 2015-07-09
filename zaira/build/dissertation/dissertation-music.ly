@@ -11,10 +11,10 @@
 }
 
 #(ly:set-option 'relative-includes #t)
-\include "../stylesheets/stylesheet.ily"
+\include "../../stylesheets/stylesheet.ily"
 
 #(set-default-paper-size "letter" 'portrait)
-#(set-global-staff-size 6.5)
+#(set-global-staff-size 6)
 
 \header {
     composer = \markup {
@@ -50,13 +50,15 @@
 }
 
 \paper {
-    indent = 15\mm
-    short-indent = 15\mm
+    %annotate-spacing = ##t
 
-    bottom-margin = 10\mm
-    left-margin = 10\mm
+    %indent = 10\mm
+    %short-indent = 10\mm
+
+    bottom-margin = 1\in
+    left-margin = 1\in
     right-margin = 0.5\in
-    top-margin = 10\mm
+    top-margin = 1\in
 
     oddHeaderMarkup = \markup {}
     evenHeaderMarkup = \markup {}
@@ -79,7 +81,7 @@
         (basic-distance . 0)
         (minimum-distance . 0)
         (padding . 8)
-        (stretchability . 20)
+        (stretchability . 100)
     )
     top-markup-spacing = #'(
         (basic-distance . 0)
@@ -89,7 +91,7 @@
     )
     top-system-spacing = #'(
         (basic-distance . 0)
-        (minimum-distance . 10)
+        (minimum-distance . 0)
         (padding . 0)
         (stretchability . 0)
     )
@@ -155,7 +157,7 @@
             (minimum-distance . 15)
             (padding . 8)
             (stretchability . 0)
-        )
+            )
         \override VerticalAxisGroup.minimum-Y-extent = #'(-20 . 20)
     }
     \context {
@@ -164,41 +166,30 @@
     }
     \context {
         \Score
+        \override InstrumentName.font-size = #2
+        \override InstrumentName.self-alignment-X = #RIGHT
         \override StaffGrouper.staffgroup-staff-spacing = #'(
             (basic-distance . 0)
             (minimum-distance . 0)
             (padding . 4)
-            (stretchability . 20)
+            (stretchability . 100)
             )
         \override StaffGrouper.staff-staff-spacing = #'(
             (basic-distance . 0)
             (minimum-distance . 0)
             (padding . 4)
-            (stretchability . 20)
+            (stretchability . 100)
             )
         \override VerticalAxisGroup.staff-staff-spacing = #'(
             (basic-distance . 0)
             (minimum-distance . 0)
             (padding . 4)
-            (stretchability . 20)
-        )
-        proportionalNotationDuration = #(ly:make-moment 1 32)
+            (stretchability . 100)
+            )
+        proportionalNotationDuration = #(ly:make-moment 1 24)
     }
 }
 
 \score {
-    { 
-        \include "segment-a.ly"
-        \include "segment-b.ly"
-        \include "segment-c.ly"
-        \include "segment-d.ly"
-        \include "segment-e.ly"
-        \include "segment-f1.ly"
-        \include "segment-f2.ly"
-        \include "segment-g.ly"
-        \include "segment-h.ly"
-        \include "segment-i.ly"
-        \include "segment-j.ly"
-        \include "segment-k.ly"
-    }
+    \include "../segments.ily"
 }
