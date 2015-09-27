@@ -1,7 +1,11 @@
-# -*- encoding: utf-8 -*-
-import collections
+# -*- coding: utf-8 -*-
+from abjad import *
 
 
-metadata = collections.OrderedDict([
-    ('name', 'H'),
-    ])
+metadata = datastructuretools.TypedOrderedDict(
+    [
+        ('name', 'H'),
+        ('segment_count', 12),
+        ('segment_number', 9),
+        ]
+    )
