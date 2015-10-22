@@ -3,6 +3,8 @@
 from abjad.tools import lilypondparsertools
 lilypondparsertools.LilyPondParser.register_markup_function('vstrut', [])
 
-from zaira import makers
 from zaira import materials
-from zaira.makers import *
+from zaira import segments
+from zaira import tools
+from zaira.tools import *
+from zaira.materials import *

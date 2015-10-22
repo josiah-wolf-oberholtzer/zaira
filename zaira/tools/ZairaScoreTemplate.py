@@ -13,7 +13,7 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
     ::
 
         >>> import zaira
-        >>> template = zaira.makers.ZairaScoreTemplate()
+        >>> template = zaira.tools.ZairaScoreTemplate()
         >>> score = template()
         >>> print(format(score))
         \context Score = "Zaira Score" <<

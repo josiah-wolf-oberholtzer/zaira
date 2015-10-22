@@ -12,7 +12,7 @@ import zaira
 ### SEGMENT MAKER #############################################################
 
 
-segment_maker = zaira.makers.ZairaSegmentMaker(
+segment_maker = zaira.tools.ZairaSegmentMaker(
     tempo=indicatortools.Tempo((1, 4), 72),
     )
 
@@ -338,11 +338,11 @@ segment_maker.add_setting(
         ),
     drums=new(
         zaira.materials.percussion_fanfare_music_specifier,
-        pitch_handler__pitch_specifier=zaira.makers.Percussion.KICK_DRUM,
+        pitch_handler__pitch_specifier=zaira.tools.Percussion.KICK_DRUM,
         ),
     metals=new(
         zaira.materials.percussion_fanfare_music_specifier,
-        pitch_handler__pitch_specifier=zaira.makers.Percussion.BRAKE_DRUM,
+        pitch_handler__pitch_specifier=zaira.tools.Percussion.BRAKE_DRUM,
         ),
     )
 

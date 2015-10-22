@@ -24,13 +24,13 @@ view_inventory=idetools.ViewInventory(
                 ),
             ),
         (
-            'rhythm makers',
+            'rhythm tools',
             idetools.View(
                 ["'rhythm maker' in :ds:"]
                 ),
             ),
         (
-            'timespan makers',
+            'timespan tools',
             idetools.View(
                 ["'timespan maker' in :ds:"]
                 ),

@@ -11,7 +11,7 @@ drum_heartbeat_music_specifier = consort.MusicSpecifier(
         ),
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=pitchtools.PitchSegment(
-            items=[zaira.makers.Percussion.KICK_DRUM],
+            items=[zaira.tools.Percussion.KICK_DRUM],
             ),
         ),
     rhythm_maker=new(

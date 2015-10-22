@@ -31,7 +31,7 @@ class ZairaSegmentMaker(consort.SegmentMaker):
         import zaira
         permitted_time_signatures = permitted_time_signatures or \
             zaira.materials.time_signatures
-        score_template = score_template or zaira.makers.ZairaScoreTemplate()
+        score_template = score_template or zaira.tools.ZairaScoreTemplate()
         consort.SegmentMaker.__init__(
             self,
             annotate_colors=annotate_colors,
