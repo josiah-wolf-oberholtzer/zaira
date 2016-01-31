@@ -5,12 +5,15 @@ from abjad.tools import selectortools
 from abjad.tools import spannertools
 from abjad.tools.topleveltools import new
 import consort
-import zaira
+from zaira.materials.erratic_dynamic_attachment_expression.definition \
+    import erratic_dynamic_attachment_expression
+from zaira.materials.reiterating_rhythm_maker.definition \
+    import reiterating_rhythm_maker
 
 
 cello_solo_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
+        dynamic_expression=erratic_dynamic_attachment_expression,
         trill_spanner=consort.AttachmentExpression(
             attachments=(
                 None,
@@ -50,7 +53,7 @@ cello_solo_music_specifier = consort.MusicSpecifier(
         pitch_application_rate='division',
         ),
     rhythm_maker=new(
-        zaira.materials.reiterating_rhythm_maker,
+        reiterating_rhythm_maker,
         denominators=(8, 4, 8, 1),
         ),
     )

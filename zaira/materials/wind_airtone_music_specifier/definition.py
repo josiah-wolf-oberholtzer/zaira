@@ -7,7 +7,7 @@ import zaira
 
 wind_airtone_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
+        dynamic_expression=background_dynamic_attachment_expression,
         text_spanner=consort.AttachmentExpression(
             attachments=consort.ComplexTextSpanner(
                 markup=Markup(r'\concat { \vstrut airtone }')
@@ -26,5 +26,5 @@ wind_airtone_music_specifier = consort.MusicSpecifier(
         register_specifier=consort.RegisterSpecifier(),
         register_spread=0,
         ),
-    rhythm_maker=zaira.materials.sustained_rhythm_maker,
+    rhythm_maker=sustained_rhythm_maker,
     )

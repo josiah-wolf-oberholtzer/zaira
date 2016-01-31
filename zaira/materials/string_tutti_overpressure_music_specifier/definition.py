@@ -37,5 +37,5 @@ string_tutti_overpressure_music_specifier = consort.MusicSpecifier(
                 ),
             ),
         ),
-    rhythm_maker=zaira.materials.sustained_rhythm_maker,
+    rhythm_maker=sustained_rhythm_maker,
     )

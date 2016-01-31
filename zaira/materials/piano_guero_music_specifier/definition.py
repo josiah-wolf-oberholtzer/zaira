@@ -3,7 +3,10 @@ from abjad import Markup
 from abjad.tools import selectortools
 from abjad.tools import spannertools
 import consort
-import zaira
+from zaira.materials.midground_dynamic_attachment_expression.definition \
+    import midground_dynamic_attachment_expression
+from zaira.materials.sustained_rhythm_maker.definition \
+    import sustained_rhythm_maker
 
 
 slow_markup = Markup(r'\concat { \vstrut slow }', Up)
@@ -19,7 +22,7 @@ fast_markup = fast_markup.box()
 piano_guero_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         clef_spanner=consort.ClefSpanner('percussion'),
-        dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
+        dynamic_expression=midground_dynamic_attachment_expression,
         staff_lines_spanner=spannertools.StaffLinesSpanner(
             lines=(4, -4),
             overrides={
@@ -48,5 +51,5 @@ piano_guero_music_specifier = consort.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.AbsolutePitchHandler(),
-    rhythm_maker=zaira.materials.sustained_rhythm_maker,
+    rhythm_maker=sustained_rhythm_maker,
     )

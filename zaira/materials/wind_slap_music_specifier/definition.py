@@ -11,7 +11,7 @@ import zaira
 
 wind_slap_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
+        dynamic_expression=midground_dynamic_attachment_expression,
         override_spanner=consort.AttachmentExpression(
             attachments=spannertools.Spanner(
                 overrides={
@@ -54,5 +54,5 @@ wind_slap_music_specifier = consort.MusicSpecifier(
         register_specifier=consort.RegisterSpecifier(),
         register_spread=0,
         ),
-    rhythm_maker=zaira.materials.stuttering_rhythm_maker,
+    rhythm_maker=stuttering_rhythm_maker,
     )

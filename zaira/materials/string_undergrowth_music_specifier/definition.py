@@ -9,7 +9,7 @@ import zaira
 
 string_undergrowth_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
+        dynamic_expression=midground_dynamic_attachment_expression,
         text_spanner=consort.AttachmentExpression(
             attachments=consort.ComplexTextSpanner(
                 markup=Markup(r'\concat { \vstrut overpressure }')
@@ -43,7 +43,7 @@ string_undergrowth_music_specifier = consort.MusicSpecifier(
         ),
     pitch_handler=consort.PitchClassPitchHandler(
         pitch_specifier='a c b d',
-        register_specifier=zaira.materials.register_specifier_inventory[3],
+        register_specifier=register_specifier_inventory[3],
         ),
-    rhythm_maker=zaira.materials.undergrowth_rhythm_maker,
+    rhythm_maker=undergrowth_rhythm_maker,
     )

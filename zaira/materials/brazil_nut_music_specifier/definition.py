@@ -4,12 +4,15 @@ from abjad.tools import indicatortools
 from abjad.tools import spannertools
 from abjad.tools import selectortools
 import consort
-import zaira
+from zaira.materials.background_dynamic_attachment_expression.definition \
+    import background_dynamic_attachment_expression
+from zaira.materials.undergrowth_rhythm_maker.definition \
+    import undergrowth_rhythm_maker
 
 
 brazil_nut_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
+        dynamic_expression=background_dynamic_attachment_expression,
         clef_spanner=consort.ClefSpanner('percussion'),
         staff_lines_spanner=spannertools.StaffLinesSpanner(
             lines=(4, -4),
@@ -44,5 +47,5 @@ brazil_nut_music_specifier = consort.MusicSpecifier(
     pitch_handler=consort.AbsolutePitchHandler(
         pitches_are_nonsemantic=True,
         ),
-    rhythm_maker=zaira.materials.undergrowth_rhythm_maker,
+    rhythm_maker=undergrowth_rhythm_maker,
     )

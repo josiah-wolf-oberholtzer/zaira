@@ -4,12 +4,16 @@ from abjad.tools import pitchtools
 from abjad.tools import spannertools
 from abjad.tools import selectortools
 import consort
-import zaira
+from zaira import tools
+from zaira.materials.midground_dynamic_attachment_expression.definition \
+    import midground_dynamic_attachment_expression
+from zaira.materials.sustained_rhythm_maker.definition \
+    import sustained_rhythm_maker
 
 
 metal_brushed_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
+        dynamic_expression=midground_dynamic_attachment_expression,
         text_spanner=consort.AttachmentExpression(
             attachments=consort.ComplexTextSpanner(
                 markup=Markup(r'\concat { \vstrut brush }')
@@ -30,22 +34,22 @@ metal_brushed_music_specifier = consort.MusicSpecifier(
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=pitchtools.PitchSegment(
             items=(
-                zaira.tools.Percussion.HIGH_CYMBAL,
-                zaira.tools.Percussion.LOW_CYMBAL,
-                zaira.tools.Percussion.MIDDLE_CYMBAL,
-                zaira.tools.Percussion.HIGH_CYMBAL,
-                zaira.tools.Percussion.MIDDLE_CYMBAL,
-                zaira.tools.Percussion.LOW_CYMBAL,
-                zaira.tools.Percussion.HIGH_CYMBAL,
-                zaira.tools.Percussion.TAM_TAM,
-                zaira.tools.Percussion.MIDDLE_CYMBAL,
-                zaira.tools.Percussion.LOW_CYMBAL,
-                zaira.tools.Percussion.HIGH_CYMBAL,
-                zaira.tools.Percussion.TAM_TAM,
-                zaira.tools.Percussion.LOW_CYMBAL,
-                zaira.tools.Percussion.MIDDLE_CYMBAL,
+                tools.Percussion.HIGH_CYMBAL,
+                tools.Percussion.LOW_CYMBAL,
+                tools.Percussion.MIDDLE_CYMBAL,
+                tools.Percussion.HIGH_CYMBAL,
+                tools.Percussion.MIDDLE_CYMBAL,
+                tools.Percussion.LOW_CYMBAL,
+                tools.Percussion.HIGH_CYMBAL,
+                tools.Percussion.TAM_TAM,
+                tools.Percussion.MIDDLE_CYMBAL,
+                tools.Percussion.LOW_CYMBAL,
+                tools.Percussion.HIGH_CYMBAL,
+                tools.Percussion.TAM_TAM,
+                tools.Percussion.LOW_CYMBAL,
+                tools.Percussion.MIDDLE_CYMBAL,
                 ),
             ),
         ),
-    rhythm_maker=zaira.materials.sustained_rhythm_maker,
+    rhythm_maker=sustained_rhythm_maker,
     )

@@ -3,7 +3,8 @@ from abjad.tools import indicatortools
 from abjad.tools import selectortools
 from abjad.tools import pitchtools
 import consort
-import zaira
+from zaira.materials.reiterating_rhythm_maker.definition \
+    import reiterating_rhythm_maker
 
 
 piano_fanfare_music_specifier = consort.MusicSpecifier(
@@ -64,5 +65,5 @@ piano_fanfare_music_specifier = consort.MusicSpecifier(
         pitch_range=pitchtools.PitchRange('[A1, C7)'),
         register_specifier=consort.RegisterSpecifier(),
         ),
-    rhythm_maker=zaira.materials.reiterating_rhythm_maker,
+    rhythm_maker=reiterating_rhythm_maker,
     )

@@ -9,7 +9,7 @@ import zaira
 
 wind_keyclick_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
+        dynamic_expression=background_dynamic_attachment_expression,
         clef_spanner=consort.ClefSpanner('percussion'),
         staff_lines_spanner=spannertools.StaffLinesSpanner(
             lines=(4, -4),
@@ -45,5 +45,5 @@ wind_keyclick_music_specifier = consort.MusicSpecifier(
         pitch_specifier="c' g' f g' g' c' f c' f g' c' c' f g'",
         pitches_are_nonsemantic=True,
         ),
-    rhythm_maker=zaira.materials.undergrowth_rhythm_maker,
+    rhythm_maker=undergrowth_rhythm_maker,
     )

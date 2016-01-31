@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
+from abjad import rhythmmakertools
 
 
 flourish_rhythm_maker = rhythmmakertools.TaleaRhythmMaker(
@@ -30,6 +30,6 @@ flourish_rhythm_maker = rhythmmakertools.TaleaRhythmMaker(
     tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
         avoid_dots=False,
         is_diminution=False,
-        simplify_tuplets=False,
+        #simplify_tuplets=False,
         ),
     )

@@ -1,5 +1,7 @@
 # -*- encoding: utf-8 -*-
-from abjad import *
+from abjad import durationtools
+from abjad import mathtools
+from abjad import rhythmmakertools
 
 
 glissando_rhythm_maker = rhythmmakertools.IncisedRhythmMaker(
@@ -23,6 +25,6 @@ glissando_rhythm_maker = rhythmmakertools.IncisedRhythmMaker(
     tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
         avoid_dots=True,
         is_diminution=True,
-        simplify_tuplets=True,
+        #simplify_tuplets=True,
         ),
     )

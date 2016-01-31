@@ -35,7 +35,7 @@ third_spanner = spannertools.ComplexTrillSpanner(
 
 string_trills_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
+        dynamic_expression=background_dynamic_attachment_expression,
         trill_spanner=consort.AttachmentExpression(
             attachments=(
                 third_spanner,
@@ -47,7 +47,7 @@ string_trills_music_specifier = consort.MusicSpecifier(
         ),
     pitch_handler=consort.PitchClassPitchHandler(
         pitch_specifier='a c b',
-        register_specifier=zaira.materials.register_specifier_inventory[3],
+        register_specifier=register_specifier_inventory[3],
         ),
-    rhythm_maker=zaira.materials.sustained_rhythm_maker,
+    rhythm_maker=sustained_rhythm_maker,
     )

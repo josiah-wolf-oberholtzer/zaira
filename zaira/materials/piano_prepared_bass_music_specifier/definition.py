@@ -5,7 +5,10 @@ from abjad.tools import pitchtools
 from abjad.tools import selectortools
 from abjad.tools import spannertools
 import consort
-import zaira
+from zaira.materials.background_dynamic_attachment_expression.definition \
+    import background_dynamic_attachment_expression
+from zaira.materials.undergrowth_rhythm_maker.definition \
+    import undergrowth_rhythm_maker
 
 
 staccato_selector = selectortools.Selector()
@@ -25,7 +28,7 @@ sustain_selector = sustain_selector.by_duration('>', (1, 16))
 
 piano_prepared_bass_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
+        dynamic_expression=background_dynamic_attachment_expression,
         clef_spanner=consort.AttachmentExpression(
             attachments=consort.ClefSpanner(
                 clef='bass_15',
@@ -61,5 +64,5 @@ piano_prepared_bass_music_specifier = consort.MusicSpecifier(
             'A0 C1 B0 D1 C#1 E1 D#1 F1 G1 A#0 F#1',
             ),
         ),
-    rhythm_maker=zaira.materials.undergrowth_rhythm_maker,
+    rhythm_maker=undergrowth_rhythm_maker,
     )

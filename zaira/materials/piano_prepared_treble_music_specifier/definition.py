@@ -5,7 +5,10 @@ from abjad.tools import pitchtools
 from abjad.tools import selectortools
 from abjad.tools import spannertools
 import consort
-import zaira
+from zaira.materials.background_dynamic_attachment_expression.definition \
+    import background_dynamic_attachment_expression
+from zaira.materials.undergrowth_rhythm_maker.definition \
+    import undergrowth_rhythm_maker
 
 
 staccato_selector = selectortools.Selector()
@@ -26,7 +29,7 @@ sustain_selector = sustain_selector.by_duration('>', (1, 16))
 
 piano_prepared_treble_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
+        dynamic_expression=background_dynamic_attachment_expression,
         clef_spanner=consort.AttachmentExpression(
             attachments=consort.ClefSpanner(
                 clef='treble^15',
@@ -62,5 +65,5 @@ piano_prepared_treble_music_specifier = consort.MusicSpecifier(
             'C7 B7 D7 C#7 E7 D#7 F7 G7 A#7 F#7 A7',
             ),
         ),
-    rhythm_maker=zaira.materials.undergrowth_rhythm_maker,
+    rhythm_maker=undergrowth_rhythm_maker,
     )

@@ -4,12 +4,16 @@ from abjad.tools import pitchtools
 from abjad.tools import spannertools
 from abjad.tools import selectortools
 import consort
-import zaira
+from zaira import tools
+from zaira.materials.midground_dynamic_attachment_expression.definition \
+    import midground_dynamic_attachment_expression
+from zaira.materials.sustained_rhythm_maker.definition \
+    import sustained_rhythm_maker
 
 
 drum_brushed_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
+        dynamic_expression=midground_dynamic_attachment_expression,
         text_spanner=consort.AttachmentExpression(
             attachments=consort.ComplexTextSpanner(
                 markup=Markup(r'\concat { \vstrut brush }')
@@ -30,17 +34,17 @@ drum_brushed_music_specifier = consort.MusicSpecifier(
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=pitchtools.PitchSegment(
             items=(
-                zaira.tools.Percussion.HIGH_TOM,
-                zaira.tools.Percussion.LOW_TOM,
-                zaira.tools.Percussion.BASS_DRUM,
-                zaira.tools.Percussion.HIGH_TOM,
-                zaira.tools.Percussion.BASS_DRUM,
-                zaira.tools.Percussion.LOW_TOM,
-                zaira.tools.Percussion.HIGH_TOM,
-                zaira.tools.Percussion.BASS_DRUM,
-                zaira.tools.Percussion.LOW_TOM,
+                tools.Percussion.HIGH_TOM,
+                tools.Percussion.LOW_TOM,
+                tools.Percussion.BASS_DRUM,
+                tools.Percussion.HIGH_TOM,
+                tools.Percussion.BASS_DRUM,
+                tools.Percussion.LOW_TOM,
+                tools.Percussion.HIGH_TOM,
+                tools.Percussion.BASS_DRUM,
+                tools.Percussion.LOW_TOM,
                 ),
             ),
         ),
-    rhythm_maker=zaira.materials.sustained_rhythm_maker,
+    rhythm_maker=sustained_rhythm_maker,
     )

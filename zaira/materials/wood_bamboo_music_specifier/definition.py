@@ -9,7 +9,7 @@ import zaira
 
 wood_bamboo_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expression=zaira.materials.midground_dynamic_attachment_expression,
+        dynamic_expression=midground_dynamic_attachment_expression,
         stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=spannertools.StemTremoloSpanner(),
             selector=selectortools.Selector(
@@ -29,5 +29,5 @@ wood_bamboo_music_specifier = consort.MusicSpecifier(
             items=[zaira.tools.Percussion.BAMBOO_WINDCHIMES],
             ),
         ),
-    rhythm_maker=zaira.materials.undergrowth_rhythm_maker,
+    rhythm_maker=undergrowth_rhythm_maker,
     )

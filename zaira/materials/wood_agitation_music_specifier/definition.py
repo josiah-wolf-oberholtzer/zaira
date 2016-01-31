@@ -10,7 +10,7 @@ import zaira
 
 wood_agitation_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expression=zaira.materials.erratic_dynamic_attachment_expression,
+        dynamic_expression=erratic_dynamic_attachment_expression,
         stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=spannertools.StemTremoloSpanner(),
             selector=selectortools.Selector(
@@ -53,7 +53,7 @@ wood_agitation_music_specifier = consort.MusicSpecifier(
             ),
         ),
     rhythm_maker=new(
-        zaira.materials.reiterating_rhythm_maker,
+        reiterating_rhythm_maker,
         denominators=(16, 4),
         extra_counts_per_division=(0, 1, 0, 1, 2),
         ),

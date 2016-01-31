@@ -2,7 +2,8 @@
 from abjad.tools import indicatortools
 from abjad.tools import selectortools
 import consort
-import zaira
+from zaira.materials.reiterating_rhythm_maker.definition \
+    import reiterating_rhythm_maker
 
 
 percussion_fanfare_music_specifier = consort.MusicSpecifier(
@@ -20,5 +21,5 @@ percussion_fanfare_music_specifier = consort.MusicSpecifier(
             ),
         ),
     pitch_handler=consort.AbsolutePitchHandler(),
-    rhythm_maker=zaira.materials.reiterating_rhythm_maker,
+    rhythm_maker=reiterating_rhythm_maker,
     )

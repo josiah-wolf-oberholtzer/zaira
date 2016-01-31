@@ -2,12 +2,13 @@
 from abjad.tools import spannertools
 from abjad.tools import selectortools
 import consort
-import zaira
+from zaira.materials.background_dynamic_attachment_expression.definition \
+    import background_dynamic_attachment_expression
 
 
 piano_drone_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expression=zaira.materials.background_dynamic_attachment_expression,
+        dynamic_expression=background_dynamic_attachment_expression,
         stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=spannertools.StemTremoloSpanner(),
             selector=selectortools.select_pitched_runs(),
