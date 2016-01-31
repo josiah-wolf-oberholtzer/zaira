@@ -3,7 +3,8 @@ from abjad import Markup
 from abjad.tools import indicatortools
 from abjad.tools import selectortools
 import consort
-import zaira
+from zaira.materials.sustained_rhythm_maker.definition \
+    import sustained_rhythm_maker
 
 
 string_tutti_overpressure_music_specifier = consort.MusicSpecifier(

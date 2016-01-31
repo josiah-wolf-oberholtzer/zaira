@@ -4,7 +4,12 @@ from abjad.tools import indicatortools
 from abjad.tools import selectortools
 from abjad.tools import spannertools
 import consort
-import zaira
+from zaira.materials.midground_dynamic_attachment_expression.definition \
+    import midground_dynamic_attachment_expression
+from zaira.materials.undergrowth_rhythm_maker.definition \
+    import undergrowth_rhythm_maker
+from zaira.materials.register_specifier_inventory.definition \
+    import register_specifier_inventory
 
 
 string_undergrowth_music_specifier = consort.MusicSpecifier(

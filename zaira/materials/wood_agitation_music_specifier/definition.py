@@ -5,7 +5,11 @@ from abjad.tools import selectortools
 from abjad.tools import spannertools
 from abjad.tools.topleveltools import new
 import consort
-import zaira
+from zaira import tools
+from zaira.materials.erratic_dynamic_attachment_expression.definition \
+    import erratic_dynamic_attachment_expression
+from zaira.materials.reiterating_rhythm_maker.definition \
+    import reiterating_rhythm_maker
 
 
 wood_agitation_music_specifier = consort.MusicSpecifier(
@@ -28,27 +32,27 @@ wood_agitation_music_specifier = consort.MusicSpecifier(
     pitch_handler=consort.AbsolutePitchHandler(
         pitch_specifier=pitchtools.PitchSegment(
             items=(
-                zaira.tools.Percussion.TAMBOURINE,
-                zaira.tools.Percussion.GUERO,
-                zaira.tools.Percussion.TAMBOURINE,
-                zaira.tools.Percussion.TAMBOURINE,
-                zaira.tools.Percussion.GUERO,
-                zaira.tools.Percussion.GUERO,
-                zaira.tools.Percussion.GUERO,
-                zaira.tools.Percussion.TAMBOURINE,
-                zaira.tools.Percussion.TAMBOURINE,
-                zaira.tools.Percussion.GUERO,
-                zaira.tools.Percussion.TAMBOURINE,
-                zaira.tools.Percussion.TAMBOURINE,
-                zaira.tools.Percussion.TAMBOURINE,
-                zaira.tools.Percussion.TAMBOURINE,
-                zaira.tools.Percussion.GUERO,
-                zaira.tools.Percussion.GUERO,
-                zaira.tools.Percussion.TAMBOURINE,
-                zaira.tools.Percussion.GUERO,
-                zaira.tools.Percussion.TAMBOURINE,
-                zaira.tools.Percussion.TAMBOURINE,
-                zaira.tools.Percussion.GUERO,
+                tools.Percussion.TAMBOURINE,
+                tools.Percussion.GUERO,
+                tools.Percussion.TAMBOURINE,
+                tools.Percussion.TAMBOURINE,
+                tools.Percussion.GUERO,
+                tools.Percussion.GUERO,
+                tools.Percussion.GUERO,
+                tools.Percussion.TAMBOURINE,
+                tools.Percussion.TAMBOURINE,
+                tools.Percussion.GUERO,
+                tools.Percussion.TAMBOURINE,
+                tools.Percussion.TAMBOURINE,
+                tools.Percussion.TAMBOURINE,
+                tools.Percussion.TAMBOURINE,
+                tools.Percussion.GUERO,
+                tools.Percussion.GUERO,
+                tools.Percussion.TAMBOURINE,
+                tools.Percussion.GUERO,
+                tools.Percussion.TAMBOURINE,
+                tools.Percussion.TAMBOURINE,
+                tools.Percussion.GUERO,
                 ),
             ),
         ),

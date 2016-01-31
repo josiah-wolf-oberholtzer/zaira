@@ -2,7 +2,10 @@
 from abjad import Markup
 from abjad.tools import selectortools
 import consort
-import zaira
+from zaira.materials.background_dynamic_attachment_expression.definition \
+    import background_dynamic_attachment_expression
+from zaira.materials.sustained_rhythm_maker.definition \
+    import sustained_rhythm_maker
 
 
 wind_airtone_music_specifier = consort.MusicSpecifier(

@@ -6,7 +6,10 @@ from abjad.tools import schemetools
 from abjad.tools import selectortools
 from abjad.tools import spannertools
 import consort
-import zaira
+from zaira.materials.midground_dynamic_attachment_expression.definition \
+    import midground_dynamic_attachment_expression
+from zaira.materials.stuttering_rhythm_maker.definition \
+    import stuttering_rhythm_maker
 
 
 wind_slap_music_specifier = consort.MusicSpecifier(
