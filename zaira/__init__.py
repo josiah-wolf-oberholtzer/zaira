@@ -2,6 +2,7 @@
 
 from abjad.tools import lilypondparsertools
 lilypondparsertools.LilyPondParser.register_markup_function('vstrut', [])
+del lilypondparsertools
 
 from zaira import materials
 from zaira import segments

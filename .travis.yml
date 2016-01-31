@@ -23,7 +23,7 @@ install:
 
 script:
     - ajv doctest ./zaira -x
-    - py.test -rf ./zaira -x
+    - py.test -rf -vv ./zaira -x
 
 notifications:
     email: false
