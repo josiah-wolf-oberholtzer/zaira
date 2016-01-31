@@ -6,13 +6,14 @@ from abjad.tools import mathtools
 from abjad.tools import pitchtools
 from abjad.tools import timespantools
 import consort
-import zaira
+from zaira import materials
+from zaira import tools
 
 
 ### SEGMENT MAKER #############################################################
 
 
-segment_maker = zaira.tools.ZairaSegmentMaker(
+segment_maker = tools.ZairaSegmentMaker(
     tempo=indicatortools.Tempo((1, 4), 48),
     )
 
@@ -20,7 +21,7 @@ ratio = mathtools.NonreducedRatio([1, 14])
 
 segment_maker.desired_duration_in_seconds = (
     durationtools.Multiplier(sum(ratio), 91) *
-    zaira.materials.total_duration_in_seconds
+    materials.total_duration_in_seconds
     )
 
 fanfare_duration = durationtools.Duration(1, 16),
@@ -31,7 +32,7 @@ fanfare_duration = durationtools.Duration(1, 16),
 
 segment_maker.add_setting(
     timespan_maker=new(
-        zaira.materials.dense_timespan_maker,
+        materials.dense_timespan_maker,
         playing_groupings=(1,),
         ),
     timespan_identifier=consort.RatioPartsExpression(
@@ -42,19 +43,19 @@ segment_maker.add_setting(
             ),
         ),
     clarinet=new(
-        zaira.materials.wind_airtone_music_specifier,
+        materials.wind_airtone_music_specifier,
         pitch_handler__register_specifier__base_pitch='D3',
         ),
-    flute=zaira.materials.wind_airtone_music_specifier,
+    flute=materials.wind_airtone_music_specifier,
     oboe=new(
-        zaira.materials.wind_airtone_music_specifier,
+        materials.wind_airtone_music_specifier,
         pitch_handler__register_specifier__base_pitch='Bb3',
         ),
     )
 
 
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.sparse_timespan_maker,
+    timespan_maker=materials.sparse_timespan_maker,
     timespan_identifier=consort.RatioPartsExpression(
         parts=(0, 2, 4),
         ratio=(3, 1, 2, 1, 1),
@@ -62,15 +63,15 @@ segment_maker.add_setting(
             start_offset=fanfare_duration,
             ),
         ),
-    clarinet=zaira.materials.wind_keyclick_music_specifier,
-    flute=zaira.materials.wind_keyclick_music_specifier,
-    oboe=zaira.materials.wind_keyclick_music_specifier,
+    clarinet=materials.wind_keyclick_music_specifier,
+    flute=materials.wind_keyclick_music_specifier,
+    oboe=materials.wind_keyclick_music_specifier,
     )
 
 
 segment_maker.add_setting(
     timespan_maker=new(
-        zaira.materials.granular_timespan_maker,
+        materials.granular_timespan_maker,
         playing_talea__counts=(2, 2, 3, 2, 7, 1, 3, 2, 1),
         ),
     timespan_identifier=consort.RatioPartsExpression(
@@ -81,7 +82,7 @@ segment_maker.add_setting(
             ),
         ),
     oboe=new(
-        zaira.materials.oboe_solo_music_specifier,
+        materials.oboe_solo_music_specifier,
         pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             pitchtools.Transposition(-3),
             ),
@@ -94,23 +95,23 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=new(
-        zaira.materials.sustained_timespan_maker,
+        materials.sustained_timespan_maker,
         fuse_groups=True,
         ),
     drums=new(
-        zaira.materials.percussion_brushed_music_specifier,
-        pitch_handler__pitch_specifier=zaira.tools.Percussion.BASS_DRUM,
+        materials.percussion_brushed_music_specifier,
+        pitch_handler__pitch_specifier=tools.Percussion.BASS_DRUM,
         ),
     metals=new(
-        zaira.materials.percussion_brushed_music_specifier,
-        pitch_handler__pitch_specifier=zaira.tools.Percussion.TAM_TAM,
+        materials.percussion_brushed_music_specifier,
+        pitch_handler__pitch_specifier=tools.Percussion.TAM_TAM,
         ),
     )
 
 
 segment_maker.add_setting(
     timespan_maker=new(
-        zaira.materials.sparse_timespan_maker,
+        materials.sparse_timespan_maker,
         fuse_groups=True,
         ),
     timespan_identifier=consort.RatioPartsExpression(
@@ -118,19 +119,19 @@ segment_maker.add_setting(
         ratio=(1, 1, 1, 1, 1),
         ),
     drums=new(
-        zaira.materials.percussion_brushed_tremolo_music_specifier,
-        pitch_handler__pitch_specifier=zaira.tools.Percussion.BASS_DRUM,
+        materials.percussion_brushed_tremolo_music_specifier,
+        pitch_handler__pitch_specifier=tools.Percussion.BASS_DRUM,
         ),
     metals=new(
-        zaira.materials.percussion_brushed_tremolo_music_specifier,
-        pitch_handler__pitch_specifier=zaira.tools.Percussion.TAM_TAM,
+        materials.percussion_brushed_tremolo_music_specifier,
+        pitch_handler__pitch_specifier=tools.Percussion.TAM_TAM,
         ),
     )
 
 
 segment_maker.add_setting(
     timespan_maker=new(
-        zaira.materials.sparse_timespan_maker,
+        materials.sparse_timespan_maker,
         fuse_groups=True,
         ),
     timespan_identifier=consort.RatioPartsExpression(
@@ -138,12 +139,12 @@ segment_maker.add_setting(
         ratio=(1, 1, 1, 1, 1),
         ),
     drums=new(
-        zaira.materials.percussion_superball_music_specifier,
-        pitch_handler__pitch_specifier=zaira.tools.Percussion.BASS_DRUM,
+        materials.percussion_superball_music_specifier,
+        pitch_handler__pitch_specifier=tools.Percussion.BASS_DRUM,
         ),
     metals=new(
-        zaira.materials.percussion_superball_music_specifier,
-        pitch_handler__pitch_specifier=zaira.tools.Percussion.TAM_TAM,
+        materials.percussion_superball_music_specifier,
+        pitch_handler__pitch_specifier=tools.Percussion.TAM_TAM,
         ),
     )
 
@@ -153,16 +154,16 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=new(
-        zaira.materials.dense_timespan_maker,
+        materials.dense_timespan_maker,
         fuse_groups=True,
         ),
-    piano_rh=zaira.materials.piano_drone_music_specifier,
+    piano_rh=materials.piano_drone_music_specifier,
     )
 
 
 segment_maker.add_setting(
     timespan_maker=new(
-        zaira.materials.sparse_timespan_maker,
+        materials.sparse_timespan_maker,
         playing_groupings=(1,),
         playing_talea__counts=(3, 3, 3, 3, 3, 5, 3, 4),
         timespan_specifier=consort.TimespanSpecifier(
@@ -174,7 +175,7 @@ segment_maker.add_setting(
         ratio=(3, 1, 2, 1, 3, 1, 1),
         ),
     piano_rh=new(
-        zaira.materials.piano_flourish_music_specifier,
+        materials.piano_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch="c''",
         pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             pitchtools.Transposition(3),
@@ -182,7 +183,7 @@ segment_maker.add_setting(
         seed=1,
         ),
     piano_lh=new(
-        zaira.materials.piano_flourish_music_specifier,
+        materials.piano_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch="c,",
         pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
             pitchtools.Transposition(3),
@@ -197,7 +198,7 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=new(
-        zaira.materials.tutti_timespan_maker,
+        materials.tutti_timespan_maker,
         padding=durationtools.Duration(1, 4),
         playing_groupings=(1,),
         reflect=True,
@@ -210,17 +211,17 @@ segment_maker.add_setting(
             ),
         ),
     violin=new(
-        zaira.materials.string_undergrowth_music_specifier,
+        materials.string_undergrowth_music_specifier,
         pitch_handler__register_specifier__base_pitch='g',
         seed=0,
         ),
     viola=new(
-        zaira.materials.string_undergrowth_music_specifier,
+        materials.string_undergrowth_music_specifier,
         pitch_handler__register_specifier__base_pitch='c',
         seed=1,
         ),
     cello=new(
-        zaira.materials.string_undergrowth_music_specifier,
+        materials.string_undergrowth_music_specifier,
         pitch_handler__register_specifier__base_pitch='c,',
         seed=2,
         ),
@@ -228,7 +229,7 @@ segment_maker.add_setting(
 
 
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.dense_timespan_maker,
+    timespan_maker=materials.dense_timespan_maker,
     timespan_identifier=consort.RatioPartsExpression(
         parts=(1, 3),
         ratio=(3, 1, 2, 1, 1),
@@ -237,7 +238,7 @@ segment_maker.add_setting(
             ),
         ),
     cello=new(
-        zaira.materials.cello_solo_music_specifier,
+        materials.cello_solo_music_specifier,
         seed=1,
         ),
     )
@@ -248,15 +249,15 @@ segment_maker.add_setting(
 
 segment_maker.add_setting(
     timespan_maker=new(
-        zaira.materials.tutti_timespan_maker,
+        materials.tutti_timespan_maker,
         playing_talea__counts=(3, 2, 3, 3, 2, 4),
         playing_groupings=(1,),
         padding=durationtools.Duration(3, 8),
         ),
-    clarinet=zaira.materials.brazil_nut_music_specifier,
-    flute=zaira.materials.brazil_nut_music_specifier,
-    viola=zaira.materials.brazil_nut_music_specifier,
-    violin=zaira.materials.brazil_nut_music_specifier,
+    clarinet=materials.brazil_nut_music_specifier,
+    flute=materials.brazil_nut_music_specifier,
+    viola=materials.brazil_nut_music_specifier,
+    violin=materials.brazil_nut_music_specifier,
     )
 
 
@@ -269,24 +270,24 @@ segment_maker.add_setting(
         stop_offset=fanfare_duration,
         ),
     piano_rh=new(
-        zaira.materials.piano_fanfare_music_specifier,
+        materials.piano_fanfare_music_specifier,
         pitch_handler__register_specifier__base_pitch="g'",
         ),
     piano_lh=new(
-        zaira.materials.piano_fanfare_music_specifier,
+        materials.piano_fanfare_music_specifier,
         pitch_handler__logical_tie_expressions=
-            zaira.materials.piano_fanfare_music_specifier
+            materials.piano_fanfare_music_specifier
                 .pitch_handler.logical_tie_expressions[:-1],
         pitch_handler__pitch_specifier="g c a f d f e b e",
         pitch_handler__register_specifier__base_pitch="g,,",
         ),
     drums=new(
-        zaira.materials.percussion_fanfare_music_specifier,
-        pitch_handler__pitch_specifier=zaira.tools.Percussion.KICK_DRUM,
+        materials.percussion_fanfare_music_specifier,
+        pitch_handler__pitch_specifier=tools.Percussion.KICK_DRUM,
         ),
     metals=new(
-        zaira.materials.percussion_fanfare_music_specifier,
-        pitch_handler__pitch_specifier=zaira.tools.Percussion.BRAKE_DRUM,
+        materials.percussion_fanfare_music_specifier,
+        pitch_handler__pitch_specifier=tools.Percussion.BRAKE_DRUM,
         ),
     )
 
@@ -295,6 +296,6 @@ segment_maker.add_setting(
 
 
 segment_maker.add_setting(
-    timespan_maker=zaira.materials.pedals_timespan_maker,
-    piano_pedals=zaira.materials.piano_pedals_music_specifier,
+    timespan_maker=materials.pedals_timespan_maker,
+    piano_pedals=materials.piano_pedals_music_specifier,
     )
