@@ -30,6 +30,6 @@ flourish_rhythm_maker = rhythmmakertools.TaleaRhythmMaker(
     tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
         avoid_dots=False,
         is_diminution=False,
-        #simplify_tuplets=False,
+        #simplify_redundant_tuplets=False,
         ),
     )

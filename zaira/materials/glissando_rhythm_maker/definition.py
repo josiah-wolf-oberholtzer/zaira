@@ -25,6 +25,6 @@ glissando_rhythm_maker = rhythmmakertools.IncisedRhythmMaker(
     tuplet_spelling_specifier=rhythmmakertools.TupletSpellingSpecifier(
         avoid_dots=True,
         is_diminution=True,
-        #simplify_tuplets=True,
+        simplify_redundant_tuplets=True,
         ),
     )
