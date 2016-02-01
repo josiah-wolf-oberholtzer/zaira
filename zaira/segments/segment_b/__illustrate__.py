@@ -36,14 +36,14 @@ if __name__ == '__main__':
             traceback.print_exc()
             sys.exit(1)
         try:
-            current_directory = os.path.dirname(__file__)
+            current_directory = os.path.abspath(os.path.dirname(__file__))
             dummy_session = idetools.Session()
             abjad_ide = idetools.AbjadIDE(
-                session=dummy_session, 
+                session=dummy_session,
                 )
             abjad_ide._write_metadata_py(
                 current_directory,
-                segment_metadata, 
+                segment_metadata,
                 )
         except:
             traceback.print_exc()
