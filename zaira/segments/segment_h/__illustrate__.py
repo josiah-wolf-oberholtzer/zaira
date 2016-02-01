@@ -22,7 +22,7 @@ if __name__ == '__main__':
             traceback.print_exc()
             sys.exit(1)
         try:
-            from zaira.segments.segment_g.__metadata__ import metadata as previous_segment_metadata
+            previous_segment_metadata = None
         except ImportError:
             traceback.print_exc()
             sys.exit(1)
@@ -39,11 +39,11 @@ if __name__ == '__main__':
             current_directory = os.path.dirname(__file__)
             dummy_session = idetools.Session()
             abjad_ide = idetools.AbjadIDE(
-                session=dummy_session, 
+                session=dummy_session,
                 )
             abjad_ide._write_metadata_py(
                 current_directory,
-                segment_metadata, 
+                segment_metadata,
                 )
         except:
             traceback.print_exc()
@@ -63,6 +63,10 @@ if __name__ == '__main__':
             current_directory,
             'illustration.pdf',
             )
+        if os.path.exists(ly_path):
+            os.remove(ly_path)
+        if os.path.exists(pdf_path):
+            os.remove(pdf_path)
         output_paths = (ly_path, pdf_path)
         with systemtools.Timer() as timer:
             persist(lilypond_file).as_pdf(pdf_path)
