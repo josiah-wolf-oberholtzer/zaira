@@ -2,6 +2,10 @@ SHELL = /bin/bash
 
 .PHONY: materials segments
 
+collect:
+	cd segments && for segment in segment_*; do \
+		cp $$segment/illustration.ly ../build/segments/$${segment/_/-}.ly; \
+	done;
 materials:
 	for module in materials/*/__illustrate__.py; do \
 		python $$module; \
