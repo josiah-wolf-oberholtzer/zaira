@@ -45,8 +45,6 @@ nosetests.xml
 
 # Abjad IDE
 *.backup
-__illustrate_segment__.py
-__output_material__.py
 *.candidate.ly
 *.candidate.ps
 *.candidate.pdf
