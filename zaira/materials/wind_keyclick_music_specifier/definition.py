@@ -12,7 +12,10 @@ from zaira.materials.undergrowth_rhythm_maker.definition \
 
 wind_keyclick_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
-        dynamic_expression=background_dynamic_attachment_expression,
+        dynamic_expression=consort.DynamicExpression(
+            dynamic_tokens='f mf',
+            unsustained=True,
+            ),
         clef_spanner=consort.ClefSpanner('percussion'),
         staff_lines_spanner=spannertools.StaffLinesSpanner(
             lines=(4, -4),
@@ -23,7 +26,7 @@ wind_keyclick_music_specifier = consort.MusicSpecifier(
             ),
         text_spanner=consort.AttachmentExpression(
             attachments=consort.ComplexTextSpanner(
-                markup=Markup(r'\concat { \vstrut keyclick }')
+                markup=Markup(r'\concat { \vstrut percussive }')
                     .italic()
                     .pad_around(0.5)
                     .box(),

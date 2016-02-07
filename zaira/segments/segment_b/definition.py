@@ -7,6 +7,8 @@ from abjad.tools import timespantools
 import consort
 from zaira import materials
 from zaira import tools
+from zaira.materials.reiterating_rhythm_maker.definition \
+    import reiterating_rhythm_maker
 
 
 ### SEGMENT MAKER #############################################################
@@ -53,7 +55,13 @@ segment_maker.add_setting(
             start_offset=fanfare_duration,
             ),
         ),
-    oboe=materials.oboe_solo_music_specifier,
+    oboe=new(
+        materials.oboe_solo_music_specifier,
+        rhythm_maker=new(
+            reiterating_rhythm_maker,
+            denominators=(64, 1, 64, 32, 2, 4),
+            ),
+        )
     )
 
 
@@ -74,7 +82,7 @@ segment_maker.add_setting(
     timespan_maker=new(
         materials.sparse_timespan_maker,
         fuse_groups=True,
-        padding=durationtools.Duration(1, 4),
+        padding=durationtools.Duration(1, 2),
         ),
     drums=materials.drum_brushed_music_specifier,
     metals=materials.metal_brushed_music_specifier,
@@ -127,7 +135,7 @@ segment_maker.add_setting(
         materials.sparse_timespan_maker,
         padding=durationtools.Duration(1, 4),
         playing_groupings=(1,),
-        playing_talea__counts=(4, 3, 2, 4, 3),
+        playing_talea__counts=(4, 6, 8, 4, 3),
         reflect=True,
         ),
     timespan_identifier=timespantools.Timespan(
@@ -165,9 +173,10 @@ segment_maker.add_setting(
         ),
     piano_lh=new(
         materials.piano_fanfare_music_specifier,
-        pitch_handler__logical_tie_expressions=
+        pitch_handler__logical_tie_expressions=(
             materials.piano_fanfare_music_specifier
-                .pitch_handler.logical_tie_expressions[:-1],
+                .pitch_handler.logical_tie_expressions[:-1]
+            ),
         pitch_handler__pitch_specifier="g c a f d f e b e",
         pitch_handler__register_specifier__base_pitch="g,,",
         ),
