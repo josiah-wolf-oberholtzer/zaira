@@ -10,7 +10,7 @@ from zaira.materials.undergrowth_rhythm_maker.definition \
     import undergrowth_rhythm_maker
 
 
-brazil_nut_music_specifier = consort.MusicSpecifier(
+shaker_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         dynamic_expression=background_dynamic_attachment_expression,
         clef_spanner=consort.ClefSpanner('percussion'),

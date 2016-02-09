@@ -172,10 +172,10 @@ segment_maker.add_setting(
         playing_groupings=(1,),
         padding=durationtools.Duration(3, 8),
         ),
-    clarinet=materials.brazil_nut_music_specifier,
-    flute=materials.brazil_nut_music_specifier,
-    violin=materials.brazil_nut_music_specifier,
-    viola=materials.brazil_nut_music_specifier,
+    clarinet=materials.shaker_music_specifier,
+    flute=materials.shaker_music_specifier,
+    violin=materials.shaker_music_specifier,
+    viola=materials.shaker_music_specifier,
     woods=materials.wood_bamboo_music_specifier,
     )
 

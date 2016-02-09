@@ -71,19 +71,19 @@ segment_maker.add_setting(
 segment_maker.add_setting(
     timespan_maker=consort.FloodedTimespanMaker(),
     clarinet=new(
-        materials.brazil_nut_music_specifier,
+        materials.shaker_music_specifier,
         rhythm_maker=materials.sustained_rhythm_maker,
         ),
     flute=new(
-        materials.brazil_nut_music_specifier,
+        materials.shaker_music_specifier,
         rhythm_maker=materials.sustained_rhythm_maker,
         ),
     violin=new(
-        materials.brazil_nut_music_specifier,
+        materials.shaker_music_specifier,
         rhythm_maker=materials.sustained_rhythm_maker,
         ),
     viola=new(
-        materials.brazil_nut_music_specifier,
+        materials.shaker_music_specifier,
         rhythm_maker=materials.sustained_rhythm_maker,
         ),
     )
