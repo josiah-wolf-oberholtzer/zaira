@@ -1,7 +1,14 @@
 SHELL = /bin/bash
 
-.PHONY: materials segments
+.PHONY: boilerplate materials segments
 
+boilerplate:
+	for segment in segments/segment_*; do \
+		cp boilerplate/__illustrate_segment__.py $$segment/__illustrate__.py; \
+	done
+	for material in materials/*/; do \
+		cp boilerplate/__illustrate_material__.py $$material/__illustrate__.py; \
+	done
 collect:
 	cd segments && for segment in segment_*; do \
 		cp $$segment/illustration.ly ../build/segments/$${segment/_/-}.ly; \
@@ -11,9 +18,9 @@ materials:
 		python $$module; \
 	done
 segment_a:
-	./segments/$@/__illustrate__.py
+	python ./segments/$@/__illustrate__.py
 segment_b:
-	./segments/$@/__illustrate__.py
+	python ./segments/$@/__illustrate__.py
 segment_c:
 	./segments/$@/__illustrate__.py
 segment_d:
