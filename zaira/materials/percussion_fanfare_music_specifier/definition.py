@@ -14,10 +14,10 @@ percussion_fanfare_music_specifier = consort.MusicSpecifier(
             ),
         accent=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('accent'),
-            selector=selectortools.Selector(
-                ).by_leaves(
-                ).by_logical_tie(pitched=True,
-                )[0],
+            selector=selectortools.Selector()
+                .by_leaves()
+                .by_logical_tie(pitched=True)
+                [0],
             ),
         ),
     pitch_handler=consort.AbsolutePitchHandler(),

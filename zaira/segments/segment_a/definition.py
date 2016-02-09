@@ -35,14 +35,15 @@ segment_maker.add_setting(
     timespan_maker=consort.FloodedTimespanMaker(),
     piano_rh=new(
         materials.piano_fanfare_music_specifier,
+        pitch_handler__pitch_specifier="g g g g g c g",
         pitch_handler__register_specifier__base_pitch="g'",
         ),
     piano_lh=new(
         materials.piano_fanfare_music_specifier,
-        pitch_handler__logical_tie_expressions=
-            materials.piano_fanfare_music_specifier
+        pitch_handler__logical_tie_expressions=materials
+            .piano_fanfare_music_specifier
                 .pitch_handler.logical_tie_expressions[:-1],
-        pitch_handler__pitch_specifier="g c a f d f e b e",
+        pitch_handler__pitch_specifier="g g g g g c g g",
         pitch_handler__register_specifier__base_pitch="g,,",
         ),
     drums=new(
