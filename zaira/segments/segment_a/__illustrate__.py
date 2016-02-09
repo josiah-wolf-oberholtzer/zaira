@@ -10,6 +10,7 @@ from ide.tools import idetools
 
 
 if __name__ == '__main__':
+    current_directory = os.path.dirname(os.path.abspath(__file__))
     with systemtools.Timer() as timer:
         try:
             from definition import segment_maker
@@ -21,11 +22,9 @@ if __name__ == '__main__':
         except ImportError:
             traceback.print_exc()
             sys.exit(1)
-        try:
-            previous_segment_metadata = None
-        except ImportError:
-            traceback.print_exc()
-            sys.exit(1)
+        previous_segment_metadata = (
+            segment_maker.get_previous_segment_metadata(current_directory)
+            )
         try:
             result = segment_maker(
                 segment_metadata=segment_metadata,
@@ -54,7 +53,6 @@ if __name__ == '__main__':
         message = message.format(total_time, identifier)
         print(message)
     try:
-        current_directory = os.path.dirname(__file__)
         ly_path = os.path.join(
             current_directory,
             'illustration.ly',
