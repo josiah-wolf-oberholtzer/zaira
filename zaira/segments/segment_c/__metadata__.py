@@ -4,7 +4,41 @@ from abjad import *
 
 metadata = datastructuretools.TypedOrderedDict(
     [
-        ('name', 'C'),
+        (
+            'end_instruments_by_staff',
+            datastructuretools.TypedOrderedDict(
+                [
+                    ('Cello Staff', 'cello'),
+                    (
+                        'Clarinet In B-Flat Staff',
+                        'clarinet in B-flat',
+                        ),
+                    ('Drums Staff', 'Drums'),
+                    ('Flute Staff', 'flute'),
+                    ('Metals Staff', 'Metals'),
+                    ('Oboe Staff', 'oboe'),
+                    ('Piano Lower Staff', 'piano'),
+                    ('Piano Upper Staff', 'piano'),
+                    ('Viola Staff', 'viola'),
+                    ('Violin Staff', 'violin'),
+                    ('Woods Staff', 'Woods'),
+                    ]
+                ),
+            ),
+        (
+            'end_tempo',
+            (
+                (1, 4),
+                72,
+                ),
+            ),
+        (
+            'end_time_signature',
+            (5, 16),
+            ),
+        ('first_bar_number', 27),
+        ('is_repeated', None),
+        ('measure_count', 21),
         ('segment_count', 12),
         ('segment_number', 3),
         ]

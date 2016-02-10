@@ -45,42 +45,56 @@ afterGraceFraction = #(cons 127 128)
         \consists Bar_number_engraver
         \consists Mark_engraver
         \consists Metronome_mark_engraver
+        \consists Script_engraver
+        \consists Text_engraver
+        \consists Text_spanner_engraver
         \consists Time_signature_engraver
-
-        \override BarNumber.X-extent = #'(0 . 0)
-        \override BarNumber.Y-extent = #'(0 . 0)
-        \override BarNumber.extra-offset = #'(-8 . -4)
+        \override BarNumber.extra-offset = #'(-6 . -4)
         \override BarNumber.font-name = "Didot Italic"
-        \override BarNumber.font-size = 2
-        \override BarNumber.stencil = #(make-stencil-circler 0.1 0.7 ly:text-interface::print)
-
+        \override BarNumber.font-size = 1
+        \override BarNumber.padding = 4
         \override MetronomeMark.X-extent = #'(0 . 0)
-        \override MetronomeMark.X-offset = 5
-        \override MetronomeMark.Y-offset = -2.5
-        \override MetronomeMark.break-align-symbols = #'(time-signature)
+        \override MetronomeMark.Y-extent = #'(0 . 0)
+        \override MetronomeMark.break-align-symbols = #'(left-edge)
+        \override MetronomeMark.extra-offset = #'(0 . 2)
         \override MetronomeMark.font-size = 3
-
+        \override MetronomeMark.use-skylines = ##f
+        \override MetronomeMark.padding = 0
+        \override MetronomeMark.staff-padding = 0
+        \override MetronomeMark.outside-staff-padding = 0
+        \override MetronomeMark.outside-staff-horizontal-padding = 0
+        \override MetronomeMark.minimum-space = 0
         \override RehearsalMark.X-extent = #'(0 . 0)
-        \override RehearsalMark.Y-offset = 8
+        \override RehearsalMark.X-offset = 6
+        \override RehearsalMark.Y-offset = -2.25
         \override RehearsalMark.break-align-symbols = #'(time-signature)
         \override RehearsalMark.break-visibility = #end-of-line-invisible
         \override RehearsalMark.font-name = "Didot"
         \override RehearsalMark.font-size = 10
         \override RehearsalMark.outside-staff-priority = 500
-        \override RehearsalMark.self-alignment-X = #CENTER
-
+        \override RehearsalMark.self-alignment-X = #center
+        \override Script.extra-offset = #'(4 . -9)
+        \override Script.font-size = 6
+        \override TextScript.font-size = 3
+        \override TextScript.outside-staff-priority = 600
+        \override TextScript.padding = 6
+        \override TextScript.parent-alignment-X = #center
+        \override TextScript.self-alignment-X = #center
+        \override TextSpanner.bound-details.right.attach-dir = #LEFT
+        \override TextSpanner.padding = 6.75
         \override TimeSignature.X-extent = #'(0 . 0)
-        \override TimeSignature.break-align-symbols = #'(staff-bar)
+        \override TimeSignature.break-align-symbol = #'left-edge
         \override TimeSignature.break-visibility = #end-of-line-invisible
         \override TimeSignature.font-size = 3
+        \override TimeSignature.space-alist.clef = #'(extra-space . 0.5)
         \override TimeSignature.style = #'numbered
-
-        \override VerticalAxisGroup.staff-staff-spacing = #'(
-            (basic-distance . 8)
-            (minimum-distance . 8)
+        \override VerticalAxisGroup.default-staff-staff-spacing = #'(
+            (basic-distance . 0)
+            (minimum-distance . 15)
             (padding . 8)
             (stretchability . 0)
-            )
+        )
+        \override VerticalAxisGroup.minimum-Y-extent = #'(-20 . 20)
     }
 
     %%% WINDS %%%
@@ -269,8 +283,7 @@ afterGraceFraction = #(cons 127 128)
         \remove Metronome_mark_engraver
         \remove Mark_engraver
         \remove Bar_number_engraver
-        \override BarLine.bar-extent = #'(-2 . 2)
-        \override BarLine.hair-thickness = 0.5
+
         \override BarLine.space-alist = #'(
             (time-signature extra-space . 0.0)
             (custos minimum-space . 0.0) 
@@ -281,22 +294,48 @@ afterGraceFraction = #(cons 127 128)
             (next-note semi-fixed-space . 0.0) 
             (right-edge extra-space . 0.0)
             )
+
+        \override StaffGrouper.staffgroup-staff-spacing = #'(
+            (basic-distance . 10)
+            (minimum-distance . 10)
+            (padding . 5)
+            (stretchability . 0)
+            )
+
+        \override StaffGrouper.staff-staff-spacing = #'(
+            (basic-distance . 10)
+            (minimum-distance . 10)
+            (padding . 5)
+            (stretchability . 0)
+            )
+
+        \override BarLine.bar-extent = #'(-2 . 2)
+        \override BarLine.hair-thickness = 0.5
         \override Beam.beam-thickness = 0.75
         \override Beam.breakable = ##t
+        \override Beam.damping = 5
         \override Beam.length-fraction = 1.5
         \override DynamicLineSpanner.add-stem-support = ##t
         \override DynamicLineSpanner.outside-staff-padding = 1
         \override Glissando.breakable = ##t
         \override Glissando.thickness = 3
+        \override Hairpin.bound-padding = 1.5
         \override GraceSpacing.common-shortest-duration = #(ly:make-moment 1 16)
+        \override InstrumentName.self-alignment-X = #RIGHT
+        \override MultiMeasureRest.expand-limit = #1
         \override NoteCollision.merge-differently-dotted = ##t
         \override NoteColumn.ignore-collision = ##t
-        \override OttavaBracket.add-stem-support = ##t
+        \override OttavaBracket.outside-staff-priority = 500
         \override OttavaBracket.padding = 2
+        \shape #'((-1.5 . 0) (-1 . 0) (-0.5 . 0) (0 . 0)) RepeatTie                 
+        \override RepeatTie.X-extent = ##f
         \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1 64)
         \override SpacingSpanner.strict-grace-spacing = ##f
         \override SpacingSpanner.strict-note-spacing = ##f
         \override SpacingSpanner.uniform-stretching = ##t
+        \override SpanBar.hair-thickness = 0.5
+        \override StaffSymbol.color = #(x11-color 'grey50)
+        \override StaffSymbol.layer = -1
         \override Stem.details.beamed-lengths = #'(6)
         \override Stem.details.lengths = #'(6)
         \override Stem.stemlet-length = 1.5
@@ -304,9 +343,13 @@ afterGraceFraction = #(cons 127 128)
         \override StemTremolo.flag-count = 4
         \override StemTremolo.slope = 0.5
         \override StemTremolo.style = #'default
+
         \override SustainPedal.self-alignment-X = #CENTER
         \override SustainPedalLineSpanner.padding = 2
+        \override SustainPedalLineSpanner.outside-staff-padding = 2
         \override SustainPedalLineSpanner.to-barline = ##t
+        \override SystemStartSquare.thickness = 2
+
         \override TextScript.add-stem-support = ##t
         \override TextScript.outside-staff-padding = 1
         \override TextScript.padding = 1
@@ -319,22 +362,20 @@ afterGraceFraction = #(cons 127 128)
         \override TrillPitchHead.whiteout = ##t
         \override TrillSpanner.outside-staff-padding = 1
         \override TrillSpanner.padding = 1
+
         \override TupletBracket.avoid-scripts = ##t
+        \override TupletBracket.full-length-padding = 1.5
         \override TupletBracket.full-length-to-extent = ##t
         \override TupletBracket.outside-staff-padding = 2
         \override TupletBracket.padding = 2
         \override TupletNumber.font-size = 1
         \override TupletNumber.text = #tuplet-number::calc-fraction-text
-        \override VerticalAxisGroup.staff-staff-spacing = #'(
-            (basic-distance . 8)
-            (minimum-distance . 14)
-            (padding . 4)
-            (stretchability . 0)
-            )
+
         autoBeaming = ##f
         pedalSustainStyle = #'mixed
         proportionalNotationDuration = #(ly:make-moment 1 32)
         tupletFullLength = ##t
+        barNumberFormatter = #format-oval-barnumbers
     }
 
 }
