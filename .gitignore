@@ -48,3 +48,4 @@ nosetests.xml
 *.candidate.ly
 *.candidate.ps
 *.candidate.pdf
+__illustrate__.py
