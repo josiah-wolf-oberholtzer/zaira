@@ -373,7 +373,7 @@ afterGraceFraction = #(cons 127 128)
 
         autoBeaming = ##f
         pedalSustainStyle = #'mixed
-        proportionalNotationDuration = #(ly:make-moment 1 32)
+        proportionalNotationDuration = #(ly:make-moment 1 24)
         tupletFullLength = ##t
         barNumberFormatter = #format-oval-barnumbers
     }

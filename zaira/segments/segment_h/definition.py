@@ -70,7 +70,7 @@ segment_maker.add_setting(
         pitch_handler__register_specifier__base_pitch='D3',
         ),
     flute=new(materials.wind_slap_music_specifier,
-        text_spanner=consort.AttachmentExpression(
+        attachment_handler__text_spanner=consort.AttachmentExpression(
             attachments=consort.ComplexTextSpanner(
                 markup=Markup(r'\concat { \vstrut ram }')
                     .italic()
