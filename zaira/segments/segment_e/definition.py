@@ -1,9 +1,11 @@
 # -*- encoding: utf-8 -*-
+from abjad import Markup
 from abjad import new
 from abjad.tools import durationtools
 from abjad.tools import indicatortools
 from abjad.tools import mathtools
 from abjad.tools import pitchtools
+from abjad.tools import selectortools
 from abjad.tools import timespantools
 import consort
 from zaira import materials
@@ -86,9 +88,9 @@ segment_maker.add_setting(
             start_offset=fanfare_duration,
             ),
         ),
-    clarinet=materials.wind_keyclick_music_specifier,
+    clarinet=materials.wind_slap_music_specifier,
     flute=materials.wind_keyclick_music_specifier,
-    oboe=materials.wind_keyclick_music_specifier,
+    oboe=materials.wind_slap_music_specifier,
     )
 
 
@@ -101,7 +103,17 @@ segment_maker.add_setting(
         materials.wind_slap_music_specifier,
         pitch_handler__register_specifier__base_pitch='D3',
         ),
-    flute=materials.wind_slap_music_specifier,
+    flute=new(materials.wind_slap_music_specifier,
+        text_spanner=consort.AttachmentExpression(
+            attachments=consort.ComplexTextSpanner(
+                markup=Markup(r'\concat { \vstrut ram }')
+                    .italic()
+                    .pad_around(0.5)
+                    .box(),
+                ),
+            selector=selectortools.Selector().by_leaves(),
+            ),
+        ),
     oboe=new(
         materials.wind_slap_music_specifier,
         pitch_handler__register_specifier__base_pitch='Bb3',

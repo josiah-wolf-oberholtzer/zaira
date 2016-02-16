@@ -55,9 +55,9 @@ segment_maker.add_setting(
         parts=(0, 2, 4),
         ratio=(1, 2, 1, 2, 1),
         ),
-    clarinet=materials.wind_keyclick_music_specifier,
+    clarinet=materials.wind_slap_music_specifier,
     flute=materials.wind_keyclick_music_specifier,
-    oboe=materials.wind_keyclick_music_specifier,
+    oboe=materials.wind_slap_music_specifier,
     )
 
 

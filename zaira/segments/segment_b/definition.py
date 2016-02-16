@@ -40,9 +40,9 @@ segment_maker.add_setting(
             start_offset=fanfare_duration,
             ),
         ),
-    clarinet=materials.wind_keyclick_music_specifier,
+    clarinet=materials.wind_slap_music_specifier,
     flute=materials.wind_keyclick_music_specifier,
-    oboe=materials.wind_keyclick_music_specifier,
+    oboe=materials.wind_slap_music_specifier,
     )
 
 
