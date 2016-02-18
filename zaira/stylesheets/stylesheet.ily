@@ -10,9 +10,59 @@ Create a box of the same height as the current font."
                      empty-interval
                      (ly:stencil-extent ref-mrkp Y))))
 
+#(define-markup-command (oval layout props arg)
+ (markup?)
+  #:properties ((thickness 1)
+               (font-size 0)
+               (oval-padding 0.5))
+ (let ((th (* (ly:output-def-lookup layout 'line-thickness)
+              thickness))
+       (pad (* (magstep font-size) oval-padding))
+       (m (interpret-markup layout props (markup #:hcenter-in 4.0 arg))))
+   (oval-stencil m th pad (* pad 8.0))))
+
+#(define (format-oval-barnumbers barnum measure-pos alt-number context)
+ (make-oval-markup
+  (robust-bar-number-function barnum measure-pos alt-number context)))
+
+date = #(strftime "(%Y-%m-%d)" (localtime (current-time)))
+
 afterGraceFraction = #(cons 127 128)
 #(set-default-paper-size "11x17" 'landscape)
 #(set-global-staff-size 12)
+
+\header {
+    composer = \markup {
+        \column {
+            \override #'(font-name . "Didot")
+                \fontsize #3 "Josiah Wolf Oberholtzer (1984)"
+            " "
+        }
+    }
+    tagline = \markup { "" }
+    title = \markup {
+        \column {
+            \center-align {
+                \override #'(font-name . "Didot Italic")
+                    \fontsize #4 {
+                        \line { Invisible Cities (i): }
+                    }
+                \vspace #0.5
+                \override #'(font-name . "Didot")
+                    \fontsize #18 {
+                        \line { ZAIRA }
+                    }
+                \vspace #1
+                \override #'(font-name . "Didot Italic")
+                    \fontsize #4 {
+                        \line { "for Ensemble Mosaik" }
+                        " "
+                        " "
+                    }
+            }
+        }
+    }
+}
 
 \layout {
 
@@ -127,6 +177,7 @@ afterGraceFraction = #(cons 127 128)
         \name MetalsStaff
         \type Engraver_group
         \alias Staff
+        \RemoveEmptyStaves
     }
 
     \context {
@@ -134,6 +185,7 @@ afterGraceFraction = #(cons 127 128)
         \name WoodsStaff
         \type Engraver_group
         \alias Staff
+        \RemoveEmptyStaves
         \override BarLine.bar-extent = #'(-1 . 1)
         \override StaffSymbol.line-count = 3
     }
@@ -143,6 +195,7 @@ afterGraceFraction = #(cons 127 128)
         \name DrumsStaff
         \type Engraver_group
         \alias Staff
+        \RemoveEmptyStaves
         \override BarLine.bar-extent = #'(-1 . 1)
         \override StaffSymbol.line-count = 3
     }
@@ -381,16 +434,14 @@ afterGraceFraction = #(cons 127 128)
 }
 
 \paper {
-
-    %%% MARGINS %%%
-
-    % bottom-margin = 10\mm
-    left-margin = 30\mm
+    indent = 20\mm
+    short-indent = 15\mm
+    bottom-margin = 10\mm
+    left-margin = 10\mm
     right-margin = 10\mm
     top-margin = 10\mm
-
-    %%% HEADERS AND FOOTERS %%%
-
+    oddHeaderMarkup = \markup {}
+    evenHeaderMarkup = \markup {}
     evenFooterMarkup = \markup \fill-line {
         \concat {
             \bold \fontsize #3
@@ -411,17 +462,12 @@ afterGraceFraction = #(cons 127 128)
         }
     }
     oddHeaderMarkup = \markup \fill-line { " " }
-    print-first-page-number = ##f
+    print-first-page-number = ##t
     print-page-number = ##t
-
-    %%% PAGE BREAKING %%%
-
+    max-systems-per-page = 1
     page-breaking = #ly:optimal-breaking
     ragged-bottom = ##f
-    ragged-last-bottom = ##f
-
-    %%% SPACING DETAILS %%%%
-
+    ragged-last-bottom = ##t
     markup-system-spacing = #'(
         (basic-distance . 0)
         (minimum-distance . 12)
@@ -429,10 +475,10 @@ afterGraceFraction = #(cons 127 128)
         (stretchability . 0)
     )
     system-system-spacing = #'(
-        (basic-distance . 8)
-        (minimum-distance . 12)
-        (padding . 4)
-        (stretchability . 0)
+        (basic-distance . 12)
+        (minimum-distance . 18)
+        (padding . 12)
+        (stretchability . 20)
     )
     top-markup-spacing = #'(
         (basic-distance . 0)
@@ -446,9 +492,4 @@ afterGraceFraction = #(cons 127 128)
         (padding . 0)
         (stretchability . 0)
     )
-
-    %%% ETC %%%
-
-    % system-separator-markup = \slashSeparator
-
 }
