@@ -46,12 +46,12 @@ segment_maker.add_setting(
             ),
         ),
     clarinet=new(
-        materials.wind_airtone_music_specifier,
+        materials.wind_tranquilo_music_specifier,
         pitch_handler__register_specifier__base_pitch='D3',
         ),
-    flute=materials.wind_airtone_music_specifier,
+    flute=materials.wind_tranquilo_music_specifier,
     oboe=new(
-        materials.wind_airtone_music_specifier,
+        materials.wind_tranquilo_music_specifier,
         pitch_handler__register_specifier__base_pitch='Bb3',
         ),
     )

@@ -8,7 +8,7 @@ from zaira.materials.sustained_rhythm_maker.definition \
     import sustained_rhythm_maker
 
 
-wind_airtone_music_specifier = consort.MusicSpecifier(
+wind_tranquilo_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         dynamic_expression=background_dynamic_attachment_expression,
         text_spanner=consort.AttachmentExpression(
