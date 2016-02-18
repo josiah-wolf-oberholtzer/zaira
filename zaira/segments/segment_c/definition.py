@@ -332,12 +332,3 @@ segment_maker.add_setting(
         pitch_handler__pitch_specifier=tools.Percussion.BRAKE_DRUM,
         ),
     )
-
-
-### DEPENDENT MUSIC SETTINGS ##################################################
-
-
-segment_maker.add_setting(
-    timespan_maker=materials.pedals_timespan_maker,
-    piano_pedals=materials.piano_pedals_music_specifier,
-    )
