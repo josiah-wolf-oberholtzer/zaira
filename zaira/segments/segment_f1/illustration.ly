@@ -1,128 +1,127 @@
+% 2016-02-17 18:33
+
+% "abjad" revision: 979bf96a83927fe232f3ab8352fb594554b14569
+% "ide" revision: f1e66a9b7773da46a6fc63877e27502f99337156
+% "consort" revision: ce35d47517cb28c3c79f9c0d609eaa5215cde732
+% "zaira" revision: 0b791f2a2151b1b95bcdbbdad289fd20e956419c
+
 \version "2.19.15"
 \language "english"
 
 #(ly:set-option 'relative-includes #t)
 
-\include "/Users/josiah/Documents/Scores/zaira/zaira/stylesheets/parts-stylesheet.ily"
-\include "/Users/josiah/Documents/Scores/zaira/zaira/stylesheets/stylesheet.ily"
+\include "../../stylesheets/stylesheet.ily"
+\include "../../stylesheets/nonfirst-segment.ily"
 
 \score {
-    \context Score = "Zaira Score" <<
+    \context Score = "Zaira Score" \with {
+        currentBarNumber = #98
+    } <<
         \tag #'time
-        \context TimeSignatureContext = "TimeSignatureContext" {
+        \context TimeSignatureContext = "Time Signature Context" {
             {
-                \time 5/8
                 \tempo 4=48
+                \time 3/4
                 \mark \markup {
-                    \concat
-                        {
-                            \override
-                                #'(box-padding . 0.5)
-                                \box
-                                    \caps
-                                        F1
-                            " "
-                            \fontsize
-                                #-3
-                                " "
-                        }
+                    \box
+                        \pad-around
+                            #0.5
+                            \caps
+                                E
                     }
-                s1 * 5/8
-            }
-            {
-                \time 4/4
-                s1 * 1
-            }
-            {
-                s1 * 1
-            }
-            {
-                \time 3/8
-                s1 * 3/8
-            }
-            {
-                \time 3/4
-                s1 * 3/4
-            }
-            {
-                \time 3/8
-                s1 * 3/8
-            }
-            {
-                \time 4/4
-                s1 * 1
-            }
-            {
-                \time 2/4
-                s1 * 1/2
+                s1 * 3/2
             }
             {
                 \time 5/16
                 s1 * 5/16
             }
             {
-                \time 6/8
-                s1 * 3/4
-            }
-            {
-                \time 3/8
-                s1 * 3/8
-            }
-            {
-                \time 3/4
-                s1 * 3/4
-            }
-            {
-                \time 3/8
-                s1 * 3/8
-            }
-            {
-                \time 6/8
-                s1 * 3/4
+                \time 4/4
+                s1 * 1
             }
             {
                 \time 5/16
                 s1 * 5/16
-            }
-            {
-                s1 * 5/16
-            }
-            {
-                \time 4/4
-                s1 * 1
-            }
-            {
-                s1 * 1
-            }
-            {
-                \time 3/8
-                s1 * 3/8
-            }
-            {
-                s1 * 3/8
-            }
-            {
-                \time 4/4
-                s1 * 1
-            }
-            {
-                \time 2/4
-                s1 * 1/2
             }
             {
                 \time 5/8
                 s1 * 5/8
             }
             {
-                \time 3/4
-                s1 * 3/4
+                \time 3/8
+                s1 * 3/8
+            }
+            {
+                \time 4/4
+                s1 * 1
+            }
+            {
+                \time 3/8
+                s1 * 3/8
+            }
+            {
+                \time 4/4
+                s1 * 1
+            }
+            {
+                \time 3/8
+                s1 * 3/8
+            }
+            {
+                \time 4/4
+                s1 * 1
+            }
+            {
+                \time 3/8
+                s1 * 3/8
             }
             {
                 \time 5/16
                 s1 * 5/16
             }
             {
+                \time 3/8
+                s1 * 3/8
+            }
+            {
+                \time 5/16
                 s1 * 5/16
+            }
+            {
+                \time 3/4
+                s1 * 3/4
+            }
+            {
+                \time 3/8
+                s1 * 3/8
+            }
+            {
+                \time 5/8
+                s1 * 5/4
+            }
+            {
+                \time 5/16
+                s1 * 5/16
+            }
+            {
+                \time 4/4
+                s1 * 2
+            }
+            {
+                \time 3/8
+                s1 * 3/8
+            }
+            {
+                \time 5/16
+                s1 * 5/16
+            }
+            {
+                \time 6/8
+                s1 * 3/4
+            }
+            {
+                \time 5/16
+                s1 * 5/8
             }
         }
         \context EnsembleGroup = "Wind Section Staff Group" <<
@@ -132,510 +131,359 @@
                 shortInstrumentName = \markup { Fl. }
             } <<
                 \context FluteStaff = "Flute Staff" {
+                    \bar "||"
                     \context Voice = "Flute Voice" {
                         \clef "treble"
                         {
+                            % [Flute Voice] Measure 98
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                                r2
+                            }
+                            % [Flute Voice] Measure 99
                             {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 3/4
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Flute Voice] Measure 100
+                            {
+                                r16
+                            }
+                        }
+                        {
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r8
+                            }
+                            % [Flute Voice] Measure 101
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                d''4. \p
+                            }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                        }
+                        {
+                            % [Flute Voice] Measure 102
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r8
+                            }
+                            % [Flute Voice] Measure 103
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/8
-                                \stopStaff
-                                \startStaff
                             }
+                            % [Flute Voice] Measure 104
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        {
-                            {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                f16 -\staccato \ppp \startTextSpan
-                                r8.
-                                g'16 -\staccato \p
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r8.
-                                r2
-                            }
-                            {
-                                r8
-                                r16
-                            }
-                        }
-                        {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 3/5 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                r8. \startTextSpan
-                                c'16 -\staccato \pp
-                                r16
-                            }
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 3/4 {
-                                r16
-                                f16 -\staccato \ppp
-                                r8
-                            }
-                            {
-                                g'8 :64 \p
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r8.
-                                r4
-                            }
-                            {
-                                r8
-                                r16
-                            }
-                        }
-                        {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 3/4 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        shaker
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'16 -\staccato \ppp \startTextSpan
-                                r16
-                                r16
-                                c'16 -\staccato \p
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 6/7 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'16 -\staccato \p \startTextSpan
-                                r8
-                                g'16 -\staccato \pp
-                                r16
-                                r16
-                                g'16 -\staccato \ppp
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r8
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        airtone
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'style = #'slash
-                                a'4 \ppp ~ \startTextSpan
-                            }
-                            {
-                                a'4
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r2
-                            }
-                            {
-                                r8
-                            }
-                        }
-                        {
-                            \times 2/3 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        shaker
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'16 -\staccato \pp \startTextSpan
-                                r8
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r8
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'16 -\staccato \ppp \startTextSpan
-                            }
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 3/4 {
-                                r8
-                                g'8 :64 -\staccato \p
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r2
-                            }
-                        }
-                        {
-                            \times 4/5 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        shaker
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                r8 \startTextSpan
-                                c'8 :64 -\staccato \p
-                                r16
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r4
-                                r8.
-                            }
-                        }
-                        {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 5/6 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                f16 -\staccato \pp \startTextSpan
-                                r16
-                                r16
-                                g'8 :64 -\staccato \ppp
-                                r16
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        airtone
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'style = #'slash
-                                c'4. \pp \startTextSpan
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
                                 R1 * 3/8
                                 \stopStaff
                                 \startStaff
                             }
+                            % [Flute Voice] Measure 105
+                            {
+                                r2
+                            }
+                        }
+                        {
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r4..
+                            }
+                            % [Flute Voice] Measure 106
+                            {
+                                r16
+                            }
+                        }
+                        {
+                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \times 5/7 {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        click
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                r8. \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 2
+                                <
+                                    \parenthesize
+                                    \tweak #'font-size #-2
+                                    ef
+                                    \tweak #'style #'cross
+                                    d'
+                                >16 -\staccato \mp
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                r16
+                                \set stemLeftBeamCount = 2
+                                <
+                                    \parenthesize
+                                    \tweak #'font-size #-2
+                                    gf
+                                    \tweak #'style #'cross
+                                    f'
+                                >16 -\staccato ]
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [Flute Voice] Measure 107
+                            {
+                                r2
+                                r16
+                            }
+                        }
+                        {
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                            % [Flute Voice] Measure 108
+                            {
+                                r16
+                            }
+                        }
+                        {
+                            {
+                                f'16 \fp \>
+                                f'4 \repeatTie
+                            }
+                            % [Flute Voice] Measure 109
+                            {
+                                f'8 \pp \repeatTie
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                d'8 \p [
+                                \set stemLeftBeamCount = 1
+                                d'8 \repeatTie ]
+                            }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                            % [Flute Voice] Measure 110
+                            {
+                                r8.
+                            }
+                        }
+                        {
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                            % [Flute Voice] Measure 111
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/16
+                            }
+                            % [Flute Voice] Measure 112
+                            {
+                                R1 * 3/8
+                            }
+                            % [Flute Voice] Measure 113
+                            {
+                                R1 * 5/16
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Flute Voice] Measure 114
+                            {
+                                r4..
+                            }
                         }
                         {
                             {
@@ -663,7 +511,42 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                c'8 :64 \ppp \startTextSpan
+                                c'16 -\accent \laissezVibrer \p \startTextSpan
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [Flute Voice] Measure 115
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 3/8
+                            }
+                            % [Flute Voice] Measure 116
+                            {
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        {
+                            % [Flute Voice] Measure 117
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
                                 \revert NoteHead #'no-ledgers
@@ -674,40 +557,34 @@
                         }
                         {
                             {
-                                r8
-                                r2.
+                                r16
+                                r4
+                                r4
                             }
+                            % [Flute Voice] Measure 118
                             {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 1/2
+                                R1 * 5/16
                                 \stopStaff
                                 \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                r8
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 3/4 {
+                            % [Flute Voice] Measure 119
+                            {
+                                f'4 \fp
+                            }
+                        }
+                        {
+                            {
+                                r2
+                                r16
+                            }
+                        }
+                        {
+                            {
                                 \clef "percussion"
                                 \once \override TextSpanner.bound-details.left-broken.text = ##f
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -718,7 +595,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        keyclick
+                                                        shaker
                                                     }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -732,8 +609,41 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                r8 \startTextSpan
-                                g'8 :64 -\staccato \p
+                                c'16 -\accent \laissezVibrer \p \startTextSpan
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                            % [Flute Voice] Measure 120
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Flute Voice] Measure 121
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
                                 \revert NoteHead #'no-ledgers
@@ -744,11 +654,22 @@
                         }
                         {
                             {
+                                r16
+                            }
+                            % [Flute Voice] Measure 122
+                            {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/16
-                                \bar "||"
+                            }
+                            % [Flute Voice] Measure 123
+                            {
+                                R1 * 3/4
+                            }
+                            % [Flute Voice] Measure 124
+                            {
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -762,24 +683,26 @@
                 shortInstrumentName = \markup { Ob. }
             } <<
                 \context OboeStaff = "Oboe Staff" {
+                    \bar "||"
                     \context Voice = "Oboe Voice" {
                         \clef "treble"
                         {
+                            % [Oboe Voice] Measure 98
                             {
                                 r8
                             }
                         }
                         {
                             {
-                                b''32 -\accent -\staccato [ \< \p
+                                b32 -\staccato [ \< \p
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                b''32 -\accent -\staccato
+                                b32 -\staccato
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                b''32 -\accent -\staccato
+                                b32 -\staccato
                                 \set stemLeftBeamCount = 3
-                                b''32 -\accent -\staccato ] \f
+                                b32 -\staccato ] \f
                             }
                         }
                         {
@@ -789,7 +712,6 @@
                         }
                         {
                             {
-                                \clef "percussion"
                                 \once \override TextSpanner.bound-details.left-broken.text = ##f
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
@@ -799,7 +721,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        keyclick
+                                                        slap
                                                     }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -808,113 +730,148 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'8 :64 \ppp \startTextSpan
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
+                                \override NoteHead #'stencil = #ly:text-interface::print
+                                \override NoteHead #'text = \markup {
+                                    \translate
+                                        #'(0 . -0.9)
+                                        \override
+                                            #'(thickness . 0.5)
+                                            \scale
+                                                #'(0.667 . 0.667)
+                                                \rotate
+                                                    #180
+                                                    \triangle
+                                                        ##f
+                                    }
+                                a'16 -\accent -\staccato \mf \startTextSpan [
+                                \set stemLeftBeamCount = 2
+                                c'16 -\accent -\staccato ]
+                                \revert NoteHead #'stencil
+                                \revert NoteHead #'text
                                 <> \stopTextSpan
-                                \clef "treble"
                             }
                         }
                         {
                             {
                                 r16
-                                r8
-                            }
-                            {
-                                r8
+                                r4
                             }
                         }
                         {
+                            % [Oboe Voice] Measure 99
                             {
                                 \pitchedTrill
-                                b''8 -\accent \ff \startTrillSpan cs'''
+                                b8 \ff \startTrillSpan cs'
                                 <> \stopTrillSpan
                             }
                         }
                         {
                             {
-                                r2.
-                            }
-                            {
+                                r8
                                 r4
+                                r16
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead #'stencil = #ly:text-interface::print
+                                \override NoteHead #'text = \markup {
+                                    \translate
+                                        #'(0 . -0.9)
+                                        \override
+                                            #'(thickness . 0.5)
+                                            \scale
+                                                #'(0.667 . 0.667)
+                                                \rotate
+                                                    #180
+                                                    \triangle
+                                                        ##f
+                                    }
+                                b'16 -\accent -\staccato \mp \startTextSpan [
+                                \set stemLeftBeamCount = 2
+                                d'16 -\accent -\staccato ]
+                                \revert NoteHead #'stencil
+                                \revert NoteHead #'text
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r16
+                            }
+                            % [Oboe Voice] Measure 100
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/16
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Oboe Voice] Measure 101
+                            {
+                                r16
                             }
                         }
                         {
                             {
                                 \override Hairpin #'circled-tip = ##t
-                                c'''32 -\accent -\staccato [ \> \mf
+                                c'32 -\staccato [ \> \mf
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                c'''32 -\accent -\staccato
+                                c'32 -\staccato
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                c'''32 -\accent -\staccato
+                                cs'32 -\staccato
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                c'''32 -\accent -\staccato
+                                c'32 -\staccato
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                c'''32 -\accent -\staccato
+                                c'32 -\staccato
                                 \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 1
-                                c'''32 -\accent -\staccato
+                                cs'32 -\staccato ]
                             }
                             {
-                                \set stemLeftBeamCount = 1
                                 \pitchedTrill
-                                b''8 -\accent ] \! \startTrillSpan d'''
+                                b8 \! \startTrillSpan d'
                                 \revert Hairpin #'circled-tip
                                 <> \stopTrillSpan
                             }
                         }
                         {
                             {
-                                r16
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        airtone
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'style = #'slash
-                                a'8 \ppp ~ \startTextSpan [
-                                \set stemLeftBeamCount = 1
-                                a'8 ]
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
                                 r8
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                d''8 \p [
+                                \set stemLeftBeamCount = 1
+                                d''8 \repeatTie ]
                             }
                         }
                         {
                             \times 2/3 {
-                                \clef "percussion"
                                 \once \override TextSpanner.bound-details.left-broken.text = ##f
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
@@ -924,7 +881,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        keyclick
+                                                        slap
                                                     }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -933,202 +890,191 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                r8 \startTextSpan
-                                c'4 :32 \pp
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
+                                \override NoteHead #'stencil = #ly:text-interface::print
+                                \override NoteHead #'text = \markup {
+                                    \translate
+                                        #'(0 . -0.9)
+                                        \override
+                                            #'(thickness . 0.5)
+                                            \scale
+                                                #'(0.667 . 0.667)
+                                                \rotate
+                                                    #180
+                                                    \triangle
+                                                        ##f
+                                    }
+                                b'8 -\accent -\staccato \mf \startTextSpan [
+                                \set stemLeftBeamCount = 2
+                                f'16 -\accent -\staccato ]
+                            }
+                            % [Oboe Voice] Measure 102
+                            {
+                                af'8 -\accent -\staccato [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 2
+                                e'16 -\accent -\staccato
+                                \set stemLeftBeamCount = 2
+                                d'16 -\accent -\staccato ]
+                                \revert NoteHead #'stencil
+                                \revert NoteHead #'text
                             }
                         }
                         {
                             {
-                                r8
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        {
-                            \times 4/5 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'4 :32 \p \startTextSpan
-                                f16 -\staccato
                                 r16
-                                r8
-                                g'16 -\staccato \pp
-                                r16
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
                             }
-                        }
-                        {
-                            {
-                                r2
-                            }
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            \times 4/5 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                f16 -\staccato \ppp \startTextSpan
-                                r8.
-                                g'16 -\staccato \p
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
+                            % [Oboe Voice] Measure 103
                             {
                                 r4.
-                                r16
                             }
                         }
                         {
                             {
-                                c'''32 -\accent -\staccato [ \> \f
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                c'''32 -\accent -\staccato
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                c'''32 -\accent -\staccato
-                                \set stemLeftBeamCount = 3
-                                c'''32 -\accent -\staccato ] \p
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        airtone
-                                                    }
+                                \override NoteHead #'stencil = #ly:text-interface::print
+                                \override NoteHead #'text = \markup {
+                                    \translate
+                                        #'(0 . -0.9)
+                                        \override
+                                            #'(thickness . 0.5)
+                                            \scale
+                                                #'(0.667 . 0.667)
+                                                \rotate
+                                                    #180
+                                                    \triangle
+                                                        ##f
                                     }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'style = #'slash
-                                c'8. \pp ~ \startTextSpan [
-                            }
-                            {
+                                a'16 -\accent -\staccato \mp [
                                 \set stemLeftBeamCount = 1
-                                c'8 ]
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
+                                \set stemRightBeamCount = 1
+                                c'8 -\accent -\staccato
+                                \set stemLeftBeamCount = 2
+                                b'16 -\accent -\staccato ]
+                            }
+                            % [Oboe Voice] Measure 104
+                            \times 4/5 {
+                                d'16 -\accent -\staccato [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                b'16 -\accent -\staccato
+                                \revert NoteHead #'stencil
+                                \revert NoteHead #'text
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 1
+                                r16
+                                \set stemLeftBeamCount = 1
+                                r8 ]
                             }
                         }
                         {
                             {
                                 r8
+                            }
+                            % [Oboe Voice] Measure 105
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Oboe Voice] Measure 106
+                            {
+                                r8
+                            }
+                        }
+                        {
+                            \times 4/5 {
+                                \override NoteHead #'stencil = #ly:text-interface::print
+                                \override NoteHead #'text = \markup {
+                                    \translate
+                                        #'(0 . -0.9)
+                                        \override
+                                            #'(thickness . 0.5)
+                                            \scale
+                                                #'(0.667 . 0.667)
+                                                \rotate
+                                                    #180
+                                                    \triangle
+                                                        ##f
+                                    }
+                                f'8 -\accent -\staccato \mf [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 2
+                                af'16 -\accent -\staccato
+                                \revert NoteHead #'stencil
+                                \revert NoteHead #'text
+                                \set stemLeftBeamCount = 1
+                                r8 ]
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [Oboe Voice] Measure 107
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Oboe Voice] Measure 108
+                            {
+                                r16
+                            }
+                        }
+                        {
+                            {
+                                c''32 -\staccato [ \> \f
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                c''32 -\staccato
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                c''32 -\staccato
+                                \set stemLeftBeamCount = 3
+                                cs''32 -\staccato ] \p
+                            }
+                        }
+                        {
+                            {
+                                f'8. \fp
+                            }
+                        }
+                        {
+                            % [Oboe Voice] Measure 109
+                            {
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                d'4. \p
+                            }
+                        }
+                        {
+                            {
                                 r16
                             }
                         }
                         {
                             {
                                 \pitchedTrill
-                                d'''16 -\accent [ \< \p \startTrillSpan e'''
+                                e''8. \< \p \startTrillSpan fs''
                                 <> \stopTrillSpan
                             }
+                            % [Oboe Voice] Measure 110
                             {
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 3
-                                b''32 -\accent -\staccato
+                                b'32 -\staccato [
                                 \set stemLeftBeamCount = 3
-                                b''32 -\accent -\staccato ] \f
+                                \set stemRightBeamCount = 3
+                                b'32 -\staccato
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                b'32 -\staccato
+                                \set stemLeftBeamCount = 3
+                                b32 -\staccato ] \f
                             }
                         }
                         {
@@ -1142,7 +1088,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        airtone
+                                                        slap
                                                     }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1151,19 +1097,61 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'style = #'slash
-                                b8. \p ~ \startTextSpan [
+                                \override NoteHead #'stencil = #ly:text-interface::print
+                                \override NoteHead #'text = \markup {
+                                    \translate
+                                        #'(0 . -0.9)
+                                        \override
+                                            #'(thickness . 0.5)
+                                            \scale
+                                                #'(0.667 . 0.667)
+                                                \rotate
+                                                    #180
+                                                    \triangle
+                                                        ##f
+                                    }
+                                e'16 -\accent -\staccato \mp \startTextSpan [
                                 \set stemLeftBeamCount = 2
-                                b16 ]
-                                \revert NoteHead #'style
+                                d'16 -\accent -\staccato ]
+                                \revert NoteHead #'stencil
+                                \revert NoteHead #'text
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                        }
+                        {
+                            % [Oboe Voice] Measure 111
+                            {
+                                \override NoteHead #'stencil = #ly:text-interface::print
+                                \override NoteHead #'text = \markup {
+                                    \translate
+                                        #'(0 . -0.9)
+                                        \override
+                                            #'(thickness . 0.5)
+                                            \scale
+                                                #'(0.667 . 0.667)
+                                                \rotate
+                                                    #180
+                                                    \triangle
+                                                        ##f
+                                    }
+                                f'16 -\accent -\staccato \mf [
+                                \set stemLeftBeamCount = 2
+                                cs'16 -\accent -\staccato ]
+                                \revert NoteHead #'stencil
+                                \revert NoteHead #'text
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r8.
-                                r4
+                                r16
+                                r8
                             }
+                            % [Oboe Voice] Measure 112
                             {
                                 r4
                                 r16
@@ -1172,50 +1160,35 @@
                         {
                             {
                                 \override Hairpin #'circled-tip = ##t
-                                e'''32 -\accent -\staccato [ \<
+                                e'32 -\staccato [ \<
                                 \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 1
-                                e'''32 -\accent -\staccato
+                                e''32 -\staccato ]
                             }
+                            % [Oboe Voice] Measure 113
                             {
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
                                 \pitchedTrill
-                                b''8 -\accent \startTrillSpan d'''
+                                b8. [ \startTrillSpan d'
+                                \set stemLeftBeamCount = 1
+                                b8 \repeatTie ]
                                 <> \stopTrillSpan
                             }
+                            % [Oboe Voice] Measure 114
                             {
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 3
-                                b''32 -\accent -\staccato
+                                c'32 -\staccato [
                                 \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                b''32 -\accent -\staccato
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                b''32 -\accent -\staccato
-                                \set stemLeftBeamCount = 3
-                                b''32 -\accent -\staccato ] \ff
+                                b'32 -\staccato ] \ff
                                 \revert Hairpin #'circled-tip
                             }
                         }
                         {
                             {
-                                r8
-                                r4.
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
+                                r8.
+                                r2
                             }
                         }
                         {
-                            \times 4/5 {
-                                \clef "percussion"
+                            % [Oboe Voice] Measure 115
+                            {
                                 \once \override TextSpanner.bound-details.left-broken.text = ##f
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
@@ -1225,7 +1198,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        keyclick
+                                                        slap
                                                     }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -1234,65 +1207,126 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                r16 \startTextSpan
-                                c'16 -\staccato \pp
-                                r8
-                                f16 -\staccato \ppp
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
+                                \override NoteHead #'stencil = #ly:text-interface::print
+                                \override NoteHead #'text = \markup {
+                                    \translate
+                                        #'(0 . -0.9)
+                                        \override
+                                            #'(thickness . 0.5)
+                                            \scale
+                                                #'(0.667 . 0.667)
+                                                \rotate
+                                                    #180
+                                                    \triangle
+                                                        ##f
+                                    }
+                                a'16 -\accent -\staccato \mp \startTextSpan [
+                                \set stemLeftBeamCount = 2
+                                c'16 -\accent -\staccato ]
+                                \revert NoteHead #'stencil
+                                \revert NoteHead #'text
                             }
                         }
                         {
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            % [Oboe Voice] Measure 116
+                            {
+                                \override NoteHead #'stencil = #ly:text-interface::print
+                                \override NoteHead #'text = \markup {
+                                    \translate
+                                        #'(0 . -0.9)
+                                        \override
+                                            #'(thickness . 0.5)
+                                            \scale
+                                                #'(0.667 . 0.667)
+                                                \rotate
+                                                    #180
+                                                    \triangle
+                                                        ##f
+                                    }
+                                b'8 -\accent -\staccato \mf
+                                \revert NoteHead #'stencil
+                                \revert NoteHead #'text
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                            % [Oboe Voice] Measure 117
+                            {
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                f'8 \fp
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r4
+                            }
+                            % [Oboe Voice] Measure 118
                             {
                                 r16
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 3/4 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                f16 -\staccato \p \startTextSpan
-                                r16
-                                r16
-                                c'16 -\staccato \pp
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
+                            {
+                                d''8 \p \< [
+                                \set stemLeftBeamCount = 1
+                                d''8 \repeatTie ]
+                            }
+                            % [Oboe Voice] Measure 119
+                            {
+                                d''8 \mf \repeatTie
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                f'8 \fp [
+                                \set stemLeftBeamCount = 1
+                                f'8 \repeatTie ]
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \override Hairpin #'circled-tip = ##t
+                                \pitchedTrill
+                                g'8 \> \mf \startTrillSpan bf'
+                                <> \stopTrillSpan
+                            }
+                            % [Oboe Voice] Measure 120
+                            {
+                                c''32 -\staccato [
+                                \set stemLeftBeamCount = 3
+                                b'32 -\staccato ]
+                            }
+                            {
+                                \pitchedTrill
+                                b'8 \! \startTrillSpan d''
+                                \revert Hairpin #'circled-tip
+                                <> \stopTrillSpan
                             }
                         }
                         {
@@ -1300,326 +1334,127 @@
                                 r16
                                 r2.
                             }
-                            {
-                                r16
-                            }
-                        }
-                        {
-                            \times 4/5 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                r8 \startTextSpan
-                                c'16 -\staccato \ppp
-                                r8
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r8.
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        airtone
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'style = #'slash
-                                d'8 \ppp \startTextSpan
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                g'16 -\staccato \pp \startTextSpan
-                                r16
-                                r16
-                                g'16 -\staccato \ppp [
-                            }
-                            {
-                                \set stemLeftBeamCount = 2
-                                g'16 -\staccato ]
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
+                            % [Oboe Voice] Measure 121
                             {
                                 r16
                             }
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        airtone
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'style = #'slash
-                                b4 \pp ~ \startTextSpan
+                                c'''32 -\staccato [ \> \f
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                c'''32 -\staccato
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                cs'''32 -\staccato
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                d'''32 -\staccato
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                c'''32 -\staccato
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                c'''32 -\staccato
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                c'''32 -\staccato
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                c'''32 -\staccato
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                c''32 -\staccato
+                                \set stemLeftBeamCount = 3
+                                c''32 -\staccato ]
                             }
-                            {
-                                \set stemLeftBeamCount = 1
-                                b8
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r4
-                            }
-                            {
-                                r4
-                                r8
-                            }
-                        }
-                        {
+                            % [Oboe Voice] Measure 122
                             {
                                 \pitchedTrill
-                                fss''8 -\accent \mf \startTrillSpan as''
+                                b'8 \p \startTrillSpan cs''
                                 <> \stopTrillSpan
                             }
                         }
                         {
                             {
-                                r2
+                                r16
+                            }
+                        }
+                        {
+                            \times 2/3 {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead #'stencil = #ly:text-interface::print
+                                \override NoteHead #'text = \markup {
+                                    \translate
+                                        #'(0 . -0.9)
+                                        \override
+                                            #'(thickness . 0.5)
+                                            \scale
+                                                #'(0.667 . 0.667)
+                                                \rotate
+                                                    #180
+                                                    \triangle
+                                                        ##f
+                                    }
+                                d'8 -\accent -\staccato \mp \startTextSpan [
+                                \set stemLeftBeamCount = 2
+                                b'16 -\accent -\staccato ]
+                            }
+                            % [Oboe Voice] Measure 123
+                            {
+                                f'8 -\accent -\staccato [
+                                \set stemLeftBeamCount = 2
+                                af'16 -\accent -\staccato ]
+                                \revert NoteHead #'stencil
+                                \revert NoteHead #'text
+                                <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                b''32 -\accent -\staccato [ \> \f
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                b''32 -\accent -\staccato
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                b''32 -\accent -\staccato
-                                \set stemLeftBeamCount = 3
-                                b''32 -\accent -\staccato ] \p
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r4
-                            }
-                            {
+                                r8.
                                 r4.
                             }
-                        }
-                        {
+                            % [Oboe Voice] Measure 124
                             {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'8 :64 \p \startTextSpan
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
+                                r8.
                             }
                         }
                         {
                             {
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                b''32 -\accent -\staccato [ \< \p
+                                cs'''32 -\staccato \p [
                                 \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                b''32 -\accent -\staccato
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                b''32 -\accent -\staccato
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                b''32 -\accent -\staccato
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                b''32 -\accent -\staccato
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                b''32 -\accent -\staccato
-                            }
-                            {
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                c'''32 -\accent -\staccato
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                c'''32 -\accent -\staccato
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                c'''32 -\accent -\staccato
-                                \set stemLeftBeamCount = 3
-                                c'''32 -\accent -\staccato ] \f
-                            }
-                        }
-                        {
-                            {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                f8 :64 \ppp \startTextSpan
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
+                                c'''32 -\staccato ]
                             }
                         }
                         {
                             {
                                 r16
-                                r4
                             }
+                            % [Oboe Voice] Measure 125
                             {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \bar "||"
                                 \stopStaff
                                 \startStaff
                             }
@@ -1633,19 +1468,19 @@
                 shortInstrumentName = \markup { Cl. in B-flat }
             } <<
                 \context ClarinetInBFlatStaff = "Clarinet In B-Flat Staff" {
+                    \bar "||"
                     \context Voice = "Clarinet In B-Flat Voice" {
                         \clef "treble"
                         {
+                            % [Clarinet In B-Flat Voice] Measure 98
                             {
-                                r4.
-                            }
-                        }
-                        {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 3/5 {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
                                     \box
                                         \pad-around
                                             #0.5
@@ -1656,501 +1491,41 @@
                                                         shaker
                                                     }
                                     }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'4 :32 \pp \startTextSpan
-                                \set stemLeftBeamCount = 2
-                                c'16 -\staccato
                                 \stopStaff
                                 \startStaff
                                 \revert NoteHead #'no-ledgers
                                 \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                            {
-                                r2
-                                r16
-                            }
-                        }
-                        {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 6/7 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                r8. \startTextSpan
-                                r16
-                                g'16 :128 \pp ~ [
-                                \set stemLeftBeamCount = 1
-                                g'8 :64 ]
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                        }
-                        {
-                            {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                g'8. :64 \p \startTextSpan
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        airtone
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'style = #'slash
-                                a8 \ppp \startTextSpan
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8.
-                                r8.
-                            }
-                        }
-                        {
-                            \times 2/3 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        shaker
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'16 -\staccato \p \startTextSpan
-                                r8
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
                                 \clef "treble"
                             }
                         }
                         {
                             {
                                 r8.
-                            }
-                            {
-                                r8
-                                r16
-                            }
-                        }
-                        {
-                            \times 2/3 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                f16 -\staccato \ppp \startTextSpan
-                                r8
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                            {
-                                r4
-                                r8
-                            }
-                        }
-                        {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 3/4 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                r8. \startTextSpan
-                                c'16 -\staccato \pp
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r8.
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1/2
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                r8.
-                            }
-                        }
-                        {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 3/4 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        shaker
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'16 -\staccato \ppp \startTextSpan
-                                r16
-                                r16
-                                c'16 -\staccato \p
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r4.
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        airtone
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'style = #'slash
-                                c'8 \pp \startTextSpan
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        airtone
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'style = #'slash
-                                b8 \p ~ \startTextSpan
-                            }
-                            {
-                                b4
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
                                 r2
                             }
-                            {
-                                r8
-                            }
-                        }
-                        {
-                            \times 2/3 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        shaker
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                r8 \startTextSpan
-                                c'16 -\staccato \pp
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r8
-                            }
+                            % [Clarinet In B-Flat Voice] Measure 99
                             {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
+                            % [Clarinet In B-Flat Voice] Measure 100
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                r2.
+                                r16
                             }
                         }
                         {
                             {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
                                     \box
                                         \pad-around
                                             #0.5
@@ -2161,80 +1536,73 @@
                                                         shaker
                                                     }
                                     }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'16 -\staccato \p \startTextSpan
-                                r16
-                                r16
-                                c'16 -\staccato \pp
                                 \stopStaff
                                 \startStaff
                                 \revert NoteHead #'no-ledgers
                                 \revert NoteHead #'style
-                                <> \stopTextSpan
                                 \clef "treble"
                             }
                         }
                         {
                             {
-                                r2
+                                r16
                                 r8
                             }
+                            % [Clarinet In B-Flat Voice] Measure 101
+                            {
+                                r4
+                            }
+                        }
+                        \transpose bf c'
+                        {
+                            {
+                                d'8 \p
+                            }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 3/4 {
+                            {
+                                r8
+                                r2
+                            }
+                        }
+                        {
+                            % [Clarinet In B-Flat Voice] Measure 102
+                            {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead #'no-ledgers = ##t
                                 \override NoteHead #'style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                c'16 -\staccato \p \startTextSpan
-                                r16
-                                r16
-                                f8 :64 -\staccato \pp
-                                r8.
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \stopStaff
                                 \startStaff
                                 \revert NoteHead #'no-ledgers
                                 \revert NoteHead #'style
-                                <> \stopTextSpan
                                 \clef "treble"
                             }
                         }
                         {
                             {
-                                r16
+                                r8
+                                r8
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 103
+                            {
+                                r4
                             }
                         }
+                        \transpose bf c'
                         {
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = ##f
@@ -2246,7 +1614,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        airtone
+                                                        slap
                                                     }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2255,41 +1623,223 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'style = #'slash
-                                d16 \ppp ~ \startTextSpan
-                                d4
-                                \revert NoteHead #'style
+                                \override NoteHead #'stencil = #ly:text-interface::print
+                                \override NoteHead #'text = \markup {
+                                    \translate
+                                        #'(0 . -0.9)
+                                        \override
+                                            #'(thickness . 0.5)
+                                            \scale
+                                                #'(0.667 . 0.667)
+                                                \rotate
+                                                    #180
+                                                    \triangle
+                                                        ##f
+                                    }
+                                f'16 -\accent -\staccato \mf \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                cs'8 -\accent -\staccato ]
+                                \revert NoteHead #'stencil
+                                \revert NoteHead #'text
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
+                                r8.
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 104
+                            {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 3/8
                                 \stopStaff
                                 \startStaff
                             }
+                            % [Clarinet In B-Flat Voice] Measure 105
+                            {
+                                r2
+                            }
+                        }
+                        {
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r4..
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 106
                             {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 1
+                                R1 * 3/8
                                 \stopStaff
                                 \startStaff
                             }
+                            % [Clarinet In B-Flat Voice] Measure 107
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1/2
-                                \stopStaff
-                                \startStaff
+                                r2
+                                r16
                             }
+                        }
+                        {
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r4.
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 108
+                            {
+                                r16
+                            }
+                        }
+                        \transpose bf c'
+                        {
+                            {
+                                f16 \fp [
+                                \set stemLeftBeamCount = 1
+                                f8. \repeatTie ]
+                            }
+                        }
+                        {
+                            {
+                                r16
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 109
                             {
                                 r8
-                                r16
+                            }
+                        }
+                        \transpose bf c'
+                        {
+                            {
+                                d8 \p [
+                                \set stemLeftBeamCount = 1
+                                d8 \repeatTie ]
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r8
+                            }
+                        }
+                        \transpose bf c'
+                        {
+                            {
+                                f8 \fp [
+                                \set stemLeftBeamCount = 2
+                                f16 \repeatTie ]
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 110
+                            {
+                                r8.
+                            }
+                        }
+                        {
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 111
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/16
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 112
+                            {
+                                R1 * 3/8
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 113
+                            {
+                                R1 * 5/16
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 114
+                            {
+                                r4..
                             }
                         }
                         {
@@ -2318,7 +1868,42 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                c'8 :64 \ppp \startTextSpan
+                                c'16 -\accent \laissezVibrer \p \startTextSpan
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 115
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 3/8
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 116
+                            {
+                                R1 * 5/8
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        {
+                            % [Clarinet In B-Flat Voice] Measure 117
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
                                 \revert NoteHead #'no-ledgers
@@ -2331,13 +1916,33 @@
                             {
                                 r16
                                 r4
+                                r8
                             }
+                        }
+                        \transpose bf c'
+                        {
                             {
-                                r2
+                                d'8 \p
                             }
                         }
                         {
-                            \times 4/5 {
+                            % [Clarinet In B-Flat Voice] Measure 118
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/16
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 119
+                            {
+                                r2.
+                                r16
+                            }
+                        }
+                        {
+                            {
                                 \clef "percussion"
                                 \once \override TextSpanner.bound-details.left-broken.text = ##f
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -2348,7 +1953,7 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        keyclick
+                                                        shaker
                                                     }
                                     }
                                 \once \override TextSpanner.bound-details.right-broken.text = ##f
@@ -2362,14 +1967,11 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                r8 \startTextSpan
-                                c'8 :64 -\staccato \ppp
-                                r16
+                                c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
                                 \revert NoteHead #'no-ledgers
                                 \revert NoteHead #'style
-                                <> \stopTextSpan
                                 \clef "treble"
                             }
                         }
@@ -2377,36 +1979,29 @@
                             {
                                 r8
                             }
+                            % [Clarinet In B-Flat Voice] Measure 120
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 121
+                            {
+                                r4
+                            }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 3/4 {
+                            {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        keyclick
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead #'no-ledgers = ##t
                                 \override NoteHead #'style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                r16 \startTextSpan
-                                f8. :64 \pp
+                                c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
                                 \revert NoteHead #'no-ledgers
@@ -2417,11 +2012,22 @@
                         }
                         {
                             {
+                                r16
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 122
+                            {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/16
-                                \bar "||"
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 123
+                            {
+                                R1 * 3/4
+                            }
+                            % [Clarinet In B-Flat Voice] Measure 124
+                            {
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -2437,9 +2043,11 @@
                 shortInstrumentName = \markup { Metals }
             } <<
                 \context MetalsStaff = "Metals Staff" {
+                    \bar "||"
                     \context Voice = "Metals Voice" {
                         \clef "percussion"
                         {
+                            % [Metals Voice] Measure 98
                             {
                                 g'16 -\accent \fff
                             }
@@ -2464,52 +2072,59 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                f16 :128 ~ \startTextSpan [ \< \p
-                                \set stemLeftBeamCount = 1
-                                f8 :64 ] \f
+                                f8. :64 \p \startTextSpan
                             }
                         }
                         {
                             {
-                                f4. \ppp ~
+                                f2 \p \<
                             }
+                            % [Metals Voice] Measure 99
                             {
-                                f2. ~
-                                \set stemLeftBeamCount = 1
-                                f8
+                                f2. \mf \repeatTie
                             }
                         }
                         {
+                            % [Metals Voice] Measure 100
                             {
                                 \override Hairpin #'circled-tip = ##t
-                                f8 :64 ~ \<
-                            }
-                            {
-                                f4 :32 \ff
+                                f8. :64 [ \<
+                                \set stemLeftBeamCount = 1
+                                f8 :64 \repeatTie ] \ff
                                 \revert Hairpin #'circled-tip
                             }
                         }
                         {
+                            % [Metals Voice] Measure 101
                             {
-                                f2. \pp
+                                r16
+                            }
+                        }
+                        {
+                            {
+                                f8. \fp \>
+                                f2 \repeatTie
+                                f16 \pp \repeatTie
                             }
                         }
                         {
                             {
                                 \override Hairpin #'circled-tip = ##t
-                                f4. :32 ~ \> \mf
+                                f8. :64 \> \mf
                             }
+                            % [Metals Voice] Measure 102
                             {
+                                f8. :64 \repeatTie [
                                 \set stemLeftBeamCount = 1
-                                f8 :64 \!
+                                f8 :64 \repeatTie ] \!
                                 \revert Hairpin #'circled-tip
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            % [Metals Voice] Measure 103
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                f4 \p ^ \markup {
                                     \box
                                         \pad-around
                                             #0.5
@@ -2520,16 +2135,6 @@
                                                         superball
                                                     }
                                     }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                f8 \ppp ~ \startTextSpan [
-                                \set stemLeftBeamCount = 1
-                                f8 ]
-                                <> \stopTextSpan
                             }
                         }
                         {
@@ -2552,15 +2157,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                f8 \p ~ \startTextSpan
-                                f4 ~
+                                f8 \p \startTextSpan \<
+                                f4 \repeatTie
                             }
+                            % [Metals Voice] Measure 104
                             {
-                                f4. ~
+                                f4. \repeatTie
                             }
+                            % [Metals Voice] Measure 105
                             {
-                                f4
-                                <> \stopTextSpan
+                                f4 \mf \repeatTie
                             }
                         }
                         {
@@ -2570,25 +2176,7 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                f8 \ppp \startTextSpan
+                                f8 \fp
                                 <> \stopTextSpan
                             }
                         }
@@ -2612,9 +2200,7 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                f4 \pp ~ \startTextSpan
-                                \set stemLeftBeamCount = 1
-                                f8
+                                f4. \fp \startTextSpan
                                 <> \stopTextSpan
                             }
                         }
@@ -2638,10 +2224,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                f8 \pp ~ \startTextSpan
+                                f8 \p \startTextSpan \<
                             }
+                            % [Metals Voice] Measure 106
                             {
-                                f2
+                                f4. \repeatTie
+                            }
+                            % [Metals Voice] Measure 107
+                            {
+                                f8 \mf \repeatTie
                                 <> \stopTextSpan
                             }
                         }
@@ -2670,13 +2261,81 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                f8. \p ~ \startTextSpan
+                                f2 \p \startTextSpan
+                                <> \stopTextSpan
                             }
+                        }
+                        {
                             {
-                                f4 ~
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                f4 \fp \startTextSpan
+                            }
+                        }
+                        {
+                            % [Metals Voice] Measure 108
+                            {
+                                r16
+                            }
+                        }
+                        {
+                            {
+                                f16 :128 \> \f
+                                f4 :32 \repeatTie \p
+                            }
+                        }
+                        {
+                            % [Metals Voice] Measure 109
+                            {
+                                r16
+                            }
+                        }
+                        {
+                            {
+                                f8. \p
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                f8 \fp \>
+                                f4 \repeatTie
+                                f16 \ppp \repeatTie
+                            }
+                        }
+                        {
+                            {
+                                f8. :64 \< \p
+                            }
+                            % [Metals Voice] Measure 110
+                            {
+                                f4. :32 \repeatTie
+                            }
+                            % [Metals Voice] Measure 111
+                            {
+                                f8. :64 \repeatTie [
                                 \set stemLeftBeamCount = 2
-                                f16
-                                <> \stopTextSpan
+                                f16 :128 \repeatTie ] \f
                             }
                         }
                         {
@@ -2685,188 +2344,28 @@
                             }
                         }
                         {
+                            % [Metals Voice] Measure 112
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                f4 :32 \f \startTextSpan
+                                f4. \p \<
+                            }
+                            % [Metals Voice] Measure 113
+                            {
+                                f8. \mf \repeatTie
                             }
                         }
                         {
                             {
-                                f8 \p ~
+                                r8
                             }
-                            {
-                                f4.
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8.
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                f16 \ppp ~ \startTextSpan
-                                f2
-                            }
-                        }
-                        {
-                            {
-                                f4. :32 \p
-                            }
-                        }
-                        {
-                            {
-                                f2. \pp
-                            }
-                        }
-                        {
-                            {
-                                \override Hairpin #'circled-tip = ##t
-                                f4 :32 ~ \<
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 2
-                                f16 :128 ~ [
-                            }
-                            {
-                                \set stemLeftBeamCount = 1
-                                f8. :64 ] \ff
-                                \revert Hairpin #'circled-tip
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        superball
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                f8 \ppp ~ \startTextSpan [
-                            }
-                            {
-                                \set stemLeftBeamCount = 1
-                                f8 ]
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                f8 \p ~ \startTextSpan
-                                f2. ~
-                            }
-                            {
-                                f4 ~
-                                \set stemLeftBeamCount = 1
-                                f8
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        superball
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                f8 \pp ~ \startTextSpan
-                                f4
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
+                            % [Metals Voice] Measure 114
                             {
                                 r4
                             }
+                        }
+                        {
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                r8
+                                f8. \fp
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -2889,14 +2388,13 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                f4 \p ~ \startTextSpan
-                            }
-                            {
-                                f4
+                                f16 \fp \startTextSpan
+                                f4 \repeatTie
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            % [Metals Voice] Measure 115
                             {
                                 r16
                             }
@@ -2921,105 +2419,150 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                f16 \p \startTextSpan \<
+                                f4 \repeatTie
+                            }
+                            % [Metals Voice] Measure 116
+                            {
+                                f4. \repeatTie
+                                f16 \mf \repeatTie
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        superball
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                f8. \p \startTextSpan \<
+                            }
+                            % [Metals Voice] Measure 117
+                            {
+                                f4. \repeatTie
+                                f4 \mf \repeatTie
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [Metals Voice] Measure 118
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/16
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Metals Voice] Measure 119
+                            {
+                                r8.
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                f16 \fp \startTextSpan \>
+                                f2 \repeatTie
+                                f16 \ppp \repeatTie
+                            }
+                        }
+                        {
+                            {
                                 \override Hairpin #'circled-tip = ##t
-                                f8. :64 ~ \startTextSpan [ \> \mf
-                                \set stemLeftBeamCount = 2
-                                f16 :128 ] \!
+                                f8. :64 \<
+                            }
+                            % [Metals Voice] Measure 120
+                            {
+                                f2 :32 \repeatTie
+                                f8 :64 \repeatTie \ff
                                 \revert Hairpin #'circled-tip
                             }
                         }
                         {
                             {
-                                f8. \ppp ~
-                                f4 ~
+                                f4. \p \<
                             }
+                            % [Metals Voice] Measure 121
                             {
-                                f2 ~
+                                f4. \repeatTie
                             }
+                            % [Metals Voice] Measure 122
                             {
-                                f4 ~
-                                \set stemLeftBeamCount = 2
-                                f16
-                            }
-                        }
-                        {
-                            {
-                                f16 :128 ~ \> \f
-                                f4 :32 \p
-                                <> \stopTextSpan
+                                f8. \mf \repeatTie
                             }
                         }
                         {
                             {
-                                r8.
+                                r8
                             }
                         }
                         {
+                            % [Metals Voice] Measure 123
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                f16 \pp ~ \startTextSpan
-                                f4 ~
-                                \set stemLeftBeamCount = 2
-                                f16
-                                <> \stopTextSpan
+                                f4. \fp
                             }
                         }
                         {
                             {
                                 r8.
                             }
-                            {
-                                r16
-                            }
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                f4 :32 ~ \startTextSpan \< \p
+                                \override Hairpin #'circled-tip = ##t
+                                f8. :64 \> \mf
                             }
+                            % [Metals Voice] Measure 124
                             {
-                                f4 :32 \f
+                                f8. :64 \repeatTie \!
+                                \revert Hairpin #'circled-tip
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r16
-                                \bar "||"
+                                r8
+                            }
+                            % [Metals Voice] Measure 125
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/16
+                                \stopStaff
+                                \startStaff
                             }
                         }
                     }
@@ -3030,215 +2573,108 @@
                 shortInstrumentName = \markup { Woods }
             } <<
                 \context WoodsStaff = "Woods Staff" {
+                    \bar "||"
                     \context Voice = "Woods Voice" {
                         \clef "percussion"
                         {
+                            % [Woods Voice] Measure 98
                             {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                R1 * 3/2
+                            }
+                            % [Woods Voice] Measure 100
+                            {
+                                R1 * 5/16
+                            }
+                            % [Woods Voice] Measure 101
+                            {
+                                R1 * 1
+                            }
+                            % [Woods Voice] Measure 102
+                            {
+                                R1 * 5/16
+                            }
+                            % [Woods Voice] Measure 103
+                            {
                                 R1 * 5/8
-                                \stopStaff
-                                \startStaff
                             }
+                            % [Woods Voice] Measure 104
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
                                 R1 * 3/8
-                                \stopStaff
-                                \startStaff
                             }
+                            % [Woods Voice] Measure 105
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
                                 R1 * 1
-                                \stopStaff
-                                \startStaff
                             }
+                            % [Woods Voice] Measure 106
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1/2
-                                \stopStaff
-                                \startStaff
+                                R1 * 3/8
                             }
+                            % [Woods Voice] Measure 107
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
+                                R1 * 1
+                            }
+                            % [Woods Voice] Measure 108
+                            {
+                                R1 * 3/8
+                            }
+                            % [Woods Voice] Measure 109
+                            {
+                                R1 * 1
+                            }
+                            % [Woods Voice] Measure 110
+                            {
+                                R1 * 3/8
+                            }
+                            % [Woods Voice] Measure 111
+                            {
                                 R1 * 5/16
-                                \stopStaff
-                                \startStaff
                             }
+                            % [Woods Voice] Measure 112
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
                                 R1 * 3/8
-                                \stopStaff
-                                \startStaff
                             }
+                            % [Woods Voice] Measure 113
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
                                 R1 * 5/16
-                                \stopStaff
-                                \startStaff
                             }
+                            % [Woods Voice] Measure 114
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
+                                R1 * 3/4
+                            }
+                            % [Woods Voice] Measure 115
+                            {
+                                R1 * 3/8
+                            }
+                            % [Woods Voice] Measure 116
+                            {
+                                R1 * 5/4
+                            }
+                            % [Woods Voice] Measure 118
+                            {
                                 R1 * 5/16
-                                \stopStaff
-                                \startStaff
                             }
+                            % [Woods Voice] Measure 119
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
+                                R1 * 2
                             }
+                            % [Woods Voice] Measure 121
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
                                 R1 * 3/8
-                                \stopStaff
-                                \startStaff
                             }
+                            % [Woods Voice] Measure 122
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
+                                R1 * 5/16
                             }
+                            % [Woods Voice] Measure 123
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
+                                R1 * 3/4
                             }
+                            % [Woods Voice] Measure 124
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1/2
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
                                 R1 * 5/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \bar "||"
                                 \stopStaff
                                 \startStaff
                             }
@@ -3251,17 +2687,18 @@
                 shortInstrumentName = \markup { Drums }
             } <<
                 \context DrumsStaff = "Drums Staff" {
+                    \bar "||"
                     \context Voice = "Drums Voice" {
                         \clef "percussion"
                         {
+                            % [Drums Voice] Measure 98
                             {
                                 b16 -\accent \fff
                             }
                         }
                         {
                             {
-                                r16
-                                r8
+                                r8.
                             }
                         }
                         {
@@ -3284,438 +2721,102 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                g4. :32 \p \startTextSpan
+                                g2 :32 \startTextSpan \< \p
+                            }
+                            % [Drums Voice] Measure 99
+                            {
+                                g8. :64 \repeatTie \f
                             }
                         }
                         {
                             {
-                                g2 \ppp ~
+                                g16 \p \<
+                                g2 \repeatTie
+                            }
+                            % [Drums Voice] Measure 100
+                            {
+                                g8. \repeatTie [
                                 \set stemLeftBeamCount = 1
-                                g8
+                                g8 \mf \repeatTie ]
                             }
                         }
                         {
-                            {
-                                \override Hairpin #'circled-tip = ##t
-                                g8 :64 ~ \<
-                                g4 :32 ~
-                            }
-                            {
-                                g4 :32 \ff
-                                \revert Hairpin #'circled-tip
-                            }
-                        }
-                        {
-                            {
-                                g2. \pp ~
-                            }
-                            {
-                                \set stemLeftBeamCount = 1
-                                g8
-                            }
-                        }
-                        {
-                            {
-                                g4 :32 \mf
-                            }
-                        }
-                        {
-                            {
-                                g4 \p
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        superball
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                g8 \ppp ~ \startTextSpan
-                                g4
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                g4. \ppp ~ \startTextSpan
-                            }
-                            {
-                                g4
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        superball
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                g2 \pp ~ \startTextSpan
-                                \set stemLeftBeamCount = 1
-                                g8
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                g8 \pp ~ \startTextSpan
-                            }
-                            {
-                                g4 ~
-                                \set stemLeftBeamCount = 1
-                                g8
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                            }
-                            {
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                g8 \p \startTextSpan
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        superball
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                g8. \p \startTextSpan
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                g8. \ppp ~ \startTextSpan
-                                g4
-                            }
-                        }
-                        {
-                            {
-                                g8 :64 ~ \> \f
-                            }
-                            {
-                                g4 :32 \p
-                            }
-                        }
-                        {
-                            {
-                                g8 \pp ~
-                            }
-                            {
-                                g2
-                            }
-                        }
-                        {
-                            {
-                                g4 :32 ~ \< \p
-                            }
-                            {
-                                g4. :32 \f
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                g16 \p ~ \startTextSpan
-                                g4 ~
-                                g4. ~
-                            }
-                            {
-                                \set stemLeftBeamCount = 1
-                                g8
-                            }
-                        }
-                        {
-                            {
-                                g8. :64 \ff
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                g8. \ppp \startTextSpan
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                            {
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        superball
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                g8 \ppp ~ \startTextSpan
-                                g4
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                g2 \pp ~ \startTextSpan
-                            }
-                            {
-                                \set stemLeftBeamCount = 1
-                                g8
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        superball
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                g8 \pp ~ \startTextSpan
-                                g2
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
+                            % [Drums Voice] Measure 101
                             {
                                 r4
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
+                                r16
                             }
                         }
                         {
+                            {
+                                g4.. \fp
+                            }
+                        }
+                        {
+                            {
+                                \override Hairpin #'circled-tip = ##t
+                                g4 :32 \<
+                            }
+                            % [Drums Voice] Measure 102
+                            {
+                                g8 :64 \repeatTie \ff
+                                \revert Hairpin #'circled-tip
+                            }
+                        }
+                        {
+                            {
+                                g16 \p \< [
+                                \set stemLeftBeamCount = 1
+                                g8 \repeatTie ]
+                            }
+                            % [Drums Voice] Measure 103
+                            {
+                                g8 \mf \repeatTie
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        superball
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                g8 \p \startTextSpan \<
+                                g4 \repeatTie
+                            }
+                            % [Drums Voice] Measure 104
+                            {
+                                g4 \repeatTie
+                                g16 \mf \repeatTie
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r16
+                            }
+                        }
+                        {
+                            % [Drums Voice] Measure 105
                             {
                                 \once \override TextSpanner.bound-details.left-broken.text = ##f
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -3735,7 +2836,25 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                g4 \p \startTextSpan
+                                g1 \fp \startTextSpan \>
+                            }
+                            % [Drums Voice] Measure 106
+                            {
+                                g8 \ppp \repeatTie
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                g8 \p
+                            }
+                            % [Drums Voice] Measure 107
+                            {
+                                g8. \repeatTie
                                 <> \stopTextSpan
                             }
                         }
@@ -3759,11 +2878,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                g8 \p ~ \startTextSpan [
-                            }
-                            {
-                                \set stemLeftBeamCount = 1
-                                g8 ]
+                                g16 \fp \startTextSpan \>
+                                g4 \repeatTie
+                                g16 \pp \repeatTie
                                 <> \stopTextSpan
                             }
                         }
@@ -3787,128 +2904,263 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                g8 \ppp ~ \startTextSpan
-                                g4 ~
-                                \set stemLeftBeamCount = 2
-                                g16
+                                g8. \fp \startTextSpan \> [
+                                \set stemLeftBeamCount = 1
+                                g8. \pp \repeatTie ]
                             }
                         }
                         {
+                            {
+                                r16
+                            }
+                        }
+                        {
+                            % [Drums Voice] Measure 108
                             {
                                 \override Hairpin #'circled-tip = ##t
-                                g8. :64 ~ [ \> \mf
-                                \set stemLeftBeamCount = 1
-                                g8. :64 ] \!
+                                g4. :32 \> \mf
+                            }
+                            % [Drums Voice] Measure 109
+                            {
+                                g4 :32 \repeatTie
+                                g16 :128 \repeatTie \!
                                 \revert Hairpin #'circled-tip
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                g2 \pp \startTextSpan
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                g16 :128 ~ \startTextSpan \> \f
-                                g2 :32 \p
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        brush
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                g8. \p ~ \startTextSpan
-                                g2 ~
-                            }
-                            {
-                                \set stemLeftBeamCount = 1
-                                g8.
-                            }
-                        }
-                        {
-                            {
-                                g8 :64 ~ [ \< \p
-                            }
-                            {
-                                \set stemLeftBeamCount = 1
-                                g8 :64 ] \f
-                                <> \stopTextSpan
                             }
                         }
                         {
                             {
                                 r8.
-                                \bar "||"
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                g4. \p \<
+                            }
+                            % [Drums Voice] Measure 110
+                            {
+                                g4. \repeatTie
+                            }
+                            % [Drums Voice] Measure 111
+                            {
+                                g8. \mf \repeatTie \> [
+                                \set stemLeftBeamCount = 1
+                                g8 \repeatTie ]
+                            }
+                            % [Drums Voice] Measure 112
+                            {
+                                g4 \pp
+                            }
+                        }
+                        {
+                            {
+                                g8 :64 \> \f
+                            }
+                            % [Drums Voice] Measure 113
+                            {
+                                g8 :64 \repeatTie \p
+                            }
+                        }
+                        {
+                            {
+                                g16 \fp \> [
+                                \set stemLeftBeamCount = 1
+                                g8 \repeatTie ]
+                            }
+                            % [Drums Voice] Measure 114
+                            {
+                                g4 \repeatTie
+                                g16 \ppp \repeatTie
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        superball
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                g4.. \p \startTextSpan \<
+                            }
+                            % [Drums Voice] Measure 115
+                            {
+                                g4 \repeatTie
+                                g16 \mf \repeatTie
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r16
+                            }
+                        }
+                        {
+                            % [Drums Voice] Measure 116
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                g4. \p \startTextSpan \<
+                                g4 \repeatTie
+                            }
+                            % [Drums Voice] Measure 117
+                            {
+                                g4 \mf \repeatTie
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r4
+                            }
+                        }
+                        {
+                            % [Drums Voice] Measure 118
+                            {
+                                g8. \fp \> [
+                                \set stemLeftBeamCount = 1
+                                g8 \pp \repeatTie ]
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [Drums Voice] Measure 119
+                            {
+                                g4 \fp ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        superball
+                                                    }
+                                    }
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                g4 \p \startTextSpan \<
+                                g16 \mf \repeatTie
+                            }
+                        }
+                        {
+                            {
+                                r4..
+                            }
+                            % [Drums Voice] Measure 120
+                            {
+                                r16
+                            }
+                        }
+                        {
+                            {
+                                g8. :64 [ \< \p
+                                \set stemLeftBeamCount = 1
+                                g8. :64 \repeatTie ] \f
+                            }
+                        }
+                        {
+                            {
+                                g16 \fp
+                                g2 \repeatTie
+                            }
+                        }
+                        {
+                            % [Drums Voice] Measure 121
+                            {
+                                r16
+                            }
+                        }
+                        {
+                            {
+                                \override Hairpin #'circled-tip = ##t
+                                g16 :128 \<
+                                g4 :32 \repeatTie
+                            }
+                            % [Drums Voice] Measure 122
+                            {
+                                g8. :64 \repeatTie \ff
+                                \revert Hairpin #'circled-tip
+                            }
+                        }
+                        {
+                            {
+                                g8 \p
+                            }
+                            % [Drums Voice] Measure 123
+                            {
+                                g2. \repeatTie
+                            }
+                        }
+                        {
+                            % [Drums Voice] Measure 124
+                            {
+                                \override Hairpin #'circled-tip = ##t
+                                g8. :64 [ \> \mf
+                                \set stemLeftBeamCount = 1
+                                g8 :64 \repeatTie ] \!
+                                \revert Hairpin #'circled-tip
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [Drums Voice] Measure 125
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/16
+                                \stopStaff
+                                \startStaff
                             }
                         }
                     }
@@ -3921,9 +3173,11 @@
             shortInstrumentName = \markup { Pf. }
         } <<
             \context PianoUpperStaff = "Piano Upper Staff" {
+                \bar "||"
                 \context Voice = "Piano Upper Voice" {
                     \clef "treble"
                     {
+                        % [Piano Upper Voice] Measure 98
                         {
                             \once \override Accidental.stencil = ##f
                             \once \override AccidentalCautionary.stencil = ##f
@@ -3932,7 +3186,7 @@
                             \once \override NoteHead.text = \markup {
                             	\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
                             }
-                            <g'' b'' d''' f'''>16 -\accent \fff
+                            <g' b' d'' f''>16 -\accent \fff
                                 ^ \markup {
                                     \center-align
                                         \natural
@@ -3941,55 +3195,60 @@
                     }
                     {
                         {
-                            <g b d' g' af' d''>16 :128 \ppp ~
-                            <g b d' g' af' d''>2 :32 ~
+                            <g b d' g' af' d''>8. :64 \p \<
+                            <g b d' g' af' d''>2 :32 \repeatTie
                         }
+                        % [Piano Upper Voice] Measure 99
                         {
-                            <g b d' g' af' d''>4 :32
-                        }
-                    }
-                    {
-                        {
-                            r8
-                        }
-                    }
-                    {
-                        {
-                            <g b d' ef' g' d''>8 :64 \pp ~ [
-                            \set stemLeftBeamCount = 1
-                            <g b d' ef' g' d''>8 :64 ]
+                            <g b d' g' af' d''>8 :64 \mf \repeatTie
                         }
                     }
                     {
                         {
                             r8
-                            r8
                         }
                     }
                     {
                         {
-                            <g b d' g' af' d''>8 :64 \p ~
-                        }
-                        {
-                            <g b d' g' af' d''>2 :32 ~
-                            \set stemLeftBeamCount = 2
-                            <g b d' g' af' d''>16 :128
+                            <g b d' ef' g' d''>4 :32 \fp
                         }
                     }
                     {
                         {
-                            r8.
                             r4
                         }
                     }
                     {
+                        % [Piano Upper Voice] Measure 100
                         {
-                            <g b d' ef' g' d''>4. :32 \ppp ~
+                            <g b d' g' af' d''>8. :64 \p \< [
+                            \set stemLeftBeamCount = 1
+                            <g b d' g' af' d''>8 :64 \repeatTie ]
                         }
+                        % [Piano Upper Voice] Measure 101
                         {
-                            <g b d' ef' g' d''>2 :32 ~
-                            \set stemLeftBeamCount = 2
-                            <g b d' ef' g' d''>16 :128
+                            <g b d' g' af' d''>4. :32 \mf \repeatTie
+                        }
+                    }
+                    {
+                        {
+                            r4.
+                        }
+                    }
+                    {
+                        {
+                            <g b d' ef' g' d''>4 :32 \fp \>
+                        }
+                        % [Piano Upper Voice] Measure 102
+                        {
+                            <g b d' ef' g' d''>8. :64 \repeatTie [
+                            \set stemLeftBeamCount = 1
+                            <g b d' ef' g' d''>8 :64 \repeatTie ]
+                        }
+                        % [Piano Upper Voice] Measure 103
+                        {
+                            <g b d' ef' g' d''>4. :32 \repeatTie
+                            <g b d' ef' g' d''>16 :128 \ppp \repeatTie
                         }
                     }
                     {
@@ -3998,10 +3257,9 @@
                         }
                     }
                     {
+                        % [Piano Upper Voice] Measure 104
                         {
-                            <g b d' g' af' d''>8 :64 \pp ~ [
-                            \set stemLeftBeamCount = 2
-                            <g b d' g' af' d''>16 :128 ]
+                            <g b d' g' af' d''>8. :64 \p
                         }
                     }
                     {
@@ -4017,484 +3275,393 @@
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
                             e'''32
-                            cs'''32 ] \p )
-                            r32
+                            \set stemLeftBeamCount = 3
+                            \set stemRightBeamCount = 3
+                            cs'''32 \p )
+                            \set stemLeftBeamCount = 3
+                            r32 ]
                         }
                     }
                     {
+                        % [Piano Upper Voice] Measure 105
                         {
-                            <g b d' ef' g' d''>8 :64 \p
-                        }
-                    }
-                    {
-                        {
-                            r8
-                            r8
-                        }
-                    }
-                    {
-                        {
-                            <g b d' g' af' d''>8 :64 \ppp ~ [
-                            \set stemLeftBeamCount = 1
-                            <g b d' g' af' d''>8 :64 ]
+                            <g b d' ef' g' d''>8 :64 \fp
                         }
                     }
                     {
                         {
                             r8
-                            r4
-                        }
-                        {
-                            r4
-                        }
-                    }
-                    {
-                        {
-                            <g b d' ef' g' d''>4 :32 \pp ~
-                        }
-                        {
-                            <g b d' ef' g' d''>4 :32 ~
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 2
-                            <g b d' ef' g' d''>16 :128 ~ [
-                        }
-                        {
-                            \set stemLeftBeamCount = 1
-                            <g b d' ef' g' d''>8 :64 ]
-                        }
-                    }
-                    {
-                        {
                             r8
                         }
                     }
                     {
                         {
-                            <g b d' g' af' d''>8 :64 \p ~
-                            <g b d' g' af' d''>4. :32 ~
-                        }
-                        {
+                            <g b d' g' af' d''>8 :64 \p [
                             \set stemLeftBeamCount = 1
-                            <g b d' g' af' d''>8 :64
+                            <g b d' g' af' d''>8 :64 \repeatTie ]
                         }
                     }
                     {
+                        {
+                            r4.
+                        }
+                        % [Piano Upper Voice] Measure 106
                         {
                             r4
                         }
                     }
                     {
                         {
-                            <g b d' ef' g' d''>2. :32 \ppp
+                            <g b d' ef' g' d''>8 :64 \fp \>
+                        }
+                        % [Piano Upper Voice] Measure 107
+                        {
+                            <g b d' ef' g' d''>2 :32 \repeatTie
+                            <g b d' ef' g' d''>16 :128 \ppp \repeatTie
                         }
                     }
                     {
                         {
-                            r16.
+                            r16
+                            r16
                         }
                     }
                     {
                         {
-                            \set stemLeftBeamCount = 3
-                            \set stemRightBeamCount = 1
-                            f'''32 [ \< \p (
-                            \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 3
-                            af''32
-                            \set stemLeftBeamCount = 3
-                            \set stemRightBeamCount = 3
-                            g''32
-                            \set stemLeftBeamCount = 3
-                            \set stemRightBeamCount = 3
-                            bf''32
-                            \set stemLeftBeamCount = 3
-                            e''32 ] \f )
+                            <g b d' g' af' d''>16 :128 \p \<
+                            <g b d' g' af' d''>4 :32 \repeatTie
+                        }
+                        % [Piano Upper Voice] Measure 108
+                        {
+                            <g b d' g' af' d''>4 :32 \repeatTie
+                            <g b d' g' af' d''>16 :128 \mf \repeatTie
                         }
                     }
                     {
                         {
-                            r8
+                            r16
                         }
-                        {
-                            r8
-                        }
-                    }
-                    {
-                        {
-                            <g b d' g' af' d''>4 :32 \pp
-                        }
-                    }
-                    {
+                        % [Piano Upper Voice] Measure 109
                         {
                             r8.
                         }
                     }
                     {
                         {
-                            <g b d' ef' g' d''>8. :64 \p ~
+                            <g b d' ef' g' d''>16 :128 \fp
+                            <g b d' ef' g' d''>2. :32 \repeatTie
                         }
+                    }
+                    {
+                        % [Piano Upper Voice] Measure 110
                         {
-                            <g b d' ef' g' d''>4 :32 ~
+                            r4
+                            r32
+                        }
+                    }
+                    {
+                        {
+                            f'''32 [ \< \p (
+                            \set stemLeftBeamCount = 3
+                            \set stemRightBeamCount = 3
+                            af''32
+                            \set stemLeftBeamCount = 3
+                            g''32 ]
+                        }
+                        % [Piano Upper Voice] Measure 111
+                        {
+                            g''32 \repeatTie [
+                            \set stemLeftBeamCount = 3
+                            bf''32 ] \f )
+                        }
+                    }
+                    {
+                        {
+                            <g b d' g' af' d''>8 :64 \p [
                             \set stemLeftBeamCount = 1
-                            \set stemRightBeamCount = 2
-                            <g b d' ef' g' d''>16 :128 ~ [
+                            <g b d' g' af' d''>8 :64 \repeatTie ]
                         }
+                    }
+                    {
+                        % [Piano Upper Voice] Measure 112
                         {
+                            r8.
+                        }
+                    }
+                    {
+                        {
+                            <g b d' ef' g' d''>8. :64 \fp \>
+                        }
+                        % [Piano Upper Voice] Measure 113
+                        {
+                            <g b d' ef' g' d''>8. :64 \repeatTie [
                             \set stemLeftBeamCount = 1
-                            <g b d' ef' g' d''>8. :64 ]
+                            <g b d' ef' g' d''>8 :64 \repeatTie ]
+                        }
+                        % [Piano Upper Voice] Measure 114
+                        {
+                            <g b d' ef' g' d''>8. :64 \ppp \repeatTie
+                        }
+                    }
+                    {
+                        {
+                            r16
+                            r8.
+                        }
+                    }
+                    {
+                        {
+                            <g b d' g' af' d''>16 :128 \p \<
+                            <g b d' g' af' d''>4 :32 \repeatTie
+                        }
+                        % [Piano Upper Voice] Measure 115
+                        {
+                            <g b d' g' af' d''>4. :32 \repeatTie
+                        }
+                        % [Piano Upper Voice] Measure 116
+                        {
+                            <g b d' g' af' d''>4 :32 \repeatTie
+                            <g b d' g' af' d''>16 :128 \mf \repeatTie
+                        }
+                    }
+                    {
+                        {
+                            r16
+                            r4
+                        }
+                        % [Piano Upper Voice] Measure 117
+                        {
+                            r4
+                            r16
+                        }
+                    }
+                    {
+                        {
+                            <g b d' ef' g' d''>16 :128 \fp \>
+                            <g b d' ef' g' d''>4 :32 \repeatTie
+                        }
+                        % [Piano Upper Voice] Measure 118
+                        {
+                            <g b d' ef' g' d''>8. :64 \pp \repeatTie
                         }
                     }
                     {
                         {
                             r8
                         }
-                        {
-                            r8
-                        }
                     }
                     {
-                        {
-                            <g b d' g' af' d''>8 :64 \ppp ~
-                            <g b d' g' af' d''>2. :32 ~
-                        }
-                        {
-                            \set stemLeftBeamCount = 1
-                            <g b d' g' af' d''>8 :64
-                        }
-                    }
-                    {
-                        {
-                            r8
-                            r2
-                        }
-                    }
-                    {
-                        {
-                            <g b d' ef' g' d''>4 :32 \pp ~
-                        }
-                        {
-                            <g b d' ef' g' d''>4 :32
-                        }
-                    }
-                    {
-                        {
-                            r8
-                        }
-                    }
-                    {
+                        % [Piano Upper Voice] Measure 119
                         {
                             <g b d' g' af' d''>4 :32 \p
                         }
                     }
                     {
                         {
-                            r8
-                        }
-                        {
-                            r8
+                            r4
                         }
                     }
                     {
                         {
-                            <g b d' ef' g' d''>8 :64 \ppp ~
-                            <g b d' ef' g' d''>2 :32 ~
-                            \set stemLeftBeamCount = 2
-                            <g b d' ef' g' d''>16 :128
+                            <g b d' ef' g' d''>2 :32 \fp \>
+                        }
+                        % [Piano Upper Voice] Measure 120
+                        {
+                            <g b d' ef' g' d''>8. :64 \ppp \repeatTie
+                        }
+                    }
+                    {
+                        {
+                            r16
+                            r16
                         }
                     }
                     {
                         {
                             \override Hairpin #'circled-tip = ##t
+                            e''32 [ \< (
                             \set stemLeftBeamCount = 3
-                            \set stemRightBeamCount = 1
-                            cs''32 [ \< (
-                            \set stemLeftBeamCount = 1
+                            \set stemRightBeamCount = 3
+                            cs'''32
+                            \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
                             f'''32
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
-                            af''32
+                            af'''32
                             \set stemLeftBeamCount = 3
-                            \set stemRightBeamCount = 3
-                            g''32
-                            \set stemLeftBeamCount = 3
-                            bf''32 ] \ff )
+                            g''32 ] \ff )
                             \revert Hairpin #'circled-tip
                         }
                     }
                     {
                         {
                             r32
+                            r16
                         }
+                    }
+                    {
+                        {
+                            <g b d' g' af' d''>4.. :32 \p \<
+                        }
+                        % [Piano Upper Voice] Measure 121
+                        {
+                            <g b d' g' af' d''>8. :64 \mf \repeatTie
+                        }
+                    }
+                    {
                         {
                             r8.
                         }
                     }
                     {
+                        % [Piano Upper Voice] Measure 122
                         {
-                            <g b d' g' af' d''>16 :128 \pp ~
-                            <g b d' g' af' d''>4 :32 ~
+                            <g b d' ef' g' d''>8. :64 \fp \> [
+                            \set stemLeftBeamCount = 1
+                            <g b d' ef' g' d''>8 :64 \repeatTie ]
                         }
+                        % [Piano Upper Voice] Measure 123
                         {
-                            <g b d' g' af' d''>4 :32 ~
-                            \set stemLeftBeamCount = 2
-                            <g b d' g' af' d''>16 :128
+                            <g b d' ef' g' d''>4. :32 \repeatTie
+                            <g b d' ef' g' d''>8. :64 \pp \repeatTie
                         }
                     }
                     {
+                        {
+                            r8.
+                        }
+                        % [Piano Upper Voice] Measure 124
                         {
                             r16
-                            r8
                         }
                     }
                     {
                         {
-                            <g b d' ef' g' d''>8 :64 \p ~
-                        }
-                        {
-                            <g b d' ef' g' d''>2. :32
+                            <g b d' g' af' d''>8 :64 \p [
+                            \set stemLeftBeamCount = 1
+                            <g b d' g' af' d''>8 :64 \repeatTie ]
                         }
                     }
                     {
+                        % [Piano Upper Voice] Measure 125
                         {
                             \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
                             \startStaff
                             R1 * 5/16
                             \stopStaff
                             \startStaff
                         }
                     }
-                    {
-                        {
-                            <g b d' g' af' d''>8. :64 \ppp
-                        }
-                    }
-                    {
-                        {
-                            r8
-                            \bar "||"
-                        }
-                    }
                 }
             }
             \context Dynamics = "Piano Dynamics" {
                 {
+                    % [Piano Dynamics] Measure 98
                     {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
+                        R1 * 3/2
+                    }
+                    % [Piano Dynamics] Measure 100
+                    {
+                        R1 * 5/16
+                    }
+                    % [Piano Dynamics] Measure 101
+                    {
+                        R1 * 1
+                    }
+                    % [Piano Dynamics] Measure 102
+                    {
+                        R1 * 5/16
+                    }
+                    % [Piano Dynamics] Measure 103
+                    {
                         R1 * 5/8
-                        \stopStaff
-                        \startStaff
                     }
+                    % [Piano Dynamics] Measure 104
                     {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 1
-                        \stopStaff
-                        \startStaff
-                    }
-                    {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 1
-                        \stopStaff
-                        \startStaff
-                    }
-                    {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
                         R1 * 3/8
-                        \stopStaff
-                        \startStaff
                     }
+                    % [Piano Dynamics] Measure 105
                     {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 3/4
-                        \stopStaff
-                        \startStaff
-                    }
-                    {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 3/8
-                        \stopStaff
-                        \startStaff
-                    }
-                    {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
                         R1 * 1
-                        \stopStaff
-                        \startStaff
                     }
+                    % [Piano Dynamics] Measure 106
                     {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 1/2
-                        \stopStaff
-                        \startStaff
+                        R1 * 3/8
                     }
+                    % [Piano Dynamics] Measure 107
                     {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
+                        R1 * 1
+                    }
+                    % [Piano Dynamics] Measure 108
+                    {
+                        R1 * 3/8
+                    }
+                    % [Piano Dynamics] Measure 109
+                    {
+                        R1 * 1
+                    }
+                    % [Piano Dynamics] Measure 110
+                    {
+                        R1 * 3/8
+                    }
+                    % [Piano Dynamics] Measure 111
+                    {
                         R1 * 5/16
-                        \stopStaff
-                        \startStaff
                     }
+                    % [Piano Dynamics] Measure 112
                     {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 3/4
-                        \stopStaff
-                        \startStaff
-                    }
-                    {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
                         R1 * 3/8
-                        \stopStaff
-                        \startStaff
                     }
+                    % [Piano Dynamics] Measure 113
                     {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 3/4
-                        \stopStaff
-                        \startStaff
-                    }
-                    {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 3/8
-                        \stopStaff
-                        \startStaff
-                    }
-                    {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 3/4
-                        \stopStaff
-                        \startStaff
-                    }
-                    {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
                         R1 * 5/16
-                        \stopStaff
-                        \startStaff
                     }
+                    % [Piano Dynamics] Measure 114
                     {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
+                        R1 * 3/4
+                    }
+                    % [Piano Dynamics] Measure 115
+                    {
+                        R1 * 3/8
+                    }
+                    % [Piano Dynamics] Measure 116
+                    {
+                        R1 * 5/4
+                    }
+                    % [Piano Dynamics] Measure 118
+                    {
                         R1 * 5/16
-                        \stopStaff
-                        \startStaff
                     }
+                    % [Piano Dynamics] Measure 119
                     {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 1
-                        \stopStaff
-                        \startStaff
+                        R1 * 2
                     }
+                    % [Piano Dynamics] Measure 121
                     {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 1
-                        \stopStaff
-                        \startStaff
-                    }
-                    {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
                         R1 * 3/8
-                        \stopStaff
-                        \startStaff
                     }
+                    % [Piano Dynamics] Measure 122
                     {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 3/8
-                        \stopStaff
-                        \startStaff
+                        R1 * 5/16
                     }
+                    % [Piano Dynamics] Measure 123
                     {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 1
-                        \stopStaff
-                        \startStaff
+                        R1 * 3/4
                     }
+                    % [Piano Dynamics] Measure 124
                     {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 1/2
-                        \stopStaff
-                        \startStaff
-                    }
-                    {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
                         R1 * 5/8
-                        \stopStaff
-                        \startStaff
-                    }
-                    {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 3/4
-                        \stopStaff
-                        \startStaff
-                    }
-                    {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 5/16
-                        \stopStaff
-                        \startStaff
-                    }
-                    {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
-                        R1 * 5/16
-                        %%% \bar "||" %%%
-                        \stopStaff
-                        \startStaff
                     }
                 }
             }
             \context PianoLowerStaff = "Piano Lower Staff" {
+                \bar "||"
                 \context Voice = "Piano Lower Voice" {
                     \clef "bass"
                     {
+                        % [Piano Lower Voice] Measure 98
                         {
                             \once \override Accidental.stencil = ##f
                             \once \override AccidentalCautionary.stencil = ##f
@@ -4512,49 +3679,39 @@
                     }
                     {
                         {
-                            r16
+                            r8.
                             r2
                         }
+                        % [Piano Lower Voice] Measure 99
                         {
                             \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 1
-                            \stopStaff
-                            \startStaff
-                        }
-                        {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 1
-                            \stopStaff
-                            \startStaff
-                        }
-                        {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 3/8
-                            \stopStaff
-                            \startStaff
-                        }
-                        {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
                             \startStaff
                             R1 * 3/4
-                            \stopStaff
-                            \startStaff
                         }
+                        % [Piano Lower Voice] Measure 100
                         {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
+                            R1 * 5/16
+                        }
+                        % [Piano Lower Voice] Measure 101
+                        {
+                            R1 * 1
+                        }
+                        % [Piano Lower Voice] Measure 102
+                        {
+                            R1 * 5/16
+                        }
+                        % [Piano Lower Voice] Measure 103
+                        {
+                            R1 * 5/8
+                        }
+                        % [Piano Lower Voice] Measure 104
+                        {
                             R1 * 3/8
                             \stopStaff
                             \startStaff
                         }
+                        % [Piano Lower Voice] Measure 105
                         {
                             r16
                         }
@@ -4562,9 +3719,11 @@
                     {
                         \tweak #'text #tuplet-number::calc-fraction-text
                         \times 6/7 {
-                            r16
+                            r16 [
                             \override Hairpin #'circled-tip = ##t
-                            g,16 [ \> \mf (
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 2
+                            g,16 \> \mf (
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 3
                             bf,32
@@ -4580,143 +3739,132 @@
                         {
                             r2.
                         }
+                        % [Piano Lower Voice] Measure 106
                         {
                             \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 1/2
-                            \stopStaff
-                            \startStaff
-                        }
-                        {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 5/16
-                            \stopStaff
-                            \startStaff
-                        }
-                        {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 3/4
-                            \stopStaff
-                            \startStaff
-                        }
-                        {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
                             \startStaff
                             R1 * 3/8
+                        }
+                        % [Piano Lower Voice] Measure 107
+                        {
+                            R1 * 1
+                        }
+                        % [Piano Lower Voice] Measure 108
+                        {
+                            R1 * 3/8
+                        }
+                        % [Piano Lower Voice] Measure 109
+                        {
+                            R1 * 1
                             \stopStaff
                             \startStaff
                         }
+                        % [Piano Lower Voice] Measure 110
                         {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 3/4
-                            \stopStaff
-                            \startStaff
-                        }
-                        {
-                            r4
-                            r16
+                            r8
                         }
                     }
                     {
-                        \times 2/3 {
+                        \tweak #'text #tuplet-number::calc-fraction-text
+                        \times 6/7 {
                             f16 [ \> \f (
                             \set stemLeftBeamCount = 2
-                            \set stemRightBeamCount = 3
-                            af,32 ~
-                        }
-                        {
-                            \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
                             af,32
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
-                            g32
+                            g,32
                             \set stemLeftBeamCount = 3
-                            bf32 ] \p )
+                            \set stemRightBeamCount = 3
+                            bf32
+                            \set stemLeftBeamCount = 3
+                            \set stemRightBeamCount = 3
+                            e32 \p )
+                            \set stemLeftBeamCount = 3
+                            r32 ]
                         }
                     }
                     {
+                        {
+                            r16
+                        }
+                        % [Piano Lower Voice] Measure 111
+                        {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 5/16
+                        }
+                        % [Piano Lower Voice] Measure 112
+                        {
+                            R1 * 3/8
+                            \stopStaff
+                            \startStaff
+                        }
+                        % [Piano Lower Voice] Measure 113
                         {
                             r32
-                            r4
-                            r4.
-                        }
-                        {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 5/16
-                            \stopStaff
-                            \startStaff
-                        }
-                        {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 5/16
-                            \stopStaff
-                            \startStaff
-                        }
-                        {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 1
-                            \stopStaff
-                            \startStaff
-                        }
-                        {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 1
-                            \stopStaff
-                            \startStaff
-                        }
-                        {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 3/8
-                            \stopStaff
-                            \startStaff
-                        }
-                        {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 3/8
-                            \stopStaff
-                            \startStaff
-                        }
-                        {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 1
-                            \stopStaff
-                            \startStaff
-                        }
-                        {
-                            r16.
                         }
                     }
                     {
                         {
+                            cs32 [ \< \p (
                             \set stemLeftBeamCount = 3
-                            \set stemRightBeamCount = 1
-                            e32 [ \< \p (
-                            \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 3
-                            cs32
+                            f32
+                            \set stemLeftBeamCount = 3
+                            \set stemRightBeamCount = 3
+                            af32
+                            \set stemLeftBeamCount = 3
+                            \set stemRightBeamCount = 3
+                            g,32
+                            \set stemLeftBeamCount = 3
+                            bf,32 ] \f )
+                        }
+                    }
+                    {
+                        {
+                            r8
+                        }
+                        % [Piano Lower Voice] Measure 114
+                        {
+                            \stopStaff
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
+                            \startStaff
+                            R1 * 3/4
+                        }
+                        % [Piano Lower Voice] Measure 115
+                        {
+                            R1 * 3/8
+                        }
+                        % [Piano Lower Voice] Measure 116
+                        {
+                            R1 * 5/4
+                        }
+                        % [Piano Lower Voice] Measure 118
+                        {
+                            R1 * 5/16
+                        }
+                        % [Piano Lower Voice] Measure 119
+                        {
+                            R1 * 1
+                            \stopStaff
+                            \startStaff
+                        }
+                        % [Piano Lower Voice] Measure 120
+                        {
+                            r2
+                            r16
+                        }
+                    }
+                    {
+                        {
+                            \override Hairpin #'circled-tip = ##t
+                            e,32 [ \< (
+                            \set stemLeftBeamCount = 3
+                            \set stemRightBeamCount = 3
+                            cs,32
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
                             f32
@@ -4724,43 +3872,33 @@
                             \set stemRightBeamCount = 3
                             af,32
                             \set stemLeftBeamCount = 3
-                            g,32 ] \f )
+                            g32 ] \ff )
+                            \revert Hairpin #'circled-tip
                         }
                     }
                     {
                         {
+                            r32
                             r4
                         }
+                        % [Piano Lower Voice] Measure 121
                         {
                             \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
+                            \once \override Staff.StaffSymbol.line-positions = #'(0)
                             \startStaff
-                            R1 * 5/8
-                            \stopStaff
-                            \startStaff
+                            R1 * 3/8
                         }
+                        % [Piano Lower Voice] Measure 122
                         {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
+                            R1 * 5/16
+                        }
+                        % [Piano Lower Voice] Measure 123
+                        {
                             R1 * 3/4
-                            \stopStaff
-                            \startStaff
                         }
+                        % [Piano Lower Voice] Measure 124
                         {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 5/16
-                            \stopStaff
-                            \startStaff
-                        }
-                        {
-                            \stopStaff
-                            \once \override Staff.StaffSymbol.line-count = 1
-                            \startStaff
-                            R1 * 5/16
-                            \bar "||"
+                            R1 * 5/8
                             \stopStaff
                             \startStaff
                         }
@@ -4769,9 +3907,73 @@
             }
             \context Dynamics = "Piano Pedals" {
                 {
+                    % [Piano Pedals] Measure 98
                     {
-                        s1 * 5/8 \sustainOn
+                        s1 * 3/4 \sustainOn
                     }
+                    % [Piano Pedals] Measure 99
+                    {
+                        s1 * 1/8
+                        <> \sustainOff
+                    }
+                }
+                {
+                    {
+                        r8
+                    }
+                }
+                {
+                    {
+                        s1 * 1/4 \sustainOn
+                        <> \sustainOff
+                    }
+                }
+                {
+                    {
+                        r4
+                    }
+                }
+                {
+                    % [Piano Pedals] Measure 100
+                    {
+                        s1 * 5/16 \sustainOn
+                    }
+                    % [Piano Pedals] Measure 101
+                    {
+                        s1 * 3/8
+                        <> \sustainOff
+                    }
+                }
+                {
+                    {
+                        r4.
+                    }
+                }
+                {
+                    {
+                        s1 * 1/4 \sustainOn
+                    }
+                    % [Piano Pedals] Measure 102
+                    {
+                        s1 * 5/16
+                    }
+                    % [Piano Pedals] Measure 103
+                    {
+                        s1 * 7/16
+                        <> \sustainOff
+                    }
+                }
+                {
+                    {
+                        r8.
+                    }
+                }
+                {
+                    % [Piano Pedals] Measure 104
+                    {
+                        s1 * 3/8 \sustainOn
+                    }
+                    % [Piano Pedals] Measure 105
                     {
                         s1 * 1/4
                         <> \sustainOff
@@ -4790,14 +3992,18 @@
                 }
                 {
                     {
-                        r8
-                        r8
+                        r4.
+                    }
+                    % [Piano Pedals] Measure 106
+                    {
+                        r4
                     }
                 }
                 {
                     {
                         s1 * 1/8 \sustainOn
                     }
+                    % [Piano Pedals] Measure 107
                     {
                         s1 * 9/16
                         <> \sustainOff
@@ -4805,34 +4011,37 @@
                 }
                 {
                     {
-                        r8.
-                        r4
+                        r16
+                        r16
                     }
                 }
                 {
                     {
-                        s1 * 3/8 \sustainOn
+                        s1 * 5/16 \sustainOn
                     }
+                    % [Piano Pedals] Measure 108
                     {
-                        s1 * 9/16
+                        s1 * 5/16
                         <> \sustainOff
                     }
                 }
                 {
                     {
+                        r16
+                    }
+                    % [Piano Pedals] Measure 109
+                    {
                         r8.
                     }
                 }
                 {
                     {
-                        s1 * 3/8 \sustainOn
-                    }
-                    {
-                        s1 * 1/4
+                        s1 * 13/16 \sustainOn
                         <> \sustainOff
                     }
                 }
                 {
+                    % [Piano Pedals] Measure 110
                     {
                         r8
                     }
@@ -4840,58 +4049,105 @@
                 {
                     {
                         s1 * 1/4 \sustainOn
+                    }
+                    % [Piano Pedals] Measure 111
+                    {
+                        s1 * 5/16
                         <> \sustainOff
                     }
                 }
                 {
+                    % [Piano Pedals] Measure 112
                     {
-                        r8
-                        r4
-                    }
-                    {
-                        r4
+                        r8.
                     }
                 }
                 {
                     {
-                        s1 * 1/4 \sustainOn
+                        s1 * 3/16 \sustainOn
                     }
+                    % [Piano Pedals] Measure 113
                     {
                         s1 * 5/16
                     }
+                    % [Piano Pedals] Measure 114
                     {
-                        s1 * 1/8
+                        s1 * 3/16
+                        <> \sustainOff
+                    }
+                }
+                {
+                    {
+                        r16
+                        r8.
+                    }
+                }
+                {
+                    {
+                        s1 * 5/16 \sustainOn
+                    }
+                    % [Piano Pedals] Measure 115
+                    {
+                        s1 * 3/8
+                    }
+                    % [Piano Pedals] Measure 116
+                    {
+                        s1 * 5/16
+                        <> \sustainOff
+                    }
+                }
+                {
+                    {
+                        r16
+                        r4
+                    }
+                    % [Piano Pedals] Measure 117
+                    {
+                        r4
+                        r16
+                    }
+                }
+                {
+                    {
+                        s1 * 5/16 \sustainOn
+                    }
+                    % [Piano Pedals] Measure 118
+                    {
+                        s1 * 3/16
                         <> \sustainOff
                     }
                 }
                 {
                     {
                         r8
+                    }
+                }
+                {
+                    % [Piano Pedals] Measure 119
+                    {
+                        s1 * 1/4 \sustainOn
+                        <> \sustainOff
+                    }
+                }
+                {
+                    {
+                        r4
                     }
                 }
                 {
                     {
                         s1 * 1/2 \sustainOn
                     }
+                    % [Piano Pedals] Measure 120
                     {
-                        s1 * 1/8
+                        s1 * 3/16
                         <> \sustainOff
                     }
                 }
                 {
                     {
-                        r4
-                    }
-                }
-                {
-                    {
-                        s1 * 3/4 \sustainOn
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r16.
+                        r16
+                        r16
                     }
                 }
                 {
@@ -4902,26 +4158,17 @@
                 }
                 {
                     {
+                        r32
                         r16
                     }
                 }
                 {
                     {
-                        s1 * 1/16 \sustainOn
+                        s1 * 7/16 \sustainOn
                     }
+                    % [Piano Pedals] Measure 121
                     {
-                        s1 * 3/32
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r32
-                    }
-                }
-                {
-                    {
-                        s1 * 1/4 \sustainOn
+                        s1 * 3/16
                         <> \sustainOff
                     }
                 }
@@ -4931,126 +4178,35 @@
                     }
                 }
                 {
+                    % [Piano Pedals] Measure 122
                     {
-                        s1 * 3/16 \sustainOn
+                        s1 * 5/16 \sustainOn
                     }
+                    % [Piano Pedals] Measure 123
                     {
-                        s1 * 5/16
-                    }
-                    {
-                        s1 * 3/16
+                        s1 * 9/16
                         <> \sustainOff
                     }
                 }
                 {
                     {
-                        r8
+                        r8.
                     }
-                    {
-                        r8
-                    }
-                }
-                {
-                    {
-                        s1 * 7/8 \sustainOn
-                    }
-                    {
-                        s1 * 1/8
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r8
-                        r2
-                    }
-                }
-                {
-                    {
-                        s1 * 1/4 \sustainOn
-                    }
-                    {
-                        s1 * 1/4
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r8
-                    }
-                }
-                {
-                    {
-                        s1 * 1/4 \sustainOn
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r8
-                    }
-                    {
-                        r8
-                    }
-                }
-                {
-                    {
-                        s1 * 27/32 \sustainOn
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r32
-                    }
-                    {
-                        r16.
-                    }
-                }
-                {
-                    {
-                        s1 * 13/32 \sustainOn
-                    }
-                    {
-                        s1 * 5/16
-                        <> \sustainOff
-                    }
-                }
-                {
+                    % [Piano Pedals] Measure 124
                     {
                         r16
-                        r8
                     }
                 }
                 {
                     {
-                        s1 * 1/8 \sustainOn
-                    }
-                    {
-                        s1 * 3/4
+                        s1 * 1/4 \sustainOn
                         <> \sustainOff
                     }
                 }
                 {
+                    % [Piano Pedals] Measure 125
                     {
-                        \stopStaff
-                        \once \override Staff.StaffSymbol.line-count = 1
-                        \startStaff
                         R1 * 5/16
-                        \stopStaff
-                        \startStaff
-                    }
-                }
-                {
-                    {
-                        s1 * 3/16 \sustainOn
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r8
-                        %%% \bar "||" %%%
                     }
                 }
             }
@@ -5062,35 +4218,19 @@
                 shortInstrumentName = \markup { Vn. }
             } <<
                 \context StringStaff = "Violin Staff" {
+                    \bar "||"
                     \context Voice = "Violin Voice" {
                         \clef "treble"
                         {
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                r2
-                                r8.
-                            }
-                        }
-                        {
+                            % [Violin Voice] Measure 98
                             {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
                                     \box
                                         \pad-around
                                             #0.5
@@ -5101,54 +4241,34 @@
                                                         shaker
                                                     }
                                     }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'8 :64 \pp \startTextSpan
                                 \stopStaff
                                 \startStaff
                                 \revert NoteHead #'no-ledgers
                                 \revert NoteHead #'style
-                                <> \stopTextSpan
                                 \clef "treble"
                             }
                         }
                         {
                             {
                                 r8.
+                                r2
                             }
+                            % [Violin Voice] Measure 99
                             {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
+                            % [Violin Voice] Measure 100
                             {
-                                r8
                                 r16
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 3/4 {
+                            {
                                 \clef "percussion"
                                 \once \override TextSpanner.bound-details.left-broken.text = ##f
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5173,8 +4293,39 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                c'16 -\staccato \p \startTextSpan
-                                r8.
+                                c'16 -\accent \laissezVibrer \p \startTextSpan
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r8
+                            }
+                            % [Violin Voice] Measure 101
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        {
+                            % [Violin Voice] Measure 102
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
                                 \revert NoteHead #'no-ledgers
@@ -5185,39 +4336,36 @@
                         }
                         {
                             {
+                                r8
+                                r8
+                            }
+                            % [Violin Voice] Measure 103
+                            {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 1
+                                R1 * 5/8
+                            }
+                            % [Violin Voice] Measure 104
+                            {
+                                R1 * 3/8
                                 \stopStaff
                                 \startStaff
                             }
+                            % [Violin Voice] Measure 105
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1/2
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                r8.
+                                r2
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 3/4 {
+                            {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
                                     \box
                                         \pad-around
                                             #0.5
@@ -5228,24 +4376,55 @@
                                                         shaker
                                                     }
                                     }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r4..
+                            }
+                            % [Violin Voice] Measure 106
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 3/8
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Violin Voice] Measure 107
+                            {
+                                r2
+                                r16
+                            }
+                        }
+                        {
+                            {
+                                \clef "percussion"
                                 \override NoteHead #'no-ledgers = ##t
                                 \override NoteHead #'style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                r8. \startTextSpan
-                                c'16 -\staccato \ppp
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \stopStaff
                                 \startStaff
                                 \revert NoteHead #'no-ledgers
                                 \revert NoteHead #'style
-                                <> \stopTextSpan
                                 \clef "treble"
                             }
                         }
@@ -5253,194 +4432,9 @@
                             {
                                 r4.
                             }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 3/5 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        shaker
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'16 -\staccato \pp \startTextSpan
-                                r8
-                                c'8 :64 -\staccato \ppp
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r2.
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1/2
-                                \stopStaff
-                                \startStaff
-                            }
+                            % [Violin Voice] Measure 108
                             {
                                 r8
-                                r16
-                            }
-                        }
-                        {
-                            \times 2/3 {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        shaker
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                r8 \startTextSpan
-                                c'16 -\staccato \p
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r4
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                r16
                             }
                         }
                         {
@@ -5463,20 +4457,289 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                r8 \startTextSpan
-                                r16
-                                a'16 -\accent -\tenuto \mf
-                                r8
+                                r8. \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 2
+                                a16 -\accent -\tenuto \mf
+                                \set stemLeftBeamCount = 1
+                                r8 ]
+                            }
+                            % [Violin Voice] Measure 109
+                            \times 2/3 {
+                                c'16 -\accent -\tenuto \mp [
+                                \set stemLeftBeamCount = 1
+                                r8 ]
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
+                                r2..
+                            }
+                            % [Violin Voice] Measure 110
+                            {
+                                r8.
+                            }
+                        }
+                        {
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                            % [Violin Voice] Measure 111
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/16
-                                \bar "||"
+                            }
+                            % [Violin Voice] Measure 112
+                            {
+                                R1 * 3/8
+                            }
+                            % [Violin Voice] Measure 113
+                            {
+                                R1 * 5/16
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Violin Voice] Measure 114
+                            {
+                                r4..
+                            }
+                        }
+                        {
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [Violin Voice] Measure 115
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            \times 2/3 {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        overpressure
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                b16 :128 -\accent -\tenuto \mp \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                r8 ]
+                            }
+                            % [Violin Voice] Measure 116
+                            {
+                                d'16 -\accent -\tenuto \mf
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r4
+                                r4
+                            }
+                        }
+                        {
+                            % [Violin Voice] Measure 117
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r4
+                                r4
+                            }
+                            % [Violin Voice] Measure 118
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/16
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Violin Voice] Measure 119
+                            {
+                                r2.
+                                r16
+                            }
+                        }
+                        {
+                            {
+                                \clef "percussion"
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p \startTextSpan
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                            % [Violin Voice] Measure 120
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Violin Voice] Measure 121
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                <> \stopTextSpan
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r16
+                            }
+                            % [Violin Voice] Measure 122
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/16
+                            }
+                            % [Violin Voice] Measure 123
+                            {
+                                R1 * 3/4
+                            }
+                            % [Violin Voice] Measure 124
+                            {
+                                R1 * 5/8
                                 \stopStaff
                                 \startStaff
                             }
@@ -5490,11 +4753,53 @@
                 shortInstrumentName = \markup { Va. }
             } <<
                 \context StringStaff = "Viola Staff" {
+                    \bar "||"
                     \context Voice = "Viola Voice" {
                         \clef "alto"
                         {
+                            % [Viola Voice] Measure 98
                             {
-                                r4.
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "alto"
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                                r2
+                            }
+                            % [Viola Voice] Measure 99
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 3/4
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Viola Voice] Measure 100
+                            {
+                                r16
                             }
                         }
                         {
@@ -5523,7 +4828,39 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                c'8 :64 \ppp \startTextSpan
+                                c'16 -\accent \laissezVibrer \p \startTextSpan
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "alto"
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r8
+                            }
+                            % [Viola Voice] Measure 101
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        {
+                            % [Viola Voice] Measure 102
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
                                 \revert NoteHead #'no-ledgers
@@ -5535,9 +4872,58 @@
                         {
                             {
                                 r8
+                                r8
                             }
+                            % [Viola Voice] Measure 103
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                            }
+                            % [Viola Voice] Measure 104
+                            {
+                                R1 * 3/8
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Viola Voice] Measure 105
                             {
                                 r2
+                            }
+                        }
+                        {
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "alto"
+                            }
+                        }
+                        {
+                            {
+                                r4..
+                            }
+                            % [Viola Voice] Measure 106
+                            {
                                 r8
                             }
                         }
@@ -5561,50 +4947,30 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                c8 -\accent -\tenuto \mp ~ \startTextSpan [
-                                \set stemLeftBeamCount = 1
-                                c8 ]
+                                c'4 -\accent -\tenuto \mp \startTextSpan
+                            }
+                            % [Viola Voice] Measure 107
+                            {
+                                b16 :128 -\accent -\tenuto
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r8
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                r8
+                                r8.
+                                r4
                                 r16
                             }
                         }
                         {
                             {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
                                     \box
                                         \pad-around
                                             #0.5
@@ -5615,115 +4981,213 @@
                                                         shaker
                                                     }
                                     }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'16 :128 \pp ~ \startTextSpan [
-                                \set stemLeftBeamCount = 1
-                                c'8 :64 ]
                                 \stopStaff
                                 \startStaff
                                 \revert NoteHead #'no-ledgers
                                 \revert NoteHead #'style
-                                <> \stopTextSpan
                                 \clef "alto"
                             }
                         }
                         {
                             {
+                                r4.
+                            }
+                            % [Viola Voice] Measure 108
+                            {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                R1 * 3/8
+                            }
+                            % [Viola Voice] Measure 109
+                            {
                                 R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
+                            % [Viola Voice] Measure 110
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1/2
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                r2.
+                                r8.
                             }
                         }
                         {
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "alto"
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                            % [Viola Voice] Measure 111
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/16
+                            }
+                            % [Viola Voice] Measure 112
+                            {
+                                R1 * 3/8
+                            }
+                            % [Viola Voice] Measure 113
+                            {
+                                R1 * 5/16
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Viola Voice] Measure 114
+                            {
+                                r4..
+                            }
+                        }
+                        {
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "alto"
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                            % [Viola Voice] Measure 115
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 3/8
+                                \stopStaff
+                                \startStaff
+                            }
+                        }
+                        {
+                            % [Viola Voice] Measure 116
                             \times 2/3 {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        overpressure
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                r16 \startTextSpan [
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d16 -\accent -\tenuto \mf
+                                \set stemLeftBeamCount = 2
+                                r16 ]
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                        }
+                        {
+                            % [Viola Voice] Measure 117
+                            {
+                                \clef "percussion"
+                                \override NoteHead #'no-ledgers = ##t
+                                \override NoteHead #'style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead #'no-ledgers
+                                \revert NoteHead #'style
+                                \clef "alto"
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r4
+                                r4
+                            }
+                            % [Viola Voice] Measure 118
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/16
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Viola Voice] Measure 119
+                            {
+                                r2.
+                                r16
+                            }
+                        }
+                        {
+                            {
                                 \clef "percussion"
                                 \once \override TextSpanner.bound-details.left-broken.text = ##f
                                 \once \override TextSpanner.bound-details.left.text = \markup {
@@ -5748,75 +5212,41 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                c'16 -\staccato \p \startTextSpan
-                                r16
-                                r16
-                                c'16 -\staccato \pp
-                                r8
+                                c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
                                 \revert NoteHead #'no-ledgers
                                 \revert NoteHead #'style
-                                <> \stopTextSpan
                                 \clef "alto"
                             }
                         }
                         {
                             {
+                                r8
+                            }
+                            % [Viola Voice] Measure 120
+                            {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 1
                                 \stopStaff
                                 \startStaff
                             }
+                            % [Viola Voice] Measure 121
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
+                                r4
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 3/4 {
+                            {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        shaker
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \override NoteHead #'no-ledgers = ##t
                                 \override NoteHead #'style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                r8 \startTextSpan
-                                c'16 -\staccato \ppp
-                                r16
+                                c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
                                 \revert NoteHead #'no-ledgers
@@ -5828,46 +5258,64 @@
                         {
                             {
                                 r16
-                                r2.
                             }
+                            % [Viola Voice] Measure 122
                             {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 1/2
-                                \stopStaff
-                                \startStaff
+                                R1 * 5/16
                             }
+                            % [Viola Voice] Measure 123
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
                                 R1 * 3/4
                                 \stopStaff
                                 \startStaff
                             }
+                            % [Viola Voice] Measure 124
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
+                                r16
                             }
+                        }
+                        {
+                            \times 4/5 {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        overpressure
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                a'16 :128 -\accent -\tenuto \mp \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                r8
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 2
+                                c''16 -\accent -\tenuto \mf
+                                \set stemLeftBeamCount = 2
+                                r16 ]
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            % [Viola Voice] Measure 125
                             {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
                                 R1 * 5/16
-                                \bar "||"
                                 \stopStaff
                                 \startStaff
                             }
@@ -5881,19 +5329,340 @@
                 shortInstrumentName = \markup { Vc. }
             } <<
                 \context StringStaff = "Cello Staff" {
+                    \bar "||"
                     \context Voice = "Cello Voice" {
                         \clef "bass"
                         {
+                            % [Cello Voice] Measure 98
                             {
                                 \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
-                                R1 * 5/8
+                                R1 * 3/2
                                 \stopStaff
                                 \startStaff
                             }
+                        }
+                        {
+                            % [Cello Voice] Measure 100
+                            \times 4/5 {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        overpressure
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                r8. \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 2
+                                r16
+                                \set stemLeftBeamCount = 2
+                                b,16 :128 -\accent -\tenuto \mf ]
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
                             {
+                                r16
+                            }
+                            % [Cello Voice] Measure 101
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 1
+                            }
+                            % [Cello Voice] Measure 102
+                            {
+                                R1 * 5/16
+                            }
+                            % [Cello Voice] Measure 103
+                            {
+                                R1 * 5/8
+                            }
+                            % [Cello Voice] Measure 104
+                            {
+                                R1 * 3/8
+                            }
+                            % [Cello Voice] Measure 105
+                            {
+                                R1 * 1
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Cello Voice] Measure 106
+                            {
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        overpressure
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                d4 -\accent -\tenuto \mp \startTextSpan
+                            }
+                            % [Cello Voice] Measure 107
+                            {
+                                a,16 :128 -\accent -\tenuto
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                                r8
+                            }
+                        }
+                        {
+                            {
+                                \pitchedTrill
+                                f,4. -\tenuto \> \f \startTrillSpan af,
+                                <> \stopTrillSpan
+                            }
+                            {
+                                d,8 -\tenuto [
+                                \set stemLeftBeamCount = 1
+                                \pitchedTrill
+                                d,8 -\tenuto ] \startTrillSpan f,
+                                <> \stopTrillSpan
+                            }
+                            % [Cello Voice] Measure 108
+                            {
+                                fqs,4 -\tenuto \p
+                            }
+                        }
+                        {
+                            {
+                                r8
+                            }
+                        }
+                        {
+                            % [Cello Voice] Measure 109
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        "col legno"
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                ef,8 -\tenuto \startTextSpan [ \< \p
+                                \set stemLeftBeamCount = 1
+                                \pitchedTrill
+                                ef,8 -\tenuto ] \f \startTrillSpan gf,
+                                <> \stopTextSpan
+                                <> \stopTrillSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                            }
+                        }
+                        {
+                            {
+                                \override Hairpin #'circled-tip = ##t
+                                \pitchedTrill
+                                d,4 -\tenuto \< \startTrillSpan e,
+                                d,16 \repeatTie \ff
+                                \revert Hairpin #'circled-tip
+                                <> \stopTrillSpan
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                            }
+                            % [Cello Voice] Measure 110
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 3/8
+                            }
+                            % [Cello Voice] Measure 111
+                            {
+                                R1 * 5/16
+                            }
+                            % [Cello Voice] Measure 112
+                            {
+                                R1 * 3/8
+                            }
+                            % [Cello Voice] Measure 113
+                            {
+                                R1 * 5/16
+                            }
+                            % [Cello Voice] Measure 114
+                            {
+                                R1 * 3/4
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Cello Voice] Measure 115
+                            {
+                                r8
+                            }
+                        }
+                        {
+                            \times 2/3 {
+                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        overpressure
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                r8. \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 2
+                                c,16 -\accent -\tenuto \mf
+                                \set stemLeftBeamCount = 1
+                                r8 ]
+                            }
+                            % [Cello Voice] Measure 116
+                            \times 2/3 {
+                                b,16 -\accent -\tenuto \mp [
+                                \set stemLeftBeamCount = 1
+                                r8 ]
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r4
+                                r4
+                            }
+                            % [Cello Voice] Measure 117
+                            {
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/8
+                            }
+                            % [Cello Voice] Measure 118
+                            {
+                                R1 * 5/16
+                                \stopStaff
+                                \startStaff
+                            }
+                            % [Cello Voice] Measure 119
+                            {
+                                r16
+                            }
+                        }
+                        {
+                            {
+                                \override Hairpin #'circled-tip = ##t
+                                ef,8 -\tenuto [ \> \mf
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                \pitchedTrill
+                                ef,8 -\tenuto \startTrillSpan f,
+                                <> \stopTrillSpan
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                ef,8 -\tenuto
+                                \set stemLeftBeamCount = 1
+                                \pitchedTrill
+                                ef,8 -\tenuto ] \! \startTrillSpan gf,
+                                \revert Hairpin #'circled-tip
+                                <> \stopTrillSpan
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                                r16
+                            }
+                        }
+                        {
+                            {
+                                f,8. -\tenuto \f ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        "col legno"
+                                                    }
+                                    }
+                            }
+                        }
+                        {
+                            % [Cello Voice] Measure 120
+                            {
+                                r16
+                            }
+                        }
+                        {
+                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \times 5/4 {
+                                \pitchedTrill
+                                fqs,8 -\tenuto [ \< \p \startTrillSpan aqf,
+                                <> \stopTrillSpan
+                                \set stemLeftBeamCount = 1
+                                fqs,8 -\tenuto ] \f
+                            }
+                        }
+                        {
+                            {
+                                r8
                                 r2
+                            }
+                            % [Cello Voice] Measure 121
+                            {
                                 r8
                             }
                         }
@@ -5917,334 +5686,33 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                r4 \startTextSpan
-                                b,16 :128 -\accent -\tenuto \mf
+                                d'16 :128 -\accent -\tenuto \mp \startTextSpan [
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 1
+                                r8
+                                \set stemLeftBeamCount = 1
+                                \set stemRightBeamCount = 2
+                                a,16 -\accent -\tenuto \mf
+                                \set stemLeftBeamCount = 2
+                                r16 ]
                                 <> \stopTextSpan
                             }
                         }
                         {
+                            % [Cello Voice] Measure 122
                             {
-                                r8
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(0)
+                                \startStaff
+                                R1 * 5/16
                             }
+                            % [Cello Voice] Measure 123
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
                                 R1 * 3/4
-                                \stopStaff
-                                \startStaff
                             }
+                            % [Cello Voice] Measure 124
                             {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1/2
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                        }
-                        {
-                            {
-                                \pitchedTrill
-                                f,4. -\tenuto \> \f \startTrillSpan af,
-                                <> \stopTrillSpan
-                            }
-                            {
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                d,8 -\tenuto [
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                \pitchedTrill
-                                d,8 -\tenuto \startTrillSpan f,
-                                <> \stopTrillSpan
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                d,8 -\tenuto
-                            }
-                            {
-                                \set stemLeftBeamCount = 1
-                                fqs,8 -\tenuto ] \p
-                            }
-                        }
-                        {
-                            {
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        "col legno"
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                ef,8 -\tenuto \startTextSpan [ \< \p
-                            }
-                            {
-                                \set stemLeftBeamCount = 1
-                                \pitchedTrill
-                                d,8 -\tenuto ] \f \startTrillSpan f,
-                                <> \stopTextSpan
-                                <> \stopTrillSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \override Hairpin #'circled-tip = ##t
-                                \pitchedTrill
-                                ef,8 -\tenuto ~ [ \< \startTrillSpan f,
-                                \set stemLeftBeamCount = 1
-                                ef,8. ] \ff
-                                \revert Hairpin #'circled-tip
-                                <> \stopTrillSpan
-                            }
-                        }
-                        {
-                            {
-                                r16
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                r4
-                                r8.
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        overpressure
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                d,16 -\accent -\tenuto \mp ~ \startTextSpan [
-                                \set stemLeftBeamCount = 1
-                                d,8. ]
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r4
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 1
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            {
-                                \override Hairpin #'circled-tip = ##t
-                                f,8 -\tenuto \> \mf
-                            }
-                            {
-                                \pitchedTrill
-                                fqs,4 -\tenuto \startTrillSpan gqs,
-                                <> \stopTrillSpan
-                            }
-                            {
-                                \set stemLeftBeamCount = 1
-                                \set stemRightBeamCount = 1
-                                d,8 -\tenuto
-                            }
-                            {
-                                \pitchedTrill
-                                g,4 -\tenuto ~ \startTrillSpan bf,
-                                \set stemLeftBeamCount = 1
-                                g,8 \!
-                                \revert Hairpin #'circled-tip
-                                <> \stopTrillSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        "col legno"
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                d,4 -\tenuto \f \startTextSpan
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r4
-                            }
-                        }
-                        {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 5/4 {
-                                \pitchedTrill
-                                d,8 -\tenuto [ \< \p \startTrillSpan f,
-                                <> \stopTrillSpan
-                                \set stemLeftBeamCount = 1
-                                d,8 -\tenuto ] \f
-                            }
-                        }
-                        {
-                            {
-                                r8.
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
                                 R1 * 5/8
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 3/4
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \stopStaff
-                                \startStaff
-                            }
-                            {
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-count = 1
-                                \startStaff
-                                R1 * 5/16
-                                \bar "||"
                                 \stopStaff
                                 \startStaff
                             }
