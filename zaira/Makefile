@@ -3,15 +3,18 @@ SHELL = /bin/bash
 .PHONY: materials segments
 
 collect:
-	rm build/segments/*.ly;
+	rm -f build/segments/*.ly;
 	cd segments && for segment in segment_*; do \
-		sed -n '/\\score/,$$p' $$segment/illustration.ly > ../build/segments/$${segment/_/-}.ly; \
+		sed '/^\\score/,/^\}/!d;/^\\score/d;/^\}/d' $$segment/illustration.ly > ../build/segments/$${segment/_/-}.ly; \
 	done;
 
 materials:
 	for module in materials/*/__illustrate__.py; do \
 		python $$module; \
 	done
+
+segments:
+	json -f segments/__metadata__.json segments | json -a	
 
 segment_a:
 	python ./segments/$@/__illustrate__.py
@@ -48,17 +51,3 @@ segment_j:
 
 segment_k:
 	./segments/$@/__illustrate__.py
-
-segments: \
-	segment_a \
-	segment_b \
-	segment_c \
-	segment_d \
-	segment_e \
-	segment_f1 \
-	segment_f2 \
-	segment_g \
-	segment_h \
-	segment_i \
-	segment_j \
-	segment_k
