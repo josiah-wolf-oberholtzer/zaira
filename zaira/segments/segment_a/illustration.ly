@@ -1,9 +1,9 @@
-% 2016-02-17 18:29
+% 2016-02-19 10:41
 
 % "abjad" revision: 979bf96a83927fe232f3ab8352fb594554b14569
 % "ide" revision: f1e66a9b7773da46a6fc63877e27502f99337156
 % "consort" revision: ce35d47517cb28c3c79f9c0d609eaa5215cde732
-% "zaira" revision: 0b791f2a2151b1b95bcdbbdad289fd20e956419c
+% "zaira" revision: 6eab9595637202a6a4b4b66b0eebcb9954802cf2
 
 \version "2.19.15"
 \language "english"
@@ -2063,36 +2063,11 @@
                 {
                     % [Piano Pedals] Measure 1
                     {
-                        s1 * 3/8 \sustainOn
-                    }
-                    % [Piano Pedals] Measure 2
-                    {
-                        s1 * 3/8
-                    }
-                    % [Piano Pedals] Measure 3
-                    {
-                        s1 * 3/8
-                    }
-                    % [Piano Pedals] Measure 4
-                    {
-                        s1 * 3/8
-                    }
-                    % [Piano Pedals] Measure 5
-                    {
-                        s1 * 3/8
-                    }
-                    % [Piano Pedals] Measure 6
-                    {
-                        s1 * 3/8
-                    }
-                    % [Piano Pedals] Measure 7
-                    {
-                        s1 * 3/8
+                        R1 * 21/8
                     }
                     % [Piano Pedals] Measure 8
                     {
-                        s1 * 1/2
-                        <> \sustainOff
+                        R1 * 1/2
                     }
                 }
             }

@@ -599,14 +599,7 @@
                 {
                     % [Piano Pedals] Measure 216
                     {
-                        s1 * 3/8 \sustainOn
-                        <> \sustainOff
-                    }
-                }
-                {
-                    % [Piano Pedals] Measure 217
-                    {
-                        R1 * 6
+                        R1 * 51/8
                     }
                 }
             }

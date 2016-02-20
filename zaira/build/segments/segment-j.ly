@@ -794,54 +794,23 @@
                 {
                     % [Piano Pedals] Measure 208
                     {
-                        s1 * 1/2 \sustainOn
+                        R1 * 3/2
                     }
-                    % [Piano Pedals] Measure 209
-                    {
-                        s1 * 1/2
-                        <> \sustainOff
-                    }
-                }
-                {
-                    % [Piano Pedals] Measure 210
-                    {
-                        R1 * 1/2
-                    }
-                }
-                {
                     % [Piano Pedals] Measure 211
                     {
-                        s1 * 3/8 \sustainOn
-                        <> \sustainOff
+                        R1 * 3/8
                     }
-                }
-                {
                     % [Piano Pedals] Measure 212
                     {
                         R1 * 1/2
                     }
                     % [Piano Pedals] Measure 213
                     {
-                        r4
-                    }
-                }
-                {
-                    {
-                        s1 * 1/8 \sustainOn
-                    }
-                    % [Piano Pedals] Measure 214
-                    {
-                        s1 * 3/8
+                        R1 * 3/4
                     }
                     % [Piano Pedals] Measure 215
                     {
-                        s1 * 5/16
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r8.
+                        R1 * 1/2
                     }
                 }
             }

@@ -1,9 +1,9 @@
-% 2016-02-17 18:34
+% 2016-02-19 10:46
 
-% "abjad" revision: 979bf96a83927fe232f3ab8352fb594554b14569
+% "abjad" revision: 744ebe5b907de48b4f024bab4c534ac1c0a7acc1
 % "ide" revision: f1e66a9b7773da46a6fc63877e27502f99337156
 % "consort" revision: ce35d47517cb28c3c79f9c0d609eaa5215cde732
-% "zaira" revision: 0b791f2a2151b1b95bcdbbdad289fd20e956419c
+% "zaira" revision: 6eab9595637202a6a4b4b66b0eebcb9954802cf2
 
 \version "2.19.15"
 \language "english"
@@ -3135,178 +3135,35 @@
                 {
                     % [Piano Pedals] Measure 165
                     {
-                        s1 * 1/4 \sustainOn
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r8
+                        R1 * 3/8
                     }
                     % [Piano Pedals] Measure 166
                     {
-                        R1 * 3/4
-                    }
-                    % [Piano Pedals] Measure 167
-                    {
-                        r32
-                    }
-                }
-                {
-                    {
-                        s1 * 3/32 \sustainOn
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r8
-                    }
-                }
-                {
-                    {
-                        s1 * 1/8 \sustainOn
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r8
-                        r8
-                    }
-                }
-                {
-                    {
-                        s1 * 1/8 \sustainOn
+                        R1 * 3/2
                     }
                     % [Piano Pedals] Measure 168
                     {
-                        s1 * 1/4
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r16
-                    }
-                    % [Piano Pedals] Measure 169
-                    {
-                        r8
-                    }
-                }
-                {
-                    {
-                        s1 * 3/16 \sustainOn
+                        R1 * 5/8
                     }
                     % [Piano Pedals] Measure 170
                     {
-                        s1 * 1/2
-                        <> \sustainOff
+                        R1 * 1
                     }
-                }
-                {
-                    {
-                        r4
-                    }
-                }
-                {
-                    {
-                        s1 * 1/4 \sustainOn
-                        <> \sustainOff
-                    }
-                }
-                {
                     % [Piano Pedals] Measure 171
                     {
                         R1 * 5/8
                     }
                     % [Piano Pedals] Measure 173
                     {
-                        r4.
+                        R1 * 1
                     }
-                }
-                {
-                    {
-                        s1 * 9/64 \sustainOn
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r32.
-                    }
-                }
-                {
-                    {
-                        s1 * 1/4 \sustainOn
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r8.
-                    }
-                }
-                {
                     % [Piano Pedals] Measure 174
                     {
-                        s1 * 7/16 \sustainOn
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r16
-                    }
-                    % [Piano Pedals] Measure 175
-                    {
-                        r32
-                    }
-                }
-                {
-                    {
-                        s1 * 5/32 \sustainOn
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r16
-                        r32
-                    }
-                }
-                {
-                    {
-                        s1 * 3/32 \sustainOn
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r8
+                        R1 * 1
                     }
                     % [Piano Pedals] Measure 176
                     {
-                        r16
-                    }
-                }
-                {
-                    {
-                        s1 * 5/16 \sustainOn
-                    }
-                    % [Piano Pedals] Measure 177
-                    {
-                        s1 * 1/8
-                        <> \sustainOff
-                    }
-                }
-                {
-                    {
-                        r4
-                    }
-                    % [Piano Pedals] Measure 178
-                    {
-                        R1 * 3/8
+                        R1 * 9/8
                     }
                     % [Piano Pedals] Measure 179
                     {

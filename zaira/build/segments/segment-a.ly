@@ -2048,36 +2048,11 @@
                 {
                     % [Piano Pedals] Measure 1
                     {
-                        s1 * 3/8 \sustainOn
-                    }
-                    % [Piano Pedals] Measure 2
-                    {
-                        s1 * 3/8
-                    }
-                    % [Piano Pedals] Measure 3
-                    {
-                        s1 * 3/8
-                    }
-                    % [Piano Pedals] Measure 4
-                    {
-                        s1 * 3/8
-                    }
-                    % [Piano Pedals] Measure 5
-                    {
-                        s1 * 3/8
-                    }
-                    % [Piano Pedals] Measure 6
-                    {
-                        s1 * 3/8
-                    }
-                    % [Piano Pedals] Measure 7
-                    {
-                        s1 * 3/8
+                        R1 * 21/8
                     }
                     % [Piano Pedals] Measure 8
                     {
-                        s1 * 1/2
-                        <> \sustainOff
+                        R1 * 1/2
                     }
                 }
             }

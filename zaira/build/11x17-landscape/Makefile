@@ -1,7 +1,7 @@
 MAKEFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 SCORE_NAME := $(lastword $(subst /, ,$(firstword $(subst build, ,$(MAKEFILE_PATH)))))
 BUILD_TARGET := $(notdir $(patsubst %/,%,$(dir $(MAKEFILE_PATH))))
-BUILD_PREFIX := $(SCORE_NAME)-$(BUILD_TARGET)-
+BUILD_PREFIX := $(SCORE_NAME)-$(BUILD_TARGET)
 
 all:
 	make front
@@ -13,27 +13,33 @@ all:
 	make clean
 
 front:
-	xelatex $(BUILD_PREFIX)front-cover.tex
-	xelatex $(BUILD_PREFIX)front-cover.tex
+	xelatex $(BUILD_PREFIX)-front-cover.tex
+	xelatex $(BUILD_PREFIX)-front-cover.tex
 
 back:
-	xelatex $(BUILD_PREFIX)back-cover.tex
-	xelatex $(BUILD_PREFIX)back-cover.tex
+	xelatex $(BUILD_PREFIX)-back-cover.tex
+	xelatex $(BUILD_PREFIX)-back-cover.tex
 
 preface:
-	xelatex $(BUILD_PREFIX)preface.tex
-	xelatex $(BUILD_PREFIX)preface.tex
+	xelatex $(BUILD_PREFIX)-preface.tex
+	xelatex $(BUILD_PREFIX)-preface.tex
 
 music:
-	lilypond $(BUILD_PREFIX)music.ly
+	lilypond $(BUILD_PREFIX)-music.ly
 
 parts:
-	lilypond $(BUILD_PREFIX)parts.ly
+	lilypond $(BUILD_PREFIX)-parts.ly
 
 score:
-	xelatex $(BUILD_PREFIX)score.tex
-	xelatex $(BUILD_PREFIX)score.tex
+	xelatex $(BUILD_PREFIX)-score.tex
+	xelatex $(BUILD_PREFIX)-score.tex
 
 clean:
 	rm -f *.log
 	rm -f *.aux
+
+dist:
+	mkdir -p ../../distribution/$(BUILD_PREFIX)
+	cp $(BUILD_PREFIX)-score.pdf ../../distribution/$(BUILD_PREFIX)
+	cp $(BUILD_PREFIX)-parts-*.pdf ../../distribution/$(BUILD_PREFIX)
+	cd ../../distribution && zip -r $(BUILD_PREFIX).zip $(BUILD_PREFIX) 
