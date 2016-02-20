@@ -13,26 +13,26 @@ all:
 	make clean
 
 front:
-	xelatex $(BUILD_PREFIX)-front-cover.tex
-	xelatex $(BUILD_PREFIX)-front-cover.tex
+	xelatex front-cover.tex
+	xelatex front-cover.tex
 
 back:
-	xelatex $(BUILD_PREFIX)-back-cover.tex
-	xelatex $(BUILD_PREFIX)-back-cover.tex
+	xelatex back-cover.tex
+	xelatex back-cover.tex
 
 preface:
-	xelatex $(BUILD_PREFIX)-preface.tex
-	xelatex $(BUILD_PREFIX)-preface.tex
+	xelatex preface.tex
+	xelatex preface.tex
 
 music:
-	lilypond $(BUILD_PREFIX)-music.ly
+	lilypond music.ly
 
 parts:
-	lilypond $(BUILD_PREFIX)-parts.ly
+	lilypond parts.ly
 
 score:
-	xelatex $(BUILD_PREFIX)-score.tex
-	xelatex $(BUILD_PREFIX)-score.tex
+	xelatex score.tex
+	xelatex score.tex
 
 clean:
 	rm -f *.log
@@ -40,6 +40,8 @@ clean:
 
 dist:
 	mkdir -p ../../distribution/$(BUILD_PREFIX)
-	cp $(BUILD_PREFIX)-score.pdf ../../distribution/$(BUILD_PREFIX)
-	cp $(BUILD_PREFIX)-parts-*.pdf ../../distribution/$(BUILD_PREFIX)
+	cp score.pdf ../../distribution/$(BUILD_PREFIX)/$(BUILD_PREFIX)-score.pdf
+	for part in parts-*.pdf; do \
+		mv $$part ../../distribution/$(BUILD_PREFIX)/$(BUILD_PREFIX)-$$part; \
+	done;
 	cd ../../distribution && zip -r $(BUILD_PREFIX).zip $(BUILD_PREFIX) 
