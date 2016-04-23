@@ -1,41 +1,41 @@
-% 2014-07-06 19:09
+% 2016-04-22 20:42
 
-\version "2.19.9"
+\version "2.19.15"
 \language "english"
 
 \header {
-	tagline = \markup {}
+    tagline = \markup {}
 }
 
 \layout {
-	indent = #0
-	ragged-right = ##t
+    indent = #0
+    ragged-right = ##t
 }
 
 \score {
-	\new Score \with {
-		\override BarLine #'transparent = ##t
-		\override BarNumber #'stencil = ##f
-		\override Clef #'stencil = ##f
-		\override NoteHead #'no-ledgers = ##t
-		\override NoteHead #'transparent = ##t
-		\override StaffSymbol #'transparent = ##t
-		\override Stem #'transparent = ##t
-		\override TimeSignature #'stencil = ##f
-	} <<
-		\new Staff {
-			\time 2/4
-			\break
-			c'2
-			\tempo 8=72
-			\break
-			c'2
-			\tempo 8=48
-			\break
-			c'2
-			\tempo 8=108
-			\break
-			c'2
-		}
-	>>
+    \new Score \with {
+        \override BarLine #'transparent = ##t
+        \override BarNumber #'stencil = ##f
+        \override Clef #'stencil = ##f
+        \override NoteHead #'no-ledgers = ##t
+        \override NoteHead #'transparent = ##t
+        \override StaffSymbol #'transparent = ##t
+        \override Stem #'transparent = ##t
+        \override TimeSignature #'stencil = ##f
+    } <<
+        \new Staff {
+            \time 2/4
+            \break
+            c'2
+            \tempo 4=72
+            \break
+            c'2
+            \tempo 4=48
+            \break
+            c'2
+            \tempo 4=108
+            \break
+            c'2
+        }
+    >>
 }
