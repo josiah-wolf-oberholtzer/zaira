@@ -45,8 +45,8 @@ class ZairaScoreTemplate(abctools.AbjadValueObject):
                 >>
                 \tag #'clarinet-in-b-flat
                 \context PerformerGroup = "Clarinet In B-Flat Performer Group" \with {
-                    instrumentName = \markup { Clarinet in B-flat }
-                    shortInstrumentName = \markup { Cl. in B-flat }
+                    instrumentName = \markup { "Clarinet in B-flat" }
+                    shortInstrumentName = \markup { "Cl. in B-flat" }
                 } <<
                     \context ClarinetInBFlatStaff = "Clarinet In B-Flat Staff" {
                         \context Voice = "Clarinet In B-Flat Voice" {
