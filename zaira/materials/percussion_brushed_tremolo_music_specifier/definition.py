@@ -19,11 +19,11 @@ percussion_brushed_tremolo_music_specifier = consort.MusicSpecifier(
                     .pad_around(0.5)
                     .box(),
                 ),
-            selector=selectortools.Selector().by_leaves(),
+            selector=selectortools.Selector().by_leaf(),
             ),
         stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=spannertools.StemTremoloSpanner(),
-            selector=selectortools.Selector().by_leaves(),
+            selector=selectortools.Selector().by_leaf(),
             ),
         ),
     pitch_handler=consort.AbsolutePitchHandler(

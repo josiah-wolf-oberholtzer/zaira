@@ -16,7 +16,7 @@ piano_fanfare_music_specifier = consort.MusicSpecifier(
         accent=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('accent'),
             selector=selectortools.Selector(
-                ).by_leaves(
+                ).by_leaf(
                 ).by_logical_tie(pitched=True,
                 )[0],
             ),

@@ -12,7 +12,7 @@ from zaira.materials.undergrowth_rhythm_maker.definition \
 
 
 staccato_selector = selectortools.Selector()
-staccato_selector = staccato_selector.by_leaves()
+staccato_selector = staccato_selector.by_leaf()
 staccato_selector = staccato_selector.by_logical_tie(
     pitched=True,
     )
@@ -20,7 +20,7 @@ staccato_selector = staccato_selector.by_duration('<=', (1, 16))
 
 
 sustain_selector = selectortools.Selector()
-sustain_selector = sustain_selector.by_leaves()
+sustain_selector = sustain_selector.by_leaf()
 sustain_selector = sustain_selector.by_logical_tie(
     pitched=True,
     )

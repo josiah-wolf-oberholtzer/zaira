@@ -25,13 +25,13 @@ cello_solo_music_specifier = consort.MusicSpecifier(
                 spannertools.ComplexTrillSpanner(interval='+M2'),
                 ),
             selector=selectortools.Selector()
-                .by_leaves()
+                .by_leaf()
                 .by_logical_tie(pitched=True)
             ),
         tenuto=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('tenuto'),
             selector=selectortools.Selector()
-                .by_leaves()
+                .by_leaf()
                 .by_logical_tie(pitched=True)[0],
             ),
         text_spanner=consort.AttachmentExpression(

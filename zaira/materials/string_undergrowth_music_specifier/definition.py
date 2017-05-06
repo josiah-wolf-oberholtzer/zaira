@@ -22,7 +22,7 @@ string_undergrowth_music_specifier = consort.MusicSpecifier(
                     .pad_around(0.5)
                     .box(),
                 ),
-            selector=selectortools.Selector().by_leaves(),
+            selector=selectortools.Selector().by_leaf(),
             ),
         accent_and_tenuto=consort.AttachmentExpression(
             attachments=(
@@ -32,7 +32,7 @@ string_undergrowth_music_specifier = consort.MusicSpecifier(
                     ),
                 ),
             selector=selectortools.Selector()
-                .by_leaves()
+                .by_leaf()
                 .by_logical_tie(pitched=True)[0],
             ),
         stem_tremolo_spanner=consort.AttachmentExpression(
@@ -42,7 +42,7 @@ string_undergrowth_music_specifier = consort.MusicSpecifier(
                 spannertools.StemTremoloSpanner(),
                 ),
             selector=selectortools.Selector()
-                .by_leaves()
+                .by_leaf()
                 .by_logical_tie(pitched=True)
             ),
         ),

@@ -1,10 +1,10 @@
-% 2016-04-22 20:42
+% 2016-05-30 17:09
 
-\version "2.19.15"
+\version "2.19.41"
 \language "english"
 
 \header {
-    tagline = \markup {}
+    tagline = ##f
 }
 
 \layout {

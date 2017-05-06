@@ -1,11 +1,11 @@
-% 2016-04-22 20:52
+% 2016-05-30 17:10
 
-% package "abjad" @ 2cf4351 [master] (2016-04-22 15:27:55)
-% package "ide" @ c37fdc6 [master] (2016-04-18 15:15:28)
-% package "consort" @ d7ca678 [master] (2016-04-22 20:21:57)
-% package "zaira" @ cf35d99 [master] (2016-04-22 19:36:23)
+% package "abjad" @ 17eb117 [issue654/tuplet-simplification] (2016-05-30 16:45:02)
+% package "ide" @ 2a867e0 [fix-new-score-tests] (2016-05-23 20:00:37)
+% package "consort" @ b9181b1 [master] (2016-05-25 23:09:32)
+% package "zaira" @ 0fe45ac [master] (2016-04-22 21:09:31)
 
-\version "2.19.15"
+\version "2.19.41"
 \language "english"
 
 #(ly:set-option 'relative-includes #t)
@@ -83,8 +83,8 @@
             >>
             \tag #'clarinet-in-b-flat
             \context PerformerGroup = "Clarinet In B-Flat Performer Group" \with {
-                instrumentName = \markup { Clarinet in B-flat }
-                shortInstrumentName = \markup { Cl. in B-flat }
+                instrumentName = \markup { "Clarinet in B-flat" }
+                shortInstrumentName = \markup { "Cl. in B-flat" }
             } <<
                 \context ClarinetInBFlatStaff = "Clarinet In B-Flat Staff" {
                     \context Voice = "Clarinet In B-Flat Voice" {

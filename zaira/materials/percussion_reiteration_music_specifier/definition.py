@@ -15,7 +15,7 @@ percussion_reiteration_music_specifier = consort.MusicSpecifier(
         staccato=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('.'),
             selector=selectortools.Selector(
-                ).by_leaves(
+                ).by_leaf(
                 ).by_logical_tie(pitched=True
                 )[0],
             ),

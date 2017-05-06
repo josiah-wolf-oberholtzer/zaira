@@ -1,13 +1,17 @@
-% 2016-04-22 20:41
+% 2016-05-30 17:08
 
-\version "2.19.15"
+\version "2.19.41"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
 
 \header {
     tagline = \markup {}
-    title = #"Piano Clusters Music Specifier"
+    title = \markup {
+        \override
+            #'(font-name . "Didot")
+            "Piano Clusters Music Specifier"
+        }
 }
 
 \score {

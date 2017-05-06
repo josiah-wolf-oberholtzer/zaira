@@ -21,7 +21,7 @@ drum_brushed_music_specifier = consort.MusicSpecifier(
                     .pad_around(0.5)
                     .box(),
                 ),
-            selector=selectortools.Selector().by_leaves(),
+            selector=selectortools.Selector().by_leaf(),
             ),
         stem_tremolo_spanner=consort.AttachmentExpression(
             attachments=(

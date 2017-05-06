@@ -1,13 +1,17 @@
-% 2016-04-22 20:34
+% 2016-05-30 17:06
 
-\version "2.19.15"
+\version "2.19.41"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
 
 \header {
     tagline = \markup {}
-    title = #"Cello Solo Music Specifier"
+    title = \markup {
+        \override
+            #'(font-name . "Didot")
+            "Cello Solo Music Specifier"
+        }
 }
 
 \score {

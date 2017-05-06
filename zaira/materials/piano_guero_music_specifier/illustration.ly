@@ -1,13 +1,17 @@
-% 2016-04-22 20:41
+% 2016-05-30 17:08
 
-\version "2.19.15"
+\version "2.19.41"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
 
 \header {
     tagline = \markup {}
-    title = #"Piano Guero Music Specifier"
+    title = \markup {
+        \override
+            #'(font-name . "Didot")
+            "Piano Guero Music Specifier"
+        }
 }
 
 \score {

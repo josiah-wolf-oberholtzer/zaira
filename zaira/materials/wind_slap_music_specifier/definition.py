@@ -37,7 +37,7 @@ wind_slap_music_specifier = consort.MusicSpecifier(
                     .pad_around(0.5)
                     .box(),
                 ),
-            selector=selectortools.Selector().by_leaves(),
+            selector=selectortools.Selector().by_leaf(),
             ),
         accent_and_staccato=consort.AttachmentExpression(
             attachments=(
@@ -47,7 +47,7 @@ wind_slap_music_specifier = consort.MusicSpecifier(
                     ),
                 ),
             selector=selectortools.Selector()
-                .by_leaves()
+                .by_leaf()
                 .by_logical_tie(pitched=True)
                 [0],
             ),

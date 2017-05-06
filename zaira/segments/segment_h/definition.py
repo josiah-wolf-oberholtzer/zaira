@@ -77,7 +77,7 @@ segment_maker.add_setting(
                     .pad_around(0.5)
                     .box(),
                 ),
-            selector=selectortools.Selector().by_leaves(),
+            selector=selectortools.Selector().by_leaf(),
             ),
         ),
     oboe=new(

@@ -13,7 +13,7 @@ shaker_music_specifier = consort.MusicSpecifier(
         dynamic_expression=consort.AttachmentExpression(
             attachments=indicatortools.Dynamic('p'),
             selector=selectortools.Selector()
-                .by_leaves()[0]
+                .by_leaf()[0]
             ),
         clef_spanner=consort.ClefSpanner('percussion'),
         staff_lines_spanner=spannertools.StaffLinesSpanner(
@@ -46,7 +46,7 @@ shaker_music_specifier = consort.MusicSpecifier(
                     .pad_around(0.5)
                     .box(),
                 ),
-            selector=selectortools.Selector().by_leaves(),
+            selector=selectortools.Selector().by_leaf(),
             ),
         ),
     pitch_handler=consort.AbsolutePitchHandler(

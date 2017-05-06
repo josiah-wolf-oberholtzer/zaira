@@ -1,13 +1,17 @@
-% 2016-04-22 20:40
+% 2016-05-30 17:07
 
-\version "2.19.15"
+\version "2.19.41"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
 
 \header {
     tagline = \markup {}
-    title = #"Metal Agitation Music Specifier"
+    title = \markup {
+        \override
+            #'(font-name . "Didot")
+            "Metal Agitation Music Specifier"
+        }
 }
 
 \score {
