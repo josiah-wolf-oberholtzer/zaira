@@ -147,7 +147,7 @@ segment_maker.add_setting(
         materials.piano_flourish_music_specifier,
         attachment_handler__dynamic_expression=materials.background_dynamic_attachment_expression,
         pitch_handler__register_specifier__base_pitch="c''",
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             operators=(
                 pitchtools.Inversion(),
                 pitchtools.Transposition(-3),
@@ -158,7 +158,7 @@ segment_maker.add_setting(
         materials.piano_flourish_music_specifier,
         attachment_handler__dynamic_expression=materials.background_dynamic_attachment_expression,
         pitch_handler__register_specifier__base_pitch="c,",
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             operators=(
                 pitchtools.Inversion(),
                 pitchtools.Transposition(-3),
@@ -233,7 +233,7 @@ segment_maker.add_setting(
     violin=new(
         materials.string_trills_music_specifier,
         pitch_handler__register_specifier__base_pitch="c'",
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Inversion(),
             ),
         seed=0,
@@ -241,7 +241,7 @@ segment_maker.add_setting(
     viola=new(
         materials.string_trills_music_specifier,
         pitch_handler__register_specifier__base_pitch='c',
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Inversion(),
             ),
         seed=1,
@@ -249,7 +249,7 @@ segment_maker.add_setting(
     cello=new(
         materials.string_trills_music_specifier,
         pitch_handler__register_specifier__base_pitch='c,',
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Inversion(),
             ),
         seed=2,
@@ -269,7 +269,7 @@ segment_maker.add_setting(
     violin=new(
         materials.string_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch="c''",
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Transposition(3),
             ),
         rhythm_maker__talea__denominator=16,
@@ -278,7 +278,7 @@ segment_maker.add_setting(
     viola=new(
         materials.string_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch="c'",
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Transposition(3),
             ),
         rhythm_maker__talea__denominator=16,
@@ -287,7 +287,7 @@ segment_maker.add_setting(
     cello=new(
         materials.string_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch='c',
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Transposition(3),
             ),
         rhythm_maker__talea__denominator=16,

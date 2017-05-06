@@ -239,7 +239,7 @@ segment_maker.add_setting(
     violin=new(
         materials.string_trills_music_specifier,
         pitch_handler__register_specifier__base_pitch="c''",
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Transposition(-3),
             ),
         seed=0,
@@ -247,7 +247,7 @@ segment_maker.add_setting(
     viola=new(
         materials.string_trills_music_specifier,
         pitch_handler__register_specifier__base_pitch="c'",
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Transposition(-3),
             ),
         seed=1,
@@ -255,7 +255,7 @@ segment_maker.add_setting(
     cello=new(
         materials.string_trills_music_specifier,
         pitch_handler__register_specifier__base_pitch='c',
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Transposition(-3),
             ),
         seed=2,

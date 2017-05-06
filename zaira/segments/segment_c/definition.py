@@ -39,7 +39,7 @@ segment_maker.add_setting(
         ),
     flute=new(
         materials.wind_trills_music_specifier,
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             operators=(
                 pitchtools.Transposition(-3),
                 pitchtools.Inversion(),
@@ -49,7 +49,7 @@ segment_maker.add_setting(
         ),
     oboe=new(
         materials.wind_trills_music_specifier,
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             operators=(
                 pitchtools.Transposition(-3),
                 pitchtools.Inversion(),
@@ -59,7 +59,7 @@ segment_maker.add_setting(
         ),
     clarinet=new(
         materials.wind_trills_music_specifier,
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             operators=(
                 pitchtools.Transposition(-3),
                 pitchtools.Inversion(),
@@ -157,7 +157,7 @@ segment_maker.add_setting(
     piano_rh=new(
         materials.piano_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch="c''",
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             operators=(
                 pitchtools.Inversion(),
                 pitchtools.Transposition(3),
@@ -167,7 +167,7 @@ segment_maker.add_setting(
     piano_lh=new(
         materials.piano_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch="c,",
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             operators=(
                 pitchtools.Inversion(),
                 pitchtools.Transposition(3),
@@ -209,7 +209,7 @@ segment_maker.add_setting(
     violin=new(
         materials.string_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch=None,
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             operators=(
                 pitchtools.Transposition(3),
                 ),
@@ -220,7 +220,7 @@ segment_maker.add_setting(
     viola=new(
         materials.string_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch='c',
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             operators=(
                 pitchtools.Transposition(3),
                 ),
@@ -231,7 +231,7 @@ segment_maker.add_setting(
     cello=new(
         materials.string_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch='c,',
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             operators=(
                 pitchtools.Transposition(3),
                 ),

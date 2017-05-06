@@ -40,21 +40,21 @@ segment_maker.add_setting(
         ),
     flute=new(
         materials.wind_trills_music_specifier,
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Inversion(),
             ),
         seed=0,
         ),
     oboe=new(
         materials.wind_trills_music_specifier,
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Inversion(),
             ),
         seed=1,
         ),
     clarinet=new(
         materials.wind_trills_music_specifier,
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Inversion(),
             ),
         seed=2,
@@ -185,7 +185,7 @@ segment_maker.add_setting(
         ),
     cello=new(
         materials.cello_solo_music_specifier,
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Transposition(3),
             ),
         ),

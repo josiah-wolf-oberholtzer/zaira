@@ -83,7 +83,7 @@ segment_maker.add_setting(
         ),
     oboe=new(
         materials.oboe_solo_music_specifier,
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Transposition(-3),
             ),
         ),
@@ -177,7 +177,7 @@ segment_maker.add_setting(
     piano_rh=new(
         materials.piano_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch="c''",
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Transposition(3),
             ),
         seed=1,
@@ -185,7 +185,7 @@ segment_maker.add_setting(
     piano_lh=new(
         materials.piano_flourish_music_specifier,
         pitch_handler__register_specifier__base_pitch="c,",
-        pitch_handler__pitch_operation_specifier=pitchtools.PitchOperation(
+        pitch_handler__pitch_operation_specifier=pitchtools.CompoundOperator(
             pitchtools.Transposition(3),
             ),
         seed=2,
