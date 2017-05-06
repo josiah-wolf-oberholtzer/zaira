@@ -20,7 +20,7 @@ drum_agitation_music_specifier = consort.MusicSpecifier(
             ),
         staccato=consort.AttachmentExpression(
             attachments=indicatortools.Articulation('staccato'),
-            selector=selectortools.select_all_but_first_logical_tie_in_pitched_runs()[0],
+            selector=selectortools.select_nonfirst_logical_ties_in_pitched_runs()[0],
             ),
         ),
     pitch_handler=consort.AbsolutePitchHandler(
