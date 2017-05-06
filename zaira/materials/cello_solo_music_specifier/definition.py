@@ -43,7 +43,7 @@ cello_solo_music_specifier = consort.MusicSpecifier(
                         .box(),
                     ),
                 None,
-                spannertools.Glissando(),
+                consort.Glissando(),
                 ),
             selector=selectortools.select_pitched_runs(),
             ),
