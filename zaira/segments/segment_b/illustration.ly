@@ -1,11 +1,8 @@
-% 2016-05-30 17:10
+% package "abjad" @ 2.21
+% package "consort" @ 332b5c6 [master] (2017-05-06 21:31:24)
+% package "zaira" @ 561d231 [master] (2017-05-06 23:31:33)
 
-% package "abjad" @ 17eb117 [issue654/tuplet-simplification] (2016-05-30 16:45:02)
-% package "ide" @ 2a867e0 [fix-new-score-tests] (2016-05-23 20:00:37)
-% package "consort" @ b9181b1 [master] (2016-05-25 23:09:32)
-% package "zaira" @ 0fe45ac [master] (2016-04-22 21:09:31)
-
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 #(ly:set-option 'relative-includes #t)
@@ -101,12 +98,24 @@
                         {
                             % [Flute Voice] Measure 9
                             {
+                                \set Staff.instrumentName = \markup { Flute }
+                                \set Staff.shortInstrumentName = \markup { Fl. }
                                 r16
                             }
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        click
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -126,9 +135,9 @@
                                 \once \override TextSpanner.dash-fraction = 1
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     ef
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     d'
                                 >16 -\staccato \mp \startTextSpan
                             }
@@ -144,11 +153,11 @@
                             {
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     gf
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     f'
-                                >16 -\staccato \mp
+                                >16 -\staccato \parenthesizeDynamic \mp
                             }
                         }
                         {
@@ -157,18 +166,18 @@
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 6/7 {
                                 r16 [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     ef
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     d'
-                                >16 -\staccato \mp
+                                >16 -\staccato
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -179,13 +188,14 @@
                                 \set stemRightBeamCount = 1
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     ef
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     d'
                                 >8 :64
                                 \set stemLeftBeamCount = 2
                                 r16 ]
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -202,14 +212,42 @@
                         {
                             % [Flute Voice] Measure 12
                             \times 2/3 {
-                                r16 [
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        click
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        click
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                r16 \startTextSpan [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     gf
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     f'
                                 >16 -\staccato \mp
                                 \set stemLeftBeamCount = 2
@@ -223,15 +261,15 @@
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 5/6 {
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     ef
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     d'
-                                >16 -\staccato \mp [
+                                >16 -\staccato [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 r16
@@ -242,9 +280,9 @@
                                 \set stemRightBeamCount = 1
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     gf
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     f'
                                 >16 -\staccato
                                 \set stemLeftBeamCount = 1
@@ -281,7 +319,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        click
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -301,9 +349,9 @@
                                 \once \override TextSpanner.dash-fraction = 1
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     ef
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     d'
                                 >16 -\staccato \mp \startTextSpan [
                                 \set stemLeftBeamCount = 1
@@ -312,9 +360,9 @@
                                 \set stemLeftBeamCount = 1
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     ef
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     d'
                                 >8 :64 ]
                             }
@@ -332,20 +380,20 @@
                             \times 4/5 {
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     gf
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     f'
-                                >16 -\staccato \mp [
+                                >16 -\staccato \parenthesizeDynamic \mp [
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
                                 r8
                                 \set stemLeftBeamCount = 1
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     ef
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     d'
                                 >8 :64 ]
                             }
@@ -363,11 +411,11 @@
                                 \set stemRightBeamCount = 1
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     gf
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     f'
-                                >8 :64 \mp
+                                >8 :64 \parenthesizeDynamic \mp
                                 \set stemLeftBeamCount = 2
                                 r16 ]
                                 <> \stopTextSpan
@@ -401,7 +449,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        click
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -421,9 +479,9 @@
                                 \once \override TextSpanner.dash-fraction = 1
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     ef
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     d'
                                 >8 :64 \mp \startTextSpan
                             }
@@ -438,17 +496,17 @@
                             {
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     ef
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     d'
-                                >16 :128 \mp [
+                                >16 :128 [
                                 \set stemLeftBeamCount = 1
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     ef
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     d'
                                 >8 :64 \repeatTie ]
                             }
@@ -467,11 +525,11 @@
                             {
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     gf
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     f'
-                                >16 -\staccato \mp
+                                >16 -\staccato \parenthesizeDynamic \mp
                             }
                         }
                         {
@@ -481,31 +539,31 @@
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 5/7 {
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     ef
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     d'
-                                >8. :64 \mp [
+                                >8. :64 \parenthesizeDynamic \mp [
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 2
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     ef
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     d'
                                 >16 :128 \repeatTie
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 1
                                 <
                                     \parenthesize
-                                    \tweak #'font-size #-2
+                                    \tweak font-size #-2
                                     gf
-                                    \tweak #'style #'cross
+                                    \tweak style #'cross
                                     f'
                                 >16 -\staccato
                                 \set stemLeftBeamCount = 1
@@ -542,6 +600,8 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup { Oboe }
+                                \set Staff.shortInstrumentName = \markup { Ob. }
                                 R1 * 5/16
                                 \stopStaff
                                 \startStaff
@@ -550,7 +610,17 @@
                         {
                             % [Oboe Voice] Measure 10
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -568,8 +638,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -579,13 +649,13 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 a'16 -\accent -\staccato \mf \startTextSpan [
                                 \set stemLeftBeamCount = 2
                                 b'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                             }
                         }
                         {
@@ -596,8 +666,8 @@
                         }
                         {
                             {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -607,7 +677,7 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 d'16 -\accent -\staccato \mp [
                                 \set stemLeftBeamCount = 1
@@ -616,8 +686,8 @@
                             % [Oboe Voice] Measure 11
                             {
                                 f'16 -\accent -\staccato
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                             }
                         }
                         {
@@ -632,8 +702,8 @@
                         }
                         {
                             {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -643,13 +713,13 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 cs'16 -\accent -\staccato \mf [
                                 \set stemLeftBeamCount = 2
                                 a'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                             }
                         }
                         {
@@ -660,8 +730,8 @@
                         }
                         {
                             {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -671,11 +741,11 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 b'8 -\accent -\staccato \mp
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 <> \stopTextSpan
                             }
                         }
@@ -789,7 +859,7 @@
                         }
                         {
                             {
-                                \override Hairpin #'circled-tip = ##t
+                                \override Hairpin.circled-tip = ##t
                                 \pitchedTrill
                                 ef'8 \< \startTrillSpan f'
                                 <> \stopTrillSpan
@@ -817,12 +887,22 @@
                                 ef'64 -\staccato
                                 \set stemLeftBeamCount = 4
                                 e'64 -\staccato ] \ff
-                                \revert Hairpin #'circled-tip
+                                \revert Hairpin.circled-tip
                             }
                         }
                         {
                             \times 4/5 {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -840,8 +920,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -851,14 +931,14 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 e'8 -\accent -\staccato \mf \startTextSpan [
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 2
                                 d'16 -\accent -\staccato
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 \set stemLeftBeamCount = 1
                                 r8 ]
                             }
@@ -871,8 +951,8 @@
                         }
                         {
                             {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -882,7 +962,7 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 a'16 -\accent -\staccato \mp [
                                 \set stemLeftBeamCount = 1
@@ -890,8 +970,8 @@
                                 b'8 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 b'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 <> \stopTextSpan
                             }
                         }
@@ -927,7 +1007,17 @@
                         {
                             % [Oboe Voice] Measure 23
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -945,8 +1035,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -956,16 +1046,16 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
-                                af'16. -\accent -\staccato \mf \startTextSpan [
+                                gs'16. -\accent -\staccato \mf \startTextSpan [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 3
                                 e'32 -\accent -\staccato
                                 \set stemLeftBeamCount = 4
                                 e'64 \repeatTie ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 <> \stopTextSpan
                             }
                         }
@@ -1006,7 +1096,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -1024,8 +1124,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1035,13 +1135,14 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 a'16 -\accent -\staccato \mp \startTextSpan [
                                 \set stemLeftBeamCount = 2
                                 c'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -1062,8 +1163,36 @@
                         {
                             % [Oboe Voice] Measure 25
                             {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1073,13 +1202,13 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
-                                af'16 -\accent -\staccato \mf [
+                                gs'16 -\accent -\staccato \mf \startTextSpan [
                                 \set stemLeftBeamCount = 2
                                 d'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 <> \stopTextSpan
                             }
                         }
@@ -1115,6 +1244,8 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup { "Clarinet in B-flat" }
+                                \set Staff.shortInstrumentName = \markup { "Cl. in B-flat" }
                                 R1 * 5/16
                                 \stopStaff
                                 \startStaff
@@ -1124,7 +1255,17 @@
                         {
                             % [Clarinet In B-Flat Voice] Measure 10
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -1142,8 +1283,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1153,11 +1294,11 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 c'16 -\accent -\staccato \mp \startTextSpan
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                             }
                         }
                         {
@@ -1170,8 +1311,8 @@
                         {
                             % [Clarinet In B-Flat Voice] Measure 11
                             \times 4/5 {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1181,20 +1322,20 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
-                                af'8 -\accent -\staccato \mf [
+                                gs'8 -\accent -\staccato \mf [
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 2
                                 e'16 -\accent -\staccato
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 \set stemLeftBeamCount = 1
                                 r8 ]
                             }
                             {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1204,16 +1345,16 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 d'8 -\accent -\staccato \mp
                             }
                             % [Clarinet In B-Flat Voice] Measure 12
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 3/4 {
                                 f'16 -\accent -\staccato [
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 \set stemLeftBeamCount = 1
                                 r8. ]
                             }
@@ -1226,10 +1367,10 @@
                         }
                         \transpose bf c'
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 6/7 {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1239,12 +1380,12 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 c'8 -\accent -\staccato \mp [
                                 d'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 r4
                                 <> \stopTextSpan
                             }
@@ -1275,7 +1416,17 @@
                         {
                             % [Clarinet In B-Flat Voice] Measure 17
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -1293,8 +1444,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1304,13 +1455,13 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 b'16 -\accent -\staccato \mf \startTextSpan [
                                 \set stemLeftBeamCount = 1
                                 f'8 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                             }
                         }
                         {
@@ -1323,8 +1474,8 @@
                         {
                             % [Clarinet In B-Flat Voice] Measure 18
                             {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1334,11 +1485,11 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
-                                af'16. -\accent -\staccato \mp
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                gs'16. -\accent -\staccato \mp
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                             }
                         }
                         {
@@ -1354,8 +1505,8 @@
                         \transpose bf c'
                         {
                             {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1365,13 +1516,13 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 f'16 -\accent -\staccato \mf [
                                 \set stemLeftBeamCount = 2
                                 cs'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                             }
                         }
                         {
@@ -1383,8 +1534,8 @@
                         \transpose bf c'
                         {
                             {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1394,7 +1545,7 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 c'16 -\accent -\staccato \mp [
                                 \set stemLeftBeamCount = 1
@@ -1402,8 +1553,8 @@
                                 d'8 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 f'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 <> \stopTextSpan
                             }
                         }
@@ -1436,7 +1587,17 @@
                         \transpose bf c'
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -1454,8 +1615,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1465,7 +1626,7 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 d'16 -\accent -\staccato \mf \startTextSpan [
                                 \set stemLeftBeamCount = 2
@@ -1473,8 +1634,8 @@
                                 f'16 -\accent -\staccato
                                 \set stemLeftBeamCount = 1
                                 cs'8 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                             }
                         }
                         {
@@ -1486,8 +1647,8 @@
                         \transpose bf c'
                         {
                             {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1497,13 +1658,13 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 b'16 -\accent -\staccato \mp [
                                 \set stemLeftBeamCount = 1
                                 d'8 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                             }
                         }
                         {
@@ -1518,8 +1679,8 @@
                         \transpose bf c'
                         {
                             \times 4/5 {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1529,21 +1690,21 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 b'8 -\accent -\staccato \mf [
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 2
                                 f'16 -\accent -\staccato
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 \set stemLeftBeamCount = 1
                                 r8 ]
                             }
                             % [Clarinet In B-Flat Voice] Measure 25
                             {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1553,11 +1714,11 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 e'8 -\accent -\staccato \mp
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 <> \stopTextSpan
                             }
                         }
@@ -1592,12 +1753,24 @@
                         {
                             % [Metals Voice] Measure 9
                             {
+                                \set Staff.instrumentName = \markup { Metals }
+                                \set Staff.shortInstrumentName = \markup { Metals }
                                 g'16 -\accent \fff
                             }
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -1646,7 +1819,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -1691,7 +1874,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -1720,6 +1913,7 @@
                             % [Metals Voice] Measure 16
                             {
                                 c'8 :64 \repeatTie
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -1739,7 +1933,35 @@
                         {
                             % [Metals Voice] Measure 18
                             {
-                                e'4. \mp
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                e'4. \mp \startTextSpan
                             }
                         }
                         {
@@ -1756,6 +1978,7 @@
                             % [Metals Voice] Measure 20
                             {
                                 c'4 :32 \repeatTie
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -1775,7 +1998,35 @@
                         {
                             % [Metals Voice] Measure 22
                             {
-                                a4 \mp
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                a4 \mp \startTextSpan
                             }
                         }
                         {
@@ -1787,6 +2038,7 @@
                             {
                                 e'16 :128 \mf
                                 e'4 :32 \repeatTie
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -1807,7 +2059,35 @@
                         {
                             % [Metals Voice] Measure 25
                             {
-                                f4. \mp
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                f4. \mp \startTextSpan
                             }
                             % [Metals Voice] Measure 26
                             {
@@ -1837,6 +2117,8 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup { Woods }
+                                \set Staff.shortInstrumentName = \markup { Woods }
                                 R1 * 5/16
                             }
                             % [Woods Voice] Measure 10
@@ -1912,6 +2194,8 @@
                         {
                             % [Drums Voice] Measure 9
                             {
+                                \set Staff.instrumentName = \markup { Drums }
+                                \set Staff.shortInstrumentName = \markup { Drums }
                                 b16 -\accent \fff
                             }
                         }
@@ -1924,8 +2208,9 @@
                         {
                             % [Drums Voice] Measure 10
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                f'4 :32 \mf ^ \markup {
                                     \box
                                         \pad-around
                                             #0.5
@@ -1936,13 +2221,6 @@
                                                         brush
                                                     }
                                     }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                f'4 :32 \mf \startTextSpan
                             }
                         }
                         {
@@ -1965,7 +2243,19 @@
                         }
                         {
                             {
-                                d'4. \mp
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                d'4. \mp ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
                             }
                         }
                         {
@@ -1989,7 +2279,35 @@
                         {
                             % [Drums Voice] Measure 16
                             {
-                                g4. :32 \mf
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                g4. :32 \mf \startTextSpan
                             }
                         }
                         {
@@ -2003,6 +2321,7 @@
                             {
                                 f'4. \mp
                                 f'8 \repeatTie
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -2025,7 +2344,35 @@
                         }
                         {
                             {
-                                g4. :32 \mf
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                g4. :32 \mf \startTextSpan
                             }
                         }
                         {
@@ -2045,6 +2392,7 @@
                             % [Drums Voice] Measure 21
                             {
                                 d'8 \repeatTie
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -2064,7 +2412,35 @@
                         {
                             % [Drums Voice] Measure 23
                             {
-                                f'4. :32 \mf
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                f'4. :32 \mf \startTextSpan
                             }
                         }
                         {
@@ -2126,6 +2502,8 @@
                             \once \override NoteHead.text = \markup {
                             	\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
                             }
+                            \set PianoStaff.instrumentName = \markup { Piano }
+                            \set PianoStaff.shortInstrumentName = \markup { Pf. }
                             <g' b' d'' f''>16 -\accent \fff
                                 ^ \markup {
                                     \center-align
@@ -2144,10 +2522,20 @@
                         }
                     }
                     {
-                        \tweak #'text #tuplet-number::calc-fraction-text
+                        \tweak text #tuplet-number::calc-fraction-text
                         \times 7/9 {
                             \clef "treble^15"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    prepared
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -2165,7 +2553,7 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.style = #'cross
                             r8. \startTextSpan [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
@@ -2178,7 +2566,7 @@
                             b''''16 -\staccato \mf
                             \set stemLeftBeamCount = 1
                             r8 ]
-                            \revert NoteHead #'style
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "treble"
                         }
@@ -2210,7 +2598,7 @@
                             cs'''16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 3
-                            bf'32
+                            as'32
                             \set stemLeftBeamCount = 3
                             d''32 ] \f )
                         }
@@ -2232,11 +2620,12 @@
                         % [Piano Upper Voice] Measure 14
                         {
                             r8
+                            r32
                         }
                     }
                     {
                         {
-                            \override Hairpin #'circled-tip = ##t
+                            \override Hairpin.circled-tip = ##t
                             f''32 [ \< (
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
@@ -2248,14 +2637,11 @@
                             \set stemRightBeamCount = 3
                             cs''32
                             \set stemLeftBeamCount = 3
-                            bf''32 ] \ff )
-                            \revert Hairpin #'circled-tip
+                            as''32 ] \ff )
+                            \revert Hairpin.circled-tip
                         }
                     }
                     {
-                        {
-                            r32
-                        }
                         % [Piano Upper Voice] Measure 15
                         {
                             \stopStaff
@@ -2270,7 +2656,17 @@
                         % [Piano Upper Voice] Measure 16
                         \times 8/9 {
                             \clef "treble^15"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    prepared
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -2288,7 +2684,7 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.style = #'cross
                             d''''16 -\staccato \fp \startTextSpan \> [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
@@ -2306,7 +2702,7 @@
                             <> \stopTrillSpan
                             \set stemLeftBeamCount = 2
                             r16 ]
-                            \revert NoteHead #'style
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "treble"
                         }
@@ -2323,17 +2719,22 @@
                     }
                     {
                         {
-                            d'''32 \mf [ (
+                            \override Hairpin.circled-tip = ##t
+                            d'''32 [ \> \mf (
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
                             f'''32
                             \set stemLeftBeamCount = 3
-                            e''32 ] )
+                            \set stemRightBeamCount = 2
+                            e''32
+                            \set stemLeftBeamCount = 2
+                            g''16 ] \! )
+                            \revert Hairpin.circled-tip
                         }
                     }
                     {
                         {
-                            r8
+                            r16
                             r4.
                         }
                         % [Piano Upper Voice] Measure 18
@@ -2347,18 +2748,18 @@
                             r32 [
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
-                            g'''32 \> \f (
+                            cs'''32 \> \f (
                             \set stemLeftBeamCount = 3
-                            cs''32 ]
+                            as''32 ]
                         }
                         % [Piano Upper Voice] Measure 19
                         {
-                            cs''16 \repeatTie [
+                            as''16 \repeatTie [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 3
-                            bf''32
+                            d'''32
                             \set stemLeftBeamCount = 3
-                            d'''32 ] \p )
+                            f'''32 ] \p )
                         }
                     }
                     {
@@ -2371,10 +2772,20 @@
                         }
                     }
                     {
-                        \tweak #'text #tuplet-number::calc-fraction-text
+                        \tweak text #tuplet-number::calc-fraction-text
                         \times 5/6 {
                             \clef "treble^15"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    prepared
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -2392,7 +2803,7 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.style = #'cross
                             r16 \startTextSpan [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
@@ -2401,7 +2812,7 @@
                             <> \stopTrillSpan
                             \set stemLeftBeamCount = 1
                             r8. ]
-                            \revert NoteHead #'style
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "treble"
                         }
@@ -2413,27 +2824,26 @@
                         % [Piano Upper Voice] Measure 21
                         {
                             r4
-                            r16
+                            r16.
                         }
                     }
                     {
                         {
-                            f'''32 [ \< \p (
-                            \set stemLeftBeamCount = 3
-                            e'''32 ]
+                            e'''32 \< \p (
                         }
                         % [Piano Upper Voice] Measure 22
                         {
                             e'''16 \repeatTie [
+                            \set stemLeftBeamCount = 2
+                            \set stemRightBeamCount = 3
+                            g''32
                             \set stemLeftBeamCount = 3
-                            g''32 ] \f )
+                            cs''32 ] \f )
                         }
                     }
                     {
                         {
-                            r32
-                            r8
-                            r2.
+                            r2..
                         }
                         % [Piano Upper Voice] Measure 23
                         {
@@ -2447,10 +2857,20 @@
                     }
                     {
                         % [Piano Upper Voice] Measure 24
-                        \tweak #'text #tuplet-number::calc-fraction-text
+                        \tweak text #tuplet-number::calc-fraction-text
                         \times 5/6 {
                             \clef "treble^15"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    prepared
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -2468,7 +2888,7 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.style = #'cross
                             f''''16 -\staccato \fp \startTextSpan \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -2485,12 +2905,12 @@
                             r16 ]
                         }
                         % [Piano Upper Voice] Measure 25
-                        \tweak #'text #tuplet-number::calc-fraction-text
+                        \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
                             r8.
                             \pitchedTrill
                             as''''4 \ppp \startTrillSpan b''''
-                            \revert NoteHead #'style
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "treble"
                             <> \stopTrillSpan
@@ -2587,6 +3007,8 @@
                             \once \override NoteHead.text = \markup {
                             	\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
                             }
+                            \set PianoStaff.instrumentName = \markup { Piano }
+                            \set PianoStaff.shortInstrumentName = \markup { Pf. }
                             <d, f, a, c>16 -\accent \fff
                                 ^ \markup {
                                     \center-align
@@ -2607,7 +3029,17 @@
                     {
                         \times 2/3 {
                             \clef "bass_15"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    prepared
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -2625,14 +3057,14 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.style = #'cross
                             r8. \startTextSpan [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
                             a,,,16 -\staccato \p
                             \set stemLeftBeamCount = 1
                             r8 ]
-                            \revert NoteHead #'style
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "bass"
                         }
@@ -2676,13 +3108,13 @@
                         }
                         % [Piano Lower Voice] Measure 13
                         {
-                            r16
+                            r16.
                         }
                     }
                     {
                         {
-                            \override Hairpin #'circled-tip = ##t
-                            bf,32 [ \< (
+                            \override Hairpin.circled-tip = ##t
+                            as,32 [ \< (
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
                             d32
@@ -2694,12 +3126,12 @@
                             e,32
                             \set stemLeftBeamCount = 3
                             g32 ] \ff )
-                            \revert Hairpin #'circled-tip
+                            \revert Hairpin.circled-tip
                         }
                     }
                     {
                         {
-                            r16.
+                            r16
                         }
                         % [Piano Lower Voice] Measure 14
                         {
@@ -2722,7 +3154,17 @@
                     {
                         \times 4/5 {
                             \clef "bass_15"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    prepared
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -2740,7 +3182,7 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.style = #'cross
                             c,,16 -\staccato \fp \startTextSpan \> [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
@@ -2750,9 +3192,7 @@
                             b,,,16 -\staccato \pp
                             \set stemLeftBeamCount = 2
                             r16 ]
-                            \revert NoteHead #'style
-                            <> \stopTextSpan
-                            \clef "bass"
+                            \revert NoteHead.style
                         }
                     }
                     {
@@ -2762,21 +3202,11 @@
                     }
                     {
                         {
-                            \clef "bass_15"
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.style = #'cross
                             \pitchedTrill
-                            d,,8 \p ^ \markup {
-                                \box
-                                    \pad-around
-                                        #0.5
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    prepared
-                                                }
-                                } \startTrillSpan ef,,
-                            \revert NoteHead #'style
+                            d,,8 \p \startTrillSpan ef,,
+                            \revert NoteHead.style
+                            <> \stopTextSpan
                             \clef "bass"
                             <> \stopTrillSpan
                         }
@@ -2792,17 +3222,22 @@
                     }
                     {
                         {
-                            cs32 \mf [ (
+                            \override Hairpin.circled-tip = ##t
+                            cs32 [ \> \mf (
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
-                            bf,32
+                            as,32
                             \set stemLeftBeamCount = 3
-                            d32 ] )
+                            \set stemRightBeamCount = 2
+                            d32
+                            \set stemLeftBeamCount = 2
+                            f,16 ] \! )
+                            \revert Hairpin.circled-tip
                         }
                     }
                     {
                         {
-                            r4
+                            r8.
                             r4.
                         }
                         % [Piano Lower Voice] Measure 18
@@ -2826,7 +3261,17 @@
                     {
                         {
                             \clef "bass_15"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    prepared
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -2844,7 +3289,7 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.style = #'cross
                             cs,,16 -\staccato \fp \startTextSpan \> [
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
@@ -2855,7 +3300,7 @@
                             \set stemLeftBeamCount = 2
                             e,,16 -\staccato ]
                         }
-                        \tweak #'text #tuplet-number::calc-fraction-text
+                        \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
                             ds,,16 -\staccato [
                             \set stemLeftBeamCount = 1
@@ -2867,7 +3312,7 @@
                             \set stemLeftBeamCount = 1
                             \pitchedTrill
                             f,,8 \ppp ] \startTrillSpan gf,,
-                            \revert NoteHead #'style
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "bass"
                             <> \stopTrillSpan
@@ -2889,23 +3334,23 @@
                         }
                     }
                     {
-                        \tweak #'text #tuplet-number::calc-fraction-text
+                        \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
                             r32 [
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
-                            f32 \> \f (
+                            e,32 \> \f (
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 2
-                            e,32
+                            g32
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
-                            g16
+                            cs16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 3
-                            cs32
+                            as,32
                             \set stemLeftBeamCount = 3
-                            bf,32 ] \p )
+                            d32 ] \p )
                         }
                     }
                     {
@@ -2930,7 +3375,17 @@
                     {
                         \times 2/3 {
                             \clef "bass_15"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    prepared
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -2948,7 +3403,7 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.style = #'cross
                             g,,16 -\staccato \p \startTextSpan [
                             \set stemLeftBeamCount = 1
                             r8 ]
@@ -2963,9 +3418,7 @@
                             r16
                             \set stemLeftBeamCount = 1
                             r8 ]
-                            \revert NoteHead #'style
-                            <> \stopTextSpan
-                            \clef "bass"
+                            \revert NoteHead.style
                         }
                     }
                     {
@@ -2975,33 +3428,14 @@
                     }
                     {
                         {
-                            \clef "bass_15"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
-                            \once \override TextSpanner.bound-details.left.text = \markup {
-                                \box
-                                    \pad-around
-                                        #0.5
-                                        \italic
-                                            \concat
-                                                {
-                                                    \vstrut
-                                                    prepared
-                                                }
-                                }
-                            \once \override TextSpanner.bound-details.right-broken.text = ##f
-                            \once \override TextSpanner.bound-details.right.text = \markup {
-                                \draw-line
-                                    #'(0 . -1)
-                                }
-                            \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'style = #'cross
-                            fs,,16 -\staccato \fp \startTextSpan
+                            \override NoteHead.style = #'cross
+                            fs,,16 -\staccato \fp
                         }
                         % [Piano Lower Voice] Measure 26
                         {
                             \pitchedTrill
                             a,,,8 \startTrillSpan bf,,,
-                            \revert NoteHead #'style
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "bass"
                             <> \stopTrillSpan
@@ -3095,6 +3529,8 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup { Violin }
+                                \set Staff.shortInstrumentName = \markup { Vn. }
                                 R1 * 5/16
                             }
                             % [Violin Voice] Measure 10
@@ -3110,7 +3546,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -3143,7 +3589,7 @@
                             }
                             % [Violin Voice] Measure 12
                             {
-                                bf'16 [
+                                as'16 [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 3
                                 d'32
@@ -3161,12 +3607,13 @@
                                 cs'32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                bf32
+                                as32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 d'32
                                 \set stemLeftBeamCount = 3
                                 f'32 \mf ] )
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -3183,75 +3630,24 @@
                                 \stopStaff
                                 \startStaff
                             }
-                        }
-                        {
                             % [Violin Voice] Measure 15
                             {
-                                e'32 \fp \> [ (
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                g'32
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                cs'32
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                bf'32
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 2
-                                d'32
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                f'16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 3
-                                e'32
-                                \set stemLeftBeamCount = 3
-                                g'32 \pp ] )
-                            }
-                        }
-                        {
-                            {
-                                r8..
-                            }
-                            % [Violin Voice] Measure 16
-                            {
-                                r4
                                 r32
                             }
                         }
                         {
                             {
-                                cs''32 \p \< [ (
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                bf'32
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 2
-                                d'32
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                f'16
-                                \set stemLeftBeamCount = 3
-                                e'32 \mf ] )
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r32
-                                r2
-                            }
-                            % [Violin Voice] Measure 17
-                            {
-                                r4.
-                            }
-                        }
-                        {
-                            \tweak #'text #tuplet-number::calc-fraction-text
-                            \times 6/7 {
-                                r32 [
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -3269,20 +3665,86 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
+                                e'32 \fp \startTextSpan \> [ (
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                g'32 \fp \startTextSpan \> (
+                                g'32
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                cs'32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 2
-                                cs''32
+                                as'32
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                bf'16
+                                d'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 3
-                                d''32
+                                f'32
                                 \set stemLeftBeamCount = 3
-                                f'32 \ppp ] )
+                                \set stemRightBeamCount = 3
+                                e'32
+                                \set stemLeftBeamCount = 3
+                                g'32 \pp ] )
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                            }
+                            % [Violin Voice] Measure 16
+                            {
+                                r4
+                                r32
+                            }
+                        }
+                        {
+                            {
+                                cs''32 \p \< [ (
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                as'32
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 2
+                                d'32
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 3
+                                e'32
+                                \set stemLeftBeamCount = 3
+                                g'32 \mf ] )
+                            }
+                        }
+                        {
+                            {
+                                r2
+                            }
+                            % [Violin Voice] Measure 17
+                            {
+                                r4.
+                            }
+                        }
+                        {
+                            \tweak text #tuplet-number::calc-fraction-text
+                            \times 6/7 {
+                                r32 [
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                cs'32 \fp \> (
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 2
+                                as'32
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                d'16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 3
+                                f'32
+                                \set stemLeftBeamCount = 3
+                                e''32 \ppp ] )
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -3300,32 +3762,60 @@
                             }
                             % [Violin Voice] Measure 19
                             {
-                                r16
+                                r16.
                             }
                         }
                         {
                             {
-                                e''32 \p \< [ (
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 2
-                                g''32
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                g''32 \p \startTextSpan \< [ (
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 cs''16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 3
-                                bf'32
+                                as'32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 d'32
                                 \set stemLeftBeamCount = 3
-                                f'32 \mf ] )
+                                \set stemRightBeamCount = 3
+                                f'32
+                                \set stemLeftBeamCount = 3
+                                e'32 \mf ] )
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r8..
+                                r8.
                                 r2
                             }
                             % [Violin Voice] Measure 20
@@ -3344,7 +3834,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -3362,40 +3862,41 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                e'16 \fp \startTextSpan \> [ (
+                                g'16 \fp \startTextSpan \> [ (
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 3
-                                g'32
-                                \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 cs''32
                                 \set stemLeftBeamCount = 3
-                                bf'32 ]
+                                \set stemRightBeamCount = 3
+                                as'32
+                                \set stemLeftBeamCount = 3
+                                d''32 ]
                             }
                             % [Violin Voice] Measure 22
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 10/11 {
-                                d'32 [
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                f'32
+                                f'32 [
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 e'32
                                 \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 2
+                                \set stemRightBeamCount = 3
                                 g'32
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 2
+                                cs''32
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                cs''16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                bf'16
+                                as'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 d''16
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                f''16
                                 \set stemLeftBeamCount = 3
-                                f''32 \pp ] )
+                                e''32 \pp ] )
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -3409,21 +3910,49 @@
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 12/13 {
-                                e''16 \p \< [ (
+                                r16 [
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 3
-                                g'32
+                                g''32 \p \startTextSpan \< (
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 cs''32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                bf'32
+                                as'32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                d'32
+                                d''32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 f'32
@@ -3432,13 +3961,13 @@
                                 e'32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 2
-                                g32
+                                g'32
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                cs'16 \mf )
-                                <> \stopTextSpan
+                                cs'16
                                 \set stemLeftBeamCount = 2
-                                r16 ]
+                                as16 \mf ] )
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -3464,7 +3993,17 @@
                             % [Violin Voice] Measure 26
                             \times 8/9 {
                                 r32 [
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -3484,10 +4023,7 @@
                                 \once \override TextSpanner.dash-fraction = 1
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                bf32 \fp \startTextSpan \> (
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                d'32
+                                d'32 \fp \startTextSpan \> (
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 f'32
@@ -3498,10 +4034,13 @@
                                 \set stemRightBeamCount = 3
                                 g'32
                                 \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 2
+                                \set stemRightBeamCount = 3
                                 cs'32
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 2
+                                as'32
                                 \set stemLeftBeamCount = 2
-                                bf'16 \ppp ] )
+                                d'16 \ppp ] )
                                 <> \stopTextSpan
                             }
                         }
@@ -3528,6 +4067,8 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup { Viola }
+                                \set Staff.shortInstrumentName = \markup { Va. }
                                 R1 * 5/16
                             }
                             % [Viola Voice] Measure 10
@@ -3547,7 +4088,18 @@
                         }
                         {
                             \times 8/9 {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                r16 [
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -3565,8 +4117,10 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                f16 \fp \startTextSpan \> [ (
                                 \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 3
+                                f32 \fp \startTextSpan \> (
+                                \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 e32
                                 \set stemLeftBeamCount = 3
@@ -3577,16 +4131,13 @@
                                 cs32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                bf32
+                                as32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 d32
                                 \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                f32 \ppp )
+                                f32 \ppp ] )
                                 <> \stopTextSpan
-                                \set stemLeftBeamCount = 3
-                                r32 ]
                             }
                         }
                         {
@@ -3610,7 +4161,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -3634,6 +4195,7 @@
                                 g32
                                 \set stemLeftBeamCount = 3
                                 cs32 ] )
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -3649,40 +4211,22 @@
                             % [Viola Voice] Measure 16
                             {
                                 r2.
-                                r16
+                                r16.
                             }
                         }
                         {
                             {
-                                bf32 \fp [ (
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                d32
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                f32
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                e32
-                                \set stemLeftBeamCount = 3
-                                g32 ] )
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r32
-                            }
-                            % [Viola Voice] Measure 17
-                            {
-                                r4.
-                                r8
-                                r32
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -3700,10 +4244,34 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                cs'32 \p \startTextSpan \< [ (
+                                as32 \fp \startTextSpan [ (
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                bf32
+                                d32
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                f32
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                e32
+                                \set stemLeftBeamCount = 3
+                                g32 ] )
+                            }
+                        }
+                        {
+                            % [Viola Voice] Measure 17
+                            {
+                                r4.
+                                r8
+                                r32
+                            }
+                        }
+                        {
+                            {
+                                cs'32 \parenthesizeDynamic \p \< [ (
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                as32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 2
                                 d'32
@@ -3721,7 +4289,7 @@
                                 cs'32 [
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                bf32
+                                as32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 d32
@@ -3733,10 +4301,9 @@
                                 e32
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g16 \mf )
-                                <> \stopTextSpan
+                                g16
                                 \set stemLeftBeamCount = 2
-                                r16 ]
+                                cs16 \mf ] )
                             }
                         }
                         {
@@ -3751,56 +4318,38 @@
                         {
                             \times 8/9 {
                                 r32 [
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        flautando
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                cs32 \fp \startTextSpan \> (
+                                as32 \fp \> (
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 2
-                                bf32
+                                d32
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                d16
+                                f16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 3
-                                f32
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                e'32
+                                e32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 g32
                                 \set stemLeftBeamCount = 3
-                                cs'32 ]
+                                \set stemRightBeamCount = 3
+                                cs'32
+                                \set stemLeftBeamCount = 3
+                                as32 ]
                             }
                             % [Viola Voice] Measure 20
                             {
-                                bf32 [
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                d'32
+                                d'32 [
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 f'32
                                 \set stemLeftBeamCount = 3
-                                e'32 \ppp ] )
+                                \set stemRightBeamCount = 3
+                                e'32
+                                \set stemLeftBeamCount = 3
+                                g'32 \ppp ] )
                             }
                         }
                         {
@@ -3808,31 +4357,33 @@
                                 r8
                                 r2
                             }
-                        }
-                        {
                             % [Viola Voice] Measure 21
                             {
-                                g'32 \p \< [ (
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 2
-                                cs'32
+                                r32
+                            }
+                        }
+                        {
+                            {
+                                cs''32 \p \< [ (
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                bf16
+                                as'16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 3
-                                d32
+                                d'32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 f32
                                 \set stemLeftBeamCount = 3
-                                e32 \mf ] )
+                                \set stemRightBeamCount = 3
+                                e32
+                                \set stemLeftBeamCount = 3
+                                g32 \mf ] )
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r32
                                 r8
                             }
                             % [Viola Voice] Measure 22
@@ -3852,7 +4403,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -3870,15 +4431,15 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                g16 \fp \startTextSpan [ (
+                                cs16 \fp \startTextSpan [ (
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 3
-                                cs32
+                                as32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                bf32
+                                d32
                                 \set stemLeftBeamCount = 3
-                                d'32 ] )
+                                f32 ] )
                                 <> \stopTextSpan
                             }
                         }
@@ -3903,7 +4464,18 @@
                         }
                         {
                             \times 8/9 {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                r16 [
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -3921,10 +4493,9 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                f16 \p \startTextSpan \< [ (
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 3
-                                e32
+                                e32 \p \startTextSpan \< (
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 g32
@@ -3933,16 +4504,16 @@
                                 cs32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                bf32
+                                as32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 d32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                f32 \mf )
-                                <> \stopTextSpan
+                                f32
                                 \set stemLeftBeamCount = 3
-                                r32 ]
+                                e32 \mf ] )
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -3974,6 +4545,8 @@
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(0)
                                 \startStaff
+                                \set Staff.instrumentName = \markup { Cello }
+                                \set Staff.shortInstrumentName = \markup { Vc. }
                                 R1 * 5/16
                                 \stopStaff
                                 \startStaff
@@ -3986,7 +4559,17 @@
                         {
                             \times 8/9 {
                                 r16 [
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -4015,7 +4598,7 @@
                                 cs,32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                bf,32
+                                as,32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 d,32
@@ -4048,7 +4631,18 @@
                         }
                         {
                             \times 4/5 {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                r16 [
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -4066,7 +4660,27 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                e,16 \fp \startTextSpan \> [ (
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 3
+                                e,32 \fp \startTextSpan \> (
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                g,32
+                                \set stemLeftBeamCount = 3
+                                cs,32 ]
+                            }
+                            % [Cello Voice] Measure 14
+                            {
+                                as,32 [
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 3
+                                d,32
+                                \set stemLeftBeamCount = 3
+                                \set stemRightBeamCount = 2
+                                f,32
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                e,16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 3
                                 g,32
@@ -4074,26 +4688,8 @@
                                 \set stemRightBeamCount = 3
                                 cs,32
                                 \set stemLeftBeamCount = 3
-                                bf,32 ]
-                            }
-                            % [Cello Voice] Measure 14
-                            {
-                                d,32 [
-                                \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                f,32
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 2
-                                e,32
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                g,16
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 3
-                                cs32
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 3
-                                bf,32
+                                as,32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 d,32
@@ -4103,9 +4699,6 @@
                             }
                         }
                         {
-                            {
-                                r32
-                            }
                             % [Cello Voice] Measure 15
                             {
                                 \stopStaff
@@ -4123,7 +4716,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -4150,7 +4753,7 @@
                                 cs32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                bf,32
+                                as,32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 2
                                 d,32
@@ -4167,7 +4770,7 @@
                                 \set stemRightBeamCount = 3
                                 cs,32
                                 \set stemLeftBeamCount = 3
-                                bf,32 \mf ] )
+                                as,32 \mf ] )
                                 <> \stopTextSpan
                             }
                         }
@@ -4187,12 +4790,22 @@
                             }
                             % [Cello Voice] Measure 18
                             {
-                                r8.
+                                r8..
                             }
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -4225,9 +4838,6 @@
                             }
                         }
                         {
-                            {
-                                r32
-                            }
                             % [Cello Voice] Measure 19
                             {
                                 r2
@@ -4236,18 +4846,22 @@
                         }
                         {
                             {
-                                bf32 \p [ (
+                                as32 \parenthesizeDynamic \p [ (
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 d32
                                 \set stemLeftBeamCount = 3
-                                f,32 ] )
+                                \set stemRightBeamCount = 2
+                                f,32
+                                \set stemLeftBeamCount = 2
+                                e,16 ] )
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r4.
+                                r16
+                                r4
                             }
                             % [Cello Voice] Measure 20
                             {
@@ -4256,10 +4870,20 @@
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 6/7 {
                                 r32 [
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -4279,18 +4903,19 @@
                                 \once \override TextSpanner.dash-fraction = 1
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                e32 \fp \startTextSpan \> (
+                                g,32 \fp \startTextSpan \> (
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 2
-                                g,32
+                                cs32
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                cs16
+                                as,16
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 3
-                                bf,32
+                                d32
                                 \set stemLeftBeamCount = 3
-                                d32 \ppp ] )
+                                f32 \ppp ] )
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -4306,15 +4931,40 @@
                             % [Cello Voice] Measure 22
                             {
                                 r4
-                                r16
+                                r16.
                             }
                         }
                         {
                             {
-                                f32 \p \< [ (
-                                \set stemLeftBeamCount = 3
-                                \set stemRightBeamCount = 2
-                                e32
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                e32 \p \startTextSpan \< [ (
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 g,16
@@ -4323,7 +4973,7 @@
                                 cs32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                bf,32
+                                as,32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 d32
@@ -4338,18 +4988,21 @@
                                 g,32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 2
-                                cs,32
+                                cs32
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                bf,16
+                                as,16
                                 \set stemLeftBeamCount = 2
-                                d,16 \mf ] )
+                                \set stemRightBeamCount = 2
+                                d,16
+                                \set stemLeftBeamCount = 3
+                                f,32 \mf ] )
                                 <> \stopTextSpan
                             }
                         }
                         {
                             {
-                                r8..
+                                r8.
                             }
                             % [Cello Voice] Measure 23
                             {
@@ -4372,7 +5025,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -4390,11 +5053,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                f,16 \fp \startTextSpan \> [ (
+                                e,16 \fp \startTextSpan \> [ (
                                 \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 3
-                                e,32
-                                \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
                                 g,32
                                 \set stemLeftBeamCount = 3
@@ -4402,21 +5062,24 @@
                                 cs,32
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 3
-                                bf,32
+                                as,32
                                 \set stemLeftBeamCount = 3
-                                d,32 ]
+                                \set stemRightBeamCount = 3
+                                d,32
+                                \set stemLeftBeamCount = 3
+                                f,32 ]
                             }
                             % [Cello Voice] Measure 26
                             \times 4/5 {
-                                f,32 [
+                                e,32 [
                                 \set stemLeftBeamCount = 3
                                 \set stemRightBeamCount = 2
-                                e,32
+                                g,32
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
-                                g,16
+                                cs16
                                 \set stemLeftBeamCount = 3
-                                cs,32 \pp ] )
+                                as,32 \pp ] )
                                 <> \stopTextSpan
                             }
                         }

@@ -1,6 +1,4 @@
-% 2016-05-30 17:00
-
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 #(set-default-paper-size "tabloid" 'landscape)
@@ -12,6 +10,10 @@
 \layout {}
 
 \paper {}
+
+#(define-markup-command (overlay layout props args)
+    (markup-list?)
+    (apply ly:stencil-add (interpret-markup-list layout props args)))
 
 \markup {
     \left-column

@@ -1,18 +1,7 @@
-% 2016-05-30 17:09
-
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 \include "/Users/joberholtzer/Development/consort/consort/stylesheets/stylesheet.ily"
-
-\header {
-    tagline = \markup {}
-    title = \markup {
-        \override
-            #'(font-name . "Didot")
-            "Wind Slap Music Specifier"
-        }
-}
 
 \score {
     \context Score = "String Quartet Score" <<
@@ -51,7 +40,17 @@
                     {
                         % [Violin 1 Voice] Measure 1
                         {
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    slap
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -69,8 +68,8 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -80,13 +79,13 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             a'16 -\accent -\staccato \mf \startTextSpan [
                             \set stemLeftBeamCount = 2
                             b'16 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                         }
                     }
                     {
@@ -97,8 +96,8 @@
                     {
                         % [Violin 1 Voice] Measure 2
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -108,13 +107,13 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             d'16 -\accent -\staccato \mp [
                             \set stemLeftBeamCount = 1
                             b'8 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                         }
                     }
                     {
@@ -125,8 +124,8 @@
                     {
                         % [Violin 1 Voice] Measure 3
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -136,13 +135,13 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             f'16 -\accent -\staccato \mf [
                             \set stemLeftBeamCount = 2
                             b'16 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                         }
                     }
                     {
@@ -153,8 +152,8 @@
                     {
                         % [Violin 1 Voice] Measure 4
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -164,11 +163,11 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             f'16 -\accent -\staccato \mp
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                         }
                     }
                     {
@@ -179,10 +178,10 @@
                         }
                     }
                     {
-                        \tweak #'text #tuplet-number::calc-fraction-text
+                        \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -192,18 +191,18 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             a'8 -\accent -\staccato \mf [
                             d'16 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                             r4
                         }
                         % [Violin 1 Voice] Measure 5
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -213,7 +212,7 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             cs'8 -\accent -\staccato \mp [
                             \set stemLeftBeamCount = 1
@@ -221,8 +220,8 @@
                             b'16 -\accent -\staccato
                             \set stemLeftBeamCount = 2
                             e'16 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                         }
                     }
                     {
@@ -236,8 +235,8 @@
                     }
                     {
                         \times 2/3 {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -247,7 +246,7 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             b'8 -\accent -\staccato \mp [
                             \set stemLeftBeamCount = 2
@@ -255,14 +254,14 @@
                         }
                         % [Violin 1 Voice] Measure 7
                         {
-                            af'8 -\accent -\staccato [
+                            gs'8 -\accent -\staccato [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
                             cs'16 -\accent -\staccato
                             \set stemLeftBeamCount = 2
                             a'16 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                             <> \stopTextSpan
                         }
                     }
@@ -299,7 +298,17 @@
                     }
                     {
                         {
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    slap
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -317,8 +326,8 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -328,9 +337,9 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
-                            af'16 -\accent -\staccato \mf \startTextSpan [
+                            gs'16 -\accent -\staccato \mf \startTextSpan [
                             \set stemLeftBeamCount = 2
                             e'16 -\accent -\staccato ]
                         }
@@ -340,8 +349,8 @@
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 2
                             c'16 -\accent -\staccato
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 1
                             r16
@@ -349,8 +358,8 @@
                             r8 ]
                         }
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -360,17 +369,17 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
-                            af'8 -\accent -\staccato \mp
+                            gs'8 -\accent -\staccato \mp
                         }
                         % [Violin 2 Voice] Measure 3
                         {
                             cs'8 -\accent -\staccato [
                             \set stemLeftBeamCount = 2
                             b'16 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                         }
                     }
                     {
@@ -381,8 +390,8 @@
                     {
                         % [Violin 2 Voice] Measure 4
                         \times 4/5 {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -392,14 +401,14 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
-                            af'8 -\accent -\staccato \mp [
+                            gs'8 -\accent -\staccato \mp [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
                             d'16 -\accent -\staccato
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                             \set stemLeftBeamCount = 1
                             r8 ]
                         }
@@ -412,8 +421,8 @@
                     }
                     {
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -423,7 +432,7 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             c'16 -\accent -\staccato \mf [
                             \set stemLeftBeamCount = 2
@@ -433,8 +442,8 @@
                             b'16 -\accent -\staccato [
                             \set stemLeftBeamCount = 1
                             e'8 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                         }
                     }
                     {
@@ -445,8 +454,8 @@
                     {
                         % [Violin 2 Voice] Measure 5
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -456,11 +465,11 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             a'16 -\accent -\staccato \mp
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                         }
                     }
                     {
@@ -470,8 +479,8 @@
                     }
                     {
                         \times 2/3 {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -481,7 +490,7 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             d'8 -\accent -\staccato \mf [
                             \set stemLeftBeamCount = 2
@@ -492,8 +501,8 @@
                             a'16 -\accent -\staccato [
                             \set stemLeftBeamCount = 2
                             b'16 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                         }
                     }
                     {
@@ -504,8 +513,8 @@
                     {
                         % [Violin 2 Voice] Measure 7
                         \times 2/3 {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -515,11 +524,11 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             e'8 -\accent -\staccato \mp [
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                             \set stemLeftBeamCount = 2
                             r16 ]
                             <> \stopTextSpan
@@ -558,7 +567,17 @@
                     }
                     {
                         {
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    slap
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -576,8 +595,8 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -587,13 +606,13 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             b'16 -\accent -\staccato \mf \startTextSpan [
                             \set stemLeftBeamCount = 2
                             f'16 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                         }
                     }
                     {
@@ -604,8 +623,8 @@
                     {
                         % [Viola Voice] Measure 2
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -615,7 +634,7 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             cs'8 -\accent -\staccato \mp
                         }
@@ -632,8 +651,8 @@
                         % [Viola Voice] Measure 3
                         \times 2/3 {
                             a'16 -\accent -\staccato [
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                             \set stemLeftBeamCount = 1
                             r8 ]
                         }
@@ -649,8 +668,8 @@
                     }
                     {
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -660,11 +679,11 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             f'16 -\accent -\staccato \mf
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                         }
                     }
                     {
@@ -675,8 +694,8 @@
                     }
                     {
                         \times 4/5 {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -686,21 +705,21 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             f'8 -\accent -\staccato \mp [
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
                             f'16 -\accent -\staccato
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                             \set stemLeftBeamCount = 1
                             r8 ]
                         }
                         % [Viola Voice] Measure 5
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -710,14 +729,14 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             c'8 -\accent -\staccato \mf
                         }
                         \times 4/5 {
                             f'16 -\accent -\staccato [
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 1
                             r8
@@ -726,8 +745,8 @@
                         }
                         % [Viola Voice] Measure 6
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -737,13 +756,13 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             c'16 -\accent -\staccato \mp [
                             \set stemLeftBeamCount = 1
                             d'8 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                             <> \stopTextSpan
                         }
                     }
@@ -781,9 +800,19 @@
                     \clef "bass"
                     {
                         % [Cello Voice] Measure 1
-                        \tweak #'text #tuplet-number::calc-fraction-text
+                        \tweak text #tuplet-number::calc-fraction-text
                         \times 6/7 {
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    slap
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -801,8 +830,8 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -812,18 +841,18 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             c'8 -\accent -\staccato \mf \startTextSpan [
                             d'16 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                             r4
                         }
                         % [Cello Voice] Measure 2
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -833,13 +862,13 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             a'8 -\accent -\staccato \mp [
                             \set stemLeftBeamCount = 2
                             b'16 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                         }
                     }
                     {
@@ -850,8 +879,8 @@
                     {
                         % [Cello Voice] Measure 3
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -861,13 +890,13 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             c'16 -\accent -\staccato \mp [
                             \set stemLeftBeamCount = 1
                             d'8 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                         }
                     }
                     {
@@ -878,8 +907,8 @@
                     {
                         % [Cello Voice] Measure 4
                         \times 2/3 {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -889,11 +918,11 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             e'16 -\accent -\staccato \mf [
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                             \set stemLeftBeamCount = 1
                             r8 ]
                         }
@@ -905,8 +934,8 @@
                     }
                     {
                         \times 4/5 {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -916,11 +945,11 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             cs'8 -\accent -\staccato \mp [
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                             \set stemLeftBeamCount = 1
                             \set stemRightBeamCount = 2
                             r16
@@ -928,8 +957,8 @@
                             r8 ]
                         }
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -939,13 +968,13 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
-                            af'16 -\accent -\staccato \mf [
+                            gs'16 -\accent -\staccato \mf [
                             \set stemLeftBeamCount = 2
                             d'16 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                         }
                     }
                     {
@@ -956,8 +985,8 @@
                     {
                         % [Cello Voice] Measure 5
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -967,18 +996,19 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
                             b'16 -\accent -\staccato \mf [
                             \set stemLeftBeamCount = 2
                             d'16 -\accent -\staccato ]
                         }
                         {
-                            af'8 -\accent -\staccato [
+                            gs'8 -\accent -\staccato [
                             \set stemLeftBeamCount = 2
                             f'16 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -998,8 +1028,36 @@
                     {
                         % [Cello Voice] Measure 7
                         {
-                            \override NoteHead #'stencil = #ly:text-interface::print
-                            \override NoteHead #'text = \markup {
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    slap
+                                                }
+                                }
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    slap
+                                                }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override NoteHead.stencil = #ly:text-interface::print
+                            \override NoteHead.text = \markup {
                                 \translate
                                     #'(0 . -0.9)
                                     \override
@@ -1009,13 +1067,13 @@
                                             \rotate
                                                 #180
                                                 \triangle
-                                                    ##f
+                                                    ##t
                                 }
-                            d'16 -\accent -\staccato \mp [
+                            d'16 -\accent -\staccato \mp \startTextSpan [
                             \set stemLeftBeamCount = 2
                             f'16 -\accent -\staccato ]
-                            \revert NoteHead #'stencil
-                            \revert NoteHead #'text
+                            \revert NoteHead.stencil
+                            \revert NoteHead.text
                             <> \stopTextSpan
                         }
                     }

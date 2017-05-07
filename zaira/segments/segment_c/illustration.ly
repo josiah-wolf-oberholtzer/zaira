@@ -1,11 +1,8 @@
-% 2016-05-30 17:11
+% package "abjad" @ 2.21
+% package "consort" @ 332b5c6 [master] (2017-05-06 21:31:24)
+% package "zaira" @ 561d231 [master] (2017-05-06 23:31:33)
 
-% package "abjad" @ 17eb117 [issue654/tuplet-simplification] (2016-05-30 16:45:02)
-% package "ide" @ 2a867e0 [fix-new-score-tests] (2016-05-23 20:00:37)
-% package "consort" @ b9181b1 [master] (2016-05-25 23:09:32)
-% package "zaira" @ 0fe45ac [master] (2016-04-22 21:09:31)
-
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 #(ly:set-option 'relative-includes #t)
@@ -113,14 +110,18 @@
                         {
                             % [Flute Voice] Measure 27
                             {
+                                \set Staff.instrumentName = \markup { Flute }
+                                \set Staff.shortInstrumentName = \markup { Fl. }
                                 r4
                             }
                         }
                         {
                             {
                                 \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
@@ -137,8 +138,8 @@
                                     }
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                                 \clef "treble"
                             }
                         }
@@ -151,7 +152,7 @@
                         {
                             {
                                 \pitchedTrill
-                                ef''8 \p \startTrillSpan af''
+                                ef''8 \startTrillSpan af''
                                 <> \stopTrillSpan
                             }
                         }
@@ -173,7 +174,17 @@
                         {
                             {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -191,17 +202,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -212,18 +222,17 @@
                         {
                             % [Flute Voice] Measure 30
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -244,20 +253,47 @@
                         {
                             % [Flute Voice] Measure 32
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                c'4.. :32 \p
+                                c'4.. :32 \p \startTextSpan
                             }
                             {
                                 c'16 :128 \repeatTie
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                                 <> \stopTextSpan
                                 \clef "treble"
                             }
@@ -300,7 +336,7 @@
                         {
                             {
                                 \pitchedTrill
-                                cs''8 \p \startTrillSpan fs''
+                                df''8 \parenthesizeDynamic \p \startTrillSpan gf''
                                 <> \stopTrillSpan
                             }
                         }
@@ -313,7 +349,17 @@
                         {
                             {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -331,17 +377,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -352,18 +397,17 @@
                         {
                             % [Flute Voice] Measure 36
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'8. \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -384,18 +428,44 @@
                         {
                             % [Flute Voice] Measure 38
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                c'16 -\accent \laissezVibrer \p
+                                c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -407,18 +477,16 @@
                         {
                             % [Flute Voice] Measure 39
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -433,18 +501,16 @@
                         }
                         {
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -458,19 +524,17 @@
                         }
                         {
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                                 <> \stopTextSpan
-                                \clef "treble"
                             }
                         }
                         {
@@ -498,8 +562,17 @@
                         {
                             % [Flute Voice] Measure 45
                             {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -517,17 +590,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -539,17 +611,16 @@
                         {
                             % [Flute Voice] Measure 46
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                                 <> \stopTextSpan
                                 \clef "treble"
                             }
@@ -584,12 +655,24 @@
                         {
                             % [Oboe Voice] Measure 27
                             {
+                                \set Staff.instrumentName = \markup { Oboe }
+                                \set Staff.shortInstrumentName = \markup { Ob. }
                                 r2
                             }
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -607,8 +690,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -618,13 +701,14 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 a'16 -\accent -\staccato \mf \startTextSpan [
                                 \set stemLeftBeamCount = 2
                                 c'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -647,8 +731,36 @@
                         }
                         {
                             {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -658,13 +770,13 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
-                                b16 -\accent -\staccato \mp [
+                                b16 -\accent -\staccato \mp \startTextSpan [
                                 \set stemLeftBeamCount = 2
                                 d'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 <> \stopTextSpan
                             }
                         }
@@ -697,7 +809,7 @@
                         {
                             {
                                 \pitchedTrill
-                                cs''8 \p \startTrillSpan fs''
+                                df''8 \parenthesizeDynamic \p \startTrillSpan gf''
                                 <> \stopTrillSpan
                             }
                         }
@@ -710,7 +822,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -728,8 +850,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -739,11 +861,11 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 b16 -\accent -\staccato \mf \startTextSpan
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                             }
                         }
                         {
@@ -754,8 +876,8 @@
                         {
                             % [Oboe Voice] Measure 33
                             \times 4/5 {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -765,14 +887,14 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 f'8 -\accent -\staccato \mp [
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 2
-                                af'16 -\accent -\staccato
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                gs'16 -\accent -\staccato
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 \set stemLeftBeamCount = 1
                                 r8 ]
                                 <> \stopTextSpan
@@ -804,7 +926,17 @@
                         }
                         {
                             \times 4/5 {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -822,8 +954,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -833,20 +965,20 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 e'8 -\accent -\staccato \mf \startTextSpan [
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 2
                                 d'16 -\accent -\staccato
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 \set stemLeftBeamCount = 1
                                 r8 ]
                             }
                             {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -856,7 +988,7 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 f'8 -\accent -\staccato \mp [
                                 \set stemLeftBeamCount = 1
@@ -864,8 +996,8 @@
                                 cs'16 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 a'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 <> \stopTextSpan
                             }
                         }
@@ -893,7 +1025,17 @@
                         {
                             % [Oboe Voice] Measure 37
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -911,8 +1053,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -922,7 +1064,7 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 c'16 -\accent -\staccato \mp \startTextSpan [
                                 \set stemLeftBeamCount = 1
@@ -930,8 +1072,8 @@
                                 b8 -\accent -\staccato
                                 \set stemLeftBeamCount = 2
                                 d'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 <> \stopTextSpan
                             }
                         }
@@ -947,7 +1089,7 @@
                         {
                             {
                                 \pitchedTrill
-                                cs''8 \fp \startTrillSpan e''
+                                df''8 \fp \startTrillSpan ff''
                                 <> \stopTrillSpan
                             }
                         }
@@ -959,7 +1101,17 @@
                         }
                         {
                             \times 8/9 {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -977,8 +1129,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -988,17 +1140,17 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 b8 -\accent -\staccato \mf \startTextSpan [
                                 f'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 r4.
                             }
                             {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1008,13 +1160,13 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
-                                af'16 -\accent -\staccato \mp [
+                                gs'16 -\accent -\staccato \mp [
                                 \set stemLeftBeamCount = 2
                                 e'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 <> \stopTextSpan
                             }
                         }
@@ -1058,7 +1210,17 @@
                         {
                             % [Oboe Voice] Measure 42
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -1076,8 +1238,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1087,13 +1249,13 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 d'16 -\accent -\staccato \mp \startTextSpan [
                                 \set stemLeftBeamCount = 2
                                 f'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 <> \stopTextSpan
                             }
                         }
@@ -1118,7 +1280,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -1136,8 +1308,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1147,13 +1319,13 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 cs'16 -\accent -\staccato \mf \startTextSpan [
                                 \set stemLeftBeamCount = 2
                                 a'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                             }
                         }
                         {
@@ -1164,8 +1336,8 @@
                         {
                             % [Oboe Voice] Measure 45
                             {
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1175,11 +1347,11 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 c'8 -\accent -\staccato \mp
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 <> \stopTextSpan
                             }
                         }
@@ -1213,14 +1385,22 @@
                         {
                             % [Clarinet In B-Flat Voice] Measure 27
                             {
+                                \set Staff.instrumentName = \markup { "Clarinet in B-flat" }
+                                \set Staff.shortInstrumentName = \markup { "Cl. in B-flat" }
                                 r2
                             }
                         }
                         {
                             {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
                                     \box
                                         \pad-around
                                             #0.5
@@ -1231,23 +1411,10 @@
                                                         shaker
                                                     }
                                     }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -1270,18 +1437,28 @@
                         }
                         {
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                c'16 -\accent \laissezVibrer \p
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                                 \clef "treble"
                             }
                         }
@@ -1297,7 +1474,17 @@
                         \transpose bf c'
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -1315,8 +1502,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1326,13 +1513,13 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 a16 -\accent -\staccato \mf \startTextSpan [
                                 \set stemLeftBeamCount = 2
                                 c'16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 <> \stopTextSpan
                             }
                         }
@@ -1346,10 +1533,10 @@
                             % [Clarinet In B-Flat Voice] Measure 31
                             {
                                 \pitchedTrill
-                                cs''8 \p \startTrillSpan e''
+                                df''8 \p \startTrillSpan ff''
                             }
                             {
-                                cs''16 \repeatTie
+                                df''16 \repeatTie
                                 <> \stopTrillSpan
                             }
                         }
@@ -1379,7 +1566,17 @@
                         {
                             {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -1397,17 +1594,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -1418,19 +1614,17 @@
                         {
                             % [Clarinet In B-Flat Voice] Measure 33
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                                 <> \stopTextSpan
-                                \clef "treble"
                             }
                         }
                         {
@@ -1454,8 +1648,17 @@
                         }
                         {
                             {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -1473,8 +1676,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
@@ -1486,9 +1689,9 @@
                                 c'16 :128 \repeatTie
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -1509,19 +1712,28 @@
                         {
                             % [Clarinet In B-Flat Voice] Measure 37
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                c'16 -\accent \laissezVibrer \p
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -1545,8 +1757,17 @@
                         }
                         {
                             {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -1564,17 +1785,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -1586,18 +1806,17 @@
                         }
                         {
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -1621,19 +1840,28 @@
                         {
                             % [Clarinet In B-Flat Voice] Measure 42
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                c'16 -\accent \laissezVibrer \p
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -1658,8 +1886,17 @@
                         }
                         {
                             {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -1677,17 +1914,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -1698,17 +1934,16 @@
                         {
                             % [Clarinet In B-Flat Voice] Measure 45
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'8. \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                                 <> \stopTextSpan
                                 \clef "treble"
                             }
@@ -1731,7 +1966,17 @@
                         {
                             % [Clarinet In B-Flat Voice] Measure 47
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        slap
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -1749,8 +1994,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'stencil = #ly:text-interface::print
-                                \override NoteHead #'text = \markup {
+                                \override NoteHead.stencil = #ly:text-interface::print
+                                \override NoteHead.text = \markup {
                                     \translate
                                         #'(0 . -0.9)
                                         \override
@@ -1760,13 +2005,13 @@
                                                 \rotate
                                                     #180
                                                     \triangle
-                                                        ##f
+                                                        ##t
                                     }
                                 b16 -\accent -\staccato \mp \startTextSpan [
                                 \set stemLeftBeamCount = 2
                                 d16 -\accent -\staccato ]
-                                \revert NoteHead #'stencil
-                                \revert NoteHead #'text
+                                \revert NoteHead.stencil
+                                \revert NoteHead.text
                                 <> \stopTextSpan
                             }
                         }
@@ -1800,6 +2045,8 @@
                         {
                             % [Metals Voice] Measure 27
                             {
+                                \set Staff.instrumentName = \markup { Metals }
+                                \set Staff.shortInstrumentName = \markup { Metals }
                                 g'16 -\accent \fff [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
@@ -1903,6 +2150,8 @@
                         {
                             % [Woods Voice] Measure 27
                             {
+                                \set Staff.instrumentName = \markup { Woods }
+                                \set Staff.shortInstrumentName = \markup { Woods }
                                 r4.
                             }
                         }
@@ -1943,14 +2192,14 @@
                         }
                         {
                             \times 2/3 {
-                                \override Hairpin #'circled-tip = ##t
+                                \override Hairpin.circled-tip = ##t
                                 e'16 -\accent [ \> \mf
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
                                 c'16 -\accent
                                 \set stemLeftBeamCount = 2
                                 c'16 -\accent ] \!
-                                \revert Hairpin #'circled-tip
+                                \revert Hairpin.circled-tip
                             }
                         }
                         {
@@ -1988,7 +2237,7 @@
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 6/7 {
                                 a16 -\staccato \mf [
                                 \set stemLeftBeamCount = 1
@@ -2027,7 +2276,7 @@
                         }
                         {
                             % [Woods Voice] Measure 35
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 6/7 {
                                 a16 -\staccato \mp [
                                 \set stemLeftBeamCount = 1
@@ -2118,7 +2367,7 @@
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 6/7 {
                                 r8 [
                                 \set stemLeftBeamCount = 1
@@ -2198,11 +2447,11 @@
                         }
                         {
                             {
-                                \override Hairpin #'circled-tip = ##t
+                                \override Hairpin.circled-tip = ##t
                                 c'16 :128 -\accent [ \<
                                 \set stemLeftBeamCount = 1
                                 c'8 :64 \repeatTie ] \ff
-                                \revert Hairpin #'circled-tip
+                                \revert Hairpin.circled-tip
                             }
                         }
                         {
@@ -2242,6 +2491,8 @@
                         {
                             % [Drums Voice] Measure 27
                             {
+                                \set Staff.instrumentName = \markup { Drums }
+                                \set Staff.shortInstrumentName = \markup { Drums }
                                 b16 -\accent \fff [
                                 \set stemLeftBeamCount = 2
                                 \set stemRightBeamCount = 2
@@ -2259,7 +2510,7 @@
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 3/4 {
                                 f'16 -\accent \fff [
                                 d'16 -\staccato ]
@@ -2293,7 +2544,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -2363,7 +2624,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -2409,7 +2680,7 @@
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 3/4 {
                                 f'16 -\accent \ff
                                 r4..
@@ -2439,7 +2710,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -2484,7 +2765,7 @@
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 5/6 {
                                 g8 -\accent \f [
                                 \set stemLeftBeamCount = 1
@@ -2512,7 +2793,17 @@
                         {
                             % [Drums Voice] Measure 47
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        brush
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -2564,6 +2855,8 @@
                             \once \override NoteHead.text = \markup {
                             	\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
                             }
+                            \set PianoStaff.instrumentName = \markup { Piano }
+                            \set PianoStaff.shortInstrumentName = \markup { Pf. }
                             <g' b' d'' f''>16 -\accent \fff [
                                 ^ \markup {
                                     \center-align
@@ -2628,7 +2921,17 @@
                     {
                         {
                             \clef "percussion"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    guero
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -2646,8 +2949,8 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
@@ -2669,8 +2972,8 @@
                             c'8 \repeatTie
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "treble"
                         }
@@ -2684,7 +2987,7 @@
                     }
                     {
                         {
-                            cs'''32 \p
+                            df'''32 \p
                         }
                     }
                     {
@@ -2742,7 +3045,17 @@
                     {
                         {
                             \clef "percussion"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    guero
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -2760,8 +3073,8 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
@@ -2783,9 +3096,8 @@
                             c'8 \repeatTie
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
-                            \clef "treble"
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
                         }
                     }
                     {
@@ -2800,9 +3112,8 @@
                     }
                     {
                         {
-                            \clef "percussion"
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
@@ -2820,10 +3131,9 @@
                                     }
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
                             <> \stopTextSpan
-                            \clef "treble"
                         }
                     }
                     {
@@ -2847,8 +3157,17 @@
                     }
                     {
                         {
-                            \clef "percussion"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    guero
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -2866,8 +3185,8 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
@@ -2889,8 +3208,8 @@
                             c'4.. \repeatTie
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "treble"
                         }
@@ -2946,7 +3265,17 @@
                     {
                         {
                             \clef "percussion"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    guero
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -2964,8 +3293,8 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
@@ -2985,8 +3314,8 @@
                             c'8. \repeatTie ]
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "treble"
                         }
@@ -3054,7 +3383,17 @@
                     {
                         {
                             \clef "percussion"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    guero
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -3072,8 +3411,8 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
@@ -3100,9 +3439,8 @@
                             c'16 \repeatTie
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
-                            \clef "treble"
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
                         }
                     }
                     {
@@ -3117,9 +3455,8 @@
                     }
                     {
                         {
-                            \clef "percussion"
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
@@ -3138,8 +3475,8 @@
                             c'4 \repeatTie
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "treble"
                         }
@@ -3148,7 +3485,7 @@
                         % [Piano Upper Voice] Measure 43
                         {
                             r4
-                            r16
+                            r16.
                         }
                     }
                     {
@@ -3157,9 +3494,6 @@
                         }
                     }
                     {
-                        {
-                            r32
-                        }
                         % [Piano Upper Voice] Measure 44
                         {
                             r16
@@ -3276,7 +3610,17 @@
                         % [Piano Upper Voice] Measure 47
                         {
                             \clef "percussion"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    guero
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -3294,8 +3638,8 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
@@ -3315,8 +3659,8 @@
                             c'16 \repeatTie ]
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "treble"
                         }
@@ -3418,6 +3762,8 @@
                             \once \override NoteHead.text = \markup {
                             	\filled-box #'(-0.6 . 0.6) #'(-0.7 . 0.7) #0.25
                             }
+                            \set PianoStaff.instrumentName = \markup { Piano }
+                            \set PianoStaff.shortInstrumentName = \markup { Pf. }
                             <d, f, a, c>16 -\accent \fff [
                                 ^ \markup {
                                     \center-align
@@ -3521,7 +3867,17 @@
                         % [Piano Lower Voice] Measure 28
                         {
                             \clef "percussion"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    guero
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -3539,8 +3895,8 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
@@ -3559,8 +3915,8 @@
                             c'16 \repeatTie
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "bass"
                         }
@@ -3619,7 +3975,17 @@
                     {
                         {
                             \clef "percussion"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    guero
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -3637,8 +4003,8 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
@@ -3658,9 +4024,9 @@
                             c'16 \repeatTie
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
-                            \clef "bass"
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
+                            <> \stopTextSpan
                         }
                     }
                     {
@@ -3684,13 +4050,40 @@
                     {
                         % [Piano Lower Voice] Measure 33
                         {
-                            \clef "percussion"
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    guero
+                                                }
+                                }
+                            \once \override TextSpanner.bound-details.left.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    guero
+                                                }
+                                }
+                            \once \override TextSpanner.bound-details.right-broken.text = ##f
+                            \once \override TextSpanner.bound-details.right.text = \markup {
+                                \draw-line
+                                    #'(0 . -1)
+                                }
+                            \once \override TextSpanner.dash-fraction = 1
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
-                            c'8. \mp [
+                            c'8. \mp \startTextSpan [
                                 ^ \markup {
                                     \box
                                         \pad-around
@@ -3710,9 +4103,8 @@
                             c'2 \repeatTie
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
-                            \clef "bass"
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
                         }
                     }
                     {
@@ -3723,9 +4115,8 @@
                     }
                     {
                         {
-                            \clef "percussion"
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
@@ -3745,8 +4136,8 @@
                             c'16 \repeatTie
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "bass"
                         }
@@ -3808,7 +4199,17 @@
                     {
                         {
                             \clef "percussion"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    guero
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -3826,8 +4227,8 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
@@ -3851,9 +4252,8 @@
                             c'8 \repeatTie ]
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
-                            \clef "bass"
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
                         }
                     }
                     {
@@ -3865,9 +4265,8 @@
                     }
                     {
                         {
-                            \clef "percussion"
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
@@ -3885,8 +4284,8 @@
                                     }
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "bass"
                         }
@@ -3908,13 +4307,13 @@
                     }
                     {
                         {
-                            cs'32 [ \< \p (
+                            df'32 [ \< \p (
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
                             bf,32
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
-                            b,32
+                            cf32
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
                             af,32
@@ -3926,13 +4325,13 @@
                             f16
                             \set stemLeftBeamCount = 2
                             \set stemRightBeamCount = 3
-                            cs32
+                            df32
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
                             bf,32
                             \set stemLeftBeamCount = 3
                             \set stemRightBeamCount = 3
-                            b,,32
+                            cf,32
                             \set stemLeftBeamCount = 3
                             af,32 ] \f )
                         }
@@ -4041,7 +4440,17 @@
                     {
                         {
                             \clef "percussion"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    guero
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -4059,8 +4468,8 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
@@ -4082,8 +4491,8 @@
                             c'4 \repeatTie
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "bass"
                         }
@@ -4148,7 +4557,17 @@
                         % [Piano Lower Voice] Measure 46
                         {
                             \clef "percussion"
-                            \once \override TextSpanner.bound-details.left-broken.text = ##f
+                            \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                \box
+                                    \pad-around
+                                        #0.5
+                                        \italic
+                                            \concat
+                                                {
+                                                    \vstrut
+                                                    guero
+                                                }
+                                }
                             \once \override TextSpanner.bound-details.left.text = \markup {
                                 \box
                                     \pad-around
@@ -4166,8 +4585,8 @@
                                     #'(0 . -1)
                                 }
                             \once \override TextSpanner.dash-fraction = 1
-                            \override NoteHead #'no-ledgers = ##t
-                            \override NoteHead #'style = #'cross
+                            \override NoteHead.no-ledgers = ##t
+                            \override NoteHead.style = #'cross
                             \stopStaff
                             \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                             \startStaff
@@ -4187,8 +4606,8 @@
                             c'8 \repeatTie ]
                             \stopStaff
                             \startStaff
-                            \revert NoteHead #'no-ledgers
-                            \revert NoteHead #'style
+                            \revert NoteHead.no-ledgers
+                            \revert NoteHead.style
                             <> \stopTextSpan
                             \clef "bass"
                         }
@@ -4296,6 +4715,8 @@
                         {
                             % [Violin Voice] Measure 27
                             {
+                                \set Staff.instrumentName = \markup { Violin }
+                                \set Staff.shortInstrumentName = \markup { Vn. }
                                 r2
                                 r8
                             }
@@ -4303,7 +4724,17 @@
                         {
                             {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -4321,17 +4752,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -4343,18 +4773,16 @@
                         {
                             % [Violin Voice] Measure 28
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -4369,9 +4797,8 @@
                         }
                         {
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
@@ -4382,9 +4809,9 @@
                                 c'16 \repeatTie
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -4405,84 +4832,7 @@
                         {
                             % [Violin Voice] Measure 32
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'16 -\accent \laissezVibrer \p
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r8.
-                                r2
-                            }
-                            % [Violin Voice] Measure 33
-                            {
-                                r16
-                            }
-                        }
-                        {
-                            {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'16 -\accent \laissezVibrer \p
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r16
-                                r8
-                            }
-                        }
-                        {
-                            % [Violin Voice] Measure 34
-                            {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'16 -\accent \laissezVibrer \p
-                                \stopStaff
-                                \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                <> \stopTextSpan
-                                \clef "treble"
-                            }
-                        }
-                        {
-                            {
-                                r8.
-                                r4
-                            }
-                            % [Violin Voice] Measure 35
-                            {
-                                r8.
-                            }
-                        }
-                        {
-                            {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
                                     \box
                                         \pad-around
                                             #0.5
@@ -4490,34 +4840,9 @@
                                                 \concat
                                                     {
                                                         \vstrut
-                                                        flautando
+                                                        shaker
                                                     }
                                     }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                f''16 \p \startTextSpan [ (
-                                \set stemLeftBeamCount = 2
-                                \set stemRightBeamCount = 2
-                                af'16
-                                \set stemLeftBeamCount = 2
-                                g16 ] )
-                                <> \stopTextSpan
-                            }
-                        }
-                        {
-                            {
-                                r8
-                                r4.
-                            }
-                        }
-                        {
-                            {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -4535,8 +4860,153 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p \startTextSpan
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                                r2
+                            }
+                            % [Violin Voice] Measure 33
+                            {
+                                r16
+                            }
+                        }
+                        {
+                            {
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
+                            }
+                        }
+                        {
+                            {
+                                r16
+                                r8
+                            }
+                        }
+                        {
+                            % [Violin Voice] Measure 34
+                            {
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p
+                                \stopStaff
+                                \startStaff
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
+                                <> \stopTextSpan
+                                \clef "treble"
+                            }
+                        }
+                        {
+                            {
+                                r8.
+                                r4
+                            }
+                            % [Violin Voice] Measure 35
+                            {
+                                r8.
+                            }
+                        }
+                        {
+                            {
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                f''16 \parenthesizeDynamic \p \startTextSpan [ (
+                                \set stemLeftBeamCount = 2
+                                \set stemRightBeamCount = 2
+                                af'16
+                                \set stemLeftBeamCount = 2
+                                g16 ] )
+                                <> \stopTextSpan
+                            }
+                        }
+                        {
+                            {
+                                r8
+                                r4.
+                            }
+                        }
+                        {
+                            {
+                                \clef "percussion"
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
@@ -4547,9 +5017,9 @@
                                 c'16 \repeatTie
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
+                                <> \stopTextSpan
                             }
                         }
                         {
@@ -4570,18 +5040,44 @@
                         {
                             % [Violin Voice] Measure 38
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                c'16 -\accent \laissezVibrer \p
+                                c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -4593,19 +5089,17 @@
                         {
                             % [Violin Voice] Measure 39
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                                 <> \stopTextSpan
-                                \clef "treble"
                             }
                         }
                         {
@@ -4630,8 +5124,17 @@
                         }
                         {
                             {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -4649,8 +5152,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
@@ -4661,10 +5164,9 @@
                                 c'16 \repeatTie
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                                 <> \stopTextSpan
-                                \clef "treble"
                             }
                         }
                         {
@@ -4686,8 +5188,17 @@
                         {
                             % [Violin Voice] Measure 44
                             {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -4705,17 +5216,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "treble"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -4727,17 +5237,16 @@
                         {
                             % [Violin Voice] Measure 45
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                                 <> \stopTextSpan
                                 \clef "treble"
                             }
@@ -4772,13 +5281,25 @@
                         {
                             % [Viola Voice] Measure 27
                             {
+                                \set Staff.instrumentName = \markup { Viola }
+                                \set Staff.shortInstrumentName = \markup { Va. }
                                 r4..
                             }
                         }
                         {
                             {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -4796,8 +5317,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
@@ -4809,10 +5330,9 @@
                                 c'16 :128 \repeatTie
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                                 <> \stopTextSpan
-                                \clef "alto"
                             }
                         }
                         {
@@ -4839,8 +5359,17 @@
                         }
                         {
                             {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -4858,17 +5387,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "alto"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -4880,17 +5408,16 @@
                         {
                             % [Viola Voice] Measure 31
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                                 <> \stopTextSpan
                                 \clef "alto"
                             }
@@ -4916,7 +5443,11 @@
                         }
                         {
                             \times 2/3 {
-                                af8 \fp [ ^ \markup {
+                                r8 [
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \set stemLeftBeamCount = 2
+                                af16 \fp ] ^ \markup {
                                     \box
                                         \pad-around
                                             #0.5
@@ -4927,8 +5458,6 @@
                                                         flautando
                                                     }
                                     }
-                                \set stemLeftBeamCount = 2
-                                r16 ]
                             }
                         }
                         {
@@ -4943,7 +5472,17 @@
                         {
                             {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -4961,8 +5500,8 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
@@ -4973,9 +5512,8 @@
                                 c'16 :128 \repeatTie
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "alto"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -4987,17 +5525,16 @@
                         {
                             % [Viola Voice] Measure 36
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                                 <> \stopTextSpan
                                 \clef "alto"
                             }
@@ -5014,7 +5551,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -5032,7 +5579,7 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                g16 \p \startTextSpan [ (
+                                g16 \parenthesizeDynamic \p \startTextSpan [ (
                                 \set stemLeftBeamCount = 2
                                 bf16 ] )
                                 <> \stopTextSpan
@@ -5055,6 +5602,8 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 c'8 -\accent -\tenuto \mp ^ \markup {
                                     \box
                                         \pad-around
@@ -5076,7 +5625,17 @@
                         {
                             {
                                 \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -5094,17 +5653,16 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "alto"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -5115,18 +5673,16 @@
                         {
                             % [Viola Voice] Measure 40
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "alto"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -5141,9 +5697,8 @@
                         }
                         {
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
@@ -5154,10 +5709,9 @@
                                 c'16 :128 \repeatTie
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                                 <> \stopTextSpan
-                                \clef "alto"
                             }
                         }
                         {
@@ -5182,9 +5736,14 @@
                         }
                         {
                             {
-                                \clef "percussion"
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
+                                \stopStaff
+                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
+                                \startStaff
+                                c'16 -\accent \laissezVibrer \p ^ \markup {
                                     \box
                                         \pad-around
                                             #0.5
@@ -5195,23 +5754,10 @@
                                                         shaker
                                                     }
                                     }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
-                                \stopStaff
-                                \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
-                                \startStaff
-                                c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "alto"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -5234,18 +5780,44 @@
                         }
                         {
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.left.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        shaker
+                                                    }
+                                    }
+                                \once \override TextSpanner.bound-details.right-broken.text = ##f
+                                \once \override TextSpanner.bound-details.right.text = \markup {
+                                    \draw-line
+                                        #'(0 . -1)
+                                    }
+                                \once \override TextSpanner.dash-fraction = 1
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
-                                c'16 -\accent \laissezVibrer \p
+                                c'16 -\accent \laissezVibrer \p \startTextSpan
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
-                                \clef "alto"
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                             }
                         }
                         {
@@ -5256,17 +5828,16 @@
                         {
                             % [Viola Voice] Measure 47
                             {
-                                \clef "percussion"
-                                \override NoteHead #'no-ledgers = ##t
-                                \override NoteHead #'style = #'cross
+                                \override NoteHead.no-ledgers = ##t
+                                \override NoteHead.style = #'cross
                                 \stopStaff
                                 \once \override Staff.StaffSymbol.line-positions = #'(4 -4)
                                 \startStaff
                                 c'16 -\accent \laissezVibrer \p
                                 \stopStaff
                                 \startStaff
-                                \revert NoteHead #'no-ledgers
-                                \revert NoteHead #'style
+                                \revert NoteHead.no-ledgers
+                                \revert NoteHead.style
                                 <> \stopTextSpan
                                 \clef "alto"
                             }
@@ -5292,12 +5863,16 @@
                         {
                             % [Cello Voice] Measure 27
                             {
+                                \set Staff.instrumentName = \markup { Cello }
+                                \set Staff.shortInstrumentName = \markup { Vc. }
                                 r2.
                             }
                         }
                         {
                             \times 2/3 {
                                 r8 [
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 \set stemLeftBeamCount = 2
                                 g,16 \p ] ^ \markup {
                                     \box
@@ -5332,7 +5907,17 @@
                         }
                         {
                             \times 4/5 {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        overpressure
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -5369,9 +5954,20 @@
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 3/4 {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                r8 [
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -5389,13 +5985,11 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                bf,8 \fp \startTextSpan [ (
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 2
-                                e,16 )
-                                <> \stopTextSpan
+                                bf,16 \fp \startTextSpan (
                                 \set stemLeftBeamCount = 2
-                                r16 ]
+                                e,16 ] )
                             }
                         }
                         {
@@ -5410,25 +6004,7 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
-                                \once \override TextSpanner.bound-details.left.text = \markup {
-                                    \box
-                                        \pad-around
-                                            #0.5
-                                            \italic
-                                                \concat
-                                                    {
-                                                        \vstrut
-                                                        flautando
-                                                    }
-                                    }
-                                \once \override TextSpanner.bound-details.right-broken.text = ##f
-                                \once \override TextSpanner.bound-details.right.text = \markup {
-                                    \draw-line
-                                        #'(0 . -1)
-                                    }
-                                \once \override TextSpanner.dash-fraction = 1
-                                cs16 \p \startTextSpan [ (
+                                cs16 \parenthesizeDynamic \p [ (
                                 \set stemLeftBeamCount = 2
                                 f,16 ] )
                                 <> \stopTextSpan
@@ -5455,7 +6031,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        "col legno"
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -5498,12 +6084,12 @@
                         }
                         {
                             {
-                                \override Hairpin #'circled-tip = ##t
+                                \override Hairpin.circled-tip = ##t
                                 \pitchedTrill
                                 d,8 -\tenuto [ \< \startTrillSpan e,
                                 \set stemLeftBeamCount = 1
                                 d,8 \repeatTie ] \ff
-                                \revert Hairpin #'circled-tip
+                                \revert Hairpin.circled-tip
                                 <> \stopTrillSpan
                             }
                         }
@@ -5518,7 +6104,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        overpressure
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -5569,7 +6165,17 @@
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        overpressure
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -5616,7 +6222,7 @@
                         }
                         {
                             {
-                                \override Hairpin #'circled-tip = ##t
+                                \override Hairpin.circled-tip = ##t
                                 fqs,8 -\tenuto [ \> \mf
                                 \set stemLeftBeamCount = 1
                                 \set stemRightBeamCount = 1
@@ -5630,15 +6236,25 @@
                             {
                                 \pitchedTrill
                                 ef,8 -\tenuto \! \startTrillSpan gf,
-                                \revert Hairpin #'circled-tip
+                                \revert Hairpin.circled-tip
                                 <> \stopTrillSpan
                             }
                         }
                         {
-                            \tweak #'text #tuplet-number::calc-fraction-text
+                            \tweak text #tuplet-number::calc-fraction-text
                             \times 3/4 {
                                 r16 [
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -5674,6 +6290,8 @@
                         }
                         {
                             {
+                                \once \override TextScript.parent-alignment-X = #left
+                                \once \override TextScript.self-alignment-X = #left
                                 d,4 -\tenuto \f ^ \markup {
                                     \box
                                         \pad-around
@@ -5690,12 +6308,22 @@
                         {
                             % [Cello Voice] Measure 43
                             {
-                                r8
+                                r8.
                             }
                         }
                         {
                             {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        flautando
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around
@@ -5713,7 +6341,7 @@
                                         #'(0 . -1)
                                     }
                                 \once \override TextSpanner.dash-fraction = 1
-                                e16 \p \startTextSpan [ (
+                                e16 \parenthesizeDynamic \p \startTextSpan [ (
                                 \set stemLeftBeamCount = 2
                                 cs,16 ] )
                                 <> \stopTextSpan
@@ -5721,7 +6349,7 @@
                         }
                         {
                             {
-                                r8
+                                r16
                             }
                             % [Cello Voice] Measure 44
                             {
@@ -5736,7 +6364,17 @@
                         {
                             % [Cello Voice] Measure 47
                             \times 4/5 {
-                                \once \override TextSpanner.bound-details.left-broken.text = ##f
+                                \once \override TextSpanner.bound-details.left-broken.text = \markup {
+                                    \box
+                                        \pad-around
+                                            #0.5
+                                            \italic
+                                                \concat
+                                                    {
+                                                        \vstrut
+                                                        overpressure
+                                                    }
+                                    }
                                 \once \override TextSpanner.bound-details.left.text = \markup {
                                     \box
                                         \pad-around

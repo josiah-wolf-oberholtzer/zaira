@@ -1,11 +1,8 @@
-% 2016-05-30 17:10
+% package "abjad" @ 2.21
+% package "consort" @ 332b5c6 [master] (2017-05-06 21:31:24)
+% package "zaira" @ 561d231 [master] (2017-05-06 23:31:33)
 
-% package "abjad" @ 17eb117 [issue654/tuplet-simplification] (2016-05-30 16:45:02)
-% package "ide" @ 2a867e0 [fix-new-score-tests] (2016-05-23 20:00:37)
-% package "consort" @ b9181b1 [master] (2016-05-25 23:09:32)
-% package "zaira" @ 0fe45ac [master] (2016-04-22 21:09:31)
-
-\version "2.19.41"
+\version "2.19.44"
 \language "english"
 
 #(ly:set-option 'relative-includes #t)

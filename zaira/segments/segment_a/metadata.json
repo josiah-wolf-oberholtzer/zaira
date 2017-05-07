@@ -1,0 +1,31 @@
+{
+    "end_instruments_by_staff": {
+        "Cello Staff": "instrumenttools.Cello(instrument_name='cello', short_instrument_name='vc.', instrument_name_markup=markuptools.Markup(contents=['Cello'],), short_instrument_name_markup=markuptools.Markup(contents=['Vc.'],), allowable_clefs=instrumenttools.ClefList([indicatortools.Clef(name='bass',), indicatortools.Clef(name='tenor',), indicatortools.Clef(name='treble',),]), default_tuning=indicatortools.Tuning(pitches=pitchtools.PitchSegment((pitchtools.NamedPitch('c,'), pitchtools.NamedPitch('g,'), pitchtools.NamedPitch('d'), pitchtools.NamedPitch('a'),), item_class=pitchtools.NamedPitch,),), pitch_range=pitchtools.PitchRange(range_string='[C2, G5]',), sounding_pitch_of_written_middle_c=pitchtools.NamedPitch(\"c'\"),)",
+        "Clarinet In B-Flat Staff": "instrumenttools.ClarinetInBFlat(instrument_name='clarinet in B-flat', short_instrument_name='cl. in B-flat', instrument_name_markup=markuptools.Markup(contents=['Clarinet in B-flat'],), short_instrument_name_markup=markuptools.Markup(contents=['Cl. in B-flat'],), allowable_clefs=instrumenttools.ClefList([indicatortools.Clef(name='treble',),]), pitch_range=pitchtools.PitchRange(range_string='[D3, Bb6]',), sounding_pitch_of_written_middle_c=pitchtools.NamedPitch('bf'),)",
+        "Drums Staff": "instrumenttools.Percussion(instrument_name='Drums', short_instrument_name='Drums', instrument_name_markup=markuptools.Markup(contents=['Drums'],), short_instrument_name_markup=markuptools.Markup(contents=['Drums'],), allowable_clefs=instrumenttools.ClefList([indicatortools.Clef(name='percussion',),]), pitch_range=pitchtools.PitchRange(range_string='[A0, C8]',), sounding_pitch_of_written_middle_c=pitchtools.NamedPitch(\"c'\"),)",
+        "Flute Staff": "instrumenttools.Flute(instrument_name='flute', short_instrument_name='fl.', instrument_name_markup=markuptools.Markup(contents=['Flute'],), short_instrument_name_markup=markuptools.Markup(contents=['Fl.'],), allowable_clefs=instrumenttools.ClefList([indicatortools.Clef(name='treble',),]), pitch_range=pitchtools.PitchRange(range_string='[C4, D7]',), sounding_pitch_of_written_middle_c=pitchtools.NamedPitch(\"c'\"),)",
+        "Metals Staff": "instrumenttools.Percussion(instrument_name='Metals', short_instrument_name='Metals', instrument_name_markup=markuptools.Markup(contents=['Metals'],), short_instrument_name_markup=markuptools.Markup(contents=['Metals'],), allowable_clefs=instrumenttools.ClefList([indicatortools.Clef(name='percussion',),]), pitch_range=pitchtools.PitchRange(range_string='[A0, C8]',), sounding_pitch_of_written_middle_c=pitchtools.NamedPitch(\"c'\"),)",
+        "Oboe Staff": "instrumenttools.Oboe(instrument_name='oboe', short_instrument_name='ob.', instrument_name_markup=markuptools.Markup(contents=['Oboe'],), short_instrument_name_markup=markuptools.Markup(contents=['Ob.'],), allowable_clefs=instrumenttools.ClefList([indicatortools.Clef(name='treble',),]), pitch_range=pitchtools.PitchRange(range_string='[Bb3, A6]',), sounding_pitch_of_written_middle_c=pitchtools.NamedPitch(\"c'\"),)",
+        "Piano Lower Staff": "instrumenttools.Piano(instrument_name='piano', short_instrument_name='pf.', instrument_name_markup=markuptools.Markup(contents=['Piano'],), short_instrument_name_markup=markuptools.Markup(contents=['Pf.'],), allowable_clefs=instrumenttools.ClefList([indicatortools.Clef(name='treble',), indicatortools.Clef(name='bass',),]), pitch_range=pitchtools.PitchRange(range_string='[A0, C8]',), sounding_pitch_of_written_middle_c=pitchtools.NamedPitch(\"c'\"),)",
+        "Piano Upper Staff": "instrumenttools.Piano(instrument_name='piano', short_instrument_name='pf.', instrument_name_markup=markuptools.Markup(contents=['Piano'],), short_instrument_name_markup=markuptools.Markup(contents=['Pf.'],), allowable_clefs=instrumenttools.ClefList([indicatortools.Clef(name='treble',), indicatortools.Clef(name='bass',),]), pitch_range=pitchtools.PitchRange(range_string='[A0, C8]',), sounding_pitch_of_written_middle_c=pitchtools.NamedPitch(\"c'\"),)",
+        "Viola Staff": "instrumenttools.Viola(instrument_name='viola', short_instrument_name='va.', instrument_name_markup=markuptools.Markup(contents=['Viola'],), short_instrument_name_markup=markuptools.Markup(contents=['Va.'],), allowable_clefs=instrumenttools.ClefList([indicatortools.Clef(name='alto',), indicatortools.Clef(name='treble',),]), default_tuning=indicatortools.Tuning(pitches=pitchtools.PitchSegment((pitchtools.NamedPitch('c'), pitchtools.NamedPitch('g'), pitchtools.NamedPitch(\"d'\"), pitchtools.NamedPitch(\"a'\"),), item_class=pitchtools.NamedPitch,),), pitch_range=pitchtools.PitchRange(range_string='[C3, D6]',), sounding_pitch_of_written_middle_c=pitchtools.NamedPitch(\"c'\"),)",
+        "Violin Staff": "instrumenttools.Violin(instrument_name='violin', short_instrument_name='vn.', instrument_name_markup=markuptools.Markup(contents=['Violin'],), short_instrument_name_markup=markuptools.Markup(contents=['Vn.'],), allowable_clefs=instrumenttools.ClefList([indicatortools.Clef(name='treble',),]), default_tuning=indicatortools.Tuning(pitches=pitchtools.PitchSegment((pitchtools.NamedPitch('g'), pitchtools.NamedPitch(\"d'\"), pitchtools.NamedPitch(\"a'\"), pitchtools.NamedPitch(\"e''\"),), item_class=pitchtools.NamedPitch,),), pitch_range=pitchtools.PitchRange(range_string='[G3, G7]',), sounding_pitch_of_written_middle_c=pitchtools.NamedPitch(\"c'\"),)",
+        "Woods Staff": "instrumenttools.Percussion(instrument_name='Woods', short_instrument_name='Woods', instrument_name_markup=markuptools.Markup(contents=['Woods'],), short_instrument_name_markup=markuptools.Markup(contents=['Woods'],), allowable_clefs=instrumenttools.ClefList([indicatortools.Clef(name='percussion',),]), pitch_range=pitchtools.PitchRange(range_string='[A0, C8]',), sounding_pitch_of_written_middle_c=pitchtools.NamedPitch(\"c'\"),)"
+    },
+    "end_tempo": [
+        [
+            1,
+            4
+        ],
+        72
+    ],
+    "end_time_signature": [
+        2,
+        4
+    ],
+    "first_bar_number": 1,
+    "is_repeated": null,
+    "measure_count": 8,
+    "segment_count": 12,
+    "segment_number": 1
+}
