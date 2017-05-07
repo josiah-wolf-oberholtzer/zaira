@@ -1,7 +1,3 @@
-(define-markup-command (overlay layout props args)
-  (markup-list?)
-  (apply ly:stencil-add (interpret-markup-list layout props args)))
-
 parenthesizeDynamic =
 #(define-event-function (parser location dyn) (ly:event?)
     (make-dynamic-script
