@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-from abjad import Markup
+from abjad import Markup, new
 from abjad.tools import indicatortools
 from abjad.tools import markuptools
 from abjad.tools import schemetools
@@ -19,6 +19,7 @@ triangle_notehead = markuptools.Markup(
         .translate((0, -0.9)),
     direction=None,
     )
+triangle_notehead = new(triangle_notehead, direction=None)
 
 wind_slap_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
