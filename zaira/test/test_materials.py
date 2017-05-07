@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 import importlib
+import mock
 import pytest
 import pathlib
-from unittest import mock
 from abjad.tools import commandlinetools
 from abjad.tools import systemtools
 
