@@ -11,6 +11,14 @@ from zaira.materials.midground_dynamic_attachment_expression.definition \
 from zaira.materials.stuttering_rhythm_maker.definition \
     import stuttering_rhythm_maker
 
+triangle_notehead = markuptools.Markup(
+    markuptools.Markup.triangle(False)
+        .rotate(180)
+        .scale((0.667, 0.667))
+        .override(('thickness', 0.5))
+        .translate((0, -0.9)),
+    direction=None,
+    )
 
 wind_slap_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
@@ -21,11 +29,7 @@ wind_slap_music_specifier = consort.MusicSpecifier(
                     'note_head__stencil': schemetools.Scheme(
                         'ly:text-interface::print'
                         ),
-                    'note_head__text': markuptools.Markup.triangle(False)
-                        .rotate(180)
-                        .scale((0.667, 0.667))
-                        .override(('thickness', 0.5))
-                        .translate((0, -0.9)),
+                    'note_head__text': triangle_notehead,
                     },
                 ),
             selector=selectortools.select_pitched_runs(),
