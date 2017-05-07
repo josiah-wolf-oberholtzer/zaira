@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 from abjad.tools import pitchtools
-from abjad.tools import spannertools
 from abjad.tools import selectortools
 import consort
 from zaira.materials.erratic_dynamic_attachment_expression.definition \
@@ -15,7 +14,7 @@ piano_flourish_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         dynamic_expression=erratic_dynamic_attachment_expression,
         slur=consort.AttachmentExpression(
-            attachments=spannertools.Slur(),
+            attachments=consort.Slur(),
             selector=selectortools.select_pitched_runs(),
             ),
         ),

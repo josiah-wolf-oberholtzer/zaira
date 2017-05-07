@@ -1,7 +1,6 @@
 # -*- encoding: utf-8 -*-
 from abjad import Markup
 from abjad.tools import selectortools
-from abjad.tools import spannertools
 from abjad.tools.topleveltools import new
 import consort
 from zaira.materials.background_dynamic_attachment_expression.definition \
@@ -16,7 +15,7 @@ string_flourish_music_specifier = consort.MusicSpecifier(
     attachment_handler=consort.AttachmentHandler(
         dynamic_expression=background_dynamic_attachment_expression,
         slur=consort.AttachmentExpression(
-            attachments=spannertools.Slur(),
+            attachments=consort.Slur(),
             selector=selectortools.select_pitched_runs(),
             ),
         text_spanner=consort.AttachmentExpression(
